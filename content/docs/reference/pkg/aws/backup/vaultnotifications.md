@@ -68,7 +68,7 @@ class MyStack : Stack
         var testVaultNotifications = new Aws.Backup.VaultNotifications("testVaultNotifications", new Aws.Backup.VaultNotificationsArgs
         {
             BackupVaultName = "example_backup_vault",
-            SnsTopicArn = sns_topic_arn.Test.Arn,
+            SnsTopicArn = testTopic.Arn,
             BackupVaultEvents = 
             {
                 "BACKUP_JOB_STARTED",
@@ -110,7 +110,7 @@ func main() {
 		}
 		_, err = backup.NewVaultNotifications(ctx, "testVaultNotifications", &backup.VaultNotificationsArgs{
 			BackupVaultName: pulumi.String("example_backup_vault"),
-			SnsTopicArn:     pulumi.Any(sns_topic_arn.Test.Arn),
+			SnsTopicArn:     testTopic.Arn,
 			BackupVaultEvents: pulumi.StringArray{
 				pulumi.String("BACKUP_JOB_STARTED"),
 				pulumi.String("RESTORE_JOB_COMPLETED"),
@@ -148,7 +148,7 @@ test_topic_policy = aws.sns.TopicPolicy("testTopicPolicy",
     policy=test_policy_document.json)
 test_vault_notifications = aws.backup.VaultNotifications("testVaultNotifications",
     backup_vault_name="example_backup_vault",
-    sns_topic_arn=sns_topic_arn["test"]["arn"],
+    sns_topic_arn=test_topic.arn,
     backup_vault_events=[
         "BACKUP_JOB_STARTED",
         "RESTORE_JOB_COMPLETED",
@@ -183,7 +183,7 @@ const testTopicPolicy = new aws.sns.TopicPolicy("testTopicPolicy", {
 });
 const testVaultNotifications = new aws.backup.VaultNotifications("testVaultNotifications", {
     backupVaultName: "example_backup_vault",
-    snsTopicArn: sns_topic_arn.test.arn,
+    snsTopicArn: testTopic.arn,
     backupVaultEvents: [
         "BACKUP_JOB_STARTED",
         "RESTORE_JOB_COMPLETED",

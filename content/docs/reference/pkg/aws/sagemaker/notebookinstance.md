@@ -114,7 +114,7 @@ const ni = new aws.sagemaker.NotebookInstance("ni", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.NotebookInstance">NotebookInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">direct_internet_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.NotebookInstance">NotebookInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_code_repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_internet_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -310,6 +310,17 @@ The NotebookInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultcoderepository_csharp">
+<a href="#defaultcoderepository_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Code<wbr>Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Git repository associated with the notebook instance as its default code repository
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="directinternetaccess_csharp">
 <a href="#directinternetaccess_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Internet<wbr>Access</a>
 </span> 
@@ -396,6 +407,17 @@ The NotebookInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_csharp">
+<a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -423,6 +445,17 @@ The NotebookInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultcoderepository_go">
+<a href="#defaultcoderepository_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Code<wbr>Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Git repository associated with the notebook instance as its default code repository
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -513,6 +546,17 @@ The NotebookInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_go">
+<a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -540,6 +584,17 @@ The NotebookInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultcoderepository_nodejs">
+<a href="#defaultcoderepository_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Code<wbr>Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Git repository associated with the notebook instance as its default code repository
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -630,6 +685,17 @@ The NotebookInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_nodejs">
+<a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -657,6 +723,17 @@ The NotebookInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_code_repository_python">
+<a href="#default_code_repository_python" style="color: inherit; text-decoration: inherit;">default_<wbr>code_<wbr>repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Git repository associated with the notebook instance as its default code repository
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -745,6 +822,17 @@ The NotebookInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
 {{% /md %}}</dd>
 
 </dl>
@@ -890,7 +978,7 @@ Get an existing NotebookInstance resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_internet_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> NotebookInstance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_code_repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_internet_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> NotebookInstance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1017,6 +1105,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_defaultcoderepository_csharp">
+<a href="#state_defaultcoderepository_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Code<wbr>Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Git repository associated with the notebook instance as its default code repository
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_directinternetaccess_csharp">
 <a href="#state_directinternetaccess_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Internet<wbr>Access</a>
 </span> 
@@ -1125,6 +1224,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_volumesize_csharp">
+<a href="#state_volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1141,6 +1251,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_defaultcoderepository_go">
+<a href="#state_defaultcoderepository_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Code<wbr>Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Git repository associated with the notebook instance as its default code repository
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1253,6 +1374,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_volumesize_go">
+<a href="#state_volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1269,6 +1401,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_defaultcoderepository_nodejs">
+<a href="#state_defaultcoderepository_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Code<wbr>Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Git repository associated with the notebook instance as its default code repository
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1381,6 +1524,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_volumesize_nodejs">
+<a href="#state_volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1397,6 +1551,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_default_code_repository_python">
+<a href="#state_default_code_repository_python" style="color: inherit; text-decoration: inherit;">default_<wbr>code_<wbr>repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Git repository associated with the notebook instance as its default code repository
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1507,6 +1672,17 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_volume_size_python">
+<a href="#state_volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
 {{% /md %}}</dd>
 
 </dl>

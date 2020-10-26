@@ -35,7 +35,7 @@ class MyStack : Stack
         {
             DbInstanceIdentifier = aws_db_instance.Example.Id,
             FeatureName = "S3_INTEGRATION",
-            RoleArn = aws_iam_role.Example.Id,
+            RoleArn = aws_iam_role.Example.Arn,
         });
     }
 
@@ -58,7 +58,7 @@ func main() {
 		_, err := rds.NewRoleAssociation(ctx, "example", &rds.RoleAssociationArgs{
 			DbInstanceIdentifier: pulumi.Any(aws_db_instance.Example.Id),
 			FeatureName:          pulumi.String("S3_INTEGRATION"),
-			RoleArn:              pulumi.Any(aws_iam_role.Example.Id),
+			RoleArn:              pulumi.Any(aws_iam_role.Example.Arn),
 		})
 		if err != nil {
 			return err
@@ -78,7 +78,7 @@ import pulumi_aws as aws
 example = aws.rds.RoleAssociation("example",
     db_instance_identifier=aws_db_instance["example"]["id"],
     feature_name="S3_INTEGRATION",
-    role_arn=aws_iam_role["example"]["id"])
+    role_arn=aws_iam_role["example"]["arn"])
 ```
 
 {{% /example %}}
@@ -92,7 +92,7 @@ import * as aws from "@pulumi/aws";
 const example = new aws.rds.RoleAssociation("example", {
     dbInstanceIdentifier: aws_db_instance.example.id,
     featureName: "S3_INTEGRATION",
-    roleArn: aws_iam_role.example.id,
+    roleArn: aws_iam_role.example.arn,
 });
 ```
 

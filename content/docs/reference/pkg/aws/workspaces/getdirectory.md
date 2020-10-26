@@ -98,7 +98,7 @@ const example = pulumi.output(aws.workspaces.getDirectory({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_directory(</span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDirectoryResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_directory(</span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[GetDirectoryWorkspaceCreationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDirectoryResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -147,6 +147,17 @@ The following arguments are supported:
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspacecreationproperties_csharp">
+<a href="#workspacecreationproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -174,6 +185,17 @@ The following arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspacecreationproperties_go">
+<a href="#workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -205,6 +227,17 @@ The following arguments are supported:
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspacecreationproperties_nodejs">
+<a href="#workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -232,6 +265,17 @@ The following arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspace_creation_properties_python">
+<a href="#workspace_creation_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>creation_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -387,13 +431,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="workspacecreationproperties_csharp">
+<a href="#workspacecreationproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="workspacesecuritygroupid_csharp">
 <a href="#workspacesecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Security<wbr>Group<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
+    <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -547,13 +602,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="workspacecreationproperties_go">
+<a href="#workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="workspacesecuritygroupid_go">
 <a href="#workspacesecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Security<wbr>Group<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
+    <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -707,13 +773,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="workspacecreationproperties_nodejs">
+<a href="#workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="workspacesecuritygroupid_nodejs">
 <a href="#workspacesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Security<wbr>Group<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
+    <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -867,13 +944,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="workspace_creation_properties_python">
+<a href="#workspace_creation_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>creation_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="workspace_security_group_id_python">
 <a href="#workspace_security_group_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>security_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces.
+    <dd>{{% md %}}The identifier of the security group that is assigned to new WorkSpaces. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1157,6 +1245,272 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetDirectoryWorkspaceCreationProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryWorkspaceCreationProperties">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetDirectoryWorkspaceCreationPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetDirectoryWorkspaceCreationProperties">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Inputs.GetDirectoryWorkspaceCreationPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.GetDirectoryWorkspaceCreationProperties.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customsecuritygroupid_csharp">
+<a href="#customsecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultou_csharp">
+<a href="#defaultou_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ou</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableinternetaccess_csharp">
+<a href="#enableinternetaccess_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Internet<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablemaintenancemode_csharp">
+<a href="#enablemaintenancemode_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Maintenance<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userenabledaslocaladministrator_csharp">
+<a href="#userenabledaslocaladministrator_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customsecuritygroupid_go">
+<a href="#customsecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultou_go">
+<a href="#defaultou_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ou</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableinternetaccess_go">
+<a href="#enableinternetaccess_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Internet<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablemaintenancemode_go">
+<a href="#enablemaintenancemode_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Maintenance<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userenabledaslocaladministrator_go">
+<a href="#userenabledaslocaladministrator_go" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="customsecuritygroupid_nodejs">
+<a href="#customsecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultou_nodejs">
+<a href="#defaultou_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ou</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableinternetaccess_nodejs">
+<a href="#enableinternetaccess_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Internet<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablemaintenancemode_nodejs">
+<a href="#enablemaintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Maintenance<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userenabledaslocaladministrator_nodejs">
+<a href="#userenabledaslocaladministrator_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="custom_security_group_id_python">
+<a href="#custom_security_group_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_ou_python">
+<a href="#default_ou_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ou</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_internet_access_python">
+<a href="#enable_internet_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>internet_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_maintenance_mode_python">
+<a href="#enable_maintenance_mode_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>maintenance_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_enabled_as_local_administrator_python">
+<a href="#user_enabled_as_local_administrator_python" style="color: inherit; text-decoration: inherit;">user_<wbr>enabled_<wbr>as_<wbr>local_<wbr>administrator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether users are local administrators of their WorkSpaces.
 {{% /md %}}</dd>
 
 </dl>

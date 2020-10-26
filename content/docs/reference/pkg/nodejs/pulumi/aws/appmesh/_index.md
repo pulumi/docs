@@ -3,7 +3,7 @@ title: "Module appmesh"
 title_tag: "Module appmesh | Package @pulumi/aws | Node.js SDK"
 linktitle: "appmesh"
 meta_desc: "Explore members of the appmesh module in the @pulumi/aws package."
-git_sha: "6dda53b70848a0c4579e285220ce00c4601e5e7e"
+git_sha: "c8b3800fee968c7857270cd66003c099ecc05d08"
 block_external_search_index: true
 ---
 
@@ -17,8 +17,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="#GatewayRoute"><span class="symbol resource"></span>GatewayRoute</a></li>
     <li><a href="#Mesh"><span class="symbol resource"></span>Mesh</a></li>
     <li><a href="#Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="#VirtualGateway"><span class="symbol resource"></span>VirtualGateway</a></li>
     <li><a href="#VirtualNode"><span class="symbol resource"></span>VirtualNode</a></li>
     <li><a href="#VirtualRouter"><span class="symbol resource"></span>VirtualRouter</a></li>
     <li><a href="#VirtualService"><span class="symbol resource"></span>VirtualService</a></li>
@@ -27,10 +29,14 @@ block_external_search_index: true
 
 <h3>Others</h3>
 <ul class="api">
+    <li><a href="#GatewayRouteArgs"><span class="symbol api"></span>GatewayRouteArgs</a></li>
+    <li><a href="#GatewayRouteState"><span class="symbol api"></span>GatewayRouteState</a></li>
     <li><a href="#MeshArgs"><span class="symbol api"></span>MeshArgs</a></li>
     <li><a href="#MeshState"><span class="symbol api"></span>MeshState</a></li>
     <li><a href="#RouteArgs"><span class="symbol api"></span>RouteArgs</a></li>
     <li><a href="#RouteState"><span class="symbol api"></span>RouteState</a></li>
+    <li><a href="#VirtualGatewayArgs"><span class="symbol api"></span>VirtualGatewayArgs</a></li>
+    <li><a href="#VirtualGatewayState"><span class="symbol api"></span>VirtualGatewayState</a></li>
     <li><a href="#VirtualNodeArgs"><span class="symbol api"></span>VirtualNodeArgs</a></li>
     <li><a href="#VirtualNodeState"><span class="symbol api"></span>VirtualNodeState</a></li>
     <li><a href="#VirtualRouterArgs"><span class="symbol api"></span>VirtualRouterArgs</a></li>
@@ -41,8 +47,188 @@ block_external_search_index: true
 
 
 <h2 id="resources">Resources</h2>
+<h3 class="pdoc-module-header" id="GatewayRoute" data-link-title="GatewayRoute">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L42">
+        Resource <strong>GatewayRoute</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GatewayRoute</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides an AWS App Mesh gateway route resource.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.appmesh.GatewayRoute("example", {
+    meshName: "example-service-mesh",
+    virtualGatewayName: aws_appmesh_virtual_gateway.example.name,
+    spec: {
+        httpRoute: {
+            action: {
+                target: {
+                    virtualService: {
+                        virtualServiceName: aws_appmesh_virtual_service.example.name,
+                    },
+                },
+            },
+            match: {
+                prefix: "/",
+            },
+        },
+    },
+    tags: {
+        Environment: "test",
+    },
+});
+```
+
+<h4 class="pdoc-member-header" id="GatewayRoute-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L109"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GatewayRoute(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GatewayRouteArgs'>GatewayRouteArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a GatewayRoute resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L52">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#GatewayRouteState'>GatewayRouteState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#GatewayRoute'>GatewayRoute</a></code></pre>
+
+
+Get an existing GatewayRoute resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L42">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="GatewayRoute-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L63">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is GatewayRoute</code></pre>
+
+
+Returns true if the given object is an instance of GatewayRoute.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L73">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ARN of the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-createdDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L77">property <b>createdDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The creation date of the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L42">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-lastUpdatedDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L81">property <b>lastUpdatedDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The last update date of the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-meshName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L85">property <b>meshName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the service mesh in which to create the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-meshOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L89">property <b>meshOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>meshOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L93">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name to use for the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-resourceOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L97">property <b>resourceOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource owner's AWS account ID.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L101">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpec'>GatewayRouteSpec</a>&gt;;</code></pre>
+
+The gateway route specification to apply.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L105">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A map of tags to assign to the resource.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L42">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h4 class="pdoc-member-header" id="GatewayRoute-virtualGatewayName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L109">property <b>virtualGatewayName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>virtualGatewayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with.
+
 <h3 class="pdoc-module-header" id="Mesh" data-link-title="Mesh">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L37">
         Resource <strong>Mesh</strong>
     </a>
 </h3>
@@ -76,7 +262,7 @@ const simple = new aws.appmesh.Mesh("simple", {
 ```
 
 <h4 class="pdoc-member-header" id="Mesh-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -90,7 +276,7 @@ Create a Mesh resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Mesh-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -101,14 +287,14 @@ Get an existing Mesh resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Mesh-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Mesh-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -119,7 +305,7 @@ Returns true if the given object is an instance of Mesh.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Mesh-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L68">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L68">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +313,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the service mesh.
 
 <h4 class="pdoc-member-header" id="Mesh-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L72">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L72">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +321,7 @@ The ARN of the service mesh.
 The creation date of the service mesh.
 
 <h4 class="pdoc-member-header" id="Mesh-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -144,7 +330,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Mesh-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L76">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L76">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +338,7 @@ deployments and may be missing (undefined) during planning phases.
 The last update date of the service mesh.
 
 <h4 class="pdoc-member-header" id="Mesh-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L80">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L80">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +346,7 @@ The last update date of the service mesh.
 The AWS account ID of the service mesh's owner.
 
 <h4 class="pdoc-member-header" id="Mesh-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +354,7 @@ The AWS account ID of the service mesh's owner.
 The name to use for the service mesh.
 
 <h4 class="pdoc-member-header" id="Mesh-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L88">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L88">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +362,7 @@ The name to use for the service mesh.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="Mesh-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L92">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L92">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MeshSpec'>MeshSpec</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -184,7 +370,7 @@ The resource owner's AWS account ID.
 The service mesh specification to apply.
 
 <h4 class="pdoc-member-header" id="Mesh-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L96">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L96">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -192,7 +378,7 @@ The service mesh specification to apply.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Mesh-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -201,7 +387,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Route" data-link-title="Route">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L130">
         Resource <strong>Route</strong>
     </a>
 </h3>
@@ -328,7 +514,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 ```
 
 <h4 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L197"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L197"> <b>constructor</b></a>
 </h4>
 
 
@@ -342,7 +528,7 @@ Create a Route resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L140">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L140">method <b>get</b></a>
 </h4>
 
 
@@ -353,14 +539,14 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Route-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L130">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L130">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Route-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L151">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L151">method <b>isInstance</b></a>
 </h4>
 
 
@@ -371,7 +557,7 @@ Returns true if the given object is an instance of Route.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Route-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L161">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L161">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +565,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the route.
 
 <h4 class="pdoc-member-header" id="Route-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L165">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L165">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +573,7 @@ The ARN of the route.
 The creation date of the route.
 
 <h4 class="pdoc-member-header" id="Route-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L130">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L130">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -396,7 +582,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Route-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L169">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L169">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,7 +590,7 @@ deployments and may be missing (undefined) during planning phases.
 The last update date of the route.
 
 <h4 class="pdoc-member-header" id="Route-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L173">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L173">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -412,7 +598,7 @@ The last update date of the route.
 The name of the service mesh in which to create the route.
 
 <h4 class="pdoc-member-header" id="Route-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L177">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L177">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +606,7 @@ The name of the service mesh in which to create the route.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="Route-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -428,7 +614,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the route.
 
 <h4 class="pdoc-member-header" id="Route-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L185">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L185">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -436,7 +622,7 @@ The name to use for the route.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="Route-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L189">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L189">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpec'>RouteSpec</a>&gt;;</code></pre>
@@ -444,7 +630,7 @@ The resource owner's AWS account ID.
 The route specification to apply.
 
 <h4 class="pdoc-member-header" id="Route-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L193">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L193">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -452,7 +638,7 @@ The route specification to apply.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Route-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L130">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L130">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -461,15 +647,214 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Route-virtualRouterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L197">property <b>virtualRouterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L197">property <b>virtualRouterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>virtualRouterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the virtual router in which to create the route.
 
+<h3 class="pdoc-module-header" id="VirtualGateway" data-link-title="VirtualGateway">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L69">
+        Resource <strong>VirtualGateway</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>VirtualGateway</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides an AWS App Mesh virtual gateway resource.
+
+#### Example Usage
+##### Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.appmesh.VirtualGateway("example", {
+    meshName: "example-service-mesh",
+    spec: {
+        listener: {
+            portMapping: {
+                port: 8080,
+                protocol: "http",
+            },
+        },
+    },
+    tags: {
+        Environment: "test",
+    },
+});
+```
+##### Access Logs and TLS
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.appmesh.VirtualGateway("example", {
+    meshName: "example-service-mesh",
+    spec: {
+        listener: {
+            portMapping: {
+                port: 8080,
+                protocol: "http",
+            },
+            tls: {
+                certificate: {
+                    acm: {
+                        certificateArn: aws_acm_certificate.example.arn,
+                    },
+                },
+                mode: "STRICT",
+            },
+        },
+        logging: {
+            accessLog: {
+                file: {
+                    path: "/var/log/access.log",
+                },
+            },
+        },
+    },
+});
+```
+
+<h4 class="pdoc-member-header" id="VirtualGateway-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L132"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> VirtualGateway(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VirtualGatewayArgs'>VirtualGatewayArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a VirtualGateway resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L79">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VirtualGatewayState'>VirtualGatewayState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VirtualGateway'>VirtualGateway</a></code></pre>
+
+
+Get an existing VirtualGateway resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L69">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="VirtualGateway-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L90">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VirtualGateway</code></pre>
+
+
+Returns true if the given object is an instance of VirtualGateway.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L100">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ARN of the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-createdDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L104">property <b>createdDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The creation date of the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L69">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-lastUpdatedDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L108">property <b>lastUpdatedDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The last update date of the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-meshName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L112">property <b>meshName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the service mesh in which to create the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-meshOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L116">property <b>meshOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>meshOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L120">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name to use for the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-resourceOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L124">property <b>resourceOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource owner's AWS account ID.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L128">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpec'>VirtualGatewaySpec</a>&gt;;</code></pre>
+
+The virtual gateway specification to apply.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L132">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A map of tags to assign to the resource.
+
+<h4 class="pdoc-member-header" id="VirtualGateway-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L69">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h3 class="pdoc-module-header" id="VirtualNode" data-link-title="VirtualNode">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L158">
         Resource <strong>VirtualNode</strong>
     </a>
 </h3>
@@ -624,7 +1009,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 ```
 
 <h4 class="pdoc-member-header" id="VirtualNode-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L221"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L221"> <b>constructor</b></a>
 </h4>
 
 
@@ -638,7 +1023,7 @@ Create a VirtualNode resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VirtualNode-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L168">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L168">method <b>get</b></a>
 </h4>
 
 
@@ -649,14 +1034,14 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VirtualNode-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L158">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L158">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VirtualNode-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L179">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L179">method <b>isInstance</b></a>
 </h4>
 
 
@@ -667,7 +1052,7 @@ Returns true if the given object is an instance of VirtualNode.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VirtualNode-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L189">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L189">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +1060,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNode-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L193">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L193">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +1068,7 @@ The ARN of the virtual node.
 The creation date of the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNode-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L158">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L158">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -692,7 +1077,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VirtualNode-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L197">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L197">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +1085,7 @@ deployments and may be missing (undefined) during planning phases.
 The last update date of the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNode-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L201">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L201">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -708,7 +1093,7 @@ The last update date of the virtual node.
 The name of the service mesh in which to create the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNode-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L205">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L205">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +1101,7 @@ The name of the service mesh in which to create the virtual node.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualNode-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L209">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L209">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +1109,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNode-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L213">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L213">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -732,7 +1117,7 @@ The name to use for the virtual node.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="VirtualNode-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L217">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L217">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpec'>VirtualNodeSpec</a>&gt;;</code></pre>
@@ -740,7 +1125,7 @@ The resource owner's AWS account ID.
 The virtual node specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualNode-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L221">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L221">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -748,7 +1133,7 @@ The virtual node specification to apply.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VirtualNode-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L158">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L158">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -757,7 +1142,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VirtualRouter" data-link-title="VirtualRouter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L44">
         Resource <strong>VirtualRouter</strong>
     </a>
 </h3>
@@ -798,7 +1183,7 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
 ```
 
 <h4 class="pdoc-member-header" id="VirtualRouter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -812,7 +1197,7 @@ Create a VirtualRouter resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -823,14 +1208,14 @@ Get an existing VirtualRouter resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VirtualRouter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -841,7 +1226,7 @@ Returns true if the given object is an instance of VirtualRouter.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L75">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L75">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,7 +1234,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L79">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L79">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -857,7 +1242,7 @@ The ARN of the virtual router.
 The creation date of the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -866,7 +1251,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L83">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L83">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -874,7 +1259,7 @@ deployments and may be missing (undefined) during planning phases.
 The last update date of the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L87">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L87">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -882,7 +1267,7 @@ The last update date of the virtual router.
 The name of the service mesh in which to create the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L91">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L91">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -890,7 +1275,7 @@ The name of the service mesh in which to create the virtual router.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -898,7 +1283,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L99">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L99">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +1291,7 @@ The name to use for the virtual router.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L103">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L103">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualRouterSpec'>VirtualRouterSpec</a>&gt;;</code></pre>
@@ -914,7 +1299,7 @@ The resource owner's AWS account ID.
 The virtual router specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L107">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -922,7 +1307,7 @@ The virtual router specification to apply.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VirtualRouter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -931,7 +1316,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VirtualService" data-link-title="VirtualService">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L49">
         Resource <strong>VirtualService</strong>
     </a>
 </h3>
@@ -977,7 +1362,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
 ```
 
 <h4 class="pdoc-member-header" id="VirtualService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -991,7 +1376,7 @@ Create a VirtualService resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VirtualService-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -1002,14 +1387,14 @@ Get an existing VirtualService resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VirtualService-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VirtualService-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1020,7 +1405,7 @@ Returns true if the given object is an instance of VirtualService.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VirtualService-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L80">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L80">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1028,7 +1413,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualService-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L84">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L84">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1036,7 +1421,7 @@ The ARN of the virtual service.
 The creation date of the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualService-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1045,7 +1430,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VirtualService-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L88">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L88">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1053,7 +1438,7 @@ deployments and may be missing (undefined) during planning phases.
 The last update date of the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualService-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L92">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L92">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1061,7 +1446,7 @@ The last update date of the virtual service.
 The name of the service mesh in which to create the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualService-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L96">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L96">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meshOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1069,7 +1454,7 @@ The name of the service mesh in which to create the virtual service.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualService-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1077,7 +1462,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualService-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L104">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L104">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1085,7 +1470,7 @@ The name to use for the virtual service.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="VirtualService-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L108">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L108">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualServiceSpec'>VirtualServiceSpec</a>&gt;;</code></pre>
@@ -1093,7 +1478,7 @@ The resource owner's AWS account ID.
 The virtual service specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualService-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L112">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L112">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1101,7 +1486,7 @@ The virtual service specification to apply.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="VirtualService-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1112,8 +1497,156 @@ deployments.
 
 
 <h2 id="apis">Others</h2>
+<h3 class="pdoc-module-header" id="GatewayRouteArgs" data-link-title="GatewayRouteArgs">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L215">
+        interface <strong>GatewayRouteArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GatewayRouteArgs</span></code></pre>
+
+The set of arguments for constructing a GatewayRoute resource.
+
+<h4 class="pdoc-member-header" id="GatewayRouteArgs-meshName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L219">property <b>meshName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the service mesh in which to create the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRouteArgs-meshOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L223">property <b>meshOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+
+<h4 class="pdoc-member-header" id="GatewayRouteArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L227">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name to use for the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRouteArgs-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L231">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpec'>GatewayRouteSpec</a>&gt;;</code></pre>
+
+The gateway route specification to apply.
+
+<h4 class="pdoc-member-header" id="GatewayRouteArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L235">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+A map of tags to assign to the resource.
+
+<h4 class="pdoc-member-header" id="GatewayRouteArgs-virtualGatewayName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L239">property <b>virtualGatewayName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>virtualGatewayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with.
+
+<h3 class="pdoc-module-header" id="GatewayRouteState" data-link-title="GatewayRouteState">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L169">
+        interface <strong>GatewayRouteState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GatewayRouteState</span></code></pre>
+
+Input properties used for looking up and filtering GatewayRoute resources.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L173">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ARN of the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-createdDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L177">property <b>createdDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The creation date of the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-lastUpdatedDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L181">property <b>lastUpdatedDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The last update date of the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-meshName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L185">property <b>meshName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the service mesh in which to create the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-meshOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L189">property <b>meshOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L193">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name to use for the gateway route.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-resourceOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L197">property <b>resourceOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource owner's AWS account ID.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L201">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpec'>GatewayRouteSpec</a>&gt;;</code></pre>
+
+The gateway route specification to apply.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L205">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+A map of tags to assign to the resource.
+
+<h4 class="pdoc-member-header" id="GatewayRouteState-virtualGatewayName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/gatewayRoute.ts#L209">property <b>virtualGatewayName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>virtualGatewayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the [virtual gateway](https://www.terraform.io/docs/providers/aws/r/appmesh_virtual_gateway.html) to associate the gateway route with.
+
 <h3 class="pdoc-module-header" id="MeshArgs" data-link-title="MeshArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L181">
         interface <strong>MeshArgs</strong>
     </a>
 </h3>
@@ -1123,7 +1656,7 @@ deployments.
 The set of arguments for constructing a Mesh resource.
 
 <h4 class="pdoc-member-header" id="MeshArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,7 +1664,7 @@ The set of arguments for constructing a Mesh resource.
 The name to use for the service mesh.
 
 <h4 class="pdoc-member-header" id="MeshArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L189">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L189">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MeshSpec'>MeshSpec</a>&gt;;</code></pre>
@@ -1139,7 +1672,7 @@ The name to use for the service mesh.
 The service mesh specification to apply.
 
 <h4 class="pdoc-member-header" id="MeshArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L193">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L193">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1147,7 +1680,7 @@ The service mesh specification to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MeshState" data-link-title="MeshState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L143">
         interface <strong>MeshState</strong>
     </a>
 </h3>
@@ -1157,7 +1690,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering Mesh resources.
 
 <h4 class="pdoc-member-header" id="MeshState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L147">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L147">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1165,7 +1698,7 @@ Input properties used for looking up and filtering Mesh resources.
 The ARN of the service mesh.
 
 <h4 class="pdoc-member-header" id="MeshState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L151">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L151">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1173,7 +1706,7 @@ The ARN of the service mesh.
 The creation date of the service mesh.
 
 <h4 class="pdoc-member-header" id="MeshState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L155">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L155">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1181,7 +1714,7 @@ The creation date of the service mesh.
 The last update date of the service mesh.
 
 <h4 class="pdoc-member-header" id="MeshState-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L159">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L159">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1189,7 +1722,7 @@ The last update date of the service mesh.
 The AWS account ID of the service mesh's owner.
 
 <h4 class="pdoc-member-header" id="MeshState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1197,7 +1730,7 @@ The AWS account ID of the service mesh's owner.
 The name to use for the service mesh.
 
 <h4 class="pdoc-member-header" id="MeshState-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L167">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L167">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +1738,7 @@ The name to use for the service mesh.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="MeshState-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L171">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L171">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MeshSpec'>MeshSpec</a>&gt;;</code></pre>
@@ -1213,7 +1746,7 @@ The resource owner's AWS account ID.
 The service mesh specification to apply.
 
 <h4 class="pdoc-member-header" id="MeshState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/mesh.ts#L175">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/mesh.ts#L175">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1221,7 +1754,7 @@ The service mesh specification to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="RouteArgs" data-link-title="RouteArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L303">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L303">
         interface <strong>RouteArgs</strong>
     </a>
 </h3>
@@ -1231,7 +1764,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a Route resource.
 
 <h4 class="pdoc-member-header" id="RouteArgs-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L307">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L307">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1239,7 +1772,7 @@ The set of arguments for constructing a Route resource.
 The name of the service mesh in which to create the route.
 
 <h4 class="pdoc-member-header" id="RouteArgs-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L311">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L311">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1247,7 +1780,7 @@ The name of the service mesh in which to create the route.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="RouteArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L315">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L315">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1255,7 +1788,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the route.
 
 <h4 class="pdoc-member-header" id="RouteArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L319">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L319">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpec'>RouteSpec</a>&gt;;</code></pre>
@@ -1263,7 +1796,7 @@ The name to use for the route.
 The route specification to apply.
 
 <h4 class="pdoc-member-header" id="RouteArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L323">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L323">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1271,7 +1804,7 @@ The route specification to apply.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="RouteArgs-virtualRouterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L327">property <b>virtualRouterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L327">property <b>virtualRouterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualRouterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1279,7 +1812,7 @@ A map of tags to assign to the resource.
 The name of the virtual router in which to create the route.
 
 <h3 class="pdoc-module-header" id="RouteState" data-link-title="RouteState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L257">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L257">
         interface <strong>RouteState</strong>
     </a>
 </h3>
@@ -1289,7 +1822,7 @@ The name of the virtual router in which to create the route.
 Input properties used for looking up and filtering Route resources.
 
 <h4 class="pdoc-member-header" id="RouteState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L261">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L261">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1297,7 +1830,7 @@ Input properties used for looking up and filtering Route resources.
 The ARN of the route.
 
 <h4 class="pdoc-member-header" id="RouteState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L265">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L265">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1305,7 +1838,7 @@ The ARN of the route.
 The creation date of the route.
 
 <h4 class="pdoc-member-header" id="RouteState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L269">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L269">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1313,7 +1846,7 @@ The creation date of the route.
 The last update date of the route.
 
 <h4 class="pdoc-member-header" id="RouteState-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L273">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L273">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1854,7 @@ The last update date of the route.
 The name of the service mesh in which to create the route.
 
 <h4 class="pdoc-member-header" id="RouteState-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L277">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L277">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1329,7 +1862,7 @@ The name of the service mesh in which to create the route.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="RouteState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L281">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L281">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1870,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the route.
 
 <h4 class="pdoc-member-header" id="RouteState-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L285">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L285">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1345,7 +1878,7 @@ The name to use for the route.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="RouteState-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L289">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L289">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpec'>RouteSpec</a>&gt;;</code></pre>
@@ -1353,7 +1886,7 @@ The resource owner's AWS account ID.
 The route specification to apply.
 
 <h4 class="pdoc-member-header" id="RouteState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L293">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L293">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1361,15 +1894,147 @@ The route specification to apply.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="RouteState-virtualRouterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/route.ts#L297">property <b>virtualRouterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/route.ts#L297">property <b>virtualRouterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualRouterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the virtual router in which to create the route.
 
+<h3 class="pdoc-module-header" id="VirtualGatewayArgs" data-link-title="VirtualGatewayArgs">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L229">
+        interface <strong>VirtualGatewayArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualGatewayArgs</span></code></pre>
+
+The set of arguments for constructing a VirtualGateway resource.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayArgs-meshName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L233">property <b>meshName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the service mesh in which to create the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayArgs-meshOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L237">property <b>meshOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L241">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name to use for the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayArgs-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L245">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpec'>VirtualGatewaySpec</a>&gt;;</code></pre>
+
+The virtual gateway specification to apply.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L249">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+A map of tags to assign to the resource.
+
+<h3 class="pdoc-module-header" id="VirtualGatewayState" data-link-title="VirtualGatewayState">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L187">
+        interface <strong>VirtualGatewayState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualGatewayState</span></code></pre>
+
+Input properties used for looking up and filtering VirtualGateway resources.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L191">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ARN of the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-createdDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L195">property <b>createdDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The creation date of the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-lastUpdatedDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L199">property <b>lastUpdatedDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The last update date of the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-meshName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L203">property <b>meshName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the service mesh in which to create the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-meshOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L207">property <b>meshOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L211">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name to use for the virtual gateway.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-resourceOwner">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L215">property <b>resourceOwner</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource owner's AWS account ID.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L219">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpec'>VirtualGatewaySpec</a>&gt;;</code></pre>
+
+The virtual gateway specification to apply.
+
+<h4 class="pdoc-member-header" id="VirtualGatewayState-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualGateway.ts#L223">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+A map of tags to assign to the resource.
+
 <h3 class="pdoc-module-header" id="VirtualNodeArgs" data-link-title="VirtualNodeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L318">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L318">
         interface <strong>VirtualNodeArgs</strong>
     </a>
 </h3>
@@ -1379,7 +2044,7 @@ The name of the virtual router in which to create the route.
 The set of arguments for constructing a VirtualNode resource.
 
 <h4 class="pdoc-member-header" id="VirtualNodeArgs-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L322">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L322">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1387,7 +2052,7 @@ The set of arguments for constructing a VirtualNode resource.
 The name of the service mesh in which to create the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNodeArgs-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L326">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L326">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1395,7 +2060,7 @@ The name of the service mesh in which to create the virtual node.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualNodeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L330">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L330">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1403,7 +2068,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNodeArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L334">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L334">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpec'>VirtualNodeSpec</a>&gt;;</code></pre>
@@ -1411,7 +2076,7 @@ The name to use for the virtual node.
 The virtual node specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualNodeArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L338">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L338">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1419,7 +2084,7 @@ The virtual node specification to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="VirtualNodeState" data-link-title="VirtualNodeState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L276">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L276">
         interface <strong>VirtualNodeState</strong>
     </a>
 </h3>
@@ -1429,7 +2094,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering VirtualNode resources.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L280">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L280">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1437,7 +2102,7 @@ Input properties used for looking up and filtering VirtualNode resources.
 The ARN of the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L284">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L284">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1445,7 +2110,7 @@ The ARN of the virtual node.
 The creation date of the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L288">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L288">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1453,7 +2118,7 @@ The creation date of the virtual node.
 The last update date of the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L292">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L292">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1461,7 +2126,7 @@ The last update date of the virtual node.
 The name of the service mesh in which to create the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L296">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L296">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1469,7 +2134,7 @@ The name of the service mesh in which to create the virtual node.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L300">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L300">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1477,7 +2142,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual node.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L304">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L304">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1485,7 +2150,7 @@ The name to use for the virtual node.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L308">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L308">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpec'>VirtualNodeSpec</a>&gt;;</code></pre>
@@ -1493,7 +2158,7 @@ The resource owner's AWS account ID.
 The virtual node specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualNodeState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualNode.ts#L312">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualNode.ts#L312">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1501,7 +2166,7 @@ The virtual node specification to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="VirtualRouterArgs" data-link-title="VirtualRouterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L204">
         interface <strong>VirtualRouterArgs</strong>
     </a>
 </h3>
@@ -1511,7 +2176,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a VirtualRouter resource.
 
 <h4 class="pdoc-member-header" id="VirtualRouterArgs-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L208">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L208">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1519,7 +2184,7 @@ The set of arguments for constructing a VirtualRouter resource.
 The name of the service mesh in which to create the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouterArgs-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L212">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L212">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1527,7 +2192,7 @@ The name of the service mesh in which to create the virtual router.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualRouterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L216">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L216">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1535,7 +2200,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouterArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L220">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L220">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualRouterSpec'>VirtualRouterSpec</a>&gt;;</code></pre>
@@ -1543,7 +2208,7 @@ The name to use for the virtual router.
 The virtual router specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualRouterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L224">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L224">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1551,7 +2216,7 @@ The virtual router specification to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="VirtualRouterState" data-link-title="VirtualRouterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L162">
         interface <strong>VirtualRouterState</strong>
     </a>
 </h3>
@@ -1561,7 +2226,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering VirtualRouter resources.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L166">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L166">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1569,7 +2234,7 @@ Input properties used for looking up and filtering VirtualRouter resources.
 The ARN of the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L170">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L170">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1577,7 +2242,7 @@ The ARN of the virtual router.
 The creation date of the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L174">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L174">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1585,7 +2250,7 @@ The creation date of the virtual router.
 The last update date of the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L178">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L178">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1593,7 +2258,7 @@ The last update date of the virtual router.
 The name of the service mesh in which to create the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L182">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L182">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1601,7 +2266,7 @@ The name of the service mesh in which to create the virtual router.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1609,7 +2274,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual router.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L190">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L190">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1617,7 +2282,7 @@ The name to use for the virtual router.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L194">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L194">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualRouterSpec'>VirtualRouterSpec</a>&gt;;</code></pre>
@@ -1625,7 +2290,7 @@ The resource owner's AWS account ID.
 The virtual router specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualRouterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualRouter.ts#L198">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualRouter.ts#L198">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1633,7 +2298,7 @@ The virtual router specification to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="VirtualServiceArgs" data-link-title="VirtualServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L209">
         interface <strong>VirtualServiceArgs</strong>
     </a>
 </h3>
@@ -1643,7 +2308,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a VirtualService resource.
 
 <h4 class="pdoc-member-header" id="VirtualServiceArgs-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L213">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L213">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1651,7 +2316,7 @@ The set of arguments for constructing a VirtualService resource.
 The name of the service mesh in which to create the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualServiceArgs-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L217">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L217">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1659,7 +2324,7 @@ The name of the service mesh in which to create the virtual service.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L221">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1667,7 +2332,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualServiceArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L225">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L225">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualServiceSpec'>VirtualServiceSpec</a>&gt;;</code></pre>
@@ -1675,7 +2340,7 @@ The name to use for the virtual service.
 The virtual service specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L229">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L229">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1683,7 +2348,7 @@ The virtual service specification to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="VirtualServiceState" data-link-title="VirtualServiceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L167">
         interface <strong>VirtualServiceState</strong>
     </a>
 </h3>
@@ -1693,7 +2358,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering VirtualService resources.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L171">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L171">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1701,7 +2366,7 @@ Input properties used for looking up and filtering VirtualService resources.
 The ARN of the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L175">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L175">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1709,7 +2374,7 @@ The ARN of the virtual service.
 The creation date of the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L179">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L179">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1717,7 +2382,7 @@ The creation date of the virtual service.
 The last update date of the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-meshName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L183">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L183">property <b>meshName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1725,7 +2390,7 @@ The last update date of the virtual service.
 The name of the service mesh in which to create the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-meshOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L187">property <b>meshOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L187">property <b>meshOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meshOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1733,7 +2398,7 @@ The name of the service mesh in which to create the virtual service.
 The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L191">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L191">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1741,7 +2406,7 @@ The AWS account ID of the service mesh's owner. Defaults to the account ID the [
 The name to use for the virtual service.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L195">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L195">property <b>resourceOwner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1749,7 +2414,7 @@ The name to use for the virtual service.
 The resource owner's AWS account ID.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L199">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L199">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualServiceSpec'>VirtualServiceSpec</a>&gt;;</code></pre>
@@ -1757,7 +2422,7 @@ The resource owner's AWS account ID.
 The virtual service specification to apply.
 
 <h4 class="pdoc-member-header" id="VirtualServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6dda53b70848a0c4579e285220ce00c4601e5e7e/sdk/nodejs/appmesh/virtualService.ts#L203">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8b3800fee968c7857270cd66003c099ecc05d08/sdk/nodejs/appmesh/virtualService.ts#L203">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

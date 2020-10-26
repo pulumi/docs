@@ -295,7 +295,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The route key for the route.
+    <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,7 +426,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The route key for the route.
+    <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -557,7 +557,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The route key for the route.
+    <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -688,7 +688,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The route key for the route.
+    <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1105,7 +1105,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The route key for the route.
+    <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1236,7 +1236,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The route key for the route.
+    <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1367,7 +1367,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The route key for the route.
+    <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1498,7 +1498,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The route key for the route.
+    <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
