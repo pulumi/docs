@@ -2,7 +2,7 @@
 data = "27th October 2020"
 title = "Pulumi Raises $37.5M in Series B Funding to Accelerate Industry-wide Shift to Cloud Engineering"
 summary = "New NEA-led investment will be used to realize Pulumi’s mission of empowering all developers and infrastructure experts to collaboratively deliver modern cloud software."
-url = "https://info.pulumi.com/press-release/series-b-annoucement"
+url = "https://info.pulumi.com/press-release/series-b-announcement"
 
 [[releases]]
 date= "21st September 2020"
