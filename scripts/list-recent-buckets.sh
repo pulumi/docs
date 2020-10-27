@@ -121,7 +121,7 @@ for bucket in $buckets; do
 
             pr_state="$(echo $pr_metadata | jq -r '.state')"
 
-            if [ "$pr_state" != "open" ]; then
+            if [ "$pr_state" == "closed" ]; then
                 maybe_echo
                 maybe_echo "❌ This bucket's PR state is ${pr_state} (https://github.com/pulumi/docs/pull/${pr_number}), so it can safely be deleted."
                 maybe_echo "   aws s3 rb s3://${bucket_name} --force"
