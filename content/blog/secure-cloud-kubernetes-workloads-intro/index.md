@@ -1,6 +1,6 @@
 ---
 title: "Securely access cloud resources in Kubernetes workloads"
-date: 2020-10-13T20:56:15-07:00
+date: 2020-10-29
 draft: true
 meta_desc: An introduction for running accessing cloud resources securely for Kubernetes workloads.
 meta_image: meta.png
@@ -12,15 +12,15 @@ tags:
     - cloud-engineering
 ---
 
-As you build your cloud-native Kubernetes applications, you might eventually find you need to access cloud resources that reside outside your Kubernetes cluster. Perhaps you need to store static files in an object store (Amazon S3, Google Cloud Storage or Azure Blog Storage) or use a queuing system to pass messages to other services (Amazon SQS, Azure Service Bus or Google Pub/Sub).
+As you build your cloud-native Kubernetes applications, you might eventually find you need to access cloud resources that reside outside your Kubernetes cluster. Perhaps you need to store static files in an object store (Amazon S3, Google Cloud Storage, or Azure Blog Storage) or use a queuing system to pass messages to other services (Amazon SQS, Azure Service Bus, or Google Pub/Sub).
 
 Once you start to access these services from within your application, you'll need to find a way to authenticate to the cloud providers API, which involves authentication and permissions.
 
-In this first in a series of posts, we'll talk about ways you can authenticate securely, examine the mindset of a malicious user attacking your Kubernetes cluster, and introduce the mechanisms for avoiding bad patterns, like storing long term credentials where they can be retrieved by someone who shouldn't have them.
+In this first in a series of posts, we'll talk about how to authenticate securely, examine the mindset of a malicious user attacking your Kubernetes cluster, and introduce mechanisms for avoiding anti-patterns like storing long term credentials that can be retrieved by unauthorized persons.
 
 <!--more-->
 
-When you get started provisioning your Kubernetes workloads that access cloud resources, it can be tempting to create a "user" in your cloud provider and then create credentials like AWS Access Keys or a Google Cloud Service Account Key and store those inside your Kubernetes workload. A common approach is to store these credentials as a Kubernetes secret and then consume that secret as an environment variable in your running pods:
+When provisioning Kubernetes workloads that access cloud resources, it can be tempting to create a "user" in your cloud provider and then create credentials, like AWS Access Keys or a Google Cloud Service Account Key, and store them in your Kubernetes workload. A common approach is to store credentials as a Kubernetes secret and then consume that secret as an environment variable in your running pods:
 
 ```yaml
 apiVersion: v1
@@ -50,15 +50,15 @@ spec:
         secretName: test-secret
 ```
 
-This method works and will allow access to cloud resources from your app. You can approach this with a security-conscious mindset and make sure the permissions that the keys are associated with are narrowly scoped (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)). Unfortunately, if you have an information security team looking over your shoulder, they will still see this practice and be extremely concerned.
+This method allows access to cloud resources from your app. You can approach this with a security-conscious mindset and make sure the key permissions are narrowly scoped (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)). Unfortunately, if you have an information security team looking over your shoulder, they will still see this practice as extremely concerning.
 
 ## The Static Credential Problem
 
 Static credentials (such as AWS Access Keys) are easy to use for consumers, but they create a myriad of problems from a security perspective. To understand these problems, it's essential to take a quick look at how potential attackers might operate.
 
-It's rare for a malicious user to immediately find the keys to the kingdom when they decide to target you. Commonly, an attacker will find a small bug or hole in your application or infrastructure and then attempt to use that bug to escalate their privileges to move horizontally or vertically through your infrastructure. Navigating through the gaps in your infrastructure takes time. The longer an attacker has access to your systems, the more likely they are to escalate their access to the point where they can access sensitive data.
+It's rare for a malicious user to immediately find the keys to the kingdom when they decide to target you. Commonly, an attacker will find a small bug or hole in your application or infrastructure and attempt to use that bug to escalate privileges to move horizontally or vertically through your infrastructure. Navigating through the gaps in your infrastructure takes time. The longer an attacker has access to your systems, the more likely they are to escalate their access to where they can access sensitive data.
 
-A well-secured environment attempts to limit the capability for an attacker to [pivot](https://en.wikipedia.org/wiki/Exploit_(computer_security)#Pivoting) by adding more layers for them to get through and restricting the amount of time they have to get through those layers.
+A well-secured environment limits the capability of an attacker from [pivoting](https://en.wikipedia.org/wiki/Exploit_(computer_security)#Pivoting) by adding more layers to get through and restricting the amount of time to get through those layers.
 
 If you decide to use static credentials, the most important thing to consider is that they can be easily stolen and copied by an attacker. Credentials often live indefinitely and will continue to work until manually revoked.
 In addition, hard coding credentials into a Kubernetes secret presents multiple layers that an attacker could steal them from:
@@ -76,11 +76,11 @@ To mitigate this, many cloud providers offer a solution to push roles all the wa
 
 ### AWS EKS
 
-EKS initially required the install of third-party solutions like [KIAM](https://github.com/uswitch/kiam) and [Kube2IAM](https://github.com/jtblin/kube2iam) in the cluster -- both of which are solutions that are widely used and well tested.
+EKS initially required installing third-party solutions like [KIAM](https://github.com/uswitch/kiam) and [Kube2IAM](https://github.com/jtblin/kube2iam) in the cluster -- both of which are solutions that are widely used and well tested.
 
 EKS now offers a native solution, which involves creating a cluster with an OpenID connect issuer attached to it. You can read more about this [here](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html).
 
-Once you've created a cluster and associated an IAM OIDC provider to it, you can deploy Kubernetes pods which use an [AWS IAM Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) which you'll need to create. To leverage this IAM role in your pod, you have to patch the Kubernetes [service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) associated with the pod and add annotations that tell the pod which IAM role to use.
+Once you've created a cluster and associated an IAM OIDC provider to it, you can deploy Kubernetes pods that use an [AWS IAM Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html), which you'll need to create. To leverage this IAM role in your pod, you have to patch the Kubernetes [service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) associated with the pod and add annotations that tell the pod which IAM role to use.
 
 Pulumi's first-class support for Kubernetes Helm Charts and AWS resources means you can perform all of this in one Pulumi program. Look out for the rest of this series to see how it's done!
 
@@ -88,12 +88,12 @@ Pulumi's first-class support for Kubernetes Helm Charts and AWS resources means 
 
 Azure AKS uses a different approach to assign roles to pods. [AAD Pod Identity](https://github.com/Azure/aad-pod-identity) project is an add-on deployed into your AKS cluster. AAD Pod Identity includes a Kubernetes [CustomResource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which the running components of AAD Pod Identity watch. You can then create a [Service Principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals) and assign it to your pod.
 
-Again, Pulumi has first class support for all of Azure's resource via the [Azure NextGen Provider](https://github.com/pulumi/pulumi-azure-nextgen). Watch out for the rest of the series for a real world example!
+Again, Pulumi has first-class support for all of Azure's resources via the [Azure NextGen Provider](https://github.com/pulumi/pulumi-azure-nextgen). Watch out for the rest of the series for a real world example!
 
 ### Google Cloud GKE
 
-Google's GKE has native support for what it calls ["Workload Identity"](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). With this solution, you create a GKE cluster with workload identity enabled, and ensure that at least one node pool has workload identity enabled. You can then annotate the Kubernetes service account associated with your pod and point it at a created [GCP Service Account](https://cloud.google.com/iam/docs/service-accounts). Hopefully, the confusion between Kubernetes service accounts and Google Cloud service accounts will become clearer in the tutorial blog post!
+Google's GKE has native support for what it calls ["Workload Identity."](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) With this solution, you create a GKE cluster with workload identity enabled and ensure that at least one node pool has workload identity enabled. You can then annotate the Kubernetes service account associated with your pod and point it at a created [GCP Service Account](https://cloud.google.com/iam/docs/service-accounts). Hopefully, the confusion between Kubernetes service accounts and Google Cloud service accounts will become apparent in the tutorial blog post!
 
 ## Wrap up
 
-We've detailed compelling case for why you should reconsider using static credentials for your application, and introduced the idea for how to avoid using them in your cloud-native applications. In our next post, I'll introduce the application we're going to deploy to all of these different cloud providers, and show you how to deploy it securely on AWS EKS. Stay tuned!
+We've detailed a compelling case for why you should reconsider using static credentials for your application and introduced how to avoid using them in your cloud-native applications. In our next post, I'll introduce the application we're going to deploy to all of the different cloud providers and show you how to deploy it securely on AWS EKS. Stay tuned!
