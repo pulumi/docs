@@ -1,16 +1,8 @@
-{{ $name := "cloud-engineering-summit" }}
-{{ $summary := "The Cloud Engineering Summit replay is available! See all your favorite talks, on demand." }}
-{{ $url := "https://cloudengineering.heysummit.com/replays/?utm_campaign=summit-replay&utm_source=pulumi.com&utm_medium=top-banner" }}
-{{ $label := "Watch Now"}}
-{{ $external := true }}
-
-{{ if .IsHome }}
-    {{ $name = "azure-nextgen" }}
-    {{ $summary = "Next generation Azure provider with 100% coverage for ARM!" }}
-    {{ $url = relref . "/azure" }}
-    {{ $label = "Learn More"}}
-    {{ $external = false }}
-{{ end }}
+{{ $name := "automation-api" }}
+{{ $summary := "The Automation API is now available. No CLI. No human-in-the-loop. Just your code." }}
+{{ $url := relref . "/blog/automation-api" }}
+{{ $label := "Learn More"}}
+{{ $external := false }}
 
 {{/* When a banner is dismissed, its `name` property is recorded in localStorage to
 prevent it from being shown again, so be sure to name new banners uniquely to prevent them
