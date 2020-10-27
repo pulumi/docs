@@ -22,7 +22,7 @@ meta_desc: "Explore the CertRequest resource of the TLS package, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_tls/#pulumi_tls.CertRequest">CertRequest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[List[CertRequestSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_tls/#pulumi_tls.CertRequest">CertRequest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertRequestSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -448,7 +448,7 @@ in `private_key_pem`.
 <a href="#subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certrequestsubject">List[Cert<wbr>Request<wbr>Subject<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certrequestsubject">Sequence[Cert<wbr>Request<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
@@ -460,7 +460,7 @@ a nested configuration block whose structure is described below.
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ a nested configuration block whose structure is described below.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ a nested configuration block whose structure is described below.
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -630,7 +630,7 @@ Get an existing CertRequest resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cert_request_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[List[CertRequestSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> CertRequest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cert_request_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertRequestSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> CertRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1019,7 +1019,7 @@ a nested configuration block whose structure is described below.
 <a href="#state_dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ a nested configuration block whose structure is described below.
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -1064,7 +1064,7 @@ in `private_key_pem`.
 <a href="#state_subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certrequestsubject">List[Cert<wbr>Request<wbr>Subject<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certrequestsubject">Sequence[Cert<wbr>Request<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
@@ -1076,7 +1076,7 @@ a nested configuration block whose structure is described below.
 <a href="#state_uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -1491,7 +1491,7 @@ a nested configuration block whose structure is described below.
 <a href="#street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

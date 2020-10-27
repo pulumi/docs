@@ -22,7 +22,7 @@ meta_desc: "Explore the SelfSignedCert resource of the TLS package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_tls/#pulumi_tls.SelfSignedCert">SelfSignedCert</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_uses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">early_renewal_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_ca_certificate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">set_subject_key_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[List[SelfSignedCertSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">validity_period_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_tls/#pulumi_tls.SelfSignedCert">SelfSignedCert</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_uses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">early_renewal_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_ca_certificate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">set_subject_key_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[Sequence[SelfSignedCertSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">validity_period_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -611,7 +611,7 @@ key identifier is not set at all.
 <a href="#allowed_uses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>uses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
@@ -646,7 +646,7 @@ in `private_key_pem`.
 <a href="#subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selfsignedcertsubject">List[Self<wbr>Signed<wbr>Cert<wbr>Subject<wbr>Args]</a></span>
+        <span class="property-type"><a href="#selfsignedcertsubject">Sequence[Self<wbr>Signed<wbr>Cert<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
@@ -659,7 +659,7 @@ corresponding block for `tls.CertRequest`.
 <a href="#validity_period_hours_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>period_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
@@ -671,7 +671,7 @@ certificate will become invalid.
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -682,7 +682,7 @@ certificate will become invalid.
 <a href="#early_renewal_hours_python" style="color: inherit; text-decoration: inherit;">early_<wbr>renewal_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ certificate will become invalid.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -730,7 +730,7 @@ key identifier is not set at all.
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -1014,7 +1014,7 @@ Get an existing SelfSignedCert resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_uses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cert_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">early_renewal_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_ca_certificate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ready_for_renewal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">set_subject_key_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[List[SelfSignedCertSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">validity_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validity_period_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">validity_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SelfSignedCert</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_uses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cert_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">early_renewal_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_ca_certificate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ready_for_renewal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">set_subject_key_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[Sequence[SelfSignedCertSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">validity_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validity_period_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">validity_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SelfSignedCert</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1680,7 +1680,7 @@ certificate will become invalid.
 <a href="#state_allowed_uses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>uses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
@@ -1703,7 +1703,7 @@ for the issued certificate. The valid keywords are listed below.
 <a href="#state_dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -1714,7 +1714,7 @@ for the issued certificate. The valid keywords are listed below.
 <a href="#state_early_renewal_hours_python" style="color: inherit; text-decoration: inherit;">early_<wbr>renewal_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
 {{% /md %}}</dd>
@@ -1725,7 +1725,7 @@ for the issued certificate. The valid keywords are listed below.
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -1795,7 +1795,7 @@ key identifier is not set at all.
 <a href="#state_subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selfsignedcertsubject">List[Self<wbr>Signed<wbr>Cert<wbr>Subject<wbr>Args]</a></span>
+        <span class="property-type"><a href="#selfsignedcertsubject">Sequence[Self<wbr>Signed<wbr>Cert<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
@@ -1808,7 +1808,7 @@ corresponding block for `tls.CertRequest`.
 <a href="#state_uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
 {{% /md %}}</dd>
@@ -1831,7 +1831,7 @@ corresponding block for `tls.CertRequest`.
 <a href="#state_validity_period_hours_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>period_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
@@ -2259,7 +2259,7 @@ certificate will become invalid.
 <a href="#street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
