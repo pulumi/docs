@@ -38,9 +38,9 @@ A Pulumi package for creating and managing F5 BigIP resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 

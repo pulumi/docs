@@ -12,9 +12,6 @@ meta_desc: "Explore the PoolAttachment resource of the ltm module, including exa
 
 `f5bigip.ltm.PoolAttachment` Manages nodes membership in pools
 
-Resources should be named with their "full path". The full path is the combination of the partition + name of the resource.
-For example /Common/my-pool.
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,15 +46,15 @@ class MyStack : Stack
             AllowSnat = "yes",
             AllowNat = "yes",
         });
-        var node = new F5BigIP.Ltm.Node("node", new F5BigIP.Ltm.NodeArgs
-        {
-            Name = "/Common/terraform_node",
-            Address = "192.168.30.2",
-        });
         var attachNode = new F5BigIP.Ltm.PoolAttachment("attachNode", new F5BigIP.Ltm.PoolAttachmentArgs
         {
             Pool = pool.Name,
-            Node = node.Name.Apply(name => $"{name}:80"),
+            Node = "1.1.1.1:80",
+            Ratio = 2,
+            ConnectionLimit = 2,
+            ConnectionRateLimit = "2",
+            PriorityGroup = 2,
+            DynamicRatio = 3,
         });
     }
 
@@ -71,8 +68,6 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
-
 	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -101,18 +96,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		node, err := ltm.NewNode(ctx, "node", &ltm.NodeArgs{
-			Name:    pulumi.String("/Common/terraform_node"),
-			Address: pulumi.String("192.168.30.2"),
-		})
-		if err != nil {
-			return err
-		}
 		_, err = ltm.NewPoolAttachment(ctx, "attachNode", &ltm.PoolAttachmentArgs{
-			Pool: pool.Name,
-			Node: node.Name.ApplyT(func(name string) (string, error) {
-				return fmt.Sprintf("%v%v", name, ":80"), nil
-			}).(pulumi.StringOutput),
+			Pool:                pool.Name,
+			Node:                pulumi.String("1.1.1.1:80"),
+			Ratio:               pulumi.Int(2),
+			ConnectionLimit:     pulumi.Int(2),
+			ConnectionRateLimit: pulumi.String("2"),
+			PriorityGroup:       pulumi.Int(2),
+			DynamicRatio:        pulumi.Int(3),
 		})
 		if err != nil {
 			return err
@@ -141,12 +132,14 @@ pool = f5bigip.ltm.Pool("pool",
     monitors=[monitor.name],
     allow_snat="yes",
     allow_nat="yes")
-node = f5bigip.ltm.Node("node",
-    name="/Common/terraform_node",
-    address="192.168.30.2")
 attach_node = f5bigip.ltm.PoolAttachment("attachNode",
     pool=pool.name,
-    node=node.name.apply(lambda name: f"{name}:80"))
+    node="1.1.1.1:80",
+    ratio=2,
+    connection_limit=2,
+    connection_rate_limit="2",
+    priority_group=2,
+    dynamic_ratio=3)
 ```
 
 {{% /example %}}
@@ -171,13 +164,14 @@ const pool = new f5bigip.ltm.Pool("pool", {
     allowSnat: "yes",
     allowNat: "yes",
 });
-const node = new f5bigip.ltm.Node("node", {
-    name: "/Common/terraform_node",
-    address: "192.168.30.2",
-});
 const attachNode = new f5bigip.ltm.PoolAttachment("attachNode", {
     pool: pool.name,
-    node: pulumi.interpolate`${node.name}:80`,
+    node: "1.1.1.1:80",
+    ratio: 2,
+    connectionLimit: 2,
+    connectionRateLimit: 2,
+    priorityGroup: 2,
+    dynamicRatio: 3,
 });
 ```
 
@@ -195,7 +189,7 @@ const attachNode = new f5bigip.ltm.PoolAttachment("attachNode", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.PoolAttachment">PoolAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">node</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.PoolAttachment">PoolAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_rate_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_ratio</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fqdn_autopopulate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority_group</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ratio</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -375,7 +369,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Node with service port. (Name of Node should be referenced from `f5bigip.ltm.Node` resource)
+    <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -386,7 +380,73 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool, which should be referenced from `f5bigip.ltm.Pool` resource
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionlimit_csharp">
+<a href="#connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionratelimit_csharp">
+<a href="#connectionratelimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Rate<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicratio_csharp">
+<a href="#dynamicratio_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdnautopopulate_csharp">
+<a href="#fqdnautopopulate_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Autopopulate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prioritygroup_csharp">
+<a href="#prioritygroup_csharp" style="color: inherit; text-decoration: inherit;">Priority<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ratio_csharp">
+<a href="#ratio_csharp" style="color: inherit; text-decoration: inherit;">Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
 {{% /md %}}</dd>
 
 </dl>
@@ -404,7 +464,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Node with service port. (Name of Node should be referenced from `f5bigip.ltm.Node` resource)
+    <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -415,7 +475,73 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool, which should be referenced from `f5bigip.ltm.Pool` resource
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionlimit_go">
+<a href="#connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionratelimit_go">
+<a href="#connectionratelimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Rate<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicratio_go">
+<a href="#dynamicratio_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdnautopopulate_go">
+<a href="#fqdnautopopulate_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Autopopulate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prioritygroup_go">
+<a href="#prioritygroup_go" style="color: inherit; text-decoration: inherit;">Priority<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ratio_go">
+<a href="#ratio_go" style="color: inherit; text-decoration: inherit;">Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
 {{% /md %}}</dd>
 
 </dl>
@@ -433,7 +559,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Node with service port. (Name of Node should be referenced from `f5bigip.ltm.Node` resource)
+    <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -444,7 +570,73 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool, which should be referenced from `f5bigip.ltm.Pool` resource
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionlimit_nodejs">
+<a href="#connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionratelimit_nodejs">
+<a href="#connectionratelimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Rate<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicratio_nodejs">
+<a href="#dynamicratio_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdnautopopulate_nodejs">
+<a href="#fqdnautopopulate_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Autopopulate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prioritygroup_nodejs">
+<a href="#prioritygroup_nodejs" style="color: inherit; text-decoration: inherit;">priority<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ratio_nodejs">
+<a href="#ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
 {{% /md %}}</dd>
 
 </dl>
@@ -462,7 +654,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Node with service port. (Name of Node should be referenced from `f5bigip.ltm.Node` resource)
+    <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -473,7 +665,73 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool, which should be referenced from `f5bigip.ltm.Pool` resource
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_limit_python">
+<a href="#connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_rate_limit_python">
+<a href="#connection_rate_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>rate_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_ratio_python">
+<a href="#dynamic_ratio_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_autopopulate_python">
+<a href="#fqdn_autopopulate_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>autopopulate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_group_python">
+<a href="#priority_group_python" style="color: inherit; text-decoration: inherit;">priority_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ratio_python">
+<a href="#ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
 {{% /md %}}</dd>
 
 </dl>
@@ -575,7 +833,7 @@ Get an existing PoolAttachment resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">node</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PoolAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_rate_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_ratio</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fqdn_autopopulate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority_group</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ratio</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> PoolAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -691,13 +949,57 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_connectionlimit_csharp">
+<a href="#state_connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionratelimit_csharp">
+<a href="#state_connectionratelimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Rate<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicratio_csharp">
+<a href="#state_dynamicratio_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fqdnautopopulate_csharp">
+<a href="#state_fqdnautopopulate_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Autopopulate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_node_csharp">
 <a href="#state_node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Node with service port. (Name of Node should be referenced from `f5bigip.ltm.Node` resource)
+    <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -708,7 +1010,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool, which should be referenced from `f5bigip.ltm.Pool` resource
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_prioritygroup_csharp">
+<a href="#state_prioritygroup_csharp" style="color: inherit; text-decoration: inherit;">Priority<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ratio_csharp">
+<a href="#state_ratio_csharp" style="color: inherit; text-decoration: inherit;">Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
 {{% /md %}}</dd>
 
 </dl>
@@ -720,13 +1044,57 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_connectionlimit_go">
+<a href="#state_connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionratelimit_go">
+<a href="#state_connectionratelimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Rate<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicratio_go">
+<a href="#state_dynamicratio_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fqdnautopopulate_go">
+<a href="#state_fqdnautopopulate_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Autopopulate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_node_go">
 <a href="#state_node_go" style="color: inherit; text-decoration: inherit;">Node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Node with service port. (Name of Node should be referenced from `f5bigip.ltm.Node` resource)
+    <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -737,7 +1105,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool, which should be referenced from `f5bigip.ltm.Pool` resource
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_prioritygroup_go">
+<a href="#state_prioritygroup_go" style="color: inherit; text-decoration: inherit;">Priority<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ratio_go">
+<a href="#state_ratio_go" style="color: inherit; text-decoration: inherit;">Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
 {{% /md %}}</dd>
 
 </dl>
@@ -749,13 +1139,57 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_connectionlimit_nodejs">
+<a href="#state_connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionratelimit_nodejs">
+<a href="#state_connectionratelimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Rate<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicratio_nodejs">
+<a href="#state_dynamicratio_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fqdnautopopulate_nodejs">
+<a href="#state_fqdnautopopulate_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Autopopulate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_node_nodejs">
 <a href="#state_node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Node with service port. (Name of Node should be referenced from `f5bigip.ltm.Node` resource)
+    <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -766,7 +1200,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool, which should be referenced from `f5bigip.ltm.Pool` resource
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_prioritygroup_nodejs">
+<a href="#state_prioritygroup_nodejs" style="color: inherit; text-decoration: inherit;">priority<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ratio_nodejs">
+<a href="#state_ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
 {{% /md %}}</dd>
 
 </dl>
@@ -778,13 +1234,57 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_connection_limit_python">
+<a href="#state_connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_connection_rate_limit_python">
+<a href="#state_connection_rate_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>rate_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamic_ratio_python">
+<a href="#state_dynamic_ratio_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fqdn_autopopulate_python">
+<a href="#state_fqdn_autopopulate_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>autopopulate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_node_python">
 <a href="#state_node_python" style="color: inherit; text-decoration: inherit;">node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Node with service port. (Name of Node should be referenced from `f5bigip.ltm.Node` resource)
+    <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -795,7 +1295,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the pool, which should be referenced from `f5bigip.ltm.Pool` resource
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_priority_group_python">
+<a href="#state_priority_group_python" style="color: inherit; text-decoration: inherit;">priority_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ratio_python">
+<a href="#state_ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
 {{% /md %}}</dd>
 
 </dl>
@@ -818,6 +1340,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 </dl>
 

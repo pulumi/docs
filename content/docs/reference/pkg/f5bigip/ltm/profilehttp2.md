@@ -30,15 +30,26 @@ class MyStack : Stack
     {
         var nyhttp2 = new F5BigIP.Ltm.ProfileHttp2("nyhttp2", new F5BigIP.Ltm.ProfileHttp2Args
         {
+            Name = "/Common/test-profile-http2",
+            FrameSize = 2021,
+            ReceiveWindow = 31,
+            WriteSize = 16380,
+            HeaderTableSize = 4092,
+            IncludeContentLength = "enabled",
+            EnforceTlsRequirements = "enabled",
+            InsertHeader = "disabled",
+            ConcurrentStreamsPerConnection = 30,
+            ConnectionIdleTimeout = 100,
             ActivationModes = 
             {
-                "alpn",
-                "npn",
+                "always",
             },
-            ConcurrentStreamsPerConnection = 10,
-            ConnectionIdleTimeout = 30,
-            DefaultsFrom = "/Common/http2",
-            Name = "/Common/NewYork_http2",
+        });
+        //Child Profile which inherits parent http2 profile
+        var nyhttp2_child = new F5BigIP.Ltm.ProfileHttp2("nyhttp2-child", new F5BigIP.Ltm.ProfileHttp2Args
+        {
+            Name = "/Common/test-profile-http2-child",
+            DefaultsFrom = nyhttp2.Name,
         });
     }
 
@@ -58,15 +69,27 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ltm.NewProfileHttp2(ctx, "nyhttp2", &ltm.ProfileHttp2Args{
+		nyhttp2, err := ltm.NewProfileHttp2(ctx, "nyhttp2", &ltm.ProfileHttp2Args{
+			Name:                           pulumi.String("/Common/test-profile-http2"),
+			FrameSize:                      pulumi.Int(2021),
+			ReceiveWindow:                  pulumi.Int(31),
+			WriteSize:                      pulumi.Int(16380),
+			HeaderTableSize:                pulumi.Int(4092),
+			IncludeContentLength:           pulumi.String("enabled"),
+			EnforceTlsRequirements:         pulumi.String("enabled"),
+			InsertHeader:                   pulumi.String("disabled"),
+			ConcurrentStreamsPerConnection: pulumi.Int(30),
+			ConnectionIdleTimeout:          pulumi.Int(100),
 			ActivationModes: pulumi.StringArray{
-				pulumi.String("alpn"),
-				pulumi.String("npn"),
+				pulumi.String("always"),
 			},
-			ConcurrentStreamsPerConnection: pulumi.Int(10),
-			ConnectionIdleTimeout:          pulumi.Int(30),
-			DefaultsFrom:                   pulumi.String("/Common/http2"),
-			Name:                           pulumi.String("/Common/NewYork_http2"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ltm.NewProfileHttp2(ctx, "nyhttp2_child", &ltm.ProfileHttp2Args{
+			Name:         pulumi.String("/Common/test-profile-http2-child"),
+			DefaultsFrom: nyhttp2.Name,
 		})
 		if err != nil {
 			return err
@@ -84,14 +107,21 @@ import pulumi
 import pulumi_f5bigip as f5bigip
 
 nyhttp2 = f5bigip.ltm.ProfileHttp2("nyhttp2",
-    activation_modes=[
-        "alpn",
-        "npn",
-    ],
-    concurrent_streams_per_connection=10,
-    connection_idle_timeout=30,
-    defaults_from="/Common/http2",
-    name="/Common/NewYork_http2")
+    name="/Common/test-profile-http2",
+    frame_size=2021,
+    receive_window=31,
+    write_size=16380,
+    header_table_size=4092,
+    include_content_length="enabled",
+    enforce_tls_requirements="enabled",
+    insert_header="disabled",
+    concurrent_streams_per_connection=30,
+    connection_idle_timeout=100,
+    activation_modes=["always"])
+#Child Profile which inherits parent http2 profile
+nyhttp2_child = f5bigip.ltm.ProfileHttp2("nyhttp2-child",
+    name="/Common/test-profile-http2-child",
+    defaults_from=nyhttp2.name)
 ```
 
 {{% /example %}}
@@ -103,14 +133,22 @@ import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
 
 const nyhttp2 = new f5bigip.ltm.ProfileHttp2("nyhttp2", {
-    activationModes: [
-        "alpn",
-        "npn",
-    ],
-    concurrentStreamsPerConnection: 10,
-    connectionIdleTimeout: 30,
-    defaultsFrom: "/Common/http2",
-    name: "/Common/NewYork_http2",
+    name: "/Common/test-profile-http2",
+    frameSize: 2021,
+    receiveWindow: 31,
+    writeSize: 16380,
+    headerTableSize: 4092,
+    includeContentLength: "enabled",
+    enforceTlsRequirements: "enabled",
+    insertHeader: "disabled",
+    concurrentStreamsPerConnection: 30,
+    connectionIdleTimeout: 100,
+    activationModes: ["always"],
+});
+//Child Profile which inherits parent http2 profile
+const nyhttp2_child = new f5bigip.ltm.ProfileHttp2("nyhttp2-child", {
+    name: "/Common/test-profile-http2-child",
+    defaultsFrom: nyhttp2.name,
 });
 ```
 
@@ -128,7 +166,7 @@ const nyhttp2 = new f5bigip.ltm.ProfileHttp2("nyhttp2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.ProfileHttp2">ProfileHttp2</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_modes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">concurrent_streams_per_connection</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">connection_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_table_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.ProfileHttp2">ProfileHttp2</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_modes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">concurrent_streams_per_connection</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_tls_requirements</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frame_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">header_table_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">include_content_length</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insert_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insert_header_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">receive_window</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">write_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -308,7 +346,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http2
+    <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -319,7 +357,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what will cause an incoming connection to be handled as a HTTP/2 connection. The default values npn and alpn specify that the TLS next-protocol-negotiation and application-layer-protocol-negotiation extensions will be used.
+    <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -341,7 +379,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion..
+    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -357,13 +395,90 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enforcetlsrequirements_csharp">
+<a href="#enforcetlsrequirements_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Tls<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framesize_csharp">
+<a href="#framesize_csharp" style="color: inherit; text-decoration: inherit;">Frame<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="headertablesize_csharp">
 <a href="#headertablesize_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Table<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Use the parent Http2 profile
+    <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includecontentlength_csharp">
+<a href="#includecontentlength_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Content<wbr>Length</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insertheader_csharp">
+<a href="#insertheader_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insertheadername_csharp">
+<a href="#insertheadername_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="receivewindow_csharp">
+<a href="#receivewindow_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="writesize_csharp">
+<a href="#writesize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
 {{% /md %}}</dd>
 
 </dl>
@@ -381,7 +496,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http2
+    <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,7 +507,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what will cause an incoming connection to be handled as a HTTP/2 connection. The default values npn and alpn specify that the TLS next-protocol-negotiation and application-layer-protocol-negotiation extensions will be used.
+    <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -414,7 +529,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion..
+    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -430,13 +545,90 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enforcetlsrequirements_go">
+<a href="#enforcetlsrequirements_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Tls<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framesize_go">
+<a href="#framesize_go" style="color: inherit; text-decoration: inherit;">Frame<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="headertablesize_go">
 <a href="#headertablesize_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Table<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Use the parent Http2 profile
+    <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includecontentlength_go">
+<a href="#includecontentlength_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Content<wbr>Length</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insertheader_go">
+<a href="#insertheader_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insertheadername_go">
+<a href="#insertheadername_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="receivewindow_go">
+<a href="#receivewindow_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="writesize_go">
+<a href="#writesize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
 {{% /md %}}</dd>
 
 </dl>
@@ -454,7 +646,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http2
+    <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,7 +657,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what will cause an incoming connection to be handled as a HTTP/2 connection. The default values npn and alpn specify that the TLS next-protocol-negotiation and application-layer-protocol-negotiation extensions will be used.
+    <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,7 +679,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion..
+    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -503,13 +695,90 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enforcetlsrequirements_nodejs">
+<a href="#enforcetlsrequirements_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Tls<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framesize_nodejs">
+<a href="#framesize_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="headertablesize_nodejs">
 <a href="#headertablesize_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Table<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Use the parent Http2 profile
+    <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includecontentlength_nodejs">
+<a href="#includecontentlength_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Content<wbr>Length</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insertheader_nodejs">
+<a href="#insertheader_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insertheadername_nodejs">
+<a href="#insertheadername_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="receivewindow_nodejs">
+<a href="#receivewindow_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="writesize_nodejs">
+<a href="#writesize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
 {{% /md %}}</dd>
 
 </dl>
@@ -527,7 +796,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http2
+    <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -536,9 +805,9 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#activation_modes_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what will cause an incoming connection to be handled as a HTTP/2 connection. The default values npn and alpn specify that the TLS next-protocol-negotiation and application-layer-protocol-negotiation extensions will be used.
+    <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -547,7 +816,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#concurrent_streams_per_connection_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>streams_<wbr>per_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
 {{% /md %}}</dd>
@@ -558,9 +827,9 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#connection_idle_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>idle_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion..
+    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -576,13 +845,90 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enforce_tls_requirements_python">
+<a href="#enforce_tls_requirements_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>tls_<wbr>requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frame_size_python">
+<a href="#frame_size_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="header_table_size_python">
 <a href="#header_table_size_python" style="color: inherit; text-decoration: inherit;">header_<wbr>table_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Use the parent Http2 profile
+    <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_content_length_python">
+<a href="#include_content_length_python" style="color: inherit; text-decoration: inherit;">include_<wbr>content_<wbr>length</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insert_header_python">
+<a href="#insert_header_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insert_header_name_python">
+<a href="#insert_header_name_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="receive_window_python">
+<a href="#receive_window_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="write_size_python">
+<a href="#write_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
 {{% /md %}}</dd>
 
 </dl>
@@ -684,7 +1030,7 @@ Get an existing ProfileHttp2 resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_modes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">concurrent_streams_per_connection</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">connection_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_table_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ProfileHttp2</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_modes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">concurrent_streams_per_connection</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">defaults_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_tls_requirements</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frame_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">header_table_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">include_content_length</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insert_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insert_header_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">receive_window</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">write_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> ProfileHttp2</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -806,7 +1152,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what will cause an incoming connection to be handled as a HTTP/2 connection. The default values npn and alpn specify that the TLS next-protocol-negotiation and application-layer-protocol-negotiation extensions will be used.
+    <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -828,7 +1174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion..
+    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -844,13 +1190,68 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enforcetlsrequirements_csharp">
+<a href="#state_enforcetlsrequirements_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Tls<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_framesize_csharp">
+<a href="#state_framesize_csharp" style="color: inherit; text-decoration: inherit;">Frame<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_headertablesize_csharp">
 <a href="#state_headertablesize_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Table<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Use the parent Http2 profile
+    <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_includecontentlength_csharp">
+<a href="#state_includecontentlength_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Content<wbr>Length</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_insertheader_csharp">
+<a href="#state_insertheader_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_insertheadername_csharp">
+<a href="#state_insertheadername_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -861,7 +1262,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http2
+    <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_receivewindow_csharp">
+<a href="#state_receivewindow_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_writesize_csharp">
+<a href="#state_writesize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
 {{% /md %}}</dd>
 
 </dl>
@@ -879,7 +1302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what will cause an incoming connection to be handled as a HTTP/2 connection. The default values npn and alpn specify that the TLS next-protocol-negotiation and application-layer-protocol-negotiation extensions will be used.
+    <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -901,7 +1324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion..
+    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -917,13 +1340,68 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enforcetlsrequirements_go">
+<a href="#state_enforcetlsrequirements_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Tls<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_framesize_go">
+<a href="#state_framesize_go" style="color: inherit; text-decoration: inherit;">Frame<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_headertablesize_go">
 <a href="#state_headertablesize_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Table<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Use the parent Http2 profile
+    <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_includecontentlength_go">
+<a href="#state_includecontentlength_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Content<wbr>Length</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_insertheader_go">
+<a href="#state_insertheader_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_insertheadername_go">
+<a href="#state_insertheadername_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -934,7 +1412,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http2
+    <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_receivewindow_go">
+<a href="#state_receivewindow_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_writesize_go">
+<a href="#state_writesize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
 {{% /md %}}</dd>
 
 </dl>
@@ -952,7 +1452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what will cause an incoming connection to be handled as a HTTP/2 connection. The default values npn and alpn specify that the TLS next-protocol-negotiation and application-layer-protocol-negotiation extensions will be used.
+    <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +1474,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion..
+    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -990,13 +1490,68 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enforcetlsrequirements_nodejs">
+<a href="#state_enforcetlsrequirements_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Tls<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_framesize_nodejs">
+<a href="#state_framesize_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_headertablesize_nodejs">
 <a href="#state_headertablesize_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Table<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Use the parent Http2 profile
+    <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_includecontentlength_nodejs">
+<a href="#state_includecontentlength_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Content<wbr>Length</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_insertheader_nodejs">
+<a href="#state_insertheader_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_insertheadername_nodejs">
+<a href="#state_insertheadername_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,7 +1562,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http2
+    <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_receivewindow_nodejs">
+<a href="#state_receivewindow_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_writesize_nodejs">
+<a href="#state_writesize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
 {{% /md %}}</dd>
 
 </dl>
@@ -1023,9 +1600,9 @@ The following state arguments are supported:
 <a href="#state_activation_modes_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies what will cause an incoming connection to be handled as a HTTP/2 connection. The default values npn and alpn specify that the TLS next-protocol-negotiation and application-layer-protocol-negotiation extensions will be used.
+    <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1034,7 +1611,7 @@ The following state arguments are supported:
 <a href="#state_concurrent_streams_per_connection_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>streams_<wbr>per_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
 {{% /md %}}</dd>
@@ -1045,9 +1622,9 @@ The following state arguments are supported:
 <a href="#state_connection_idle_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>idle_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion..
+    <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1063,13 +1640,68 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enforce_tls_requirements_python">
+<a href="#state_enforce_tls_requirements_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>tls_<wbr>requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frame_size_python">
+<a href="#state_frame_size_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_header_table_size_python">
 <a href="#state_header_table_size_python" style="color: inherit; text-decoration: inherit;">header_<wbr>table_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Use the parent Http2 profile
+    <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_include_content_length_python">
+<a href="#state_include_content_length_python" style="color: inherit; text-decoration: inherit;">include_<wbr>content_<wbr>length</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_insert_header_python">
+<a href="#state_insert_header_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_insert_header_name_python">
+<a href="#state_insert_header_name_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1080,7 +1712,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http2
+    <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_receive_window_python">
+<a href="#state_receive_window_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_write_size_python">
+<a href="#state_write_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
 {{% /md %}}</dd>
 
 </dl>
@@ -1103,6 +1757,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 </dl>
 
