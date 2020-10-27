@@ -720,7 +720,7 @@ The following output properties are available:
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrecordanswer">List[Get<wbr>Record<wbr>Answer]</a></span>
+        <span class="property-type"><a href="#getrecordanswer">Sequence[Get<wbr>Record<wbr>Answer]</a></span>
     </dt>
     <dd>{{% md %}}List of NS1 answers.
 {{% /md %}}</dd>
@@ -741,7 +741,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrecordfilter">List[Get<wbr>Record<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getrecordfilter">Sequence[Get<wbr>Record<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}List of NS1 filters.
 {{% /md %}}</dd>
@@ -785,7 +785,7 @@ The following output properties are available:
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrecordregion">List[Get<wbr>Record<wbr>Region]</a></span>
+        <span class="property-type"><a href="#getrecordregion">Sequence[Get<wbr>Record<wbr>Region]</a></span>
     </dt>
     <dd>{{% md %}}List of regions.
 {{% /md %}}</dd>
@@ -796,7 +796,7 @@ The following output properties are available:
 <a href="#short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -806,7 +806,7 @@ The following output properties are available:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
