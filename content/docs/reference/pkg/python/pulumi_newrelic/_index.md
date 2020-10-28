@@ -259,6 +259,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -297,7 +302,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The ID of the policy where this condition should be used.</p></li>
 <li><p><strong>runbook_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Runbook URL to display in notifications.</p></li>
 <li><p><strong>terms</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AlertConditionTermArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of terms for this condition. See Terms below for details.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of condition. One of: <code class="docutils literal notranslate"><span class="pre">apm_app_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_kt_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">browser_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_metric</span></code></p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of condition. One of: <code class="docutils literal notranslate"><span class="pre">apm_app_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_jvm_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_kt_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">browser_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_metric</span></code></p></li>
 <li><p><strong>user_defined_metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom metric to be evaluated.</p></li>
 <li><p><strong>user_defined_value_function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of: <code class="docutils literal notranslate"><span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">total</span></code>, or <code class="docutils literal notranslate"><span class="pre">sample_size</span></code>.</p></li>
 <li><p><strong>violation_close_timer</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">12</span></code> or <code class="docutils literal notranslate"><span class="pre">24</span></code>.</p></li>
@@ -332,6 +337,11 @@ properties used to qualify the lookup.</p>
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -370,7 +380,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The ID of the policy where this condition should be used.</p></li>
 <li><p><strong>runbook_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Runbook URL to display in notifications.</p></li>
 <li><p><strong>terms</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AlertConditionTermArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of terms for this condition. See Terms below for details.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of condition. One of: <code class="docutils literal notranslate"><span class="pre">apm_app_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_kt_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">browser_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_metric</span></code></p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of condition. One of: <code class="docutils literal notranslate"><span class="pre">apm_app_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_jvm_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_kt_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">browser_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_metric</span></code></p></li>
 <li><p><strong>user_defined_metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom metric to be evaluated.</p></li>
 <li><p><strong>user_defined_value_function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of: <code class="docutils literal notranslate"><span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">total</span></code>, or <code class="docutils literal notranslate"><span class="pre">sample_size</span></code>.</p></li>
 <li><p><strong>violation_close_timer</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">12</span></code> or <code class="docutils literal notranslate"><span class="pre">24</span></code>.</p></li>
@@ -416,6 +426,11 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">throughput_background</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">throughput_web</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_defined</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apm_jvm_metric</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpu_utilization_time</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadlocked_threads</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gc_cpu_time</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">heap_memory_usage</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">apm_kt_metric</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">apdex</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">error_count</span></code></p></li>
@@ -475,7 +490,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_newrelic.AlertCondition.type">
 <em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_newrelic.AlertCondition.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of condition. One of: <code class="docutils literal notranslate"><span class="pre">apm_app_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_kt_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">browser_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_metric</span></code></p>
+<dd><p>The type of condition. One of: <code class="docutils literal notranslate"><span class="pre">apm_app_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_jvm_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">apm_kt_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">browser_metric</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_metric</span></code></p>
 </dd></dl>
 
 <dl class="py method">
