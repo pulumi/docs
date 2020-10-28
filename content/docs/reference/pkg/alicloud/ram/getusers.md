@@ -904,6 +904,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="lastlogindate_csharp">
+<a href="#lastlogindate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Login<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last login date of the user. Removed from version 1.79.0.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -940,6 +951,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The original id is user name, but it is user id in 1.37.0+.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastlogindate_go">
+<a href="#lastlogindate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Login<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last login date of the user. Removed from version 1.79.0.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -984,6 +1006,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="lastlogindate_nodejs">
+<a href="#lastlogindate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Login<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last login date of the user. Removed from version 1.79.0.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1020,6 +1053,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The original id is user name, but it is user id in 1.37.0+.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_login_date_python">
+<a href="#last_login_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>login_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last login date of the user. Removed from version 1.79.0.
 {{% /md %}}</dd>
 
     <dt class="property-required"

@@ -65,10 +65,16 @@ package main
 import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rocketmq"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "onsInstanceDatasourceName"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
 		_, err := rocketmq.NewInstance(ctx, "_default", &rocketmq.InstanceArgs{
 			Remark: pulumi.String("default_ons_instance_remark"),
 		})

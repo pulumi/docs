@@ -34,16 +34,16 @@ class MyStack : Stack
         }));
         var resourcesNodeClasses = resourcesZones.Apply(resourcesZones => Output.Create(AliCloud.PolarDB.GetNodeClasses.InvokeAsync(new AliCloud.PolarDB.GetNodeClassesArgs
         {
+            ZoneId = resourcesZones.Zones[0].Id,
+            PayType = "PostPaid",
             DbType = "MySQL",
             DbVersion = "5.6",
-            PayType = "Postpaid",
-            ZoneId = resourcesZones.Zones[0].Id,
         })));
-        this.FirstPolardbNodeClass = resourcesNodeClasses.Apply(resourcesNodeClasses => resourcesNodeClasses.Classes);
+        this.PolardbNodeClasses = resourcesNodeClasses.Apply(resourcesNodeClasses => resourcesNodeClasses.Classes);
     }
 
-    [Output("firstPolardbNodeClass")]
-    public Output<string> FirstPolardbNodeClass { get; set; }
+    [Output("polardbNodeClasses")]
+    public Output<string> PolardbNodeClasses { get; set; }
 }
 ```
 
@@ -68,19 +68,19 @@ func main() {
 		if err != nil {
 			return err
 		}
-		opt1 := "MySQL"
-		opt2 := "5.6"
-		opt3 := resourcesZones.Zones[0].Id
+		opt1 := resourcesZones.Zones[0].Id
+		opt2 := "MySQL"
+		opt3 := "5.6"
 		resourcesNodeClasses, err := polardb.GetNodeClasses(ctx, &polardb.GetNodeClassesArgs{
-			DbType:    &opt1,
-			DbVersion: &opt2,
-			PayType:   "Postpaid",
-			ZoneId:    &opt3,
+			ZoneId:    &opt1,
+			PayType:   "PostPaid",
+			DbType:    &opt2,
+			DbVersion: &opt3,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("firstPolardbNodeClass", resourcesNodeClasses.Classes)
+		ctx.Export("polardbNodeClasses", resourcesNodeClasses.Classes)
 		return nil
 	})
 }
@@ -94,11 +94,11 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 resources_zones = alicloud.get_zones(available_resource_creation="PolarDB")
-resources_node_classes = alicloud.polardb.get_node_classes(db_type="MySQL",
-    db_version="5.6",
-    pay_type="Postpaid",
-    zone_id=resources_zones.zones[0].id)
-pulumi.export("firstPolardbNodeClass", resources_node_classes.classes)
+resources_node_classes = alicloud.polardb.get_node_classes(zone_id=resources_zones.zones[0].id,
+    pay_type="PostPaid",
+    db_type="MySQL",
+    db_version="5.6")
+pulumi.export("polardbNodeClasses", resources_node_classes.classes)
 ```
 
 {{% /example %}}
@@ -109,17 +109,16 @@ pulumi.export("firstPolardbNodeClass", resources_node_classes.classes)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resourcesZones = pulumi.output(alicloud.getZones({
+const resourcesZones = alicloud.getZones({
     availableResourceCreation: "PolarDB",
-}, { async: true }));
-const resourcesNodeClasses = resourcesZones.apply(resourcesZones => alicloud.polardb.getNodeClasses({
+});
+const resourcesNodeClasses = resourcesZones.then(resourcesZones => alicloud.polardb.getNodeClasses({
+    zoneId: resourcesZones.zones[0].id,
+    payType: "PostPaid",
     dbType: "MySQL",
     dbVersion: "5.6",
-    payType: "Postpaid",
-    zoneId: resourcesZones.zones[0].id,
-}, { async: true }));
-
-export const firstPolardbNodeClass = resourcesNodeClasses.classes;
+}));
+export const polardbNodeClasses = resourcesNodeClasses.then(resourcesNodeClasses => resourcesNodeClasses.classes);
 ```
 
 {{% /example %}}

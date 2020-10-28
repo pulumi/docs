@@ -133,6 +133,7 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
@@ -165,6 +166,15 @@ func main() {
 		}, nil)
 		if err != nil {
 			return err
+		}
+		cfg := config.New(ctx, "")
+		name := "tf-testAccSlbMasterSlaveServerGroupVpc"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		number := "1"
+		if param := cfg.Get("number"); param != "" {
+			number = param
 		}
 		mainNetwork, err := vpc.NewNetwork(ctx, "mainNetwork", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("172.16.0.0/16"),
@@ -1171,6 +1181,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="isbackup_csharp">
+<a href="#isbackup_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Backup</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}(Removed from v1.63.0) Determine if the server is executing.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span> 
@@ -1218,6 +1239,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the attached ECS instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isbackup_go">
+<a href="#isbackup_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Backup</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}(Removed from v1.63.0) Determine if the server is executing.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1273,6 +1305,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="isbackup_nodejs">
+<a href="#isbackup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Backup</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}(Removed from v1.63.0) Determine if the server is executing.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
@@ -1320,6 +1363,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the attached ECS instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="is_backup_python">
+<a href="#is_backup_python" style="color: inherit; text-decoration: inherit;">is_<wbr>backup</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}(Removed from v1.63.0) Determine if the server is executing.
 {{% /md %}}</dd>
 
     <dt class="property-required"

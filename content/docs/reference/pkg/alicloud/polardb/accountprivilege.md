@@ -14,6 +14,253 @@ Provides a PolarDB account privilege resource and used to grant several database
 
 > **NOTE:** Available in v1.67.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var creation = config.Get("creation") ?? "PolarDB";
+        var name = config.Get("name") ?? "dbaccountprivilegebasic";
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableResourceCreation = creation,
+        }));
+        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/16",
+        });
+        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+        });
+        var cluster = new AliCloud.PolarDB.Cluster("cluster", new AliCloud.PolarDB.ClusterArgs
+        {
+            DbType = "MySQL",
+            DbVersion = "8.0",
+            PayType = "PostPaid",
+            DbNodeClass = "polar.mysql.x4.large",
+            VswitchId = defaultSwitch.Id,
+            Description = name,
+        });
+        var db = new AliCloud.PolarDB.Database("db", new AliCloud.PolarDB.DatabaseArgs
+        {
+            DbClusterId = cluster.Id,
+            DbName = "tftestdatabase",
+        });
+        var account = new AliCloud.PolarDB.Account("account", new AliCloud.PolarDB.AccountArgs
+        {
+            DbClusterId = cluster.Id,
+            AccountName = "tftestnormal",
+            AccountPassword = "Test12345",
+            AccountDescription = name,
+        });
+        var privilege = new AliCloud.PolarDB.AccountPrivilege("privilege", new AliCloud.PolarDB.AccountPrivilegeArgs
+        {
+            DbClusterId = cluster.Id,
+            AccountName = account.AccountName,
+            AccountPrivilege = "ReadOnly",
+            DbNames = 
+            {
+                db.DbName,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		creation := "PolarDB"
+		if param := cfg.Get("creation"); param != "" {
+			creation = param
+		}
+		name := "dbaccountprivilegebasic"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		opt0 := creation
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := polardb.NewCluster(ctx, "cluster", &polardb.ClusterArgs{
+			DbType:      pulumi.String("MySQL"),
+			DbVersion:   pulumi.String("8.0"),
+			PayType:     pulumi.String("PostPaid"),
+			DbNodeClass: pulumi.String("polar.mysql.x4.large"),
+			VswitchId:   defaultSwitch.ID(),
+			Description: pulumi.String(name),
+		})
+		if err != nil {
+			return err
+		}
+		db, err := polardb.NewDatabase(ctx, "db", &polardb.DatabaseArgs{
+			DbClusterId: cluster.ID(),
+			DbName:      pulumi.String("tftestdatabase"),
+		})
+		if err != nil {
+			return err
+		}
+		account, err := polardb.NewAccount(ctx, "account", &polardb.AccountArgs{
+			DbClusterId:        cluster.ID(),
+			AccountName:        pulumi.String("tftestnormal"),
+			AccountPassword:    pulumi.String("Test12345"),
+			AccountDescription: pulumi.String(name),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = polardb.NewAccountPrivilege(ctx, "privilege", &polardb.AccountPrivilegeArgs{
+			DbClusterId:      cluster.ID(),
+			AccountName:      account.AccountName,
+			AccountPrivilege: pulumi.String("ReadOnly"),
+			DbNames: pulumi.StringArray{
+				db.DbName,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+creation = config.get("creation")
+if creation is None:
+    creation = "PolarDB"
+name = config.get("name")
+if name is None:
+    name = "dbaccountprivilegebasic"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    vpc_id=default_network.id,
+    cidr_block="172.16.0.0/24",
+    availability_zone=default_zones.zones[0].id)
+cluster = alicloud.polardb.Cluster("cluster",
+    db_type="MySQL",
+    db_version="8.0",
+    pay_type="PostPaid",
+    db_node_class="polar.mysql.x4.large",
+    vswitch_id=default_switch.id,
+    description=name)
+db = alicloud.polardb.Database("db",
+    db_cluster_id=cluster.id,
+    db_name="tftestdatabase")
+account = alicloud.polardb.Account("account",
+    db_cluster_id=cluster.id,
+    account_name="tftestnormal",
+    account_password="Test12345",
+    account_description=name)
+privilege = alicloud.polardb.AccountPrivilege("privilege",
+    db_cluster_id=cluster.id,
+    account_name=account.account_name,
+    account_privilege="ReadOnly",
+    db_names=[db.db_name])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const creation = config.get("creation") || "PolarDB";
+const name = config.get("name") || "dbaccountprivilegebasic";
+const defaultZones = alicloud.getZones({
+    availableResourceCreation: creation,
+});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
+    vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+});
+const cluster = new alicloud.polardb.Cluster("cluster", {
+    dbType: "MySQL",
+    dbVersion: "8.0",
+    payType: "PostPaid",
+    dbNodeClass: "polar.mysql.x4.large",
+    vswitchId: defaultSwitch.id,
+    description: name,
+});
+const db = new alicloud.polardb.Database("db", {
+    dbClusterId: cluster.id,
+    dbName: "tftestdatabase",
+});
+const account = new alicloud.polardb.Account("account", {
+    dbClusterId: cluster.id,
+    accountName: "tftestnormal",
+    accountPassword: "Test12345",
+    accountDescription: name,
+});
+const privilege = new alicloud.polardb.AccountPrivilege("privilege", {
+    dbClusterId: cluster.id,
+    accountName: account.accountName,
+    accountPrivilege: "ReadOnly",
+    dbNames: [db.dbName],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccountPrivilege Resource {#create}
@@ -238,7 +485,7 @@ The AccountPrivilege resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"]. Default to "ReadOnly".
+    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"], ["DMLOnly", "DDLOnly"] added since version v1.101.0. Default to "ReadOnly".
 {{% /md %}}</dd>
 
 </dl>
@@ -289,7 +536,7 @@ The AccountPrivilege resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"]. Default to "ReadOnly".
+    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"], ["DMLOnly", "DDLOnly"] added since version v1.101.0. Default to "ReadOnly".
 {{% /md %}}</dd>
 
 </dl>
@@ -340,7 +587,7 @@ The AccountPrivilege resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"]. Default to "ReadOnly".
+    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"], ["DMLOnly", "DDLOnly"] added since version v1.101.0. Default to "ReadOnly".
 {{% /md %}}</dd>
 
 </dl>
@@ -391,7 +638,7 @@ The AccountPrivilege resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"]. Default to "ReadOnly".
+    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"], ["DMLOnly", "DDLOnly"] added since version v1.101.0. Default to "ReadOnly".
 {{% /md %}}</dd>
 
 </dl>
@@ -648,7 +895,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"]. Default to "ReadOnly".
+    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"], ["DMLOnly", "DDLOnly"] added since version v1.101.0. Default to "ReadOnly".
 {{% /md %}}</dd>
 
 </dl>
@@ -677,7 +924,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"]. Default to "ReadOnly".
+    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"], ["DMLOnly", "DDLOnly"] added since version v1.101.0. Default to "ReadOnly".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -728,7 +975,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"]. Default to "ReadOnly".
+    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"], ["DMLOnly", "DDLOnly"] added since version v1.101.0. Default to "ReadOnly".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -779,7 +1026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"]. Default to "ReadOnly".
+    <dd>{{% md %}}The privilege of one account access database. Valid values: ["ReadOnly", "ReadWrite"], ["DMLOnly", "DDLOnly"] added since version v1.101.0. Default to "ReadOnly".
 {{% /md %}}</dd>
 
     <dt class="property-optional"

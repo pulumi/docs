@@ -88,10 +88,20 @@ package main
 import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "terraformslbaclconfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		ipVersion := "ipv4"
+		if param := cfg.Get("ipVersion"); param != "" {
+			ipVersion = param
+		}
 		_, err := slb.NewAcl(ctx, "_default", &slb.AclArgs{
 			IpVersion: pulumi.String(ipVersion),
 			EntryLists: slb.AclEntryListArray{

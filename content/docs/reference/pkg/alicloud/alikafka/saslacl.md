@@ -94,10 +94,20 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		username := "testusername"
+		if param := cfg.Get("username"); param != "" {
+			username = param
+		}
+		password := "testpassword"
+		if param := cfg.Get("password"); param != "" {
+			password = param
+		}
 		opt0 := "VSwitch"
 		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
 			AvailableResourceCreation: &opt0,
