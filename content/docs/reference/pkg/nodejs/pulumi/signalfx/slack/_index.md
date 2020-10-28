@@ -3,7 +3,7 @@ title: "Module slack"
 title_tag: "Module slack | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "slack"
 meta_desc: "Explore members of the slack module in the @pulumi/signalfx package."
-git_sha: "d705080dc3c943af73c9ffc1815388bb6bca029b"
+git_sha: "70b5688a845a4b65de5f2b4d2e0511e5b97ace8b"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L24">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ const slackMyteam = new signalfx.slack.Integration("slack_myteam", {
 ```
 
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +68,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +79,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,7 +97,7 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L55">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L55">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -105,7 +105,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -114,7 +114,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -122,7 +122,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -131,7 +131,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Integration-webhookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L63">property <b>webhookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L63">property <b>webhookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webhookUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ Slack incoming webhook URL.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L124">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -152,7 +152,7 @@ Slack incoming webhook URL.
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L128">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L128">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ The set of arguments for constructing a Integration resource.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ Whether the integration is enabled.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-webhookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L136">property <b>webhookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L136">property <b>webhookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhookUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ Name of the integration.
 Slack incoming webhook URL.
 
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L106">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -186,7 +186,7 @@ Slack incoming webhook URL.
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L110">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L110">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ Input properties used for looking up and filtering Integration resources.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L114">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -202,7 +202,7 @@ Whether the integration is enabled.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationState-webhookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/d705080dc3c943af73c9ffc1815388bb6bca029b/sdk/nodejs/slack/integration.ts#L118">property <b>webhookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/slack/integration.ts#L118">property <b>webhookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
