@@ -54,7 +54,7 @@ export class EventListItem {
                                 </a>
                             </div>
                         </div>
-                        <div>
+                        <div class="mt-3">
                             <p class="m-0 pt-5">
                                 { description }
                             </p>
