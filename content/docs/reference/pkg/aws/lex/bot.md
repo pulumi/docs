@@ -65,6 +65,7 @@ class MyStack : Stack
                 },
             },
             Locale = "en-US",
+            Name = "OrderFlowers",
             ProcessBehavior = "BUILD",
             VoiceId = "Salli",
         });
@@ -115,6 +116,7 @@ func main() {
 				},
 			},
 			Locale:          pulumi.String("en-US"),
+			Name:            pulumi.String("OrderFlowers"),
 			ProcessBehavior: pulumi.String("BUILD"),
 			VoiceId:         pulumi.String("Salli"),
 		})
@@ -156,6 +158,7 @@ order_flowers_bot = aws.lex.Bot("orderFlowersBot",
         intent_version="1",
     )],
     locale="en-US",
+    name="OrderFlowers",
     process_behavior="BUILD",
     voice_id="Salli")
 ```
@@ -191,6 +194,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
         intentVersion: "1",
     }],
     locale: "en-US",
+    name: "OrderFlowers",
     processBehavior: "BUILD",
     voiceId: "Salli",
 });

@@ -3,7 +3,7 @@ title: "Module types/enums/autoscaling"
 title_tag: "Module types/enums/autoscaling | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/autoscaling"
 meta_desc: "Explore members of the enums/autoscaling module in the @pulumi/aws package."
-git_sha: "3fe1b6f7837e9052ee161f972e63a34dd2fcc624"
+git_sha: "8245cf389961a656637255fd2dd1e0e1dd04f6ea"
 block_external_search_index: true
 ---
 
@@ -29,17 +29,17 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="Metric" data-link-title="Metric">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/types/enums/autoscaling/index.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8245cf389961a656637255fd2dd1e0e1dd04f6ea/sdk/nodejs/types/enums/autoscaling/index.ts#L24">
         type <strong>Metric</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> Metric = <span class='s2'>"GroupMinSize"</span> | <span class='s2'>"GroupMaxSize"</span> | <span class='s2'>"GroupDesiredCapacity"</span> | <span class='s2'>"GroupInServiceInstances"</span> | <span class='s2'>"GroupPendingInstances"</span> | <span class='s2'>"GroupStandbyInstances"</span> | <span class='s2'>"GroupTerminatingInstances"</span> | <span class='s2'>"GroupTotalInstances"</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> Metric = <span class='s2'>"GroupMinSize"</span> | <span class='s2'>"GroupMaxSize"</span> | <span class='s2'>"GroupDesiredCapacity"</span> | <span class='s2'>"GroupInServiceInstances"</span> | <span class='s2'>"GroupInServiceCapacity"</span> | <span class='s2'>"GroupPendingInstances"</span> | <span class='s2'>"GroupPendingCapacity"</span> | <span class='s2'>"GroupStandbyInstances"</span> | <span class='s2'>"GroupStandbyCapacity"</span> | <span class='s2'>"GroupTerminatingInstances"</span> | <span class='s2'>"GroupTerminatingCapacity"</span> | <span class='s2'>"GroupTotalInstances"</span> | <span class='s2'>"GroupTotalCapacity"</span>;</code></pre>
 
 See https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html
 
 <h3 class="pdoc-module-header" id="MetricsGranularity" data-link-title="MetricsGranularity">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/types/enums/autoscaling/index.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8245cf389961a656637255fd2dd1e0e1dd04f6ea/sdk/nodejs/types/enums/autoscaling/index.ts#L33">
         type <strong>MetricsGranularity</strong>
     </a>
 </h3>
@@ -49,7 +49,7 @@ See https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCo
 See https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html
 
 <h3 class="pdoc-module-header" id="NotificationType" data-link-title="NotificationType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3fe1b6f7837e9052ee161f972e63a34dd2fcc624/sdk/nodejs/types/enums/autoscaling/index.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8245cf389961a656637255fd2dd1e0e1dd04f6ea/sdk/nodejs/types/enums/autoscaling/index.ts#L46">
         type <strong>NotificationType</strong>
     </a>
 </h3>
