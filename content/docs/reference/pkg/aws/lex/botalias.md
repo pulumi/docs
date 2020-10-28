@@ -32,6 +32,7 @@ class MyStack : Stack
             BotName = "OrderFlowers",
             BotVersion = "1",
             Description = "Production Version of the OrderFlowers Bot.",
+            Name = "OrderFlowersProd",
         });
     }
 
@@ -55,6 +56,7 @@ func main() {
 			BotName:     pulumi.String("OrderFlowers"),
 			BotVersion:  pulumi.String("1"),
 			Description: pulumi.String("Production Version of the OrderFlowers Bot."),
+			Name:        pulumi.String("OrderFlowersProd"),
 		})
 		if err != nil {
 			return err
@@ -74,7 +76,8 @@ import pulumi_aws as aws
 order_flowers_prod = aws.lex.BotAlias("orderFlowersProd",
     bot_name="OrderFlowers",
     bot_version="1",
-    description="Production Version of the OrderFlowers Bot.")
+    description="Production Version of the OrderFlowers Bot.",
+    name="OrderFlowersProd")
 ```
 
 {{% /example %}}
@@ -89,6 +92,7 @@ const orderFlowersProd = new aws.lex.BotAlias("order_flowers_prod", {
     botName: "OrderFlowers",
     botVersion: "1",
     description: "Production Version of the OrderFlowers Bot.",
+    name: "OrderFlowersProd",
 });
 ```
 

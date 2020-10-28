@@ -52,6 +52,7 @@ class MyStack : Stack
                     Value = "tulips",
                 },
             },
+            Name = "FlowerTypes",
             ValueSelectionStrategy = "ORIGINAL_VALUE",
         });
     }
@@ -91,6 +92,7 @@ func main() {
 					Value: pulumi.String("tulips"),
 				},
 			},
+			Name:                   pulumi.String("FlowerTypes"),
 			ValueSelectionStrategy: pulumi.String("ORIGINAL_VALUE"),
 		})
 		if err != nil {
@@ -127,6 +129,7 @@ flower_types = aws.lex.SlotType("flowerTypes",
             value="tulips",
         ),
     ],
+    name="FlowerTypes",
     value_selection_strategy="ORIGINAL_VALUE")
 ```
 
@@ -157,6 +160,7 @@ const flowerTypes = new aws.lex.SlotType("flower_types", {
             value: "tulips",
         },
     ],
+    name: "FlowerTypes",
     valueSelectionStrategy: "ORIGINAL_VALUE",
 });
 ```
