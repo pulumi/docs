@@ -16,17 +16,21 @@
 {{ end }}
 
 {{ define "main" }}
+    <!-- Grab the webinar and event page data. -->
     {{ $webinars := (where $.Pages "Type" "webinars") }}
     {{ $events := (where $.Site.Pages "Type" "events") }}
 
+    <!-- Remove any webinar/events that are marked as unlisted. -->
     {{ $listed_webinars := (where $webinars ".Params.unlisted" false) }}
     {{ $listed_events := (where $events ".Params.unlisted" "!=" true )}}
 
+    <!-- Convert the webinar data to JSON -->
     {{ $eventListWebinars := slice }}
     {{ range $listed_webinars }}
         {{ $eventListWebinars = $eventListWebinars | append (.Params | jsonify)}}
     {{ end }}
 
+    <!-- Conver the event data to JSON -->
     {{ $eventListEvents := slice }}
     {{ range $listed_events }}
         {{ if ne .Params.title "Upcoming Events" }}

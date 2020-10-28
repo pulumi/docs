@@ -41,23 +41,6 @@
   animation: fadeIn 1s;
 
   article {
-    height: 650px;
-
-    .event-list-item-image, .event-list-item-info {
-      height: 50%;
-
-      img {
-        height: 100%;
-        width: 100%;
-      }
-
-      .event-title, .event-details {
-        height: 20%;
-      }
-
-      .event-description {
-        height: 60%;
-      }
-    }
+    height: 320px;
   }
 }
