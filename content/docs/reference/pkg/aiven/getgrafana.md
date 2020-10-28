@@ -2142,7 +2142,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Server hostname or IP
+    <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2163,7 +2163,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}(Required) SMTP server port
+    <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2221,7 +2221,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Server hostname or IP
+    <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2242,7 +2242,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}(Required) SMTP server port
+    <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2300,7 +2300,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Server hostname or IP
+    <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2321,7 +2321,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}(Required) SMTP server port
+    <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2379,7 +2379,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Server hostname or IP
+    <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2400,7 +2400,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}(Required) SMTP server port
+    <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3823,7 +3823,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3834,7 +3834,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3940,7 +3940,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3951,7 +3951,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4057,7 +4057,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4068,7 +4068,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4174,7 +4174,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4185,7 +4185,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4276,7 +4276,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4287,7 +4287,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4338,7 +4338,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4349,7 +4349,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4400,7 +4400,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4411,7 +4411,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4462,7 +4462,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4473,7 +4473,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4531,7 +4531,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Require users to belong to one of given groups
+    <dd>{{% md %}}Require users to belong to one of given groups
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4564,7 +4564,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4575,7 +4575,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4615,7 +4615,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Require users to belong to one of given groups
+    <dd>{{% md %}}Require users to belong to one of given groups
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4648,7 +4648,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4659,7 +4659,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4699,7 +4699,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Require users to belong to one of given groups
+    <dd>{{% md %}}Require users to belong to one of given groups
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4732,7 +4732,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4743,7 +4743,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4783,7 +4783,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Require users to belong to one of given groups
+    <dd>{{% md %}}Require users to belong to one of given groups
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4816,7 +4816,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4827,7 +4827,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4896,7 +4896,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4907,7 +4907,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
 </dl>
@@ -4947,7 +4947,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4958,7 +4958,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
 </dl>
@@ -4998,7 +4998,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5009,7 +5009,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
 </dl>
@@ -5049,7 +5049,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client ID from provider
+    <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5060,7 +5060,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Client secret from provider
+    <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd>
 
 </dl>
@@ -5096,7 +5096,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) S3 access key. Requires permissions to the S3 bucket for the 
+    <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
 {{% /md %}}</dd>
 
@@ -5108,7 +5108,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Bucket URL for S3
+    <dd>{{% md %}}Bucket URL for S3
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5119,7 +5119,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Provider type
+    <dd>{{% md %}}Provider type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5130,7 +5130,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) S3 secret key
+    <dd>{{% md %}}S3 secret key
 {{% /md %}}</dd>
 
 </dl>
@@ -5148,7 +5148,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) S3 access key. Requires permissions to the S3 bucket for the 
+    <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
 {{% /md %}}</dd>
 
@@ -5160,7 +5160,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Bucket URL for S3
+    <dd>{{% md %}}Bucket URL for S3
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5171,7 +5171,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Provider type
+    <dd>{{% md %}}Provider type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5182,7 +5182,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) S3 secret key
+    <dd>{{% md %}}S3 secret key
 {{% /md %}}</dd>
 
 </dl>
@@ -5200,7 +5200,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) S3 access key. Requires permissions to the S3 bucket for the 
+    <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
 {{% /md %}}</dd>
 
@@ -5212,7 +5212,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Bucket URL for S3
+    <dd>{{% md %}}Bucket URL for S3
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5223,7 +5223,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Provider type
+    <dd>{{% md %}}Provider type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5234,7 +5234,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) S3 secret key
+    <dd>{{% md %}}S3 secret key
 {{% /md %}}</dd>
 
 </dl>
@@ -5252,7 +5252,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) S3 access key. Requires permissions to the S3 bucket for the 
+    <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
 {{% /md %}}</dd>
 
@@ -5264,7 +5264,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Bucket URL for S3
+    <dd>{{% md %}}Bucket URL for S3
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5275,7 +5275,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Provider type
+    <dd>{{% md %}}Provider type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5286,7 +5286,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) S3 secret key
+    <dd>{{% md %}}S3 secret key
 {{% /md %}}</dd>
 
 </dl>
@@ -5502,7 +5502,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Address used for sending emails
+    <dd>{{% md %}}Address used for sending emails
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5524,7 +5524,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Server hostname or IP
+    <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5546,7 +5546,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) SMTP server port
+    <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5558,6 +5558,18 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttlspolicy_csharp">
+<a href="#starttlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Starttls<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
+Default is OpportunisticStartTLS.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5586,7 +5598,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Address used for sending emails
+    <dd>{{% md %}}Address used for sending emails
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5608,7 +5620,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Server hostname or IP
+    <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5630,7 +5642,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) SMTP server port
+    <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5642,6 +5654,18 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttlspolicy_go">
+<a href="#starttlspolicy_go" style="color: inherit; text-decoration: inherit;">Starttls<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
+Default is OpportunisticStartTLS.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5670,7 +5694,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Address used for sending emails
+    <dd>{{% md %}}Address used for sending emails
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5692,7 +5716,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Server hostname or IP
+    <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5714,7 +5738,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Required) SMTP server port
+    <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5726,6 +5750,18 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttlspolicy_nodejs">
+<a href="#starttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">starttls<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
+Default is OpportunisticStartTLS.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5754,7 +5790,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Address used for sending emails
+    <dd>{{% md %}}Address used for sending emails
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5776,7 +5812,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) Server hostname or IP
+    <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5798,7 +5834,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Required) SMTP server port
+    <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5810,6 +5846,18 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttls_policy_python">
+<a href="#starttls_policy_python" style="color: inherit; text-decoration: inherit;">starttls_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
+Default is OpportunisticStartTLS.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

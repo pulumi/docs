@@ -2930,6 +2930,17 @@ service nodes that are in a project VPC or another type of private network
     <dd>{{% md %}}Enable Schema-Registry service
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistryconfig_csharp">
+<a href="#schemaregistryconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Schema Registry configuration
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3069,6 +3080,17 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistryconfig_go">
+<a href="#schemaregistryconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Schema Registry configuration
 {{% /md %}}</dd>
 
 </dl>
@@ -3212,6 +3234,17 @@ service nodes that are in a project VPC or another type of private network
     <dd>{{% md %}}Enable Schema-Registry service
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistryconfig_nodejs">
+<a href="#schemaregistryconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Schema Registry configuration
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3353,6 +3386,17 @@ service nodes that are in a project VPC or another type of private network
     <dd>{{% md %}}Enable Schema-Registry service
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_registry_config_python">
+<a href="#schema_registry_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Schema Registry configuration
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3424,8 +3468,6 @@ threads close the connections that idle for longer than this.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Replication factor for autocreated topics
-* `group_max_session_timeout_ms": {
-* `group_min_session_timeout_ms": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3436,12 +3478,28 @@ threads close the connections that idle for longer than this.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum allowed session timeout for registered 
+consumers. Longer timeouts give consumers more time to process messages in between heartbeats
+at the cost of a longer time to detect failures.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span id="groupminsessiontimeoutms_csharp">
 <a href="#groupminsessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Min<wbr>Session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum allowed session timeout for registered 
+consumers. Longer timeouts give consumers more time to process messages in between heartbeats
+at the cost of a longer time to detect failures.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logcleanerdeleteretentionms_csharp">
+<a href="#logcleanerdeleteretentionms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Delete<wbr>Retention<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -3458,7 +3516,6 @@ threads close the connections that idle for longer than this.
     </dt>
     <dd>{{% md %}}The maximum amount of time message will 
 remain uncompacted. Only applicable for logs that are being compacted
-* `log_cleaner_min_cleanable_ratio": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3469,7 +3526,11 @@ remain uncompacted. Only applicable for logs that are being compacted
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Controls log compactor frequency. Larger 
+value means more frequent compactions but also more space wasted for logs. Consider setting
+log.cleaner.max.compaction.lag.ms to enforce compactions sooner, instead of setting a very
+high value for this option.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3481,7 +3542,6 @@ remain uncompacted. Only applicable for logs that are being compacted
     </dt>
     <dd>{{% md %}}The minimum time a message will remain 
 uncompacted in the log. Only applicable for logs that are being compacted.
-* `log_cleanup_policy": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3492,7 +3552,66 @@ uncompacted in the log. Only applicable for logs that are being compacted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default cleanup policy for segments beyond the retention window.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logflushintervalmessages_csharp">
+<a href="#logflushintervalmessages_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of messages accumulated on a log partition 
+before messages are flushed to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logflushintervalms_csharp">
+<a href="#logflushintervalms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum time in ms that a message in any topic is kept 
+in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logindexintervalbytes_csharp">
+<a href="#logindexintervalbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Index<wbr>Interval<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The interval with which Kafka adds an entry to the offset index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logindexsizemaxbytes_csharp">
+<a href="#logindexsizemaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Index<wbr>Size<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum size in bytes of the offset index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logmessagedownconversionenable_csharp">
+<a href="#logmessagedownconversionenable_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Message<wbr>Downconversion<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration controls whether down-conversion 
+of message formats is enabled to satisfy consume requests.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3520,6 +3639,17 @@ message create time or log append time.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logpreallocate_csharp">
+<a href="#logpreallocate_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Preallocate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should pre allocate file when create new segment?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="logretentionbytes_csharp">
 <a href="#logretentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Bytes</a>
 </span> 
@@ -3537,7 +3667,43 @@ message create time or log append time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The number of hours to keep a log file before deleting it
+    <dd>{{% md %}}The number of hours to keep a log file before deleting it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logretentionms_csharp">
+<a href="#logretentionms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of milliseconds to keep a log file before deleting it 
+(in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no
+time limit is applied.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logrolljitterms_csharp">
+<a href="#logrolljitterms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Roll<wbr>Jitter<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum jitter to subtract from logRollTimeMillis 
+(in milliseconds). If not set, the value in log.roll.jitter.hours is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logrollms_csharp">
+<a href="#logrollms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Roll<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum time before a new log segment is rolled out (in milliseconds).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3553,6 +3719,18 @@ message create time or log append time.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logsegmentdeletedelayms_csharp">
+<a href="#logsegmentdeletedelayms_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Delete<wbr>Delay<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time to wait before deleting a file 
+from the filesystem.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxconnectionsperip_csharp">
 <a href="#maxconnectionsperip_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Ip</a>
 </span> 
@@ -3561,8 +3739,6 @@ message create time or log append time.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed from each ip 
 address (defaults to 2147483647).
-* `max_incremental_fetch_session_cache_slots": {
-* `message_max_bytes": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3573,7 +3749,9 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of incremental fetch 
+sessions that the broker will maintain.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3583,7 +3761,21 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum size of message that the server can receive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mininsyncreplicas_csharp">
+<a href="#mininsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}When a producer sets acks to 'all' (or '-1'), 
+min.insync.replicas specifies the minimum number of replicas that must acknowledge a write for
+the write to be considered successful.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3594,7 +3786,6 @@ address (defaults to 2147483647).
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Number of partitions for autocreated topics
-* `offsets_retention_minutes": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3605,7 +3796,8 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Log retention window in minutes for offsets topic.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3712,8 +3904,6 @@ threads close the connections that idle for longer than this.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Replication factor for autocreated topics
-* `group_max_session_timeout_ms": {
-* `group_min_session_timeout_ms": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3724,12 +3914,28 @@ threads close the connections that idle for longer than this.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum allowed session timeout for registered 
+consumers. Longer timeouts give consumers more time to process messages in between heartbeats
+at the cost of a longer time to detect failures.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span id="groupminsessiontimeoutms_go">
 <a href="#groupminsessiontimeoutms_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Min<wbr>Session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum allowed session timeout for registered 
+consumers. Longer timeouts give consumers more time to process messages in between heartbeats
+at the cost of a longer time to detect failures.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logcleanerdeleteretentionms_go">
+<a href="#logcleanerdeleteretentionms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Cleaner<wbr>Delete<wbr>Retention<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -3746,7 +3952,6 @@ threads close the connections that idle for longer than this.
     </dt>
     <dd>{{% md %}}The maximum amount of time message will 
 remain uncompacted. Only applicable for logs that are being compacted
-* `log_cleaner_min_cleanable_ratio": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3757,7 +3962,11 @@ remain uncompacted. Only applicable for logs that are being compacted
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Controls log compactor frequency. Larger 
+value means more frequent compactions but also more space wasted for logs. Consider setting
+log.cleaner.max.compaction.lag.ms to enforce compactions sooner, instead of setting a very
+high value for this option.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3769,7 +3978,6 @@ remain uncompacted. Only applicable for logs that are being compacted
     </dt>
     <dd>{{% md %}}The minimum time a message will remain 
 uncompacted in the log. Only applicable for logs that are being compacted.
-* `log_cleanup_policy": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3780,7 +3988,66 @@ uncompacted in the log. Only applicable for logs that are being compacted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default cleanup policy for segments beyond the retention window.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logflushintervalmessages_go">
+<a href="#logflushintervalmessages_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of messages accumulated on a log partition 
+before messages are flushed to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logflushintervalms_go">
+<a href="#logflushintervalms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum time in ms that a message in any topic is kept 
+in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logindexintervalbytes_go">
+<a href="#logindexintervalbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Index<wbr>Interval<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The interval with which Kafka adds an entry to the offset index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logindexsizemaxbytes_go">
+<a href="#logindexsizemaxbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Index<wbr>Size<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum size in bytes of the offset index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logmessagedownconversionenable_go">
+<a href="#logmessagedownconversionenable_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Message<wbr>Downconversion<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration controls whether down-conversion 
+of message formats is enabled to satisfy consume requests.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3808,6 +4075,17 @@ message create time or log append time.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logpreallocate_go">
+<a href="#logpreallocate_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Preallocate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should pre allocate file when create new segment?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="logretentionbytes_go">
 <a href="#logretentionbytes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Bytes</a>
 </span> 
@@ -3825,7 +4103,43 @@ message create time or log append time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The number of hours to keep a log file before deleting it
+    <dd>{{% md %}}The number of hours to keep a log file before deleting it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logretentionms_go">
+<a href="#logretentionms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of milliseconds to keep a log file before deleting it 
+(in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no
+time limit is applied.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logrolljitterms_go">
+<a href="#logrolljitterms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Roll<wbr>Jitter<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum jitter to subtract from logRollTimeMillis 
+(in milliseconds). If not set, the value in log.roll.jitter.hours is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logrollms_go">
+<a href="#logrollms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Roll<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum time before a new log segment is rolled out (in milliseconds).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3841,6 +4155,18 @@ message create time or log append time.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logsegmentdeletedelayms_go">
+<a href="#logsegmentdeletedelayms_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Segment<wbr>Delete<wbr>Delay<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time to wait before deleting a file 
+from the filesystem.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxconnectionsperip_go">
 <a href="#maxconnectionsperip_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Ip</a>
 </span> 
@@ -3849,8 +4175,6 @@ message create time or log append time.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed from each ip 
 address (defaults to 2147483647).
-* `max_incremental_fetch_session_cache_slots": {
-* `message_max_bytes": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3861,7 +4185,9 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of incremental fetch 
+sessions that the broker will maintain.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3871,7 +4197,21 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum size of message that the server can receive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mininsyncreplicas_go">
+<a href="#mininsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When a producer sets acks to 'all' (or '-1'), 
+min.insync.replicas specifies the minimum number of replicas that must acknowledge a write for
+the write to be considered successful.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3882,7 +4222,6 @@ address (defaults to 2147483647).
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Number of partitions for autocreated topics
-* `offsets_retention_minutes": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3893,7 +4232,8 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Log retention window in minutes for offsets topic.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4000,8 +4340,6 @@ threads close the connections that idle for longer than this.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Replication factor for autocreated topics
-* `group_max_session_timeout_ms": {
-* `group_min_session_timeout_ms": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4012,12 +4350,28 @@ threads close the connections that idle for longer than this.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum allowed session timeout for registered 
+consumers. Longer timeouts give consumers more time to process messages in between heartbeats
+at the cost of a longer time to detect failures.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span id="groupminsessiontimeoutms_nodejs">
 <a href="#groupminsessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Min<wbr>Session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum allowed session timeout for registered 
+consumers. Longer timeouts give consumers more time to process messages in between heartbeats
+at the cost of a longer time to detect failures.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logcleanerdeleteretentionms_nodejs">
+<a href="#logcleanerdeleteretentionms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Delete<wbr>Retention<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -4034,7 +4388,6 @@ threads close the connections that idle for longer than this.
     </dt>
     <dd>{{% md %}}The maximum amount of time message will 
 remain uncompacted. Only applicable for logs that are being compacted
-* `log_cleaner_min_cleanable_ratio": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4045,7 +4398,11 @@ remain uncompacted. Only applicable for logs that are being compacted
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Controls log compactor frequency. Larger 
+value means more frequent compactions but also more space wasted for logs. Consider setting
+log.cleaner.max.compaction.lag.ms to enforce compactions sooner, instead of setting a very
+high value for this option.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4057,7 +4414,6 @@ remain uncompacted. Only applicable for logs that are being compacted
     </dt>
     <dd>{{% md %}}The minimum time a message will remain 
 uncompacted in the log. Only applicable for logs that are being compacted.
-* `log_cleanup_policy": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4068,7 +4424,66 @@ uncompacted in the log. Only applicable for logs that are being compacted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default cleanup policy for segments beyond the retention window.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logflushintervalmessages_nodejs">
+<a href="#logflushintervalmessages_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Interval<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of messages accumulated on a log partition 
+before messages are flushed to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logflushintervalms_nodejs">
+<a href="#logflushintervalms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Flush<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum time in ms that a message in any topic is kept 
+in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logindexintervalbytes_nodejs">
+<a href="#logindexintervalbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Index<wbr>Interval<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The interval with which Kafka adds an entry to the offset index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logindexsizemaxbytes_nodejs">
+<a href="#logindexsizemaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Index<wbr>Size<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum size in bytes of the offset index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logmessagedownconversionenable_nodejs">
+<a href="#logmessagedownconversionenable_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Message<wbr>Downconversion<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration controls whether down-conversion 
+of message formats is enabled to satisfy consume requests.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4096,6 +4511,17 @@ message create time or log append time.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logpreallocate_nodejs">
+<a href="#logpreallocate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Preallocate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should pre allocate file when create new segment?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="logretentionbytes_nodejs">
 <a href="#logretentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Bytes</a>
 </span> 
@@ -4113,7 +4539,43 @@ message create time or log append time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The number of hours to keep a log file before deleting it
+    <dd>{{% md %}}The number of hours to keep a log file before deleting it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logretentionms_nodejs">
+<a href="#logretentionms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of milliseconds to keep a log file before deleting it 
+(in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no
+time limit is applied.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logrolljitterms_nodejs">
+<a href="#logrolljitterms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Roll<wbr>Jitter<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum jitter to subtract from logRollTimeMillis 
+(in milliseconds). If not set, the value in log.roll.jitter.hours is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logrollms_nodejs">
+<a href="#logrollms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Roll<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum time before a new log segment is rolled out (in milliseconds).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4129,6 +4591,18 @@ message create time or log append time.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logsegmentdeletedelayms_nodejs">
+<a href="#logsegmentdeletedelayms_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Segment<wbr>Delete<wbr>Delay<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time to wait before deleting a file 
+from the filesystem.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxconnectionsperip_nodejs">
 <a href="#maxconnectionsperip_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Ip</a>
 </span> 
@@ -4137,8 +4611,6 @@ message create time or log append time.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed from each ip 
 address (defaults to 2147483647).
-* `max_incremental_fetch_session_cache_slots": {
-* `message_max_bytes": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4149,7 +4621,9 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of incremental fetch 
+sessions that the broker will maintain.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4159,7 +4633,21 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum size of message that the server can receive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mininsyncreplicas_nodejs">
+<a href="#mininsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Insync<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When a producer sets acks to 'all' (or '-1'), 
+min.insync.replicas specifies the minimum number of replicas that must acknowledge a write for
+the write to be considered successful.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4170,7 +4658,6 @@ address (defaults to 2147483647).
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Number of partitions for autocreated topics
-* `offsets_retention_minutes": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4181,7 +4668,8 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Log retention window in minutes for offsets topic.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4288,8 +4776,6 @@ threads close the connections that idle for longer than this.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Replication factor for autocreated topics
-* `group_max_session_timeout_ms": {
-* `group_min_session_timeout_ms": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4300,12 +4786,28 @@ threads close the connections that idle for longer than this.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum allowed session timeout for registered 
+consumers. Longer timeouts give consumers more time to process messages in between heartbeats
+at the cost of a longer time to detect failures.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span id="group_min_session_timeout_ms_python">
 <a href="#group_min_session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>min_<wbr>session_<wbr>timeout_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum allowed session timeout for registered 
+consumers. Longer timeouts give consumers more time to process messages in between heartbeats
+at the cost of a longer time to detect failures.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_cleaner_delete_retention_ms_python">
+<a href="#log_cleaner_delete_retention_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>delete_<wbr>retention_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4322,7 +4824,6 @@ threads close the connections that idle for longer than this.
     </dt>
     <dd>{{% md %}}The maximum amount of time message will 
 remain uncompacted. Only applicable for logs that are being compacted
-* `log_cleaner_min_cleanable_ratio": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4333,7 +4834,11 @@ remain uncompacted. Only applicable for logs that are being compacted
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Controls log compactor frequency. Larger 
+value means more frequent compactions but also more space wasted for logs. Consider setting
+log.cleaner.max.compaction.lag.ms to enforce compactions sooner, instead of setting a very
+high value for this option.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4345,7 +4850,6 @@ remain uncompacted. Only applicable for logs that are being compacted
     </dt>
     <dd>{{% md %}}The minimum time a message will remain 
 uncompacted in the log. Only applicable for logs that are being compacted.
-* `log_cleanup_policy": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4356,7 +4860,66 @@ uncompacted in the log. Only applicable for logs that are being compacted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default cleanup policy for segments beyond the retention window.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_flush_interval_messages_python">
+<a href="#log_flush_interval_messages_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>interval_<wbr>messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The number of messages accumulated on a log partition 
+before messages are flushed to disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_flush_interval_ms_python">
+<a href="#log_flush_interval_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>flush_<wbr>interval_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum time in ms that a message in any topic is kept 
+in memory before flushed to disk. If not set, the value in log.flush.scheduler.interval.ms is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_index_interval_bytes_python">
+<a href="#log_index_interval_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>index_<wbr>interval_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The interval with which Kafka adds an entry to the offset index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_index_size_max_bytes_python">
+<a href="#log_index_size_max_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>index_<wbr>size_<wbr>max_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum size in bytes of the offset index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_message_downconversion_enable_python">
+<a href="#log_message_downconversion_enable_python" style="color: inherit; text-decoration: inherit;">log_<wbr>message_<wbr>downconversion_<wbr>enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration controls whether down-conversion 
+of message formats is enabled to satisfy consume requests.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4384,6 +4947,17 @@ message create time or log append time.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="log_preallocate_python">
+<a href="#log_preallocate_python" style="color: inherit; text-decoration: inherit;">log_<wbr>preallocate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Should pre allocate file when create new segment?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="log_retention_bytes_python">
 <a href="#log_retention_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>bytes</a>
 </span> 
@@ -4401,7 +4975,43 @@ message create time or log append time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The number of hours to keep a log file before deleting it
+    <dd>{{% md %}}The number of hours to keep a log file before deleting it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_retention_ms_python">
+<a href="#log_retention_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The number of milliseconds to keep a log file before deleting it 
+(in milliseconds), If not set, the value in log.retention.minutes is used. If set to -1, no
+time limit is applied.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_roll_jitter_ms_python">
+<a href="#log_roll_jitter_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>roll_<wbr>jitter_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum jitter to subtract from logRollTimeMillis 
+(in milliseconds). If not set, the value in log.roll.jitter.hours is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_roll_ms_python">
+<a href="#log_roll_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>roll_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum time before a new log segment is rolled out (in milliseconds).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4417,6 +5027,18 @@ message create time or log append time.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="log_segment_delete_delay_ms_python">
+<a href="#log_segment_delete_delay_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>segment_<wbr>delete_<wbr>delay_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time to wait before deleting a file 
+from the filesystem.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="max_connections_per_ip_python">
 <a href="#max_connections_per_ip_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>ip</a>
 </span> 
@@ -4425,8 +5047,6 @@ message create time or log append time.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed from each ip 
 address (defaults to 2147483647).
-* `max_incremental_fetch_session_cache_slots": {
-* `message_max_bytes": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4437,7 +5057,9 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of incremental fetch 
+sessions that the broker will maintain.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4447,7 +5069,21 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum size of message that the server can receive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_insync_replicas_python">
+<a href="#min_insync_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>insync_<wbr>replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}When a producer sets acks to 'all' (or '-1'), 
+min.insync.replicas specifies the minimum number of replicas that must acknowledge a write for
+the write to be considered successful.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4458,7 +5094,6 @@ address (defaults to 2147483647).
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Number of partitions for autocreated topics
-* `offsets_retention_minutes": {
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4469,7 +5104,8 @@ address (defaults to 2147483647).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Log retention window in minutes for offsets topic.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4703,7 +5339,21 @@ be overridden by the connector. Default is None
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}What to do when there is no initial offset in Kafka or 
-if the current offset does not exist any more on the server. Default is earliest
+if the current offset does not exist any more on the server. Default is earliest.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerfetchmaxbytes_csharp">
+<a href="#consumerfetchmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer, and 
+if the first record batch in the first non-empty partition of the fetch is larger than this value,
+the record batch will still be returned to ensure that the consumer can make progress. As such,
+this is not a absolute maximum.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4716,6 +5366,19 @@ if the current offset does not exist any more on the server. Default is earliest
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpartitionfetchbytes_csharp">
+<a href="#consumermaxpartitionfetchbytes_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer.If 
+the first record batch in the first non-empty partition of the fetch is larger than this limit,
+the batch will still be returned to ensure that the consumer can make progress.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4769,6 +5432,18 @@ and restoring the offset data to be committed in a future attempt (defaults to 5
 
     <dt class="property-optional"
             title="Optional">
+        <span id="producermaxrequestsize_csharp">
+<a href="#producermaxrequestsize_csharp" style="color: inherit; text-decoration: inherit;">Producer<wbr>Max<wbr>Request<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting will limit the number of record batches 
+the producer will send in a single request to avoid sending huge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessiontimeoutms_csharp">
 <a href="#sessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
 </span> 
@@ -4807,7 +5482,21 @@ be overridden by the connector. Default is None
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}What to do when there is no initial offset in Kafka or 
-if the current offset does not exist any more on the server. Default is earliest
+if the current offset does not exist any more on the server. Default is earliest.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerfetchmaxbytes_go">
+<a href="#consumerfetchmaxbytes_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer, and 
+if the first record batch in the first non-empty partition of the fetch is larger than this value,
+the record batch will still be returned to ensure that the consumer can make progress. As such,
+this is not a absolute maximum.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4820,6 +5509,19 @@ if the current offset does not exist any more on the server. Default is earliest
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpartitionfetchbytes_go">
+<a href="#consumermaxpartitionfetchbytes_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer.If 
+the first record batch in the first non-empty partition of the fetch is larger than this limit,
+the batch will still be returned to ensure that the consumer can make progress.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4873,6 +5575,18 @@ and restoring the offset data to be committed in a future attempt (defaults to 5
 
     <dt class="property-optional"
             title="Optional">
+        <span id="producermaxrequestsize_go">
+<a href="#producermaxrequestsize_go" style="color: inherit; text-decoration: inherit;">Producer<wbr>Max<wbr>Request<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting will limit the number of record batches 
+the producer will send in a single request to avoid sending huge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessiontimeoutms_go">
 <a href="#sessiontimeoutms_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
 </span> 
@@ -4911,7 +5625,21 @@ be overridden by the connector. Default is None
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}What to do when there is no initial offset in Kafka or 
-if the current offset does not exist any more on the server. Default is earliest
+if the current offset does not exist any more on the server. Default is earliest.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerfetchmaxbytes_nodejs">
+<a href="#consumerfetchmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer, and 
+if the first record batch in the first non-empty partition of the fetch is larger than this value,
+the record batch will still be returned to ensure that the consumer can make progress. As such,
+this is not a absolute maximum.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4924,6 +5652,19 @@ if the current offset does not exist any more on the server. Default is earliest
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpartitionfetchbytes_nodejs">
+<a href="#consumermaxpartitionfetchbytes_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer.If 
+the first record batch in the first non-empty partition of the fetch is larger than this limit,
+the batch will still be returned to ensure that the consumer can make progress.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4977,6 +5718,18 @@ and restoring the offset data to be committed in a future attempt (defaults to 5
 
     <dt class="property-optional"
             title="Optional">
+        <span id="producermaxrequestsize_nodejs">
+<a href="#producermaxrequestsize_nodejs" style="color: inherit; text-decoration: inherit;">producer<wbr>Max<wbr>Request<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting will limit the number of record batches 
+the producer will send in a single request to avoid sending huge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessiontimeoutms_nodejs">
 <a href="#sessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
 </span> 
@@ -5015,7 +5768,21 @@ be overridden by the connector. Default is None
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}What to do when there is no initial offset in Kafka or 
-if the current offset does not exist any more on the server. Default is earliest
+if the current offset does not exist any more on the server. Default is earliest.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumer_fetch_max_bytes_python">
+<a href="#consumer_fetch_max_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>fetch_<wbr>max_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer, and 
+if the first record batch in the first non-empty partition of the fetch is larger than this value,
+the record batch will still be returned to ensure that the consumer can make progress. As such,
+this is not a absolute maximum.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5028,6 +5795,19 @@ if the current offset does not exist any more on the server. Default is earliest
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumer_max_partition_fetch_bytes_python">
+<a href="#consumer_max_partition_fetch_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>partition_<wbr>fetch_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer.If 
+the first record batch in the first non-empty partition of the fetch is larger than this limit,
+the batch will still be returned to ensure that the consumer can make progress.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5077,6 +5857,18 @@ tasks (defaults to 60000).
     <dd>{{% md %}}Maximum number of milliseconds to wait for records to 
 flush and partition offset data to be committed to offset storage before cancelling the process
 and restoring the offset data to be committed in a future attempt (defaults to 5000).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="producer_max_request_size_python">
+<a href="#producer_max_request_size_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>max_<wbr>request_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This setting will limit the number of record batches 
+the producer will send in a single request to avoid sending huge requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5795,6 +6587,172 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enable Schema-Registry service
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetKafkaKafkaUserConfigSchemaRegistryConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetKafkaKafkaUserConfigSchemaRegistryConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetKafkaKafkaUserConfigSchemaRegistryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetKafkaKafkaUserConfigSchemaRegistryConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetKafkaKafkaUserConfigSchemaRegistryConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetKafkaKafkaUserConfigSchemaRegistryConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="leadereligibility_csharp">
+<a href="#leadereligibility_csharp" style="color: inherit; text-decoration: inherit;">Leader<wbr>Eligibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If true, Karapace / Schema Registry on the service nodes can 
+participate in leader election. It might be needed to disable this when the schemas topic is replicated
+to a secondary cluster and Karapace / Schema Registry there must not participate in leader election.
+Defaults to 'true'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topicname_csharp">
+<a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The durable single partition topic that acts as the durable log for the 
+data. This topic must be compacted to avoid losing data due to retention policy. Please note that
+changing this configuration in an existing Schema Registry / Karapace setup leads to previous
+schemas being inaccessible, data encoded with them potentially unreadable and schema ID sequence
+put out of order. It's only possible to do the switch while Schema Registry / Karapace is disabled.
+Defaults to '_schemas'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="leadereligibility_go">
+<a href="#leadereligibility_go" style="color: inherit; text-decoration: inherit;">Leader<wbr>Eligibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If true, Karapace / Schema Registry on the service nodes can 
+participate in leader election. It might be needed to disable this when the schemas topic is replicated
+to a secondary cluster and Karapace / Schema Registry there must not participate in leader election.
+Defaults to 'true'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topicname_go">
+<a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The durable single partition topic that acts as the durable log for the 
+data. This topic must be compacted to avoid losing data due to retention policy. Please note that
+changing this configuration in an existing Schema Registry / Karapace setup leads to previous
+schemas being inaccessible, data encoded with them potentially unreadable and schema ID sequence
+put out of order. It's only possible to do the switch while Schema Registry / Karapace is disabled.
+Defaults to '_schemas'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="leadereligibility_nodejs">
+<a href="#leadereligibility_nodejs" style="color: inherit; text-decoration: inherit;">leader<wbr>Eligibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If true, Karapace / Schema Registry on the service nodes can 
+participate in leader election. It might be needed to disable this when the schemas topic is replicated
+to a secondary cluster and Karapace / Schema Registry there must not participate in leader election.
+Defaults to 'true'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topicname_nodejs">
+<a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The durable single partition topic that acts as the durable log for the 
+data. This topic must be compacted to avoid losing data due to retention policy. Please note that
+changing this configuration in an existing Schema Registry / Karapace setup leads to previous
+schemas being inaccessible, data encoded with them potentially unreadable and schema ID sequence
+put out of order. It's only possible to do the switch while Schema Registry / Karapace is disabled.
+Defaults to '_schemas'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="leader_eligibility_python">
+<a href="#leader_eligibility_python" style="color: inherit; text-decoration: inherit;">leader_<wbr>eligibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If true, Karapace / Schema Registry on the service nodes can 
+participate in leader election. It might be needed to disable this when the schemas topic is replicated
+to a secondary cluster and Karapace / Schema Registry there must not participate in leader election.
+Defaults to 'true'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_name_python">
+<a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The durable single partition topic that acts as the durable log for the 
+data. This topic must be compacted to avoid losing data due to retention policy. Please note that
+changing this configuration in an existing Schema Registry / Karapace setup leads to previous
+schemas being inaccessible, data encoded with them potentially unreadable and schema ID sequence
+put out of order. It's only possible to do the switch while Schema Registry / Karapace is disabled.
+Defaults to '_schemas'.
 {{% /md %}}</dd>
 
 </dl>
