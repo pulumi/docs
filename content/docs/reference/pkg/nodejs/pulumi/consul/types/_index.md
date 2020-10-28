@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/consul | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/consul package."
-git_sha: "d164ca03f7367e46415d47fd190194c5a8b1126e"
+git_sha: "db6f38bc28e3c886b446416292c1321f908e8db1"
 block_external_search_index: true
 ---
 
