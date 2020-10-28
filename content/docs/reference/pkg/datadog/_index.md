@@ -26,6 +26,7 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="dashboardlist" title="DashboardList"><span class="symbol resource"></span>DashboardList</a></li>
     <li><a href="downtime" title="Downtime"><span class="symbol resource"></span>Downtime</a></li>
     <li><a href="logsarchive" title="LogsArchive"><span class="symbol resource"></span>LogsArchive</a></li>
+    <li><a href="logsarchiveorder" title="LogsArchiveOrder"><span class="symbol resource"></span>LogsArchiveOrder</a></li>
     <li><a href="logscustompipeline" title="LogsCustomPipeline"><span class="symbol resource"></span>LogsCustomPipeline</a></li>
     <li><a href="logsindex" title="LogsIndex"><span class="symbol resource"></span>LogsIndex</a></li>
     <li><a href="logsindexorder" title="LogsIndexOrder"><span class="symbol resource"></span>LogsIndexOrder</a></li>
@@ -36,6 +37,7 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="screenboard" title="ScreenBoard"><span class="symbol resource"></span>ScreenBoard</a></li>
     <li><a href="servicelevelobjective" title="ServiceLevelObjective"><span class="symbol resource"></span>ServiceLevelObjective</a></li>
+    <li><a href="syntheticsglobalvariable" title="SyntheticsGlobalVariable"><span class="symbol resource"></span>SyntheticsGlobalVariable</a></li>
     <li><a href="syntheticstest" title="SyntheticsTest"><span class="symbol resource"></span>SyntheticsTest</a></li>
     <li><a href="timeboard" title="TimeBoard"><span class="symbol resource"></span>TimeBoard</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
@@ -58,7 +60,7 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.9.0</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

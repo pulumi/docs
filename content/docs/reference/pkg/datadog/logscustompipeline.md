@@ -67,7 +67,8 @@ class MyStack : Stack
                             "db.instance",
                         },
                         Target = "db",
-                        TargetType = "tag",
+                        TargetFormat = "string",
+                        TargetType = "attribute",
                     },
                 },
                 new Datadog.Inputs.LogsCustomPipelineProcessorArgs
@@ -314,8 +315,9 @@ func main() {
 						Sources: pulumi.StringArray{
 							pulumi.String("db.instance"),
 						},
-						Target:     pulumi.String("db"),
-						TargetType: pulumi.String("tag"),
+						Target:       pulumi.String("db"),
+						TargetFormat: pulumi.String("string"),
+						TargetType:   pulumi.String("attribute"),
 					},
 				},
 				&datadog.LogsCustomPipelineProcessorArgs{
@@ -509,7 +511,8 @@ sample_pipeline = datadog.LogsCustomPipeline("samplePipeline",
                 source_type="tag",
                 sources=["db.instance"],
                 target="db",
-                target_type="tag",
+                target_format="string",
+                target_type="attribute",
             ),
         ),
         datadog.LogsCustomPipelineProcessorArgs(
@@ -681,7 +684,8 @@ const samplePipeline = new datadog.LogsCustomPipeline("sample_pipeline", {
                 sourceType: "tag",
                 sources: ["db.instance"],
                 target: "db",
-                targetType: "tag",
+                targetFormat: "string",
+                targetType: "attribute",
             },
         },
         {
@@ -2673,6 +2677,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetformat_csharp">
+<a href="#targetformat_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2757,6 +2771,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetformat_go">
+<a href="#targetformat_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2847,6 +2871,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetformat_nodejs">
+<a href="#targetformat_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2931,6 +2965,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_format_python">
+<a href="#target_format_python" style="color: inherit; text-decoration: inherit;">target_<wbr>format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5797,6 +5841,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetformat_csharp">
+<a href="#targetformat_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -5881,6 +5935,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetformat_go">
+<a href="#targetformat_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5971,6 +6035,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetformat_nodejs">
+<a href="#targetformat_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6055,6 +6129,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_format_python">
+<a href="#target_format_python" style="color: inherit; text-decoration: inherit;">target_<wbr>format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
