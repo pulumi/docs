@@ -1159,7 +1159,7 @@ The following state arguments are supported:
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ The following state arguments are supported:
 <a href="#max_hops_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1179,7 +1179,7 @@ The following state arguments are supported:
 <a href="#message_ttl_python" style="color: inherit; text-decoration: inherit;">message_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1189,7 +1189,7 @@ The following state arguments are supported:
 <a href="#prefetch_count_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1209,7 +1209,7 @@ The following state arguments are supported:
 <a href="#reconnect_delay_python" style="color: inherit; text-decoration: inherit;">reconnect_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
