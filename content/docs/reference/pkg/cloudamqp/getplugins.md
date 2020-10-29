@@ -118,7 +118,7 @@ const plugins = cloudamqp.getPlugins({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_plugins(</span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">plugins</span><span class="p">:</span> <span class="nx">Optional[List[GetPluginsPluginArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPluginsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_plugins(</span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">plugins</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPluginsPluginArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPluginsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 <a href="#plugins_python" style="color: inherit; text-decoration: inherit;">plugins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginsplugin">List[Get<wbr>Plugins<wbr>Plugin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpluginsplugin">Sequence[Get<wbr>Plugins<wbr>Plugin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -395,7 +395,7 @@ The following output properties are available:
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -405,7 +405,7 @@ The following output properties are available:
 <a href="#plugins_python" style="color: inherit; text-decoration: inherit;">plugins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginsplugin">List[Get<wbr>Plugins<wbr>Plugin]</a></span>
+        <span class="property-type"><a href="#getpluginsplugin">Sequence[Get<wbr>Plugins<wbr>Plugin]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
