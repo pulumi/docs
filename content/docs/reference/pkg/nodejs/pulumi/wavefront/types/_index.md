@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/wavefront | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/wavefront package."
-git_sha: "38ced2e5195b4ac0b69a448d839e4fea7ee4fdba"
+git_sha: "e67d011da66a4c62f31b663cd9c8764ae136aa42"
 block_external_search_index: true
 ---
 
