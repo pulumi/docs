@@ -3167,6 +3167,18 @@ creation of indices. Defaults to true
 
     <dt class="property-optional"
             title="Optional">
+        <span id="clustermaxshardspernode_csharp">
+<a href="#clustermaxshardspernode_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Controls the number of shards allowed in the 
+cluster per data node
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="httpmaxcontentlength_csharp">
 <a href="#httpmaxcontentlength_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Content<wbr>Length</a>
 </span> 
@@ -3469,6 +3481,18 @@ creation of indices. Defaults to true
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Require explicit index names when deleting
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustermaxshardspernode_go">
+<a href="#clustermaxshardspernode_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Controls the number of shards allowed in the 
+cluster per data node
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3779,6 +3803,18 @@ creation of indices. Defaults to true
 
     <dt class="property-optional"
             title="Optional">
+        <span id="clustermaxshardspernode_nodejs">
+<a href="#clustermaxshardspernode_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Controls the number of shards allowed in the 
+cluster per data node
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="httpmaxcontentlength_nodejs">
 <a href="#httpmaxcontentlength_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Content<wbr>Length</a>
 </span> 
@@ -4081,6 +4117,18 @@ creation of indices. Defaults to true
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Require explicit index names when deleting
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_max_shards_per_node_python">
+<a href="#cluster_max_shards_per_node_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>max_<wbr>shards_<wbr>per_<wbr>node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Controls the number of shards allowed in the 
+cluster per data node
 {{% /md %}}</dd>
 
     <dt class="property-optional"

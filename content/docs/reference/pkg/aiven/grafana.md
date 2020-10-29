@@ -5963,6 +5963,18 @@ are in a project VPC or another type of private network.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="starttlspolicy_csharp">
+<a href="#starttlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Starttls<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
+Default is OpportunisticStartTLS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span> 
@@ -6043,6 +6055,18 @@ are in a project VPC or another type of private network.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttlspolicy_go">
+<a href="#starttlspolicy_go" style="color: inherit; text-decoration: inherit;">Starttls<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
+Default is OpportunisticStartTLS.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6131,6 +6155,18 @@ are in a project VPC or another type of private network.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="starttlspolicy_nodejs">
+<a href="#starttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">starttls<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
+Default is OpportunisticStartTLS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
@@ -6211,6 +6247,18 @@ are in a project VPC or another type of private network.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttls_policy_python">
+<a href="#starttls_policy_python" style="color: inherit; text-decoration: inherit;">starttls_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
+Default is OpportunisticStartTLS.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

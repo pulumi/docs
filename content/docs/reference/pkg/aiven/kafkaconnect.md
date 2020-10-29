@@ -3104,6 +3104,20 @@ if the current offset does not exist any more on the server. Default is earliest
 
     <dt class="property-optional"
             title="Optional">
+        <span id="consumerfetchmaxbytes_csharp">
+<a href="#consumerfetchmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer, and if 
+the first record batch in the first non-empty partition of the fetch is larger than this value,
+the record batch will still be returned to ensure that the consumer can make progress. As such,
+this is not a absolute maximum.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_csharp">
 <a href="#consumerisolationlevel_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Isolation<wbr>Level</a>
 </span> 
@@ -3112,6 +3126,19 @@ if the current offset does not exist any more on the server. Default is earliest
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpartitionfetchbytes_csharp">
+<a href="#consumermaxpartitionfetchbytes_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer.If 
+the first record batch in the first non-empty partition of the fetch is larger than this limit,
+the batch will still be returned to ensure that the consumer can make progress.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3164,6 +3191,18 @@ the offset data to be committed in a future attempt (defaults to 5000).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="producermaxrequestsize_csharp">
+<a href="#producermaxrequestsize_csharp" style="color: inherit; text-decoration: inherit;">Producer<wbr>Max<wbr>Request<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting will limit the number of record batches the 
+producer will send in a single request to avoid sending huge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessiontimeoutms_csharp">
 <a href="#sessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
 </span> 
@@ -3207,6 +3246,20 @@ if the current offset does not exist any more on the server. Default is earliest
 
     <dt class="property-optional"
             title="Optional">
+        <span id="consumerfetchmaxbytes_go">
+<a href="#consumerfetchmaxbytes_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer, and if 
+the first record batch in the first non-empty partition of the fetch is larger than this value,
+the record batch will still be returned to ensure that the consumer can make progress. As such,
+this is not a absolute maximum.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_go">
 <a href="#consumerisolationlevel_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Isolation<wbr>Level</a>
 </span> 
@@ -3215,6 +3268,19 @@ if the current offset does not exist any more on the server. Default is earliest
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpartitionfetchbytes_go">
+<a href="#consumermaxpartitionfetchbytes_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer.If 
+the first record batch in the first non-empty partition of the fetch is larger than this limit,
+the batch will still be returned to ensure that the consumer can make progress.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3267,6 +3333,18 @@ the offset data to be committed in a future attempt (defaults to 5000).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="producermaxrequestsize_go">
+<a href="#producermaxrequestsize_go" style="color: inherit; text-decoration: inherit;">Producer<wbr>Max<wbr>Request<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting will limit the number of record batches the 
+producer will send in a single request to avoid sending huge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessiontimeoutms_go">
 <a href="#sessiontimeoutms_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
 </span> 
@@ -3310,6 +3388,20 @@ if the current offset does not exist any more on the server. Default is earliest
 
     <dt class="property-optional"
             title="Optional">
+        <span id="consumerfetchmaxbytes_nodejs">
+<a href="#consumerfetchmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Fetch<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer, and if 
+the first record batch in the first non-empty partition of the fetch is larger than this value,
+the record batch will still be returned to ensure that the consumer can make progress. As such,
+this is not a absolute maximum.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_nodejs">
 <a href="#consumerisolationlevel_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
 </span> 
@@ -3318,6 +3410,19 @@ if the current offset does not exist any more on the server. Default is earliest
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpartitionfetchbytes_nodejs">
+<a href="#consumermaxpartitionfetchbytes_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Partition<wbr>Fetch<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer.If 
+the first record batch in the first non-empty partition of the fetch is larger than this limit,
+the batch will still be returned to ensure that the consumer can make progress.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3370,6 +3475,18 @@ the offset data to be committed in a future attempt (defaults to 5000).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="producermaxrequestsize_nodejs">
+<a href="#producermaxrequestsize_nodejs" style="color: inherit; text-decoration: inherit;">producer<wbr>Max<wbr>Request<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This setting will limit the number of record batches the 
+producer will send in a single request to avoid sending huge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sessiontimeoutms_nodejs">
 <a href="#sessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
 </span> 
@@ -3413,6 +3530,20 @@ if the current offset does not exist any more on the server. Default is earliest
 
     <dt class="property-optional"
             title="Optional">
+        <span id="consumer_fetch_max_bytes_python">
+<a href="#consumer_fetch_max_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>fetch_<wbr>max_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer, and if 
+the first record batch in the first non-empty partition of the fetch is larger than this value,
+the record batch will still be returned to ensure that the consumer can make progress. As such,
+this is not a absolute maximum.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumer_isolation_level_python">
 <a href="#consumer_isolation_level_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>isolation_<wbr>level</a>
 </span> 
@@ -3421,6 +3552,19 @@ if the current offset does not exist any more on the server. Default is earliest
     </dt>
     <dd>{{% md %}}Transaction read isolation level. read_uncommitted is 
 the default, but read_committed can be used if consume-exactly-once behavior is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumer_max_partition_fetch_bytes_python">
+<a href="#consumer_max_partition_fetch_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>partition_<wbr>fetch_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Records are fetched in batches by the consumer.If 
+the first record batch in the first non-empty partition of the fetch is larger than this limit,
+the batch will still be returned to ensure that the consumer can make progress.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3469,6 +3613,18 @@ of poll() when using consumer group management (defaults to 300000).
     <dd>{{% md %}}Maximum number of milliseconds to wait for records to flush 
 and partition offset data to be committed to offset storage before cancelling the process and restoring
 the offset data to be committed in a future attempt (defaults to 5000).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="producer_max_request_size_python">
+<a href="#producer_max_request_size_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>max_<wbr>request_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This setting will limit the number of record batches the 
+producer will send in a single request to avoid sending huge requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

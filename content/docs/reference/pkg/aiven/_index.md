@@ -34,6 +34,8 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="kafkaschema" title="KafkaSchema"><span class="symbol resource"></span>KafkaSchema</a></li>
     <li><a href="kafkaschemaconfiguration" title="KafkaSchemaConfiguration"><span class="symbol resource"></span>KafkaSchemaConfiguration</a></li>
     <li><a href="kafkatopic" title="KafkaTopic"><span class="symbol resource"></span>KafkaTopic</a></li>
+    <li><a href="m3aggregator" title="M3Aggregator"><span class="symbol resource"></span>M3Aggregator</a></li>
+    <li><a href="m3db" title="M3Db"><span class="symbol resource"></span>M3Db</a></li>
     <li><a href="mirrormakerreplicationflow" title="MirrorMakerReplicationFlow"><span class="symbol resource"></span>MirrorMakerReplicationFlow</a></li>
     <li><a href="mysql" title="MySql"><span class="symbol resource"></span>MySql</a></li>
     <li><a href="pg" title="Pg"><span class="symbol resource"></span>Pg</a></li>
@@ -72,6 +74,8 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getkafkaschema" title="GetKafkaSchema"><span class="symbol function"></span>GetKafkaSchema</a></li>
     <li><a href="getkafkaschemaconfiguration" title="GetKafkaSchemaConfiguration"><span class="symbol function"></span>GetKafkaSchemaConfiguration</a></li>
     <li><a href="getkafkatopic" title="GetKafkaTopic"><span class="symbol function"></span>GetKafkaTopic</a></li>
+    <li><a href="getm3aggregator" title="GetM3Aggregator"><span class="symbol function"></span>GetM3Aggregator</a></li>
+    <li><a href="getm3db" title="GetM3Db"><span class="symbol function"></span>GetM3Db</a></li>
     <li><a href="getmirrormakerreplicationflow" title="GetMirrorMakerReplicationFlow"><span class="symbol function"></span>GetMirrorMakerReplicationFlow</a></li>
     <li><a href="getmysql" title="GetMySql"><span class="symbol function"></span>GetMySql</a></li>
     <li><a href="getpg" title="GetPg"><span class="symbol function"></span>GetPg</a></li>
@@ -97,7 +101,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
 	<dt>Version</dt>
-	<dd>3.1.5</dd>
+	<dd>3.2.1</dd>
 </dl>
 
 

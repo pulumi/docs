@@ -30,7 +30,15 @@ class MyStack : Stack
     {
         var mytesttopic = Output.Create(Aiven.GetKafkaTopic.InvokeAsync(new Aiven.GetKafkaTopicArgs
         {
+            Config = new Aiven.Inputs.GetKafkaTopicConfigArgs
+            {
+                CleanupPolicy = "compact",
+                FlushMs = "10",
+                UncleanLeaderElectionEnable = "true",
+            },
+            Partitions = 3,
             Project = aiven_project.Myproject.Project,
+            Replication = 1,
             ServiceName = aiven_service.Myservice.Service_name,
             TopicName = "<TOPIC_NAME>",
         }));
@@ -52,8 +60,17 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := 3
+		opt1 := 1
 		_, err := aiven.LookupKafkaTopic(ctx, &aiven.LookupKafkaTopicArgs{
+			Config: aiven.GetKafkaTopicConfig{
+				CleanupPolicy:               "compact",
+				FlushMs:                     "10",
+				UncleanLeaderElectionEnable: "true",
+			},
+			Partitions:  &opt0,
 			Project:     aiven_project.Myproject.Project,
+			Replication: &opt1,
 			ServiceName: aiven_service.Myservice.Service_name,
 			TopicName:   "<TOPIC_NAME>",
 		}, nil)
@@ -72,7 +89,14 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-mytesttopic = aiven.get_kafka_topic(project=aiven_project["myproject"]["project"],
+mytesttopic = aiven.get_kafka_topic(config=aiven.GetKafkaTopicConfigArgs(
+        cleanup_policy="compact",
+        flush_ms="10",
+        unclean_leader_election_enable="true",
+    ),
+    partitions=3,
+    project=aiven_project["myproject"]["project"],
+    replication=1,
     service_name=aiven_service["myservice"]["service_name"],
     topic_name="<TOPIC_NAME>")
 ```
@@ -86,7 +110,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_myservice.serviceName]).apply(([project, serviceName]) => aiven.getKafkaTopic({
+    config: {
+        cleanupPolicy: "compact",
+        flushMs: "10",
+        uncleanLeaderElectionEnable: "true",
+    },
+    partitions: 3,
     project: project,
+    replication: 1,
     serviceName: serviceName,
     topicName: "<TOPIC_NAME>",
 }, { async: true }));
@@ -108,7 +139,7 @@ const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_m
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_topic(</span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaTopicResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_topic(</span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[GetKafkaTopicConfigArgs]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaTopicResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -180,7 +211,18 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact.
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -224,7 +266,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Retention bytes.
+    <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -300,7 +342,18 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact.
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,7 +397,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Retention bytes.
+    <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -420,7 +473,18 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact.
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -464,7 +528,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Retention bytes.
+    <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,7 +604,18 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact.
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -584,7 +659,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Retention bytes.
+    <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -677,7 +752,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact.
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -721,7 +807,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Retention bytes.
+    <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -801,7 +887,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact.
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -845,7 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Retention bytes.
+    <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -925,7 +1022,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact.
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -969,7 +1077,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Retention bytes.
+    <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1049,7 +1157,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Topic cleanup policy. Allowed values: delete, compact.
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1093,7 +1212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Retention bytes.
+    <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1116,6 +1235,1114 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetKafkaTopicConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetKafkaTopicConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetKafkaTopicConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetKafkaTopicConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetKafkaTopicConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetKafkaTopicConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cleanuppolicy_csharp">
+<a href="#cleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compressiontype_csharp">
+<a href="#compressiontype_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}compression.type value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deleteretentionms_csharp">
+<a href="#deleteretentionms_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}delete.retention.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filedeletedelayms_csharp">
+<a href="#filedeletedelayms_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Delete<wbr>Delay<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}file.delete.delay.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flushmessages_csharp">
+<a href="#flushmessages_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}flush.messages value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flushms_csharp">
+<a href="#flushms_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}flush.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexintervalbytes_csharp">
+<a href="#indexintervalbytes_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Interval<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}index.interval.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxcompactionlagms_csharp">
+<a href="#maxcompactionlagms_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}max.compaction.lag.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxmessagebytes_csharp">
+<a href="#maxmessagebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}max.message.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagedownconversionenable_csharp">
+<a href="#messagedownconversionenable_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Downconversion<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.downconversion.enable value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageformatversion_csharp">
+<a href="#messageformatversion_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.format.version value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetimestampdifferencemaxms_csharp">
+<a href="#messagetimestampdifferencemaxms_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.timestamp.difference.max.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetimestamptype_csharp">
+<a href="#messagetimestamptype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Timestamp<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.timestamp.type value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mincleanabledirtyratio_csharp">
+<a href="#mincleanabledirtyratio_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cleanable<wbr>Dirty<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.cleanable.dirty.ratio value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mincompactionlagms_csharp">
+<a href="#mincompactionlagms_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.compaction.lag.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mininsyncreplicas_csharp">
+<a href="#mininsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.insync.replicas value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preallocate_csharp">
+<a href="#preallocate_csharp" style="color: inherit; text-decoration: inherit;">Preallocate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}preallocate value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionbytes_csharp">
+<a href="#retentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}retention.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionms_csharp">
+<a href="#retentionms_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}retention.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentbytes_csharp">
+<a href="#segmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentindexbytes_csharp">
+<a href="#segmentindexbytes_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Index<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.index.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentjitterms_csharp">
+<a href="#segmentjitterms_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Jitter<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.jitter.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentms_csharp">
+<a href="#segmentms_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uncleanleaderelectionenable_csharp">
+<a href="#uncleanleaderelectionenable_csharp" style="color: inherit; text-decoration: inherit;">Unclean<wbr>Leader<wbr>Election<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}unclean.leader.election.enable value
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cleanuppolicy_go">
+<a href="#cleanuppolicy_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compressiontype_go">
+<a href="#compressiontype_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}compression.type value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deleteretentionms_go">
+<a href="#deleteretentionms_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}delete.retention.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filedeletedelayms_go">
+<a href="#filedeletedelayms_go" style="color: inherit; text-decoration: inherit;">File<wbr>Delete<wbr>Delay<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}file.delete.delay.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flushmessages_go">
+<a href="#flushmessages_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}flush.messages value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flushms_go">
+<a href="#flushms_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}flush.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexintervalbytes_go">
+<a href="#indexintervalbytes_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Interval<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}index.interval.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxcompactionlagms_go">
+<a href="#maxcompactionlagms_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}max.compaction.lag.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxmessagebytes_go">
+<a href="#maxmessagebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}max.message.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagedownconversionenable_go">
+<a href="#messagedownconversionenable_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Downconversion<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.downconversion.enable value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageformatversion_go">
+<a href="#messageformatversion_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.format.version value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetimestampdifferencemaxms_go">
+<a href="#messagetimestampdifferencemaxms_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.timestamp.difference.max.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetimestamptype_go">
+<a href="#messagetimestamptype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Timestamp<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.timestamp.type value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mincleanabledirtyratio_go">
+<a href="#mincleanabledirtyratio_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cleanable<wbr>Dirty<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.cleanable.dirty.ratio value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mincompactionlagms_go">
+<a href="#mincompactionlagms_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.compaction.lag.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mininsyncreplicas_go">
+<a href="#mininsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.insync.replicas value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preallocate_go">
+<a href="#preallocate_go" style="color: inherit; text-decoration: inherit;">Preallocate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}preallocate value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionbytes_go">
+<a href="#retentionbytes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}retention.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionms_go">
+<a href="#retentionms_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}retention.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentbytes_go">
+<a href="#segmentbytes_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentindexbytes_go">
+<a href="#segmentindexbytes_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Index<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.index.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentjitterms_go">
+<a href="#segmentjitterms_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Jitter<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.jitter.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentms_go">
+<a href="#segmentms_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uncleanleaderelectionenable_go">
+<a href="#uncleanleaderelectionenable_go" style="color: inherit; text-decoration: inherit;">Unclean<wbr>Leader<wbr>Election<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}unclean.leader.election.enable value
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cleanuppolicy_nodejs">
+<a href="#cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compressiontype_nodejs">
+<a href="#compressiontype_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}compression.type value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deleteretentionms_nodejs">
+<a href="#deleteretentionms_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}delete.retention.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filedeletedelayms_nodejs">
+<a href="#filedeletedelayms_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Delete<wbr>Delay<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}file.delete.delay.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flushmessages_nodejs">
+<a href="#flushmessages_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}flush.messages value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flushms_nodejs">
+<a href="#flushms_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}flush.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexintervalbytes_nodejs">
+<a href="#indexintervalbytes_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Interval<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}index.interval.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxcompactionlagms_nodejs">
+<a href="#maxcompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}max.compaction.lag.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxmessagebytes_nodejs">
+<a href="#maxmessagebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}max.message.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagedownconversionenable_nodejs">
+<a href="#messagedownconversionenable_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Downconversion<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.downconversion.enable value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageformatversion_nodejs">
+<a href="#messageformatversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.format.version value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetimestampdifferencemaxms_nodejs">
+<a href="#messagetimestampdifferencemaxms_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.timestamp.difference.max.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetimestamptype_nodejs">
+<a href="#messagetimestamptype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Timestamp<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}message.timestamp.type value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mincleanabledirtyratio_nodejs">
+<a href="#mincleanabledirtyratio_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cleanable<wbr>Dirty<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.cleanable.dirty.ratio value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mincompactionlagms_nodejs">
+<a href="#mincompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.compaction.lag.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mininsyncreplicas_nodejs">
+<a href="#mininsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Insync<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}min.insync.replicas value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preallocate_nodejs">
+<a href="#preallocate_nodejs" style="color: inherit; text-decoration: inherit;">preallocate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}preallocate value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionbytes_nodejs">
+<a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}retention.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionms_nodejs">
+<a href="#retentionms_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}retention.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentbytes_nodejs">
+<a href="#segmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentindexbytes_nodejs">
+<a href="#segmentindexbytes_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Index<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.index.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentjitterms_nodejs">
+<a href="#segmentjitterms_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Jitter<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.jitter.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segmentms_nodejs">
+<a href="#segmentms_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}segment.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uncleanleaderelectionenable_nodejs">
+<a href="#uncleanleaderelectionenable_nodejs" style="color: inherit; text-decoration: inherit;">unclean<wbr>Leader<wbr>Election<wbr>Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}unclean.leader.election.enable value
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cleanup_policy_python">
+<a href="#cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}cleanup.policy value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compression_type_python">
+<a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}compression.type value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delete_retention_ms_python">
+<a href="#delete_retention_ms_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}delete.retention.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_delete_delay_ms_python">
+<a href="#file_delete_delay_ms_python" style="color: inherit; text-decoration: inherit;">file_<wbr>delete_<wbr>delay_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}file.delete.delay.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flush_messages_python">
+<a href="#flush_messages_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>messages</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}flush.messages value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flush_ms_python">
+<a href="#flush_ms_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}flush.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="index_interval_bytes_python">
+<a href="#index_interval_bytes_python" style="color: inherit; text-decoration: inherit;">index_<wbr>interval_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}index.interval.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_compaction_lag_ms_python">
+<a href="#max_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">max_<wbr>compaction_<wbr>lag_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}max.compaction.lag.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_message_bytes_python">
+<a href="#max_message_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}max.message.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_downconversion_enable_python">
+<a href="#message_downconversion_enable_python" style="color: inherit; text-decoration: inherit;">message_<wbr>downconversion_<wbr>enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}message.downconversion.enable value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_format_version_python">
+<a href="#message_format_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}message.format.version value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_timestamp_difference_max_ms_python">
+<a href="#message_timestamp_difference_max_ms_python" style="color: inherit; text-decoration: inherit;">message_<wbr>timestamp_<wbr>difference_<wbr>max_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}message.timestamp.difference.max.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_timestamp_type_python">
+<a href="#message_timestamp_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>timestamp_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}message.timestamp.type value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_cleanable_dirty_ratio_python">
+<a href="#min_cleanable_dirty_ratio_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cleanable_<wbr>dirty_<wbr>ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}min.cleanable.dirty.ratio value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_compaction_lag_ms_python">
+<a href="#min_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">min_<wbr>compaction_<wbr>lag_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}min.compaction.lag.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_insync_replicas_python">
+<a href="#min_insync_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>insync_<wbr>replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}min.insync.replicas value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preallocate_python">
+<a href="#preallocate_python" style="color: inherit; text-decoration: inherit;">preallocate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}preallocate value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_bytes_python">
+<a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}retention.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_ms_python">
+<a href="#retention_ms_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}retention.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segment_bytes_python">
+<a href="#segment_bytes_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}segment.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segment_index_bytes_python">
+<a href="#segment_index_bytes_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>index_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}segment.index.bytes value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segment_jitter_ms_python">
+<a href="#segment_jitter_ms_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>jitter_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}segment.jitter.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="segment_ms_python">
+<a href="#segment_ms_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}segment.ms value
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unclean_leader_election_enable_python">
+<a href="#unclean_leader_election_enable_python" style="color: inherit; text-decoration: inherit;">unclean_<wbr>leader_<wbr>election_<wbr>enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}unclean.leader.election.enable value
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
