@@ -2034,7 +2034,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_linode.ObjectStorageKey">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">ObjectStorageKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">ObjectStorageKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_accesses</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ObjectStorageKeyBucketAccessArgs, Mapping[str, Any], Awaitable[Union[ObjectStorageKeyBucketAccessArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ObjectStorageKeyBucketAccessArgs, Mapping[str, Any], Awaitable[Union[ObjectStorageKeyBucketAccessArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Object Storage Key resource. This can be used to create, modify, and delete Linodes Object Storage Keys.</p>
 <p>The following example shows how one might use this resource to create an Object Storage Key.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -2047,19 +2047,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> - This keypair’s access key. This is not secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> - This keypair’s secret key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">limited</span></code> - Whether or not this key is a limited access key.</p></li>
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket_accesses</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ObjectStorageKeyBucketAccessArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Defines this key as a Limited Access Key. Limited Access Keys restrict this Object Storage key’s access to only the bucket(s) declared in this array and define their bucket-level permissions. Not providing this block will not limit this Object Storage Key.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label given to this key. For display purposes only.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_linode.ObjectStorageKey.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_linode.object_storage_key.ObjectStorageKey<a class="headerlink" href="#pulumi_linode.ObjectStorageKey.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_accesses</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ObjectStorageKeyBucketAccessArgs, Mapping[str, Any], Awaitable[Union[ObjectStorageKeyBucketAccessArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ObjectStorageKeyBucketAccessArgs, Mapping[str, Any], Awaitable[Union[ObjectStorageKeyBucketAccessArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">limited</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_linode.object_storage_key.ObjectStorageKey<a class="headerlink" href="#pulumi_linode.ObjectStorageKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ObjectStorageKey resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2069,7 +2071,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This keypair’s access key. This is not secret.</p></li>
+<li><p><strong>bucket_accesses</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ObjectStorageKeyBucketAccessArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Defines this key as a Limited Access Key. Limited Access Keys restrict this Object Storage key’s access to only the bucket(s) declared in this array and define their bucket-level permissions. Not providing this block will not limit this Object Storage Key.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label given to this key. For display purposes only.</p></li>
+<li><p><strong>limited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not this key is a limited access key.</p></li>
 <li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This keypair’s secret key.</p></li>
 </ul>
 </dd>
@@ -2083,9 +2087,21 @@ properties used to qualify the lookup.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_linode.ObjectStorageKey.bucket_accesses">
+<em class="property">property </em><code class="sig-name descname">bucket_accesses</code><a class="headerlink" href="#pulumi_linode.ObjectStorageKey.bucket_accesses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines this key as a Limited Access Key. Limited Access Keys restrict this Object Storage key’s access to only the bucket(s) declared in this array and define their bucket-level permissions. Not providing this block will not limit this Object Storage Key.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_linode.ObjectStorageKey.label">
 <em class="property">property </em><code class="sig-name descname">label</code><a class="headerlink" href="#pulumi_linode.ObjectStorageKey.label" title="Permalink to this definition">¶</a></dt>
 <dd><p>The label given to this key. For display purposes only.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageKey.limited">
+<em class="property">property </em><code class="sig-name descname">limited</code><a class="headerlink" href="#pulumi_linode.ObjectStorageKey.limited" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not this key is a limited access key.</p>
 </dd></dl>
 
 <dl class="py method">

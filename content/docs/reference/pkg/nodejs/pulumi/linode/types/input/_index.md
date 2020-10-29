@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/linode | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/linode package."
-git_sha: "945de6c6b321a4d58b9a354cac53019b28d49732"
+git_sha: "0a4eb117a3b277c38e99d56109ce2d84e98896a5"
 block_external_search_index: true
 ---
 
@@ -44,6 +44,7 @@ block_external_search_index: true
     <li><a href="#NodeBalancerConfigNodeStatus"><span class="symbol api"></span>NodeBalancerConfigNodeStatus</a></li>
     <li><a href="#NodeBalancerTransfer"><span class="symbol api"></span>NodeBalancerTransfer</a></li>
     <li><a href="#ObjectStorageBucketCert"><span class="symbol api"></span>ObjectStorageBucketCert</a></li>
+    <li><a href="#ObjectStorageKeyBucketAccess"><span class="symbol api"></span>ObjectStorageKeyBucketAccess</a></li>
     <li><a href="#StackScriptUserDefinedField"><span class="symbol api"></span>StackScriptUserDefinedField</a></li>
 </ul>
 
@@ -52,14 +53,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="FirewallDevice" data-link-title="FirewallDevice">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L8">
         interface <strong>FirewallDevice</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FirewallDevice</span></code></pre>
 <h4 class="pdoc-member-header" id="FirewallDevice-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L12">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L12">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -67,7 +68,7 @@ block_external_search_index: true
 The ID of the underlying entity this device references (i.e. the Linode's ID).
 
 <h4 class="pdoc-member-header" id="FirewallDevice-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -75,7 +76,7 @@ The ID of the underlying entity this device references (i.e. the Linode's ID).
 The ID of the Firewall Device.
 
 <h4 class="pdoc-member-header" id="FirewallDevice-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L20">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L20">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -83,7 +84,7 @@ The ID of the Firewall Device.
 This Firewall's unique label.
 
 <h4 class="pdoc-member-header" id="FirewallDevice-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L24">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L24">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -91,19 +92,19 @@ This Firewall's unique label.
 The type of Firewall Device.
 
 <h4 class="pdoc-member-header" id="FirewallDevice-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L25">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L25">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="FirewallInbound" data-link-title="FirewallInbound">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L28">
         interface <strong>FirewallInbound</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FirewallInbound</span></code></pre>
 <h4 class="pdoc-member-header" id="FirewallInbound-addresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L32">property <b>addresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L32">property <b>addresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -111,7 +112,7 @@ The type of Firewall Device.
 A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 
 <h4 class="pdoc-member-header" id="FirewallInbound-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L36">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L36">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -119,7 +120,7 @@ A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule app
 A list of ports and/or port ranges (i.e. "443" or "80-90").
 
 <h4 class="pdoc-member-header" id="FirewallInbound-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L40">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L40">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,14 +128,14 @@ A list of ports and/or port ranges (i.e. "443" or "80-90").
 The network protocol this rule controls.
 
 <h3 class="pdoc-module-header" id="FirewallOutbound" data-link-title="FirewallOutbound">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L43">
         interface <strong>FirewallOutbound</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FirewallOutbound</span></code></pre>
 <h4 class="pdoc-member-header" id="FirewallOutbound-addresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L47">property <b>addresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L47">property <b>addresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -142,7 +143,7 @@ The network protocol this rule controls.
 A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 
 <h4 class="pdoc-member-header" id="FirewallOutbound-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L51">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L51">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -150,7 +151,7 @@ A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule app
 A list of ports and/or port ranges (i.e. "443" or "80-90").
 
 <h4 class="pdoc-member-header" id="FirewallOutbound-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L55">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L55">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,117 +159,117 @@ A list of ports and/or port ranges (i.e. "443" or "80-90").
 The network protocol this rule controls.
 
 <h3 class="pdoc-module-header" id="GetStackScriptUserDefinedField" data-link-title="GetStackScriptUserDefinedField">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L58">
         interface <strong>GetStackScriptUserDefinedField</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetStackScriptUserDefinedField</span></code></pre>
 <h4 class="pdoc-member-header" id="GetStackScriptUserDefinedField-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L59">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L59">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackScriptUserDefinedField-example">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L60">property <b>example</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L60">property <b>example</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>example?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackScriptUserDefinedField-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L61">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L61">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackScriptUserDefinedField-manyOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L62">property <b>manyOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L62">property <b>manyOf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manyOf?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackScriptUserDefinedField-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackScriptUserDefinedField-oneOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L64">property <b>oneOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L64">property <b>oneOf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oneOf?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceAlerts" data-link-title="InstanceAlerts">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L67">
         interface <strong>InstanceAlerts</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceAlerts</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceAlerts-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L68">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L68">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceAlerts-io">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L69">property <b>io</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L69">property <b>io</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>io?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceAlerts-networkIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L70">property <b>networkIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L70">property <b>networkIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceAlerts-networkOut">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L71">property <b>networkOut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L71">property <b>networkOut</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkOut?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceAlerts-transferQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L72">property <b>transferQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L72">property <b>transferQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transferQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceBackups" data-link-title="InstanceBackups">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L75">
         interface <strong>InstanceBackups</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceBackups</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceBackups-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L76">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L76">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBackups-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L77">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L77">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceBackupsSchedule'>InstanceBackupsSchedule</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceBackupsSchedule" data-link-title="InstanceBackupsSchedule">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L80">
         interface <strong>InstanceBackupsSchedule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceBackupsSchedule</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceBackupsSchedule-day">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L81">property <b>day</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L81">property <b>day</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>day?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBackupsSchedule-window">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L82">property <b>window</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L82">property <b>window</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>window?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceConfig" data-link-title="InstanceConfig">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L85">
         interface <strong>InstanceConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfig-comments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L89">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L89">property <b>comments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +277,7 @@ The network protocol this rule controls.
 - Arbitrary user comments about this `config`.
 
 <h4 class="pdoc-member-header" id="InstanceConfig-devices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L93">property <b>devices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L93">property <b>devices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>devices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevices'>InstanceConfigDevices</a>&gt;;</code></pre>
@@ -284,7 +285,7 @@ The network protocol this rule controls.
 A list of `disk` or `volume` attachments for this `config`.  If the `bootConfigLabel` omits a `devices` block, the Linode will not be booted.
 
 <h4 class="pdoc-member-header" id="InstanceConfig-helpers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L97">property <b>helpers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L97">property <b>helpers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>helpers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigHelpers'>InstanceConfigHelpers</a>&gt;;</code></pre>
@@ -292,7 +293,7 @@ A list of `disk` or `volume` attachments for this `config`.  If the `bootConfigL
 Helpers enabled when booting to this Linode Config.
 
 <h4 class="pdoc-member-header" id="InstanceConfig-kernel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L101">property <b>kernel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L101">property <b>kernel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kernel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -300,7 +301,7 @@ Helpers enabled when booting to this Linode Config.
 - A Kernel ID to boot a Linode with. Default is based on image choice. Examples are `linode/latest-64bit`, `linode/grub2`, `linode/direct-disk`, etc. See all kernels [here](https://api.linode.com/v4/linode/kernels). Note that this is a paginated API endpoint ([docs](https://developers.linode.com/api/v4/linode-kernels)).
 
 <h4 class="pdoc-member-header" id="InstanceConfig-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L105">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L105">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -308,7 +309,7 @@ Helpers enabled when booting to this Linode Config.
 The Config's label for display purposes.  Also used by `bootConfigLabel`.
 
 <h4 class="pdoc-member-header" id="InstanceConfig-memoryLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L109">property <b>memoryLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L109">property <b>memoryLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -316,7 +317,7 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 - Defaults to the total RAM of the Linode
 
 <h4 class="pdoc-member-header" id="InstanceConfig-rootDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L113">property <b>rootDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L113">property <b>rootDevice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -324,7 +325,7 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 - The root device to boot. The corresponding disk must be attached to a `device` slot.  Example: `"/dev/sda"`
 
 <h4 class="pdoc-member-header" id="InstanceConfig-runLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L117">property <b>runLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L117">property <b>runLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +333,7 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 - Defines the state of your Linode after booting. Defaults to `"default"`.
 
 <h4 class="pdoc-member-header" id="InstanceConfig-virtMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L121">property <b>virtMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L121">property <b>virtMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -340,14 +341,14 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 - Controls the virtualization mode. Defaults to `"paravirt"`.
 
 <h3 class="pdoc-module-header" id="InstanceConfigDevices" data-link-title="InstanceConfigDevices">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L124">
         interface <strong>InstanceConfigDevices</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevices</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sda">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L128">property <b>sda</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L128">property <b>sda</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSda'>InstanceConfigDevicesSda</a>&gt;;</code></pre>
@@ -355,49 +356,49 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 ... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `diskLabel` or `volumeId`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virtMode`.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L129">property <b>sdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L129">property <b>sdb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sdb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdb'>InstanceConfigDevicesSdb</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L130">property <b>sdc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L130">property <b>sdc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sdc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdc'>InstanceConfigDevicesSdc</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L131">property <b>sdd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L131">property <b>sdd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sdd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdd'>InstanceConfigDevicesSdd</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sde">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L132">property <b>sde</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L132">property <b>sde</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sde?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSde'>InstanceConfigDevicesSde</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L133">property <b>sdf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L133">property <b>sdf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sdf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdf'>InstanceConfigDevicesSdf</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L134">property <b>sdg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L134">property <b>sdg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sdg?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdg'>InstanceConfigDevicesSdg</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevices-sdh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L135">property <b>sdh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L135">property <b>sdh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sdh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InstanceConfigDevicesSdh'>InstanceConfigDevicesSdh</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSda" data-link-title="InstanceConfigDevicesSda">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L138">
         interface <strong>InstanceConfigDevicesSda</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevicesSda</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSda-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L142">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L142">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -405,7 +406,7 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 The Disk ID of the associated `diskLabel`, if used.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSda-diskLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L146">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L146">property <b>diskLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -413,7 +414,7 @@ The Disk ID of the associated `diskLabel`, if used.
 The `label` of the `disk` to map to this `device` slot.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSda-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L150">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L150">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -421,14 +422,14 @@ The `label` of the `disk` to map to this `device` slot.
 The Volume ID to map to this `device` slot.
 
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSdb" data-link-title="InstanceConfigDevicesSdb">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L153">
         interface <strong>InstanceConfigDevicesSdb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevicesSdb</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdb-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L157">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L157">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -436,7 +437,7 @@ The Volume ID to map to this `device` slot.
 The Disk ID of the associated `diskLabel`, if used.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdb-diskLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L161">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L161">property <b>diskLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,7 +445,7 @@ The Disk ID of the associated `diskLabel`, if used.
 The `label` of the `disk` to map to this `device` slot.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdb-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L165">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L165">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -452,14 +453,14 @@ The `label` of the `disk` to map to this `device` slot.
 The Volume ID to map to this `device` slot.
 
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSdc" data-link-title="InstanceConfigDevicesSdc">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L168">
         interface <strong>InstanceConfigDevicesSdc</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevicesSdc</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdc-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L172">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L172">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -467,7 +468,7 @@ The Volume ID to map to this `device` slot.
 The Disk ID of the associated `diskLabel`, if used.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdc-diskLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L176">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L176">property <b>diskLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -475,7 +476,7 @@ The Disk ID of the associated `diskLabel`, if used.
 The `label` of the `disk` to map to this `device` slot.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdc-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L180">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L180">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -483,14 +484,14 @@ The `label` of the `disk` to map to this `device` slot.
 The Volume ID to map to this `device` slot.
 
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSdd" data-link-title="InstanceConfigDevicesSdd">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L183">
         interface <strong>InstanceConfigDevicesSdd</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevicesSdd</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdd-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L187">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L187">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -498,7 +499,7 @@ The Volume ID to map to this `device` slot.
 The Disk ID of the associated `diskLabel`, if used.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdd-diskLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L191">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L191">property <b>diskLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -506,7 +507,7 @@ The Disk ID of the associated `diskLabel`, if used.
 The `label` of the `disk` to map to this `device` slot.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdd-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L195">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L195">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -514,14 +515,14 @@ The `label` of the `disk` to map to this `device` slot.
 The Volume ID to map to this `device` slot.
 
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSde" data-link-title="InstanceConfigDevicesSde">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L198">
         interface <strong>InstanceConfigDevicesSde</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevicesSde</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSde-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L202">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L202">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -529,7 +530,7 @@ The Volume ID to map to this `device` slot.
 The Disk ID of the associated `diskLabel`, if used.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSde-diskLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L206">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L206">property <b>diskLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -537,7 +538,7 @@ The Disk ID of the associated `diskLabel`, if used.
 The `label` of the `disk` to map to this `device` slot.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSde-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L210">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L210">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -545,14 +546,14 @@ The `label` of the `disk` to map to this `device` slot.
 The Volume ID to map to this `device` slot.
 
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSdf" data-link-title="InstanceConfigDevicesSdf">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L213">
         interface <strong>InstanceConfigDevicesSdf</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevicesSdf</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdf-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L217">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L217">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -560,7 +561,7 @@ The Volume ID to map to this `device` slot.
 The Disk ID of the associated `diskLabel`, if used.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdf-diskLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L221">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L221">property <b>diskLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +569,7 @@ The Disk ID of the associated `diskLabel`, if used.
 The `label` of the `disk` to map to this `device` slot.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdf-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L225">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L225">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -576,14 +577,14 @@ The `label` of the `disk` to map to this `device` slot.
 The Volume ID to map to this `device` slot.
 
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSdg" data-link-title="InstanceConfigDevicesSdg">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L228">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L228">
         interface <strong>InstanceConfigDevicesSdg</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevicesSdg</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdg-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L232">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L232">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -591,7 +592,7 @@ The Volume ID to map to this `device` slot.
 The Disk ID of the associated `diskLabel`, if used.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdg-diskLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L236">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L236">property <b>diskLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +600,7 @@ The Disk ID of the associated `diskLabel`, if used.
 The `label` of the `disk` to map to this `device` slot.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdg-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L240">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L240">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -607,14 +608,14 @@ The `label` of the `disk` to map to this `device` slot.
 The Volume ID to map to this `device` slot.
 
 <h3 class="pdoc-module-header" id="InstanceConfigDevicesSdh" data-link-title="InstanceConfigDevicesSdh">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L243">
         interface <strong>InstanceConfigDevicesSdh</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigDevicesSdh</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdh-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L247">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L247">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -622,7 +623,7 @@ The Volume ID to map to this `device` slot.
 The Disk ID of the associated `diskLabel`, if used.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdh-diskLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L251">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L251">property <b>diskLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -630,7 +631,7 @@ The Disk ID of the associated `diskLabel`, if used.
 The `label` of the `disk` to map to this `device` slot.
 
 <h4 class="pdoc-member-header" id="InstanceConfigDevicesSdh-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L255">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L255">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -638,19 +639,19 @@ The `label` of the `disk` to map to this `device` slot.
 The Volume ID to map to this `device` slot.
 
 <h3 class="pdoc-module-header" id="InstanceConfigHelpers" data-link-title="InstanceConfigHelpers">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L258">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L258">
         interface <strong>InstanceConfigHelpers</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceConfigHelpers</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigHelpers-devtmpfsAutomount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L259">property <b>devtmpfsAutomount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L259">property <b>devtmpfsAutomount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>devtmpfsAutomount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceConfigHelpers-distro">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L263">property <b>distro</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L263">property <b>distro</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>distro?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -658,7 +659,7 @@ The Volume ID to map to this `device` slot.
 Controls the behavior of the Linode Config's Distribution Helper setting.
 
 <h4 class="pdoc-member-header" id="InstanceConfigHelpers-modulesDep">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L267">property <b>modulesDep</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L267">property <b>modulesDep</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modulesDep?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -666,7 +667,7 @@ Controls the behavior of the Linode Config's Distribution Helper setting.
 Creates a modules dependency file for the Kernel you run.
 
 <h4 class="pdoc-member-header" id="InstanceConfigHelpers-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L271">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L271">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -674,7 +675,7 @@ Creates a modules dependency file for the Kernel you run.
 Controls the behavior of the Linode Config's Network Helper setting, used to automatically configure additional IP addresses assigned to this instance.
 
 <h4 class="pdoc-member-header" id="InstanceConfigHelpers-updatedbDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L275">property <b>updatedbDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L275">property <b>updatedbDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedbDisabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -682,14 +683,14 @@ Controls the behavior of the Linode Config's Network Helper setting, used to aut
 Disables updatedb cron job to avoid disk thrashing.
 
 <h3 class="pdoc-module-header" id="InstanceDisk" data-link-title="InstanceDisk">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L278">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L278">
         interface <strong>InstanceDisk</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceDisk</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceDisk-authorizedKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L282">property <b>authorizedKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L282">property <b>authorizedKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -697,7 +698,7 @@ Disables updatedb cron job to avoid disk thrashing.
 A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorizedKeys` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceDisk-authorizedUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L286">property <b>authorizedUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L286">property <b>authorizedUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -705,7 +706,7 @@ A list of SSH public keys to deploy for the root user on the newly created Linod
 A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorizedUsers` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceDisk-filesystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L290">property <b>filesystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L290">property <b>filesystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filesystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -713,7 +714,7 @@ A list of Linode usernames. If the usernames have associated SSH keys, the keys 
 The Disk filesystem can be one of: `"raw"`, `"swap"`, `"ext3"`, `"ext4"`, or `"initrd"` which has a max size of 32mb and can be used in the config `initrd` (not currently supported in this provider).
 
 <h4 class="pdoc-member-header" id="InstanceDisk-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L294">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L294">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -721,7 +722,7 @@ The Disk filesystem can be one of: `"raw"`, `"swap"`, `"ext3"`, `"ext4"`, or `"i
 The ID of the disk in the Linode API.
 
 <h4 class="pdoc-member-header" id="InstanceDisk-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L298">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L298">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -729,7 +730,7 @@ The ID of the disk in the Linode API.
 An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceDisk-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L302">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L302">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -737,12 +738,12 @@ An Image ID to deploy the Disk from. Official Linode Images start with linode/, 
 The Config's label for display purposes.  Also used by `bootConfigLabel`.
 
 <h4 class="pdoc-member-header" id="InstanceDisk-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L303">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L303">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceDisk-rootPass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L307">property <b>rootPass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L307">property <b>rootPass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootPass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -750,7 +751,7 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 The initial password for the `root` user account. *This value can not be imported.* *Changing `rootPass` forces the creation of a new Linode Instance.* *If omitted, a random password will be generated but will not be stored in state.*
 
 <h4 class="pdoc-member-header" id="InstanceDisk-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L311">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L311">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -758,7 +759,7 @@ The initial password for the `root` user account. *This value can not be importe
 The size of the Disk in MB.
 
 <h4 class="pdoc-member-header" id="InstanceDisk-stackscriptData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L315">property <b>stackscriptData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L315">property <b>stackscriptData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackscriptData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -766,7 +767,7 @@ The size of the Disk in MB.
 An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscriptData` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceDisk-stackscriptId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L319">property <b>stackscriptId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L319">property <b>stackscriptId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackscriptId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -774,41 +775,41 @@ An object containing responses to any User Defined Fields present in the StackSc
 The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscriptId` forces the creation of a new Linode Instance.*
 
 <h3 class="pdoc-module-header" id="InstanceSpecs" data-link-title="InstanceSpecs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L322">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L322">
         interface <strong>InstanceSpecs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceSpecs</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceSpecs-disk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L323">property <b>disk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L323">property <b>disk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSpecs-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L324">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L324">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSpecs-transfer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L325">property <b>transfer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L325">property <b>transfer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transfer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSpecs-vcpus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L326">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L326">property <b>vcpus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vcpus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="LkeClusterPool" data-link-title="LkeClusterPool">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L329">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L329">
         interface <strong>LkeClusterPool</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LkeClusterPool</span></code></pre>
 <h4 class="pdoc-member-header" id="LkeClusterPool-count">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L333">property <b>count</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L333">property <b>count</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -816,7 +817,7 @@ The StackScript to deploy to the newly created Linode. If provided, 'image' must
 The number of nodes in the Node Pool.
 
 <h4 class="pdoc-member-header" id="LkeClusterPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L337">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L337">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -824,12 +825,12 @@ The number of nodes in the Node Pool.
 The ID of the node.
 
 <h4 class="pdoc-member-header" id="LkeClusterPool-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L338">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L338">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LkeClusterPoolNode'>LkeClusterPoolNode</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LkeClusterPool-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L342">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L342">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -837,14 +838,14 @@ The ID of the node.
 A Linode Type for all of the nodes in the Node Pool.
 
 <h3 class="pdoc-module-header" id="LkeClusterPoolNode" data-link-title="LkeClusterPoolNode">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L345">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L345">
         interface <strong>LkeClusterPoolNode</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LkeClusterPoolNode</span></code></pre>
 <h4 class="pdoc-member-header" id="LkeClusterPoolNode-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L349">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L349">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +853,7 @@ A Linode Type for all of the nodes in the Node Pool.
 The ID of the node.
 
 <h4 class="pdoc-member-header" id="LkeClusterPoolNode-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L353">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L353">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -860,7 +861,7 @@ The ID of the node.
 The ID of the underlying Linode instance.
 
 <h4 class="pdoc-member-header" id="LkeClusterPoolNode-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L357">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L357">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -868,53 +869,53 @@ The ID of the underlying Linode instance.
 The status of the node.
 
 <h3 class="pdoc-module-header" id="NodeBalancerConfigNodeStatus" data-link-title="NodeBalancerConfigNodeStatus">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L360">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L360">
         interface <strong>NodeBalancerConfigNodeStatus</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>NodeBalancerConfigNodeStatus</span></code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerConfigNodeStatus-statusDown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L361">property <b>statusDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L361">property <b>statusDown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusDown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerConfigNodeStatus-statusUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L362">property <b>statusUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L362">property <b>statusUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="NodeBalancerTransfer" data-link-title="NodeBalancerTransfer">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L365">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L365">
         interface <strong>NodeBalancerTransfer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>NodeBalancerTransfer</span></code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerTransfer-in">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L366">property <b>in</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L366">property <b>in</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>in?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerTransfer-out">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L367">property <b>out</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L367">property <b>out</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>out?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerTransfer-total">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L368">property <b>total</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L368">property <b>total</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>total?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ObjectStorageBucketCert" data-link-title="ObjectStorageBucketCert">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L371">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L371">
         interface <strong>ObjectStorageBucketCert</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ObjectStorageBucketCert</span></code></pre>
 <h4 class="pdoc-member-header" id="ObjectStorageBucketCert-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L375">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L375">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -922,32 +923,63 @@ The status of the node.
 The Base64 encoded and PEM formatted SSL certificate.
 
 <h4 class="pdoc-member-header" id="ObjectStorageBucketCert-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L379">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L379">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The private key associated with the TLS/SSL certificate.
 
+<h3 class="pdoc-module-header" id="ObjectStorageKeyBucketAccess" data-link-title="ObjectStorageKeyBucketAccess">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L382">
+        interface <strong>ObjectStorageKeyBucketAccess</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ObjectStorageKeyBucketAccess</span></code></pre>
+<h4 class="pdoc-member-header" id="ObjectStorageKeyBucketAccess-bucketName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L386">property <b>bucketName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique label of the bucket to which the key will grant limited access.
+
+<h4 class="pdoc-member-header" id="ObjectStorageKeyBucketAccess-cluster">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L390">property <b>cluster</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Object Storage cluster where a bucket to which the key is granting access is hosted.
+
+<h4 class="pdoc-member-header" id="ObjectStorageKeyBucketAccess-permissions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L394">property <b>permissions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+This Limited Access Key’s permissions for the selected bucket. Can be one of `"readWrite"` or `"readOnly"`. *Changing `permissions` forces the creation of a new Object Storage Key.*.
+
 <h3 class="pdoc-module-header" id="StackScriptUserDefinedField" data-link-title="StackScriptUserDefinedField">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L382">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L397">
         interface <strong>StackScriptUserDefinedField</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>StackScriptUserDefinedField</span></code></pre>
 <h4 class="pdoc-member-header" id="StackScriptUserDefinedField-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L383">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L398">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="StackScriptUserDefinedField-example">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L384">property <b>example</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L399">property <b>example</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>example?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="StackScriptUserDefinedField-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L388">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L403">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -955,17 +987,17 @@ The private key associated with the TLS/SSL certificate.
 The StackScript's label is for display purposes only.
 
 <h4 class="pdoc-member-header" id="StackScriptUserDefinedField-manyOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L389">property <b>manyOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L404">property <b>manyOf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manyOf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="StackScriptUserDefinedField-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L390">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L405">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="StackScriptUserDefinedField-oneOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/945de6c6b321a4d58b9a354cac53019b28d49732/sdk/nodejs/types/input.ts#L391">property <b>oneOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/types/input.ts#L406">property <b>oneOf</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oneOf?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
