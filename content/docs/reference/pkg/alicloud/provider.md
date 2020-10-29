@@ -1730,6 +1730,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="rkvstore_csharp">
+<a href="#rkvstore_csharp" style="color: inherit; text-decoration: inherit;">RKvstore</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ram_csharp">
 <a href="#ram_csharp" style="color: inherit; text-decoration: inherit;">Ram</a>
 </span> 
@@ -2249,6 +2259,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="pvtz_go">
 <a href="#pvtz_go" style="color: inherit; text-decoration: inherit;">Pvtz</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rkvstore_go">
+<a href="#rkvstore_go" style="color: inherit; text-decoration: inherit;">RKvstore</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2784,6 +2804,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="rkvstore_nodejs">
+<a href="#rkvstore_nodejs" style="color: inherit; text-decoration: inherit;">r<wbr>Kvstore</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ram_nodejs">
 <a href="#ram_nodejs" style="color: inherit; text-decoration: inherit;">ram</a>
 </span> 
@@ -3303,6 +3333,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="pvtz_python">
 <a href="#pvtz_python" style="color: inherit; text-decoration: inherit;">pvtz</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="r_kvstore_python">
+<a href="#r_kvstore_python" style="color: inherit; text-decoration: inherit;">r_<wbr>kvstore</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

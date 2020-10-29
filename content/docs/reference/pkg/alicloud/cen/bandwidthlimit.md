@@ -120,10 +120,16 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "tf-testAccCenBandwidthLimitConfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
 		_, err := providers.Newalicloud(ctx, "fra", &providers.alicloudArgs{
 			Region: pulumi.String("eu-central-1"),
 		})

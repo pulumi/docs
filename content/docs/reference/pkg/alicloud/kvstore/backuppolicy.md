@@ -83,10 +83,24 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kvstore"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		creation := "KVStore"
+		if param := cfg.Get("creation"); param != "" {
+			creation = param
+		}
+		multiAz := "false"
+		if param := cfg.Get("multiAz"); param != "" {
+			multiAz = param
+		}
+		name := "kvstorebackuppolicyvpc"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
 		opt0 := creation
 		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
 			AvailableResourceCreation: &opt0,

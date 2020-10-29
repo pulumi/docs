@@ -15,6 +15,8 @@ For information about Alicloud Config Configuration Recorder and how to use it, 
 
 > **NOTE:** Available in v1.99.0+.
 
+> **NOTE:** The Cloud Config region only support `cn-shanghai` and `ap-northeast-1`.
+
 {{% examples %}}
 ## Example Usage
 

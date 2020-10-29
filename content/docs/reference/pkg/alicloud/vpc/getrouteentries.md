@@ -115,6 +115,7 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
@@ -147,6 +148,11 @@ func main() {
 		}, nil)
 		if err != nil {
 			return err
+		}
+		cfg := config.New(ctx, "")
+		name := "tf-testAccRouteEntryConfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
 		}
 		fooNetwork, err := vpc.NewNetwork(ctx, "fooNetwork", &vpc.NetworkArgs{
 			CidrBlock: pulumi.String("10.1.0.0/21"),

@@ -20,15 +20,157 @@ Provides a PolarDB account resource and used to manage databases.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var creation = config.Get("creation") ?? "PolarDB";
+        var name = config.Get("name") ?? "polardbaccountmysql";
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableResourceCreation = creation,
+        }));
+        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/16",
+        });
+        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+        });
+        var cluster = new AliCloud.PolarDB.Cluster("cluster", new AliCloud.PolarDB.ClusterArgs
+        {
+            DbType = "MySQL",
+            DbVersion = "8.0",
+            DbNodeClass = "polar.mysql.x4.large",
+            PayType = "PostPaid",
+            VswitchId = defaultSwitch.Id,
+            Description = name,
+        });
+        var account = new AliCloud.PolarDB.Account("account", new AliCloud.PolarDB.AccountArgs
+        {
+            DbClusterId = cluster.Id,
+            AccountName = "tftestnormal",
+            AccountPassword = "Test12345",
+            AccountDescription = name,
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		creation := "PolarDB"
+		if param := cfg.Get("creation"); param != "" {
+			creation = param
+		}
+		name := "polardbaccountmysql"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		opt0 := creation
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := polardb.NewCluster(ctx, "cluster", &polardb.ClusterArgs{
+			DbType:      pulumi.String("MySQL"),
+			DbVersion:   pulumi.String("8.0"),
+			DbNodeClass: pulumi.String("polar.mysql.x4.large"),
+			PayType:     pulumi.String("PostPaid"),
+			VswitchId:   defaultSwitch.ID(),
+			Description: pulumi.String(name),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = polardb.NewAccount(ctx, "account", &polardb.AccountArgs{
+			DbClusterId:        cluster.ID(),
+			AccountName:        pulumi.String("tftestnormal"),
+			AccountPassword:    pulumi.String("Test12345"),
+			AccountDescription: pulumi.String(name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+creation = config.get("creation")
+if creation is None:
+    creation = "PolarDB"
+name = config.get("name")
+if name is None:
+    name = "polardbaccountmysql"
+default_zones = alicloud.get_zones(available_resource_creation=creation)
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    vpc_id=default_network.id,
+    cidr_block="172.16.0.0/24",
+    availability_zone=default_zones.zones[0].id)
+cluster = alicloud.polardb.Cluster("cluster",
+    db_type="MySQL",
+    db_version="8.0",
+    db_node_class="polar.mysql.x4.large",
+    pay_type="PostPaid",
+    vswitch_id=default_switch.id,
+    description=name)
+account = alicloud.polardb.Account("account",
+    db_cluster_id=cluster.id,
+    account_name="tftestnormal",
+    account_password="Test12345",
+    account_description=name)
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -57,8 +199,8 @@ const cluster = new alicloud.polardb.Cluster("cluster", {
     vswitchId: defaultSwitch.id,
     description: name,
 });
-const account = new alicloud.rds.Account("account", {
-    dbClusterId: alicloud_db_instance.cluster.id,
+const account = new alicloud.polardb.Account("account", {
+    dbClusterId: cluster.id,
     accountName: "tftestnormal",
     accountPassword: "Test12345",
     accountDescription: name,

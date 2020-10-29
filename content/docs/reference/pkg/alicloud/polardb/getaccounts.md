@@ -38,11 +38,11 @@ class MyStack : Stack
         {
             DbClusterId = polardbClustersDs.Clusters[0].Id,
         })));
-        this.Ends = @default.Apply(@default => @default.Accounts[0].AccountName);
+        this.Account = @default.Apply(@default => @default.Accounts[0].AccountName);
     }
 
-    [Output("ends")]
-    public Output<string> Ends { get; set; }
+    [Output("account")]
+    public Output<string> Account { get; set; }
 }
 ```
 
@@ -74,7 +74,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ctx.Export("ends", _default.Accounts[0].AccountName)
+		ctx.Export("account", _default.Accounts[0].AccountName)
 		return nil
 	})
 }
@@ -90,7 +90,7 @@ import pulumi_alicloud as alicloud
 polardb_clusters_ds = alicloud.polardb.get_clusters(description_regex="pc-\\w+",
     status="Running")
 default = alicloud.polardb.get_accounts(db_cluster_id=polardb_clusters_ds.clusters[0].id)
-pulumi.export("ends", default.accounts[0].account_name)
+pulumi.export("account", default.accounts[0].account_name)
 ```
 
 {{% /example %}}
@@ -108,7 +108,7 @@ const polardbClustersDs = alicloud.polardb.getClusters({
 const default = polardbClustersDs.then(polardbClustersDs => alicloud.polardb.getAccounts({
     dbClusterId: polardbClustersDs.clusters[0].id,
 }));
-export const ends = _default.then(_default => _default.accounts[0].accountName);
+export const account = _default.then(_default => _default.accounts[0].accountName);
 ```
 
 {{% /example %}}

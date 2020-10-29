@@ -33,10 +33,10 @@ class MyStack : Stack
     public MyStack()
     {
         var config = new Config();
-        var name = config.RequireObject<dynamic>("name");
+        var name = config.Get("name") ?? "tf-test";
         var exampleNetworks = Output.Create(AliCloud.Vpc.GetNetworks.InvokeAsync(new AliCloud.Vpc.GetNetworksArgs
         {
-            IsExample = true,
+            IsDefault = true,
         }));
         var exampleInstance = new AliCloud.Cen.Instance("exampleInstance", new AliCloud.Cen.InstanceArgs
         {
@@ -71,12 +71,19 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "tf-test"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		opt0 := true
 		exampleNetworks, err := vpc.GetNetworks(ctx, &vpc.GetNetworksArgs{
-			IsExample: true,
+			IsDefault: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -117,8 +124,10 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 config = pulumi.Config()
-name = config.require_object("name")
-example_networks = alicloud.vpc.get_networks(is_example=True)
+name = config.get("name")
+if name is None:
+    name = "tf-test"
+example_networks = alicloud.vpc.get_networks(is_default=True)
 example_instance = alicloud.cen.Instance("exampleInstance")
 vpc = alicloud.cen.InstanceAttachment("vpc",
     instance_id=example_instance.id,
@@ -142,9 +151,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
-const name = config.requireObject("name");
+const name = config.get("name") || "tf-test";
 const exampleNetworks = alicloud.vpc.getNetworks({
-    isExample: true,
+    isDefault: true,
 });
 const exampleInstance = new alicloud.cen.Instance("exampleInstance", {});
 const vpc = new alicloud.cen.InstanceAttachment("vpc", {

@@ -3,7 +3,7 @@ title: "Module yundun"
 title_tag: "Module yundun | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "yundun"
 meta_desc: "Explore members of the yundun module in the @pulumi/alicloud package."
-git_sha: "41aff0da5bb5a1dc4cd69834a220b8e8984f953d"
+git_sha: "c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="BastionHostInstance" data-link-title="BastionHostInstance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L34">
         Resource <strong>BastionHostInstance</strong>
     </a>
 </h3>
@@ -76,7 +76,7 @@ const defaultBastionHostInstance = new alicloud.yundun.BastionHostInstance("defa
 ```
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -90,7 +90,7 @@ Create a BastionHostInstance resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -101,14 +101,14 @@ Get an existing BastionHostInstance resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -119,7 +119,7 @@ Returns true if the given object is an instance of BastionHostInstance.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L65">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L65">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -136,7 +136,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-licenseCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L69">property <b>licenseCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L69">property <b>licenseCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ deployments and may be missing (undefined) during planning phases.
 The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L73">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L73">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ The package type of Cloud Bastionhost instance. You can query more supported typ
 Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. Default to 1. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L77">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L77">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. 
 The Id of resource group which the Bastionhost Instance belongs. If not set, the resource is created in the default resource group.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L81">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L81">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -168,7 +168,7 @@ The Id of resource group which the Bastionhost Instance belongs. If not set, the
 security group IDs configured to Bastionhost.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L85">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ security group IDs configured to Bastionhost.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -185,7 +185,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="BastionHostInstance-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L89">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L89">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ deployments.
 VSwitch ID configured to Bastionhost.
 
 <h3 class="pdoc-module-header" id="DBAuditInstance" data-link-title="DBAuditInstance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L32">
         Resource <strong>DBAuditInstance</strong>
     </a>
 </h3>
@@ -225,7 +225,7 @@ const defaultDBAuditInstance = new alicloud.yundun.DBAuditInstance("default", {
 ```
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -239,7 +239,7 @@ Create a DBAuditInstance resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -250,14 +250,14 @@ Get an existing DBAuditInstance resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -268,7 +268,7 @@ Returns true if the given object is an instance of DBAuditInstance.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -285,7 +285,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L67">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L67">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ deployments and may be missing (undefined) during planning phases.
 Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. Default to 12. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-planCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L71">property <b>planCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L71">property <b>planCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>planCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -301,7 +301,7 @@ Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. 
 Plan code of the Cloud DBAudit to produce. (alpha.professional, alpha.basic, alpha.premium)
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L75">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L75">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ Plan code of the Cloud DBAudit to produce. (alpha.professional, alpha.basic, alp
 The Id of resource group which the DBaudit Instance belongs. If not set, the resource is created in the default resource group.
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L79">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ The Id of resource group which the DBaudit Instance belongs. If not set, the res
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -326,7 +326,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DBAuditInstance-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L83">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L83">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -336,7 +336,7 @@ vSwtich ID configured to audit
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getBastionHostInstances" data-link-title="getBastionHostInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L27">
         Function <strong>getBastionHostInstances</strong>
     </a>
 </h3>
@@ -363,7 +363,7 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 ```
 
 <h3 class="pdoc-module-header" id="getDBAuditInstance" data-link-title="getDBAuditInstance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L9">
         Function <strong>getDBAuditInstance</strong>
     </a>
 </h3>
@@ -374,7 +374,7 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BastionHostInstanceArgs" data-link-title="BastionHostInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L180">
         interface <strong>BastionHostInstanceArgs</strong>
     </a>
 </h3>
@@ -384,7 +384,7 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 The set of arguments for constructing a BastionHostInstance resource.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -392,7 +392,7 @@ The set of arguments for constructing a BastionHostInstance resource.
 Description of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceArgs-licenseCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L188">property <b>licenseCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L188">property <b>licenseCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -400,7 +400,7 @@ Description of the instance. This name can have a string of 1 to 63 characters.
 The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L192">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L192">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -408,7 +408,7 @@ The package type of Cloud Bastionhost instance. You can query more supported typ
 Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. Default to 1. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L196">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L196">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -416,7 +416,7 @@ Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. 
 The Id of resource group which the Bastionhost Instance belongs. If not set, the resource is created in the default resource group.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L200">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L200">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -424,7 +424,7 @@ The Id of resource group which the Bastionhost Instance belongs. If not set, the
 security group IDs configured to Bastionhost.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L204">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L204">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -432,7 +432,7 @@ security group IDs configured to Bastionhost.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L208">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L208">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +440,7 @@ A mapping of tags to assign to the resource.
 VSwitch ID configured to Bastionhost.
 
 <h3 class="pdoc-module-header" id="BastionHostInstanceState" data-link-title="BastionHostInstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L146">
         interface <strong>BastionHostInstanceState</strong>
     </a>
 </h3>
@@ -450,7 +450,7 @@ VSwitch ID configured to Bastionhost.
 Input properties used for looking up and filtering BastionHostInstance resources.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L150">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ Input properties used for looking up and filtering BastionHostInstance resources
 Description of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceState-licenseCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L154">property <b>licenseCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L154">property <b>licenseCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -466,7 +466,7 @@ Description of the instance. This name can have a string of 1 to 63 characters.
 The package type of Cloud Bastionhost instance. You can query more supported types through the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html).
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L158">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L158">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -474,7 +474,7 @@ The package type of Cloud Bastionhost instance. You can query more supported typ
 Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. Default to 1. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L162">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L162">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -482,7 +482,7 @@ Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. 
 The Id of resource group which the Bastionhost Instance belongs. If not set, the resource is created in the default resource group.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L166">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L166">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -490,7 +490,7 @@ The Id of resource group which the Bastionhost Instance belongs. If not set, the
 security group IDs configured to Bastionhost.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L170">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L170">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -498,7 +498,7 @@ security group IDs configured to Bastionhost.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="BastionHostInstanceState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/bastionHostInstance.ts#L174">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/bastionHostInstance.ts#L174">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -506,7 +506,7 @@ A mapping of tags to assign to the resource.
 VSwitch ID configured to Bastionhost.
 
 <h3 class="pdoc-module-header" id="DBAuditInstanceArgs" data-link-title="DBAuditInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L165">
         interface <strong>DBAuditInstanceArgs</strong>
     </a>
 </h3>
@@ -516,7 +516,7 @@ VSwitch ID configured to Bastionhost.
 The set of arguments for constructing a DBAuditInstance resource.
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L169">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L169">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -524,7 +524,7 @@ The set of arguments for constructing a DBAuditInstance resource.
 Description of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L173">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L173">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -532,7 +532,7 @@ Description of the instance. This name can have a string of 1 to 63 characters.
 Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. Default to 12. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceArgs-planCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L177">property <b>planCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L177">property <b>planCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>planCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. 
 Plan code of the Cloud DBAudit to produce. (alpha.professional, alpha.basic, alpha.premium)
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L181">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L181">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -548,7 +548,7 @@ Plan code of the Cloud DBAudit to produce. (alpha.professional, alpha.basic, alp
 The Id of resource group which the DBaudit Instance belongs. If not set, the resource is created in the default resource group.
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L185">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L185">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -556,7 +556,7 @@ The Id of resource group which the DBaudit Instance belongs. If not set, the res
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L189">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L189">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -564,7 +564,7 @@ A mapping of tags to assign to the resource.
 vSwtich ID configured to audit
 
 <h3 class="pdoc-module-header" id="DBAuditInstanceState" data-link-title="DBAuditInstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L135">
         interface <strong>DBAuditInstanceState</strong>
     </a>
 </h3>
@@ -574,7 +574,7 @@ vSwtich ID configured to audit
 Input properties used for looking up and filtering DBAuditInstance resources.
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L139">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L139">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ Input properties used for looking up and filtering DBAuditInstance resources.
 Description of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L143">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L143">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ Description of the instance. This name can have a string of 1 to 63 characters.
 Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. Default to 12. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceState-planCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L147">property <b>planCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L147">property <b>planCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>planCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ Duration for initially producing the instance. Valid values: [1~9], 12, 24, 36. 
 Plan code of the Cloud DBAudit to produce. (alpha.professional, alpha.basic, alpha.premium)
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L151">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L151">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -606,7 +606,7 @@ Plan code of the Cloud DBAudit to produce. (alpha.professional, alpha.basic, alp
 The Id of resource group which the DBaudit Instance belongs. If not set, the resource is created in the default resource group.
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L155">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L155">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -614,7 +614,7 @@ The Id of resource group which the DBaudit Instance belongs. If not set, the res
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DBAuditInstanceState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/dbauditInstance.ts#L159">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/dbauditInstance.ts#L159">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -622,7 +622,7 @@ A mapping of tags to assign to the resource.
 vSwtich ID configured to audit
 
 <h3 class="pdoc-module-header" id="GetBastionHostInstancesArgs" data-link-title="GetBastionHostInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L47">
         interface <strong>GetBastionHostInstancesArgs</strong>
     </a>
 </h3>
@@ -632,7 +632,7 @@ vSwtich ID configured to audit
 A collection of arguments for invoking getBastionHostInstances.
 
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesArgs-descriptionRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L51">property <b>descriptionRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L51">property <b>descriptionRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -640,7 +640,7 @@ A collection of arguments for invoking getBastionHostInstances.
 A regex string to filter results by the instance description.
 
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L55">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L55">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -648,7 +648,7 @@ A regex string to filter results by the instance description.
 Matched instance IDs to filter data source result.
 
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L59">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L59">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -656,7 +656,7 @@ Matched instance IDs to filter data source result.
 File name to persist data source output.
 
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -674,7 +674,7 @@ const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
 ```
 
 <h3 class="pdoc-module-header" id="GetBastionHostInstancesResult" data-link-title="GetBastionHostInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L79">
         interface <strong>GetBastionHostInstancesResult</strong>
     </a>
 </h3>
@@ -684,17 +684,17 @@ const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
 A collection of values returned by getBastionHostInstances.
 
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesResult-descriptionRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L80">property <b>descriptionRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L80">property <b>descriptionRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesResult-descriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L81">property <b>descriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L81">property <b>descriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -702,12 +702,12 @@ A collection of values returned by getBastionHostInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L86">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L86">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L90">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L90">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBastionHostInstancesInstance'>GetBastionHostInstancesInstance</a>[];</code></pre>
@@ -715,12 +715,12 @@ The provider-assigned unique ID for this managed resource.
 A list of apis. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L91">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L91">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBastionHostInstancesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getBastionHostInstances.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getBastionHostInstances.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -728,7 +728,7 @@ A list of apis. Each element contains the following attributes:
 A map of tags assigned to the bastionhost instance.
 
 <h3 class="pdoc-module-header" id="GetDBAuditInstanceArgs" data-link-title="GetDBAuditInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L29">
         interface <strong>GetDBAuditInstanceArgs</strong>
     </a>
 </h3>
@@ -738,27 +738,27 @@ A map of tags assigned to the bastionhost instance.
 A collection of arguments for invoking getDBAuditInstance.
 
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceArgs-descriptionRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L30">property <b>descriptionRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L30">property <b>descriptionRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L31">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L31">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L32">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L32">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L33">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L33">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetDBAuditInstanceResult" data-link-title="GetDBAuditInstanceResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L39">
         interface <strong>GetDBAuditInstanceResult</strong>
     </a>
 </h3>
@@ -768,17 +768,17 @@ A collection of arguments for invoking getDBAuditInstance.
 A collection of values returned by getDBAuditInstance.
 
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceResult-descriptionRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L40">property <b>descriptionRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L40">property <b>descriptionRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceResult-descriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L41">property <b>descriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L41">property <b>descriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -786,22 +786,22 @@ A collection of values returned by getDBAuditInstance.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L46">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L46">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L47">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L47">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDBAuditInstanceInstance'>GetDBAuditInstanceInstance</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L48">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L48">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDBAuditInstanceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/41aff0da5bb5a1dc4cd69834a220b8e8984f953d/sdk/nodejs/yundun/getDBAuditInstance.ts#L49">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/yundun/getDBAuditInstance.ts#L49">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>

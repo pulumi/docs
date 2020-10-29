@@ -58,10 +58,16 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "vswitchDatasourceName"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
 		defaultZones, err := alicloud.GetZones(ctx, nil, nil)
 		if err != nil {
 			return err

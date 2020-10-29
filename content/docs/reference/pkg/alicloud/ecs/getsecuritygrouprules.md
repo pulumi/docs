@@ -62,10 +62,13 @@ import (
 
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		securityGroupId := cfg.RequireObject("securityGroupId")
 		opt0 := "api"
 		groupsDs, err := ecs.GetSecurityGroups(ctx, &ecs.GetSecurityGroupsArgs{
 			NameRegex: &opt0,

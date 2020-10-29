@@ -452,6 +452,17 @@ The following output properties are available:
     <dd>{{% md %}}ID of the zone.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="multizoneids_csharp">
+<a href="#multizoneids_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of zone ids in which the multi zone. Removed from v1.99.0.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -468,6 +479,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="multizoneids_go">
+<a href="#multizoneids_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of zone ids in which the multi zone. Removed from v1.99.0.
 {{% /md %}}</dd>
 
 </dl>
@@ -488,6 +510,17 @@ The following output properties are available:
     <dd>{{% md %}}ID of the zone.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="multizoneids_nodejs">
+<a href="#multizoneids_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of zone ids in which the multi zone. Removed from v1.99.0.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -504,6 +537,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the zone.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="multi_zone_ids_python">
+<a href="#multi_zone_ids_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>zone_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of zone ids in which the multi zone. Removed from v1.99.0.
 {{% /md %}}</dd>
 
 </dl>

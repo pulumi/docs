@@ -146,10 +146,20 @@ package main
 import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "testcreatehttplistener"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		ipVersion := "ipv4"
+		if param := cfg.Get("ipVersion"); param != "" {
+			ipVersion = param
+		}
 		defaultLoadBalancer, err := slb.NewLoadBalancer(ctx, "defaultLoadBalancer", &slb.LoadBalancerArgs{
 			InternetChargeType: pulumi.String("PayByTraffic"),
 			Internet:           pulumi.Bool(true),

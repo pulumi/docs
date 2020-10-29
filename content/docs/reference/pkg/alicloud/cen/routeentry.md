@@ -150,6 +150,7 @@ import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
@@ -159,6 +160,11 @@ func main() {
 		})
 		if err != nil {
 			return err
+		}
+		cfg := config.New(ctx, "")
+		name := "tf-testAccCenRouteEntryConfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
 		}
 		opt0 := "cloud_efficiency"
 		opt1 := "VSwitch"
