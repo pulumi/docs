@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/spotinst | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/spotinst package."
-git_sha: "9c09ad96fc81d6e53907abb5d257a89215aef203"
+git_sha: "779e9e9c5e801b1902925b0e1ddc0c024dc9800d"
 block_external_search_index: true
 ---
 
