@@ -297,7 +297,7 @@ const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.PolicyVM">PolicyVM</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyVMBackupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionMonthlyArgs]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionWeeklyArgs]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionYearlyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.PolicyVM">PolicyVM</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyVMBackupArgs]</span> = None<span class="p">, </span><span class="nx">instant_restore_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionMonthlyArgs]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionWeeklyArgs]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionYearlyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -504,6 +504,17 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="instantrestoreretentiondays_csharp">
+<a href="#instantrestoreretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>Restore<wbr>Retention<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instant restore retention range in days.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -617,6 +628,17 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instantrestoreretentiondays_go">
+<a href="#instantrestoreretentiondays_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>Restore<wbr>Retention<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instant restore retention range in days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,6 +760,17 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="instantrestoreretentiondays_nodejs">
+<a href="#instantrestoreretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Restore<wbr>Retention<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instant restore retention range in days.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -851,6 +884,17 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instant_restore_retention_days_python">
+<a href="#instant_restore_retention_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>restore_<wbr>retention_<wbr>days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instant restore retention range in days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1029,7 +1073,7 @@ Get an existing PolicyVM resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyVMBackupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionMonthlyArgs]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionWeeklyArgs]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionYearlyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicyVM</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyVMBackupArgs]</span> = None<span class="p">, </span><span class="nx">instant_restore_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionMonthlyArgs]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionWeeklyArgs]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionYearlyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicyVM</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1156,6 +1200,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_instantrestoreretentiondays_csharp">
+<a href="#state_instantrestoreretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>Restore<wbr>Retention<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instant restore retention range in days.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1269,6 +1324,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_instantrestoreretentiondays_go">
+<a href="#state_instantrestoreretentiondays_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>Restore<wbr>Retention<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instant restore retention range in days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1390,6 +1456,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_instantrestoreretentiondays_nodejs">
+<a href="#state_instantrestoreretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Restore<wbr>Retention<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instant restore retention range in days.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1503,6 +1580,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_instant_restore_retention_days_python">
+<a href="#state_instant_restore_retention_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>restore_<wbr>retention_<wbr>days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the instant restore retention range in days.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

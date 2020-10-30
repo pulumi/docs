@@ -266,6 +266,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="dailyquotagb_csharp">
+<a href="#dailyquotagb_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Quota<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace daily quota for ingestion in GB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -387,6 +398,17 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="dailyquotagb_go">
+<a href="#dailyquotagb_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Quota<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace daily quota for ingestion in GB.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -514,6 +536,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="dailyquotagb_nodejs">
+<a href="#dailyquotagb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Quota<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace daily quota for ingestion in GB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -635,6 +668,17 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="daily_quota_gb_python">
+<a href="#daily_quota_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>quota_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The workspace daily quota for ingestion in GB.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
