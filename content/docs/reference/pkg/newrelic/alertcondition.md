@@ -400,6 +400,11 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -461,7 +466,7 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -587,6 +592,11 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -648,7 +658,7 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -774,6 +784,11 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -835,7 +850,7 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,6 +976,11 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -1022,7 +1042,7 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1387,6 +1407,11 @@ The following state arguments are supported:
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -1470,7 +1495,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1574,6 +1599,11 @@ The following state arguments are supported:
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -1657,7 +1687,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1761,6 +1791,11 @@ The following state arguments are supported:
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -1844,7 +1879,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1948,6 +1983,11 @@ The following state arguments are supported:
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -2031,7 +2071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
