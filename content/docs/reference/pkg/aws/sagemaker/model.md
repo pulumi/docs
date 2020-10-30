@@ -1383,6 +1383,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="modeldataurl_csharp">
 <a href="#modeldataurl_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Data<wbr>Url</a>
 </span> 
@@ -1431,6 +1442,17 @@ A list of key value pairs.
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,6 +1509,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="modeldataurl_nodejs">
 <a href="#modeldataurl_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Data<wbr>Url</a>
 </span> 
@@ -1535,6 +1568,17 @@ A list of key value pairs.
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1609,6 +1653,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="modeldataurl_csharp">
 <a href="#modeldataurl_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Data<wbr>Url</a>
 </span> 
@@ -1657,6 +1712,17 @@ A list of key value pairs.
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1713,6 +1779,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="modeldataurl_nodejs">
 <a href="#modeldataurl_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Data<wbr>Url</a>
 </span> 
@@ -1761,6 +1838,17 @@ A list of key value pairs.
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

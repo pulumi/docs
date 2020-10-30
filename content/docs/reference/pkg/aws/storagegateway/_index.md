@@ -17,6 +17,7 @@ Explore the resources and functions of the storagegateway module in the AWS pack
     <li><a href="nfsfileshare" title="NfsFileShare"><span class="symbol resource"></span>NfsFileShare</a></li>
     <li><a href="smbfileshare" title="SmbFileShare"><span class="symbol resource"></span>SmbFileShare</a></li>
     <li><a href="storediscsivolume" title="StoredIscsiVolume"><span class="symbol resource"></span>StoredIscsiVolume</a></li>
+    <li><a href="tapepool" title="TapePool"><span class="symbol resource"></span>TapePool</a></li>
     <li><a href="uploadbuffer" title="UploadBuffer"><span class="symbol resource"></span>UploadBuffer</a></li>
     <li><a href="workingstorage" title="WorkingStorage"><span class="symbol resource"></span>WorkingStorage</a></li>
 </ul>
@@ -35,7 +36,7 @@ Explore the resources and functions of the storagegateway module in the AWS pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.10.1</dd>
+	<dd>3.11.0</dd>
 </dl>
 
 
