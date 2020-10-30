@@ -16,8 +16,16 @@ Explore the resources and functions of the datacatalog module in the GCP package
     <li><a href="entrygroupiambinding" title="EntryGroupIamBinding"><span class="symbol resource"></span>EntryGroupIamBinding</a></li>
     <li><a href="entrygroupiammember" title="EntryGroupIamMember"><span class="symbol resource"></span>EntryGroupIamMember</a></li>
     <li><a href="entrygroupiampolicy" title="EntryGroupIamPolicy"><span class="symbol resource"></span>EntryGroupIamPolicy</a></li>
+    <li><a href="policytag" title="PolicyTag"><span class="symbol resource"></span>PolicyTag</a></li>
+    <li><a href="policytagiambinding" title="PolicyTagIamBinding"><span class="symbol resource"></span>PolicyTagIamBinding</a></li>
+    <li><a href="policytagiammember" title="PolicyTagIamMember"><span class="symbol resource"></span>PolicyTagIamMember</a></li>
+    <li><a href="policytagiampolicy" title="PolicyTagIamPolicy"><span class="symbol resource"></span>PolicyTagIamPolicy</a></li>
     <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
     <li><a href="tagtemplate" title="TagTemplate"><span class="symbol resource"></span>TagTemplate</a></li>
+    <li><a href="taxonomy" title="Taxonomy"><span class="symbol resource"></span>Taxonomy</a></li>
+    <li><a href="taxonomyiambinding" title="TaxonomyIamBinding"><span class="symbol resource"></span>TaxonomyIamBinding</a></li>
+    <li><a href="taxonomyiammember" title="TaxonomyIamMember"><span class="symbol resource"></span>TaxonomyIamMember</a></li>
+    <li><a href="taxonomyiampolicy" title="TaxonomyIamPolicy"><span class="symbol resource"></span>TaxonomyIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,7 +37,7 @@ Explore the resources and functions of the datacatalog module in the GCP package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.1.0</dd>
 </dl>
 
 

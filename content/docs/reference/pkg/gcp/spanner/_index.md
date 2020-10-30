@@ -21,6 +21,11 @@ Explore the resources and functions of the spanner module in the GCP package.
     <li><a href="instanceiampolicy" title="InstanceIAMPolicy"><span class="symbol resource"></span>InstanceIAMPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -30,7 +35,7 @@ Explore the resources and functions of the spanner module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.1.0</dd>
 </dl>
 
 

@@ -8425,10 +8425,13 @@ presentMatch, exactMatch and regexMatch must be set.
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
-the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
-not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
-exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.
+the match fails. For example for a range [-5, 0]
+* -3 will match
+* 0 will not match
+* 0.25 will not match
+* -3someString will not match.
+Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+rangeMatch must be set.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -8539,10 +8542,13 @@ presentMatch, exactMatch and regexMatch must be set.
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
-the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
-not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
-exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.
+the match fails. For example for a range [-5, 0]
+* -3 will match
+* 0 will not match
+* 0.25 will not match
+* -3someString will not match.
+Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+rangeMatch must be set.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -8653,10 +8659,13 @@ presentMatch, exactMatch and regexMatch must be set.
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
-the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
-not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
-exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.
+the match fails. For example for a range [-5, 0]
+* -3 will match
+* 0 will not match
+* 0.25 will not match
+* -3someString will not match.
+Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+rangeMatch must be set.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -8767,10 +8776,13 @@ presentMatch, exactMatch and regexMatch must be set.
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
-the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
-not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
-exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.
+the match fails. For example for a range [-5, 0]
+* -3 will match
+* 0 will not match
+* 0.25 will not match
+* -3someString will not match.
+Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+rangeMatch must be set.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -8984,9 +8996,9 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
 contribute towards the overall metadataFilter match. Supported values are:
-- MATCH_ANY: At least one of the filterLabels must have a matching label in the
+* MATCH_ANY: At least one of the filterLabels must have a matching label in the
 provided metadata.
-- MATCH_ALL: All filterLabels must have matching labels in
+* MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
 Possible values are `MATCH_ALL` and `MATCH_ANY`.
 {{% /md %}}</dd>
@@ -9022,9 +9034,9 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
 contribute towards the overall metadataFilter match. Supported values are:
-- MATCH_ANY: At least one of the filterLabels must have a matching label in the
+* MATCH_ANY: At least one of the filterLabels must have a matching label in the
 provided metadata.
-- MATCH_ALL: All filterLabels must have matching labels in
+* MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
 Possible values are `MATCH_ALL` and `MATCH_ANY`.
 {{% /md %}}</dd>
@@ -9060,9 +9072,9 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
 contribute towards the overall metadataFilter match. Supported values are:
-- MATCH_ANY: At least one of the filterLabels must have a matching label in the
+* MATCH_ANY: At least one of the filterLabels must have a matching label in the
 provided metadata.
-- MATCH_ALL: All filterLabels must have matching labels in
+* MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
 Possible values are `MATCH_ALL` and `MATCH_ANY`.
 {{% /md %}}</dd>
@@ -9098,9 +9110,9 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
 contribute towards the overall metadataFilter match. Supported values are:
-- MATCH_ANY: At least one of the filterLabels must have a matching label in the
+* MATCH_ANY: At least one of the filterLabels must have a matching label in the
 provided metadata.
-- MATCH_ALL: All filterLabels must have matching labels in
+* MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
 Possible values are `MATCH_ALL` and `MATCH_ANY`.
 {{% /md %}}</dd>

@@ -246,7 +246,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
-The `dnssec_config` block supports:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -412,7 +411,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
-The `dnssec_config` block supports:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -578,7 +576,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
-The `dnssec_config` block supports:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -744,7 +741,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
-The `dnssec_config` block supports:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1160,7 +1156,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
-The `dnssec_config` block supports:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1337,7 +1332,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
-The `dnssec_config` block supports:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1514,7 +1508,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
-The `dnssec_config` block supports:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1691,7 +1684,6 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set this true to delete all records in the zone.
-The `dnssec_config` block supports:
 {{% /md %}}</dd>
 
     <dt class="property-optional"

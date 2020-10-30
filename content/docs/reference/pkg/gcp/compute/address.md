@@ -313,8 +313,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 This should only be set when using an Internal address.
 Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
@@ -451,8 +451,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 This should only be set when using an Internal address.
 Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
@@ -589,8 +589,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 This should only be set when using an Internal address.
 Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
@@ -727,8 +727,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 This should only be set when using an Internal address.
 Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
@@ -1269,8 +1269,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 This should only be set when using an Internal address.
 Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
@@ -1451,8 +1451,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 This should only be set when using an Internal address.
 Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
@@ -1633,8 +1633,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 This should only be set when using an Internal address.
 Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
@@ -1815,8 +1815,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The purpose of this resource, which can be one of the following values:
-- GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
-- SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
+* GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
+* SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers.
 This should only be set when using an Internal address.
 Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>

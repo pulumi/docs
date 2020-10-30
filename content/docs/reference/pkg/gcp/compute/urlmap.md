@@ -3424,20 +3424,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -3481,20 +3481,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -3538,20 +3538,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -3595,20 +3595,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -8126,20 +8126,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -8183,20 +8183,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -8240,20 +8240,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -8297,20 +8297,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -12410,20 +12410,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -12467,20 +12467,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -12524,20 +12524,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -12581,20 +12581,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -18466,20 +18466,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -18523,20 +18523,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -18580,20 +18580,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -18637,20 +18637,20 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+* 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
 or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-connection failure, and refused streams.
-gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
-connect-failure: Loadbalancer will retry on failures connecting to backend services,
+* connection failure, and refused streams.
+* gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+* connect-failure: Loadbalancer will retry on failures connecting to backend services,
 for example due to connection timeouts.
-retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+* retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+* refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
 This reset type indicates that it is safe to retry.
-cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
-deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
-resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
-unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+* cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+* deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+* resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+* unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
