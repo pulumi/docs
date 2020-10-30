@@ -7789,9 +7789,8 @@ for more information.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7840,9 +7839,8 @@ for more information.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7891,9 +7889,8 @@ for more information.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7942,9 +7939,8 @@ for more information.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10125,9 +10121,8 @@ for more information.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10390,9 +10385,8 @@ for more information.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10655,9 +10649,8 @@ for more information.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10920,9 +10913,8 @@ for more information.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13007,9 +12999,8 @@ for more information.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13272,9 +13263,8 @@ for more information.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13537,9 +13527,8 @@ for more information.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13802,9 +13791,8 @@ for more information.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
-on all of the node VMs under the "default" service account. These can be
-either FQDNs, or scope aliases. The following scopes are necessary to ensure
-the correct functioning of the cluster:
+on all of the node VMs under the "default" service account.
+Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -9,6 +9,11 @@ meta_desc: "Explore the resources and functions of the iam module in the GCP pac
 
 Explore the resources and functions of the iam module in the GCP package.
 
+<h2 id="resources">Resources</h2>
+<ul class="api">
+    <li><a href="workloadidentitypool" title="WorkloadIdentityPool"><span class="symbol resource"></span>WorkloadIdentityPool</a></li>
+</ul>
+
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getrule" title="GetRule"><span class="symbol function"></span>GetRule</a></li>
@@ -24,7 +29,7 @@ Explore the resources and functions of the iam module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.1.0</dd>
 </dl>
 
 

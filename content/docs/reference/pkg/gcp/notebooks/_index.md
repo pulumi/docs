@@ -13,6 +13,9 @@ Explore the resources and functions of the notebooks module in the GCP package.
 <ul class="api">
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instanceiambinding" title="InstanceIamBinding"><span class="symbol resource"></span>InstanceIamBinding</a></li>
+    <li><a href="instanceiammember" title="InstanceIamMember"><span class="symbol resource"></span>InstanceIamMember</a></li>
+    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
     <li><a href="location" title="Location"><span class="symbol resource"></span>Location</a></li>
 </ul>
 
@@ -25,7 +28,7 @@ Explore the resources and functions of the notebooks module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.1.0</dd>
 </dl>
 
 

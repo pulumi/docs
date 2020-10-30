@@ -17,6 +17,9 @@ To get more information about VpnGateway, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/targetVpnGateways)
 
+> **Warning:** Classic VPN is deprecating certain functionality on October 31, 2021. For more information,
+see the [Classic VPN partial deprecation page](https://cloud.google.com/network-connectivity/docs/vpn/deprecations/classic-vpn-deprecation).
+
 
 
 ## Create a VPNGateway Resource {#create}

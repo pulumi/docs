@@ -3,7 +3,7 @@ title: "Module redis"
 title_tag: "Module redis | Package @pulumi/gcp | Node.js SDK"
 linktitle: "redis"
 meta_desc: "Explore members of the redis module in the @pulumi/gcp package."
-git_sha: "392523e57a3e8f1656dce673bd0ce66ebb8dc12e"
+git_sha: "0c46c212e5430badafa0a4a775d8fb5b6926e30e"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L18">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ To get more information about Instance, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L156"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L156"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +68,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +79,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,7 +97,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-alternativeLocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L52">property <b>alternativeLocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L52">property <b>alternativeLocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alternativeLocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -108,7 +108,7 @@ If provided, it must be a different zone from the one provided in
 [locationId].
 
 <h4 class="pdoc-member-header" id="Instance-authEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L57">property <b>authEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L57">property <b>authEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set t
 instance. Default value is "false" meaning AUTH is disabled.
 
 <h4 class="pdoc-member-header" id="Instance-authorizedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L63">property <b>authorizedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L63">property <b>authorizedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizedNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ instance is connected. If left unspecified, the default network
 will be used.
 
 <h4 class="pdoc-member-header" id="Instance-connectMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L69">property <b>connectMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L69">property <b>connectMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -137,7 +137,7 @@ Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 
 <h4 class="pdoc-member-header" id="Instance-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L73">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L73">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 
 <h4 class="pdoc-member-header" id="Instance-currentLocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L79">property <b>currentLocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L79">property <b>currentLocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>currentLocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ The current zone where the Redis endpoint is placed. For Basic Tier instances, t
 [alternativeLocationId] and can change after a failover event.
 
 <h4 class="pdoc-member-header" id="Instance-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L83">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L83">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -163,7 +163,7 @@ The current zone where the Redis endpoint is placed. For Basic Tier instances, t
 An arbitrary and optional user-provided name for the instance.
 
 <h4 class="pdoc-member-header" id="Instance-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L87">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L87">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +171,7 @@ An arbitrary and optional user-provided name for the instance.
 Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -180,7 +180,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L91">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L91">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ deployments and may be missing (undefined) during planning phases.
 Resource labels to represent user provided metadata.
 
 <h4 class="pdoc-member-header" id="Instance-locationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L99">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L99">property <b>locationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 
 <h4 class="pdoc-member-header" id="Instance-memorySizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L103">property <b>memorySizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L103">property <b>memorySizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memorySizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -208,7 +208,7 @@ be different from [locationId].
 Redis memory size in GiB.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L107">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L107">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -216,7 +216,7 @@ Redis memory size in GiB.
 The ID of the instance or a fully qualified identifier for the instance.
 
 <h4 class="pdoc-member-header" id="Instance-persistenceIamIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L113">property <b>persistenceIamIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L113">property <b>persistenceIamIdentity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>persistenceIamIdentity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ Output only. Cloud IAM identity used by import / export operations to transfer d
 operation.
 
 <h4 class="pdoc-member-header" id="Instance-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L117">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L117">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ operation.
 The port number of the exposed Redis endpoint.
 
 <h4 class="pdoc-member-header" id="Instance-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L122">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L122">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -243,7 +243,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Instance-redisConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L128">property <b>redisConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L128">property <b>redisConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>redisConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 
 <h4 class="pdoc-member-header" id="Instance-redisVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L136">property <b>redisVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L136">property <b>redisVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>redisVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ version will be used. Currently, the supported values are:
 - REDIS_3_2 for Redis 3.2 compatibility
 
 <h4 class="pdoc-member-header" id="Instance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L140">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L140">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ version will be used. Currently, the supported values are:
 The name of the Redis region of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-reservedIpRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L148">property <b>reservedIpRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L148">property <b>reservedIpRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reservedIpRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ unique and non-overlapping with existing subnets in an authorized
 network.
 
 <h4 class="pdoc-member-header" id="Instance-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L156">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L156">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -297,7 +297,7 @@ Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -308,7 +308,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getInstance" data-link-title="getInstance">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L12">
         Function <strong>getInstance</strong>
     </a>
 </h3>
@@ -322,7 +322,7 @@ Get info about a Google Cloud Redis instance.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetInstanceArgs" data-link-title="GetInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L30">
         interface <strong>GetInstanceArgs</strong>
     </a>
 </h3>
@@ -332,7 +332,7 @@ Get info about a Google Cloud Redis instance.
 A collection of arguments for invoking getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L34">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -340,7 +340,7 @@ A collection of arguments for invoking getInstance.
 The name of a Redis instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L39">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L39">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -349,7 +349,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L44">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L44">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -358,7 +358,7 @@ The region in which the resource belongs. If it
 is not provided, the provider region is used.
 
 <h3 class="pdoc-module-header" id="GetInstanceResult" data-link-title="GetInstanceResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L50">
         interface <strong>GetInstanceResult</strong>
     </a>
 </h3>
@@ -368,47 +368,47 @@ is not provided, the provider region is used.
 A collection of values returned by getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-alternativeLocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L51">property <b>alternativeLocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L51">property <b>alternativeLocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternativeLocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-authEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L52">property <b>authEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L52">property <b>authEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-authorizedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L53">property <b>authorizedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L53">property <b>authorizedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-connectMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L54">property <b>connectMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L54">property <b>connectMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L55">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L55">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-currentLocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L56">property <b>currentLocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L56">property <b>currentLocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>currentLocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L57">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L57">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L58">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L58">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -416,67 +416,67 @@ A collection of values returned by getInstance.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L63">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L63">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-locationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L64">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L64">property <b>locationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-memorySizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L65">property <b>memorySizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L65">property <b>memorySizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memorySizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-persistenceIamIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L67">property <b>persistenceIamIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L67">property <b>persistenceIamIdentity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>persistenceIamIdentity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L68">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L68">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L69">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L69">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-redisConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L70">property <b>redisConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L70">property <b>redisConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisConfigs: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-redisVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L71">property <b>redisVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L71">property <b>redisVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L72">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L72">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-reservedIpRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L73">property <b>reservedIpRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L73">property <b>reservedIpRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservedIpRange: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/getInstance.ts#L74">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/getInstance.ts#L74">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L347">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L347">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -486,7 +486,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-alternativeLocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L354">property <b>alternativeLocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L354">property <b>alternativeLocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternativeLocationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -497,7 +497,7 @@ If provided, it must be a different zone from the one provided in
 [locationId].
 
 <h4 class="pdoc-member-header" id="InstanceArgs-authEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L359">property <b>authEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L359">property <b>authEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -506,7 +506,7 @@ Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set t
 instance. Default value is "false" meaning AUTH is disabled.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-authorizedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L365">property <b>authorizedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L365">property <b>authorizedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -516,7 +516,7 @@ instance is connected. If left unspecified, the default network
 will be used.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-connectMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L371">property <b>connectMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L371">property <b>connectMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L375">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L375">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 An arbitrary and optional user-provided name for the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L379">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L379">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -542,7 +542,7 @@ An arbitrary and optional user-provided name for the instance.
 Resource labels to represent user provided metadata.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-locationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L387">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L387">property <b>locationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -554,7 +554,7 @@ zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 
 <h4 class="pdoc-member-header" id="InstanceArgs-memorySizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L391">property <b>memorySizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L391">property <b>memorySizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memorySizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -562,7 +562,7 @@ be different from [locationId].
 Redis memory size in GiB.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L395">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L395">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -570,7 +570,7 @@ Redis memory size in GiB.
 The ID of the instance or a fully qualified identifier for the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L400">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L400">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -579,7 +579,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-redisConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L406">property <b>redisConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L406">property <b>redisConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -589,7 +589,7 @@ Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 
 <h4 class="pdoc-member-header" id="InstanceArgs-redisVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L414">property <b>redisVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L414">property <b>redisVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -601,7 +601,7 @@ version will be used. Currently, the supported values are:
 - REDIS_3_2 for Redis 3.2 compatibility
 
 <h4 class="pdoc-member-header" id="InstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L418">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L418">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -609,7 +609,7 @@ version will be used. Currently, the supported values are:
 The name of the Redis region of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-reservedIpRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L426">property <b>reservedIpRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L426">property <b>reservedIpRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservedIpRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -621,7 +621,7 @@ unique and non-overlapping with existing subnets in an authorized
 network.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L434">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L434">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L230">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L230">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -643,7 +643,7 @@ Possible values are `BASIC` and `STANDARD_HA`.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-alternativeLocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L237">property <b>alternativeLocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L237">property <b>alternativeLocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternativeLocationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ If provided, it must be a different zone from the one provided in
 [locationId].
 
 <h4 class="pdoc-member-header" id="InstanceState-authEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L242">property <b>authEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L242">property <b>authEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -663,7 +663,7 @@ Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set t
 instance. Default value is "false" meaning AUTH is disabled.
 
 <h4 class="pdoc-member-header" id="InstanceState-authorizedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L248">property <b>authorizedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L248">property <b>authorizedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ instance is connected. If left unspecified, the default network
 will be used.
 
 <h4 class="pdoc-member-header" id="InstanceState-connectMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L254">property <b>connectMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L254">property <b>connectMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 
 <h4 class="pdoc-member-header" id="InstanceState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L258">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L258">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -691,7 +691,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 
 <h4 class="pdoc-member-header" id="InstanceState-currentLocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L264">property <b>currentLocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L264">property <b>currentLocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>currentLocationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ The current zone where the Redis endpoint is placed. For Basic Tier instances, t
 [alternativeLocationId] and can change after a failover event.
 
 <h4 class="pdoc-member-header" id="InstanceState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L268">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L268">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ The current zone where the Redis endpoint is placed. For Basic Tier instances, t
 An arbitrary and optional user-provided name for the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L272">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L272">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ An arbitrary and optional user-provided name for the instance.
 Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 
 <h4 class="pdoc-member-header" id="InstanceState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L276">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L276">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -725,7 +725,7 @@ Hostname or IP address of the exposed Redis endpoint used by clients to connect 
 Resource labels to represent user provided metadata.
 
 <h4 class="pdoc-member-header" id="InstanceState-locationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L284">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L284">property <b>locationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -737,7 +737,7 @@ zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 
 <h4 class="pdoc-member-header" id="InstanceState-memorySizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L288">property <b>memorySizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L288">property <b>memorySizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memorySizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ be different from [locationId].
 Redis memory size in GiB.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L292">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L292">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -753,7 +753,7 @@ Redis memory size in GiB.
 The ID of the instance or a fully qualified identifier for the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-persistenceIamIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L298">property <b>persistenceIamIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L298">property <b>persistenceIamIdentity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>persistenceIamIdentity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -763,7 +763,7 @@ Output only. Cloud IAM identity used by import / export operations to transfer d
 operation.
 
 <h4 class="pdoc-member-header" id="InstanceState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L302">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L302">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -771,7 +771,7 @@ operation.
 The port number of the exposed Redis endpoint.
 
 <h4 class="pdoc-member-header" id="InstanceState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L307">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L307">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -780,7 +780,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InstanceState-redisConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L313">property <b>redisConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L313">property <b>redisConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -790,7 +790,7 @@ Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 
 <h4 class="pdoc-member-header" id="InstanceState-redisVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L321">property <b>redisVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L321">property <b>redisVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ version will be used. Currently, the supported values are:
 - REDIS_3_2 for Redis 3.2 compatibility
 
 <h4 class="pdoc-member-header" id="InstanceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L325">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L325">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -810,7 +810,7 @@ version will be used. Currently, the supported values are:
 The name of the Redis region of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-reservedIpRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L333">property <b>reservedIpRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L333">property <b>reservedIpRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservedIpRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -822,7 +822,7 @@ unique and non-overlapping with existing subnets in an authorized
 network.
 
 <h4 class="pdoc-member-header" id="InstanceState-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/redis/instance.ts#L341">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/redis/instance.ts#L341">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

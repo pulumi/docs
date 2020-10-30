@@ -3,7 +3,7 @@ title: "Module appengine"
 title_tag: "Module appengine | Package @pulumi/gcp | Node.js SDK"
 linktitle: "appengine"
 meta_desc: "Explore members of the appengine module in the @pulumi/gcp package."
-git_sha: "392523e57a3e8f1656dce673bd0ce66ebb8dc12e"
+git_sha: "0c46c212e5430badafa0a4a775d8fb5b6926e30e"
 block_external_search_index: true
 ---
 
@@ -54,7 +54,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Application" data-link-title="Application">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L20">
         Resource <strong>Application</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ Allows creation and management of an App Engine application.
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h4 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +86,7 @@ Create a Application resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +97,14 @@ Get an existing Application resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -115,7 +115,7 @@ Returns true if the given object is an instance of Application.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Application-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L51">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L51">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Identifier of the app, usually `{PROJECT_ID}`
 
 <h4 class="pdoc-member-header" id="Application-authDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L55">property <b>authDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L55">property <b>authDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -131,7 +131,7 @@ Identifier of the app, usually `{PROJECT_ID}`
 The domain to authenticate users with when using App Engine's User API.
 
 <h4 class="pdoc-member-header" id="Application-codeBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L59">property <b>codeBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L59">property <b>codeBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>codeBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ The domain to authenticate users with when using App Engine's User API.
 The GCS bucket code is being stored in for this app.
 
 <h4 class="pdoc-member-header" id="Application-databaseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L66">property <b>databaseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L66">property <b>databaseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
 
 <h4 class="pdoc-member-header" id="Application-defaultBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L70">property <b>defaultBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L70">property <b>defaultBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ by the provider, but will be rejected by the API.
 The GCS bucket content is being stored in for this app.
 
 <h4 class="pdoc-member-header" id="Application-defaultHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L74">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L74">property <b>defaultHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ The GCS bucket content is being stored in for this app.
 The default hostname for this app.
 
 <h4 class="pdoc-member-header" id="Application-featureSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L78">property <b>featureSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L78">property <b>featureSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>featureSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationFeatureSettings'>ApplicationFeatureSettings</a>&gt;;</code></pre>
@@ -174,7 +174,7 @@ The default hostname for this app.
 A block of optional settings to configure specific App Engine features:
 
 <h4 class="pdoc-member-header" id="Application-gcrDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L82">property <b>gcrDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L82">property <b>gcrDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gcrDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ A block of optional settings to configure specific App Engine features:
 The GCR domain used for storing managed Docker images for this app.
 
 <h4 class="pdoc-member-header" id="Application-iap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L86">property <b>iap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L86">property <b>iap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationIap'>ApplicationIap</a>&gt;;</code></pre>
@@ -190,7 +190,7 @@ The GCR domain used for storing managed Docker images for this app.
 Settings for enabling Cloud Identity Aware Proxy
 
 <h4 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -199,7 +199,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Application-locationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L91">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L91">property <b>locationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -208,7 +208,7 @@ The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
 
 <h4 class="pdoc-member-header" id="Application-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -216,7 +216,7 @@ to serve the app from.
 Unique name of the app, usually `apps/{PROJECT_ID}`
 
 <h4 class="pdoc-member-header" id="Application-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L101">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L101">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ The project ID to create the application under.
 you may get a "Permission denied" error.
 
 <h4 class="pdoc-member-header" id="Application-servingStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L105">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L105">property <b>servingStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servingStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ you may get a "Permission denied" error.
 The serving status of the app.
 
 <h4 class="pdoc-member-header" id="Application-urlDispatchRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L109">property <b>urlDispatchRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L109">property <b>urlDispatchRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urlDispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationUrlDispatchRule'>ApplicationUrlDispatchRule</a>[]&gt;;</code></pre>
@@ -242,7 +242,7 @@ The serving status of the app.
 A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
 
 <h4 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -251,7 +251,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ApplicationUrlDispatchRules" data-link-title="ApplicationUrlDispatchRules">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L18">
         Resource <strong>ApplicationUrlDispatchRules</strong>
     </a>
 </h3>
@@ -267,7 +267,7 @@ To get more information about ApplicationUrlDispatchRules, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRules-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L55"> <b>constructor</b></a>
 </h4>
 
 
@@ -281,7 +281,7 @@ Create a ApplicationUrlDispatchRules resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRules-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -292,14 +292,14 @@ Get an existing ApplicationUrlDispatchRules resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRules-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRules-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -310,7 +310,7 @@ Returns true if the given object is an instance of ApplicationUrlDispatchRules. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRules-dispatchRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L50">property <b>dispatchRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L50">property <b>dispatchRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationUrlDispatchRulesDispatchRule'>ApplicationUrlDispatchRulesDispatchRule</a>[]&gt;;</code></pre>
@@ -319,7 +319,7 @@ Rules to match an HTTP request and dispatch that request to a service.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRules-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -328,7 +328,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRules-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L55">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L55">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRules-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -346,7 +346,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainMapping" data-link-title="DomainMapping">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L20">
         Resource <strong>DomainMapping</strong>
     </a>
 </h3>
@@ -364,7 +364,7 @@ To get more information about DomainMapping, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="DomainMapping-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L77"> <b>constructor</b></a>
 </h4>
 
 
@@ -378,7 +378,7 @@ Create a DomainMapping resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainMapping-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -389,14 +389,14 @@ Get an existing DomainMapping resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainMapping-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainMapping-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -407,7 +407,7 @@ Returns true if the given object is an instance of DomainMapping.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainMapping-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L51">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L51">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Relative name of the domain serving the application. Example: example.com.
 
 <h4 class="pdoc-member-header" id="DomainMapping-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -424,7 +424,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainMapping-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -432,7 +432,7 @@ deployments and may be missing (undefined) during planning phases.
 Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
 
 <h4 class="pdoc-member-header" id="DomainMapping-overrideStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L62">property <b>overrideStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L62">property <b>overrideStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>overrideStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -443,7 +443,7 @@ Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
 
 <h4 class="pdoc-member-header" id="DomainMapping-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L67">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L67">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -452,7 +452,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DomainMapping-resourceRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L72">property <b>resourceRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L72">property <b>resourceRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingResourceRecord'>DomainMappingResourceRecord</a>[]&gt;;</code></pre>
@@ -461,7 +461,7 @@ The resource records required to configure this domain mapping. These records mu
 configuration in order to serve the application via this domain mapping.
 
 <h4 class="pdoc-member-header" id="DomainMapping-sslSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L77">property <b>sslSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L77">property <b>sslSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingSslSettings'>DomainMappingSslSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ SSL configuration for this domain. If unconfigured, this domain will not serve w
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DomainMapping-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -479,7 +479,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EngineSplitTraffic" data-link-title="EngineSplitTraffic">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L18">
         Resource <strong>EngineSplitTraffic</strong>
     </a>
 </h3>
@@ -495,7 +495,7 @@ To get more information about ServiceSplitTraffic, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -509,7 +509,7 @@ Create a EngineSplitTraffic resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -520,14 +520,14 @@ Get an existing EngineSplitTraffic resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -538,7 +538,7 @@ Returns true if the given object is an instance of EngineSplitTraffic.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -547,7 +547,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-migrateTraffic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L49">property <b>migrateTraffic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L49">property <b>migrateTraffic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>migrateTraffic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -555,7 +555,7 @@ deployments and may be missing (undefined) during planning phases.
 If set to true traffic will be migrated to this version.
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L54">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L54">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -564,7 +564,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L58">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L58">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -572,7 +572,7 @@ If it is not provided, the provider project is used.
 The name of the service these settings apply to.
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-split">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L63">property <b>split</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L63">property <b>split</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>split: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EngineSplitTrafficSplit'>EngineSplitTrafficSplit</a>&gt;;</code></pre>
@@ -581,7 +581,7 @@ Mapping that defines fractional HTTP traffic diversion to different versions wit
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="EngineSplitTraffic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -590,7 +590,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FirewallRule" data-link-title="FirewallRule">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L19">
         Resource <strong>FirewallRule</strong>
     </a>
 </h3>
@@ -609,7 +609,7 @@ To get more information about FirewallRule, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -623,7 +623,7 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -634,14 +634,14 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -652,7 +652,7 @@ Returns true if the given object is an instance of FirewallRule.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FirewallRule-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L51">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L51">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -661,7 +661,7 @@ The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 
 <h4 class="pdoc-member-header" id="FirewallRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L55">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L55">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -669,7 +669,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 An optional string description of this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L19">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -678,7 +678,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FirewallRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L63">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L63">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
 
 <h4 class="pdoc-member-header" id="FirewallRule-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L68">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L68">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FirewallRule-sourceRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L72">property <b>sourceRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L72">property <b>sourceRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -707,7 +707,7 @@ If it is not provided, the provider project is used.
 IP address or range, defined using CIDR notation, of requests that this rule applies to.
 
 <h4 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L19">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -716,7 +716,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FlexibleAppVersion" data-link-title="FlexibleAppVersion">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L26">
         Resource <strong>FlexibleAppVersion</strong>
     </a>
 </h3>
@@ -740,7 +740,7 @@ To get more information about FlexibleAppVersion, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L192"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L192"> <b>constructor</b></a>
 </h4>
 
 
@@ -754,7 +754,7 @@ Create a FlexibleAppVersion resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -765,14 +765,14 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -783,7 +783,7 @@ Returns true if the given object is an instance of FlexibleAppVersion.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-apiConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L58">property <b>apiConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L58">property <b>apiConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionApiConfig'>FlexibleAppVersionApiConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -792,7 +792,7 @@ Serving configuration for Google Cloud Endpoints.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-automaticScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L63">property <b>automaticScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L63">property <b>automaticScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automaticScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScaling'>FlexibleAppVersionAutomaticScaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -801,7 +801,7 @@ Automatic scaling is based on request rate, response latencies, and other applic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-betaSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L67">property <b>betaSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L67">property <b>betaSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>betaSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -809,7 +809,7 @@ Structure is documented below.
 Metadata settings that are supplied to this version to enable beta runtime features.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-defaultExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L72">property <b>defaultExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L72">property <b>defaultExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultExpiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-deleteServiceOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L76">property <b>deleteServiceOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L76">property <b>deleteServiceOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deleteServiceOnDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -826,7 +826,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 If set to `true`, the service will be deleted if it is the last version.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-deployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L81">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L81">property <b>deployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeployment'>FlexibleAppVersionDeployment</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -835,7 +835,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-endpointsApiService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L86">property <b>endpointsApiService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L86">property <b>endpointsApiService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointsApiService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionEndpointsApiService'>FlexibleAppVersionEndpointsApiService</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-entrypoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L91">property <b>entrypoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L91">property <b>entrypoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entrypoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionEntrypoint'>FlexibleAppVersionEntrypoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ The entrypoint for the application.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-envVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L95">property <b>envVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L95">property <b>envVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>envVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ Structure is documented below.
 Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-handlers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L101">property <b>handlers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L101">property <b>handlers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>handlers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandler'>FlexibleAppVersionHandler</a>[]&gt;;</code></pre>
@@ -871,7 +871,7 @@ The first matching URL handles the request and other request handlers are not at
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -880,7 +880,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-inboundServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L106">property <b>inboundServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L106">property <b>inboundServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inboundServices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -889,7 +889,7 @@ A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L113">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L113">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -900,7 +900,7 @@ ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-livenessCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L118">property <b>livenessCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L118">property <b>livenessCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>livenessCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionLivenessCheck'>FlexibleAppVersionLivenessCheck</a>&gt;;</code></pre>
@@ -909,7 +909,7 @@ Health checking configuration for VM instances. Unhealthy instances are killed a
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-manualScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L123">property <b>manualScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L123">property <b>manualScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>manualScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionManualScaling'>FlexibleAppVersionManualScaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -918,7 +918,7 @@ A service with manual scaling runs continuously, allowing you to perform complex
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L127">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +926,7 @@ Structure is documented below.
 Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L132">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L132">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionNetwork'>FlexibleAppVersionNetwork</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ Extra network settings
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-nobuildFilesRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L136">property <b>nobuildFilesRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L136">property <b>nobuildFilesRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nobuildFilesRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ Structure is documented below.
 Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-noopOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L140">property <b>noopOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L140">property <b>noopOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noopOnDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ Files that match this pattern will not be built into this version. Only applicab
 If set to `true`, the application version will not be deleted.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L145">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L145">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -960,7 +960,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-readinessCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L150">property <b>readinessCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L150">property <b>readinessCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readinessCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionReadinessCheck'>FlexibleAppVersionReadinessCheck</a>&gt;;</code></pre>
@@ -969,7 +969,7 @@ Configures readiness health checking for instances. Unhealthy instances are not 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L155">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L155">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionResources'>FlexibleAppVersionResources</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -978,7 +978,7 @@ Machine resources for a version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L159">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L159">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -986,7 +986,7 @@ Structure is documented below.
 Desired runtime. Example python27.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-runtimeApiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L164">property <b>runtimeApiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L164">property <b>runtimeApiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtimeApiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -995,7 +995,7 @@ The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-runtimeChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L168">property <b>runtimeChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L168">property <b>runtimeChannel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtimeChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 The channel of the runtime to use. Only available for some runtimes.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-runtimeMainExecutablePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L172">property <b>runtimeMainExecutablePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L172">property <b>runtimeMainExecutablePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtimeMainExecutablePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ The channel of the runtime to use. Only available for some runtimes.
 The path or name of the app's main executable.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L176">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L176">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1019,7 +1019,7 @@ The path or name of the app's main executable.
 AppEngine service resource
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-servingStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L182">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L182">property <b>servingStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servingStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1029,7 +1029,7 @@ Default value is `SERVING`.
 Possible values are `SERVING` and `STOPPED`.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1038,7 +1038,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L187">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L187">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1047,7 +1047,7 @@ Relative name of the version within the service. For example, `v1`. Version name
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersion-vpcAccessConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L192">property <b>vpcAccessConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L192">property <b>vpcAccessConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcAccessConnector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionVpcAccessConnector'>FlexibleAppVersionVpcAccessConnector</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ Enables VPC connectivity for standard apps.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="StandardAppVersion" data-link-title="StandardAppVersion">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L23">
         Resource <strong>StandardAppVersion</strong>
     </a>
 </h3>
@@ -1077,7 +1077,7 @@ To get more information about StandardAppVersion, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L145"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L145"> <b>constructor</b></a>
 </h4>
 
 
@@ -1091,7 +1091,7 @@ Create a StandardAppVersion resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -1102,14 +1102,14 @@ Get an existing StandardAppVersion resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1120,7 +1120,7 @@ Returns true if the given object is an instance of StandardAppVersion.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-automaticScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L55">property <b>automaticScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L55">property <b>automaticScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automaticScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionAutomaticScaling'>StandardAppVersionAutomaticScaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1129,7 +1129,7 @@ Automatic scaling is based on request rate, response latencies, and other applic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-basicScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L60">property <b>basicScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L60">property <b>basicScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>basicScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionBasicScaling'>StandardAppVersionBasicScaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1138,7 +1138,7 @@ Basic scaling creates instances when your application receives requests. Each in
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-deleteServiceOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L64">property <b>deleteServiceOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L64">property <b>deleteServiceOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deleteServiceOnDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1146,7 +1146,7 @@ Structure is documented below.
 If set to `true`, the service will be deleted if it is the last version.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-deployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L69">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L69">property <b>deployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionDeployment'>StandardAppVersionDeployment</a>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-entrypoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L74">property <b>entrypoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L74">property <b>entrypoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entrypoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionEntrypoint'>StandardAppVersionEntrypoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1164,7 +1164,7 @@ The entrypoint for the application.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-envVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L78">property <b>envVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L78">property <b>envVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>envVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1172,7 +1172,7 @@ Structure is documented below.
 Environment variables available to the application.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-handlers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L84">property <b>handlers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L84">property <b>handlers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>handlers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionHandler'>StandardAppVersionHandler</a>[]&gt;;</code></pre>
@@ -1182,7 +1182,7 @@ The first matching URL handles the request and other request handlers are not at
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1191,7 +1191,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-inboundServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L89">property <b>inboundServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L89">property <b>inboundServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inboundServices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1200,7 +1200,7 @@ A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L96">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L96">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
 Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-libraries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L101">property <b>libraries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L101">property <b>libraries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>libraries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionLibrary'>StandardAppVersionLibrary</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ Configuration for third-party Python runtime libraries that are required by the 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-manualScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L106">property <b>manualScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L106">property <b>manualScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>manualScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionManualScaling'>StandardAppVersionManualScaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ A service with manual scaling runs continuously, allowing you to perform complex
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ Structure is documented below.
 Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-noopOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L114">property <b>noopOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L114">property <b>noopOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noopOnDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us
 If set to `true`, the application version will not be deleted.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L119">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L119">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1254,7 +1254,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L123">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L123">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1262,7 +1262,7 @@ If it is not provided, the provider project is used.
 Desired runtime. Example python27.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-runtimeApiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L128">property <b>runtimeApiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L128">property <b>runtimeApiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtimeApiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1271,7 +1271,7 @@ The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L132">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L132">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1279,7 +1279,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 AppEngine service resource
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-threadsafe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L136">property <b>threadsafe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L136">property <b>threadsafe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>threadsafe: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1287,7 +1287,7 @@ AppEngine service resource
 Whether multiple requests can be dispatched to this version at once.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1296,7 +1296,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L140">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L140">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1304,7 +1304,7 @@ deployments.
 Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 
 <h4 class="pdoc-member-header" id="StandardAppVersion-vpcAccessConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L145">property <b>vpcAccessConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L145">property <b>vpcAccessConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcAccessConnector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#StandardAppVersionVpcAccessConnector'>StandardAppVersionVpcAccessConnector</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1315,7 +1315,7 @@ Structure is documented below.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDefaultServiceAccount" data-link-title="getDefaultServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L12">
         Function <strong>getDefaultServiceAccount</strong>
     </a>
 </h3>
@@ -1329,7 +1329,7 @@ Use this data source to retrieve the default App Engine service account for the 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApplicationArgs" data-link-title="ApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L239">
         interface <strong>ApplicationArgs</strong>
     </a>
 </h3>
@@ -1339,7 +1339,7 @@ Use this data source to retrieve the default App Engine service account for the 
 The set of arguments for constructing a Application resource.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-authDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L243">property <b>authDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L243">property <b>authDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1347,7 +1347,7 @@ The set of arguments for constructing a Application resource.
 The domain to authenticate users with when using App Engine's User API.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-databaseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L250">property <b>databaseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L250">property <b>databaseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1358,7 +1358,7 @@ instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-featureSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L254">property <b>featureSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L254">property <b>featureSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationFeatureSettings'>ApplicationFeatureSettings</a>&gt;;</code></pre>
@@ -1366,7 +1366,7 @@ by the provider, but will be rejected by the API.
 A block of optional settings to configure specific App Engine features:
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-iap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L258">property <b>iap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L258">property <b>iap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationIap'>ApplicationIap</a>&gt;;</code></pre>
@@ -1374,7 +1374,7 @@ A block of optional settings to configure specific App Engine features:
 Settings for enabling Cloud Identity Aware Proxy
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-locationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L263">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L263">property <b>locationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1383,7 +1383,7 @@ The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L269">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L269">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1393,7 +1393,7 @@ The project ID to create the application under.
 you may get a "Permission denied" error.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-servingStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L273">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L273">property <b>servingStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servingStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +1401,7 @@ you may get a "Permission denied" error.
 The serving status of the app.
 
 <h3 class="pdoc-module-header" id="ApplicationState" data-link-title="ApplicationState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L171">
         interface <strong>ApplicationState</strong>
     </a>
 </h3>
@@ -1411,7 +1411,7 @@ The serving status of the app.
 Input properties used for looking up and filtering Application resources.
 
 <h4 class="pdoc-member-header" id="ApplicationState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L175">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L175">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1419,7 +1419,7 @@ Input properties used for looking up and filtering Application resources.
 Identifier of the app, usually `{PROJECT_ID}`
 
 <h4 class="pdoc-member-header" id="ApplicationState-authDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L179">property <b>authDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L179">property <b>authDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1427,7 +1427,7 @@ Identifier of the app, usually `{PROJECT_ID}`
 The domain to authenticate users with when using App Engine's User API.
 
 <h4 class="pdoc-member-header" id="ApplicationState-codeBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L183">property <b>codeBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L183">property <b>codeBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codeBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1435,7 +1435,7 @@ The domain to authenticate users with when using App Engine's User API.
 The GCS bucket code is being stored in for this app.
 
 <h4 class="pdoc-member-header" id="ApplicationState-databaseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L190">property <b>databaseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L190">property <b>databaseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1446,7 +1446,7 @@ instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
 
 <h4 class="pdoc-member-header" id="ApplicationState-defaultBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L194">property <b>defaultBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L194">property <b>defaultBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1454,7 +1454,7 @@ by the provider, but will be rejected by the API.
 The GCS bucket content is being stored in for this app.
 
 <h4 class="pdoc-member-header" id="ApplicationState-defaultHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L198">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L198">property <b>defaultHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1462,7 +1462,7 @@ The GCS bucket content is being stored in for this app.
 The default hostname for this app.
 
 <h4 class="pdoc-member-header" id="ApplicationState-featureSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L202">property <b>featureSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L202">property <b>featureSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationFeatureSettings'>ApplicationFeatureSettings</a>&gt;;</code></pre>
@@ -1470,7 +1470,7 @@ The default hostname for this app.
 A block of optional settings to configure specific App Engine features:
 
 <h4 class="pdoc-member-header" id="ApplicationState-gcrDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L206">property <b>gcrDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L206">property <b>gcrDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcrDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1478,7 +1478,7 @@ A block of optional settings to configure specific App Engine features:
 The GCR domain used for storing managed Docker images for this app.
 
 <h4 class="pdoc-member-header" id="ApplicationState-iap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L210">property <b>iap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L210">property <b>iap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationIap'>ApplicationIap</a>&gt;;</code></pre>
@@ -1486,7 +1486,7 @@ The GCR domain used for storing managed Docker images for this app.
 Settings for enabling Cloud Identity Aware Proxy
 
 <h4 class="pdoc-member-header" id="ApplicationState-locationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L215">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L215">property <b>locationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1495,7 +1495,7 @@ The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
 
 <h4 class="pdoc-member-header" id="ApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L219">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L219">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1503,7 @@ to serve the app from.
 Unique name of the app, usually `apps/{PROJECT_ID}`
 
 <h4 class="pdoc-member-header" id="ApplicationState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L225">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L225">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1513,7 +1513,7 @@ The project ID to create the application under.
 you may get a "Permission denied" error.
 
 <h4 class="pdoc-member-header" id="ApplicationState-servingStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L229">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L229">property <b>servingStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servingStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1521,7 +1521,7 @@ you may get a "Permission denied" error.
 The serving status of the app.
 
 <h4 class="pdoc-member-header" id="ApplicationState-urlDispatchRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/application.ts#L233">property <b>urlDispatchRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/application.ts#L233">property <b>urlDispatchRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlDispatchRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRule'>ApplicationUrlDispatchRule</a>&gt;[]&gt;;</code></pre>
@@ -1529,7 +1529,7 @@ The serving status of the app.
 A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
 
 <h3 class="pdoc-module-header" id="ApplicationUrlDispatchRulesArgs" data-link-title="ApplicationUrlDispatchRulesArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L109">
         interface <strong>ApplicationUrlDispatchRulesArgs</strong>
     </a>
 </h3>
@@ -1539,7 +1539,7 @@ A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service`
 The set of arguments for constructing a ApplicationUrlDispatchRules resource.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRulesArgs-dispatchRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L114">property <b>dispatchRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L114">property <b>dispatchRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRulesDispatchRule'>ApplicationUrlDispatchRulesDispatchRule</a>&gt;[]&gt;;</code></pre>
@@ -1548,7 +1548,7 @@ Rules to match an HTTP request and dispatch that request to a service.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRulesArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L119">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L119">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1557,7 +1557,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="ApplicationUrlDispatchRulesState" data-link-title="ApplicationUrlDispatchRulesState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L93">
         interface <strong>ApplicationUrlDispatchRulesState</strong>
     </a>
 </h3>
@@ -1567,7 +1567,7 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering ApplicationUrlDispatchRules resources.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRulesState-dispatchRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L98">property <b>dispatchRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L98">property <b>dispatchRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dispatchRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRulesDispatchRule'>ApplicationUrlDispatchRulesDispatchRule</a>&gt;[]&gt;;</code></pre>
@@ -1576,7 +1576,7 @@ Rules to match an HTTP request and dispatch that request to a service.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ApplicationUrlDispatchRulesState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L103">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/applicationUrlDispatchRules.ts#L103">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1585,7 +1585,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="DomainMappingArgs" data-link-title="DomainMappingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L159">
         interface <strong>DomainMappingArgs</strong>
     </a>
 </h3>
@@ -1595,7 +1595,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a DomainMapping resource.
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L163">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L163">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1603,7 @@ The set of arguments for constructing a DomainMapping resource.
 Relative name of the domain serving the application. Example: example.com.
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-overrideStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L170">property <b>overrideStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L170">property <b>overrideStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overrideStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1614,7 +1614,7 @@ Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L175">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L175">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1623,7 +1623,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-sslSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L180">property <b>sslSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L180">property <b>sslSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSslSettings'>DomainMappingSslSettings</a>&gt;;</code></pre>
@@ -1632,7 +1632,7 @@ SSL configuration for this domain. If unconfigured, this domain will not serve w
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DomainMappingState" data-link-title="DomainMappingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L123">
         interface <strong>DomainMappingState</strong>
     </a>
 </h3>
@@ -1642,7 +1642,7 @@ Structure is documented below.
 Input properties used for looking up and filtering DomainMapping resources.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L127">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L127">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1650,7 +1650,7 @@ Input properties used for looking up and filtering DomainMapping resources.
 Relative name of the domain serving the application. Example: example.com.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1658,7 +1658,7 @@ Relative name of the domain serving the application. Example: example.com.
 Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-overrideStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L138">property <b>overrideStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L138">property <b>overrideStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overrideStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1669,7 +1669,7 @@ Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L143">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L143">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1678,7 +1678,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-resourceRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L148">property <b>resourceRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L148">property <b>resourceRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceRecords?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingResourceRecord'>DomainMappingResourceRecord</a>&gt;[]&gt;;</code></pre>
@@ -1687,7 +1687,7 @@ The resource records required to configure this domain mapping. These records mu
 configuration in order to serve the application via this domain mapping.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-sslSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/domainMapping.ts#L153">property <b>sslSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/domainMapping.ts#L153">property <b>sslSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSslSettings'>DomainMappingSslSettings</a>&gt;;</code></pre>
@@ -1696,7 +1696,7 @@ SSL configuration for this domain. If unconfigured, this domain will not serve w
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="EngineSplitTrafficArgs" data-link-title="EngineSplitTrafficArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L132">
         interface <strong>EngineSplitTrafficArgs</strong>
     </a>
 </h3>
@@ -1706,7 +1706,7 @@ Structure is documented below.
 The set of arguments for constructing a EngineSplitTraffic resource.
 
 <h4 class="pdoc-member-header" id="EngineSplitTrafficArgs-migrateTraffic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L136">property <b>migrateTraffic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L136">property <b>migrateTraffic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>migrateTraffic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1714,7 +1714,7 @@ The set of arguments for constructing a EngineSplitTraffic resource.
 If set to true traffic will be migrated to this version.
 
 <h4 class="pdoc-member-header" id="EngineSplitTrafficArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L141">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L141">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1723,7 +1723,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EngineSplitTrafficArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L145">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L145">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1731,7 +1731,7 @@ If it is not provided, the provider project is used.
 The name of the service these settings apply to.
 
 <h4 class="pdoc-member-header" id="EngineSplitTrafficArgs-split">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L150">property <b>split</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L150">property <b>split</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>split: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EngineSplitTrafficSplit'>EngineSplitTrafficSplit</a>&gt;;</code></pre>
@@ -1740,7 +1740,7 @@ Mapping that defines fractional HTTP traffic diversion to different versions wit
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="EngineSplitTrafficState" data-link-title="EngineSplitTrafficState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L108">
         interface <strong>EngineSplitTrafficState</strong>
     </a>
 </h3>
@@ -1750,7 +1750,7 @@ Structure is documented below.
 Input properties used for looking up and filtering EngineSplitTraffic resources.
 
 <h4 class="pdoc-member-header" id="EngineSplitTrafficState-migrateTraffic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L112">property <b>migrateTraffic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L112">property <b>migrateTraffic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>migrateTraffic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1758,7 +1758,7 @@ Input properties used for looking up and filtering EngineSplitTraffic resources.
 If set to true traffic will be migrated to this version.
 
 <h4 class="pdoc-member-header" id="EngineSplitTrafficState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L117">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L117">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1767,7 +1767,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EngineSplitTrafficState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L121">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L121">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1775,7 +1775,7 @@ If it is not provided, the provider project is used.
 The name of the service these settings apply to.
 
 <h4 class="pdoc-member-header" id="EngineSplitTrafficState-split">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/engineSplitTraffic.ts#L126">property <b>split</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/engineSplitTraffic.ts#L126">property <b>split</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>split?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EngineSplitTrafficSplit'>EngineSplitTrafficSplit</a>&gt;;</code></pre>
@@ -1784,7 +1784,7 @@ Mapping that defines fractional HTTP traffic diversion to different versions wit
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="FirewallRuleArgs" data-link-title="FirewallRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L151">
         interface <strong>FirewallRuleArgs</strong>
     </a>
 </h3>
@@ -1794,7 +1794,7 @@ Structure is documented below.
 The set of arguments for constructing a FirewallRule resource.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L156">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L156">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1803,7 +1803,7 @@ The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L160">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L160">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1811,7 +1811,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 An optional string description of this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L168">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L168">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1823,7 +1823,7 @@ IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L173">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L173">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1832,7 +1832,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-sourceRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L177">property <b>sourceRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L177">property <b>sourceRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1840,7 +1840,7 @@ If it is not provided, the provider project is used.
 IP address or range, defined using CIDR notation, of requests that this rule applies to.
 
 <h3 class="pdoc-module-header" id="FirewallRuleState" data-link-title="FirewallRuleState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L119">
         interface <strong>FirewallRuleState</strong>
     </a>
 </h3>
@@ -1850,7 +1850,7 @@ IP address or range, defined using CIDR notation, of requests that this rule app
 Input properties used for looking up and filtering FirewallRule resources.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L124">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L124">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1859,7 +1859,7 @@ The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L128">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L128">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1867,7 +1867,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 An optional string description of this rule.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L136">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L136">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1879,7 +1879,7 @@ IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L141">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L141">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1888,7 +1888,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-sourceRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/firewallRule.ts#L145">property <b>sourceRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/firewallRule.ts#L145">property <b>sourceRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1896,7 +1896,7 @@ If it is not provided, the provider project is used.
 IP address or range, defined using CIDR notation, of requests that this rule applies to.
 
 <h3 class="pdoc-module-header" id="FlexibleAppVersionArgs" data-link-title="FlexibleAppVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L438">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L438">
         interface <strong>FlexibleAppVersionArgs</strong>
     </a>
 </h3>
@@ -1906,7 +1906,7 @@ IP address or range, defined using CIDR notation, of requests that this rule app
 The set of arguments for constructing a FlexibleAppVersion resource.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-apiConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L443">property <b>apiConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L443">property <b>apiConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionApiConfig'>FlexibleAppVersionApiConfig</a>&gt;;</code></pre>
@@ -1915,7 +1915,7 @@ Serving configuration for Google Cloud Endpoints.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-automaticScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L448">property <b>automaticScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L448">property <b>automaticScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScaling'>FlexibleAppVersionAutomaticScaling</a>&gt;;</code></pre>
@@ -1924,7 +1924,7 @@ Automatic scaling is based on request rate, response latencies, and other applic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-betaSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L452">property <b>betaSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L452">property <b>betaSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>betaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1932,7 +1932,7 @@ Structure is documented below.
 Metadata settings that are supplied to this version to enable beta runtime features.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-defaultExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L457">property <b>defaultExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L457">property <b>defaultExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1941,7 +1941,7 @@ Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-deleteServiceOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L461">property <b>deleteServiceOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L461">property <b>deleteServiceOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteServiceOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1949,7 +1949,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 If set to `true`, the service will be deleted if it is the last version.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-deployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L466">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L466">property <b>deployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeployment'>FlexibleAppVersionDeployment</a>&gt;;</code></pre>
@@ -1958,7 +1958,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-endpointsApiService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L471">property <b>endpointsApiService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L471">property <b>endpointsApiService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointsApiService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionEndpointsApiService'>FlexibleAppVersionEndpointsApiService</a>&gt;;</code></pre>
@@ -1967,7 +1967,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-entrypoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L476">property <b>entrypoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L476">property <b>entrypoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entrypoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionEntrypoint'>FlexibleAppVersionEntrypoint</a>&gt;;</code></pre>
@@ -1976,7 +1976,7 @@ The entrypoint for the application.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-envVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L480">property <b>envVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L480">property <b>envVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>envVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1984,7 +1984,7 @@ Structure is documented below.
 Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-handlers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L486">property <b>handlers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L486">property <b>handlers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handlers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandler'>FlexibleAppVersionHandler</a>&gt;[]&gt;;</code></pre>
@@ -1994,7 +1994,7 @@ The first matching URL handles the request and other request handlers are not at
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-inboundServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L491">property <b>inboundServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L491">property <b>inboundServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2003,7 +2003,7 @@ A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L498">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L498">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2014,7 +2014,7 @@ ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-livenessCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L503">property <b>livenessCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L503">property <b>livenessCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>livenessCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionLivenessCheck'>FlexibleAppVersionLivenessCheck</a>&gt;;</code></pre>
@@ -2023,7 +2023,7 @@ Health checking configuration for VM instances. Unhealthy instances are killed a
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-manualScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L508">property <b>manualScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L508">property <b>manualScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manualScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionManualScaling'>FlexibleAppVersionManualScaling</a>&gt;;</code></pre>
@@ -2032,7 +2032,7 @@ A service with manual scaling runs continuously, allowing you to perform complex
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L513">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L513">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionNetwork'>FlexibleAppVersionNetwork</a>&gt;;</code></pre>
@@ -2041,7 +2041,7 @@ Extra network settings
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-nobuildFilesRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L517">property <b>nobuildFilesRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L517">property <b>nobuildFilesRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nobuildFilesRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2049,7 +2049,7 @@ Structure is documented below.
 Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-noopOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L521">property <b>noopOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L521">property <b>noopOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noopOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2057,7 +2057,7 @@ Files that match this pattern will not be built into this version. Only applicab
 If set to `true`, the application version will not be deleted.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L526">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L526">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2066,7 +2066,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-readinessCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L531">property <b>readinessCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L531">property <b>readinessCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readinessCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionReadinessCheck'>FlexibleAppVersionReadinessCheck</a>&gt;;</code></pre>
@@ -2075,7 +2075,7 @@ Configures readiness health checking for instances. Unhealthy instances are not 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L536">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L536">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionResources'>FlexibleAppVersionResources</a>&gt;;</code></pre>
@@ -2084,7 +2084,7 @@ Machine resources for a version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L540">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L540">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2092,7 +2092,7 @@ Structure is documented below.
 Desired runtime. Example python27.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-runtimeApiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L545">property <b>runtimeApiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L545">property <b>runtimeApiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeApiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2101,7 +2101,7 @@ The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-runtimeChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L549">property <b>runtimeChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L549">property <b>runtimeChannel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2109,7 +2109,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 The channel of the runtime to use. Only available for some runtimes.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-runtimeMainExecutablePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L553">property <b>runtimeMainExecutablePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L553">property <b>runtimeMainExecutablePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeMainExecutablePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2117,7 +2117,7 @@ The channel of the runtime to use. Only available for some runtimes.
 The path or name of the app's main executable.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L557">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L557">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2125,7 +2125,7 @@ The path or name of the app's main executable.
 AppEngine service resource
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-servingStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L563">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L563">property <b>servingStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servingStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2135,7 +2135,7 @@ Default value is `SERVING`.
 Possible values are `SERVING` and `STOPPED`.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L568">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L568">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2144,7 +2144,7 @@ Relative name of the version within the service. For example, `v1`. Version name
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionArgs-vpcAccessConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L573">property <b>vpcAccessConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L573">property <b>vpcAccessConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcAccessConnector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionVpcAccessConnector'>FlexibleAppVersionVpcAccessConnector</a>&gt;;</code></pre>
@@ -2153,7 +2153,7 @@ Enables VPC connectivity for standard apps.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="FlexibleAppVersionState" data-link-title="FlexibleAppVersionState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L293">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L293">
         interface <strong>FlexibleAppVersionState</strong>
     </a>
 </h3>
@@ -2163,7 +2163,7 @@ Structure is documented below.
 Input properties used for looking up and filtering FlexibleAppVersion resources.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-apiConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L298">property <b>apiConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L298">property <b>apiConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionApiConfig'>FlexibleAppVersionApiConfig</a>&gt;;</code></pre>
@@ -2172,7 +2172,7 @@ Serving configuration for Google Cloud Endpoints.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-automaticScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L303">property <b>automaticScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L303">property <b>automaticScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScaling'>FlexibleAppVersionAutomaticScaling</a>&gt;;</code></pre>
@@ -2181,7 +2181,7 @@ Automatic scaling is based on request rate, response latencies, and other applic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-betaSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L307">property <b>betaSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L307">property <b>betaSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>betaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2189,7 +2189,7 @@ Structure is documented below.
 Metadata settings that are supplied to this version to enable beta runtime features.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-defaultExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L312">property <b>defaultExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L312">property <b>defaultExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2198,7 +2198,7 @@ Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-deleteServiceOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L316">property <b>deleteServiceOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L316">property <b>deleteServiceOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteServiceOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2206,7 +2206,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 If set to `true`, the service will be deleted if it is the last version.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-deployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L321">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L321">property <b>deployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeployment'>FlexibleAppVersionDeployment</a>&gt;;</code></pre>
@@ -2215,7 +2215,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-endpointsApiService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L326">property <b>endpointsApiService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L326">property <b>endpointsApiService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointsApiService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionEndpointsApiService'>FlexibleAppVersionEndpointsApiService</a>&gt;;</code></pre>
@@ -2224,7 +2224,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-entrypoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L331">property <b>entrypoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L331">property <b>entrypoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entrypoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionEntrypoint'>FlexibleAppVersionEntrypoint</a>&gt;;</code></pre>
@@ -2233,7 +2233,7 @@ The entrypoint for the application.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-envVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L335">property <b>envVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L335">property <b>envVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>envVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2241,7 +2241,7 @@ Structure is documented below.
 Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-handlers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L341">property <b>handlers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L341">property <b>handlers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handlers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandler'>FlexibleAppVersionHandler</a>&gt;[]&gt;;</code></pre>
@@ -2251,7 +2251,7 @@ The first matching URL handles the request and other request handlers are not at
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-inboundServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L346">property <b>inboundServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L346">property <b>inboundServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2260,7 +2260,7 @@ A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L353">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L353">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2271,7 +2271,7 @@ ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-livenessCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L358">property <b>livenessCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L358">property <b>livenessCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>livenessCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionLivenessCheck'>FlexibleAppVersionLivenessCheck</a>&gt;;</code></pre>
@@ -2280,7 +2280,7 @@ Health checking configuration for VM instances. Unhealthy instances are killed a
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-manualScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L363">property <b>manualScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L363">property <b>manualScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manualScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionManualScaling'>FlexibleAppVersionManualScaling</a>&gt;;</code></pre>
@@ -2289,7 +2289,7 @@ A service with manual scaling runs continuously, allowing you to perform complex
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L367">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L367">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2297,7 +2297,7 @@ Structure is documented below.
 Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L372">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L372">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionNetwork'>FlexibleAppVersionNetwork</a>&gt;;</code></pre>
@@ -2306,7 +2306,7 @@ Extra network settings
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-nobuildFilesRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L376">property <b>nobuildFilesRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L376">property <b>nobuildFilesRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nobuildFilesRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2314,7 +2314,7 @@ Structure is documented below.
 Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-noopOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L380">property <b>noopOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L380">property <b>noopOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noopOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2322,7 +2322,7 @@ Files that match this pattern will not be built into this version. Only applicab
 If set to `true`, the application version will not be deleted.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L385">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L385">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2331,7 +2331,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-readinessCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L390">property <b>readinessCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L390">property <b>readinessCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readinessCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionReadinessCheck'>FlexibleAppVersionReadinessCheck</a>&gt;;</code></pre>
@@ -2340,7 +2340,7 @@ Configures readiness health checking for instances. Unhealthy instances are not 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L395">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L395">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionResources'>FlexibleAppVersionResources</a>&gt;;</code></pre>
@@ -2349,7 +2349,7 @@ Machine resources for a version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L399">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L399">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2357,7 +2357,7 @@ Structure is documented below.
 Desired runtime. Example python27.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-runtimeApiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L404">property <b>runtimeApiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L404">property <b>runtimeApiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeApiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2366,7 +2366,7 @@ The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-runtimeChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L408">property <b>runtimeChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L408">property <b>runtimeChannel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2374,7 +2374,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 The channel of the runtime to use. Only available for some runtimes.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-runtimeMainExecutablePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L412">property <b>runtimeMainExecutablePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L412">property <b>runtimeMainExecutablePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeMainExecutablePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2382,7 +2382,7 @@ The channel of the runtime to use. Only available for some runtimes.
 The path or name of the app's main executable.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L416">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L416">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2390,7 +2390,7 @@ The path or name of the app's main executable.
 AppEngine service resource
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-servingStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L422">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L422">property <b>servingStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servingStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2400,7 +2400,7 @@ Default value is `SERVING`.
 Possible values are `SERVING` and `STOPPED`.
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L427">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L427">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2409,7 +2409,7 @@ Relative name of the version within the service. For example, `v1`. Version name
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 
 <h4 class="pdoc-member-header" id="FlexibleAppVersionState-vpcAccessConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/flexibleAppVersion.ts#L432">property <b>vpcAccessConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/flexibleAppVersion.ts#L432">property <b>vpcAccessConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcAccessConnector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionVpcAccessConnector'>FlexibleAppVersionVpcAccessConnector</a>&gt;;</code></pre>
@@ -2418,7 +2418,7 @@ Enables VPC connectivity for standard apps.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="GetDefaultServiceAccountArgs" data-link-title="GetDefaultServiceAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L29">
         interface <strong>GetDefaultServiceAccountArgs</strong>
     </a>
 </h3>
@@ -2428,7 +2428,7 @@ Structure is documented below.
 A collection of arguments for invoking getDefaultServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L33">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L33">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2436,7 +2436,7 @@ A collection of arguments for invoking getDefaultServiceAccount.
 The project ID. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GetDefaultServiceAccountResult" data-link-title="GetDefaultServiceAccountResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L39">
         interface <strong>GetDefaultServiceAccountResult</strong>
     </a>
 </h3>
@@ -2446,7 +2446,7 @@ The project ID. If it is not provided, the provider project is used.
 A collection of values returned by getDefaultServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L43">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L43">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2454,7 +2454,7 @@ A collection of values returned by getDefaultServiceAccount.
 The display name for the service account.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L47">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L47">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2462,7 +2462,7 @@ The display name for the service account.
 Email address of the default service account used by App Engine in this project.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2470,7 +2470,7 @@ Email address of the default service account used by App Engine in this project.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2478,12 +2478,12 @@ The provider-assigned unique ID for this managed resource.
 The fully-qualified name of the service account.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L56">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L56">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L60">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/getDefaultServiceAccount.ts#L60">property <b>uniqueId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2491,7 +2491,7 @@ The fully-qualified name of the service account.
 The unique id of the service account.
 
 <h3 class="pdoc-module-header" id="StandardAppVersionArgs" data-link-title="StandardAppVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L326">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L326">
         interface <strong>StandardAppVersionArgs</strong>
     </a>
 </h3>
@@ -2501,7 +2501,7 @@ The unique id of the service account.
 The set of arguments for constructing a StandardAppVersion resource.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-automaticScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L331">property <b>automaticScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L331">property <b>automaticScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionAutomaticScaling'>StandardAppVersionAutomaticScaling</a>&gt;;</code></pre>
@@ -2510,7 +2510,7 @@ Automatic scaling is based on request rate, response latencies, and other applic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-basicScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L336">property <b>basicScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L336">property <b>basicScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basicScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionBasicScaling'>StandardAppVersionBasicScaling</a>&gt;;</code></pre>
@@ -2519,7 +2519,7 @@ Basic scaling creates instances when your application receives requests. Each in
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-deleteServiceOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L340">property <b>deleteServiceOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L340">property <b>deleteServiceOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteServiceOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2527,7 +2527,7 @@ Structure is documented below.
 If set to `true`, the service will be deleted if it is the last version.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-deployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L345">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L345">property <b>deployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionDeployment'>StandardAppVersionDeployment</a>&gt;;</code></pre>
@@ -2536,7 +2536,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-entrypoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L350">property <b>entrypoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L350">property <b>entrypoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entrypoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionEntrypoint'>StandardAppVersionEntrypoint</a>&gt;;</code></pre>
@@ -2545,7 +2545,7 @@ The entrypoint for the application.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-envVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L354">property <b>envVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L354">property <b>envVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>envVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2553,7 +2553,7 @@ Structure is documented below.
 Environment variables available to the application.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-handlers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L360">property <b>handlers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L360">property <b>handlers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handlers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionHandler'>StandardAppVersionHandler</a>&gt;[]&gt;;</code></pre>
@@ -2563,7 +2563,7 @@ The first matching URL handles the request and other request handlers are not at
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-inboundServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L365">property <b>inboundServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L365">property <b>inboundServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2572,7 +2572,7 @@ A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L372">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L372">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2583,7 +2583,7 @@ BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
 Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-libraries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L377">property <b>libraries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L377">property <b>libraries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>libraries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionLibrary'>StandardAppVersionLibrary</a>&gt;[]&gt;;</code></pre>
@@ -2592,7 +2592,7 @@ Configuration for third-party Python runtime libraries that are required by the 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-manualScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L382">property <b>manualScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L382">property <b>manualScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manualScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionManualScaling'>StandardAppVersionManualScaling</a>&gt;;</code></pre>
@@ -2601,7 +2601,7 @@ A service with manual scaling runs continuously, allowing you to perform complex
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-noopOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L386">property <b>noopOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L386">property <b>noopOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noopOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2609,7 +2609,7 @@ Structure is documented below.
 If set to `true`, the application version will not be deleted.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L391">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L391">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2618,7 +2618,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L395">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L395">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2626,7 +2626,7 @@ If it is not provided, the provider project is used.
 Desired runtime. Example python27.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-runtimeApiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L400">property <b>runtimeApiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L400">property <b>runtimeApiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeApiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2635,7 +2635,7 @@ The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L404">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L404">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2643,7 +2643,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 AppEngine service resource
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-threadsafe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L408">property <b>threadsafe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L408">property <b>threadsafe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadsafe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2651,7 +2651,7 @@ AppEngine service resource
 Whether multiple requests can be dispatched to this version at once.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L412">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L412">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2659,7 +2659,7 @@ Whether multiple requests can be dispatched to this version at once.
 Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 
 <h4 class="pdoc-member-header" id="StandardAppVersionArgs-vpcAccessConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L417">property <b>vpcAccessConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L417">property <b>vpcAccessConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcAccessConnector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionVpcAccessConnector'>StandardAppVersionVpcAccessConnector</a>&gt;;</code></pre>
@@ -2668,7 +2668,7 @@ Enables VPC connectivity for standard apps.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="StandardAppVersionState" data-link-title="StandardAppVersionState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L225">
         interface <strong>StandardAppVersionState</strong>
     </a>
 </h3>
@@ -2678,7 +2678,7 @@ Structure is documented below.
 Input properties used for looking up and filtering StandardAppVersion resources.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-automaticScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L230">property <b>automaticScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L230">property <b>automaticScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionAutomaticScaling'>StandardAppVersionAutomaticScaling</a>&gt;;</code></pre>
@@ -2687,7 +2687,7 @@ Automatic scaling is based on request rate, response latencies, and other applic
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-basicScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L235">property <b>basicScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L235">property <b>basicScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basicScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionBasicScaling'>StandardAppVersionBasicScaling</a>&gt;;</code></pre>
@@ -2696,7 +2696,7 @@ Basic scaling creates instances when your application receives requests. Each in
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-deleteServiceOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L239">property <b>deleteServiceOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L239">property <b>deleteServiceOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteServiceOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2704,7 +2704,7 @@ Structure is documented below.
 If set to `true`, the service will be deleted if it is the last version.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-deployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L244">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L244">property <b>deployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionDeployment'>StandardAppVersionDeployment</a>&gt;;</code></pre>
@@ -2713,7 +2713,7 @@ Code and application artifacts that make up this version.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-entrypoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L249">property <b>entrypoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L249">property <b>entrypoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entrypoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionEntrypoint'>StandardAppVersionEntrypoint</a>&gt;;</code></pre>
@@ -2722,7 +2722,7 @@ The entrypoint for the application.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-envVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L253">property <b>envVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L253">property <b>envVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>envVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2730,7 +2730,7 @@ Structure is documented below.
 Environment variables available to the application.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-handlers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L259">property <b>handlers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L259">property <b>handlers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handlers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionHandler'>StandardAppVersionHandler</a>&gt;[]&gt;;</code></pre>
@@ -2740,7 +2740,7 @@ The first matching URL handles the request and other request handlers are not at
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-inboundServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L264">property <b>inboundServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L264">property <b>inboundServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inboundServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2749,7 +2749,7 @@ A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L271">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L271">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2760,7 +2760,7 @@ BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
 Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-libraries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L276">property <b>libraries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L276">property <b>libraries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>libraries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionLibrary'>StandardAppVersionLibrary</a>&gt;[]&gt;;</code></pre>
@@ -2769,7 +2769,7 @@ Configuration for third-party Python runtime libraries that are required by the 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-manualScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L281">property <b>manualScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L281">property <b>manualScaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manualScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionManualScaling'>StandardAppVersionManualScaling</a>&gt;;</code></pre>
@@ -2778,7 +2778,7 @@ A service with manual scaling runs continuously, allowing you to perform complex
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L285">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L285">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2786,7 +2786,7 @@ Structure is documented below.
 Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-noopOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L289">property <b>noopOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L289">property <b>noopOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noopOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2794,7 +2794,7 @@ Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us
 If set to `true`, the application version will not be deleted.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L294">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L294">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2803,7 +2803,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L298">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L298">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2811,7 +2811,7 @@ If it is not provided, the provider project is used.
 Desired runtime. Example python27.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-runtimeApiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L303">property <b>runtimeApiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L303">property <b>runtimeApiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtimeApiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2820,7 +2820,7 @@ The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L307">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L307">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2828,7 +2828,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 AppEngine service resource
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-threadsafe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L311">property <b>threadsafe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L311">property <b>threadsafe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadsafe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2836,7 +2836,7 @@ AppEngine service resource
 Whether multiple requests can be dispatched to this version at once.
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L315">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L315">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2844,7 +2844,7 @@ Whether multiple requests can be dispatched to this version at once.
 Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 
 <h4 class="pdoc-member-header" id="StandardAppVersionState-vpcAccessConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/appengine/standardAppVersion.ts#L320">property <b>vpcAccessConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/appengine/standardAppVersion.ts#L320">property <b>vpcAccessConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcAccessConnector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#StandardAppVersionVpcAccessConnector'>StandardAppVersionVpcAccessConnector</a>&gt;;</code></pre>

@@ -3,7 +3,7 @@ title: "Module container"
 title_tag: "Module container | Package @pulumi/gcp | Node.js SDK"
 linktitle: "container"
 meta_desc: "Explore members of the container module in the @pulumi/gcp package."
-git_sha: "392523e57a3e8f1656dce673bd0ce66ebb8dc12e"
+git_sha: "0c46c212e5430badafa0a4a775d8fb5b6926e30e"
 block_external_search_index: true
 ---
 
@@ -51,7 +51,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L20">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L366"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L366"> <b>constructor</b></a>
 </h4>
 
 
@@ -83,7 +83,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -94,14 +94,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-addonsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L52">property <b>addonsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L52">property <b>addonsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addonsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfig'>ClusterAddonsConfig</a>&gt;;</code></pre>
@@ -121,7 +121,7 @@ The configuration for addons supported by GKE.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-authenticatorGroupsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L58">property <b>authenticatorGroupsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L58">property <b>authenticatorGroupsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticatorGroupsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAuthenticatorGroupsConfig'>ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
@@ -131,7 +131,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterAutoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L66">property <b>clusterAutoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L66">property <b>clusterAutoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterAutoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterAutoscaling'>ClusterClusterAutoscaling</a>&gt;;</code></pre>
@@ -143,7 +143,7 @@ on the current needs of the cluster's workload. See the
 for more details. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterIpv4Cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L73">property <b>clusterIpv4Cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L73">property <b>clusterIpv4Cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIpv4Cidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ipAllocationPolicy` is not defined.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterTelemetry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L79">property <b>clusterTelemetry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L79">property <b>clusterTelemetry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterTelemetry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterTelemetry'>ClusterClusterTelemetry</a>&gt;;</code></pre>
@@ -164,7 +164,7 @@ Configuration for
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-databaseEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L83">property <b>databaseEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L83">property <b>databaseEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterDatabaseEncryption'>ClusterDatabaseEncryption</a>&gt;;</code></pre>
@@ -172,7 +172,7 @@ Structure is documented below.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-datapathProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L87">property <b>datapathProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L87">property <b>datapathProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>datapathProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ Structure is documented below.
 The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 
 <h4 class="pdoc-member-header" id="Cluster-defaultMaxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L94">property <b>defaultMaxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L94">property <b>defaultMaxPodsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultMaxPodsPerNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ that don't have IP Aliasing enabled. See the [official documentation](https://cl
 for more information.
 
 <h4 class="pdoc-member-header" id="Cluster-defaultSnatStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L98">property <b>defaultSnatStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L98">property <b>defaultSnatStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultSnatStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterDefaultSnatStatus'>ClusterDefaultSnatStatus</a>&gt;;</code></pre>
@@ -199,7 +199,7 @@ for more information.
 [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 
 <h4 class="pdoc-member-header" id="Cluster-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L102">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L102">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ for more information.
 Description of the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-enableBinaryAuthorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L107">property <b>enableBinaryAuthorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L107">property <b>enableBinaryAuthorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableBinaryAuthorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -216,7 +216,7 @@ Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
 
 <h4 class="pdoc-member-header" id="Cluster-enableIntranodeVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L111">property <b>enableIntranodeVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L111">property <b>enableIntranodeVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableIntranodeVisibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 
 <h4 class="pdoc-member-header" id="Cluster-enableKubernetesAlpha">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L117">property <b>enableKubernetesAlpha</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L117">property <b>enableKubernetesAlpha</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableKubernetesAlpha: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ this cluster. Note that when this option is enabled, the cluster cannot be upgra
 and will be automatically deleted after 30 days.
 
 <h4 class="pdoc-member-header" id="Cluster-enableLegacyAbac">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L124">property <b>enableLegacyAbac</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L124">property <b>enableLegacyAbac</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableLegacyAbac: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ will have statically granted permissions beyond those provided by the RBAC confi
 Defaults to `false`
 
 <h4 class="pdoc-member-header" id="Cluster-enableShieldedNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L128">property <b>enableShieldedNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L128">property <b>enableShieldedNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableShieldedNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ Defaults to `false`
 Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Cluster-enableTpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L133">property <b>enableTpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L133">property <b>enableTpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableTpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -262,7 +262,7 @@ Whether to enable Cloud TPU resources in this cluster.
 See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
 
 <h4 class="pdoc-member-header" id="Cluster-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L137">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L137">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +270,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 The IP address of this cluster's Kubernetes master.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -279,7 +279,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L146">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L146">property <b>initialNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initialNodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -292,7 +292,7 @@ set this to a value of at least `1`, alongside setting
 `removeDefaultNodePool` to `true`.
 
 <h4 class="pdoc-member-header" id="Cluster-instanceGroupUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L151">property <b>instanceGroupUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L151">property <b>instanceGroupUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceGroupUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -301,7 +301,7 @@ List of instance group URLs which have been assigned
 to the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-ipAllocationPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L158">property <b>ipAllocationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L158">property <b>ipAllocationPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAllocationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterIpAllocationPolicy'>ClusterIpAllocationPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -312,7 +312,7 @@ making the cluster VPC-native instead of routes-based. Structure is documented
 below.
 
 <h4 class="pdoc-member-header" id="Cluster-labelFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L162">property <b>labelFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L162">property <b>labelFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labelFingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -320,7 +320,7 @@ below.
 The fingerprint of the set of labels for this cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L171">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L171">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 
 <h4 class="pdoc-member-header" id="Cluster-loggingService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L177">property <b>loggingService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L177">property <b>loggingService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -343,7 +343,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
 
 <h4 class="pdoc-member-header" id="Cluster-maintenancePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L182">property <b>maintenancePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L182">property <b>maintenancePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintenancePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMaintenancePolicy'>ClusterMaintenancePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -352,7 +352,7 @@ The maintenance policy to use for the cluster. Structure is
 documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-masterAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L191">property <b>masterAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L191">property <b>masterAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAuth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuth'>ClusterMasterAuth</a>&gt;;</code></pre>
@@ -365,7 +365,7 @@ cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-masterAuthorizedNetworksConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L197">property <b>masterAuthorizedNetworksConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L197">property <b>masterAuthorizedNetworksConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAuthorizedNetworksConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuthorizedNetworksConfig'>ClusterMasterAuthorizedNetworksConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -375,7 +375,7 @@ for master authorized networks. Omit the nested `cidrBlocks` attribute to disall
 external access (except the cluster node IPs, which GKE automatically whitelists).
 
 <h4 class="pdoc-member-header" id="Cluster-masterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L203">property <b>masterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L203">property <b>masterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ be different than the `minMasterVersion` set in the config if the master
 has been updated by GKE.
 
 <h4 class="pdoc-member-header" id="Cluster-minMasterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L215">property <b>minMasterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L215">property <b>minMasterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minMasterVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ are available. If you intend to specify versions manually,
 describe the various acceptable formats for this field.
 
 <h4 class="pdoc-member-header" id="Cluster-monitoringService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L225">property <b>monitoringService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L225">property <b>monitoringService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ Available options include
 Defaults to `monitoring.googleapis.com/kubernetes`
 
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L230">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -424,7 +424,7 @@ The name of the cluster, unique within the project and
 location.
 
 <h4 class="pdoc-member-header" id="Cluster-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L236">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L236">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -434,7 +434,7 @@ network to which the cluster is connected. For Shared VPC, set this to the self 
 shared network.
 
 <h4 class="pdoc-member-header" id="Cluster-networkPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L242">property <b>networkPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L242">property <b>networkPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNetworkPolicy'>ClusterNetworkPolicy</a>&gt;;</code></pre>
@@ -444,7 +444,7 @@ Configuration options for the
 feature. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-networkingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L248">property <b>networkingMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L248">property <b>networkingMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkingMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https:/
 and requires the `ipAllocationPolicy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L256">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L256">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfig'>ClusterNodeConfig</a>&gt;;</code></pre>
@@ -466,7 +466,7 @@ manages the default node pool, which isn't recommended to be used.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-nodeLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L263">property <b>nodeLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L263">property <b>nodeLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -477,7 +477,7 @@ same region as their cluster's zone for zonal clusters. If this is specified for
 a zonal cluster, omit the cluster's zone.
 
 <h4 class="pdoc-member-header" id="Cluster-nodePools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L272">property <b>nodePools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L272">property <b>nodePools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePool'>ClusterNodePool</a>[]&gt;;</code></pre>
@@ -490,7 +490,7 @@ to say "these are the _only_ node pools associated with this cluster", use the
 gcp.container.NodePool resource instead of this property.
 
 <h4 class="pdoc-member-header" id="Cluster-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L283">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L283">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -505,7 +505,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 To update nodes in other node pools, use the `version` attribute on the node pool.
 
 <h4 class="pdoc-member-header" id="Cluster-notificationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L287">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L287">property <b>notificationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNotificationConfig'>ClusterNotificationConfig</a>&gt;;</code></pre>
@@ -513,12 +513,12 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 The notification config for sending cluster upgrade notifications
 
 <h4 class="pdoc-member-header" id="Cluster-operation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L288">property <b>operation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L288">property <b>operation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-podSecurityPolicyConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L294">property <b>podSecurityPolicyConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L294">property <b>podSecurityPolicyConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>podSecurityPolicyConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPodSecurityPolicyConfig'>ClusterPodSecurityPolicyConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -528,7 +528,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-privateClusterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L299">property <b>privateClusterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L299">property <b>privateClusterConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateClusterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPrivateClusterConfig'>ClusterPrivateClusterConfig</a>&gt;;</code></pre>
@@ -537,7 +537,7 @@ Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/
 clusters with private nodes. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L304">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L304">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -546,7 +546,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Cluster-releaseChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L316">property <b>releaseChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L316">property <b>releaseChannel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>releaseChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterReleaseChannel'>ClusterReleaseChannel</a>&gt;;</code></pre>
@@ -562,7 +562,7 @@ release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-removeDefaultNodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L323">property <b>removeDefaultNodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L323">property <b>removeDefaultNodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>removeDefaultNodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ resources with no default node pool, this should be set to `true`, alongside
 setting `initialNodeCount` to at least `1`.
 
 <h4 class="pdoc-member-header" id="Cluster-resourceLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L327">property <b>resourceLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L327">property <b>resourceLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -581,7 +581,7 @@ setting `initialNodeCount` to at least `1`.
 The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-resourceUsageExportConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L333">property <b>resourceUsageExportConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L333">property <b>resourceUsageExportConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceUsageExportConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterResourceUsageExportConfig'>ClusterResourceUsageExportConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L337">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L337">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ Structure is documented below.
 The server-defined URL for the resource.
 
 <h4 class="pdoc-member-header" id="Cluster-servicesIpv4Cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L344">property <b>servicesIpv4Cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L344">property <b>servicesIpv4Cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicesIpv4Cidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -610,7 +610,7 @@ notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
 `/16` from the container CIDR.
 
 <h4 class="pdoc-member-header" id="Cluster-subnetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L349">property <b>subnetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L349">property <b>subnetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -619,7 +619,7 @@ The name or selfLink of the Google Compute Engine
 subnetwork in which the cluster's instances are launched.
 
 <h4 class="pdoc-member-header" id="Cluster-tpuIpv4CidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L355">property <b>tpuIpv4CidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L355">property <b>tpuIpv4CidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tpuIpv4CidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +629,7 @@ The IP address range of the Cloud TPUs in this cluster, in
 notation (e.g. `1.2.3.4/29`).
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -638,7 +638,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-verticalPodAutoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L360">property <b>verticalPodAutoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L360">property <b>verticalPodAutoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verticalPodAutoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterVerticalPodAutoscaling'>ClusterVerticalPodAutoscaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -647,7 +647,7 @@ Vertical Pod Autoscaling automatically adjusts the resources of pods controlled 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-workloadIdentityConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L366">property <b>workloadIdentityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L366">property <b>workloadIdentityConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workloadIdentityConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterWorkloadIdentityConfig'>ClusterWorkloadIdentityConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ Workload Identity allows Kubernetes service accounts to act as a user-managed
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="NodePool" data-link-title="NodePool">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L16">
         Resource <strong>NodePool</strong>
     </a>
 </h3>
@@ -671,7 +671,7 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="NodePool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L130"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L130"> <b>constructor</b></a>
 </h4>
 
 
@@ -685,7 +685,7 @@ Create a NodePool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NodePool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -696,14 +696,14 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NodePool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NodePool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -714,7 +714,7 @@ Returns true if the given object is an instance of NodePool.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NodePool-autoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L48">property <b>autoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L48">property <b>autoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoscaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolAutoscaling'>NodePoolAutoscaling</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NodePool-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L52">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L52">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -731,7 +731,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 
 <h4 class="pdoc-member-header" id="NodePool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -740,7 +740,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NodePool-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L62">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L62">property <b>initialNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initialNodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -754,7 +754,7 @@ need this value, don't set it.  If you do need it, you can use a lifecycle block
 ignore subsqeuent changes to this field.
 
 <h4 class="pdoc-member-header" id="NodePool-instanceGroupUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L66">property <b>instanceGroupUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L66">property <b>instanceGroupUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceGroupUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -762,7 +762,7 @@ ignore subsqeuent changes to this field.
 The resource URLs of the managed instance groups associated with this node pool.
 
 <h4 class="pdoc-member-header" id="NodePool-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L70">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L70">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ The resource URLs of the managed instance groups associated with this node pool.
 The location (region or zone) of the cluster.
 
 <h4 class="pdoc-member-header" id="NodePool-management">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L75">property <b>management</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L75">property <b>management</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>management: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolManagement'>NodePoolManagement</a>&gt;;</code></pre>
@@ -779,7 +779,7 @@ Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NodePool-maxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L83">property <b>maxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L83">property <b>maxPodsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxPodsPerNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -791,7 +791,7 @@ See the [official documentation](https://cloud.google.com/kubernetes-engine/docs
 for more information.
 
 <h4 class="pdoc-member-header" id="NodePool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -800,7 +800,7 @@ The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
 
 <h4 class="pdoc-member-header" id="NodePool-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L93">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L93">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,7 +809,7 @@ Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="NodePool-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L98">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L98">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfig'>NodePoolNodeConfig</a>&gt;;</code></pre>
@@ -818,7 +818,7 @@ The node configuration of the pool. See
 gcp.container.Cluster for schema.
 
 <h4 class="pdoc-member-header" id="NodePool-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L103">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L103">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -827,7 +827,7 @@ The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
 
 <h4 class="pdoc-member-header" id="NodePool-nodeLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L110">property <b>nodeLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L110">property <b>nodeLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -838,7 +838,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
 `nodeLocations` will be used.
 
 <h4 class="pdoc-member-header" id="NodePool-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L115">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L115">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +847,7 @@ The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
 
 <h4 class="pdoc-member-header" id="NodePool-upgradeSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L121">property <b>upgradeSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L121">property <b>upgradeSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>upgradeSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolUpgradeSettings'>NodePoolUpgradeSettings</a>&gt;;</code></pre>
@@ -857,7 +857,7 @@ upgrade at once. The number of nodes upgraded simultaneously is the sum of `maxS
 The maximum number of nodes upgraded simultaneously is limited to 20.
 
 <h4 class="pdoc-member-header" id="NodePool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -866,7 +866,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="NodePool-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L130">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L130">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -879,7 +879,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 `versionPrefix` field to approximate fuzzy versions in a provider-compatible way.
 
 <h3 class="pdoc-module-header" id="Registry" data-link-title="Registry">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L12">
         Resource <strong>Registry</strong>
     </a>
 </h3>
@@ -891,7 +891,7 @@ Ensures that the Google Cloud Storage bucket that backs Google Container Registr
 This resource can be used to ensure that the GCS bucket exists prior to assigning permissions. For more information see the [access control page](https://cloud.google.com/container-registry/docs/access-control) for GCR.
 
 <h4 class="pdoc-member-header" id="Registry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L51"> <b>constructor</b></a>
 </h4>
 
 
@@ -905,7 +905,7 @@ Create a Registry resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Registry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -916,14 +916,14 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Registry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Registry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -934,7 +934,7 @@ Returns true if the given object is an instance of Registry.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Registry-bucketSelfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L43">property <b>bucketSelfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L43">property <b>bucketSelfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucketSelfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -942,7 +942,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="Registry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -951,7 +951,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Registry-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L47">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L47">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ deployments and may be missing (undefined) during planning phases.
 The location of the registry. One of `ASIA`, `EU`, `US` or not specified. See [the official documentation](https://cloud.google.com/container-registry/docs/pushing-and-pulling#pushing_an_image_to_a_registry) for more information on registry locations.
 
 <h4 class="pdoc-member-header" id="Registry-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L51">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L51">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +967,7 @@ The location of the registry. One of `ASIA`, `EU`, `US` or not specified. See [t
 The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Registry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -978,7 +978,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L12">
         Function <strong>getCluster</strong>
     </a>
 </h3>
@@ -990,7 +990,7 @@ deployments.
 Get info about a GKE cluster from its name and location.
 
 <h3 class="pdoc-module-header" id="getEngineVersions" data-link-title="getEngineVersions">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L18">
         Function <strong>getEngineVersions</strong>
     </a>
 </h3>
@@ -1008,7 +1008,7 @@ its component zones, and not all zones in a region are guaranteed to
 support the same version.
 
 <h3 class="pdoc-module-header" id="getRegistryImage" data-link-title="getRegistryImage">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L14">
         Function <strong>getRegistryImage</strong>
     </a>
 </h3>
@@ -1022,7 +1022,7 @@ This data source fetches the project name, and provides the appropriate URLs to 
 The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
 
 <h3 class="pdoc-module-header" id="getRegistryRepository" data-link-title="getRegistryRepository">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L14">
         Function <strong>getRegistryRepository</strong>
     </a>
 </h3>
@@ -1038,7 +1038,7 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L826">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L826">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -1048,7 +1048,7 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-addonsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L831">property <b>addonsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L831">property <b>addonsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addonsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfig'>ClusterAddonsConfig</a>&gt;;</code></pre>
@@ -1057,7 +1057,7 @@ The configuration for addons supported by GKE.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-authenticatorGroupsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L837">property <b>authenticatorGroupsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L837">property <b>authenticatorGroupsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAuthenticatorGroupsConfig'>ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
@@ -1067,7 +1067,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterAutoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L845">property <b>clusterAutoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L845">property <b>clusterAutoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscaling'>ClusterClusterAutoscaling</a>&gt;;</code></pre>
@@ -1079,7 +1079,7 @@ on the current needs of the cluster's workload. See the
 for more details. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterIpv4Cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L852">property <b>clusterIpv4Cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L852">property <b>clusterIpv4Cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIpv4Cidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ipAllocationPolicy` is not defined.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterTelemetry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L858">property <b>clusterTelemetry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L858">property <b>clusterTelemetry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterTelemetry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterTelemetry'>ClusterClusterTelemetry</a>&gt;;</code></pre>
@@ -1100,7 +1100,7 @@ Configuration for
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-databaseEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L862">property <b>databaseEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L862">property <b>databaseEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDatabaseEncryption'>ClusterDatabaseEncryption</a>&gt;;</code></pre>
@@ -1108,7 +1108,7 @@ Structure is documented below.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-datapathProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L866">property <b>datapathProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L866">property <b>datapathProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datapathProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1116,7 +1116,7 @@ Structure is documented below.
 The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-defaultMaxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L873">property <b>defaultMaxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L873">property <b>defaultMaxPodsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMaxPodsPerNode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ that don't have IP Aliasing enabled. See the [official documentation](https://cl
 for more information.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-defaultSnatStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L877">property <b>defaultSnatStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L877">property <b>defaultSnatStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSnatStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDefaultSnatStatus'>ClusterDefaultSnatStatus</a>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ for more information.
 [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L881">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L881">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1143,7 @@ for more information.
 Description of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enableBinaryAuthorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L886">property <b>enableBinaryAuthorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L886">property <b>enableBinaryAuthorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBinaryAuthorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1152,7 +1152,7 @@ Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enableIntranodeVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L890">property <b>enableIntranodeVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L890">property <b>enableIntranodeVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableIntranodeVisibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1160,7 +1160,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enableKubernetesAlpha">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L896">property <b>enableKubernetesAlpha</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L896">property <b>enableKubernetesAlpha</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableKubernetesAlpha?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1170,7 +1170,7 @@ this cluster. Note that when this option is enabled, the cluster cannot be upgra
 and will be automatically deleted after 30 days.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enableLegacyAbac">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L903">property <b>enableLegacyAbac</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L903">property <b>enableLegacyAbac</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLegacyAbac?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1181,7 +1181,7 @@ will have statically granted permissions beyond those provided by the RBAC confi
 Defaults to `false`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enableShieldedNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L907">property <b>enableShieldedNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L907">property <b>enableShieldedNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableShieldedNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1189,7 +1189,7 @@ Defaults to `false`
 Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enableTpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L912">property <b>enableTpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L912">property <b>enableTpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableTpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1198,7 +1198,7 @@ Whether to enable Cloud TPU resources in this cluster.
 See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L921">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L921">property <b>initialNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialNodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ set this to a value of at least `1`, alongside setting
 `removeDefaultNodePool` to `true`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-ipAllocationPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L928">property <b>ipAllocationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L928">property <b>ipAllocationPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAllocationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIpAllocationPolicy'>ClusterIpAllocationPolicy</a>&gt;;</code></pre>
@@ -1222,7 +1222,7 @@ making the cluster VPC-native instead of routes-based. Structure is documented
 below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L937">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L937">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 
 <h4 class="pdoc-member-header" id="ClusterArgs-loggingService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L943">property <b>loggingService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L943">property <b>loggingService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-maintenancePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L948">property <b>maintenancePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L948">property <b>maintenancePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenancePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicy'>ClusterMaintenancePolicy</a>&gt;;</code></pre>
@@ -1254,7 +1254,7 @@ The maintenance policy to use for the cluster. Structure is
 documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-masterAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L957">property <b>masterAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L957">property <b>masterAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuth'>ClusterMasterAuth</a>&gt;;</code></pre>
@@ -1267,7 +1267,7 @@ cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-masterAuthorizedNetworksConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L963">property <b>masterAuthorizedNetworksConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L963">property <b>masterAuthorizedNetworksConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthorizedNetworksConfig'>ClusterMasterAuthorizedNetworksConfig</a>&gt;;</code></pre>
@@ -1277,7 +1277,7 @@ for master authorized networks. Omit the nested `cidrBlocks` attribute to disall
 external access (except the cluster node IPs, which GKE automatically whitelists).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-minMasterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L975">property <b>minMasterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L975">property <b>minMasterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minMasterVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ are available. If you intend to specify versions manually,
 describe the various acceptable formats for this field.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-monitoringService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L985">property <b>monitoringService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L985">property <b>monitoringService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1307,7 +1307,7 @@ Available options include
 Defaults to `monitoring.googleapis.com/kubernetes`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L990">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L990">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1316,7 +1316,7 @@ The name of the cluster, unique within the project and
 location.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L996">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L996">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1326,7 +1326,7 @@ network to which the cluster is connected. For Shared VPC, set this to the self 
 shared network.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-networkPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1002">property <b>networkPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1002">property <b>networkPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNetworkPolicy'>ClusterNetworkPolicy</a>&gt;;</code></pre>
@@ -1336,7 +1336,7 @@ Configuration options for the
 feature. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-networkingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1008">property <b>networkingMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1008">property <b>networkingMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkingMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1346,7 +1346,7 @@ Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https:/
 and requires the `ipAllocationPolicy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1016">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1016">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfig'>ClusterNodeConfig</a>&gt;;</code></pre>
@@ -1358,7 +1358,7 @@ manages the default node pool, which isn't recommended to be used.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1023">property <b>nodeLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1023">property <b>nodeLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1369,7 +1369,7 @@ same region as their cluster's zone for zonal clusters. If this is specified for
 a zonal cluster, omit the cluster's zone.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodePools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1032">property <b>nodePools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1032">property <b>nodePools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodePools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePool'>ClusterNodePool</a>&gt;[]&gt;;</code></pre>
@@ -1382,7 +1382,7 @@ to say "these are the _only_ node pools associated with this cluster", use the
 gcp.container.NodePool resource instead of this property.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1043">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1043">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1397,7 +1397,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 To update nodes in other node pools, use the `version` attribute on the node pool.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-notificationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1047">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1047">property <b>notificationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNotificationConfig'>ClusterNotificationConfig</a>&gt;;</code></pre>
@@ -1405,7 +1405,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 The notification config for sending cluster upgrade notifications
 
 <h4 class="pdoc-member-header" id="ClusterArgs-podSecurityPolicyConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1053">property <b>podSecurityPolicyConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1053">property <b>podSecurityPolicyConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPodSecurityPolicyConfig'>ClusterPodSecurityPolicyConfig</a>&gt;;</code></pre>
@@ -1415,7 +1415,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-privateClusterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1058">property <b>privateClusterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1058">property <b>privateClusterConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateClusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPrivateClusterConfig'>ClusterPrivateClusterConfig</a>&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/
 clusters with private nodes. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1063">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1063">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1433,7 +1433,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-releaseChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1075">property <b>releaseChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1075">property <b>releaseChannel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterReleaseChannel'>ClusterReleaseChannel</a>&gt;;</code></pre>
@@ -1449,7 +1449,7 @@ release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-removeDefaultNodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1082">property <b>removeDefaultNodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1082">property <b>removeDefaultNodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removeDefaultNodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1460,7 +1460,7 @@ resources with no default node pool, this should be set to `true`, alongside
 setting `initialNodeCount` to at least `1`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-resourceLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1086">property <b>resourceLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1086">property <b>resourceLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1468,7 +1468,7 @@ setting `initialNodeCount` to at least `1`.
 The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-resourceUsageExportConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1092">property <b>resourceUsageExportConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1092">property <b>resourceUsageExportConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterResourceUsageExportConfig'>ClusterResourceUsageExportConfig</a>&gt;;</code></pre>
@@ -1478,7 +1478,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-subnetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1097">property <b>subnetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1097">property <b>subnetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1487,7 +1487,7 @@ The name or selfLink of the Google Compute Engine
 subnetwork in which the cluster's instances are launched.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-verticalPodAutoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1102">property <b>verticalPodAutoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1102">property <b>verticalPodAutoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verticalPodAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterVerticalPodAutoscaling'>ClusterVerticalPodAutoscaling</a>&gt;;</code></pre>
@@ -1496,7 +1496,7 @@ Vertical Pod Autoscaling automatically adjusts the resources of pods controlled 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-workloadIdentityConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L1108">property <b>workloadIdentityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L1108">property <b>workloadIdentityConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workloadIdentityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterWorkloadIdentityConfig'>ClusterWorkloadIdentityConfig</a>&gt;;</code></pre>
@@ -1506,7 +1506,7 @@ Workload Identity allows Kubernetes service accounts to act as a user-managed
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L501">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L501">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -1516,7 +1516,7 @@ Structure is documented below.
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-addonsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L506">property <b>addonsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L506">property <b>addonsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addonsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfig'>ClusterAddonsConfig</a>&gt;;</code></pre>
@@ -1525,7 +1525,7 @@ The configuration for addons supported by GKE.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-authenticatorGroupsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L512">property <b>authenticatorGroupsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L512">property <b>authenticatorGroupsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAuthenticatorGroupsConfig'>ClusterAuthenticatorGroupsConfig</a>&gt;;</code></pre>
@@ -1535,7 +1535,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterAutoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L520">property <b>clusterAutoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L520">property <b>clusterAutoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscaling'>ClusterClusterAutoscaling</a>&gt;;</code></pre>
@@ -1547,7 +1547,7 @@ on the current needs of the cluster's workload. See the
 for more details. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterIpv4Cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L527">property <b>clusterIpv4Cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L527">property <b>clusterIpv4Cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIpv4Cidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1558,7 +1558,7 @@ automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ipAllocationPolicy` is not defined.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterTelemetry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L533">property <b>clusterTelemetry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L533">property <b>clusterTelemetry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterTelemetry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterTelemetry'>ClusterClusterTelemetry</a>&gt;;</code></pre>
@@ -1568,7 +1568,7 @@ Configuration for
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-databaseEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L537">property <b>databaseEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L537">property <b>databaseEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDatabaseEncryption'>ClusterDatabaseEncryption</a>&gt;;</code></pre>
@@ -1576,7 +1576,7 @@ Structure is documented below.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-datapathProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L541">property <b>datapathProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L541">property <b>datapathProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datapathProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1584,7 +1584,7 @@ Structure is documented below.
 The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 
 <h4 class="pdoc-member-header" id="ClusterState-defaultMaxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L548">property <b>defaultMaxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L548">property <b>defaultMaxPodsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMaxPodsPerNode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1595,7 +1595,7 @@ that don't have IP Aliasing enabled. See the [official documentation](https://cl
 for more information.
 
 <h4 class="pdoc-member-header" id="ClusterState-defaultSnatStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L552">property <b>defaultSnatStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L552">property <b>defaultSnatStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSnatStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDefaultSnatStatus'>ClusterDefaultSnatStatus</a>&gt;;</code></pre>
@@ -1603,7 +1603,7 @@ for more information.
 [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 
 <h4 class="pdoc-member-header" id="ClusterState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L556">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L556">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1611,7 +1611,7 @@ for more information.
 Description of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-enableBinaryAuthorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L561">property <b>enableBinaryAuthorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L561">property <b>enableBinaryAuthorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBinaryAuthorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1620,7 +1620,7 @@ Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
 
 <h4 class="pdoc-member-header" id="ClusterState-enableIntranodeVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L565">property <b>enableIntranodeVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L565">property <b>enableIntranodeVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableIntranodeVisibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1628,7 +1628,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 
 <h4 class="pdoc-member-header" id="ClusterState-enableKubernetesAlpha">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L571">property <b>enableKubernetesAlpha</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L571">property <b>enableKubernetesAlpha</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableKubernetesAlpha?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1638,7 +1638,7 @@ this cluster. Note that when this option is enabled, the cluster cannot be upgra
 and will be automatically deleted after 30 days.
 
 <h4 class="pdoc-member-header" id="ClusterState-enableLegacyAbac">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L578">property <b>enableLegacyAbac</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L578">property <b>enableLegacyAbac</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLegacyAbac?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1649,7 +1649,7 @@ will have statically granted permissions beyond those provided by the RBAC confi
 Defaults to `false`
 
 <h4 class="pdoc-member-header" id="ClusterState-enableShieldedNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L582">property <b>enableShieldedNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L582">property <b>enableShieldedNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableShieldedNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1657,7 +1657,7 @@ Defaults to `false`
 Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClusterState-enableTpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L587">property <b>enableTpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L587">property <b>enableTpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableTpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1666,7 +1666,7 @@ Whether to enable Cloud TPU resources in this cluster.
 See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
 
 <h4 class="pdoc-member-header" id="ClusterState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L591">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L591">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1674,7 +1674,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 The IP address of this cluster's Kubernetes master.
 
 <h4 class="pdoc-member-header" id="ClusterState-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L600">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L600">property <b>initialNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialNodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1687,7 +1687,7 @@ set this to a value of at least `1`, alongside setting
 `removeDefaultNodePool` to `true`.
 
 <h4 class="pdoc-member-header" id="ClusterState-instanceGroupUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L605">property <b>instanceGroupUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L605">property <b>instanceGroupUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceGroupUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1696,7 +1696,7 @@ List of instance group URLs which have been assigned
 to the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-ipAllocationPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L612">property <b>ipAllocationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L612">property <b>ipAllocationPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAllocationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIpAllocationPolicy'>ClusterIpAllocationPolicy</a>&gt;;</code></pre>
@@ -1707,7 +1707,7 @@ making the cluster VPC-native instead of routes-based. Structure is documented
 below.
 
 <h4 class="pdoc-member-header" id="ClusterState-labelFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L616">property <b>labelFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L616">property <b>labelFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labelFingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1715,7 +1715,7 @@ below.
 The fingerprint of the set of labels for this cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L625">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L625">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1728,7 +1728,7 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well
 
 <h4 class="pdoc-member-header" id="ClusterState-loggingService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L631">property <b>loggingService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L631">property <b>loggingService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1738,7 +1738,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
 
 <h4 class="pdoc-member-header" id="ClusterState-maintenancePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L636">property <b>maintenancePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L636">property <b>maintenancePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenancePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicy'>ClusterMaintenancePolicy</a>&gt;;</code></pre>
@@ -1747,7 +1747,7 @@ The maintenance policy to use for the cluster. Structure is
 documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-masterAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L645">property <b>masterAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L645">property <b>masterAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuth'>ClusterMasterAuth</a>&gt;;</code></pre>
@@ -1760,7 +1760,7 @@ cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-masterAuthorizedNetworksConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L651">property <b>masterAuthorizedNetworksConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L651">property <b>masterAuthorizedNetworksConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthorizedNetworksConfig'>ClusterMasterAuthorizedNetworksConfig</a>&gt;;</code></pre>
@@ -1770,7 +1770,7 @@ for master authorized networks. Omit the nested `cidrBlocks` attribute to disall
 external access (except the cluster node IPs, which GKE automatically whitelists).
 
 <h4 class="pdoc-member-header" id="ClusterState-masterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L657">property <b>masterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L657">property <b>masterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1780,7 +1780,7 @@ be different than the `minMasterVersion` set in the config if the master
 has been updated by GKE.
 
 <h4 class="pdoc-member-header" id="ClusterState-minMasterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L669">property <b>minMasterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L669">property <b>minMasterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minMasterVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1796,7 +1796,7 @@ are available. If you intend to specify versions manually,
 describe the various acceptable formats for this field.
 
 <h4 class="pdoc-member-header" id="ClusterState-monitoringService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L679">property <b>monitoringService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L679">property <b>monitoringService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1810,7 +1810,7 @@ Available options include
 Defaults to `monitoring.googleapis.com/kubernetes`
 
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L684">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L684">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1819,7 +1819,7 @@ The name of the cluster, unique within the project and
 location.
 
 <h4 class="pdoc-member-header" id="ClusterState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L690">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L690">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1829,7 +1829,7 @@ network to which the cluster is connected. For Shared VPC, set this to the self 
 shared network.
 
 <h4 class="pdoc-member-header" id="ClusterState-networkPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L696">property <b>networkPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L696">property <b>networkPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNetworkPolicy'>ClusterNetworkPolicy</a>&gt;;</code></pre>
@@ -1839,7 +1839,7 @@ Configuration options for the
 feature. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-networkingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L702">property <b>networkingMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L702">property <b>networkingMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkingMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1849,7 +1849,7 @@ Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https:/
 and requires the `ipAllocationPolicy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L710">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L710">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfig'>ClusterNodeConfig</a>&gt;;</code></pre>
@@ -1861,7 +1861,7 @@ manages the default node pool, which isn't recommended to be used.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L717">property <b>nodeLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L717">property <b>nodeLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1872,7 +1872,7 @@ same region as their cluster's zone for zonal clusters. If this is specified for
 a zonal cluster, omit the cluster's zone.
 
 <h4 class="pdoc-member-header" id="ClusterState-nodePools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L726">property <b>nodePools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L726">property <b>nodePools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodePools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePool'>ClusterNodePool</a>&gt;[]&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ to say "these are the _only_ node pools associated with this cluster", use the
 gcp.container.NodePool resource instead of this property.
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L737">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L737">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1900,7 +1900,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 To update nodes in other node pools, use the `version` attribute on the node pool.
 
 <h4 class="pdoc-member-header" id="ClusterState-notificationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L741">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L741">property <b>notificationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNotificationConfig'>ClusterNotificationConfig</a>&gt;;</code></pre>
@@ -1908,12 +1908,12 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 The notification config for sending cluster upgrade notifications
 
 <h4 class="pdoc-member-header" id="ClusterState-operation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L742">property <b>operation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L742">property <b>operation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-podSecurityPolicyConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L748">property <b>podSecurityPolicyConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L748">property <b>podSecurityPolicyConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPodSecurityPolicyConfig'>ClusterPodSecurityPolicyConfig</a>&gt;;</code></pre>
@@ -1923,7 +1923,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-privateClusterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L753">property <b>privateClusterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L753">property <b>privateClusterConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateClusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPrivateClusterConfig'>ClusterPrivateClusterConfig</a>&gt;;</code></pre>
@@ -1932,7 +1932,7 @@ Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/
 clusters with private nodes. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L758">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L758">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1941,7 +1941,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ClusterState-releaseChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L770">property <b>releaseChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L770">property <b>releaseChannel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterReleaseChannel'>ClusterReleaseChannel</a>&gt;;</code></pre>
@@ -1957,7 +1957,7 @@ release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-removeDefaultNodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L777">property <b>removeDefaultNodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L777">property <b>removeDefaultNodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removeDefaultNodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1968,7 +1968,7 @@ resources with no default node pool, this should be set to `true`, alongside
 setting `initialNodeCount` to at least `1`.
 
 <h4 class="pdoc-member-header" id="ClusterState-resourceLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L781">property <b>resourceLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L781">property <b>resourceLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1976,7 +1976,7 @@ setting `initialNodeCount` to at least `1`.
 The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-resourceUsageExportConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L787">property <b>resourceUsageExportConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L787">property <b>resourceUsageExportConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterResourceUsageExportConfig'>ClusterResourceUsageExportConfig</a>&gt;;</code></pre>
@@ -1986,7 +1986,7 @@ Configuration for the
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L791">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L791">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1994,7 +1994,7 @@ Structure is documented below.
 The server-defined URL for the resource.
 
 <h4 class="pdoc-member-header" id="ClusterState-servicesIpv4Cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L798">property <b>servicesIpv4Cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L798">property <b>servicesIpv4Cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicesIpv4Cidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2005,7 +2005,7 @@ notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
 `/16` from the container CIDR.
 
 <h4 class="pdoc-member-header" id="ClusterState-subnetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L803">property <b>subnetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L803">property <b>subnetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2014,7 +2014,7 @@ The name or selfLink of the Google Compute Engine
 subnetwork in which the cluster's instances are launched.
 
 <h4 class="pdoc-member-header" id="ClusterState-tpuIpv4CidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L809">property <b>tpuIpv4CidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L809">property <b>tpuIpv4CidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tpuIpv4CidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2024,7 +2024,7 @@ The IP address range of the Cloud TPUs in this cluster, in
 notation (e.g. `1.2.3.4/29`).
 
 <h4 class="pdoc-member-header" id="ClusterState-verticalPodAutoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L814">property <b>verticalPodAutoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L814">property <b>verticalPodAutoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verticalPodAutoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterVerticalPodAutoscaling'>ClusterVerticalPodAutoscaling</a>&gt;;</code></pre>
@@ -2033,7 +2033,7 @@ Vertical Pod Autoscaling automatically adjusts the resources of pods controlled 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-workloadIdentityConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/cluster.ts#L820">property <b>workloadIdentityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/cluster.ts#L820">property <b>workloadIdentityConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workloadIdentityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterWorkloadIdentityConfig'>ClusterWorkloadIdentityConfig</a>&gt;;</code></pre>
@@ -2043,7 +2043,7 @@ Workload Identity allows Kubernetes service accounts to act as a user-managed
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L30">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -2053,7 +2053,7 @@ Structure is documented below.
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L36">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L36">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2063,7 +2063,7 @@ created in. One of `location`, `region`, `zone`, or a provider-level `zone` must
 be specified.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L40">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2071,7 +2071,7 @@ be specified.
 The name of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L45">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L45">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2080,7 +2080,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L51">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -2090,92 +2090,92 @@ is not provided, the provider project is used.
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-addonsConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L52">property <b>addonsConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L52">property <b>addonsConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addonsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfig'>GetClusterAddonsConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-authenticatorGroupsConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L53">property <b>authenticatorGroupsConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L53">property <b>authenticatorGroupsConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticatorGroupsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAuthenticatorGroupsConfig'>GetClusterAuthenticatorGroupsConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterAutoscalings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L54">property <b>clusterAutoscalings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L54">property <b>clusterAutoscalings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAutoscalings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscaling'>GetClusterClusterAutoscaling</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterIpv4Cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L55">property <b>clusterIpv4Cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L55">property <b>clusterIpv4Cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIpv4Cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterTelemetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L56">property <b>clusterTelemetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L56">property <b>clusterTelemetries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterTelemetries: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterTelemetry'>GetClusterClusterTelemetry</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-databaseEncryptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L57">property <b>databaseEncryptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L57">property <b>databaseEncryptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseEncryptions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterDatabaseEncryption'>GetClusterDatabaseEncryption</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-datapathProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L58">property <b>datapathProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L58">property <b>datapathProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datapathProvider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-defaultMaxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L59">property <b>defaultMaxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L59">property <b>defaultMaxPodsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMaxPodsPerNode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-defaultSnatStatuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L60">property <b>defaultSnatStatuses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L60">property <b>defaultSnatStatuses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSnatStatuses: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterDefaultSnatStatus'>GetClusterDefaultSnatStatus</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-enableBinaryAuthorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L62">property <b>enableBinaryAuthorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L62">property <b>enableBinaryAuthorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBinaryAuthorization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-enableIntranodeVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L63">property <b>enableIntranodeVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L63">property <b>enableIntranodeVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableIntranodeVisibility: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-enableKubernetesAlpha">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L64">property <b>enableKubernetesAlpha</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L64">property <b>enableKubernetesAlpha</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableKubernetesAlpha: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-enableLegacyAbac">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L65">property <b>enableLegacyAbac</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L65">property <b>enableLegacyAbac</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLegacyAbac: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-enableShieldedNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L66">property <b>enableShieldedNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L66">property <b>enableShieldedNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableShieldedNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-enableTpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L67">property <b>enableTpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L67">property <b>enableTpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableTpu: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L68">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L68">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2183,182 +2183,182 @@ A collection of values returned by getCluster.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L73">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L73">property <b>initialNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialNodeCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-instanceGroupUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L74">property <b>instanceGroupUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L74">property <b>instanceGroupUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceGroupUrls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-ipAllocationPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L75">property <b>ipAllocationPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L75">property <b>ipAllocationPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAllocationPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterIpAllocationPolicy'>GetClusterIpAllocationPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-labelFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L76">property <b>labelFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L76">property <b>labelFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labelFingerprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L77">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-loggingService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L78">property <b>loggingService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L78">property <b>loggingService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingService: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-maintenancePolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L79">property <b>maintenancePolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L79">property <b>maintenancePolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenancePolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicy'>GetClusterMaintenancePolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-masterAuthorizedNetworksConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L80">property <b>masterAuthorizedNetworksConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L80">property <b>masterAuthorizedNetworksConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAuthorizedNetworksConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthorizedNetworksConfig'>GetClusterMasterAuthorizedNetworksConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-masterAuths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L81">property <b>masterAuths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L81">property <b>masterAuths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAuths: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuth'>GetClusterMasterAuth</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-masterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L82">property <b>masterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L82">property <b>masterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-minMasterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L83">property <b>minMasterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L83">property <b>minMasterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minMasterVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-monitoringService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L84">property <b>monitoringService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L84">property <b>monitoringService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringService: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L86">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L86">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-networkPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L87">property <b>networkPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L87">property <b>networkPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNetworkPolicy'>GetClusterNetworkPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-networkingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L88">property <b>networkingMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L88">property <b>networkingMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkingMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L89">property <b>nodeConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L89">property <b>nodeConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfig'>GetClusterNodeConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L90">property <b>nodeLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L90">property <b>nodeLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeLocations: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-nodePools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L91">property <b>nodePools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L91">property <b>nodePools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodePools: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePool'>GetClusterNodePool</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L92">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L92">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-notificationConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L93">property <b>notificationConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L93">property <b>notificationConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNotificationConfig'>GetClusterNotificationConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-operation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L94">property <b>operation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L94">property <b>operation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-podSecurityPolicyConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L95">property <b>podSecurityPolicyConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L95">property <b>podSecurityPolicyConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podSecurityPolicyConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPodSecurityPolicyConfig'>GetClusterPodSecurityPolicyConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-privateClusterConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L96">property <b>privateClusterConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L96">property <b>privateClusterConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateClusterConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPrivateClusterConfig'>GetClusterPrivateClusterConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L97">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L97">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-releaseChannels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L98">property <b>releaseChannels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L98">property <b>releaseChannels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseChannels: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterReleaseChannel'>GetClusterReleaseChannel</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-removeDefaultNodePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L99">property <b>removeDefaultNodePool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L99">property <b>removeDefaultNodePool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removeDefaultNodePool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-resourceLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L100">property <b>resourceLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L100">property <b>resourceLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceLabels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-resourceUsageExportConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L101">property <b>resourceUsageExportConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L101">property <b>resourceUsageExportConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceUsageExportConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterResourceUsageExportConfig'>GetClusterResourceUsageExportConfig</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L102">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L102">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-servicesIpv4Cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L103">property <b>servicesIpv4Cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L103">property <b>servicesIpv4Cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicesIpv4Cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-subnetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L104">property <b>subnetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L104">property <b>subnetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-tpuIpv4CidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L105">property <b>tpuIpv4CidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L105">property <b>tpuIpv4CidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tpuIpv4CidrBlock: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-verticalPodAutoscalings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L106">property <b>verticalPodAutoscalings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L106">property <b>verticalPodAutoscalings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verticalPodAutoscalings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterVerticalPodAutoscaling'>GetClusterVerticalPodAutoscaling</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-workloadIdentityConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getCluster.ts#L107">property <b>workloadIdentityConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getCluster.ts#L107">property <b>workloadIdentityConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workloadIdentityConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterWorkloadIdentityConfig'>GetClusterWorkloadIdentityConfig</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetEngineVersionsArgs" data-link-title="GetEngineVersionsArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L37">
         interface <strong>GetEngineVersionsArgs</strong>
     </a>
 </h3>
@@ -2368,7 +2368,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getEngineVersions.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L44">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L44">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2379,7 +2379,7 @@ versions may not be available. If `location`, `region`, and `zone` are not
 specified, the provider-level zone must be set and is used instead.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L49">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L49">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2388,7 +2388,7 @@ ID of the project to list available cluster versions for. Should match the proje
 Defaults to the project that the provider is authenticated with.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsArgs-versionPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L58">property <b>versionPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L58">property <b>versionPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2401,7 +2401,7 @@ versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](
 for full details on how version strings are formatted.
 
 <h3 class="pdoc-module-header" id="GetEngineVersionsResult" data-link-title="GetEngineVersionsResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L64">
         interface <strong>GetEngineVersionsResult</strong>
     </a>
 </h3>
@@ -2411,7 +2411,7 @@ for full details on how version strings are formatted.
 A collection of values returned by getEngineVersions.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-defaultClusterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L68">property <b>defaultClusterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L68">property <b>defaultClusterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultClusterVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2419,7 +2419,7 @@ A collection of values returned by getEngineVersions.
 Version of Kubernetes the service deploys by default.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2427,7 +2427,7 @@ Version of Kubernetes the service deploys by default.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-latestMasterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L76">property <b>latestMasterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L76">property <b>latestMasterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latestMasterVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2435,7 +2435,7 @@ The provider-assigned unique ID for this managed resource.
 The latest version available in the given zone for use with master instances.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-latestNodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L80">property <b>latestNodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L80">property <b>latestNodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latestNodeVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2443,17 +2443,17 @@ The latest version available in the given zone for use with master instances.
 The latest version available in the given zone for use with node instances.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L81">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L81">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L82">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L82">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-releaseChannelDefaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L86">property <b>releaseChannelDefaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L86">property <b>releaseChannelDefaultVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseChannelDefaultVersion: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2461,7 +2461,7 @@ The latest version available in the given zone for use with node instances.
 A map from a release channel name to the channel's default version.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-validMasterVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L90">property <b>validMasterVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L90">property <b>validMasterVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validMasterVersions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2469,7 +2469,7 @@ A map from a release channel name to the channel's default version.
 A list of versions available in the given zone for use with master instances.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-validNodeVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L94">property <b>validNodeVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L94">property <b>validNodeVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validNodeVersions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2477,12 +2477,12 @@ A list of versions available in the given zone for use with master instances.
 A list of versions available in the given zone for use with node instances.
 
 <h4 class="pdoc-member-header" id="GetEngineVersionsResult-versionPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getEngineVersions.ts#L95">property <b>versionPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getEngineVersions.ts#L95">property <b>versionPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryImageArgs" data-link-title="GetRegistryImageArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L34">
         interface <strong>GetRegistryImageArgs</strong>
     </a>
 </h3>
@@ -2492,32 +2492,32 @@ A list of versions available in the given zone for use with node instances.
 A collection of arguments for invoking getRegistryImage.
 
 <h4 class="pdoc-member-header" id="GetRegistryImageArgs-digest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L35">property <b>digest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L35">property <b>digest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L36">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L36">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L37">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L37">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L38">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L38">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageArgs-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L39">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L39">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryImageResult" data-link-title="GetRegistryImageResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L45">
         interface <strong>GetRegistryImageResult</strong>
     </a>
 </h3>
@@ -2527,12 +2527,12 @@ A collection of arguments for invoking getRegistryImage.
 A collection of values returned by getRegistryImage.
 
 <h4 class="pdoc-member-header" id="GetRegistryImageResult-digest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L46">property <b>digest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L46">property <b>digest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2540,32 +2540,32 @@ A collection of values returned by getRegistryImage.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegistryImageResult-imageUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L51">property <b>imageUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L51">property <b>imageUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L53">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L53">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L54">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L54">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryImageResult-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryImage.ts#L55">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryImage.ts#L55">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryRepositoryArgs" data-link-title="GetRegistryRepositoryArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L32">
         interface <strong>GetRegistryRepositoryArgs</strong>
     </a>
 </h3>
@@ -2575,17 +2575,17 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getRegistryRepository.
 
 <h4 class="pdoc-member-header" id="GetRegistryRepositoryArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L33">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L33">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryRepositoryArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L34">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L34">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryRepositoryResult" data-link-title="GetRegistryRepositoryResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L40">
         interface <strong>GetRegistryRepositoryResult</strong>
     </a>
 </h3>
@@ -2595,7 +2595,7 @@ A collection of arguments for invoking getRegistryRepository.
 A collection of values returned by getRegistryRepository.
 
 <h4 class="pdoc-member-header" id="GetRegistryRepositoryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2603,22 +2603,22 @@ A collection of values returned by getRegistryRepository.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegistryRepositoryResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L45">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L45">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryRepositoryResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L46">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L46">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryRepositoryResult-repositoryUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/getRegistryRepository.ts#L47">property <b>repositoryUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/getRegistryRepository.ts#L47">property <b>repositoryUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="NodePoolArgs" data-link-title="NodePoolArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L287">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L287">
         interface <strong>NodePoolArgs</strong>
     </a>
 </h3>
@@ -2628,7 +2628,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a NodePool resource.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-autoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L292">property <b>autoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L292">property <b>autoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolAutoscaling'>NodePoolAutoscaling</a>&gt;;</code></pre>
@@ -2637,7 +2637,7 @@ Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L296">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L296">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2645,7 +2645,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L306">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L306">property <b>initialNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialNodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2659,7 +2659,7 @@ need this value, don't set it.  If you do need it, you can use a lifecycle block
 ignore subsqeuent changes to this field.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L310">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L310">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2667,7 +2667,7 @@ ignore subsqeuent changes to this field.
 The location (region or zone) of the cluster.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-management">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L315">property <b>management</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L315">property <b>management</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>management?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolManagement'>NodePoolManagement</a>&gt;;</code></pre>
@@ -2676,7 +2676,7 @@ Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-maxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L323">property <b>maxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L323">property <b>maxPodsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPodsPerNode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2688,7 +2688,7 @@ See the [official documentation](https://cloud.google.com/kubernetes-engine/docs
 for more information.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L328">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L328">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2697,7 +2697,7 @@ The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L333">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L333">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2706,7 +2706,7 @@ Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L338">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L338">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfig'>NodePoolNodeConfig</a>&gt;;</code></pre>
@@ -2715,7 +2715,7 @@ The node configuration of the pool. See
 gcp.container.Cluster for schema.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L343">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L343">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2724,7 +2724,7 @@ The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-nodeLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L350">property <b>nodeLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L350">property <b>nodeLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2735,7 +2735,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
 `nodeLocations` will be used.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L355">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L355">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2744,7 +2744,7 @@ The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-upgradeSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L361">property <b>upgradeSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L361">property <b>upgradeSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upgradeSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolUpgradeSettings'>NodePoolUpgradeSettings</a>&gt;;</code></pre>
@@ -2754,7 +2754,7 @@ upgrade at once. The number of nodes upgraded simultaneously is the sum of `maxS
 The maximum number of nodes upgraded simultaneously is limited to 20.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L370">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L370">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2767,7 +2767,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 `versionPrefix` field to approximate fuzzy versions in a provider-compatible way.
 
 <h3 class="pdoc-module-header" id="NodePoolState" data-link-title="NodePoolState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L194">
         interface <strong>NodePoolState</strong>
     </a>
 </h3>
@@ -2777,7 +2777,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 Input properties used for looking up and filtering NodePool resources.
 
 <h4 class="pdoc-member-header" id="NodePoolState-autoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L199">property <b>autoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L199">property <b>autoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolAutoscaling'>NodePoolAutoscaling</a>&gt;;</code></pre>
@@ -2786,7 +2786,7 @@ Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NodePoolState-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L203">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L203">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2794,7 +2794,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 
 <h4 class="pdoc-member-header" id="NodePoolState-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L213">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L213">property <b>initialNodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialNodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2808,7 +2808,7 @@ need this value, don't set it.  If you do need it, you can use a lifecycle block
 ignore subsqeuent changes to this field.
 
 <h4 class="pdoc-member-header" id="NodePoolState-instanceGroupUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L217">property <b>instanceGroupUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L217">property <b>instanceGroupUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceGroupUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2816,7 +2816,7 @@ ignore subsqeuent changes to this field.
 The resource URLs of the managed instance groups associated with this node pool.
 
 <h4 class="pdoc-member-header" id="NodePoolState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L221">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L221">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2824,7 +2824,7 @@ The resource URLs of the managed instance groups associated with this node pool.
 The location (region or zone) of the cluster.
 
 <h4 class="pdoc-member-header" id="NodePoolState-management">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L226">property <b>management</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L226">property <b>management</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>management?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolManagement'>NodePoolManagement</a>&gt;;</code></pre>
@@ -2833,7 +2833,7 @@ Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NodePoolState-maxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L234">property <b>maxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L234">property <b>maxPodsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPodsPerNode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2845,7 +2845,7 @@ See the [official documentation](https://cloud.google.com/kubernetes-engine/docs
 for more information.
 
 <h4 class="pdoc-member-header" id="NodePoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L239">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L239">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2854,7 +2854,7 @@ The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
 
 <h4 class="pdoc-member-header" id="NodePoolState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L244">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L244">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2863,7 +2863,7 @@ Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="NodePoolState-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L249">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L249">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfig'>NodePoolNodeConfig</a>&gt;;</code></pre>
@@ -2872,7 +2872,7 @@ The node configuration of the pool. See
 gcp.container.Cluster for schema.
 
 <h4 class="pdoc-member-header" id="NodePoolState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L254">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L254">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2881,7 +2881,7 @@ The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
 
 <h4 class="pdoc-member-header" id="NodePoolState-nodeLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L261">property <b>nodeLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L261">property <b>nodeLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2892,7 +2892,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
 `nodeLocations` will be used.
 
 <h4 class="pdoc-member-header" id="NodePoolState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L266">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L266">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2901,7 +2901,7 @@ The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
 
 <h4 class="pdoc-member-header" id="NodePoolState-upgradeSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L272">property <b>upgradeSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L272">property <b>upgradeSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upgradeSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolUpgradeSettings'>NodePoolUpgradeSettings</a>&gt;;</code></pre>
@@ -2911,7 +2911,7 @@ upgrade at once. The number of nodes upgraded simultaneously is the sum of `maxS
 The maximum number of nodes upgraded simultaneously is limited to 20.
 
 <h4 class="pdoc-member-header" id="NodePoolState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/nodePool.ts#L281">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/nodePool.ts#L281">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2924,7 +2924,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 `versionPrefix` field to approximate fuzzy versions in a provider-compatible way.
 
 <h3 class="pdoc-module-header" id="RegistryArgs" data-link-title="RegistryArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L106">
         interface <strong>RegistryArgs</strong>
     </a>
 </h3>
@@ -2934,7 +2934,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 The set of arguments for constructing a Registry resource.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L110">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L110">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2942,7 +2942,7 @@ The set of arguments for constructing a Registry resource.
 The location of the registry. One of `ASIA`, `EU`, `US` or not specified. See [the official documentation](https://cloud.google.com/container-registry/docs/pushing-and-pulling#pushing_an_image_to_a_registry) for more information on registry locations.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L114">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L114">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2950,7 +2950,7 @@ The location of the registry. One of `ASIA`, `EU`, `US` or not specified. See [t
 The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="RegistryState" data-link-title="RegistryState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L88">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L88">
         interface <strong>RegistryState</strong>
     </a>
 </h3>
@@ -2960,7 +2960,7 @@ The ID of the project in which the resource belongs. If it is not provided, the 
 Input properties used for looking up and filtering Registry resources.
 
 <h4 class="pdoc-member-header" id="RegistryState-bucketSelfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L92">property <b>bucketSelfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L92">property <b>bucketSelfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketSelfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2968,7 +2968,7 @@ Input properties used for looking up and filtering Registry resources.
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="RegistryState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L96">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L96">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2976,7 +2976,7 @@ The URI of the created resource.
 The location of the registry. One of `ASIA`, `EU`, `US` or not specified. See [the official documentation](https://cloud.google.com/container-registry/docs/pushing-and-pulling#pushing_an_image_to_a_registry) for more information on registry locations.
 
 <h4 class="pdoc-member-header" id="RegistryState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/container/registry.ts#L100">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/container/registry.ts#L100">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

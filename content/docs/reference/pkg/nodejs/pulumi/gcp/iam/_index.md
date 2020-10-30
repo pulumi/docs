@@ -3,7 +3,7 @@ title: "Module iam"
 title_tag: "Module iam | Package @pulumi/gcp | Node.js SDK"
 linktitle: "iam"
 meta_desc: "Explore members of the iam module in the @pulumi/gcp package."
-git_sha: "392523e57a3e8f1656dce673bd0ce66ebb8dc12e"
+git_sha: "0c46c212e5430badafa0a4a775d8fb5b6926e30e"
 block_external_search_index: true
 ---
 
@@ -15,6 +15,10 @@ block_external_search_index: true
 
 
 
+<h3>Resources</h3>
+<ul class="api">
+    <li><a href="#WorkloadIdentityPool"><span class="symbol resource"></span>WorkloadIdentityPool</a></li>
+</ul>
 
 <h3>Functions</h3>
 <ul class="api">
@@ -28,13 +32,149 @@ block_external_search_index: true
     <li><a href="#GetRuleResult"><span class="symbol api"></span>GetRuleResult</a></li>
     <li><a href="#GetTestablePermissionsArgs"><span class="symbol api"></span>GetTestablePermissionsArgs</a></li>
     <li><a href="#GetTestablePermissionsResult"><span class="symbol api"></span>GetTestablePermissionsResult</a></li>
+    <li><a href="#WorkloadIdentityPoolArgs"><span class="symbol api"></span>WorkloadIdentityPoolArgs</a></li>
+    <li><a href="#WorkloadIdentityPoolState"><span class="symbol api"></span>WorkloadIdentityPoolState</a></li>
 </ul>
 
+
+<h2 id="resources">Resources</h2>
+<h3 class="pdoc-module-header" id="WorkloadIdentityPool" data-link-title="WorkloadIdentityPool">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L7">
+        Resource <strong>WorkloadIdentityPool</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>WorkloadIdentityPool</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L71"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> WorkloadIdentityPool(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#WorkloadIdentityPoolArgs'>WorkloadIdentityPoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a WorkloadIdentityPool resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L17">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#WorkloadIdentityPoolState'>WorkloadIdentityPoolState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#WorkloadIdentityPool'>WorkloadIdentityPool</a></code></pre>
+
+
+Get an existing WorkloadIdentityPool resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L7">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L28">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is WorkloadIdentityPool</code></pre>
+
+
+Returns true if the given object is an instance of WorkloadIdentityPool.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L38">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A description of the pool. Cannot exceed 256 characters.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-disabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L44">property <b>disabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>disabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
+existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+access again.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-displayName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L48">property <b>displayName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A display name for the pool. Cannot exceed 32 characters.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L7">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L52">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L57">property <b>project</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-state">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L65">property <b>state</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
+policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
+can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
+it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
+access resources. If the pool is undeleted, existing tokens grant access again.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L7">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPool-workloadIdentityPoolId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L71">property <b>workloadIdentityPoolId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>workloadIdentityPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID to use for the pool, which becomes the final component of the resource name. This
+value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
+`gcp-` is reserved for use by Google, and may not be specified.
 
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getRule" data-link-title="getRule">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L12">
         Function <strong>getRule</strong>
     </a>
 </h3>
@@ -46,7 +186,7 @@ block_external_search_index: true
 Use this data source to get information about a Google IAM Role.
 
 <h3 class="pdoc-module-header" id="getTestablePermissions" data-link-title="getTestablePermissions">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L12">
         Function <strong>getTestablePermissions</strong>
     </a>
 </h3>
@@ -60,7 +200,7 @@ Retrieve a list of testable permissions for a resource. Testable permissions mea
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetRuleArgs" data-link-title="GetRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L28">
         interface <strong>GetRuleArgs</strong>
     </a>
 </h3>
@@ -70,7 +210,7 @@ Retrieve a list of testable permissions for a resource. Testable permissions mea
 A collection of arguments for invoking getRule.
 
 <h4 class="pdoc-member-header" id="GetRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L32">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L32">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -78,7 +218,7 @@ A collection of arguments for invoking getRule.
 The name of the Role to lookup in the form `roles/{ROLE_NAME}`, `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` or `projects/{PROJECT_ID}/roles/{ROLE_NAME}`
 
 <h3 class="pdoc-module-header" id="GetRuleResult" data-link-title="GetRuleResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L38">
         interface <strong>GetRuleResult</strong>
     </a>
 </h3>
@@ -88,7 +228,7 @@ The name of the Role to lookup in the form `roles/{ROLE_NAME}`, `organizations/{
 A collection of values returned by getRule.
 
 <h4 class="pdoc-member-header" id="GetRuleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -96,7 +236,7 @@ A collection of values returned by getRule.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRuleResult-includedPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L46">property <b>includedPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L46">property <b>includedPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedPermissions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -104,12 +244,12 @@ The provider-assigned unique ID for this managed resource.
 specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
 
 <h4 class="pdoc-member-header" id="GetRuleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L47">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRuleResult-stage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L51">property <b>stage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L51">property <b>stage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -117,7 +257,7 @@ specifies the list of one or more permissions to include in the custom role, suc
 indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
 
 <h4 class="pdoc-member-header" id="GetRuleResult-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getRule.ts#L55">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getRule.ts#L55">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -125,7 +265,7 @@ indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `
 is a friendly title for the role, such as "Role Viewer"
 
 <h3 class="pdoc-module-header" id="GetTestablePermissionsArgs" data-link-title="GetTestablePermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L30">
         interface <strong>GetTestablePermissionsArgs</strong>
     </a>
 </h3>
@@ -135,7 +275,7 @@ is a friendly title for the role, such as "Role Viewer"
 A collection of arguments for invoking getTestablePermissions.
 
 <h4 class="pdoc-member-header" id="GetTestablePermissionsArgs-customSupportLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L34">property <b>customSupportLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L34">property <b>customSupportLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customSupportLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -143,7 +283,7 @@ A collection of arguments for invoking getTestablePermissions.
 The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
 
 <h4 class="pdoc-member-header" id="GetTestablePermissionsArgs-fullResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L38">property <b>fullResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L38">property <b>fullResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullResourceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -151,7 +291,7 @@ The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPOR
 See [full resource name documentation](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more detail.
 
 <h4 class="pdoc-member-header" id="GetTestablePermissionsArgs-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L42">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L42">property <b>stages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -159,7 +299,7 @@ See [full resource name documentation](https://cloud.google.com/apis/design/reso
 The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `["GA", "BETA"]` for example. Can be a list of `"ALPHA"`, `"BETA"`, `"GA"`, `"DEPRECATED"`. Default is `["GA"]`.
 
 <h3 class="pdoc-module-header" id="GetTestablePermissionsResult" data-link-title="GetTestablePermissionsResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L48">
         interface <strong>GetTestablePermissionsResult</strong>
     </a>
 </h3>
@@ -169,7 +309,7 @@ The acceptable release stages of the permission in the output. Note that `BETA` 
 A collection of values returned by getTestablePermissions.
 
 <h4 class="pdoc-member-header" id="GetTestablePermissionsResult-customSupportLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L52">property <b>customSupportLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L52">property <b>customSupportLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customSupportLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -177,12 +317,12 @@ A collection of values returned by getTestablePermissions.
 The the support level of this permission for custom roles.
 
 <h4 class="pdoc-member-header" id="GetTestablePermissionsResult-fullResourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L53">property <b>fullResourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L53">property <b>fullResourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullResourceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTestablePermissionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -190,7 +330,7 @@ The the support level of this permission for custom roles.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTestablePermissionsResult-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L61">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L61">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetTestablePermissionsPermission'>GetTestablePermissionsPermission</a>[];</code></pre>
@@ -198,7 +338,137 @@ The provider-assigned unique ID for this managed resource.
 A list of permissions matching the provided input. Structure is defined below.
 
 <h4 class="pdoc-member-header" id="GetTestablePermissionsResult-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/392523e57a3e8f1656dce673bd0ce66ebb8dc12e/sdk/nodejs/iam/getTestablePermissions.ts#L62">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/getTestablePermissions.ts#L62">property <b>stages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+<h3 class="pdoc-module-header" id="WorkloadIdentityPoolArgs" data-link-title="WorkloadIdentityPoolArgs">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L162">
+        interface <strong>WorkloadIdentityPoolArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>WorkloadIdentityPoolArgs</span></code></pre>
+
+The set of arguments for constructing a WorkloadIdentityPool resource.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolArgs-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L166">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A description of the pool. Cannot exceed 256 characters.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolArgs-disabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L172">property <b>disabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
+existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+access again.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolArgs-displayName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L176">property <b>displayName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A display name for the pool. Cannot exceed 32 characters.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolArgs-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L181">property <b>project</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolArgs-workloadIdentityPoolId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L187">property <b>workloadIdentityPoolId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>workloadIdentityPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID to use for the pool, which becomes the final component of the resource name. This
+value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
+`gcp-` is reserved for use by Google, and may not be specified.
+
+<h3 class="pdoc-module-header" id="WorkloadIdentityPoolState" data-link-title="WorkloadIdentityPoolState">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L119">
+        interface <strong>WorkloadIdentityPoolState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>WorkloadIdentityPoolState</span></code></pre>
+
+Input properties used for looking up and filtering WorkloadIdentityPool resources.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolState-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L123">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A description of the pool. Cannot exceed 256 characters.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolState-disabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L129">property <b>disabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
+existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+access again.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolState-displayName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L133">property <b>displayName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A display name for the pool. Cannot exceed 32 characters.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L137">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource name of the pool as 'projects/<projectnumber>/locations/global/workloadIdentityPools/<id>'.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolState-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L142">property <b>project</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolState-state">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L150">property <b>state</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The state of the pool. STATE_UNSPECIFIED: State unspecified. ACTIVE: The pool is active, and may be used in Google Cloud
+policies. DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30 days. You
+can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted pool until
+it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing tokens to
+access resources. If the pool is undeleted, existing tokens grant access again.
+
+<h4 class="pdoc-member-header" id="WorkloadIdentityPoolState-workloadIdentityPoolId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/iam/workloadIdentityPool.ts#L156">property <b>workloadIdentityPoolId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>workloadIdentityPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID to use for the pool, which becomes the final component of the resource name. This
+value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
+`gcp-` is reserved for use by Google, and may not be specified.
+
