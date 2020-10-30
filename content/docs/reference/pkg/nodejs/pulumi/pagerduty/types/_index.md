@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/pagerduty | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/pagerduty package."
-git_sha: "49956609579c4d787eefd7e91dd815cf0d228647"
+git_sha: "99698164245a320c23412200464f9accb4efea2e"
 block_external_search_index: true
 ---
 
