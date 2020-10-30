@@ -109,6 +109,8 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="resourcegroups/" title="resourcegroups"><span class="symbol module"></span>resourcegroups</a></li>
     <li><a href="route53/" title="route53"><span class="symbol module"></span>route53</a></li>
     <li><a href="s3/" title="s3"><span class="symbol module"></span>s3</a></li>
+    <li><a href="s3control/" title="s3control"><span class="symbol module"></span>s3control</a></li>
+    <li><a href="s3outposts/" title="s3outposts"><span class="symbol module"></span>s3outposts</a></li>
     <li><a href="sagemaker/" title="sagemaker"><span class="symbol module"></span>sagemaker</a></li>
     <li><a href="secretsmanager/" title="secretsmanager"><span class="symbol module"></span>secretsmanager</a></li>
     <li><a href="securityhub/" title="securityhub"><span class="symbol module"></span>securityhub</a></li>
@@ -166,7 +168,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.10.1</dd>
+	<dd>3.11.0</dd>
 </dl>
 
 

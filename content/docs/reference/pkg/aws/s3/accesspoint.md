@@ -16,7 +16,7 @@ Provides a resource to manage an S3 Access Point.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Basic Usage
+### AWS Partition Bucket
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -91,7 +91,7 @@ const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {bucket:
 
 {{% /example %}}
 
-### Access Point Restricted to a VPC
+### S3 on Outposts Bucket
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -101,8 +101,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+        var exampleBucket = new Aws.S3Control.Bucket("exampleBucket", new Aws.S3Control.BucketArgs
         {
+            Bucket = "example",
         });
         var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
         {
@@ -110,7 +111,7 @@ class MyStack : Stack
         });
         var exampleAccessPoint = new Aws.S3.AccessPoint("exampleAccessPoint", new Aws.S3.AccessPointArgs
         {
-            Bucket = exampleBucket.Id,
+            Bucket = exampleBucket.Arn,
             VpcConfiguration = new Aws.S3.Inputs.AccessPointVpcConfigurationArgs
             {
                 VpcId = exampleVpc.Id,
@@ -130,12 +131,15 @@ package main
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3control"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+		exampleBucket, err := s3control.NewBucket(ctx, "exampleBucket", &s3control.BucketArgs{
+			Bucket: pulumi.String("example"),
+		})
 		if err != nil {
 			return err
 		}
@@ -146,7 +150,7 @@ func main() {
 			return err
 		}
 		_, err = s3.NewAccessPoint(ctx, "exampleAccessPoint", &s3.AccessPointArgs{
-			Bucket: exampleBucket.ID(),
+			Bucket: exampleBucket.Arn,
 			VpcConfiguration: &s3.AccessPointVpcConfigurationArgs{
 				VpcId: exampleVpc.ID(),
 			},
@@ -166,10 +170,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example_bucket = aws.s3.Bucket("exampleBucket")
+example_bucket = aws.s3control.Bucket("exampleBucket", bucket="example")
 example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.0.0.0/16")
 example_access_point = aws.s3.AccessPoint("exampleAccessPoint",
-    bucket=example_bucket.id,
+    bucket=example_bucket.arn,
     vpc_configuration=aws.s3.AccessPointVpcConfigurationArgs(
         vpc_id=example_vpc.id,
     ))
@@ -183,10 +187,10 @@ example_access_point = aws.s3.AccessPoint("exampleAccessPoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+const exampleBucket = new aws.s3control.Bucket("exampleBucket", {bucket: "example"});
 const exampleVpc = new aws.ec2.Vpc("exampleVpc", {cidrBlock: "10.0.0.0/16"});
 const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {
-    bucket: exampleBucket.id,
+    bucket: exampleBucket.arn,
     vpcConfiguration: {
         vpcId: exampleVpc.id,
     },
@@ -387,7 +391,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
+    <dd>{{% md %}}The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -442,7 +446,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -460,7 +464,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
+    <dd>{{% md %}}The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -515,7 +519,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -533,7 +537,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
+    <dd>{{% md %}}The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -588,7 +592,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -606,7 +610,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
+    <dd>{{% md %}}The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -661,7 +665,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1087,7 +1091,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
+    <dd>{{% md %}}The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +1169,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1205,7 +1209,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
+    <dd>{{% md %}}The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1283,7 +1287,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1323,7 +1327,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
+    <dd>{{% md %}}The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1401,7 +1405,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1441,7 +1445,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
+    <dd>{{% md %}}The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1519,7 +1523,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    <dd>{{% md %}}Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
