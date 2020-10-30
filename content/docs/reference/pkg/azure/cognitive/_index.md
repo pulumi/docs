@@ -14,6 +14,11 @@ Explore the resources and functions of the cognitive module in the Azure package
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,7 +28,7 @@ Explore the resources and functions of the cognitive module in the Azure package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.28.0</dd>
+	<dd>3.29.0</dd>
 </dl>
 
 

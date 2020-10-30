@@ -12,6 +12,121 @@ meta_desc: "Explore the HostPool resource of the desktopvirtualization module, i
 
 Manages a Virtual Desktop Host Pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleHostPool = new Azure.DesktopVirtualization.HostPool("exampleHostPool", new Azure.DesktopVirtualization.HostPoolArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            FriendlyName = "pooleddepthfirst",
+            ValidateEnvironment = true,
+            Description = "Acceptance Test: A pooled host pool - pooleddepthfirst",
+            Type = "Pooled",
+            MaximumSessionsAllowed = 50,
+            LoadBalancerType = "DepthFirst",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/desktopvirtualization"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = desktopvirtualization.NewHostPool(ctx, "exampleHostPool", &desktopvirtualization.HostPoolArgs{
+			Location:               exampleResourceGroup.Location,
+			ResourceGroupName:      exampleResourceGroup.Name,
+			FriendlyName:           pulumi.String("pooleddepthfirst"),
+			ValidateEnvironment:    pulumi.Bool(true),
+			Description:            pulumi.String("Acceptance Test: A pooled host pool - pooleddepthfirst"),
+			Type:                   pulumi.String("Pooled"),
+			MaximumSessionsAllowed: pulumi.Int(50),
+			LoadBalancerType:       pulumi.String("DepthFirst"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_host_pool = azure.desktopvirtualization.HostPool("exampleHostPool",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    friendly_name="pooleddepthfirst",
+    validate_environment=True,
+    description="Acceptance Test: A pooled host pool - pooleddepthfirst",
+    type="Pooled",
+    maximum_sessions_allowed=50,
+    load_balancer_type="DepthFirst")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleHostPool = new azure.desktopvirtualization.HostPool("exampleHostPool", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    friendlyName: "pooleddepthfirst",
+    validateEnvironment: true,
+    description: "Acceptance Test: A pooled host pool - pooleddepthfirst",
+    type: "Pooled",
+    maximumSessionsAllowed: 50,
+    loadBalancerType: "DepthFirst",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HostPool Resource {#create}
@@ -275,7 +390,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host. 
+    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host.
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 {{% /md %}}</dd>
 
@@ -300,7 +415,7 @@ forces a new resource to be created.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`Automatic` assignment – The service will select an available host and assign it to an user.
-`Direct` Assisnment – Admin selects a specific host to assign to an user.
+`Direct` Assignment – Admin selects a specific host to assign to an user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -434,7 +549,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host. 
+    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host.
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 {{% /md %}}</dd>
 
@@ -459,7 +574,7 @@ forces a new resource to be created.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`Automatic` assignment – The service will select an available host and assign it to an user.
-`Direct` Assisnment – Admin selects a specific host to assign to an user.
+`Direct` Assignment – Admin selects a specific host to assign to an user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -593,7 +708,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host. 
+    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host.
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 {{% /md %}}</dd>
 
@@ -618,7 +733,7 @@ forces a new resource to be created.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`Automatic` assignment – The service will select an available host and assign it to an user.
-`Direct` Assisnment – Admin selects a specific host to assign to an user.
+`Direct` Assignment – Admin selects a specific host to assign to an user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -752,7 +867,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host. 
+    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host.
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 {{% /md %}}</dd>
 
@@ -777,7 +892,7 @@ forces a new resource to be created.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`Automatic` assignment – The service will select an available host and assign it to an user.
-`Direct` Assisnment – Admin selects a specific host to assign to an user.
+`Direct` Assignment – Admin selects a specific host to assign to an user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1092,7 +1207,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host. 
+    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host.
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 {{% /md %}}</dd>
 
@@ -1117,7 +1232,7 @@ forces a new resource to be created.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`Automatic` assignment – The service will select an available host and assign it to an user.
-`Direct` Assisnment – Admin selects a specific host to assign to an user.
+`Direct` Assignment – Admin selects a specific host to assign to an user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1251,7 +1366,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host. 
+    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host.
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 {{% /md %}}</dd>
 
@@ -1276,7 +1391,7 @@ forces a new resource to be created.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`Automatic` assignment – The service will select an available host and assign it to an user.
-`Direct` Assisnment – Admin selects a specific host to assign to an user.
+`Direct` Assignment – Admin selects a specific host to assign to an user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1410,7 +1525,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host. 
+    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host.
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 {{% /md %}}</dd>
 
@@ -1435,7 +1550,7 @@ forces a new resource to be created.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`Automatic` assignment – The service will select an available host and assign it to an user.
-`Direct` Assisnment – Admin selects a specific host to assign to an user.
+`Direct` Assignment – Admin selects a specific host to assign to an user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1569,7 +1684,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host. 
+    <dd>{{% md %}}A valid integer value from 0 to 999999 for the maximum number of users that have concurrent sessions on a session host.
 Should only be set if the `type` of your Virtual Desktop Host Pool is `Pooled`.
 {{% /md %}}</dd>
 
@@ -1594,7 +1709,7 @@ forces a new resource to be created.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`Automatic` assignment – The service will select an available host and assign it to an user.
-`Direct` Assisnment – Admin selects a specific host to assign to an user.
+`Direct` Assignment – Admin selects a specific host to assign to an user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1728,7 +1843,8 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The registration token generated by the Virtual Desktop Host Pool.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1766,7 +1882,8 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The registration token generated by the Virtual Desktop Host Pool.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1804,7 +1921,8 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The registration token generated by the Virtual Desktop Host Pool.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1842,7 +1960,8 @@ a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The registration token generated by the Virtual Desktop Host Pool.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

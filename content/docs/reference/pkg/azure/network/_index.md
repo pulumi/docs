@@ -62,6 +62,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="virtualwan" title="VirtualWan"><span class="symbol resource"></span>VirtualWan</a></li>
     <li><a href="vpngateway" title="VpnGateway"><span class="symbol resource"></span>VpnGateway</a></li>
     <li><a href="vpnserverconfiguration" title="VpnServerConfiguration"><span class="symbol resource"></span>VpnServerConfiguration</a></li>
+    <li><a href="vpnsite" title="VpnSite"><span class="symbol resource"></span>VpnSite</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -99,7 +100,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.28.0</dd>
+	<dd>3.29.0</dd>
 </dl>
 
 

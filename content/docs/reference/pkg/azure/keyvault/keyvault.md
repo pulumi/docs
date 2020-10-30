@@ -56,6 +56,7 @@ class MyStack : Stack
                     KeyPermissions = 
                     {
                         "get",
+                        "ManageContacts",
                     },
                     SecretPermissions = 
                     {
@@ -71,6 +72,15 @@ class MyStack : Stack
             {
                 DefaultAction = "Deny",
                 Bypass = "AzureServices",
+            },
+            Contacts = 
+            {
+                new Azure.KeyVault.Inputs.KeyVaultContactArgs
+                {
+                    Email = "example@example.com",
+                    Name = "example",
+                    Phone = "0123456789",
+                },
             },
             Tags = 
             {
@@ -121,6 +131,7 @@ func main() {
 					ObjectId: pulumi.String(current.ObjectId),
 					KeyPermissions: pulumi.StringArray{
 						pulumi.String("get"),
+						pulumi.String("ManageContacts"),
 					},
 					SecretPermissions: pulumi.StringArray{
 						pulumi.String("get"),
@@ -133,6 +144,13 @@ func main() {
 			NetworkAcls: &keyvault.KeyVaultNetworkAclsArgs{
 				DefaultAction: pulumi.String("Deny"),
 				Bypass:        pulumi.String("AzureServices"),
+			},
+			Contacts: keyvault.KeyVaultContactArray{
+				&keyvault.KeyVaultContactArgs{
+					Email: pulumi.String("example@example.com"),
+					Name:  pulumi.String("example"),
+					Phone: pulumi.String("0123456789"),
+				},
 			},
 			Tags: pulumi.StringMap{
 				"environment": pulumi.String("Testing"),
@@ -167,7 +185,10 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
     access_policies=[azure.keyvault.KeyVaultAccessPolicyArgs(
         tenant_id=current.tenant_id,
         object_id=current.object_id,
-        key_permissions=["get"],
+        key_permissions=[
+            "get",
+            "ManageContacts",
+        ],
         secret_permissions=["get"],
         storage_permissions=["get"],
     )],
@@ -175,6 +196,11 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
         default_action="Deny",
         bypass="AzureServices",
     ),
+    contacts=[azure.keyvault.KeyVaultContactArgs(
+        email="example@example.com",
+        name="example",
+        phone="0123456789",
+    )],
     tags={
         "environment": "Testing",
     })
@@ -202,7 +228,10 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     accessPolicies: [{
         tenantId: current.then(current => current.tenantId),
         objectId: current.then(current => current.objectId),
-        keyPermissions: ["get"],
+        keyPermissions: [
+            "get",
+            "ManageContacts",
+        ],
         secretPermissions: ["get"],
         storagePermissions: ["get"],
     }],
@@ -210,6 +239,11 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
         defaultAction: "Deny",
         bypass: "AzureServices",
     },
+    contacts: [{
+        email: "example@example.com",
+        name: "example",
+        phone: "0123456789",
+    }],
     tags: {
         environment: "Testing",
     },
@@ -230,7 +264,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.KeyVault">KeyVault</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">enable_rbac_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[KeyVaultNetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">soft_delete_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.KeyVault">KeyVault</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultContactArgs]]</span> = None<span class="p">, </span><span class="nx">enable_rbac_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[KeyVaultNetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">soft_delete_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -448,6 +482,17 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="contacts_csharp">
+<a href="#contacts_csharp" style="color: inherit; text-decoration: inherit;">Contacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontact">List&lt;Key<wbr>Vault<wbr>Contact<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `contact` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablerbacauthorization_csharp">
 <a href="#enablerbacauthorization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rbac<wbr>Authorization</a>
 </span> 
@@ -616,6 +661,17 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#keyvaultaccesspolicy">[]Key<wbr>Vault<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contacts_go">
+<a href="#contacts_go" style="color: inherit; text-decoration: inherit;">Contacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontact">[]Key<wbr>Vault<wbr>Contact</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -792,6 +848,17 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="contacts_nodejs">
+<a href="#contacts_nodejs" style="color: inherit; text-decoration: inherit;">contacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontact">Key<wbr>Vault<wbr>Contact[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `contact` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablerbacauthorization_nodejs">
 <a href="#enablerbacauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rbac<wbr>Authorization</a>
 </span> 
@@ -960,6 +1027,17 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#keyvaultaccesspolicy">Sequence[Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contacts_python">
+<a href="#contacts_python" style="color: inherit; text-decoration: inherit;">contacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontact">Sequence[Key<wbr>Vault<wbr>Contact<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1226,7 +1304,7 @@ Get an existing KeyVault resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">enable_rbac_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[KeyVaultNetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">soft_delete_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyVault</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultContactArgs]]</span> = None<span class="p">, </span><span class="nx">enable_rbac_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[KeyVaultNetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">soft_delete_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyVault</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1349,6 +1427,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#keyvaultaccesspolicy">List&lt;Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_contacts_csharp">
+<a href="#state_contacts_csharp" style="color: inherit; text-decoration: inherit;">Contacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontact">List&lt;Key<wbr>Vault<wbr>Contact<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1536,6 +1625,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_contacts_go">
+<a href="#state_contacts_go" style="color: inherit; text-decoration: inherit;">Contacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontact">[]Key<wbr>Vault<wbr>Contact</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `contact` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enablerbacauthorization_go">
 <a href="#state_enablerbacauthorization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rbac<wbr>Authorization</a>
 </span> 
@@ -1719,6 +1819,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_contacts_nodejs">
+<a href="#state_contacts_nodejs" style="color: inherit; text-decoration: inherit;">contacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontact">Key<wbr>Vault<wbr>Contact[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `contact` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enablerbacauthorization_nodejs">
 <a href="#state_enablerbacauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rbac<wbr>Authorization</a>
 </span> 
@@ -1898,6 +2009,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#keyvaultaccesspolicy">Sequence[Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_contacts_python">
+<a href="#state_contacts_python" style="color: inherit; text-decoration: inherit;">contacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultcontact">Sequence[Key<wbr>Vault<wbr>Contact<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2425,6 +2547,184 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="keyvaultcontact">Key<wbr>Vault<wbr>Contact</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultContact">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultContact">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#KeyVaultContactArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#KeyVaultContactOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.KeyVaultContactArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.KeyVaultContact.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}E-mail address of the contact.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the contact.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="phone_csharp">
+<a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Phone number of the contact.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}E-mail address of the contact.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the contact.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="phone_go">
+<a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Phone number of the contact.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}E-mail address of the contact.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the contact.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="phone_nodejs">
+<a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Phone number of the contact.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}E-mail address of the contact.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the contact.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="phone_python">
+<a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Phone number of the contact.
 {{% /md %}}</dd>
 
 </dl>

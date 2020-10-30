@@ -519,7 +519,8 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizationservertokenbodyparameter">List&lt;Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `token_body_parameter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -734,7 +735,8 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizationservertokenbodyparameter">[]Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `token_body_parameter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -949,7 +951,8 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizationservertokenbodyparameter">Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `token_body_parameter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1164,7 +1167,8 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizationservertokenbodyparameter">Sequence[Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `token_body_parameter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1585,7 +1589,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizationservertokenbodyparameter">List&lt;Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `token_body_parameter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1800,7 +1805,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizationservertokenbodyparameter">[]Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `token_body_parameter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2015,7 +2021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizationservertokenbodyparameter">Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `token_body_parameter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2230,7 +2237,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizationservertokenbodyparameter">Sequence[Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `token_body_parameter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
