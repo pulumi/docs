@@ -306,7 +306,7 @@ export const vpcPublicSubnetIds = vpc.publicSubnetIds;
 The `subnets` argument simply takes an array of subnet specifications. Each one can include this information:
 
 * `type`: A required type of subnet to create. There are three kinds available:
-    * A `public` subnet is is one whose traffic is routed to an
+    * A `public` subnet is one whose traffic is routed to an
     [Internet Gateway (IGW)](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
     * A `private` subnet is one that is configured to use a
     [NAT Gateway (NAT)](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html) so that it can reach the internet,
