@@ -1,0 +1,40 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Pulumi Podcasts</title>
+        <link>https://www.apple.com/itunes/podcasts/</link>
+        <language>en-us</language>
+        <copyright>&#169; 2020 Pulumi Corporation</copyright>
+        <itunes:author>Pulumi</itunes:author>
+        <description>
+            Some really great words to describe Pulumi's excellent podcasts.
+        </description>
+        <itunes:owner>
+            <itunes:name>Pulumi</itunes:name>
+            <itunes:email>mktgops+podcast@pulumi.com</itunes:email>
+        </itunes:owner>
+        <itunes:image
+            href="https://applehosted.podcasts.apple.com/hiking_treks/artwork.png"
+        />
+        <itunes:category text="Technology"></itunes:category>
+        <itunes:explicit>false</itunes:explicit>
+    </channel>
+    {{ range where $.Site.Pages "Type" "webinars" }}
+        {{ if isset .Params.main "podcast_url" }}
+            {{ $podcastGuid := md5 (printf "%s_%s" .Params.title .Params.main.sortable_date) }}
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                <itunes:title>{{ .Params.title }}</itunes:title>
+                <description>{{ .Params.main.description }}</description>
+                <enclosure
+                    type="audio/mpeg"
+                    url="{{ (printf "%s/%s/%s" "resources" .Params.url_slug .Params.main.podcast_url) | absURL }}"
+                />
+                <guid>{{ $podcastGuid }}</guid>
+                <pubDate>{{ .Params.main.sortable_date }}</pubDate>
+                <itunes:duration>{{ .Params.main.duration }}</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+            </item>
+        {{ end }}
+    {{ end }}
+</rss>

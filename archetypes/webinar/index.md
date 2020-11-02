@@ -55,6 +55,8 @@ main:
     title: ""
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
+    # URL for creating a listing in our podcast XML feed.
+    podcast_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-02-05T10:00:00-07:00
     # Duration of the webinar.
@@ -72,6 +74,10 @@ main:
     # A bullet point list containing what the user will learn during the webinar.
     learn:
         - ""
+
+# This section contains the transcript for a video. It is optional.
+transcript: |
+    Here is where you would put the transcrip to a recorded video.
 
 # The right hand side form section.
 form:
