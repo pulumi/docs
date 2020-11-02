@@ -124,4 +124,4 @@ function getQueryVariable(variable) {
             '    <span slot="content">This property is required.</span>' +
             '</pulumi-tooltip>'
         );
-}(jQuery));
+})(jQuery);
