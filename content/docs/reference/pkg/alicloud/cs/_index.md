@@ -13,6 +13,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="edgekubernetes" title="EdgeKubernetes"><span class="symbol resource"></span>EdgeKubernetes</a></li>
     <li><a href="kubernetes" title="Kubernetes"><span class="symbol resource"></span>Kubernetes</a></li>
     <li><a href="kubernetesautoscaler" title="KubernetesAutoscaler"><span class="symbol resource"></span>KubernetesAutoscaler</a></li>
     <li><a href="managedkubernetes" title="ManagedKubernetes"><span class="symbol resource"></span>ManagedKubernetes</a></li>
@@ -26,6 +27,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getedgekubernetesclusters" title="GetEdgeKubernetesClusters"><span class="symbol function"></span>GetEdgeKubernetesClusters</a></li>
     <li><a href="getkubernetesclusters" title="GetKubernetesClusters"><span class="symbol function"></span>GetKubernetesClusters</a></li>
     <li><a href="getmanagedkubernetesclusters" title="GetManagedKubernetesClusters"><span class="symbol function"></span>GetManagedKubernetesClusters</a></li>
     <li><a href="getregistryenterpriseinstances" title="GetRegistryEnterpriseInstances"><span class="symbol function"></span>GetRegistryEnterpriseInstances</a></li>
@@ -44,7 +46,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.24.0</dd>
+	<dd>2.25.0</dd>
 </dl>
 
 

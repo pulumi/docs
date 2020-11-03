@@ -3,7 +3,7 @@ title: "Module nas"
 title_tag: "Module nas | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "nas"
 meta_desc: "Explore members of the nas module in the @pulumi/alicloud package."
-git_sha: "c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b"
+git_sha: "9ec8f284726861e94f025996ae4b75d2cbc8f5cd"
 block_external_search_index: true
 ---
 
@@ -60,7 +60,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AccessGroup" data-link-title="AccessGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L43">
         Resource <strong>AccessGroup</strong>
     </a>
 </h3>
@@ -103,7 +103,7 @@ const foo = new alicloud.nas.AccessGroup("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="AccessGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -117,7 +117,7 @@ Create a AccessGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccessGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -128,14 +128,14 @@ Get an existing AccessGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccessGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccessGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -146,7 +146,7 @@ Returns true if the given object is an instance of AccessGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccessGroup-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L74">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L74">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A Name of one Access Group.
 
 <h4 class="pdoc-member-header" id="AccessGroup-accessGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L78">property <b>accessGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L78">property <b>accessGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessGroupType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ A Name of one Access Group.
 A Type of one Access Group. Valid values: `Vpc` and `Classic`.
 
 <h4 class="pdoc-member-header" id="AccessGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L82">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ A Type of one Access Group. Valid values: `Vpc` and `Classic`.
 The Access Group description.
 
 <h4 class="pdoc-member-header" id="AccessGroup-fileSystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L86">property <b>fileSystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L86">property <b>fileSystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fileSystemType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ The Access Group description.
 The type of file system. Valid values: `standard` and `extreme`. Default to `standard`. Note that the extreme only support Vpc Network.
 
 <h4 class="pdoc-member-header" id="AccessGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -187,7 +187,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccessGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ deployments and may be missing (undefined) during planning phases.
 Replaced by `accessGroupName` after version 1.92.0.
 
 <h4 class="pdoc-member-header" id="AccessGroup-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L94">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L94">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ Replaced by `accessGroupName` after version 1.92.0.
 Replaced by `accessGroupType` after version 1.92.0.
 
 <h4 class="pdoc-member-header" id="AccessGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -212,7 +212,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AccessRule" data-link-title="AccessRule">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L35">
         Resource <strong>AccessRule</strong>
     </a>
 </h3>
@@ -247,7 +247,7 @@ const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
 ```
 
 <h4 class="pdoc-member-header" id="AccessRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -261,7 +261,7 @@ Create a AccessRule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccessRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -272,14 +272,14 @@ Get an existing AccessRule resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccessRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccessRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -290,7 +290,7 @@ Returns true if the given object is an instance of AccessRule.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccessRule-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L66">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L66">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Permission group name.
 
 <h4 class="pdoc-member-header" id="AccessRule-accessRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L70">property <b>accessRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L70">property <b>accessRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ Permission group name.
 The nas access rule ID.
 
 <h4 class="pdoc-member-header" id="AccessRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -315,7 +315,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccessRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L74">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L74">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ deployments and may be missing (undefined) during planning phases.
 Priority level. Range: 1-100. Default value: 1.
 
 <h4 class="pdoc-member-header" id="AccessRule-rwAccessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L78">property <b>rwAccessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L78">property <b>rwAccessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rwAccessType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -331,7 +331,7 @@ Priority level. Range: 1-100. Default value: 1.
 Read-write permission type: RDWR (default), RDONLY.
 
 <h4 class="pdoc-member-header" id="AccessRule-sourceCidrIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L82">property <b>sourceCidrIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L82">property <b>sourceCidrIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCidrIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ Read-write permission type: RDWR (default), RDONLY.
 Address or address segment.
 
 <h4 class="pdoc-member-header" id="AccessRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -348,7 +348,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AccessRule-userAccessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L86">property <b>userAccessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L86">property <b>userAccessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userAccessType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -356,7 +356,7 @@ deployments.
 User permission type: noSquash (default), root_squash, all_squash.
 
 <h3 class="pdoc-module-header" id="FileSystem" data-link-title="FileSystem">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L31">
         Resource <strong>FileSystem</strong>
     </a>
 </h3>
@@ -387,7 +387,7 @@ const foo = new alicloud.nas.FileSystem("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="FileSystem-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -401,7 +401,7 @@ Create a FileSystem resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FileSystem-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -412,14 +412,14 @@ Get an existing FileSystem resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FileSystem-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FileSystem-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -430,7 +430,7 @@ Returns true if the given object is an instance of FileSystem.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FileSystem-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The File System description.
 
 <h4 class="pdoc-member-header" id="FileSystem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -447,7 +447,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FileSystem-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L66">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L66">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocolType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -455,7 +455,7 @@ deployments and may be missing (undefined) during planning phases.
 The Protocol Type of a File System. Valid values: `NFS` and `SMB`.
 
 <h4 class="pdoc-member-header" id="FileSystem-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L70">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L70">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -463,7 +463,7 @@ The Protocol Type of a File System. Valid values: `NFS` and `SMB`.
 The Storage Type of a File System. Valid values: `Capacity` and `Performance`.
 
 <h4 class="pdoc-member-header" id="FileSystem-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -472,7 +472,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MountTarget" data-link-title="MountTarget">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L43">
         Resource <strong>MountTarget</strong>
     </a>
 </h3>
@@ -515,7 +515,7 @@ const exampleMountTarget = new alicloud.nas.MountTarget("exampleMountTarget", {
 ```
 
 <h4 class="pdoc-member-header" id="MountTarget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -529,7 +529,7 @@ Create a MountTarget resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MountTarget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -540,14 +540,14 @@ Get an existing MountTarget resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MountTarget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MountTarget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -558,7 +558,7 @@ Returns true if the given object is an instance of MountTarget.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MountTarget-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L74">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L74">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the permission group that applies to the mount target.
 
 <h4 class="pdoc-member-header" id="MountTarget-fileSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L78">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L78">property <b>fileSystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fileSystemId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ The name of the permission group that applies to the mount target.
 The ID of the file system.
 
 <h4 class="pdoc-member-header" id="MountTarget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -583,7 +583,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MountTarget-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L82">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L82">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of security group.
 
 <h4 class="pdoc-member-header" id="MountTarget-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L86">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L86">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ The ID of security group.
 Whether the MountTarget is active. The status of the mount target. Valid values: `Active` and `Inactive`, Default value is `Active`. Before you mount a file system, make sure that the mount target is in the Active state.
 
 <h4 class="pdoc-member-header" id="MountTarget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -608,7 +608,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="MountTarget-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L90">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L90">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -618,7 +618,7 @@ The ID of the VSwitch in the VPC where the mount target resides.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccessGroups" data-link-title="getAccessGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L28">
         Function <strong>getAccessGroups</strong>
     </a>
 </h3>
@@ -646,7 +646,7 @@ export const alicloudNasAccessGroupsId = example.then(example => example.groups[
 ```
 
 <h3 class="pdoc-module-header" id="getAccessRules" data-link-title="getAccessRules">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L30">
         Function <strong>getAccessRules</strong>
     </a>
 </h3>
@@ -676,7 +676,7 @@ export const alicloudNasAccessRulesId = foo.rules[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getFileSystems" data-link-title="getFileSystems">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L28">
         Function <strong>getFileSystems</strong>
     </a>
 </h3>
@@ -704,7 +704,7 @@ export const alicloudNasFileSystemsId = fs.systems[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getMountTargets" data-link-title="getMountTargets">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L27">
         Function <strong>getMountTargets</strong>
     </a>
 </h3>
@@ -731,7 +731,7 @@ export const theFirstMountTargetDomain = example.then(example => example.targets
 ```
 
 <h3 class="pdoc-module-header" id="getProtocols" data-link-title="getProtocols">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L29">
         Function <strong>getProtocols</strong>
     </a>
 </h3>
@@ -760,7 +760,7 @@ export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 ```
 
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getService.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getService.ts#L27">
         Function <strong>getService</strong>
     </a>
 </h3>
@@ -789,7 +789,7 @@ const open = pulumi.output(alicloud.nas.getService({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccessGroupArgs" data-link-title="AccessGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L167">
         interface <strong>AccessGroupArgs</strong>
     </a>
 </h3>
@@ -799,7 +799,7 @@ const open = pulumi.output(alicloud.nas.getService({
 The set of arguments for constructing a AccessGroup resource.
 
 <h4 class="pdoc-member-header" id="AccessGroupArgs-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L171">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L171">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -807,7 +807,7 @@ The set of arguments for constructing a AccessGroup resource.
 A Name of one Access Group.
 
 <h4 class="pdoc-member-header" id="AccessGroupArgs-accessGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L175">property <b>accessGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L175">property <b>accessGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,7 +815,7 @@ A Name of one Access Group.
 A Type of one Access Group. Valid values: `Vpc` and `Classic`.
 
 <h4 class="pdoc-member-header" id="AccessGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L179">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L179">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -823,7 +823,7 @@ A Type of one Access Group. Valid values: `Vpc` and `Classic`.
 The Access Group description.
 
 <h4 class="pdoc-member-header" id="AccessGroupArgs-fileSystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L183">property <b>fileSystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L183">property <b>fileSystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -831,7 +831,7 @@ The Access Group description.
 The type of file system. Valid values: `standard` and `extreme`. Default to `standard`. Note that the extreme only support Vpc Network.
 
 <h4 class="pdoc-member-header" id="AccessGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -839,7 +839,7 @@ The type of file system. Valid values: `standard` and `extreme`. Default to `sta
 Replaced by `accessGroupName` after version 1.92.0.
 
 <h4 class="pdoc-member-header" id="AccessGroupArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L191">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L191">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +847,7 @@ Replaced by `accessGroupName` after version 1.92.0.
 Replaced by `accessGroupType` after version 1.92.0.
 
 <h3 class="pdoc-module-header" id="AccessGroupState" data-link-title="AccessGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L137">
         interface <strong>AccessGroupState</strong>
     </a>
 </h3>
@@ -857,7 +857,7 @@ Replaced by `accessGroupType` after version 1.92.0.
 Input properties used for looking up and filtering AccessGroup resources.
 
 <h4 class="pdoc-member-header" id="AccessGroupState-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L141">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L141">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -865,7 +865,7 @@ Input properties used for looking up and filtering AccessGroup resources.
 A Name of one Access Group.
 
 <h4 class="pdoc-member-header" id="AccessGroupState-accessGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L145">property <b>accessGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L145">property <b>accessGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -873,7 +873,7 @@ A Name of one Access Group.
 A Type of one Access Group. Valid values: `Vpc` and `Classic`.
 
 <h4 class="pdoc-member-header" id="AccessGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L149">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L149">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -881,7 +881,7 @@ A Type of one Access Group. Valid values: `Vpc` and `Classic`.
 The Access Group description.
 
 <h4 class="pdoc-member-header" id="AccessGroupState-fileSystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L153">property <b>fileSystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L153">property <b>fileSystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -889,7 +889,7 @@ The Access Group description.
 The type of file system. Valid values: `standard` and `extreme`. Default to `standard`. Note that the extreme only support Vpc Network.
 
 <h4 class="pdoc-member-header" id="AccessGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ The type of file system. Valid values: `standard` and `extreme`. Default to `sta
 Replaced by `accessGroupName` after version 1.92.0.
 
 <h4 class="pdoc-member-header" id="AccessGroupState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessGroup.ts#L161">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessGroup.ts#L161">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -905,7 +905,7 @@ Replaced by `accessGroupName` after version 1.92.0.
 Replaced by `accessGroupType` after version 1.92.0.
 
 <h3 class="pdoc-module-header" id="AccessRuleArgs" data-link-title="AccessRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L165">
         interface <strong>AccessRuleArgs</strong>
     </a>
 </h3>
@@ -915,7 +915,7 @@ Replaced by `accessGroupType` after version 1.92.0.
 The set of arguments for constructing a AccessRule resource.
 
 <h4 class="pdoc-member-header" id="AccessRuleArgs-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L169">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L169">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -923,7 +923,7 @@ The set of arguments for constructing a AccessRule resource.
 Permission group name.
 
 <h4 class="pdoc-member-header" id="AccessRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L173">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L173">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -931,7 +931,7 @@ Permission group name.
 Priority level. Range: 1-100. Default value: 1.
 
 <h4 class="pdoc-member-header" id="AccessRuleArgs-rwAccessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L177">property <b>rwAccessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L177">property <b>rwAccessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rwAccessType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -939,7 +939,7 @@ Priority level. Range: 1-100. Default value: 1.
 Read-write permission type: RDWR (default), RDONLY.
 
 <h4 class="pdoc-member-header" id="AccessRuleArgs-sourceCidrIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L181">property <b>sourceCidrIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L181">property <b>sourceCidrIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCidrIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -947,7 +947,7 @@ Read-write permission type: RDWR (default), RDONLY.
 Address or address segment.
 
 <h4 class="pdoc-member-header" id="AccessRuleArgs-userAccessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L185">property <b>userAccessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L185">property <b>userAccessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAccessType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -955,7 +955,7 @@ Address or address segment.
 User permission type: noSquash (default), root_squash, all_squash.
 
 <h3 class="pdoc-module-header" id="AccessRuleState" data-link-title="AccessRuleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L135">
         interface <strong>AccessRuleState</strong>
     </a>
 </h3>
@@ -965,7 +965,7 @@ User permission type: noSquash (default), root_squash, all_squash.
 Input properties used for looking up and filtering AccessRule resources.
 
 <h4 class="pdoc-member-header" id="AccessRuleState-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L139">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L139">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -973,7 +973,7 @@ Input properties used for looking up and filtering AccessRule resources.
 Permission group name.
 
 <h4 class="pdoc-member-header" id="AccessRuleState-accessRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L143">property <b>accessRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L143">property <b>accessRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -981,7 +981,7 @@ Permission group name.
 The nas access rule ID.
 
 <h4 class="pdoc-member-header" id="AccessRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L147">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L147">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -989,7 +989,7 @@ The nas access rule ID.
 Priority level. Range: 1-100. Default value: 1.
 
 <h4 class="pdoc-member-header" id="AccessRuleState-rwAccessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L151">property <b>rwAccessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L151">property <b>rwAccessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rwAccessType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -997,7 +997,7 @@ Priority level. Range: 1-100. Default value: 1.
 Read-write permission type: RDWR (default), RDONLY.
 
 <h4 class="pdoc-member-header" id="AccessRuleState-sourceCidrIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L155">property <b>sourceCidrIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L155">property <b>sourceCidrIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCidrIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1005,7 +1005,7 @@ Read-write permission type: RDWR (default), RDONLY.
 Address or address segment.
 
 <h4 class="pdoc-member-header" id="AccessRuleState-userAccessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/accessRule.ts#L159">property <b>userAccessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/accessRule.ts#L159">property <b>userAccessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAccessType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1013,7 +1013,7 @@ Address or address segment.
 User permission type: noSquash (default), root_squash, all_squash.
 
 <h3 class="pdoc-module-header" id="FileSystemArgs" data-link-title="FileSystemArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L131">
         interface <strong>FileSystemArgs</strong>
     </a>
 </h3>
@@ -1023,7 +1023,7 @@ User permission type: noSquash (default), root_squash, all_squash.
 The set of arguments for constructing a FileSystem resource.
 
 <h4 class="pdoc-member-header" id="FileSystemArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L135">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L135">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1031,7 +1031,7 @@ The set of arguments for constructing a FileSystem resource.
 The File System description.
 
 <h4 class="pdoc-member-header" id="FileSystemArgs-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L139">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L139">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ The File System description.
 The Protocol Type of a File System. Valid values: `NFS` and `SMB`.
 
 <h4 class="pdoc-member-header" id="FileSystemArgs-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L143">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L143">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1047,7 +1047,7 @@ The Protocol Type of a File System. Valid values: `NFS` and `SMB`.
 The Storage Type of a File System. Valid values: `Capacity` and `Performance`.
 
 <h3 class="pdoc-module-header" id="FileSystemState" data-link-title="FileSystemState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L113">
         interface <strong>FileSystemState</strong>
     </a>
 </h3>
@@ -1057,7 +1057,7 @@ The Storage Type of a File System. Valid values: `Capacity` and `Performance`.
 Input properties used for looking up and filtering FileSystem resources.
 
 <h4 class="pdoc-member-header" id="FileSystemState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L117">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L117">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1065,7 +1065,7 @@ Input properties used for looking up and filtering FileSystem resources.
 The File System description.
 
 <h4 class="pdoc-member-header" id="FileSystemState-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L121">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L121">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1073,7 +1073,7 @@ The File System description.
 The Protocol Type of a File System. Valid values: `NFS` and `SMB`.
 
 <h4 class="pdoc-member-header" id="FileSystemState-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/fileSystem.ts#L125">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/fileSystem.ts#L125">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ The Protocol Type of a File System. Valid values: `NFS` and `SMB`.
 The Storage Type of a File System. Valid values: `Capacity` and `Performance`.
 
 <h3 class="pdoc-module-header" id="GetAccessGroupsArgs" data-link-title="GetAccessGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L52">
         interface <strong>GetAccessGroupsArgs</strong>
     </a>
 </h3>
@@ -1091,7 +1091,7 @@ The Storage Type of a File System. Valid values: `Capacity` and `Performance`.
 A collection of arguments for invoking getAccessGroups.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsArgs-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L56">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L56">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1099,7 +1099,7 @@ A collection of arguments for invoking getAccessGroups.
 The name of access group.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsArgs-accessGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L60">property <b>accessGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L60">property <b>accessGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1107,7 +1107,7 @@ The name of access group.
 Filter results by a specific AccessGroupType.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1115,7 +1115,7 @@ Filter results by a specific AccessGroupType.
 Filter results by a specific Description.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsArgs-fileSystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L68">property <b>fileSystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L68">property <b>fileSystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1123,7 +1123,7 @@ Filter results by a specific Description.
 The type of file system. Valid values: `standard` and `extreme`. Default to `standard`.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L72">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L72">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1131,12 +1131,12 @@ The type of file system. Valid values: `standard` and `extreme`. Default to `sta
 A regex string to filter AccessGroups by name.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L73">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessGroupsArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L79">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L79">property <b>type</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1148,7 +1148,7 @@ Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field
 Field `type` has been deprecated from version 1.95.0. Use `accessGroupType` instead.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsArgs-useutcDateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L83">property <b>useutcDateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L83">property <b>useutcDateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useutcDateTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1156,7 +1156,7 @@ Field `type` has been deprecated from version 1.95.0. Use `accessGroupType` inst
 Specifies whether the time to return is in UTC. Valid values: true and false.
 
 <h3 class="pdoc-module-header" id="GetAccessGroupsResult" data-link-title="GetAccessGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L89">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L89">
         interface <strong>GetAccessGroupsResult</strong>
     </a>
 </h3>
@@ -1166,7 +1166,7 @@ Specifies whether the time to return is in UTC. Valid values: true and false.
 A collection of values returned by getAccessGroups.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L93">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L93">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1174,7 +1174,7 @@ A collection of values returned by getAccessGroups.
 (Available in 1.95.0+) The name of the AccessGroup.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-accessGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L97">property <b>accessGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L97">property <b>accessGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1182,7 +1182,7 @@ A collection of values returned by getAccessGroups.
 (Available in 1.95.0+) The type of the AccessGroup.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L101">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L101">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1190,12 +1190,12 @@ A collection of values returned by getAccessGroups.
 Description of the AccessGroup.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-fileSystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L102">property <b>fileSystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L102">property <b>fileSystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L106">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L106">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAccessGroupsGroup'>GetAccessGroupsGroup</a>[];</code></pre>
@@ -1203,7 +1203,7 @@ Description of the AccessGroup.
 A list of AccessGroups. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L110">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1211,7 +1211,7 @@ A list of AccessGroups. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L114">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L114">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1219,12 +1219,12 @@ The provider-assigned unique ID for this managed resource.
 A list of AccessGroup IDs, the value is set to `names`. After version 1.95.0 the item value as `<access_group_id>:<file_system_type>`.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L115">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L115">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L119">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L119">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1232,12 +1232,12 @@ A list of AccessGroup IDs, the value is set to `names`. After version 1.95.0 the
 A list of AccessGroup names.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L120">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L120">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L126">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L126">property <b>type</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1249,12 +1249,12 @@ Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field
 (Deprecated in v1.95.0+) AccessGroupType of the AccessGroup. The Field replace by `accessGroupType` after version 1.95.0.
 
 <h4 class="pdoc-member-header" id="GetAccessGroupsResult-useutcDateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessGroups.ts#L127">property <b>useutcDateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessGroups.ts#L127">property <b>useutcDateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useutcDateTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAccessRulesArgs" data-link-title="GetAccessRulesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L51">
         interface <strong>GetAccessRulesArgs</strong>
     </a>
 </h3>
@@ -1264,7 +1264,7 @@ Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field
 A collection of arguments for invoking getAccessRules.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesArgs-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L55">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L55">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1272,7 +1272,7 @@ A collection of arguments for invoking getAccessRules.
 Filter results by a specific AccessGroupName.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L59">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L59">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1280,12 +1280,12 @@ Filter results by a specific AccessGroupName.
 A list of rule IDs.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L60">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L60">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessRulesArgs-rwAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L64">property <b>rwAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L64">property <b>rwAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rwAccess?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1293,7 +1293,7 @@ A list of rule IDs.
 Filter results by a specific RWAccess.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesArgs-sourceCidrIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L68">property <b>sourceCidrIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L68">property <b>sourceCidrIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCidrIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1301,7 +1301,7 @@ Filter results by a specific RWAccess.
 Filter results by a specific SourceCidrIp.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesArgs-userAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L72">property <b>userAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L72">property <b>userAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAccess?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1309,7 +1309,7 @@ Filter results by a specific SourceCidrIp.
 Filter results by a specific UserAccess.
 
 <h3 class="pdoc-module-header" id="GetAccessRulesResult" data-link-title="GetAccessRulesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L78">
         interface <strong>GetAccessRulesResult</strong>
     </a>
 </h3>
@@ -1319,12 +1319,12 @@ Filter results by a specific UserAccess.
 A collection of values returned by getAccessRules.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesResult-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L79">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L79">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessRulesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1332,7 +1332,7 @@ A collection of values returned by getAccessRules.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L87">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L87">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1340,12 +1340,12 @@ The provider-assigned unique ID for this managed resource.
 A list of rule IDs, Each element set to `accessRuleId` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
 
 <h4 class="pdoc-member-header" id="GetAccessRulesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L88">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L88">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessRulesResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L92">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L92">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAccessRulesRule'>GetAccessRulesRule</a>[];</code></pre>
@@ -1353,7 +1353,7 @@ A list of rule IDs, Each element set to `accessRuleId` (Each element formats as 
 A list of AccessRules. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAccessRulesResult-rwAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L96">property <b>rwAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L96">property <b>rwAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rwAccess?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1361,7 +1361,7 @@ A list of AccessRules. Each element contains the following attributes:
 RWAccess of the AccessRule.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesResult-sourceCidrIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L100">property <b>sourceCidrIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L100">property <b>sourceCidrIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCidrIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1369,7 +1369,7 @@ RWAccess of the AccessRule.
 SourceCidrIp of the AccessRule.
 
 <h4 class="pdoc-member-header" id="GetAccessRulesResult-userAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getAccessRules.ts#L104">property <b>userAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getAccessRules.ts#L104">property <b>userAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAccess?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1377,7 +1377,7 @@ SourceCidrIp of the AccessRule.
 UserAccess of the AccessRule
 
 <h3 class="pdoc-module-header" id="GetFileSystemsArgs" data-link-title="GetFileSystemsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L49">
         interface <strong>GetFileSystemsArgs</strong>
     </a>
 </h3>
@@ -1387,7 +1387,7 @@ UserAccess of the AccessRule
 A collection of arguments for invoking getFileSystems.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsArgs-descriptionRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L53">property <b>descriptionRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L53">property <b>descriptionRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1395,7 +1395,7 @@ A collection of arguments for invoking getFileSystems.
 A regex string to filter the results by the ：FileSystem description.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L57">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L57">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1403,12 +1403,12 @@ A regex string to filter the results by the ：FileSystem description.
 A list of FileSystemId.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L58">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFileSystemsArgs-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L62">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L62">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1416,7 +1416,7 @@ A list of FileSystemId.
 Filter results by a specific ProtocolType.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsArgs-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L66">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L66">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1424,7 +1424,7 @@ Filter results by a specific ProtocolType.
 Filter results by a specific StorageType.
 
 <h3 class="pdoc-module-header" id="GetFileSystemsResult" data-link-title="GetFileSystemsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L72">
         interface <strong>GetFileSystemsResult</strong>
     </a>
 </h3>
@@ -1434,12 +1434,12 @@ Filter results by a specific StorageType.
 A collection of values returned by getFileSystems.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsResult-descriptionRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L73">property <b>descriptionRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L73">property <b>descriptionRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFileSystemsResult-descriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L77">property <b>descriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L77">property <b>descriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1447,7 +1447,7 @@ A collection of values returned by getFileSystems.
 A list of FileSystem descriptions.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1455,7 +1455,7 @@ A list of FileSystem descriptions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L85">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L85">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1463,12 +1463,12 @@ The provider-assigned unique ID for this managed resource.
 A list of FileSystem Id.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L86">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L86">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFileSystemsResult-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L90">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L90">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1476,7 +1476,7 @@ A list of FileSystem Id.
 ProtocolType block of the FileSystem
 
 <h4 class="pdoc-member-header" id="GetFileSystemsResult-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L94">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L94">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1484,7 +1484,7 @@ ProtocolType block of the FileSystem
 StorageType block of the FileSystem.
 
 <h4 class="pdoc-member-header" id="GetFileSystemsResult-systems">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getFileSystems.ts#L98">property <b>systems</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getFileSystems.ts#L98">property <b>systems</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systems: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFileSystemsSystem'>GetFileSystemsSystem</a>[];</code></pre>
@@ -1492,7 +1492,7 @@ StorageType block of the FileSystem.
 A list of VPCs. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetMountTargetsArgs" data-link-title="GetMountTargetsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L52">
         interface <strong>GetMountTargetsArgs</strong>
     </a>
 </h3>
@@ -1502,7 +1502,7 @@ A list of VPCs. Each element contains the following attributes:
 A collection of arguments for invoking getMountTargets.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L56">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L56">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1510,7 +1510,7 @@ A collection of arguments for invoking getMountTargets.
 Filter results by a specific AccessGroupName.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-fileSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L60">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L60">property <b>fileSystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1518,7 +1518,7 @@ Filter results by a specific AccessGroupName.
 The ID of the FileSystem that owns the MountTarget.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L64">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L64">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1526,7 +1526,7 @@ The ID of the FileSystem that owns the MountTarget.
 A list of MountTargetDomain.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-mountTargetDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L70">property <b>mountTargetDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L70">property <b>mountTargetDomain</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1538,7 +1538,7 @@ Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.
 Field `mountTargetDomain` has been deprecated from provider version 1.53.0. New field `ids` replaces it.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-networkType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L74">property <b>networkType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L74">property <b>networkType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1546,12 +1546,12 @@ Field `mountTargetDomain` has been deprecated from provider version 1.53.0. New 
 Filter results by a specific NetworkType.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L75">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L75">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L79">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L79">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1559,7 +1559,7 @@ Filter results by a specific NetworkType.
 Filter results by the status of mount target. Valid values: `Active`, `Inactive` and `Pending`.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L85">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L85">property <b>type</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1571,7 +1571,7 @@ Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field
 Field `type` has been deprecated from provider version 1.95.0. New field `networkType` replaces it.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L89">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L89">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1579,7 +1579,7 @@ Field `type` has been deprecated from provider version 1.95.0. New field `networ
 Filter results by a specific VpcId.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L93">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L93">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1587,7 +1587,7 @@ Filter results by a specific VpcId.
 Filter results by a specific VSwitchId.
 
 <h3 class="pdoc-module-header" id="GetMountTargetsResult" data-link-title="GetMountTargetsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L99">
         interface <strong>GetMountTargetsResult</strong>
     </a>
 </h3>
@@ -1597,7 +1597,7 @@ Filter results by a specific VSwitchId.
 A collection of values returned by getMountTargets.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L103">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L103">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1605,12 +1605,12 @@ A collection of values returned by getMountTargets.
 AccessGroup of The MountTarget.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-fileSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L104">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L104">property <b>fileSystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L108">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L108">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1618,7 +1618,7 @@ AccessGroup of The MountTarget.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L112">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L112">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1626,7 +1626,7 @@ The provider-assigned unique ID for this managed resource.
 A list of MountTargetDomain.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-mountTargetDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L121">property <b>mountTargetDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L121">property <b>mountTargetDomain</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1641,22 +1641,22 @@ MountTargetDomain of the MountTarget.
 * `status`- (Available 1.95.0+) The status of the mount target.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-networkType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L122">property <b>networkType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L122">property <b>networkType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L123">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L123">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L124">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L124">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L128">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L128">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMountTargetsTarget'>GetMountTargetsTarget</a>[];</code></pre>
@@ -1664,7 +1664,7 @@ MountTargetDomain of the MountTarget.
 A list of MountTargetDomains. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L132">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L132">property <b>type</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1673,7 +1673,7 @@ Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field
 </div>
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L136">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L136">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1681,7 +1681,7 @@ Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field
 VpcId of The MountTarget.
 
 <h4 class="pdoc-member-header" id="GetMountTargetsResult-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getMountTargets.ts#L140">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getMountTargets.ts#L140">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1689,7 +1689,7 @@ VpcId of The MountTarget.
 VSwitchId of The MountTarget.
 
 <h3 class="pdoc-module-header" id="GetProtocolsArgs" data-link-title="GetProtocolsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L47">
         interface <strong>GetProtocolsArgs</strong>
     </a>
 </h3>
@@ -1699,12 +1699,12 @@ VSwitchId of The MountTarget.
 A collection of arguments for invoking getProtocols.
 
 <h4 class="pdoc-member-header" id="GetProtocolsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L48">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L48">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProtocolsArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L52">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L52">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1712,7 +1712,7 @@ A collection of arguments for invoking getProtocols.
 The file system type. Valid Values: Performance and Capacity.
 
 <h4 class="pdoc-member-header" id="GetProtocolsArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L56">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L56">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1720,7 +1720,7 @@ The file system type. Valid Values: Performance and Capacity.
 String to filter results by zone id.
 
 <h3 class="pdoc-module-header" id="GetProtocolsResult" data-link-title="GetProtocolsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L62">
         interface <strong>GetProtocolsResult</strong>
     </a>
 </h3>
@@ -1730,7 +1730,7 @@ String to filter results by zone id.
 A collection of values returned by getProtocols.
 
 <h4 class="pdoc-member-header" id="GetProtocolsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1738,12 +1738,12 @@ A collection of values returned by getProtocols.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProtocolsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L67">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L67">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProtocolsResult-protocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L71">property <b>protocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L71">property <b>protocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocols: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1751,17 +1751,17 @@ The provider-assigned unique ID for this managed resource.
 A list of supported protocol type..
 
 <h4 class="pdoc-member-header" id="GetProtocolsResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L72">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L72">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProtocolsResult-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getProtocols.ts#L73">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getProtocols.ts#L73">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getService.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getService.ts#L44">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -1771,7 +1771,7 @@ A list of supported protocol type..
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getService.ts#L48">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getService.ts#L48">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1779,7 +1779,7 @@ A collection of arguments for invoking getService.
 Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getService.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getService.ts#L54">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -1789,12 +1789,12 @@ Setting the value to `On` to enable the service. If has been enabled, return the
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getService.ts#L55">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getService.ts#L55">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getService.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getService.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1802,7 +1802,7 @@ A collection of values returned by getService.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/getService.ts#L63">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/getService.ts#L63">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1810,7 +1810,7 @@ The provider-assigned unique ID for this managed resource.
 The current service enable status.
 
 <h3 class="pdoc-module-header" id="MountTargetArgs" data-link-title="MountTargetArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L163">
         interface <strong>MountTargetArgs</strong>
     </a>
 </h3>
@@ -1820,7 +1820,7 @@ The current service enable status.
 The set of arguments for constructing a MountTarget resource.
 
 <h4 class="pdoc-member-header" id="MountTargetArgs-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L167">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L167">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1828,7 +1828,7 @@ The set of arguments for constructing a MountTarget resource.
 The name of the permission group that applies to the mount target.
 
 <h4 class="pdoc-member-header" id="MountTargetArgs-fileSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L171">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L171">property <b>fileSystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1836,7 +1836,7 @@ The name of the permission group that applies to the mount target.
 The ID of the file system.
 
 <h4 class="pdoc-member-header" id="MountTargetArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L175">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L175">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1844,7 +1844,7 @@ The ID of the file system.
 The ID of security group.
 
 <h4 class="pdoc-member-header" id="MountTargetArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L179">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L179">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1852,7 +1852,7 @@ The ID of security group.
 Whether the MountTarget is active. The status of the mount target. Valid values: `Active` and `Inactive`, Default value is `Active`. Before you mount a file system, make sure that the mount target is in the Active state.
 
 <h4 class="pdoc-member-header" id="MountTargetArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L183">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L183">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1860,7 +1860,7 @@ Whether the MountTarget is active. The status of the mount target. Valid values:
 The ID of the VSwitch in the VPC where the mount target resides.
 
 <h3 class="pdoc-module-header" id="MountTargetState" data-link-title="MountTargetState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L137">
         interface <strong>MountTargetState</strong>
     </a>
 </h3>
@@ -1870,7 +1870,7 @@ The ID of the VSwitch in the VPC where the mount target resides.
 Input properties used for looking up and filtering MountTarget resources.
 
 <h4 class="pdoc-member-header" id="MountTargetState-accessGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L141">property <b>accessGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L141">property <b>accessGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1878,7 +1878,7 @@ Input properties used for looking up and filtering MountTarget resources.
 The name of the permission group that applies to the mount target.
 
 <h4 class="pdoc-member-header" id="MountTargetState-fileSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L145">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L145">property <b>fileSystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1886,7 +1886,7 @@ The name of the permission group that applies to the mount target.
 The ID of the file system.
 
 <h4 class="pdoc-member-header" id="MountTargetState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L149">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L149">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1894,7 +1894,7 @@ The ID of the file system.
 The ID of security group.
 
 <h4 class="pdoc-member-header" id="MountTargetState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L153">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L153">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1902,7 +1902,7 @@ The ID of security group.
 Whether the MountTarget is active. The status of the mount target. Valid values: `Active` and `Inactive`, Default value is `Active`. Before you mount a file system, make sure that the mount target is in the Active state.
 
 <h4 class="pdoc-member-header" id="MountTargetState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c1c21686b208a2cdbd7b11bfca35c2c3d8bf1b6b/sdk/nodejs/nas/mountTarget.ts#L157">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/nas/mountTarget.ts#L157">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
