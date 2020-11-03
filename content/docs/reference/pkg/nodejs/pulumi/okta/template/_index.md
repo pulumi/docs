@@ -3,7 +3,7 @@ title: "Module template"
 title_tag: "Module template | Package @pulumi/okta | Node.js SDK"
 linktitle: "template"
 meta_desc: "Explore members of the template module in the @pulumi/okta package."
-git_sha: "afa68a7e3095c850dded8c48905bb252bc3c5fbd"
+git_sha: "ca9d76905dc20fc35121d18938aac72662e3f640"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Email" data-link-title="Email">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L37">
         Resource <strong>Email</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ const example = new okta.template.Email("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Email-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -79,7 +79,7 @@ Create a Email resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Email-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -90,14 +90,14 @@ Get an existing Email resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Email-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Email-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -108,7 +108,7 @@ Returns true if the given object is an instance of Email.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Email-defaultLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L68">property <b>defaultLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L68">property <b>defaultLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultLanguage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -116,7 +116,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The default language, by default is set to `"en"`.
 
 <h4 class="pdoc-member-header" id="Email-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -125,7 +125,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Email-translations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L72">property <b>translations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L72">property <b>translations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>translations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#EmailTranslation'>EmailTranslation</a>[]&gt;;</code></pre>
@@ -133,7 +133,7 @@ deployments and may be missing (undefined) during planning phases.
 Set of translations for particular template.
 
 <h4 class="pdoc-member-header" id="Email-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L76">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L76">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ Set of translations for particular template.
 Email template type
 
 <h4 class="pdoc-member-header" id="Email-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EmailArgs" data-link-title="EmailArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L137">
         interface <strong>EmailArgs</strong>
     </a>
 </h3>
@@ -163,7 +163,7 @@ deployments.
 The set of arguments for constructing a Email resource.
 
 <h4 class="pdoc-member-header" id="EmailArgs-defaultLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L141">property <b>defaultLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L141">property <b>defaultLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLanguage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +171,7 @@ The set of arguments for constructing a Email resource.
 The default language, by default is set to `"en"`.
 
 <h4 class="pdoc-member-header" id="EmailArgs-translations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L145">property <b>translations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L145">property <b>translations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>translations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#EmailTranslation'>EmailTranslation</a>&gt;[]&gt;;</code></pre>
@@ -179,7 +179,7 @@ The default language, by default is set to `"en"`.
 Set of translations for particular template.
 
 <h4 class="pdoc-member-header" id="EmailArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L149">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L149">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ Set of translations for particular template.
 Email template type
 
 <h3 class="pdoc-module-header" id="EmailState" data-link-title="EmailState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L119">
         interface <strong>EmailState</strong>
     </a>
 </h3>
@@ -197,7 +197,7 @@ Email template type
 Input properties used for looking up and filtering Email resources.
 
 <h4 class="pdoc-member-header" id="EmailState-defaultLanguage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L123">property <b>defaultLanguage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L123">property <b>defaultLanguage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLanguage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ Input properties used for looking up and filtering Email resources.
 The default language, by default is set to `"en"`.
 
 <h4 class="pdoc-member-header" id="EmailState-translations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L127">property <b>translations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L127">property <b>translations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>translations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#EmailTranslation'>EmailTranslation</a>&gt;[]&gt;;</code></pre>
@@ -213,7 +213,7 @@ The default language, by default is set to `"en"`.
 Set of translations for particular template.
 
 <h4 class="pdoc-member-header" id="EmailState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/afa68a7e3095c850dded8c48905bb252bc3c5fbd/sdk/nodejs/template/email.ts#L131">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/ca9d76905dc20fc35121d18938aac72662e3f640/sdk/nodejs/template/email.ts#L131">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
