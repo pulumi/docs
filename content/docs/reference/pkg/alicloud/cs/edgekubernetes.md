@@ -1,8 +1,8 @@
 
 ---
-title: "ManagedKubernetes"
-title_tag: "Resource ManagedKubernetes | Module cs | Package AliCloud"
-meta_desc: "Explore the ManagedKubernetes resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. "
+title: "EdgeKubernetes"
+title_tag: "Resource EdgeKubernetes | Module cs | Package AliCloud"
+meta_desc: "Explore the EdgeKubernetes resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -13,24 +13,24 @@ meta_desc: "Explore the ManagedKubernetes resource of the cs module, including e
 
 
 
-## Create a ManagedKubernetes Resource {#create}
+## Create a EdgeKubernetes Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#ManagedKubernetes">ManagedKubernetes</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#ManagedKubernetesArgs">ManagedKubernetesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#EdgeKubernetes">EdgeKubernetes</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#EdgeKubernetesArgs">EdgeKubernetesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.ManagedKubernetes">ManagedKubernetes</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">api_audiences</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_ssh</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_autoscaler_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_name_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">user_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">worker_auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_data_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_period_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.EdgeKubernetes">EdgeKubernetes</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetes">NewManagedKubernetes</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesArgs">ManagedKubernetesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetes">ManagedKubernetes</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetes">NewEdgeKubernetes</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesArgs">EdgeKubernetesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetes">EdgeKubernetes</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.ManagedKubernetes.html">ManagedKubernetes</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.ManagedKubernetesArgs.html">ManagedKubernetesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.EdgeKubernetes.html">EdgeKubernetes</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.EdgeKubernetesArgs.html">EdgeKubernetesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -51,7 +51,7 @@ meta_desc: "Explore the ManagedKubernetes resource of the cs module, including e
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#ManagedKubernetesArgs">ManagedKubernetesArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#EdgeKubernetesArgs">EdgeKubernetesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -120,7 +120,7 @@ meta_desc: "Explore the ManagedKubernetes resource of the cs module, including e
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesArgs">ManagedKubernetesArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesArgs">EdgeKubernetesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -159,7 +159,7 @@ meta_desc: "Explore the ManagedKubernetes resource of the cs module, including e
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.ManagedKubernetesArgs.html">ManagedKubernetesArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.EdgeKubernetesArgs.html">EdgeKubernetesArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -180,13 +180,13 @@ meta_desc: "Explore the ManagedKubernetes resource of the cs module, including e
 
 {{% /choosable %}}
 
-## ManagedKubernetes Resource Properties {#properties}
+## EdgeKubernetes Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The EdgeKubernetes resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -202,7 +202,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+    <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -213,7 +213,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
+    <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -232,20 +232,9 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 <a href="#addons_csharp" style="color: inherit; text-decoration: inherit;">Addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesaddon">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Addon<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Addon<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apiaudiences_csharp">
-<a href="#apiaudiences_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Audiences</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -255,7 +244,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitch_ids` should be set, its value will be vswitch's zone.
+    <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,70 +282,13 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusterspec_csharp">
-<a href="#clusterspec_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Spec</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="cpupolicy_csharp">
-<a href="#cpupolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}kubelet cpu policy. options: static|none. default: none.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablessh_csharp">
-<a href="#enablessh_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssh</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable login to the node through SSH. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="excludeautoscalernodes_csharp">
-<a href="#excludeautoscalernodes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Autoscaler<wbr>Nodes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="imageid_csharp">
-<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="installcloudmonitor_csharp">
 <a href="#installcloudmonitor_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Cloud<wbr>Monitor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Install cloud monitor agent on ECS. default: true
+    <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -383,28 +315,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmsencryptedpassword_csharp">
-<a href="#kmsencryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kmsencryptioncontext_csharp">
-<a href="#kmsencryptioncontext_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating a cs kubernetes with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
 </span> 
@@ -413,6 +323,16 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_csharp">
+<a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -459,17 +379,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodenamemode_csharp">
-<a href="#nodenamemode_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name<wbr>Mode</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -492,17 +401,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="podvswitchids_csharp">
-<a href="#podvswitchids_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Vswitch<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="proxymode_csharp">
 <a href="#proxymode_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Mode</a>
 </span> 
@@ -514,17 +412,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcegroupid_csharp">
-<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span> 
@@ -532,17 +419,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serviceaccountissuer_csharp">
-<a href="#serviceaccountissuer_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Issuer</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -569,28 +445,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
-    </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userca_csharp">
-<a href="#userca_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Ca</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span> 
@@ -613,53 +467,11 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workerautorenew_csharp">
-<a href="#workerautorenew_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable worker payment auto-renew, defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerautorenewperiod_csharp">
-<a href="#workerautorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerdatadiskcategory_csharp">
-<a href="#workerdatadiskcategory_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerdatadisksize_csharp">
-<a href="#workerdatadisksize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="workerdatadisks_csharp">
 <a href="#workerdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkerdatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
 - category: the type of the data disks. Valid values:
@@ -700,30 +512,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerperiod_csharp">
-<a href="#workerperiod_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerperiodunit_csharp">
-<a href="#workerperiodunit_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period<wbr>Unit</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -740,7 +529,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+    <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -751,7 +540,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
+    <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -770,20 +559,9 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 <a href="#addons_go" style="color: inherit; text-decoration: inherit;">Addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesaddon">[]Managed<wbr>Kubernetes<wbr>Addon</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">[]Edge<wbr>Kubernetes<wbr>Addon</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apiaudiences_go">
-<a href="#apiaudiences_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Audiences</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -793,7 +571,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitch_ids` should be set, its value will be vswitch's zone.
+    <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -831,70 +609,13 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusterspec_go">
-<a href="#clusterspec_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Spec</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="cpupolicy_go">
-<a href="#cpupolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}kubelet cpu policy. options: static|none. default: none.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablessh_go">
-<a href="#enablessh_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssh</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable login to the node through SSH. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="excludeautoscalernodes_go">
-<a href="#excludeautoscalernodes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Autoscaler<wbr>Nodes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="imageid_go">
-<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="installcloudmonitor_go">
 <a href="#installcloudmonitor_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Cloud<wbr>Monitor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Install cloud monitor agent on ECS. default: true
+    <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -921,28 +642,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmsencryptedpassword_go">
-<a href="#kmsencryptedpassword_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kmsencryptioncontext_go">
-<a href="#kmsencryptioncontext_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating a cs kubernetes with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
 </span> 
@@ -951,6 +650,16 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_go">
+<a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -997,17 +706,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodenamemode_go">
-<a href="#nodenamemode_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name<wbr>Mode</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -1030,17 +728,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="podvswitchids_go">
-<a href="#podvswitchids_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Vswitch<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="proxymode_go">
 <a href="#proxymode_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Mode</a>
 </span> 
@@ -1052,17 +739,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcegroupid_go">
-<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="securitygroupid_go">
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span> 
@@ -1070,17 +746,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serviceaccountissuer_go">
-<a href="#serviceaccountissuer_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Issuer</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1107,28 +772,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userca_go">
-<a href="#userca_go" style="color: inherit; text-decoration: inherit;">User<wbr>Ca</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span> 
@@ -1151,53 +794,11 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workerautorenew_go">
-<a href="#workerautorenew_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable worker payment auto-renew, defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerautorenewperiod_go">
-<a href="#workerautorenewperiod_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerdatadiskcategory_go">
-<a href="#workerdatadiskcategory_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerdatadisksize_go">
-<a href="#workerdatadisksize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="workerdatadisks_go">
 <a href="#workerdatadisks_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkerdatadisk">[]Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">[]Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
 - category: the type of the data disks. Valid values:
@@ -1238,30 +839,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerperiod_go">
-<a href="#workerperiod_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerperiodunit_go">
-<a href="#workerperiodunit_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period<wbr>Unit</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1278,7 +856,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+    <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1289,7 +867,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
+    <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1308,20 +886,9 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 <a href="#addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesaddon">Managed<wbr>Kubernetes<wbr>Addon[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">Edge<wbr>Kubernetes<wbr>Addon[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apiaudiences_nodejs">
-<a href="#apiaudiences_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Audiences</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1331,7 +898,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitch_ids` should be set, its value will be vswitch's zone.
+    <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1369,70 +936,13 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusterspec_nodejs">
-<a href="#clusterspec_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Spec</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="cpupolicy_nodejs">
-<a href="#cpupolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}kubelet cpu policy. options: static|none. default: none.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablessh_nodejs">
-<a href="#enablessh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssh</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Enable login to the node through SSH. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="excludeautoscalernodes_nodejs">
-<a href="#excludeautoscalernodes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Autoscaler<wbr>Nodes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="imageid_nodejs">
-<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="installcloudmonitor_nodejs">
 <a href="#installcloudmonitor_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Cloud<wbr>Monitor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Install cloud monitor agent on ECS. default: true
+    <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1459,28 +969,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmsencryptedpassword_nodejs">
-<a href="#kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kmsencryptioncontext_nodejs">
-<a href="#kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating a cs kubernetes with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
 </span> 
@@ -1489,6 +977,16 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_nodejs">
+<a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1535,17 +1033,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodenamemode_nodejs">
-<a href="#nodenamemode_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name<wbr>Mode</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
@@ -1568,17 +1055,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="podvswitchids_nodejs">
-<a href="#podvswitchids_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Vswitch<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="proxymode_nodejs">
 <a href="#proxymode_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Mode</a>
 </span> 
@@ -1590,17 +1066,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcegroupid_nodejs">
-<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span> 
@@ -1608,17 +1073,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serviceaccountissuer_nodejs">
-<a href="#serviceaccountissuer_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Issuer</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1645,28 +1099,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userca_nodejs">
-<a href="#userca_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Ca</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span> 
@@ -1689,53 +1121,11 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workerautorenew_nodejs">
-<a href="#workerautorenew_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Auto<wbr>Renew</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Enable worker payment auto-renew, defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerautorenewperiod_nodejs">
-<a href="#workerautorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Auto<wbr>Renew<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerdatadiskcategory_nodejs">
-<a href="#workerdatadiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disk<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerdatadisksize_nodejs">
-<a href="#workerdatadisksize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disk<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="workerdatadisks_nodejs">
 <a href="#workerdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkerdatadisk">Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
 - category: the type of the data disks. Valid values:
@@ -1776,30 +1166,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerperiod_nodejs">
-<a href="#workerperiod_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workerperiodunit_nodejs">
-<a href="#workerperiodunit_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Period<wbr>Unit</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1816,7 +1183,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+    <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1827,7 +1194,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
+    <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1846,20 +1213,9 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 <a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesaddon">Sequence[Managed<wbr>Kubernetes<wbr>Addon<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">Sequence[Edge<wbr>Kubernetes<wbr>Addon<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="api_audiences_python">
-<a href="#api_audiences_python" style="color: inherit; text-decoration: inherit;">api_<wbr>audiences</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1869,7 +1225,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitch_ids` should be set, its value will be vswitch's zone.
+    <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1907,70 +1263,13 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cluster_spec_python">
-<a href="#cluster_spec_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>spec</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="cpu_policy_python">
-<a href="#cpu_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}kubelet cpu policy. options: static|none. default: none.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enable_ssh_python">
-<a href="#enable_ssh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssh</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable login to the node through SSH. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="exclude_autoscaler_nodes_python">
-<a href="#exclude_autoscaler_nodes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>autoscaler_<wbr>nodes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="image_id_python">
-<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="install_cloud_monitor_python">
 <a href="#install_cloud_monitor_python" style="color: inherit; text-decoration: inherit;">install_<wbr>cloud_<wbr>monitor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Install cloud monitor agent on ECS. default: true
+    <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1997,28 +1296,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kms_encrypted_password_python">
-<a href="#kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kms_encryption_context_python">
-<a href="#kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating a cs kubernetes with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="kube_config_python">
 <a href="#kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
 </span> 
@@ -2027,6 +1304,16 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_config_python">
+<a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2073,17 +1360,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="node_name_mode_python">
-<a href="#node_name_mode_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name_<wbr>mode</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
@@ -2106,17 +1382,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pod_vswitch_ids_python">
-<a href="#pod_vswitch_ids_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>vswitch_<wbr>ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="proxy_mode_python">
 <a href="#proxy_mode_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>mode</a>
 </span> 
@@ -2128,17 +1393,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resource_group_id_python">
-<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="security_group_id_python">
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span> 
@@ -2146,17 +1400,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_account_issuer_python">
-<a href="#service_account_issuer_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>issuer</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2183,28 +1426,6 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="user_ca_python">
-<a href="#user_ca_python" style="color: inherit; text-decoration: inherit;">user_<wbr>ca</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span> 
@@ -2227,53 +1448,11 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span id="worker_auto_renew_python">
-<a href="#worker_auto_renew_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>auto_<wbr>renew</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable worker payment auto-renew, defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="worker_auto_renew_period_python">
-<a href="#worker_auto_renew_period_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>auto_<wbr>renew_<wbr>period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="worker_data_disk_category_python">
-<a href="#worker_data_disk_category_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disk_<wbr>category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="worker_data_disk_size_python">
-<a href="#worker_data_disk_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disk_<wbr>size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="worker_data_disks_python">
 <a href="#worker_data_disks_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkerdatadisk">Sequence[Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
 - category: the type of the data disks. Valid values:
@@ -2314,30 +1493,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="worker_period_python">
-<a href="#worker_period_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="worker_period_unit_python">
-<a href="#worker_period_unit_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>period_<wbr>unit</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2349,7 +1505,7 @@ The ManagedKubernetes resource accepts the following [input]({{< relref "/docs/i
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the ManagedKubernetes resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the EdgeKubernetes resource produces the following output properties:
 
 
 
@@ -2363,10 +1519,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesconnections">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Managed<wbr>Kubernetes<wbr>Connections</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Edge<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2388,16 +1543,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="slbid_csharp">
-<a href="#slbid_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New field &#39;slb_internet&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -2437,20 +1582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workernodes_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkernode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Managed<wbr>Kubernetes<wbr>Worker<wbr>Node&gt;</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Edge<wbr>Kubernetes<wbr>Worker<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="workerramrolename_csharp">
-<a href="#workerramrolename_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Ram<wbr>Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The RamRole Name attached to worker node.
 {{% /md %}}</dd>
 
 </dl>
@@ -2466,10 +1600,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_go" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2491,16 +1624,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="slbid_go">
-<a href="#slbid_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New field &#39;slb_internet&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -2540,20 +1663,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workernodes_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkernode">[]Managed<wbr>Kubernetes<wbr>Worker<wbr>Node</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">[]Edge<wbr>Kubernetes<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="workerramrolename_go">
-<a href="#workerramrolename_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Ram<wbr>Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The RamRole Name attached to worker node.
 {{% /md %}}</dd>
 
 </dl>
@@ -2569,10 +1681,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2594,16 +1705,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="slbid_nodejs">
-<a href="#slbid_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New field &#39;slb_internet&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -2643,20 +1744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workernodes_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkernode">Managed<wbr>Kubernetes<wbr>Worker<wbr>Node[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">Edge<wbr>Kubernetes<wbr>Worker<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="workerramrolename_nodejs">
-<a href="#workerramrolename_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Ram<wbr>Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The RamRole Name attached to worker node.
 {{% /md %}}</dd>
 
 </dl>
@@ -2672,10 +1762,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2697,16 +1786,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="slb_id_python">
-<a href="#slb_id_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New field &#39;slb_internet&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -2746,20 +1825,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_nodes_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkernode">Sequence[Managed<wbr>Kubernetes<wbr>Worker<wbr>Node]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="worker_ram_role_name_python">
-<a href="#worker_ram_role_name_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>ram_<wbr>role_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The RamRole Name attached to worker node.
 {{% /md %}}</dd>
 
 </dl>
@@ -2771,26 +1839,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-## Look up an Existing ManagedKubernetes Resource {#look-up}
+## Look up an Existing EdgeKubernetes Resource {#look-up}
 
-Get an existing ManagedKubernetes resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+Get an existing EdgeKubernetes resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#ManagedKubernetesState">ManagedKubernetesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#ManagedKubernetes">ManagedKubernetes</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#EdgeKubernetesState">EdgeKubernetesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#EdgeKubernetes">EdgeKubernetes</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">api_audiences</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[ManagedKubernetesConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">cpu_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_ssh</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_autoscaler_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_name_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slb_intranet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">user_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">worker_auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_data_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedKubernetesWorkerNodeArgs]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_period_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ManagedKubernetes</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesConnectionsArgs]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_enterprise_security_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[EdgeKubernetesLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_cidr_mask</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slb_internet_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slb_intranet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">worker_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">worker_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">worker_nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[EdgeKubernetesWorkerNodeArgs]]</span> = None<span class="p">, </span><span class="nx">worker_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> EdgeKubernetes</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedKubernetes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesState">ManagedKubernetesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetes">ManagedKubernetes</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEdgeKubernetes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesState">EdgeKubernetesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetes">EdgeKubernetes</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.ManagedKubernetes.html">ManagedKubernetes</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.ManagedKubernetesState.html">ManagedKubernetesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.EdgeKubernetes.html">EdgeKubernetes</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.EdgeKubernetesState.html">EdgeKubernetesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2902,20 +1970,9 @@ The following state arguments are supported:
 <a href="#state_addons_csharp" style="color: inherit; text-decoration: inherit;">Addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesaddon">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Addon<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Addon<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_apiaudiences_csharp">
-<a href="#state_apiaudiences_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Audiences</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2925,7 +1982,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitch_ids` should be set, its value will be vswitch's zone.
+    <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2963,71 +2020,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_clusterspec_csharp">
-<a href="#state_clusterspec_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Spec</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_connections_csharp">
 <a href="#state_connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesconnections">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Connections<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Connections<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_cpupolicy_csharp">
-<a href="#state_cpupolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}kubelet cpu policy. options: static|none. default: none.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_enablessh_csharp">
-<a href="#state_enablessh_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssh</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable login to the node through SSH. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_excludeautoscalernodes_csharp">
-<a href="#state_excludeautoscalernodes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Autoscaler<wbr>Nodes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_imageid_csharp">
-<a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3037,7 +2036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Install cloud monitor agent on ECS. default: true
+    <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3064,28 +2063,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_kmsencryptedpassword_csharp">
-<a href="#state_kmsencryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_kmsencryptioncontext_csharp">
-<a href="#state_kmsencryptioncontext_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating a cs kubernetes with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_kubeconfig_csharp">
 <a href="#state_kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
 </span> 
@@ -3094,6 +2071,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_csharp">
+<a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3151,17 +2138,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_nodenamemode_csharp">
-<a href="#state_nodenamemode_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name<wbr>Mode</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -3184,17 +2160,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_podvswitchids_csharp">
-<a href="#state_podvswitchids_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Vswitch<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_proxymode_csharp">
 <a href="#state_proxymode_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Mode</a>
 </span> 
@@ -3202,17 +2167,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_resourcegroupid_csharp">
-<a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3228,17 +2182,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_serviceaccountissuer_csharp">
-<a href="#state_serviceaccountissuer_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Issuer</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_servicecidr_csharp">
 <a href="#state_servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
 </span> 
@@ -3247,16 +2190,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_slbid_csharp">
-<a href="#state_slbid_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New field &#39;slb_internet&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3288,28 +2221,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_tags_csharp">
-<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
-    </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_userca_csharp">
-<a href="#state_userca_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Ca</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3347,53 +2258,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_workerautorenew_csharp">
-<a href="#state_workerautorenew_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable worker payment auto-renew, defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerautorenewperiod_csharp">
-<a href="#state_workerautorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerdatadiskcategory_csharp">
-<a href="#state_workerdatadiskcategory_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerdatadisksize_csharp">
-<a href="#state_workerdatadisksize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_workerdatadisks_csharp">
 <a href="#state_workerdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkerdatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
 - category: the type of the data disks. Valid values:
@@ -3434,8 +2303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3445,7 +2313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+    <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3454,7 +2322,7 @@ The following state arguments are supported:
 <a href="#state_workernodes_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkernode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Managed<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Edge<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -3467,40 +2335,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerperiod_csharp">
-<a href="#state_workerperiod_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerperiodunit_csharp">
-<a href="#state_workerperiodunit_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period<wbr>Unit</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerramrolename_csharp">
-<a href="#state_workerramrolename_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Ram<wbr>Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The RamRole Name attached to worker node.
+    <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3526,20 +2361,9 @@ The following state arguments are supported:
 <a href="#state_addons_go" style="color: inherit; text-decoration: inherit;">Addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesaddon">[]Managed<wbr>Kubernetes<wbr>Addon</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">[]Edge<wbr>Kubernetes<wbr>Addon</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_apiaudiences_go">
-<a href="#state_apiaudiences_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Audiences</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3549,7 +2373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitch_ids` should be set, its value will be vswitch's zone.
+    <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3587,71 +2411,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_clusterspec_go">
-<a href="#state_clusterspec_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Spec</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_connections_go">
 <a href="#state_connections_go" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_cpupolicy_go">
-<a href="#state_cpupolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}kubelet cpu policy. options: static|none. default: none.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_enablessh_go">
-<a href="#state_enablessh_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssh</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable login to the node through SSH. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_excludeautoscalernodes_go">
-<a href="#state_excludeautoscalernodes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Autoscaler<wbr>Nodes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_imageid_go">
-<a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3661,7 +2427,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Install cloud monitor agent on ECS. default: true
+    <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3688,28 +2454,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_kmsencryptedpassword_go">
-<a href="#state_kmsencryptedpassword_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_kmsencryptioncontext_go">
-<a href="#state_kmsencryptioncontext_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating a cs kubernetes with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_kubeconfig_go">
 <a href="#state_kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
 </span> 
@@ -3718,6 +2462,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_go">
+<a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3775,17 +2529,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_nodenamemode_go">
-<a href="#state_nodenamemode_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name<wbr>Mode</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -3808,17 +2551,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_podvswitchids_go">
-<a href="#state_podvswitchids_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Vswitch<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_proxymode_go">
 <a href="#state_proxymode_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Mode</a>
 </span> 
@@ -3826,17 +2558,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_resourcegroupid_go">
-<a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3852,17 +2573,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_serviceaccountissuer_go">
-<a href="#state_serviceaccountissuer_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Issuer</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_servicecidr_go">
 <a href="#state_servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
 </span> 
@@ -3871,16 +2581,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_slbid_go">
-<a href="#state_slbid_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New field &#39;slb_internet&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3912,28 +2612,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_tags_go">
-<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_userca_go">
-<a href="#state_userca_go" style="color: inherit; text-decoration: inherit;">User<wbr>Ca</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3971,53 +2649,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_workerautorenew_go">
-<a href="#state_workerautorenew_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable worker payment auto-renew, defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerautorenewperiod_go">
-<a href="#state_workerautorenewperiod_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Auto<wbr>Renew<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerdatadiskcategory_go">
-<a href="#state_workerdatadiskcategory_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerdatadisksize_go">
-<a href="#state_workerdatadisksize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disk<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_workerdatadisks_go">
 <a href="#state_workerdatadisks_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkerdatadisk">[]Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">[]Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
 - category: the type of the data disks. Valid values:
@@ -4058,8 +2694,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4069,7 +2704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+    <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4078,7 +2713,7 @@ The following state arguments are supported:
 <a href="#state_workernodes_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkernode">[]Managed<wbr>Kubernetes<wbr>Worker<wbr>Node</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">[]Edge<wbr>Kubernetes<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -4091,40 +2726,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerperiod_go">
-<a href="#state_workerperiod_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerperiodunit_go">
-<a href="#state_workerperiodunit_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Period<wbr>Unit</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerramrolename_go">
-<a href="#state_workerramrolename_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Ram<wbr>Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The RamRole Name attached to worker node.
+    <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4150,20 +2752,9 @@ The following state arguments are supported:
 <a href="#state_addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesaddon">Managed<wbr>Kubernetes<wbr>Addon[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">Edge<wbr>Kubernetes<wbr>Addon[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_apiaudiences_nodejs">
-<a href="#state_apiaudiences_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Audiences</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4173,7 +2764,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitch_ids` should be set, its value will be vswitch's zone.
+    <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4211,71 +2802,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_clusterspec_nodejs">
-<a href="#state_clusterspec_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Spec</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_connections_nodejs">
 <a href="#state_connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_cpupolicy_nodejs">
-<a href="#state_cpupolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}kubelet cpu policy. options: static|none. default: none.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_enablessh_nodejs">
-<a href="#state_enablessh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssh</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Enable login to the node through SSH. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_excludeautoscalernodes_nodejs">
-<a href="#state_excludeautoscalernodes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Autoscaler<wbr>Nodes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_imageid_nodejs">
-<a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4285,7 +2818,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Install cloud monitor agent on ECS. default: true
+    <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4312,28 +2845,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_kmsencryptedpassword_nodejs">
-<a href="#state_kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_kmsencryptioncontext_nodejs">
-<a href="#state_kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating a cs kubernetes with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_kubeconfig_nodejs">
 <a href="#state_kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
 </span> 
@@ -4342,6 +2853,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_nodejs">
+<a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4399,17 +2920,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_nodenamemode_nodejs">
-<a href="#state_nodenamemode_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name<wbr>Mode</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
@@ -4432,17 +2942,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_podvswitchids_nodejs">
-<a href="#state_podvswitchids_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Vswitch<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_proxymode_nodejs">
 <a href="#state_proxymode_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Mode</a>
 </span> 
@@ -4450,17 +2949,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_resourcegroupid_nodejs">
-<a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4476,17 +2964,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_serviceaccountissuer_nodejs">
-<a href="#state_serviceaccountissuer_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Issuer</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_servicecidr_nodejs">
 <a href="#state_servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
 </span> 
@@ -4495,16 +2972,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_slbid_nodejs">
-<a href="#state_slbid_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New field &#39;slb_internet&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4536,28 +3003,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_tags_nodejs">
-<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_userca_nodejs">
-<a href="#state_userca_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Ca</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4595,53 +3040,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_workerautorenew_nodejs">
-<a href="#state_workerautorenew_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Auto<wbr>Renew</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Enable worker payment auto-renew, defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerautorenewperiod_nodejs">
-<a href="#state_workerautorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Auto<wbr>Renew<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerdatadiskcategory_nodejs">
-<a href="#state_workerdatadiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disk<wbr>Category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerdatadisksize_nodejs">
-<a href="#state_workerdatadisksize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disk<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_workerdatadisks_nodejs">
 <a href="#state_workerdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Data<wbr>Disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkerdatadisk">Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
 - category: the type of the data disks. Valid values:
@@ -4682,8 +3085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4693,7 +3095,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+    <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4702,7 +3104,7 @@ The following state arguments are supported:
 <a href="#state_workernodes_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkernode">Managed<wbr>Kubernetes<wbr>Worker<wbr>Node[]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">Edge<wbr>Kubernetes<wbr>Worker<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -4715,40 +3117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerperiod_nodejs">
-<a href="#state_workerperiod_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerperiodunit_nodejs">
-<a href="#state_workerperiodunit_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Period<wbr>Unit</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_workerramrolename_nodejs">
-<a href="#state_workerramrolename_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Ram<wbr>Role<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The RamRole Name attached to worker node.
+    <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4774,20 +3143,9 @@ The following state arguments are supported:
 <a href="#state_addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesaddon">Sequence[Managed<wbr>Kubernetes<wbr>Addon<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesaddon">Sequence[Edge<wbr>Kubernetes<wbr>Addon<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_api_audiences_python">
-<a href="#state_api_audiences_python" style="color: inherit; text-decoration: inherit;">api_<wbr>audiences</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4797,7 +3155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitch_ids` should be set, its value will be vswitch's zone.
+    <dd>{{% md %}}The ID of availability zone.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4835,71 +3193,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_cluster_spec_python">
-<a href="#state_cluster_spec_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>spec</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_connections_python">
 <a href="#state_connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_cpu_policy_python">
-<a href="#state_cpu_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}kubelet cpu policy. options: static|none. default: none.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_enable_ssh_python">
-<a href="#state_enable_ssh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssh</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable login to the node through SSH. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_exclude_autoscaler_nodes_python">
-<a href="#state_exclude_autoscaler_nodes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>autoscaler_<wbr>nodes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_image_id_python">
-<a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4909,7 +3209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Install cloud monitor agent on ECS. default: true
+    <dd>{{% md %}}Install cloud monitor agent on ECS. default: `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4936,28 +3236,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_kms_encrypted_password_python">
-<a href="#state_kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_kms_encryption_context_python">
-<a href="#state_kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating a cs kubernetes with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_kube_config_python">
 <a href="#state_kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
 </span> 
@@ -4966,6 +3244,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_log_config_python">
+<a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5023,17 +3311,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_node_name_mode_python">
-<a href="#state_node_name_mode_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name_<wbr>mode</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
@@ -5056,17 +3333,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_pod_vswitch_ids_python">
-<a href="#state_pod_vswitch_ids_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>vswitch_<wbr>ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_proxy_mode_python">
 <a href="#state_proxy_mode_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>mode</a>
 </span> 
@@ -5074,17 +3340,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_resource_group_id_python">
-<a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5100,17 +3355,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_service_account_issuer_python">
-<a href="#state_service_account_issuer_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>issuer</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_service_cidr_python">
 <a href="#state_service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
 </span> 
@@ -5119,16 +3363,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_slb_id_python">
-<a href="#state_slb_id_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New field &#39;slb_internet&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5160,28 +3394,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of private load balancer where the current cluster master node is located.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_tags_python">
-<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_user_ca_python">
-<a href="#state_user_ca_python" style="color: inherit; text-decoration: inherit;">user_<wbr>ca</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5219,53 +3431,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_worker_auto_renew_python">
-<a href="#state_worker_auto_renew_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>auto_<wbr>renew</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Enable worker payment auto-renew, defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_worker_auto_renew_period_python">
-<a href="#state_worker_auto_renew_period_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>auto_<wbr>renew_<wbr>period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_worker_data_disk_category_python">
-<a href="#state_worker_data_disk_category_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disk_<wbr>category</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_worker_data_disk_size_python">
-<a href="#state_worker_data_disk_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disk_<wbr>size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_worker_data_disks_python">
 <a href="#state_worker_data_disks_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkerdatadisk">Sequence[Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkerdatadisk">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size. 
 - category: the type of the data disks. Valid values:
@@ -5306,8 +3476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5317,7 +3486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+    <dd>{{% md %}}The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5326,7 +3495,7 @@ The following state arguments are supported:
 <a href="#state_worker_nodes_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedkubernetesworkernode">Sequence[Managed<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edgekubernetesworkernode">Sequence[Edge<wbr>Kubernetes<wbr>Worker<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -5339,40 +3508,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_worker_period_python">
-<a href="#state_worker_period_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_worker_period_unit_python">
-<a href="#state_worker_period_unit_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>period_<wbr>unit</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_worker_ram_role_name_python">
-<a href="#state_worker_ram_role_name_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>ram_<wbr>role_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The RamRole Name attached to worker node.
+    <dd>{{% md %}}The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5400,16 +3536,16 @@ The following state arguments are supported:
 ## Supporting Types
 
 
-<h4 id="managedkubernetesaddon">Managed<wbr>Kubernetes<wbr>Addon</h4>
+<h4 id="edgekubernetesaddon">Edge<wbr>Kubernetes<wbr>Addon</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesAddon">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesAddon">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesAddon">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesAddon">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesAddonArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesAddonOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesAddonArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesAddonOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Inputs.ManagedKubernetesAddonArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.ManagedKubernetesAddon.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Inputs.EdgeKubernetesAddonArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.EdgeKubernetesAddon.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5570,16 +3706,16 @@ The following state arguments are supported:
 
 
 
-<h4 id="managedkubernetesconnections">Managed<wbr>Kubernetes<wbr>Connections</h4>
+<h4 id="edgekubernetesconnections">Edge<wbr>Kubernetes<wbr>Connections</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesConnections">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesConnections">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesConnectionsOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesConnectionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.ManagedKubernetesConnections.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.EdgeKubernetesConnections.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5596,8 +3732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}API Server Internet endpoint.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5607,8 +3742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}API Server Intranet endpoint.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5628,8 +3762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Service Access Domain.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5646,8 +3779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}API Server Internet endpoint.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5657,8 +3789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}API Server Intranet endpoint.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5678,8 +3809,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Service Access Domain.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5696,8 +3826,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}API Server Internet endpoint.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5707,8 +3836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}API Server Intranet endpoint.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5728,8 +3856,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Service Access Domain.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5746,8 +3873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}API Server Internet endpoint.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5757,8 +3883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}API Server Intranet endpoint.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5778,8 +3903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Service Access Domain.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5788,16 +3912,142 @@ The following state arguments are supported:
 
 
 
-<h4 id="managedkubernetesworkerdatadisk">Managed<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</h4>
+<h4 id="edgekuberneteslogconfig">Edge<wbr>Kubernetes<wbr>Log<wbr>Config</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesWorkerDataDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesWorkerDataDisk">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesLogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesLogConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesWorkerDataDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesWorkerDataDiskOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Inputs.ManagedKubernetesWorkerDataDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.ManagedKubernetesWorkerDataDisk.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Inputs.EdgeKubernetesLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.EdgeKubernetesLogConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="edgekubernetesworkerdatadisk">Edge<wbr>Kubernetes<wbr>Worker<wbr>Data<wbr>Disk</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesWorkerDataDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesWorkerDataDisk">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesWorkerDataDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesWorkerDataDiskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Inputs.EdgeKubernetesWorkerDataDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.EdgeKubernetesWorkerDataDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6158,16 +4408,16 @@ The following state arguments are supported:
 
 
 
-<h4 id="managedkubernetesworkernode">Managed<wbr>Kubernetes<wbr>Worker<wbr>Node</h4>
+<h4 id="edgekubernetesworkernode">Edge<wbr>Kubernetes<wbr>Worker<wbr>Node</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesWorkerNode">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesWorkerNode">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#ManagedKubernetesWorkerNodeOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#EdgeKubernetesWorkerNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.ManagedKubernetesWorkerNode.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.EdgeKubernetesWorkerNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
