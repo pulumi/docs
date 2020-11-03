@@ -102,7 +102,7 @@ const foo = pulumi.output(rancher2.getNotifier({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_notifier(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNotifierResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_notifier(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dingtalk_config</span><span class="p">:</span> <span class="nx">Optional[GetNotifierDingtalkConfigArgs]</span> = None<span class="p">, </span><span class="nx">msteams_config</span><span class="p">:</span> <span class="nx">Optional[GetNotifierMsteamsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNotifierResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -151,6 +151,28 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the notifier (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dingtalkconfig_csharp">
+<a href="#dingtalkconfig_csharp" style="color: inherit; text-decoration: inherit;">Dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msteamsconfig_csharp">
+<a href="#msteamsconfig_csharp" style="color: inherit; text-decoration: inherit;">Msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) MSTeams config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -178,6 +200,28 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the notifier (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dingtalkconfig_go">
+<a href="#dingtalkconfig_go" style="color: inherit; text-decoration: inherit;">Dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msteamsconfig_go">
+<a href="#msteamsconfig_go" style="color: inherit; text-decoration: inherit;">Msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -209,6 +253,28 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the notifier (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dingtalkconfig_nodejs">
+<a href="#dingtalkconfig_nodejs" style="color: inherit; text-decoration: inherit;">dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msteamsconfig_nodejs">
+<a href="#msteamsconfig_nodejs" style="color: inherit; text-decoration: inherit;">msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) MSTeams config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -236,6 +302,28 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the notifier (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dingtalk_config_python">
+<a href="#dingtalk_config_python" style="color: inherit; text-decoration: inherit;">dingtalk_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msteams_config_python">
+<a href="#msteams_config_python" style="color: inherit; text-decoration: inherit;">msteams_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -377,6 +465,28 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="dingtalkconfig_csharp">
+<a href="#dingtalkconfig_csharp" style="color: inherit; text-decoration: inherit;">Dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msteamsconfig_csharp">
+<a href="#msteamsconfig_csharp" style="color: inherit; text-decoration: inherit;">Msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) MSTeams config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -501,6 +611,28 @@ The following output properties are available:
         <span class="property-type"><a href="#getnotifierwechatconfig">Get<wbr>Notifier<wbr>Wechat<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Wechat config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dingtalkconfig_go">
+<a href="#dingtalkconfig_go" style="color: inherit; text-decoration: inherit;">Dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msteamsconfig_go">
+<a href="#msteamsconfig_go" style="color: inherit; text-decoration: inherit;">Msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -629,6 +761,28 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="dingtalkconfig_nodejs">
+<a href="#dingtalkconfig_nodejs" style="color: inherit; text-decoration: inherit;">dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msteamsconfig_nodejs">
+<a href="#msteamsconfig_nodejs" style="color: inherit; text-decoration: inherit;">msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) MSTeams config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -755,6 +909,28 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="dingtalk_config_python">
+<a href="#dingtalk_config_python" style="color: inherit; text-decoration: inherit;">dingtalk_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msteams_config_python">
+<a href="#msteams_config_python" style="color: inherit; text-decoration: inherit;">msteams_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) MSTeams config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -766,6 +942,298 @@ The following output properties are available:
 
 
 ## Supporting Types
+
+
+<h4 id="getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetNotifierDingtalkConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierDingtalkConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierDingtalkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierDingtalkConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetNotifierDingtalkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierDingtalkConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_csharp">
+<a href="#proxyurl_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_go">
+<a href="#proxyurl_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_nodejs">
+<a href="#proxyurl_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxy_url_python">
+<a href="#proxy_url_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetNotifierMsteamsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierMsteamsConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierMsteamsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierMsteamsConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetNotifierMsteamsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierMsteamsConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_csharp">
+<a href="#proxyurl_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_go">
+<a href="#proxyurl_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_nodejs">
+<a href="#proxyurl_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxy_url_python">
+<a href="#proxy_url_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="getnotifierpagerdutyconfig">Get<wbr>Notifier<wbr>Pagerduty<wbr>Config</h4>

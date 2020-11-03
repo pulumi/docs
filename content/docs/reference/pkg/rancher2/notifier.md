@@ -125,7 +125,7 @@ const foo = new rancher2.Notifier("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Notifier">Notifier</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pagerduty_config</span><span class="p">:</span> <span class="nx">Optional[NotifierPagerdutyConfigArgs]</span> = None<span class="p">, </span><span class="nx">send_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slack_config</span><span class="p">:</span> <span class="nx">Optional[NotifierSlackConfigArgs]</span> = None<span class="p">, </span><span class="nx">smtp_config</span><span class="p">:</span> <span class="nx">Optional[NotifierSmtpConfigArgs]</span> = None<span class="p">, </span><span class="nx">webhook_config</span><span class="p">:</span> <span class="nx">Optional[NotifierWebhookConfigArgs]</span> = None<span class="p">, </span><span class="nx">wechat_config</span><span class="p">:</span> <span class="nx">Optional[NotifierWechatConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Notifier">Notifier</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dingtalk_config</span><span class="p">:</span> <span class="nx">Optional[NotifierDingtalkConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">msteams_config</span><span class="p">:</span> <span class="nx">Optional[NotifierMsteamsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pagerduty_config</span><span class="p">:</span> <span class="nx">Optional[NotifierPagerdutyConfigArgs]</span> = None<span class="p">, </span><span class="nx">send_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slack_config</span><span class="p">:</span> <span class="nx">Optional[NotifierSlackConfigArgs]</span> = None<span class="p">, </span><span class="nx">smtp_config</span><span class="p">:</span> <span class="nx">Optional[NotifierSmtpConfigArgs]</span> = None<span class="p">, </span><span class="nx">webhook_config</span><span class="p">:</span> <span class="nx">Optional[NotifierWebhookConfigArgs]</span> = None<span class="p">, </span><span class="nx">wechat_config</span><span class="p">:</span> <span class="nx">Optional[NotifierWechatConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -332,6 +332,17 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="dingtalkconfig_csharp">
+<a href="#dingtalkconfig_csharp" style="color: inherit; text-decoration: inherit;">Dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -339,6 +350,17 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msteamsconfig_csharp">
+<a href="#msteamsconfig_csharp" style="color: inherit; text-decoration: inherit;">Msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -460,6 +482,17 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="dingtalkconfig_go">
+<a href="#dingtalkconfig_go" style="color: inherit; text-decoration: inherit;">Dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -467,6 +500,17 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msteamsconfig_go">
+<a href="#msteamsconfig_go" style="color: inherit; text-decoration: inherit;">Msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -588,6 +632,17 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="dingtalkconfig_nodejs">
+<a href="#dingtalkconfig_nodejs" style="color: inherit; text-decoration: inherit;">dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -595,6 +650,17 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msteamsconfig_nodejs">
+<a href="#msteamsconfig_nodejs" style="color: inherit; text-decoration: inherit;">msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,6 +782,17 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="dingtalk_config_python">
+<a href="#dingtalk_config_python" style="color: inherit; text-decoration: inherit;">dingtalk_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -723,6 +800,17 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msteams_config_python">
+<a href="#msteams_config_python" style="color: inherit; text-decoration: inherit;">msteams_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -901,7 +989,7 @@ Get an existing Notifier resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pagerduty_config</span><span class="p">:</span> <span class="nx">Optional[NotifierPagerdutyConfigArgs]</span> = None<span class="p">, </span><span class="nx">send_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slack_config</span><span class="p">:</span> <span class="nx">Optional[NotifierSlackConfigArgs]</span> = None<span class="p">, </span><span class="nx">smtp_config</span><span class="p">:</span> <span class="nx">Optional[NotifierSmtpConfigArgs]</span> = None<span class="p">, </span><span class="nx">webhook_config</span><span class="p">:</span> <span class="nx">Optional[NotifierWebhookConfigArgs]</span> = None<span class="p">, </span><span class="nx">wechat_config</span><span class="p">:</span> <span class="nx">Optional[NotifierWechatConfigArgs]</span> = None<span class="p">) -&gt;</span> Notifier</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dingtalk_config</span><span class="p">:</span> <span class="nx">Optional[NotifierDingtalkConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">msteams_config</span><span class="p">:</span> <span class="nx">Optional[NotifierMsteamsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pagerduty_config</span><span class="p">:</span> <span class="nx">Optional[NotifierPagerdutyConfigArgs]</span> = None<span class="p">, </span><span class="nx">send_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">slack_config</span><span class="p">:</span> <span class="nx">Optional[NotifierSlackConfigArgs]</span> = None<span class="p">, </span><span class="nx">smtp_config</span><span class="p">:</span> <span class="nx">Optional[NotifierSmtpConfigArgs]</span> = None<span class="p">, </span><span class="nx">webhook_config</span><span class="p">:</span> <span class="nx">Optional[NotifierWebhookConfigArgs]</span> = None<span class="p">, </span><span class="nx">wechat_config</span><span class="p">:</span> <span class="nx">Optional[NotifierWechatConfigArgs]</span> = None<span class="p">) -&gt;</span> Notifier</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1050,6 +1138,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dingtalkconfig_csharp">
+<a href="#state_dingtalkconfig_csharp" style="color: inherit; text-decoration: inherit;">Dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -1057,6 +1156,17 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_msteamsconfig_csharp">
+<a href="#state_msteamsconfig_csharp" style="color: inherit; text-decoration: inherit;">Msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,6 +1288,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dingtalkconfig_go">
+<a href="#state_dingtalkconfig_go" style="color: inherit; text-decoration: inherit;">Dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -1185,6 +1306,17 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_msteamsconfig_go">
+<a href="#state_msteamsconfig_go" style="color: inherit; text-decoration: inherit;">Msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1306,6 +1438,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dingtalkconfig_nodejs">
+<a href="#state_dingtalkconfig_nodejs" style="color: inherit; text-decoration: inherit;">dingtalk<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -1313,6 +1456,17 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_msteamsconfig_nodejs">
+<a href="#state_msteamsconfig_nodejs" style="color: inherit; text-decoration: inherit;">msteams<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1434,6 +1588,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dingtalk_config_python">
+<a href="#state_dingtalk_config_python" style="color: inherit; text-decoration: inherit;">dingtalk_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dingtalk config for notifier (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -1441,6 +1606,17 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_msteams_config_python">
+<a href="#state_msteams_config_python" style="color: inherit; text-decoration: inherit;">msteams_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MSTeams config for notifier (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1533,6 +1709,318 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="notifierdingtalkconfig">Notifier<wbr>Dingtalk<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NotifierDingtalkConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NotifierDingtalkConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierDingtalkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierDingtalkConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NotifierDingtalkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NotifierDingtalkConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_csharp">
+<a href="#proxyurl_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat agent ID (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_go">
+<a href="#proxyurl_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat agent ID (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_nodejs">
+<a href="#proxyurl_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat agent ID (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxy_url_python">
+<a href="#proxy_url_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat agent ID (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="notifiermsteamsconfig">Notifier<wbr>Msteams<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NotifierMsteamsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NotifierMsteamsConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierMsteamsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierMsteamsConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NotifierMsteamsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NotifierMsteamsConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_csharp">
+<a href="#proxyurl_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_go">
+<a href="#proxyurl_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxyurl_nodejs">
+<a href="#proxyurl_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proxy_url_python">
+<a href="#proxy_url_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config</h4>

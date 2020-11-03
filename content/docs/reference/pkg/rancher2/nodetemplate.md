@@ -7781,17 +7781,6 @@ The following state arguments are supported:
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="username_csharp">
-<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="activetimeout_csharp">
@@ -7801,6 +7790,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialid_csharp">
+<a href="#applicationcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialname_csharp">
+<a href="#applicationcredentialname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialsecret_csharp">
+<a href="#applicationcredentialsecret_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential secret (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8067,6 +8089,17 @@ The following state arguments are supported:
     <dd>{{% md %}}File containing an openstack userdata script (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -8107,17 +8140,6 @@ The following state arguments are supported:
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="username_go">
-<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="activetimeout_go">
@@ -8127,6 +8149,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialid_go">
+<a href="#applicationcredentialid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialname_go">
+<a href="#applicationcredentialname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialsecret_go">
+<a href="#applicationcredentialsecret_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential secret (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8393,6 +8448,17 @@ The following state arguments are supported:
     <dd>{{% md %}}File containing an openstack userdata script (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -8433,17 +8499,6 @@ The following state arguments are supported:
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="username_nodejs">
-<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="activetimeout_nodejs">
@@ -8453,6 +8508,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialid_nodejs">
+<a href="#applicationcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialname_nodejs">
+<a href="#applicationcredentialname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationcredentialsecret_nodejs">
+<a href="#applicationcredentialsecret_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential secret (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8719,6 +8807,17 @@ The following state arguments are supported:
     <dd>{{% md %}}File containing an openstack userdata script (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -8759,17 +8858,6 @@ The following state arguments are supported:
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="username_python">
-<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="active_timeout_python">
@@ -8779,6 +8867,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_credential_id_python">
+<a href="#application_credential_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_credential_name_python">
+<a href="#application_credential_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_credential_secret_python">
+<a href="#application_credential_secret_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack application credential secret (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9043,6 +9164,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}File containing an openstack userdata script (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
 </dl>
