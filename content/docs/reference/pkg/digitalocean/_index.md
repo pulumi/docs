@@ -94,7 +94,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.0.1</dd>
 </dl>
 
 
