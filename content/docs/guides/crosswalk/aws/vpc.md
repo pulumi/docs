@@ -392,9 +392,7 @@ routed to in a round-robin fashion from the availability zones with NAT gateways
 
 ## Configuring Security Groups for a VPC
 
-All traffic in and out of a VPC is controlled by
-[Security Groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html), which act as virtual
-firewalls that limit inbound traffic to and outbound traffic from your VPC.
+A [security group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) acts as a virtual firewall for your instance (e.g EC2) to control inbound and outbound traffic. Security groups act at the instance level, not the subnet level. Therefore, each instance in a subnet in your VPC can be assigned to a different set of security groups.
 
 For security groups, you add _rules_ that control traffic what traffic is permitted in the form of _ingress rules_ (for
 inbound traffic) and _egress rules_ (outbound traffic). In addition to specifying what network protocol and ports
