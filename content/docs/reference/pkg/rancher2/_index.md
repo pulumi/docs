@@ -16,6 +16,7 @@ A Pulumi package for creating and managing rancher2 resources.
 <ul class="api">
     <li><a href="activedirectory" title="ActiveDirectory"><span class="symbol resource"></span>ActiveDirectory</a></li>
     <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
+    <li><a href="appv2" title="AppV2"><span class="symbol resource"></span>AppV2</a></li>
     <li><a href="authconfigadfs" title="AuthConfigAdfs"><span class="symbol resource"></span>AuthConfigAdfs</a></li>
     <li><a href="authconfigazuread" title="AuthConfigAzureAd"><span class="symbol resource"></span>AuthConfigAzureAd</a></li>
     <li><a href="authconfigfreeipa" title="AuthConfigFreeIpa"><span class="symbol resource"></span>AuthConfigFreeIpa</a></li>
@@ -26,6 +27,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="authconfigping" title="AuthConfigPing"><span class="symbol resource"></span>AuthConfigPing</a></li>
     <li><a href="bootstrap" title="Bootstrap"><span class="symbol resource"></span>Bootstrap</a></li>
     <li><a href="catalog" title="Catalog"><span class="symbol resource"></span>Catalog</a></li>
+    <li><a href="catalogv2" title="CatalogV2"><span class="symbol resource"></span>CatalogV2</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="cloudcredential" title="CloudCredential"><span class="symbol resource"></span>CloudCredential</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
@@ -65,6 +67,7 @@ A Pulumi package for creating and managing rancher2 resources.
 <ul class="api">
     <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
     <li><a href="getcatalog" title="GetCatalog"><span class="symbol function"></span>GetCatalog</a></li>
+    <li><a href="getcatalogv2" title="GetCatalogV2"><span class="symbol function"></span>GetCatalogV2</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcloudcredential" title="GetCloudCredential"><span class="symbol function"></span>GetCloudCredential</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
@@ -106,7 +109,7 @@ A Pulumi package for creating and managing rancher2 resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.5.1</dd>
 </dl>
 
 
