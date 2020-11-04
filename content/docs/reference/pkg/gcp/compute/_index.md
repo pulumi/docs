@@ -40,6 +40,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="imageiammember" title="ImageIamMember"><span class="symbol resource"></span>ImageIamMember</a></li>
     <li><a href="imageiampolicy" title="ImageIamPolicy"><span class="symbol resource"></span>ImageIamPolicy</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instancefrommachineimage" title="InstanceFromMachineImage"><span class="symbol resource"></span>InstanceFromMachineImage</a></li>
     <li><a href="instancefromtemplate" title="InstanceFromTemplate"><span class="symbol resource"></span>InstanceFromTemplate</a></li>
     <li><a href="instancegroup" title="InstanceGroup"><span class="symbol resource"></span>InstanceGroup</a></li>
     <li><a href="instancegroupmanager" title="InstanceGroupManager"><span class="symbol resource"></span>InstanceGroupManager</a></li>
@@ -50,6 +51,9 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="instancetemplate" title="InstanceTemplate"><span class="symbol resource"></span>InstanceTemplate</a></li>
     <li><a href="interconnectattachment" title="InterconnectAttachment"><span class="symbol resource"></span>InterconnectAttachment</a></li>
     <li><a href="machineimage" title="MachineImage"><span class="symbol resource"></span>MachineImage</a></li>
+    <li><a href="machineimageiambinding" title="MachineImageIamBinding"><span class="symbol resource"></span>MachineImageIamBinding</a></li>
+    <li><a href="machineimageiammember" title="MachineImageIamMember"><span class="symbol resource"></span>MachineImageIamMember</a></li>
+    <li><a href="machineimageiampolicy" title="MachineImageIamPolicy"><span class="symbol resource"></span>MachineImageIamPolicy</a></li>
     <li><a href="managedsslcertificate" title="ManagedSslCertificate"><span class="symbol resource"></span>ManagedSslCertificate</a></li>
     <li><a href="mangedsslcertificate" title="MangedSslCertificate"><span class="symbol resource"></span>MangedSslCertificate</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
@@ -151,7 +155,7 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.1.0</dd>
+	<dd>4.2.0</dd>
 </dl>
 
 

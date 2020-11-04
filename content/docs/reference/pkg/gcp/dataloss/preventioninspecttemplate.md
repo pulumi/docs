@@ -454,8 +454,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -483,8 +483,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -512,8 +512,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -541,8 +541,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -721,8 +721,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -789,8 +789,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -857,8 +857,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -925,8 +925,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -987,6 +987,18 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custominfotypes_csharp">
+<a href="#custominfotypes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Info<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1083,6 +1095,18 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="custominfotypes_go">
+<a href="#custominfotypes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Info<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">[]Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="excludeinfotypes_go">
 <a href="#excludeinfotypes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
 </span> 
@@ -1171,6 +1195,18 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custominfotypes_nodejs">
+<a href="#custominfotypes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Info<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type[]</a></span>
+    </dt>
+    <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1267,6 +1303,18 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="custom_info_types_python">
+<a href="#custom_info_types_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>info_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="exclude_info_types_python">
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
 </span> 
@@ -1345,6 +1393,1012 @@ Structure is documented below.
 
 
 
+<h4 id="preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfigCustomInfoType">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfigCustomInfoType">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoType.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="infotype_csharp">
+<a href="#infotype_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+treated as a custom info type.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dictionary_csharp">
+<a href="#dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dictionary which defines the rule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclusiontype_csharp">
+<a href="#exclusiontype_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+Possible values are `EXCLUSION_TYPE_EXCLUDE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="likelihood_csharp">
+<a href="#likelihood_csharp" style="color: inherit; text-decoration: inherit;">Likelihood</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+specified by the rule.
+Default value is `VERY_LIKELY`.
+Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_csharp">
+<a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Regular expression which defines the rule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storedtype_csharp">
+<a href="#storedtype_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="infotype_go">
+<a href="#infotype_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+treated as a custom info type.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dictionary_go">
+<a href="#dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
+    </dt>
+    <dd>{{% md %}}Dictionary which defines the rule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclusiontype_go">
+<a href="#exclusiontype_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+Possible values are `EXCLUSION_TYPE_EXCLUDE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="likelihood_go">
+<a href="#likelihood_go" style="color: inherit; text-decoration: inherit;">Likelihood</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+specified by the rule.
+Default value is `VERY_LIKELY`.
+Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_go">
+<a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</a></span>
+    </dt>
+    <dd>{{% md %}}Regular expression which defines the rule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storedtype_go">
+<a href="#storedtype_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="infotype_nodejs">
+<a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+treated as a custom info type.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dictionary_nodejs">
+<a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
+    </dt>
+    <dd>{{% md %}}Dictionary which defines the rule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclusiontype_nodejs">
+<a href="#exclusiontype_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+Possible values are `EXCLUSION_TYPE_EXCLUDE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="likelihood_nodejs">
+<a href="#likelihood_nodejs" style="color: inherit; text-decoration: inherit;">likelihood</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+specified by the rule.
+Default value is `VERY_LIKELY`.
+Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_nodejs">
+<a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</a></span>
+    </dt>
+    <dd>{{% md %}}Regular expression which defines the rule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storedtype_nodejs">
+<a href="#storedtype_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="info_type_python">
+<a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+treated as a custom info type.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dictionary_python">
+<a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dictionary which defines the rule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclusion_type_python">
+<a href="#exclusion_type_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+Possible values are `EXCLUSION_TYPE_EXCLUDE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="likelihood_python">
+<a href="#likelihood_python" style="color: inherit; text-decoration: inherit;">likelihood</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+specified by the rule.
+Default value is `VERY_LIKELY`.
+Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_python">
+<a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Regular expression which defines the rule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stored_type_python">
+<a href="#stored_type_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudstoragepath_csharp">
+<a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="wordlist_csharp">
+<a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}List of words or phrases to search for.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudstoragepath_go">
+<a href="#cloudstoragepath_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
+    </dt>
+    <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="wordlist_go">
+<a href="#wordlist_go" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
+    </dt>
+    <dd>{{% md %}}List of words or phrases to search for.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudstoragepath_nodejs">
+<a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
+    </dt>
+    <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="wordlist_nodejs">
+<a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
+    </dt>
+    <dd>{{% md %}}List of words or phrases to search for.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloud_storage_path_python">
+<a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="word_list_python">
+<a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}List of words or phrases to search for.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="words_csharp">
+<a href="#words_csharp" style="color: inherit; text-decoration: inherit;">Words</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
+phrase and every phrase must contain at least 2 characters that are letters or digits.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="words_go">
+<a href="#words_go" style="color: inherit; text-decoration: inherit;">Words</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
+phrase and every phrase must contain at least 2 characters that are letters or digits.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="words_nodejs">
+<a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
+phrase and every phrase must contain at least 2 characters that are letters or digits.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="words_python">
+<a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
+phrase and every phrase must contain at least 2 characters that are letters or digits.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfigCustomInfoTypeRegex">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfigCustomInfoTypeRegex">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeRegexOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegex.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pattern_csharp">
+<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pattern defining the regular expression.
+Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupindexes_csharp">
+<a href="#groupindexes_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pattern_go">
+<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pattern defining the regular expression.
+Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupindexes_go">
+<a href="#groupindexes_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pattern_nodejs">
+<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pattern defining the regular expression.
+Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupindexes_nodejs">
+<a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pattern_python">
+<a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Pattern defining the regular expression.
+Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_indexes_python">
+<a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+    </dt>
+    <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="preventioninspecttemplateinspectconfiginfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfigInfoType">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfigInfoType">output</a> API doc for this type.
@@ -1371,8 +2425,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1390,8 +2444,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1409,8 +2463,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1428,8 +2482,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1647,9 +2701,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does
-not have an infoType, the DLP API applies the limit against all infoTypes that are found but not
-specified in another InfoTypeLimit.
+    <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1679,9 +2734,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does
-not have an infoType, the DLP API applies the limit against all infoTypes that are found but not
-specified in another InfoTypeLimit.
+    <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1711,9 +2767,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does
-not have an infoType, the DLP API applies the limit against all infoTypes that are found but not
-specified in another InfoTypeLimit.
+    <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1743,9 +2800,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does
-not have an infoType, the DLP API applies the limit against all infoTypes that are found but not
-specified in another InfoTypeLimit.
+    <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
+infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
+one detected by the system. If built-in info type is not specified in `info_types` list then the name is
+treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1793,8 +2851,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1812,8 +2870,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1831,8 +2889,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1850,8 +2908,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2029,8 +3087,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2048,8 +3106,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2067,8 +3125,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2086,8 +3144,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2923,8 +3981,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2942,8 +4000,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2961,8 +4019,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2980,8 +4038,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
-at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+    <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
 
 </dl>

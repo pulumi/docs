@@ -289,6 +289,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="confidentialnodes_csharp">
+<a href="#confidentialnodes_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterconfidentialnode">List&lt;Get<wbr>Cluster<wbr>Confidential<wbr>Node&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="databaseencryptions_csharp">
 <a href="#databaseencryptions_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Encryptions</a>
 </span> 
@@ -822,6 +832,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusterclustertelemetry">[]Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="confidentialnodes_go">
+<a href="#confidentialnodes_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterconfidentialnode">[]Get<wbr>Cluster<wbr>Confidential<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1365,6 +1385,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="confidentialnodes_nodejs">
+<a href="#confidentialnodes_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterconfidentialnode">Get<wbr>Cluster<wbr>Confidential<wbr>Node[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="databaseencryptions_nodejs">
 <a href="#databaseencryptions_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Encryptions</a>
 </span> 
@@ -1898,6 +1928,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusterclustertelemetry">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="confidential_nodes_python">
+<a href="#confidential_nodes_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterconfidentialnode">Sequence[Get<wbr>Cluster<wbr>Confidential<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4355,6 +4395,92 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusterconfidentialnode">Get<wbr>Cluster<wbr>Confidential<wbr>Node</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterConfidentialNode">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterConfidentialNode">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterConfidentialNode.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

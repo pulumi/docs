@@ -3,7 +3,7 @@ title: "Module composer"
 title_tag: "Module composer | Package @pulumi/gcp | Node.js SDK"
 linktitle: "composer"
 meta_desc: "Explore members of the composer module in the @pulumi/gcp package."
-git_sha: "0c46c212e5430badafa0a4a775d8fb5b6926e30e"
+git_sha: "687830ffe071199872d057c29c8b0105da51c99a"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Environment" data-link-title="Environment">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L35">
         Resource <strong>Environment</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ To get more information about Environments, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Environment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -83,7 +83,7 @@ Create a Environment resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Environment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -94,14 +94,14 @@ Get an existing Environment resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Environment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Environment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Returns true if the given object is an instance of Environment.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Environment-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L66">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L66">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfig'>EnvironmentConfig</a>&gt;;</code></pre>
@@ -120,7 +120,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Configuration parameters for this environment  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Environment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -129,7 +129,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Environment-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L78">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L78">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
 
 <h4 class="pdoc-member-header" id="Environment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ Both keys and values must be <= 128 bytes in size.
 Name of the environment
 
 <h4 class="pdoc-member-header" id="Environment-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L87">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L87">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Environment-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L91">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L91">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ If it is not provided, the provider project is used.
 The location or Compute Engine region for the environment.
 
 <h4 class="pdoc-member-header" id="Environment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -181,7 +181,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getImageVersions" data-link-title="getImageVersions">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L12">
         Function <strong>getImageVersions</strong>
     </a>
 </h3>
@@ -195,7 +195,7 @@ Provides access to available Cloud Composer versions in a region for a given pro
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EnvironmentArgs" data-link-title="EnvironmentArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L167">
         interface <strong>EnvironmentArgs</strong>
     </a>
 </h3>
@@ -205,7 +205,7 @@ Provides access to available Cloud Composer versions in a region for a given pro
 The set of arguments for constructing a Environment resource.
 
 <h4 class="pdoc-member-header" id="EnvironmentArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L171">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L171">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfig'>EnvironmentConfig</a>&gt;;</code></pre>
@@ -213,7 +213,7 @@ The set of arguments for constructing a Environment resource.
 Configuration parameters for this environment  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="EnvironmentArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L183">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L183">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -229,7 +229,7 @@ No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
 
 <h4 class="pdoc-member-header" id="EnvironmentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ Both keys and values must be <= 128 bytes in size.
 Name of the environment
 
 <h4 class="pdoc-member-header" id="EnvironmentArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L192">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L192">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EnvironmentArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L196">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L196">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ If it is not provided, the provider project is used.
 The location or Compute Engine region for the environment.
 
 <h3 class="pdoc-module-header" id="EnvironmentState" data-link-title="EnvironmentState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L132">
         interface <strong>EnvironmentState</strong>
     </a>
 </h3>
@@ -264,7 +264,7 @@ The location or Compute Engine region for the environment.
 Input properties used for looking up and filtering Environment resources.
 
 <h4 class="pdoc-member-header" id="EnvironmentState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L136">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L136">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfig'>EnvironmentConfig</a>&gt;;</code></pre>
@@ -272,7 +272,7 @@ Input properties used for looking up and filtering Environment resources.
 Configuration parameters for this environment  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="EnvironmentState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L148">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L148">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -288,7 +288,7 @@ No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
 
 <h4 class="pdoc-member-header" id="EnvironmentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ Both keys and values must be <= 128 bytes in size.
 Name of the environment
 
 <h4 class="pdoc-member-header" id="EnvironmentState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L157">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L157">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="EnvironmentState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/environment.ts#L161">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/environment.ts#L161">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -313,7 +313,7 @@ If it is not provided, the provider project is used.
 The location or Compute Engine region for the environment.
 
 <h3 class="pdoc-module-header" id="GetImageVersionsArgs" data-link-title="GetImageVersionsArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L30">
         interface <strong>GetImageVersionsArgs</strong>
     </a>
 </h3>
@@ -323,7 +323,7 @@ The location or Compute Engine region for the environment.
 A collection of arguments for invoking getImageVersions.
 
 <h4 class="pdoc-member-header" id="GetImageVersionsArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L35">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L35">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -332,7 +332,7 @@ The ID of the project to list versions in.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GetImageVersionsArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L40">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L40">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -341,7 +341,7 @@ The location to list versions in.
 If it is not provider, the provider region is used.
 
 <h3 class="pdoc-module-header" id="GetImageVersionsResult" data-link-title="GetImageVersionsResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L46">
         interface <strong>GetImageVersionsResult</strong>
     </a>
 </h3>
@@ -351,7 +351,7 @@ If it is not provider, the provider region is used.
 A collection of values returned by getImageVersions.
 
 <h4 class="pdoc-member-header" id="GetImageVersionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -359,7 +359,7 @@ A collection of values returned by getImageVersions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetImageVersionsResult-imageVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L54">property <b>imageVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L54">property <b>imageVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageVersions: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetImageVersionsImageVersion'>GetImageVersionsImageVersion</a>[];</code></pre>
@@ -367,12 +367,12 @@ The provider-assigned unique ID for this managed resource.
 A list of composer image versions available in the given project and location. Each `imageVersion` contains:
 
 <h4 class="pdoc-member-header" id="GetImageVersionsResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L55">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L55">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageVersionsResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/composer/getImageVersions.ts#L56">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/composer/getImageVersions.ts#L56">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

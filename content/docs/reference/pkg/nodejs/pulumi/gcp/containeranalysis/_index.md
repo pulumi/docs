@@ -3,7 +3,7 @@ title: "Module containeranalysis"
 title_tag: "Module containeranalysis | Package @pulumi/gcp | Node.js SDK"
 linktitle: "containeranalysis"
 meta_desc: "Explore members of the containeranalysis module in the @pulumi/gcp package."
-git_sha: "0c46c212e5430badafa0a4a775d8fb5b6926e30e"
+git_sha: "687830ffe071199872d057c29c8b0105da51c99a"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Note" data-link-title="Note">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L22">
         Resource <strong>Note</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ To get more information about Note, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Note-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -67,7 +67,7 @@ Create a Note resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Note-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -78,14 +78,14 @@ Get an existing Note resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Note-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Note-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -96,7 +96,7 @@ Returns true if the given object is an instance of Note.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Note-attestationAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L62">property <b>attestationAuthority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L62">property <b>attestationAuthority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attestationAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NoteAttestationAuthority'>NoteAttestationAuthority</a>&gt;;</code></pre>
@@ -113,7 +113,7 @@ project.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Note-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L66">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L66">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ Structure is documented below.
 The time this note was created.
 
 <h4 class="pdoc-member-header" id="Note-expirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L70">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L70">property <b>expirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ The time this note was created.
 Time of expiration for this note. Leave empty if note does not expire.
 
 <h4 class="pdoc-member-header" id="Note-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Note-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L74">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L74">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ deployments and may be missing (undefined) during planning phases.
 The type of analysis this note describes
 
 <h4 class="pdoc-member-header" id="Note-longDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L78">property <b>longDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L78">property <b>longDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>longDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ The type of analysis this note describes
 A detailed description of the note
 
 <h4 class="pdoc-member-header" id="Note-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ A detailed description of the note
 The name of the note.
 
 <h4 class="pdoc-member-header" id="Note-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L87">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L87">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +171,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Note-relatedNoteNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L91">property <b>relatedNoteNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L91">property <b>relatedNoteNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relatedNoteNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -179,7 +179,7 @@ If it is not provided, the provider project is used.
 Names of other notes related to this note.
 
 <h4 class="pdoc-member-header" id="Note-relatedUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L96">property <b>relatedUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L96">property <b>relatedUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relatedUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NoteRelatedUrl'>NoteRelatedUrl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ URLs associated with this note and related metadata.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Note-shortDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L100">property <b>shortDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L100">property <b>shortDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shortDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ Structure is documented below.
 A one sentence description of the note.
 
 <h4 class="pdoc-member-header" id="Note-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L104">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L104">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ A one sentence description of the note.
 The time this note was last updated.
 
 <h4 class="pdoc-member-header" id="Note-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -213,7 +213,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Occurence" data-link-title="Occurence">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L21">
         Resource <strong>Occurence</strong>
     </a>
 </h3>
@@ -232,7 +232,7 @@ To get more information about Occurrence, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Occurence-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -246,7 +246,7 @@ Create a Occurence resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Occurence-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -257,14 +257,14 @@ Get an existing Occurence resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Occurence-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Occurence-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -275,7 +275,7 @@ Returns true if the given object is an instance of Occurence.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Occurence-attestation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L60">property <b>attestation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L60">property <b>attestation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attestation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OccurenceAttestation'>OccurenceAttestation</a>&gt;;</code></pre>
@@ -291,7 +291,7 @@ which authority this attestation was intended to sign.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Occurence-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L64">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L64">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -299,7 +299,7 @@ Structure is documented below.
 The time when the repository was created.
 
 <h4 class="pdoc-member-header" id="Occurence-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -308,7 +308,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Occurence-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L69">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L69">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ The note kind which explicitly denotes which of the occurrence details are speci
 in list requests.
 
 <h4 class="pdoc-member-header" id="Occurence-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ in list requests.
 The name of the occurrence.
 
 <h4 class="pdoc-member-header" id="Occurence-noteName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L79">property <b>noteName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L79">property <b>noteName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noteName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
 
 <h4 class="pdoc-member-header" id="Occurence-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L84">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L84">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -344,7 +344,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Occurence-remediation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L88">property <b>remediation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L88">property <b>remediation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remediation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -352,7 +352,7 @@ If it is not provided, the provider project is used.
 A description of actions that can be taken to remedy the note.
 
 <h4 class="pdoc-member-header" id="Occurence-resourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L94">property <b>resourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L94">property <b>resourceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
 
 <h4 class="pdoc-member-header" id="Occurence-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L98">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L98">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -370,7 +370,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
 The time when the repository was last updated.
 
 <h4 class="pdoc-member-header" id="Occurence-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -382,7 +382,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="NoteArgs" data-link-title="NoteArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L221">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L221">
         interface <strong>NoteArgs</strong>
     </a>
 </h3>
@@ -392,7 +392,7 @@ deployments.
 The set of arguments for constructing a Note resource.
 
 <h4 class="pdoc-member-header" id="NoteArgs-attestationAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L234">property <b>attestationAuthority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L234">property <b>attestationAuthority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestationAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteAttestationAuthority'>NoteAttestationAuthority</a>&gt;;</code></pre>
@@ -409,7 +409,7 @@ project.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NoteArgs-expirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L238">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L238">property <b>expirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ Structure is documented below.
 Time of expiration for this note. Leave empty if note does not expire.
 
 <h4 class="pdoc-member-header" id="NoteArgs-longDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L242">property <b>longDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L242">property <b>longDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>longDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ Time of expiration for this note. Leave empty if note does not expire.
 A detailed description of the note
 
 <h4 class="pdoc-member-header" id="NoteArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L246">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L246">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ A detailed description of the note
 The name of the note.
 
 <h4 class="pdoc-member-header" id="NoteArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L251">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L251">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="NoteArgs-relatedNoteNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L255">property <b>relatedNoteNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L255">property <b>relatedNoteNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relatedNoteNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -450,7 +450,7 @@ If it is not provided, the provider project is used.
 Names of other notes related to this note.
 
 <h4 class="pdoc-member-header" id="NoteArgs-relatedUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L260">property <b>relatedUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L260">property <b>relatedUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relatedUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteRelatedUrl'>NoteRelatedUrl</a>&gt;[]&gt;;</code></pre>
@@ -459,7 +459,7 @@ URLs associated with this note and related metadata.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NoteArgs-shortDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L264">property <b>shortDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L264">property <b>shortDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -467,7 +467,7 @@ Structure is documented below.
 A one sentence description of the note.
 
 <h3 class="pdoc-module-header" id="NoteState" data-link-title="NoteState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L160">
         interface <strong>NoteState</strong>
     </a>
 </h3>
@@ -477,7 +477,7 @@ A one sentence description of the note.
 Input properties used for looking up and filtering Note resources.
 
 <h4 class="pdoc-member-header" id="NoteState-attestationAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L173">property <b>attestationAuthority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L173">property <b>attestationAuthority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestationAuthority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteAttestationAuthority'>NoteAttestationAuthority</a>&gt;;</code></pre>
@@ -494,7 +494,7 @@ project.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NoteState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L177">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L177">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ Structure is documented below.
 The time this note was created.
 
 <h4 class="pdoc-member-header" id="NoteState-expirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L181">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L181">property <b>expirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ The time this note was created.
 Time of expiration for this note. Leave empty if note does not expire.
 
 <h4 class="pdoc-member-header" id="NoteState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L185">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L185">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ Time of expiration for this note. Leave empty if note does not expire.
 The type of analysis this note describes
 
 <h4 class="pdoc-member-header" id="NoteState-longDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L189">property <b>longDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L189">property <b>longDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>longDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ The type of analysis this note describes
 A detailed description of the note
 
 <h4 class="pdoc-member-header" id="NoteState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L193">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L193">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ A detailed description of the note
 The name of the note.
 
 <h4 class="pdoc-member-header" id="NoteState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L198">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L198">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -543,7 +543,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="NoteState-relatedNoteNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L202">property <b>relatedNoteNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L202">property <b>relatedNoteNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relatedNoteNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -551,7 +551,7 @@ If it is not provided, the provider project is used.
 Names of other notes related to this note.
 
 <h4 class="pdoc-member-header" id="NoteState-relatedUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L207">property <b>relatedUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L207">property <b>relatedUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relatedUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteRelatedUrl'>NoteRelatedUrl</a>&gt;[]&gt;;</code></pre>
@@ -560,7 +560,7 @@ URLs associated with this note and related metadata.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NoteState-shortDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L211">property <b>shortDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L211">property <b>shortDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ Structure is documented below.
 A one sentence description of the note.
 
 <h4 class="pdoc-member-header" id="NoteState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/note.ts#L215">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/note.ts#L215">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ A one sentence description of the note.
 The time this note was last updated.
 
 <h3 class="pdoc-module-header" id="OccurenceArgs" data-link-title="OccurenceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L212">
         interface <strong>OccurenceArgs</strong>
     </a>
 </h3>
@@ -586,7 +586,7 @@ The time this note was last updated.
 The set of arguments for constructing a Occurence resource.
 
 <h4 class="pdoc-member-header" id="OccurenceArgs-attestation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L224">property <b>attestation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L224">property <b>attestation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OccurenceAttestation'>OccurenceAttestation</a>&gt;;</code></pre>
@@ -602,7 +602,7 @@ which authority this attestation was intended to sign.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="OccurenceArgs-noteName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L230">property <b>noteName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L230">property <b>noteName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noteName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -612,7 +612,7 @@ projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
 
 <h4 class="pdoc-member-header" id="OccurenceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L235">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L235">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -621,7 +621,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="OccurenceArgs-remediation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L239">property <b>remediation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L239">property <b>remediation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remediation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +629,7 @@ If it is not provided, the provider project is used.
 A description of actions that can be taken to remedy the note.
 
 <h4 class="pdoc-member-header" id="OccurenceArgs-resourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L245">property <b>resourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L245">property <b>resourceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -639,7 +639,7 @@ the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
 
 <h3 class="pdoc-module-header" id="OccurenceState" data-link-title="OccurenceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L156">
         interface <strong>OccurenceState</strong>
     </a>
 </h3>
@@ -649,7 +649,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
 Input properties used for looking up and filtering Occurence resources.
 
 <h4 class="pdoc-member-header" id="OccurenceState-attestation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L168">property <b>attestation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L168">property <b>attestation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OccurenceAttestation'>OccurenceAttestation</a>&gt;;</code></pre>
@@ -665,7 +665,7 @@ which authority this attestation was intended to sign.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="OccurenceState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L172">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L172">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ Structure is documented below.
 The time when the repository was created.
 
 <h4 class="pdoc-member-header" id="OccurenceState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L177">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L177">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -682,7 +682,7 @@ The note kind which explicitly denotes which of the occurrence details are speci
 in list requests.
 
 <h4 class="pdoc-member-header" id="OccurenceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ in list requests.
 The name of the occurrence.
 
 <h4 class="pdoc-member-header" id="OccurenceState-noteName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L187">property <b>noteName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L187">property <b>noteName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noteName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
 
 <h4 class="pdoc-member-header" id="OccurenceState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L192">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L192">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="OccurenceState-remediation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L196">property <b>remediation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L196">property <b>remediation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remediation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ If it is not provided, the provider project is used.
 A description of actions that can be taken to remedy the note.
 
 <h4 class="pdoc-member-header" id="OccurenceState-resourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L202">property <b>resourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L202">property <b>resourceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -727,7 +727,7 @@ the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
 
 <h4 class="pdoc-member-header" id="OccurenceState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/containeranalysis/occurence.ts#L206">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/containeranalysis/occurence.ts#L206">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

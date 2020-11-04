@@ -3,7 +3,7 @@ title: "Module networkmanagement"
 title_tag: "Module networkmanagement | Package @pulumi/gcp | Node.js SDK"
 linktitle: "networkmanagement"
 meta_desc: "Explore members of the networkmanagement module in the @pulumi/gcp package."
-git_sha: "0c46c212e5430badafa0a4a775d8fb5b6926e30e"
+git_sha: "687830ffe071199872d057c29c8b0105da51c99a"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ConnectivityTest" data-link-title="ConnectivityTest">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L22">
         Resource <strong>ConnectivityTest</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ To get more information about ConnectivityTest, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -64,7 +64,7 @@ Create a ConnectivityTest resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -75,14 +75,14 @@ Get an existing ConnectivityTest resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -93,7 +93,7 @@ Returns true if the given object is an instance of ConnectivityTest.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L54">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L54">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -102,7 +102,7 @@ The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L72">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L72">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ConnectivityTestDestination'>ConnectivityTestDestination</a>&gt;;</code></pre>
@@ -124,7 +124,7 @@ don't intend to test.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L76">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L76">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ deployments and may be missing (undefined) during planning phases.
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ Resource labels to represent user-provided metadata.
 Unique name for the connectivity test.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L85">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L85">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L89">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L89">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ If it is not provided, the provider project is used.
 IP Protocol of the test. When not provided, "TCP" is assumed.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-relatedProjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L95">property <b>relatedProjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L95">property <b>relatedProjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relatedProjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ This is applicable to scenarios where a test can cross project
 boundaries.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L117">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L117">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ConnectivityTestSource'>ConnectivityTestSource</a>&gt;;</code></pre>
@@ -202,7 +202,7 @@ you don't intend to test.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ConnectivityTest-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -214,7 +214,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConnectivityTestArgs" data-link-title="ConnectivityTestArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L244">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L244">
         interface <strong>ConnectivityTestArgs</strong>
     </a>
 </h3>
@@ -224,7 +224,7 @@ deployments.
 The set of arguments for constructing a ConnectivityTest resource.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L249">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L249">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L267">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L267">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConnectivityTestDestination'>ConnectivityTestDestination</a>&gt;;</code></pre>
@@ -255,7 +255,7 @@ don't intend to test.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L271">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L271">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -263,7 +263,7 @@ Structure is documented below.
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ Resource labels to represent user-provided metadata.
 Unique name for the connectivity test.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L280">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L280">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L284">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L284">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ If it is not provided, the provider project is used.
 IP Protocol of the test. When not provided, "TCP" is assumed.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestArgs-relatedProjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L290">property <b>relatedProjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L290">property <b>relatedProjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relatedProjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -298,7 +298,7 @@ This is applicable to scenarios where a test can cross project
 boundaries.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestArgs-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L312">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L312">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConnectivityTestSource'>ConnectivityTestSource</a>&gt;;</code></pre>
@@ -324,7 +324,7 @@ you don't intend to test.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="ConnectivityTestState" data-link-title="ConnectivityTestState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L170">
         interface <strong>ConnectivityTestState</strong>
     </a>
 </h3>
@@ -334,7 +334,7 @@ Structure is documented below.
 Input properties used for looking up and filtering ConnectivityTest resources.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L175">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L175">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -343,7 +343,7 @@ The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L193">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L193">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConnectivityTestDestination'>ConnectivityTestDestination</a>&gt;;</code></pre>
@@ -365,7 +365,7 @@ don't intend to test.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L197">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L197">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -373,7 +373,7 @@ Structure is documented below.
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L201">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ Resource labels to represent user-provided metadata.
 Unique name for the connectivity test.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L206">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L206">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,7 +390,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L210">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L210">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -398,7 +398,7 @@ If it is not provided, the provider project is used.
 IP Protocol of the test. When not provided, "TCP" is assumed.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestState-relatedProjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L216">property <b>relatedProjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L216">property <b>relatedProjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relatedProjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -408,7 +408,7 @@ This is applicable to scenarios where a test can cross project
 boundaries.
 
 <h4 class="pdoc-member-header" id="ConnectivityTestState-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/0c46c212e5430badafa0a4a775d8fb5b6926e30e/sdk/nodejs/networkmanagement/connectivityTest.ts#L238">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/687830ffe071199872d057c29c8b0105da51c99a/sdk/nodejs/networkmanagement/connectivityTest.ts#L238">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConnectivityTestSource'>ConnectivityTestSource</a>&gt;;</code></pre>
