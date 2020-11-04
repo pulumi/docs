@@ -2,9 +2,9 @@
 title: "Deploying Minecraft on Azure"
 date: 2020-11-04
 meta_desc: "Deploy and provision a Minecraft server on Azure with the Pulumi nextgen Azure provider."
-meta_image: meta.png
+meta_image: minecraft-pulumi.png
 authors:
-    - sophia-parafinma
+    - sophia-parafina
 tags:
     - Azure
     - virtual machine
@@ -19,7 +19,7 @@ This article shows how to deploy and provision a virtual machine in Azure using 
 
 Let's go step by step through the process:
 
-[Resource groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) hold all the resources that you use in a building infrastructure on Azure. They can contain all the resources for your Azure infrastructure or only the resources that you want to manage together. Resource groups let you deploy, update, and delete resources as a group.
+[Resource groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) hold all the resources that you use for building infrastructure on Azure. They can contain all the resources for your Azure infrastructure or only the resources that you want to manage together. Resource groups let you deploy, update, and delete resources as a group.
 
 Declaring a resource group with Pulumi is straightforward and requires a name and the location of the region.
 
@@ -29,7 +29,7 @@ resource_group = resources.ResourceGroup("server-rg",
     location=location)
 ```
 
-Next, we want to create all the resources needed to deploy a virtual machine as a server and make it accessible to clients on the Internet, which in our case is a Minecraft client.
+Next, we want to create all the resources needed to deploy a virtual machine as a server and make it accessible to clients on the Internet, which, in our case, is a Minecraft client.
 
 First, create a virtual network for the server to communicate with other resources and to the Internet. The virtual network needs the resource group name, the location, and a name. We set a private IP address range and Azure will assign an IP address if a resource is deployed in that address space.
 
@@ -49,7 +49,7 @@ net = network.VirtualNetwork(
 )
 ```
 
-To make the virtual machine accessible on the Internet, we create a public IP. The public IP address is dedicated to a resource unless they are unassigned by you. As such, they are resources in their own right and can be associated with other resources such as firewalls, load balancers, and virtual machines.
+To make the virtual machine accessible on the Internet, we create a public IP. The public IP address is dedicated to a resource unless they are unassigned by you. They are resources in their own right and can be associated with other resources such as firewalls, load balancers, and virtual machines.
 
 ```python
 public_ip = network.PublicIPAddress(
@@ -78,9 +78,9 @@ network_iface = network.NetworkInterface(
 )
 ```
 
-Now that we have the networking resources available, let's create the virtual machine.
+Now that we have the networking resources available let's create the virtual machine.
 
-There are several parts to creating a virtual machine, so we'll go through the code piece by piece. In the previous step we created a network interface resource. We'll use that to setup the network profile for the virtual machine.
+There are several parts to creating a virtual machine, so we'll go through the code piece by piece. In the previous step, we created a network interface resource. We'll use that to set up the network profile for the virtual machine.
 
 ```python
 network_profile=compute.NetworkProfileArgs(
@@ -90,7 +90,7 @@ network_profile=compute.NetworkProfileArgs(
     ),
 ```
 
-Next, we set the hardware profile which sets the [virtual machine size](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes) which determines the number of cores, amount of memory, and the size of storage.
+Next, we set the hardware profile that sets the [virtual machine size](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes), determining the number of cores, amount of memory, and storage size.
 
 ```python
     hardware_profile=compute.HardwareProfileArgs(
@@ -176,10 +176,17 @@ Once the virtual machine is created and provisioned, we publish the virtual mach
 export("Minecraft Server IP Address", public_ip_addr.ip_address)
 ```
 
-![Minecraft server][minecraft.png]
+![Minecraft server](minecraft.png)
 
 ## Next Steps
 
-This article demonstrates the process to create a virtual machine and provision it with a Minecraft server. However, there's always room for improvement such as adding Azure Disk Storage to provide durable storage, add a configuration file to customize the server, and automatically updating the server jar file when a new version is released. All these options are available to you when you build your infrastructure with code.
+This article demonstrates the process to create a virtual machine and provision it with a Minecraft server. However, there's always room for improvement, such as adding Azure Disk Storage to provide durable storage, add a configuration file to customize the server, and automatically updating the server jar file when a new version is released. All these options are available to you when you build your infrastructure with code.
 
-You can download the code from the Pulumi examples repository on Github.
+You can download the [code](https://github.com/pulumi/examples/azure-nextgen-py-minecraft-server) from the Pulumi examples repository on Github.
+
+See these resources to learn more about deploying infrastructure on Azure.
+
+- [Get Started with Azure]({{< relref "/docs/get-started/azure" >}})
+- [Azure]({{< relref "/docs/intro/cloud-providers/azure" >}})
+- [Azure Next Generation Provider]({{< relref "/docs/reference/pkg/azure-nextgen" >}})
+- [Dynamic Providers]({{< relref "/blog/dynamic-providers" >}})
