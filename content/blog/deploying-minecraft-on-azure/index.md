@@ -11,13 +11,15 @@ tags:
     - Minecraft
 ---
 
-This article shows how to deploy and provision a virtual machine in Azure using the Pulumi [Next Generation Azure provider]({{< relref "/blog/announcing-nextgen-azure-provider" >}}). While there are numerous examples of using the Azure console, the Azure CLI, or ARM templates to deploy and provision virtual machines, we'll use Python to implement a repeatable deployment.
+This article demonstrates how to deploy and provision a virtual machine in Azure using the Pulumi [Next Generation Azure provider]({{< relref "/blog/announcing-nextgen-azure-provider" >}}). While there are numerous examples of using the Azure console, the Azure CLI, or ARM templates to deploy and provision virtual machines, we'll use Python to implement a repeatable deployment.
 
 <!--more-->
 
 ## Build it
 
-Let's go step by step through the process:
+There are several parts to the process. First, we need to create the network resources to make the virtual machine accessible to Minecraft clients. Second, the virtual machine needs to be created and configured with network resources, storage for server files and logs, and a way to administer it remotely. Finally, the virtual machine needs to be provisioned with the server and all the dependencies that it requires, such as Java. Let's go step by step through the process.
+
+### Resource Group
 
 [Resource groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) hold all the resources that you use for building infrastructure on Azure. They can contain all the resources for your Azure infrastructure or only the resources that you want to manage together. Resource groups let you deploy, update, and delete resources as a group.
 
@@ -29,9 +31,11 @@ resource_group = resources.ResourceGroup("server-rg",
     location=location)
 ```
 
+### Networking resources
+
 Next, we want to create all the resources needed to deploy a virtual machine as a server and make it accessible to clients on the Internet, which, in our case, is a Minecraft client.
 
-First, create a virtual network for the server to communicate with other resources and to the Internet. The virtual network needs the resource group name, the location, and a name. We set a private IP address range and Azure will assign an IP address if a resource is deployed in that address space.
+We'll create a virtual network for the server to communicate with other resources and to the Internet. The virtual network needs the resource group name, the location, and a name. We set a private IP address range and Azure will assign an IP address if a resource is deployed in that address space.
 
 ```python
 net = network.VirtualNetwork(
@@ -79,6 +83,8 @@ network_iface = network.NetworkInterface(
 ```
 
 Now that we have the networking resources available let's create the virtual machine.
+
+### Virtual machine
 
 There are several parts to creating a virtual machine, so we'll go through the code piece by piece. In the previous step, we created a network interface resource. We'll use that to set up the network profile for the virtual machine.
 
@@ -136,6 +142,8 @@ storage_profile=compute.StorageProfileArgs(
     ),
 ```
 
+### Provisioning the server
+
 Once the virtual machine has been created, we need to provision it with the Minecraft server. The `install.sh` script installs the prerequisite software, the Minecraft server, and creates the service for starting and stopping the server. We could use [scp](https://man7.org/linux/man-pages/man1/scp.1.html) to copy the install script to the virtual machine from our local machine and then [ssh](https://man7.org/linux/man-pages/man1/ssh.1.html) into a terminal to run the script. The alternative is to use a Pulumi [dynamic resource provider]({{< relref "/blog/dynamic-providers#dynamic-resource-provider" >}}) to provision the virtual machine.  The `provisioners.py` script creates a dynamic provider that enable using scp to transfer files and send commands via ssh. Creating dynamic providers are beyond the scope of this article, but more information is [available]({{< relref "/docs/intro/concepts/programming-model#dynamicproviders" >}}) on the Pulumi docs.
 
 We provision our Minecraft server by creating the `conn` connection object defined in `provisioners.py`.
@@ -187,6 +195,6 @@ You can download the [code](https://github.com/pulumi/examples/azure-nextgen-py-
 See these resources to learn more about deploying infrastructure on Azure.
 
 - [Get Started with Azure]({{< relref "/docs/get-started/azure" >}})
-- [Azure]({{< relref "/docs/intro/cloud-providers/azure" >}})
+- [Azure Cloud Provider]({{< relref "/docs/intro/cloud-providers/azure" >}})
 - [Azure Next Generation Provider]({{< relref "/docs/reference/pkg/azure-nextgen" >}})
 - [Dynamic Providers]({{< relref "/blog/dynamic-providers" >}})
