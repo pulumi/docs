@@ -15,7 +15,7 @@ A `CryptoKey` represents a logical key that can be used for cryptographic operat
 > **Note:** CryptoKeys cannot be deleted from Google Cloud Platform.
 Destroying a provider-managed CryptoKey will remove it from state
 and delete all CryptoKeyVersions, rendering the key unusable, but *will
-not delete the resource on the server.* When the provider destroys these keys,
+not delete the resource from the project.* When the provider destroys these keys,
 any data previously encrypted with these keys will be irrecoverable.
 For this reason, it is strongly recommended that you add lifecycle hooks
 to the resource to prevent accidental destruction.
@@ -37,7 +37,7 @@ To get more information about CryptoKey, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/kms/#pulumi_gcp.kms.CryptoKey">CryptoKey</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_template</span><span class="p">:</span> <span class="nx">Optional[CryptoKeyVersionTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/kms/#pulumi_gcp.kms.CryptoKey">CryptoKey</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_initial_version_creation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_template</span><span class="p">:</span> <span class="nx">Optional[CryptoKeyVersionTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,6 +274,18 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skipinitialversioncreation_csharp">
+<a href="#skipinitialversioncreation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="versiontemplate_csharp">
 <a href="#versiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
 </span> 
@@ -352,6 +364,18 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipinitialversioncreation_go">
+<a href="#skipinitialversioncreation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -438,6 +462,18 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skipinitialversioncreation_nodejs">
+<a href="#skipinitialversioncreation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="versiontemplate_nodejs">
 <a href="#versiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Template</a>
 </span> 
@@ -516,6 +552,18 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skip_initial_version_creation_python">
+<a href="#skip_initial_version_creation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>initial_<wbr>version_<wbr>creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -669,7 +717,7 @@ Get an existing CryptoKey resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_template</span><span class="p">:</span> <span class="nx">Optional[CryptoKeyVersionTemplateArgs]</span> = None<span class="p">) -&gt;</span> CryptoKey</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_initial_version_creation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_template</span><span class="p">:</span> <span class="nx">Optional[CryptoKeyVersionTemplateArgs]</span> = None<span class="p">) -&gt;</span> CryptoKey</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -858,6 +906,18 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skipinitialversioncreation_csharp">
+<a href="#state_skipinitialversioncreation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_versiontemplate_csharp">
 <a href="#state_versiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
 </span> 
@@ -947,6 +1007,18 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skipinitialversioncreation_go">
+<a href="#state_skipinitialversioncreation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1042,6 +1114,18 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skipinitialversioncreation_nodejs">
+<a href="#state_skipinitialversioncreation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_versiontemplate_nodejs">
 <a href="#state_versiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Template</a>
 </span> 
@@ -1131,6 +1215,18 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_initial_version_creation_python">
+<a href="#state_skip_initial_version_creation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>initial_<wbr>version_<wbr>creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -267,6 +267,16 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
+        <span id="skipinitialversioncreation_csharp">
+<a href="#skipinitialversioncreation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="versiontemplates_csharp">
 <a href="#versiontemplates_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Templates</a>
 </span> 
@@ -357,6 +367,16 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
     </dt>
     <dd>{{% md %}}The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="skipinitialversioncreation_go">
+<a href="#skipinitialversioncreation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -453,6 +473,16 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-"
             title="">
+        <span id="skipinitialversioncreation_nodejs">
+<a href="#skipinitialversioncreation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="versiontemplates_nodejs">
 <a href="#versiontemplates_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Templates</a>
 </span> 
@@ -543,6 +573,16 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
     </dt>
     <dd>{{% md %}}The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="skip_initial_version_creation_python">
+<a href="#skip_initial_version_creation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>initial_<wbr>version_<wbr>creation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

@@ -29,7 +29,7 @@ To get more information about ProjectFeed, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudasset/#pulumi_gcp.cloudasset.ProjectFeed">ProjectFeed</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asset_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">asset_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">billing_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[ProjectFeedFeedOutputConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudasset/#pulumi_gcp.cloudasset.ProjectFeed">ProjectFeed</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asset_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">asset_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">billing_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ProjectFeedConditionArgs]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[ProjectFeedFeedOutputConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -269,6 +269,22 @@ project will be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="condition_csharp">
+<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfeedcondition">Project<wbr>Feed<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
+will be returned only when the expression evaluates to true. When set, expression field
+must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+condition are optional.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span> 
@@ -362,6 +378,22 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="condition_go">
+<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfeedcondition">Project<wbr>Feed<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
+will be returned only when the expression evaluates to true. When set, expression field
+must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+condition are optional.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -463,6 +495,22 @@ project will be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="condition_nodejs">
+<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfeedcondition">Project<wbr>Feed<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
+will be returned only when the expression evaluates to true. When set, expression field
+must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+condition are optional.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span> 
@@ -556,6 +604,22 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="condition_python">
+<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfeedcondition">Project<wbr>Feed<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
+will be returned only when the expression evaluates to true. When set, expression field
+must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+condition are optional.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,7 +789,7 @@ Get an existing ProjectFeed resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asset_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">asset_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">billing_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[ProjectFeedFeedOutputConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ProjectFeed</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asset_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">asset_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">billing_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ProjectFeedConditionArgs]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[ProjectFeedFeedOutputConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ProjectFeed</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -884,6 +948,22 @@ project will be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_condition_csharp">
+<a href="#state_condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfeedcondition">Project<wbr>Feed<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
+will be returned only when the expression evaluates to true. When set, expression field
+must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+condition are optional.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_contenttype_csharp">
 <a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
 </span> 
@@ -988,6 +1068,22 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_condition_go">
+<a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfeedcondition">Project<wbr>Feed<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
+will be returned only when the expression evaluates to true. When set, expression field
+must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+condition are optional.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1100,6 +1196,22 @@ project will be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_condition_nodejs">
+<a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfeedcondition">Project<wbr>Feed<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
+will be returned only when the expression evaluates to true. When set, expression field
+must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+condition are optional.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_contenttype_nodejs">
 <a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span> 
@@ -1208,6 +1320,22 @@ project will be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_condition_python">
+<a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfeedcondition">Project<wbr>Feed<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset
+will be returned only when the expression evaluates to true. When set, expression field
+must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
+expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
+condition are optional.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_content_type_python">
 <a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span> 
@@ -1277,6 +1405,240 @@ If it is not provided, the provider project is used.
 
 
 ## Supporting Types
+
+
+<h4 id="projectfeedcondition">Project<wbr>Feed<wbr>Condition</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ProjectFeedCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ProjectFeedCondition">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudasset?tab=doc#ProjectFeedConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudasset?tab=doc#ProjectFeedConditionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudAsset.Inputs.ProjectFeedConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudAsset.Outputs.ProjectFeedCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the expression. This is a longer text which describes the expression,
+e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file
+name and a position in the file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
+This can be used e.g. in UIs which allow to enter the expression.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the expression. This is a longer text which describes the expression,
+e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file
+name and a position in the file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
+This can be used e.g. in UIs which allow to enter the expression.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the expression. This is a longer text which describes the expression,
+e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file
+name and a position in the file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
+This can be used e.g. in UIs which allow to enter the expression.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the expression. This is a longer text which describes the expression,
+e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file
+name and a position in the file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
+This can be used e.g. in UIs which allow to enter the expression.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="projectfeedfeedoutputconfig">Project<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config</h4>

@@ -33,7 +33,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.DataTransferConfig">DataTransferConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigSensitiveParamsArgs]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.DataTransferConfig">DataTransferConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_preferences</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigEmailPreferencesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_options</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigScheduleOptionsArgs]</span> = None<span class="p">, </span><span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigSensitiveParamsArgs]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -277,6 +277,19 @@ Set the value to 0 to use the default value.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="emailpreferences_csharp">
+<a href="#emailpreferences_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Email notifications will be sent according to these preferences to the
+email address of the user who owns this transfer config.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -327,6 +340,18 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleoptions_csharp">
+<a href="#scheduleoptions_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options customizing the data transfer schedule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -438,6 +463,19 @@ Set the value to 0 to use the default value.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="emailpreferences_go">
+<a href="#emailpreferences_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</a></span>
+    </dt>
+    <dd>{{% md %}}Email notifications will be sent according to these preferences to the
+email address of the user who owns this transfer config.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -488,6 +526,18 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleoptions_go">
+<a href="#scheduleoptions_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options customizing the data transfer schedule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,6 +649,19 @@ Set the value to 0 to use the default value.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="emailpreferences_nodejs">
+<a href="#emailpreferences_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</a></span>
+    </dt>
+    <dd>{{% md %}}Email notifications will be sent according to these preferences to the
+email address of the user who owns this transfer config.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -649,6 +712,18 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleoptions_nodejs">
+<a href="#scheduleoptions_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options customizing the data transfer schedule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,6 +835,19 @@ Set the value to 0 to use the default value.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="email_preferences_python">
+<a href="#email_preferences_python" style="color: inherit; text-decoration: inherit;">email_<wbr>preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Email notifications will be sent according to these preferences to the
+email address of the user who owns this transfer config.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -810,6 +898,18 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_options_python">
+<a href="#schedule_options_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options customizing the data transfer schedule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -993,7 +1093,7 @@ Get an existing DataTransferConfig resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigSensitiveParamsArgs]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataTransferConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_preferences</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigEmailPreferencesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_options</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigScheduleOptionsArgs]</span> = None<span class="p">, </span><span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigSensitiveParamsArgs]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataTransferConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1168,6 +1268,19 @@ Set the value to 0 to use the default value.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_emailpreferences_csharp">
+<a href="#state_emailpreferences_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Email notifications will be sent according to these preferences to the
+email address of the user who owns this transfer config.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -1242,6 +1355,18 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_scheduleoptions_csharp">
+<a href="#state_scheduleoptions_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options customizing the data transfer schedule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1342,6 +1467,19 @@ Set the value to 0 to use the default value.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_emailpreferences_go">
+<a href="#state_emailpreferences_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</a></span>
+    </dt>
+    <dd>{{% md %}}Email notifications will be sent according to these preferences to the
+email address of the user who owns this transfer config.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -1416,6 +1554,18 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_scheduleoptions_go">
+<a href="#state_scheduleoptions_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options customizing the data transfer schedule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1516,6 +1666,19 @@ Set the value to 0 to use the default value.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_emailpreferences_nodejs">
+<a href="#state_emailpreferences_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</a></span>
+    </dt>
+    <dd>{{% md %}}Email notifications will be sent according to these preferences to the
+email address of the user who owns this transfer config.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -1590,6 +1753,18 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_scheduleoptions_nodejs">
+<a href="#state_scheduleoptions_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options customizing the data transfer schedule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1690,6 +1865,19 @@ Set the value to 0 to use the default value.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_email_preferences_python">
+<a href="#state_email_preferences_python" style="color: inherit; text-decoration: inherit;">email_<wbr>preferences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Email notifications will be sent according to these preferences to the
+email address of the user who owns this transfer config.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -1768,6 +1956,18 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_schedule_options_python">
+<a href="#state_schedule_options_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options customizing the data transfer schedule.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sensitive_params_python">
 <a href="#state_sensitive_params_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>params</a>
 </span> 
@@ -1809,6 +2009,318 @@ requesting user calling this API has permissions to act as this service account.
 
 
 ## Supporting Types
+
+
+<h4 id="datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DataTransferConfigEmailPreferences">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DataTransferConfigEmailPreferences">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#DataTransferConfigEmailPreferencesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#DataTransferConfigEmailPreferencesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.DataTransferConfigEmailPreferencesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.DataTransferConfigEmailPreferences.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablefailureemail_csharp">
+<a href="#enablefailureemail_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Failure<wbr>Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablefailureemail_go">
+<a href="#enablefailureemail_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Failure<wbr>Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablefailureemail_nodejs">
+<a href="#enablefailureemail_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Failure<wbr>Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_failure_email_python">
+<a href="#enable_failure_email_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>failure_<wbr>email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DataTransferConfigScheduleOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DataTransferConfigScheduleOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#DataTransferConfigScheduleOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery?tab=doc#DataTransferConfigScheduleOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.DataTransferConfigScheduleOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.DataTransferConfigScheduleOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disableautoscheduling_csharp">
+<a href="#disableautoscheduling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Auto<wbr>Scheduling</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, automatic scheduling of data transfer runs for this
+configuration will be disabled. The runs can be started on ad-hoc
+basis using transferConfigs.startManualRuns API. When automatic
+scheduling is disabled, the TransferConfig.schedule field will
+be ignored.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines time to stop scheduling transfer runs. A transfer run cannot be
+scheduled at or after the end time. The end time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies time to start scheduling transfer runs. The first run will be
+scheduled at or after the start time according to a recurrence pattern
+defined in the schedule string. The start time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disableautoscheduling_go">
+<a href="#disableautoscheduling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Auto<wbr>Scheduling</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, automatic scheduling of data transfer runs for this
+configuration will be disabled. The runs can be started on ad-hoc
+basis using transferConfigs.startManualRuns API. When automatic
+scheduling is disabled, the TransferConfig.schedule field will
+be ignored.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines time to stop scheduling transfer runs. A transfer run cannot be
+scheduled at or after the end time. The end time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies time to start scheduling transfer runs. The first run will be
+scheduled at or after the start time according to a recurrence pattern
+defined in the schedule string. The start time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disableautoscheduling_nodejs">
+<a href="#disableautoscheduling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Auto<wbr>Scheduling</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, automatic scheduling of data transfer runs for this
+configuration will be disabled. The runs can be started on ad-hoc
+basis using transferConfigs.startManualRuns API. When automatic
+scheduling is disabled, the TransferConfig.schedule field will
+be ignored.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines time to stop scheduling transfer runs. A transfer run cannot be
+scheduled at or after the end time. The end time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies time to start scheduling transfer runs. The first run will be
+scheduled at or after the start time according to a recurrence pattern
+defined in the schedule string. The start time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disable_auto_scheduling_python">
+<a href="#disable_auto_scheduling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>auto_<wbr>scheduling</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, automatic scheduling of data transfer runs for this
+configuration will be disabled. The runs can be started on ad-hoc
+basis using transferConfigs.startManualRuns API. When automatic
+scheduling is disabled, the TransferConfig.schedule field will
+be ignored.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines time to stop scheduling transfer runs. A transfer run cannot be
+scheduled at or after the end time. The end time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies time to start scheduling transfer runs. The first run will be
+scheduled at or after the start time according to a recurrence pattern
+defined in the schedule string. The start time can be changed at any
+moment. The time when a data transfer can be triggered manually is not
+limited by this option.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</h4>

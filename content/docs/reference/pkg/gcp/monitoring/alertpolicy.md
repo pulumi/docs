@@ -1657,6 +1657,18 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="conditionmonitoringquerylanguage_csharp">
+<a href="#conditionmonitoringquerylanguage_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="conditionthreshold_csharp">
 <a href="#conditionthreshold_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Threshold</a>
 </span> 
@@ -1717,6 +1729,18 @@ policy.
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
 continues to receive new data points.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conditionmonitoringquerylanguage_go">
+<a href="#conditionmonitoringquerylanguage_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</a></span>
+    </dt>
+    <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1787,6 +1811,18 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="conditionmonitoringquerylanguage_nodejs">
+<a href="#conditionmonitoringquerylanguage_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</a></span>
+    </dt>
+    <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="conditionthreshold_nodejs">
 <a href="#conditionthreshold_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Threshold</a>
 </span> 
@@ -1847,6 +1883,18 @@ policy.
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
 continues to receive new data points.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="condition_monitoring_query_language_python">
+<a href="#condition_monitoring_query_language_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>monitoring_<wbr>query_<wbr>language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -2809,6 +2857,422 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsentTrigger.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_csharp">
+<a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_go">
+<a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_nodejs">
+<a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_python">
+<a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyConditionConditionMonitoringQueryLanguage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyConditionConditionMonitoringQueryLanguage">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionMonitoringQueryLanguageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionMonitoringQueryLanguageOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionMonitoringQueryLanguageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionMonitoringQueryLanguage.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_csharp">
+<a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trigger_csharp">
+<a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_go">
+<a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trigger_go">
+<a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</a></span>
+    </dt>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_nodejs">
+<a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trigger_nodejs">
+<a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</a></span>
+    </dt>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_python">
+<a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trigger_python">
+<a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyConditionConditionMonitoringQueryLanguageTrigger">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyConditionConditionMonitoringQueryLanguageTrigger">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionMonitoringQueryLanguageTriggerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionMonitoringQueryLanguageTrigger.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
