@@ -60,7 +60,7 @@ groupings.
 
 | Pulumi | GitHub | GitLab | Bitbucket |
 |--------|--------|--------|--------|
-| Organization | [Organization](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team) | [Group](https://docs.gitlab.com/ce/user/group/)| [Team](https://confluence.atlassian.com/bitbucket/teams-321853005.html) |
+| Organization | [Organization](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team) | [Group](https://docs.gitlab.com/ce/user/group/)| [Workspace](https://bitbucket.org/blog/introducing-workspaces) |
 
 In addition, a Pulumi organization may be backed by a [SAML 2.0 identity provider]({{<
 relref "/docs/guides/saml" >}}).
@@ -93,12 +93,12 @@ organization on Pulumi.
 ### Bitbucket-backed
 
 To add a Bitbucket-backed organization to Pulumi, an administrator of the Atlassian
-Bitbucket team
+Bitbucket workspace
 must first grant the Pulumi Oauth app [read
 access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
-to their Bitbucket account and team membership information.
+to their Bitbucket account and workspace membership information.
 
-Once the Pulumi organization has been created, the admin can see a list of BitBucket team
+Once the Pulumi organization has been created, the admin can see a list of Bitbucket workspace
 members
 that they can add or invite to the Pulumi organization. See [Switching
 Organizations](#switching-organizations)
@@ -141,8 +141,7 @@ and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "../collaboration/project-and-stack-management"
->}}) to learn more. |
+| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "../collaboration/project-and-stack-management">}}) to learn more. |
 | People | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Webhooks | A [Team Pro]({{< relref "/pricing" >}}) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
