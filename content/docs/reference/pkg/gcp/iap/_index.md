@@ -19,6 +19,9 @@ Explore the resources and functions of the iap module in the GCP package.
     <li><a href="appengineversioniampolicy" title="AppEngineVersionIamPolicy"><span class="symbol resource"></span>AppEngineVersionIamPolicy</a></li>
     <li><a href="brand" title="Brand"><span class="symbol resource"></span>Brand</a></li>
     <li><a href="client" title="Client"><span class="symbol resource"></span>Client</a></li>
+    <li><a href="tunneliambinding" title="TunnelIamBinding"><span class="symbol resource"></span>TunnelIamBinding</a></li>
+    <li><a href="tunneliammember" title="TunnelIamMember"><span class="symbol resource"></span>TunnelIamMember</a></li>
+    <li><a href="tunneliampolicy" title="TunnelIamPolicy"><span class="symbol resource"></span>TunnelIamPolicy</a></li>
     <li><a href="tunnelinstanceiambinding" title="TunnelInstanceIAMBinding"><span class="symbol resource"></span>TunnelInstanceIAMBinding</a></li>
     <li><a href="tunnelinstanceiammember" title="TunnelInstanceIAMMember"><span class="symbol resource"></span>TunnelInstanceIAMMember</a></li>
     <li><a href="tunnelinstanceiampolicy" title="TunnelInstanceIAMPolicy"><span class="symbol resource"></span>TunnelInstanceIAMPolicy</a></li>
@@ -45,7 +48,7 @@ Explore the resources and functions of the iap module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.1.0</dd>
+	<dd>4.2.0</dd>
 </dl>
 
 

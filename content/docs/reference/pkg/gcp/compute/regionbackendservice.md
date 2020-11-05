@@ -323,7 +323,7 @@ or serverless NEG as a backend.
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
-Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -617,7 +617,7 @@ or serverless NEG as a backend.
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
-Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -911,7 +911,7 @@ or serverless NEG as a backend.
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
-Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1205,7 +1205,7 @@ or serverless NEG as a backend.
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
-Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1859,7 +1859,7 @@ or serverless NEG as a backend.
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
-Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2186,7 +2186,7 @@ or serverless NEG as a backend.
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
-Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2513,7 +2513,7 @@ or serverless NEG as a backend.
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
-Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2840,7 +2840,7 @@ or serverless NEG as a backend.
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
-Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

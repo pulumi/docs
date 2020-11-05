@@ -248,6 +248,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="buildenvironmentvariables_csharp">
+<a href="#buildenvironmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Environment<wbr>Variables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -491,6 +501,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="buildenvironmentvariables_go">
+<a href="#buildenvironmentvariables_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Environment<wbr>Variables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -740,6 +760,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="buildenvironmentvariables_nodejs">
+<a href="#buildenvironmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Environment<wbr>Variables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -983,6 +1013,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="build_environment_variables_python">
+<a href="#build_environment_variables_python" style="color: inherit; text-decoration: inherit;">build_<wbr>environment_<wbr>variables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
