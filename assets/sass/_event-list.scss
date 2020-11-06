@@ -1,51 +1,13 @@
 .pulumi-event-list-container {
-    #all:target {
-        ~ .event-list-filter li[data-filter-name="all"] a {
-            @apply text-blue-500;
-        }
+    @each $filter-name in "all", "featured", "upcoming", "videos", "pulumitv" {
+        ##{$filter-name}:target {
+            ~ .event-list-filter li[data-filter-name="#{$filter-name}"] a {
+                @apply text-blue-500;
+            }
 
-        ~ ul li[data-filters~="all"] {
-            @apply block;
-        }
-    }
-
-    #featured:target {
-        ~ .event-list-filter li[data-filter-name="featured"] a {
-            @apply text-blue-500;
-        }
-
-        ~ ul li[data-filters~="featured"] {
-            @apply block;
-        }
-    }
-
-    #upcoming:target {
-        ~ .event-list-filter li[data-filter-name="upcoming"] a {
-            @apply text-blue-500;
-        }
-
-        ~ ul li[data-filters~="upcoming"] {
-            @apply block;
-        }
-    }
-
-    #videos:target {
-        ~ .event-list-filter ul li[data-filter-name="videos"] a {
-            @apply text-blue-500;
-        }
-
-        ~ ul li[data-filters~="videos"] {
-            @apply block;
-        }
-    }
-
-    #pulumitv:target {
-        ~ .event-list-filter li[data-filter-name="pulumitv"] a {
-            @apply text-blue-500;
-        }
-
-        ~ ul li[data-filters~="pulumitv"] {
-            @apply block;
+            ~ ul li[data-filters~="#{$filter-name}"] {
+                @apply block;
+            }
         }
     }
 }
