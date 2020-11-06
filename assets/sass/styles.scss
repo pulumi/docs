@@ -237,10 +237,4 @@ main {
     @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
 }
 
-// To avoid some jumpiness of elements on the page we set the min-height
-// of the event list conatiner
-.pulumi-event-list-container {
-    min-height: 600px;
-}
-
 @tailwind utilities;
