@@ -117,7 +117,7 @@ class MyStack : Stack
             CodeRepositoryName = "my-notebook-instance-code-repo",
             GitConfig = new Aws.Sagemaker.Inputs.CodeRepositoryGitConfigArgs
             {
-                RepositoryUrl = "https://github.com/terraform-providers/terraform-provider-aws.git",
+                RepositoryUrl = "https://github.com/hashicorp/terraform-provider-aws.git",
             },
         });
         var ni = new Aws.Sagemaker.NotebookInstance("ni", new Aws.Sagemaker.NotebookInstanceArgs
@@ -151,7 +151,7 @@ func main() {
 		example, err := sagemaker.NewCodeRepository(ctx, "example", &sagemaker.CodeRepositoryArgs{
 			CodeRepositoryName: pulumi.String("my-notebook-instance-code-repo"),
 			GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
-				RepositoryUrl: pulumi.String("https://github.com/terraform-providers/terraform-provider-aws.git"),
+				RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
 			},
 		})
 		if err != nil {
@@ -183,7 +183,7 @@ import pulumi_aws as aws
 example = aws.sagemaker.CodeRepository("example",
     code_repository_name="my-notebook-instance-code-repo",
     git_config=aws.sagemaker.CodeRepositoryGitConfigArgs(
-        repository_url="https://github.com/terraform-providers/terraform-provider-aws.git",
+        repository_url="https://github.com/hashicorp/terraform-provider-aws.git",
     ))
 ni = aws.sagemaker.NotebookInstance("ni",
     role_arn=aws_iam_role["role"]["arn"],
@@ -205,7 +205,7 @@ import * as aws from "@pulumi/aws";
 const example = new aws.sagemaker.CodeRepository("example", {
     codeRepositoryName: "my-notebook-instance-code-repo",
     gitConfig: {
-        repositoryUrl: "https://github.com/terraform-providers/terraform-provider-aws.git",
+        repositoryUrl: "https://github.com/hashicorp/terraform-provider-aws.git",
     },
 });
 const ni = new aws.sagemaker.NotebookInstance("ni", {

@@ -28,6 +28,7 @@ Explore the resources and functions of the route53 module in the AWS package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdelegationset" title="GetDelegationSet"><span class="symbol function"></span>GetDelegationSet</a></li>
+    <li><a href="getresolverendpoint" title="GetResolverEndpoint"><span class="symbol function"></span>GetResolverEndpoint</a></li>
     <li><a href="getresolverrule" title="GetResolverRule"><span class="symbol function"></span>GetResolverRule</a></li>
     <li><a href="getresolverrules" title="GetResolverRules"><span class="symbol function"></span>GetResolverRules</a></li>
     <li><a href="getzone" title="GetZone"><span class="symbol function"></span>GetZone</a></li>
@@ -42,7 +43,7 @@ Explore the resources and functions of the route53 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

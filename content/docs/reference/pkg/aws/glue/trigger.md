@@ -1935,6 +1935,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="notificationproperty_csharp">
+<a href="#notificationproperty_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Property</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration properties of a job run notification. see Notification Property details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityconfiguration_csharp">
+<a href="#securityconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Security Configuration structure to be used with this action.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
 </span> 
@@ -1982,6 +2004,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a job to be executed. Conflicts with `crawler_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notificationproperty_go">
+<a href="#notificationproperty_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Property</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration properties of a job run notification. see Notification Property details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityconfiguration_go">
+<a href="#securityconfiguration_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Security Configuration structure to be used with this action.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2037,6 +2081,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="notificationproperty_nodejs">
+<a href="#notificationproperty_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Property</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration properties of a job run notification. see Notification Property details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityconfiguration_nodejs">
+<a href="#securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Security Configuration structure to be used with this action.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
@@ -2088,6 +2154,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="notification_property_python">
+<a href="#notification_property_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>property</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies configuration properties of a job run notification. see Notification Property details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_configuration_python">
+<a href="#security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Security Configuration structure to be used with this action.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
@@ -2095,6 +2183,96 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The job run timeout in minutes. It overrides the timeout value of the job.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerActionNotificationProperty">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerActionNotificationProperty">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerActionNotificationPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerActionNotificationPropertyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerActionNotificationPropertyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerActionNotificationProperty.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifydelayafter_csharp">
+<a href="#notifydelayafter_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Delay<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}After a job run starts, the number of minutes to wait before sending a job run delay notification.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifydelayafter_go">
+<a href="#notifydelayafter_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Delay<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}After a job run starts, the number of minutes to wait before sending a job run delay notification.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifydelayafter_nodejs">
+<a href="#notifydelayafter_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Delay<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}After a job run starts, the number of minutes to wait before sending a job run delay notification.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notify_delay_after_python">
+<a href="#notify_delay_after_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>delay_<wbr>after</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}After a job run starts, the number of minutes to wait before sending a job run delay notification.
 {{% /md %}}</dd>
 
 </dl>

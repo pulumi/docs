@@ -2738,8 +2738,8 @@ See Processing Configuration below for more details.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
 </span> 
@@ -2756,8 +2756,8 @@ See Processing Configuration below for more details.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
 </span> 
@@ -2774,8 +2774,8 @@ See Processing Configuration below for more details.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
@@ -2792,8 +2792,8 @@ See Processing Configuration below for more details.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 

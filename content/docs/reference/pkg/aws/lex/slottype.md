@@ -385,7 +385,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the slot type.
+    <dd>{{% md %}}A description of the slot type. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,7 +396,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
+    <dd>{{% md %}}The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -454,7 +454,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the slot type.
+    <dd>{{% md %}}A description of the slot type. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,7 +465,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
+    <dd>{{% md %}}The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -523,7 +523,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the slot type.
+    <dd>{{% md %}}A description of the slot type. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -534,7 +534,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
+    <dd>{{% md %}}The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -592,7 +592,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the slot type.
+    <dd>{{% md %}}A description of the slot type. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -603,7 +603,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
+    <dd>{{% md %}}The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1056,7 +1056,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the slot type.
+    <dd>{{% md %}}A description of the slot type. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1092,7 +1092,7 @@ documented under enumeration_value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
+    <dd>{{% md %}}The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1170,7 +1170,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the slot type.
+    <dd>{{% md %}}A description of the slot type. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1206,7 +1206,7 @@ documented under enumeration_value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
+    <dd>{{% md %}}The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1284,7 +1284,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the slot type.
+    <dd>{{% md %}}A description of the slot type. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1320,7 +1320,7 @@ documented under enumeration_value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
+    <dd>{{% md %}}The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1398,7 +1398,7 @@ update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the slot type.
+    <dd>{{% md %}}A description of the slot type. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1434,7 +1434,7 @@ documented under enumeration_value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
+    <dd>{{% md %}}The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1503,7 +1503,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the slot type.
+    <dd>{{% md %}}The value of the slot type. Must be less than or equal to 140 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1514,7 +1514,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Additional values related to the slot type value.
+    <dd>{{% md %}}Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1532,7 +1532,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the slot type.
+    <dd>{{% md %}}The value of the slot type. Must be less than or equal to 140 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1543,7 +1543,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Additional values related to the slot type value.
+    <dd>{{% md %}}Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1561,7 +1561,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the slot type.
+    <dd>{{% md %}}The value of the slot type. Must be less than or equal to 140 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1572,7 +1572,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Additional values related to the slot type value.
+    <dd>{{% md %}}Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1590,7 +1590,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value of the slot type.
+    <dd>{{% md %}}The value of the slot type. Must be less than or equal to 140 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1601,7 +1601,7 @@ if there is a resolution list for the slot, otherwise null is returned. Defaults
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Additional values related to the slot type value.
+    <dd>{{% md %}}Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
 {{% /md %}}</dd>
 
 </dl>

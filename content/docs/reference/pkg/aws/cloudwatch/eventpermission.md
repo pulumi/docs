@@ -197,7 +197,7 @@ const organizationAccess = new aws.cloudwatch.EventPermission("organizationAcces
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.EventPermission">EventPermission</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[EventPermissionConditionArgs]</span> = None<span class="p">, </span><span class="nx">principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statement_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.EventPermission">EventPermission</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[EventPermissionConditionArgs]</span> = None<span class="p">, </span><span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statement_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -413,6 +413,17 @@ The EventPermission resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventbusname_csharp">
+<a href="#eventbusname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -462,6 +473,17 @@ The EventPermission resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#eventpermissioncondition">Event<wbr>Permission<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventbusname_go">
+<a href="#eventbusname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
 {{% /md %}}</dd>
 
 </dl>
@@ -515,6 +537,17 @@ The EventPermission resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventbusname_nodejs">
+<a href="#eventbusname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -564,6 +597,17 @@ The EventPermission resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#eventpermissioncondition">Event<wbr>Permission<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="event_bus_name_python">
+<a href="#event_bus_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>bus_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
 {{% /md %}}</dd>
 
 </dl>
@@ -665,7 +709,7 @@ Get an existing EventPermission resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[EventPermissionConditionArgs]</span> = None<span class="p">, </span><span class="nx">principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statement_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventPermission</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[EventPermissionConditionArgs]</span> = None<span class="p">, </span><span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statement_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventPermission</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -803,6 +847,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_eventbusname_csharp">
+<a href="#state_eventbusname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_principal_csharp">
 <a href="#state_principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
 </span> 
@@ -850,6 +905,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventpermissioncondition">Event<wbr>Permission<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eventbusname_go">
+<a href="#state_eventbusname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,6 +971,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_eventbusname_nodejs">
+<a href="#state_eventbusname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_principal_nodejs">
 <a href="#state_principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
 </span> 
@@ -952,6 +1029,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventpermissioncondition">Event<wbr>Permission<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_event_bus_name_python">
+<a href="#state_event_bus_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>bus_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

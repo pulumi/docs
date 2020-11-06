@@ -114,7 +114,7 @@ const exampleDomain = new aws.codeartifact.Domain("exampleDomain", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codeartifact/#pulumi_aws.codeartifact.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codeartifact/#pulumi_aws.codeartifact.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -308,6 +308,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -335,6 +346,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -366,6 +388,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -393,6 +426,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -714,7 +758,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">asset_size_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">asset_size_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -905,6 +949,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of repositories in the domain.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -987,6 +1042,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of repositories in the domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -1073,6 +1139,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of repositories in the domain.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1155,6 +1232,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of repositories in the domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>

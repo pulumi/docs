@@ -3,7 +3,7 @@ title: "Module ssm"
 title_tag: "Module ssm | Package @pulumi/aws | Node.js SDK"
 linktitle: "ssm"
 meta_desc: "Explore members of the ssm module in the @pulumi/aws package."
-git_sha: "bfaec7a64d2c6e86da46a4f8671eca2edc1002a8"
+git_sha: "ba950603a03d9aef54bd22a8c5fcb8e8846f8832"
 block_external_search_index: true
 ---
 
@@ -72,7 +72,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Activation" data-link-title="Activation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L38">
         Resource <strong>Activation</strong>
     </a>
 </h3>
@@ -110,7 +110,7 @@ const foo = new aws.ssm.Activation("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="Activation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -124,7 +124,7 @@ Create a Activation resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Activation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -135,14 +135,14 @@ Get an existing Activation resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Activation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Activation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -153,7 +153,7 @@ Returns true if the given object is an instance of Activation.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Activation-activationCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L69">property <b>activationCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L69">property <b>activationCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activationCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The code the system generates when it processes the activation.
 
 <h4 class="pdoc-member-header" id="Activation-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L73">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ The code the system generates when it processes the activation.
 The description of the resource that you want to register.
 
 <h4 class="pdoc-member-header" id="Activation-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L77">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L77">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ The description of the resource that you want to register.
 UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
 
 <h4 class="pdoc-member-header" id="Activation-expired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L81">property <b>expired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L81">property <b>expired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 If the current activation has expired.
 
 <h4 class="pdoc-member-header" id="Activation-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L85">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L85">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ If the current activation has expired.
 The IAM Role to attach to the managed instance.
 
 <h4 class="pdoc-member-header" id="Activation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -202,7 +202,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Activation-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -210,7 +210,7 @@ deployments and may be missing (undefined) during planning phases.
 The default name of the registered managed instance.
 
 <h4 class="pdoc-member-header" id="Activation-registrationCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L93">property <b>registrationCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L93">property <b>registrationCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registrationCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -218,7 +218,7 @@ The default name of the registered managed instance.
 The number of managed instances that are currently registered using this activation.
 
 <h4 class="pdoc-member-header" id="Activation-registrationLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L97">property <b>registrationLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L97">property <b>registrationLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registrationLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ The number of managed instances that are currently registered using this activat
 The maximum number of managed instances you want to register. The default value is 1 instance.
 
 <h4 class="pdoc-member-header" id="Activation-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L101">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L101">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ The maximum number of managed instances you want to register. The default value 
 A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="Activation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -243,7 +243,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Association" data-link-title="Association">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L25">
         Resource <strong>Association</strong>
     </a>
 </h3>
@@ -265,7 +265,7 @@ const example = new aws.ssm.Association("example", {targets: [{
 ```
 
 <h4 class="pdoc-member-header" id="Association-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -279,7 +279,7 @@ Create a Association resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Association-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -290,14 +290,14 @@ Get an existing Association resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Association-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Association-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -308,7 +308,7 @@ Returns true if the given object is an instance of Association.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Association-associationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L56">property <b>associationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L56">property <b>associationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>associationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the SSM association.
 
 <h4 class="pdoc-member-header" id="Association-associationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L60">property <b>associationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L60">property <b>associationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>associationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ The ID of the SSM association.
 The descriptive name for the association.
 
 <h4 class="pdoc-member-header" id="Association-automationTargetParameterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L64">property <b>automationTargetParameterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L64">property <b>automationTargetParameterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationTargetParameterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ The descriptive name for the association.
 Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 
 <h4 class="pdoc-member-header" id="Association-complianceSeverity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L68">property <b>complianceSeverity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L68">property <b>complianceSeverity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>complianceSeverity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ Specify the target for the association. This target is required for associations
 The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 
 <h4 class="pdoc-member-header" id="Association-documentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L72">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L72">property <b>documentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>documentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -348,7 +348,7 @@ The compliance severity for the association. Can be one of the following: `UNSPE
 The document version you want to associate with the target(s). Can be a specific version or the default version.
 
 <h4 class="pdoc-member-header" id="Association-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -357,7 +357,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Association-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L76">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L76">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ deployments and may be missing (undefined) during planning phases.
 The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 
 <h4 class="pdoc-member-header" id="Association-maxConcurrency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L80">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L80">property <b>maxConcurrency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxConcurrency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds
 The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 
 <h4 class="pdoc-member-header" id="Association-maxErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L84">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L84">property <b>maxErrors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxErrors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ The maximum number of targets allowed to run the association at the same time. Y
 The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 
 <h4 class="pdoc-member-header" id="Association-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ The number of errors that are allowed before the system stops sending requests t
 The name of the SSM document to apply.
 
 <h4 class="pdoc-member-header" id="Association-outputLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L92">property <b>outputLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L92">property <b>outputLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssociationOutputLocation'>AssociationOutputLocation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ The name of the SSM document to apply.
 An output location block. Output Location is documented below.
 
 <h4 class="pdoc-member-header" id="Association-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L96">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L96">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -405,7 +405,7 @@ An output location block. Output Location is documented below.
 A block of arbitrary string parameters to pass to the SSM document.
 
 <h4 class="pdoc-member-header" id="Association-scheduleExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L100">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L100">property <b>scheduleExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ A block of arbitrary string parameters to pass to the SSM document.
 A cron expression when the association will be applied to the target(s).
 
 <h4 class="pdoc-member-header" id="Association-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L104">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L104">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssociationTarget'>AssociationTarget</a>[]&gt;;</code></pre>
@@ -421,7 +421,7 @@ A cron expression when the association will be applied to the target(s).
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 
 <h4 class="pdoc-member-header" id="Association-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -430,7 +430,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Document" data-link-title="Document">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L56">
         Resource <strong>Document</strong>
     </a>
 </h3>
@@ -483,7 +483,7 @@ The permissions mapping supports the following:
 * `accountIds` - The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or `All`.
 
 <h4 class="pdoc-member-header" id="Document-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L164"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L164"> <b>constructor</b></a>
 </h4>
 
 
@@ -497,7 +497,7 @@ Create a Document resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Document-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -508,14 +508,14 @@ Get an existing Document resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Document-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Document-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -526,12 +526,12 @@ Returns true if the given object is an instance of Document.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Document-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L84">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L84">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Document-attachmentsSources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L88">property <b>attachmentsSources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L88">property <b>attachmentsSources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attachmentsSources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentAttachmentsSource'>DocumentAttachmentsSource</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -539,7 +539,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 
 <h4 class="pdoc-member-header" id="Document-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L92">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L92">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -547,7 +547,7 @@ One or more configuration blocks describing attachments sources to a version of 
 The JSON or YAML content of the document.
 
 <h4 class="pdoc-member-header" id="Document-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L96">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L96">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -555,7 +555,7 @@ The JSON or YAML content of the document.
 The date the document was created.
 
 <h4 class="pdoc-member-header" id="Document-defaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L100">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L100">property <b>defaultVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -563,7 +563,7 @@ The date the document was created.
 The default version of the document.
 
 <h4 class="pdoc-member-header" id="Document-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L104">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L104">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -571,7 +571,7 @@ The default version of the document.
 The description of the document.
 
 <h4 class="pdoc-member-header" id="Document-documentFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L108">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L108">property <b>documentFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>documentFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -579,7 +579,7 @@ The description of the document.
 The format of the document. Valid document types include: `JSON` and `YAML`
 
 <h4 class="pdoc-member-header" id="Document-documentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L112">property <b>documentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L112">property <b>documentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>documentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -587,7 +587,7 @@ The format of the document. Valid document types include: `JSON` and `YAML`
 The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 
 <h4 class="pdoc-member-header" id="Document-documentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L116">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L116">property <b>documentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>documentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -595,7 +595,7 @@ The type of the document. Valid document types include: `Automation`, `Command`,
 The document version.
 
 <h4 class="pdoc-member-header" id="Document-hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L120">property <b>hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L120">property <b>hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -603,7 +603,7 @@ The document version.
 The sha1 or sha256 of the document content
 
 <h4 class="pdoc-member-header" id="Document-hashType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L124">property <b>hashType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L124">property <b>hashType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hashType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -611,7 +611,7 @@ The sha1 or sha256 of the document content
 "Sha1" "Sha256". The hashing algorithm used when hashing the content.
 
 <h4 class="pdoc-member-header" id="Document-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -620,7 +620,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Document-latestVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L128">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L128">property <b>latestVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>latestVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -628,7 +628,7 @@ deployments and may be missing (undefined) during planning phases.
 The latest version of the document.
 
 <h4 class="pdoc-member-header" id="Document-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ The latest version of the document.
 The name of the document.
 
 <h4 class="pdoc-member-header" id="Document-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L136">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L136">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ The name of the document.
 The AWS user account of the person who created the document.
 
 <h4 class="pdoc-member-header" id="Document-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L140">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L140">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentParameter'>DocumentParameter</a>[]&gt;;</code></pre>
@@ -652,7 +652,7 @@ The AWS user account of the person who created the document.
 The parameters that are available to this document.
 
 <h4 class="pdoc-member-header" id="Document-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L144">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L144">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -660,7 +660,7 @@ The parameters that are available to this document.
 Additional Permissions to attach to the document. See Permissions below for details.
 
 <h4 class="pdoc-member-header" id="Document-platformTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L148">property <b>platformTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L148">property <b>platformTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -668,7 +668,7 @@ Additional Permissions to attach to the document. See Permissions below for deta
 A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 
 <h4 class="pdoc-member-header" id="Document-schemaVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L152">property <b>schemaVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L152">property <b>schemaVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schemaVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -676,7 +676,7 @@ A list of OS platforms compatible with this SSM document, either "Windows" or "L
 The schema version of the document.
 
 <h4 class="pdoc-member-header" id="Document-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L156">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L156">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -684,7 +684,7 @@ The schema version of the document.
 "Creating", "Active" or "Deleting". The current status of the document.
 
 <h4 class="pdoc-member-header" id="Document-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L160">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L160">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -692,7 +692,7 @@ The schema version of the document.
 A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="Document-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L164">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L164">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ A map of tags to assign to the object.
 The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 
 <h4 class="pdoc-member-header" id="Document-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -709,7 +709,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindow" data-link-title="MaintenanceWindow">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L23">
         Resource <strong>MaintenanceWindow</strong>
     </a>
 </h3>
@@ -732,7 +732,7 @@ const production = new aws.ssm.MaintenanceWindow("production", {
 ```
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -746,7 +746,7 @@ Create a MaintenanceWindow resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -757,14 +757,14 @@ Get an existing MaintenanceWindow resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -775,7 +775,7 @@ Returns true if the given object is an instance of MaintenanceWindow.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-allowUnassociatedTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L54">property <b>allowUnassociatedTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L54">property <b>allowUnassociatedTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowUnassociatedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -783,7 +783,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-cutoff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L58">property <b>cutoff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L58">property <b>cutoff</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cutoff: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -791,7 +791,7 @@ Whether targets must be registered with the Maintenance Window before tasks can 
 The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -799,7 +799,7 @@ The number of hours before the end of the Maintenance Window that Systems Manage
 A description for the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L66">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L66">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -807,7 +807,7 @@ A description for the maintenance window.
 The duration of the Maintenance Window in hours.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L70">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L70">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -815,7 +815,7 @@ The duration of the Maintenance Window in hours.
 Whether the maintenance window is enabled. Default: `true`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L74">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L74">property <b>endDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -823,7 +823,7 @@ Whether the maintenance window is enabled. Default: `true`.
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -832,7 +832,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -840,7 +840,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L82">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L82">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -848,7 +848,7 @@ The name of the maintenance window.
 The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-scheduleTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L86">property <b>scheduleTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L86">property <b>scheduleTimezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleTimezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -856,7 +856,7 @@ The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.
 Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L90">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L90">property <b>startDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -864,7 +864,7 @@ Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone D
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -872,7 +872,7 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -881,7 +881,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowTarget" data-link-title="MaintenanceWindowTarget">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L57">
         Resource <strong>MaintenanceWindowTarget</strong>
     </a>
 </h3>
@@ -935,7 +935,7 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
 ```
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -949,7 +949,7 @@ Create a MaintenanceWindowTarget resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L67">method <b>get</b></a>
 </h4>
 
 
@@ -960,14 +960,14 @@ Get an existing MaintenanceWindowTarget resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L78">method <b>isInstance</b></a>
 </h4>
 
 
@@ -978,7 +978,7 @@ Returns true if the given object is an instance of MaintenanceWindowTarget.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L88">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L88">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -986,7 +986,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the maintenance window target.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -995,7 +995,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the maintenance window target.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-ownerInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L96">property <b>ownerInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L96">property <b>ownerInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerInformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ The name of the maintenance window target.
 User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L100">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L100">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1019,7 +1019,7 @@ User-provided value that will be included in any CloudWatch events raised while 
 The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L105">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L105">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTargetTarget'>MaintenanceWindowTargetTarget</a>[]&gt;;</code></pre>
@@ -1028,7 +1028,7 @@ The targets to register with the maintenance window. In other words, the instanc
 (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1037,7 +1037,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTarget-windowId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L109">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L109">property <b>windowId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>windowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1045,7 +1045,7 @@ deployments.
 The Id of the maintenance window to register the target with.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowTask" data-link-title="MaintenanceWindowTask">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L107">
         Resource <strong>MaintenanceWindowTask</strong>
     </a>
 </h3>
@@ -1149,7 +1149,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 ```
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L178"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L178"> <b>constructor</b></a>
 </h4>
 
 
@@ -1163,7 +1163,7 @@ Create a MaintenanceWindowTask resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L117">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L117">method <b>get</b></a>
 </h4>
 
 
@@ -1174,14 +1174,14 @@ Get an existing MaintenanceWindowTask resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L107">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L107">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L128">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L128">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1192,7 +1192,7 @@ Returns true if the given object is an instance of MaintenanceWindowTask.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L138">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L138">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1200,7 +1200,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the maintenance window task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L107">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L107">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1209,7 +1209,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-maxConcurrency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L142">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L142">property <b>maxConcurrency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxConcurrency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1217,7 +1217,7 @@ deployments and may be missing (undefined) during planning phases.
 The maximum number of targets this task can be run for in parallel.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-maxErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L146">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L146">property <b>maxErrors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxErrors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1225,7 +1225,7 @@ The maximum number of targets this task can be run for in parallel.
 The maximum number of errors allowed before this task stops being scheduled.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1233,7 +1233,7 @@ The maximum number of errors allowed before this task stops being scheduled.
 The name of the maintenance window task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L154">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L154">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1241,7 +1241,7 @@ The name of the maintenance window task.
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L158">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L158">property <b>serviceRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ The priority of the task in the Maintenance Window, the lower the number the hig
 The role that should be assumed when executing the task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L162">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L162">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTarget'>MaintenanceWindowTaskTarget</a>[]&gt;;</code></pre>
@@ -1257,7 +1257,7 @@ The role that should be assumed when executing the task.
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-taskArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L166">property <b>taskArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L166">property <b>taskArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1265,7 +1265,7 @@ The targets (either instances or window target ids). Instances are specified usi
 The ARN of the task to execute.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-taskInvocationParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L170">property <b>taskInvocationParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L170">property <b>taskInvocationParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskInvocationParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParameters'>MaintenanceWindowTaskTaskInvocationParameters</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1273,7 +1273,7 @@ The ARN of the task to execute.
 Configuration block with parameters for task execution.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L174">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L174">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1281,7 +1281,7 @@ Configuration block with parameters for task execution.
 The type of task being registered. The only allowed value is `RUN_COMMAND`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L107">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L107">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1290,7 +1290,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTask-windowId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L178">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L178">property <b>windowId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>windowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1298,7 +1298,7 @@ deployments.
 The Id of the maintenance window to register the task with.
 
 <h3 class="pdoc-module-header" id="Parameter" data-link-title="Parameter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L56">
         Resource <strong>Parameter</strong>
     </a>
 </h3>
@@ -1352,7 +1352,7 @@ const secret = new aws.ssm.Parameter("secret", {
 > **Note:** The unencrypted value of a SecureString will be stored in the raw state as plain-text.
 
 <h4 class="pdoc-member-header" id="Parameter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L132"> <b>constructor</b></a>
 </h4>
 
 
@@ -1366,7 +1366,7 @@ Create a Parameter resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Parameter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -1377,14 +1377,14 @@ Get an existing Parameter resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Parameter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Parameter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1395,7 +1395,7 @@ Returns true if the given object is an instance of Parameter.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Parameter-allowedPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L87">property <b>allowedPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L87">property <b>allowedPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1403,7 +1403,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A regular expression used to validate the parameter value.
 
 <h4 class="pdoc-member-header" id="Parameter-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L91">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L91">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1411,7 +1411,7 @@ A regular expression used to validate the parameter value.
 The ARN of the parameter.
 
 <h4 class="pdoc-member-header" id="Parameter-dataType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L96">property <b>dataType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L96">property <b>dataType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1420,7 +1420,7 @@ The dataType of the parameter. Valid values: text and aws:ec2:image for AMI form
 ](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html)
 
 <h4 class="pdoc-member-header" id="Parameter-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L100">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L100">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1428,7 +1428,7 @@ The dataType of the parameter. Valid values: text and aws:ec2:image for AMI form
 The description of the parameter.
 
 <h4 class="pdoc-member-header" id="Parameter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1437,7 +1437,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Parameter-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L104">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L104">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1445,7 +1445,7 @@ deployments and may be missing (undefined) during planning phases.
 The KMS key id or arn for encrypting a SecureString.
 
 <h4 class="pdoc-member-header" id="Parameter-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1453,7 +1453,7 @@ The KMS key id or arn for encrypting a SecureString.
 The name of the parameter. If the name contains a path (e.g. any forward slashes (`/`)), it must be fully qualified with a leading forward slash (`/`). For additional requirements and constraints, see the [AWS SSM User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html).
 
 <h4 class="pdoc-member-header" id="Parameter-overwrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L112">property <b>overwrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L112">property <b>overwrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>overwrite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1461,7 +1461,7 @@ The name of the parameter. If the name contains a path (e.g. any forward slashes
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
 
 <h4 class="pdoc-member-header" id="Parameter-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L116">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L116">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ Overwrite an existing parameter. If not specified, will default to `false` if th
 A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="Parameter-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L120">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L120">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1477,7 +1477,7 @@ A map of tags to assign to the object.
 The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard` and `Advanced`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
 
 <h4 class="pdoc-member-header" id="Parameter-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L124">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L124">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;ParameterType&gt;;</code></pre>
@@ -1485,7 +1485,7 @@ The tier of the parameter. If not specified, will default to `Standard`. Valid t
 The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
 
 <h4 class="pdoc-member-header" id="Parameter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1494,7 +1494,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Parameter-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L128">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L128">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1502,7 +1502,7 @@ deployments.
 The value of the parameter.
 
 <h4 class="pdoc-member-header" id="Parameter-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L132">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L132">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1510,7 +1510,7 @@ The value of the parameter.
 The version of the parameter.
 
 <h3 class="pdoc-module-header" id="PatchBaseline" data-link-title="PatchBaseline">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L145">
         Resource <strong>PatchBaseline</strong>
     </a>
 </h3>
@@ -1652,7 +1652,7 @@ const windowsOsApps = new aws.ssm.PatchBaseline("windows_os_apps", {
 ```
 
 <h4 class="pdoc-member-header" id="PatchBaseline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L208"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L208"> <b>constructor</b></a>
 </h4>
 
 
@@ -1666,7 +1666,7 @@ Create a PatchBaseline resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L155">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L155">method <b>get</b></a>
 </h4>
 
 
@@ -1677,14 +1677,14 @@ Get an existing PatchBaseline resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L145">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L145">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PatchBaseline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L166">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L166">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1695,7 +1695,7 @@ Returns true if the given object is an instance of PatchBaseline.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-approvalRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L176">property <b>approvalRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L176">property <b>approvalRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>approvalRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineApprovalRule'>PatchBaselineApprovalRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1703,7 +1703,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-approvedPatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L180">property <b>approvedPatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L180">property <b>approvedPatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>approvedPatches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1711,7 +1711,7 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
 A list of explicitly approved patches for the baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-approvedPatchesComplianceLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L184">property <b>approvedPatchesComplianceLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L184">property <b>approvedPatchesComplianceLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>approvedPatchesComplianceLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1719,7 +1719,7 @@ A list of explicitly approved patches for the baseline.
 Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L188">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L188">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1727,7 +1727,7 @@ Defines the compliance level for approved patches. This means that if an approve
 The description of the patch baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-globalFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L192">property <b>globalFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L192">property <b>globalFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>globalFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineGlobalFilter'>PatchBaselineGlobalFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1735,7 +1735,7 @@ The description of the patch baseline.
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L145">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L145">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1744,7 +1744,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1752,7 +1752,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the patch baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-operatingSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L200">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L200">property <b>operatingSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operatingSystem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1760,7 +1760,7 @@ The name of the patch baseline.
 Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-rejectedPatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L204">property <b>rejectedPatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L204">property <b>rejectedPatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rejectedPatches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1768,7 +1768,7 @@ Defines the operating system the patch baseline applies to. Supported operating 
 A list of rejected patches.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L208">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L208">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1776,7 +1776,7 @@ A list of rejected patches.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PatchBaseline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L145">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L145">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1785,7 +1785,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PatchGroup" data-link-title="PatchGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L23">
         Resource <strong>PatchGroup</strong>
     </a>
 </h3>
@@ -1808,7 +1808,7 @@ const patchgroup = new aws.ssm.PatchGroup("patchgroup", {
 ```
 
 <h4 class="pdoc-member-header" id="PatchGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -1822,7 +1822,7 @@ Create a PatchGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PatchGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -1833,14 +1833,14 @@ Get an existing PatchGroup resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PatchGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PatchGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1851,7 +1851,7 @@ Returns true if the given object is an instance of PatchGroup.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PatchGroup-baselineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L54">property <b>baselineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L54">property <b>baselineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baselineId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1859,7 +1859,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the patch baseline to register the patch group with.
 
 <h4 class="pdoc-member-header" id="PatchGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1868,7 +1868,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PatchGroup-patchGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L58">property <b>patchGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L58">property <b>patchGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>patchGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1876,7 +1876,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the patch group that should be registered with the patch baseline.
 
 <h4 class="pdoc-member-header" id="PatchGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ResourceDataSync" data-link-title="ResourceDataSync">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L58">
         Resource <strong>ResourceDataSync</strong>
     </a>
 </h3>
@@ -1940,7 +1940,7 @@ const foo = new aws.ssm.ResourceDataSync("foo", {s3Destination: {
 ```
 
 <h4 class="pdoc-member-header" id="ResourceDataSync-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -1954,7 +1954,7 @@ Create a ResourceDataSync resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceDataSync-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -1965,14 +1965,14 @@ Get an existing ResourceDataSync resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceDataSync-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceDataSync-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1983,7 +1983,7 @@ Returns true if the given object is an instance of ResourceDataSync.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceDataSync-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1992,7 +1992,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceDataSync-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2000,7 +2000,7 @@ deployments and may be missing (undefined) during planning phases.
 Name for the configuration.
 
 <h4 class="pdoc-member-header" id="ResourceDataSync-s3Destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L93">property <b>s3Destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L93">property <b>s3Destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResourceDataSyncS3Destination'>ResourceDataSyncS3Destination</a>&gt;;</code></pre>
@@ -2008,7 +2008,7 @@ Name for the configuration.
 Amazon S3 configuration details for the sync.
 
 <h4 class="pdoc-member-header" id="ResourceDataSync-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2019,7 +2019,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDocument" data-link-title="getDocument">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L40">
         Function <strong>getDocument</strong>
     </a>
 </h3>
@@ -2058,7 +2058,7 @@ const test = aws.ssm.getDocument({
 ```
 
 <h3 class="pdoc-module-header" id="getParameter" data-link-title="getParameter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L26">
         Function <strong>getParameter</strong>
     </a>
 </h3>
@@ -2083,7 +2083,7 @@ const foo = pulumi.output(aws.ssm.getParameter({
 > **Note:** The data source is currently following the behavior of the [SSM API](https://docs.aws.amazon.com/sdk-for-go/api/service/ssm/#Parameter) to return a string value, regardless of parameter type.
 
 <h3 class="pdoc-module-header" id="getPatchBaseline" data-link-title="getPatchBaseline">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L42">
         Function <strong>getPatchBaseline</strong>
     </a>
 </h3>
@@ -2126,7 +2126,7 @@ const defaultCustom = pulumi.output(aws.ssm.getPatchBaseline({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ActivationArgs" data-link-title="ActivationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L195">
         interface <strong>ActivationArgs</strong>
     </a>
 </h3>
@@ -2136,7 +2136,7 @@ const defaultCustom = pulumi.output(aws.ssm.getPatchBaseline({
 The set of arguments for constructing a Activation resource.
 
 <h4 class="pdoc-member-header" id="ActivationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L199">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L199">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2144,7 +2144,7 @@ The set of arguments for constructing a Activation resource.
 The description of the resource that you want to register.
 
 <h4 class="pdoc-member-header" id="ActivationArgs-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L203">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L203">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2152,7 +2152,7 @@ The description of the resource that you want to register.
 UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
 
 <h4 class="pdoc-member-header" id="ActivationArgs-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L207">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L207">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2160,7 +2160,7 @@ UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 The IAM Role to attach to the managed instance.
 
 <h4 class="pdoc-member-header" id="ActivationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2168,7 +2168,7 @@ The IAM Role to attach to the managed instance.
 The default name of the registered managed instance.
 
 <h4 class="pdoc-member-header" id="ActivationArgs-registrationLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L215">property <b>registrationLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L215">property <b>registrationLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registrationLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2176,7 +2176,7 @@ The default name of the registered managed instance.
 The maximum number of managed instances you want to register. The default value is 1 instance.
 
 <h4 class="pdoc-member-header" id="ActivationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L219">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L219">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2184,7 +2184,7 @@ The maximum number of managed instances you want to register. The default value 
 A map of tags to assign to the object.
 
 <h3 class="pdoc-module-header" id="ActivationState" data-link-title="ActivationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L153">
         interface <strong>ActivationState</strong>
     </a>
 </h3>
@@ -2194,7 +2194,7 @@ A map of tags to assign to the object.
 Input properties used for looking up and filtering Activation resources.
 
 <h4 class="pdoc-member-header" id="ActivationState-activationCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L157">property <b>activationCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L157">property <b>activationCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activationCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2202,7 +2202,7 @@ Input properties used for looking up and filtering Activation resources.
 The code the system generates when it processes the activation.
 
 <h4 class="pdoc-member-header" id="ActivationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L161">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2210,7 +2210,7 @@ The code the system generates when it processes the activation.
 The description of the resource that you want to register.
 
 <h4 class="pdoc-member-header" id="ActivationState-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L165">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L165">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2218,7 +2218,7 @@ The description of the resource that you want to register.
 UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
 
 <h4 class="pdoc-member-header" id="ActivationState-expired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L169">property <b>expired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L169">property <b>expired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2226,7 +2226,7 @@ UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.
 If the current activation has expired.
 
 <h4 class="pdoc-member-header" id="ActivationState-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L173">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L173">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2234,7 +2234,7 @@ If the current activation has expired.
 The IAM Role to attach to the managed instance.
 
 <h4 class="pdoc-member-header" id="ActivationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2242,7 +2242,7 @@ The IAM Role to attach to the managed instance.
 The default name of the registered managed instance.
 
 <h4 class="pdoc-member-header" id="ActivationState-registrationCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L181">property <b>registrationCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L181">property <b>registrationCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registrationCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2250,7 +2250,7 @@ The default name of the registered managed instance.
 The number of managed instances that are currently registered using this activation.
 
 <h4 class="pdoc-member-header" id="ActivationState-registrationLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L185">property <b>registrationLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L185">property <b>registrationLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registrationLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2258,7 +2258,7 @@ The number of managed instances that are currently registered using this activat
 The maximum number of managed instances you want to register. The default value is 1 instance.
 
 <h4 class="pdoc-member-header" id="ActivationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/activation.ts#L189">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/activation.ts#L189">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2266,7 +2266,7 @@ The maximum number of managed instances you want to register. The default value 
 A map of tags to assign to the object.
 
 <h3 class="pdoc-module-header" id="AssociationArgs" data-link-title="AssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L219">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L219">
         interface <strong>AssociationArgs</strong>
     </a>
 </h3>
@@ -2276,7 +2276,7 @@ A map of tags to assign to the object.
 The set of arguments for constructing a Association resource.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-associationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L223">property <b>associationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L223">property <b>associationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2284,7 +2284,7 @@ The set of arguments for constructing a Association resource.
 The descriptive name for the association.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-automationTargetParameterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L227">property <b>automationTargetParameterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L227">property <b>automationTargetParameterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationTargetParameterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2292,7 +2292,7 @@ The descriptive name for the association.
 Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-complianceSeverity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L231">property <b>complianceSeverity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L231">property <b>complianceSeverity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>complianceSeverity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2300,7 +2300,7 @@ Specify the target for the association. This target is required for associations
 The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 
 <h4 class="pdoc-member-header" id="AssociationArgs-documentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L235">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L235">property <b>documentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2308,7 +2308,7 @@ The compliance severity for the association. Can be one of the following: `UNSPE
 The document version you want to associate with the target(s). Can be a specific version or the default version.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L239">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L239">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2316,7 +2316,7 @@ The document version you want to associate with the target(s). Can be a specific
 The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-maxConcurrency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L243">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L243">property <b>maxConcurrency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConcurrency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2324,7 +2324,7 @@ The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds
 The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-maxErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L247">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L247">property <b>maxErrors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxErrors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2332,7 +2332,7 @@ The maximum number of targets allowed to run the association at the same time. Y
 The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2340,7 +2340,7 @@ The number of errors that are allowed before the system stops sending requests t
 The name of the SSM document to apply.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-outputLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L255">property <b>outputLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L255">property <b>outputLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationOutputLocation'>AssociationOutputLocation</a>&gt;;</code></pre>
@@ -2348,7 +2348,7 @@ The name of the SSM document to apply.
 An output location block. Output Location is documented below.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L259">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L259">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2356,7 +2356,7 @@ An output location block. Output Location is documented below.
 A block of arbitrary string parameters to pass to the SSM document.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-scheduleExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L263">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L263">property <b>scheduleExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2364,7 +2364,7 @@ A block of arbitrary string parameters to pass to the SSM document.
 A cron expression when the association will be applied to the target(s).
 
 <h4 class="pdoc-member-header" id="AssociationArgs-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L267">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L267">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationTarget'>AssociationTarget</a>&gt;[]&gt;;</code></pre>
@@ -2372,7 +2372,7 @@ A cron expression when the association will be applied to the target(s).
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 
 <h3 class="pdoc-module-header" id="AssociationState" data-link-title="AssociationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L161">
         interface <strong>AssociationState</strong>
     </a>
 </h3>
@@ -2382,7 +2382,7 @@ A block containing the targets of the SSM association. Targets are documented be
 Input properties used for looking up and filtering Association resources.
 
 <h4 class="pdoc-member-header" id="AssociationState-associationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L165">property <b>associationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L165">property <b>associationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2390,7 +2390,7 @@ Input properties used for looking up and filtering Association resources.
 The ID of the SSM association.
 
 <h4 class="pdoc-member-header" id="AssociationState-associationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L169">property <b>associationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L169">property <b>associationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2398,7 +2398,7 @@ The ID of the SSM association.
 The descriptive name for the association.
 
 <h4 class="pdoc-member-header" id="AssociationState-automationTargetParameterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L173">property <b>automationTargetParameterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L173">property <b>automationTargetParameterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationTargetParameterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2406,7 +2406,7 @@ The descriptive name for the association.
 Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 
 <h4 class="pdoc-member-header" id="AssociationState-complianceSeverity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L177">property <b>complianceSeverity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L177">property <b>complianceSeverity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>complianceSeverity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2414,7 +2414,7 @@ Specify the target for the association. This target is required for associations
 The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 
 <h4 class="pdoc-member-header" id="AssociationState-documentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L181">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L181">property <b>documentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2422,7 +2422,7 @@ The compliance severity for the association. Can be one of the following: `UNSPE
 The document version you want to associate with the target(s). Can be a specific version or the default version.
 
 <h4 class="pdoc-member-header" id="AssociationState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L185">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L185">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2430,7 +2430,7 @@ The document version you want to associate with the target(s). Can be a specific
 The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 
 <h4 class="pdoc-member-header" id="AssociationState-maxConcurrency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L189">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L189">property <b>maxConcurrency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConcurrency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2438,7 +2438,7 @@ The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds
 The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 
 <h4 class="pdoc-member-header" id="AssociationState-maxErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L193">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L193">property <b>maxErrors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxErrors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2446,7 +2446,7 @@ The maximum number of targets allowed to run the association at the same time. Y
 The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 
 <h4 class="pdoc-member-header" id="AssociationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L197">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2454,7 +2454,7 @@ The number of errors that are allowed before the system stops sending requests t
 The name of the SSM document to apply.
 
 <h4 class="pdoc-member-header" id="AssociationState-outputLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L201">property <b>outputLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L201">property <b>outputLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationOutputLocation'>AssociationOutputLocation</a>&gt;;</code></pre>
@@ -2462,7 +2462,7 @@ The name of the SSM document to apply.
 An output location block. Output Location is documented below.
 
 <h4 class="pdoc-member-header" id="AssociationState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L205">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L205">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2470,7 +2470,7 @@ An output location block. Output Location is documented below.
 A block of arbitrary string parameters to pass to the SSM document.
 
 <h4 class="pdoc-member-header" id="AssociationState-scheduleExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L209">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L209">property <b>scheduleExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2478,7 +2478,7 @@ A block of arbitrary string parameters to pass to the SSM document.
 A cron expression when the association will be applied to the target(s).
 
 <h4 class="pdoc-member-header" id="AssociationState-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/association.ts#L213">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/association.ts#L213">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationTarget'>AssociationTarget</a>&gt;[]&gt;;</code></pre>
@@ -2486,7 +2486,7 @@ A cron expression when the association will be applied to the target(s).
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 
 <h3 class="pdoc-module-header" id="DocumentArgs" data-link-title="DocumentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L330">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L330">
         interface <strong>DocumentArgs</strong>
     </a>
 </h3>
@@ -2496,7 +2496,7 @@ A block containing the targets of the SSM association. Targets are documented be
 The set of arguments for constructing a Document resource.
 
 <h4 class="pdoc-member-header" id="DocumentArgs-attachmentsSources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L334">property <b>attachmentsSources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L334">property <b>attachmentsSources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attachmentsSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentAttachmentsSource'>DocumentAttachmentsSource</a>&gt;[]&gt;;</code></pre>
@@ -2504,7 +2504,7 @@ The set of arguments for constructing a Document resource.
 One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 
 <h4 class="pdoc-member-header" id="DocumentArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L338">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L338">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2512,7 +2512,7 @@ One or more configuration blocks describing attachments sources to a version of 
 The JSON or YAML content of the document.
 
 <h4 class="pdoc-member-header" id="DocumentArgs-documentFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L342">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L342">property <b>documentFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2520,7 +2520,7 @@ The JSON or YAML content of the document.
 The format of the document. Valid document types include: `JSON` and `YAML`
 
 <h4 class="pdoc-member-header" id="DocumentArgs-documentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L346">property <b>documentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L346">property <b>documentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2528,7 +2528,7 @@ The format of the document. Valid document types include: `JSON` and `YAML`
 The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 
 <h4 class="pdoc-member-header" id="DocumentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L350">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L350">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2536,7 +2536,7 @@ The type of the document. Valid document types include: `Automation`, `Command`,
 The name of the document.
 
 <h4 class="pdoc-member-header" id="DocumentArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L354">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L354">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2544,7 +2544,7 @@ The name of the document.
 Additional Permissions to attach to the document. See Permissions below for details.
 
 <h4 class="pdoc-member-header" id="DocumentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L358">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L358">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2552,7 +2552,7 @@ Additional Permissions to attach to the document. See Permissions below for deta
 A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="DocumentArgs-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L362">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L362">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2560,7 +2560,7 @@ A map of tags to assign to the object.
 The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 
 <h3 class="pdoc-module-header" id="DocumentState" data-link-title="DocumentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L243">
         interface <strong>DocumentState</strong>
     </a>
 </h3>
@@ -2570,12 +2570,12 @@ The target type which defines the kinds of resources the document can run on. Fo
 Input properties used for looking up and filtering Document resources.
 
 <h4 class="pdoc-member-header" id="DocumentState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L244">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L244">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DocumentState-attachmentsSources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L248">property <b>attachmentsSources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L248">property <b>attachmentsSources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attachmentsSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentAttachmentsSource'>DocumentAttachmentsSource</a>&gt;[]&gt;;</code></pre>
@@ -2583,7 +2583,7 @@ Input properties used for looking up and filtering Document resources.
 One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 
 <h4 class="pdoc-member-header" id="DocumentState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L252">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L252">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2591,7 +2591,7 @@ One or more configuration blocks describing attachments sources to a version of 
 The JSON or YAML content of the document.
 
 <h4 class="pdoc-member-header" id="DocumentState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L256">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L256">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2599,7 +2599,7 @@ The JSON or YAML content of the document.
 The date the document was created.
 
 <h4 class="pdoc-member-header" id="DocumentState-defaultVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L260">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L260">property <b>defaultVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2607,7 +2607,7 @@ The date the document was created.
 The default version of the document.
 
 <h4 class="pdoc-member-header" id="DocumentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L264">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L264">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2615,7 +2615,7 @@ The default version of the document.
 The description of the document.
 
 <h4 class="pdoc-member-header" id="DocumentState-documentFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L268">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L268">property <b>documentFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2623,7 +2623,7 @@ The description of the document.
 The format of the document. Valid document types include: `JSON` and `YAML`
 
 <h4 class="pdoc-member-header" id="DocumentState-documentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L272">property <b>documentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L272">property <b>documentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2631,7 +2631,7 @@ The format of the document. Valid document types include: `JSON` and `YAML`
 The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 
 <h4 class="pdoc-member-header" id="DocumentState-documentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L276">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L276">property <b>documentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2639,7 +2639,7 @@ The type of the document. Valid document types include: `Automation`, `Command`,
 The document version.
 
 <h4 class="pdoc-member-header" id="DocumentState-hash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L280">property <b>hash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L280">property <b>hash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2647,7 +2647,7 @@ The document version.
 The sha1 or sha256 of the document content
 
 <h4 class="pdoc-member-header" id="DocumentState-hashType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L284">property <b>hashType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L284">property <b>hashType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2655,7 +2655,7 @@ The sha1 or sha256 of the document content
 "Sha1" "Sha256". The hashing algorithm used when hashing the content.
 
 <h4 class="pdoc-member-header" id="DocumentState-latestVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L288">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L288">property <b>latestVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latestVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2663,7 +2663,7 @@ The sha1 or sha256 of the document content
 The latest version of the document.
 
 <h4 class="pdoc-member-header" id="DocumentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L292">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L292">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2671,7 +2671,7 @@ The latest version of the document.
 The name of the document.
 
 <h4 class="pdoc-member-header" id="DocumentState-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L296">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L296">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2679,7 +2679,7 @@ The name of the document.
 The AWS user account of the person who created the document.
 
 <h4 class="pdoc-member-header" id="DocumentState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L300">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L300">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentParameter'>DocumentParameter</a>&gt;[]&gt;;</code></pre>
@@ -2687,7 +2687,7 @@ The AWS user account of the person who created the document.
 The parameters that are available to this document.
 
 <h4 class="pdoc-member-header" id="DocumentState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L304">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L304">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2695,7 +2695,7 @@ The parameters that are available to this document.
 Additional Permissions to attach to the document. See Permissions below for details.
 
 <h4 class="pdoc-member-header" id="DocumentState-platformTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L308">property <b>platformTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L308">property <b>platformTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2703,7 +2703,7 @@ Additional Permissions to attach to the document. See Permissions below for deta
 A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 
 <h4 class="pdoc-member-header" id="DocumentState-schemaVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L312">property <b>schemaVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L312">property <b>schemaVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2711,7 +2711,7 @@ A list of OS platforms compatible with this SSM document, either "Windows" or "L
 The schema version of the document.
 
 <h4 class="pdoc-member-header" id="DocumentState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L316">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L316">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2719,7 +2719,7 @@ The schema version of the document.
 "Creating", "Active" or "Deleting". The current status of the document.
 
 <h4 class="pdoc-member-header" id="DocumentState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L320">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L320">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2727,7 +2727,7 @@ The schema version of the document.
 A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="DocumentState-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/document.ts#L324">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/document.ts#L324">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2735,7 +2735,7 @@ A map of tags to assign to the object.
 The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 
 <h3 class="pdoc-module-header" id="GetDocumentArgs" data-link-title="GetDocumentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L58">
         interface <strong>GetDocumentArgs</strong>
     </a>
 </h3>
@@ -2745,7 +2745,7 @@ The target type which defines the kinds of resources the document can run on. Fo
 A collection of arguments for invoking getDocument.
 
 <h4 class="pdoc-member-header" id="GetDocumentArgs-documentFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L62">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L62">property <b>documentFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2753,7 +2753,7 @@ A collection of arguments for invoking getDocument.
 Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
 
 <h4 class="pdoc-member-header" id="GetDocumentArgs-documentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L66">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L66">property <b>documentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2761,7 +2761,7 @@ Returns the document in the specified format. The document format can be either 
 The document version for which you want information.
 
 <h4 class="pdoc-member-header" id="GetDocumentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2769,7 +2769,7 @@ The document version for which you want information.
 The name of the Systems Manager document.
 
 <h3 class="pdoc-module-header" id="GetDocumentResult" data-link-title="GetDocumentResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L76">
         interface <strong>GetDocumentResult</strong>
     </a>
 </h3>
@@ -2779,7 +2779,7 @@ The name of the Systems Manager document.
 A collection of values returned by getDocument.
 
 <h4 class="pdoc-member-header" id="GetDocumentResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L80">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L80">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2787,7 +2787,7 @@ A collection of values returned by getDocument.
 The ARN of the document.
 
 <h4 class="pdoc-member-header" id="GetDocumentResult-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L84">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L84">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2795,12 +2795,12 @@ The ARN of the document.
 The contents of the document.
 
 <h4 class="pdoc-member-header" id="GetDocumentResult-documentFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L85">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L85">property <b>documentFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDocumentResult-documentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L89">property <b>documentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L89">property <b>documentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2808,12 +2808,12 @@ The contents of the document.
 The type of the document.
 
 <h4 class="pdoc-member-header" id="GetDocumentResult-documentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L90">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L90">property <b>documentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDocumentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L94">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L94">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2821,12 +2821,12 @@ The type of the document.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDocumentResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getDocument.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getDocument.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetParameterArgs" data-link-title="GetParameterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L43">
         interface <strong>GetParameterArgs</strong>
     </a>
 </h3>
@@ -2836,7 +2836,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getParameter.
 
 <h4 class="pdoc-member-header" id="GetParameterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L47">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2844,7 +2844,7 @@ A collection of arguments for invoking getParameter.
 The name of the parameter.
 
 <h4 class="pdoc-member-header" id="GetParameterArgs-withDecryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L51">property <b>withDecryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L51">property <b>withDecryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>withDecryption?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -2852,7 +2852,7 @@ The name of the parameter.
 Whether to return decrypted `SecureString` value. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="GetParameterResult" data-link-title="GetParameterResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L57">
         interface <strong>GetParameterResult</strong>
     </a>
 </h3>
@@ -2862,12 +2862,12 @@ Whether to return decrypted `SecureString` value. Defaults to `true`.
 A collection of values returned by getParameter.
 
 <h4 class="pdoc-member-header" id="GetParameterResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetParameterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2875,32 +2875,32 @@ A collection of values returned by getParameter.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetParameterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetParameterResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L64">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L64">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetParameterResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L65">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L65">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetParameterResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L66">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L66">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetParameterResult-withDecryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getParameter.ts#L67">property <b>withDecryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getParameter.ts#L67">property <b>withDecryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>withDecryption?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPatchBaselineArgs" data-link-title="GetPatchBaselineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L61">
         interface <strong>GetPatchBaselineArgs</strong>
     </a>
 </h3>
@@ -2910,7 +2910,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getPatchBaseline.
 
 <h4 class="pdoc-member-header" id="GetPatchBaselineArgs-defaultBaseline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L65">property <b>defaultBaseline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L65">property <b>defaultBaseline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBaseline?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -2918,7 +2918,7 @@ A collection of arguments for invoking getPatchBaseline.
 Filters the results against the baselines defaultBaseline field.
 
 <h4 class="pdoc-member-header" id="GetPatchBaselineArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L69">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L69">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2926,7 +2926,7 @@ Filters the results against the baselines defaultBaseline field.
 Filter results by the baseline name prefix.
 
 <h4 class="pdoc-member-header" id="GetPatchBaselineArgs-operatingSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L73">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L73">property <b>operatingSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operatingSystem?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2934,7 +2934,7 @@ Filter results by the baseline name prefix.
 The specified OS for the baseline.
 
 <h4 class="pdoc-member-header" id="GetPatchBaselineArgs-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L77">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L77">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2942,7 +2942,7 @@ The specified OS for the baseline.
 The owner of the baseline. Valid values: `All`, `AWS`, `Self` (the current account).
 
 <h3 class="pdoc-module-header" id="GetPatchBaselineResult" data-link-title="GetPatchBaselineResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L83">
         interface <strong>GetPatchBaselineResult</strong>
     </a>
 </h3>
@@ -2952,12 +2952,12 @@ The owner of the baseline. Valid values: `All`, `AWS`, `Self` (the current accou
 A collection of values returned by getPatchBaseline.
 
 <h4 class="pdoc-member-header" id="GetPatchBaselineResult-defaultBaseline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L84">property <b>defaultBaseline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L84">property <b>defaultBaseline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBaseline?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPatchBaselineResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L88">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L88">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2965,7 +2965,7 @@ A collection of values returned by getPatchBaseline.
 The description of the baseline.
 
 <h4 class="pdoc-member-header" id="GetPatchBaselineResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L92">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L92">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2973,7 +2973,7 @@ The description of the baseline.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPatchBaselineResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2981,22 +2981,22 @@ The provider-assigned unique ID for this managed resource.
 The name of the baseline.
 
 <h4 class="pdoc-member-header" id="GetPatchBaselineResult-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L97">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L97">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPatchBaselineResult-operatingSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L98">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L98">property <b>operatingSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operatingSystem?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPatchBaselineResult-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/getPatchBaseline.ts#L99">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/getPatchBaseline.ts#L99">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="MaintenanceWindowArgs" data-link-title="MaintenanceWindowArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L206">
         interface <strong>MaintenanceWindowArgs</strong>
     </a>
 </h3>
@@ -3006,7 +3006,7 @@ The name of the baseline.
 The set of arguments for constructing a MaintenanceWindow resource.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-allowUnassociatedTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L210">property <b>allowUnassociatedTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L210">property <b>allowUnassociatedTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowUnassociatedTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3014,7 +3014,7 @@ The set of arguments for constructing a MaintenanceWindow resource.
 Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-cutoff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L214">property <b>cutoff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L214">property <b>cutoff</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cutoff: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3022,7 +3022,7 @@ Whether targets must be registered with the Maintenance Window before tasks can 
 The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L218">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L218">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3030,7 +3030,7 @@ The number of hours before the end of the Maintenance Window that Systems Manage
 A description for the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L222">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L222">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3038,7 +3038,7 @@ A description for the maintenance window.
 The duration of the Maintenance Window in hours.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L226">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L226">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3046,7 +3046,7 @@ The duration of the Maintenance Window in hours.
 Whether the maintenance window is enabled. Default: `true`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L230">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L230">property <b>endDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3054,7 +3054,7 @@ Whether the maintenance window is enabled. Default: `true`.
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L234">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L234">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3062,7 +3062,7 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 The name of the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L238">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L238">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3070,7 +3070,7 @@ The name of the maintenance window.
 The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-scheduleTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L242">property <b>scheduleTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L242">property <b>scheduleTimezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleTimezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3078,7 +3078,7 @@ The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.
 Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L246">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L246">property <b>startDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3086,7 +3086,7 @@ Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone D
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L250">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L250">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3094,7 +3094,7 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowState" data-link-title="MaintenanceWindowState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L156">
         interface <strong>MaintenanceWindowState</strong>
     </a>
 </h3>
@@ -3104,7 +3104,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering MaintenanceWindow resources.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-allowUnassociatedTargets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L160">property <b>allowUnassociatedTargets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L160">property <b>allowUnassociatedTargets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowUnassociatedTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3112,7 +3112,7 @@ Input properties used for looking up and filtering MaintenanceWindow resources.
 Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-cutoff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L164">property <b>cutoff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L164">property <b>cutoff</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cutoff?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3120,7 +3120,7 @@ Whether targets must be registered with the Maintenance Window before tasks can 
 The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L168">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L168">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3128,7 +3128,7 @@ The number of hours before the end of the Maintenance Window that Systems Manage
 A description for the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L172">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L172">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3136,7 +3136,7 @@ A description for the maintenance window.
 The duration of the Maintenance Window in hours.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L176">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L176">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3144,7 +3144,7 @@ The duration of the Maintenance Window in hours.
 Whether the maintenance window is enabled. Default: `true`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L180">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L180">property <b>endDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3152,7 +3152,7 @@ Whether the maintenance window is enabled. Default: `true`.
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3160,7 +3160,7 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 The name of the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L188">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L188">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3168,7 +3168,7 @@ The name of the maintenance window.
 The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-scheduleTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L192">property <b>scheduleTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L192">property <b>scheduleTimezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleTimezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3176,7 +3176,7 @@ The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.
 Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L196">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L196">property <b>startDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3184,7 +3184,7 @@ Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone D
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindow.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindow.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3192,7 +3192,7 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowTargetArgs" data-link-title="MaintenanceWindowTargetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L192">
         interface <strong>MaintenanceWindowTargetArgs</strong>
     </a>
 </h3>
@@ -3202,7 +3202,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a MaintenanceWindowTarget resource.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L196">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L196">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3210,7 +3210,7 @@ The set of arguments for constructing a MaintenanceWindowTarget resource.
 The description of the maintenance window target.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3218,7 +3218,7 @@ The description of the maintenance window target.
 The name of the maintenance window target.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-ownerInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L204">property <b>ownerInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L204">property <b>ownerInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerInformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3226,7 +3226,7 @@ The name of the maintenance window target.
 User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L208">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L208">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3234,7 +3234,7 @@ User-provided value that will be included in any CloudWatch events raised while 
 The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L213">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L213">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTargetTarget'>MaintenanceWindowTargetTarget</a>&gt;[]&gt;;</code></pre>
@@ -3243,7 +3243,7 @@ The targets to register with the maintenance window. In other words, the instanc
 (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-windowId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L217">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L217">property <b>windowId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3251,7 +3251,7 @@ The targets to register with the maintenance window. In other words, the instanc
 The Id of the maintenance window to register the target with.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowTargetState" data-link-title="MaintenanceWindowTargetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L161">
         interface <strong>MaintenanceWindowTargetState</strong>
     </a>
 </h3>
@@ -3261,7 +3261,7 @@ The Id of the maintenance window to register the target with.
 Input properties used for looking up and filtering MaintenanceWindowTarget resources.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L165">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L165">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3269,7 +3269,7 @@ Input properties used for looking up and filtering MaintenanceWindowTarget resou
 The description of the maintenance window target.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L169">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3277,7 +3277,7 @@ The description of the maintenance window target.
 The name of the maintenance window target.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetState-ownerInformation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L173">property <b>ownerInformation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L173">property <b>ownerInformation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerInformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3285,7 +3285,7 @@ The name of the maintenance window target.
 User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetState-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L177">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L177">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3293,7 +3293,7 @@ User-provided value that will be included in any CloudWatch events raised while 
 The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetState-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L182">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L182">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTargetTarget'>MaintenanceWindowTargetTarget</a>&gt;[]&gt;;</code></pre>
@@ -3302,7 +3302,7 @@ The targets to register with the maintenance window. In other words, the instanc
 (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTargetState-windowId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L186">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTarget.ts#L186">property <b>windowId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3310,7 +3310,7 @@ The targets to register with the maintenance window. In other words, the instanc
 The Id of the maintenance window to register the target with.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowTaskArgs" data-link-title="MaintenanceWindowTaskArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L302">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L302">
         interface <strong>MaintenanceWindowTaskArgs</strong>
     </a>
 </h3>
@@ -3320,7 +3320,7 @@ The Id of the maintenance window to register the target with.
 The set of arguments for constructing a MaintenanceWindowTask resource.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L306">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L306">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3328,7 +3328,7 @@ The set of arguments for constructing a MaintenanceWindowTask resource.
 The description of the maintenance window task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-maxConcurrency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L310">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L310">property <b>maxConcurrency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConcurrency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3336,7 +3336,7 @@ The description of the maintenance window task.
 The maximum number of targets this task can be run for in parallel.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-maxErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L314">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L314">property <b>maxErrors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxErrors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3344,7 +3344,7 @@ The maximum number of targets this task can be run for in parallel.
 The maximum number of errors allowed before this task stops being scheduled.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L318">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L318">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3352,7 +3352,7 @@ The maximum number of errors allowed before this task stops being scheduled.
 The name of the maintenance window task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L322">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L322">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3360,7 +3360,7 @@ The name of the maintenance window task.
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L326">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L326">property <b>serviceRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3368,7 +3368,7 @@ The priority of the task in the Maintenance Window, the lower the number the hig
 The role that should be assumed when executing the task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L330">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L330">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget'>MaintenanceWindowTaskTarget</a>&gt;[]&gt;;</code></pre>
@@ -3376,7 +3376,7 @@ The role that should be assumed when executing the task.
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-taskArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L334">property <b>taskArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L334">property <b>taskArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3384,7 +3384,7 @@ The targets (either instances or window target ids). Instances are specified usi
 The ARN of the task to execute.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-taskInvocationParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L338">property <b>taskInvocationParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L338">property <b>taskInvocationParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskInvocationParameters'>MaintenanceWindowTaskTaskInvocationParameters</a>&gt;;</code></pre>
@@ -3392,7 +3392,7 @@ The ARN of the task to execute.
 Configuration block with parameters for task execution.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L342">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L342">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3400,7 +3400,7 @@ Configuration block with parameters for task execution.
 The type of task being registered. The only allowed value is `RUN_COMMAND`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-windowId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L346">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L346">property <b>windowId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3408,7 +3408,7 @@ The type of task being registered. The only allowed value is `RUN_COMMAND`.
 The Id of the maintenance window to register the task with.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowTaskState" data-link-title="MaintenanceWindowTaskState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L252">
         interface <strong>MaintenanceWindowTaskState</strong>
     </a>
 </h3>
@@ -3418,7 +3418,7 @@ The Id of the maintenance window to register the task with.
 Input properties used for looking up and filtering MaintenanceWindowTask resources.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L256">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L256">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3426,7 +3426,7 @@ Input properties used for looking up and filtering MaintenanceWindowTask resourc
 The description of the maintenance window task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-maxConcurrency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L260">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L260">property <b>maxConcurrency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConcurrency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3434,7 +3434,7 @@ The description of the maintenance window task.
 The maximum number of targets this task can be run for in parallel.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-maxErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L264">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L264">property <b>maxErrors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxErrors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3442,7 +3442,7 @@ The maximum number of targets this task can be run for in parallel.
 The maximum number of errors allowed before this task stops being scheduled.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L268">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L268">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3450,7 +3450,7 @@ The maximum number of errors allowed before this task stops being scheduled.
 The name of the maintenance window task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L272">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L272">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3458,7 +3458,7 @@ The name of the maintenance window task.
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L276">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L276">property <b>serviceRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3466,7 +3466,7 @@ The priority of the task in the Maintenance Window, the lower the number the hig
 The role that should be assumed when executing the task.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-targets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L280">property <b>targets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L280">property <b>targets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget'>MaintenanceWindowTaskTarget</a>&gt;[]&gt;;</code></pre>
@@ -3474,7 +3474,7 @@ The role that should be assumed when executing the task.
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-taskArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L284">property <b>taskArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L284">property <b>taskArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3482,7 +3482,7 @@ The targets (either instances or window target ids). Instances are specified usi
 The ARN of the task to execute.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-taskInvocationParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L288">property <b>taskInvocationParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L288">property <b>taskInvocationParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskInvocationParameters'>MaintenanceWindowTaskTaskInvocationParameters</a>&gt;;</code></pre>
@@ -3490,7 +3490,7 @@ The ARN of the task to execute.
 Configuration block with parameters for task execution.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L292">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L292">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3498,7 +3498,7 @@ Configuration block with parameters for task execution.
 The type of task being registered. The only allowed value is `RUN_COMMAND`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowTaskState-windowId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/maintenanceWindowTask.ts#L296">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/maintenanceWindowTask.ts#L296">property <b>windowId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3506,7 +3506,7 @@ The type of task being registered. The only allowed value is `RUN_COMMAND`.
 The Id of the maintenance window to register the task with.
 
 <h3 class="pdoc-module-header" id="ParameterArgs" data-link-title="ParameterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L248">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L248">
         interface <strong>ParameterArgs</strong>
     </a>
 </h3>
@@ -3516,7 +3516,7 @@ The Id of the maintenance window to register the task with.
 The set of arguments for constructing a Parameter resource.
 
 <h4 class="pdoc-member-header" id="ParameterArgs-allowedPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L252">property <b>allowedPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L252">property <b>allowedPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3524,7 +3524,7 @@ The set of arguments for constructing a Parameter resource.
 A regular expression used to validate the parameter value.
 
 <h4 class="pdoc-member-header" id="ParameterArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L256">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L256">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3532,7 +3532,7 @@ A regular expression used to validate the parameter value.
 The ARN of the parameter.
 
 <h4 class="pdoc-member-header" id="ParameterArgs-dataType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L261">property <b>dataType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L261">property <b>dataType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3541,7 +3541,7 @@ The dataType of the parameter. Valid values: text and aws:ec2:image for AMI form
 ](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html)
 
 <h4 class="pdoc-member-header" id="ParameterArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L265">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L265">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3549,7 +3549,7 @@ The dataType of the parameter. Valid values: text and aws:ec2:image for AMI form
 The description of the parameter.
 
 <h4 class="pdoc-member-header" id="ParameterArgs-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L269">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L269">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3557,7 +3557,7 @@ The description of the parameter.
 The KMS key id or arn for encrypting a SecureString.
 
 <h4 class="pdoc-member-header" id="ParameterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L273">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L273">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3565,7 +3565,7 @@ The KMS key id or arn for encrypting a SecureString.
 The name of the parameter. If the name contains a path (e.g. any forward slashes (`/`)), it must be fully qualified with a leading forward slash (`/`). For additional requirements and constraints, see the [AWS SSM User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html).
 
 <h4 class="pdoc-member-header" id="ParameterArgs-overwrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L277">property <b>overwrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L277">property <b>overwrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overwrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3573,7 +3573,7 @@ The name of the parameter. If the name contains a path (e.g. any forward slashes
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
 
 <h4 class="pdoc-member-header" id="ParameterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L281">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L281">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3581,7 +3581,7 @@ Overwrite an existing parameter. If not specified, will default to `false` if th
 A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="ParameterArgs-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L285">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L285">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3589,7 +3589,7 @@ A map of tags to assign to the object.
 The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard` and `Advanced`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
 
 <h4 class="pdoc-member-header" id="ParameterArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L289">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L289">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;ParameterType&gt;;</code></pre>
@@ -3597,7 +3597,7 @@ The tier of the parameter. If not specified, will default to `Standard`. Valid t
 The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
 
 <h4 class="pdoc-member-header" id="ParameterArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L293">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L293">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3605,7 +3605,7 @@ The type of the parameter. Valid types are `String`, `StringList` and `SecureStr
 The value of the parameter.
 
 <h3 class="pdoc-module-header" id="ParameterState" data-link-title="ParameterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L193">
         interface <strong>ParameterState</strong>
     </a>
 </h3>
@@ -3615,7 +3615,7 @@ The value of the parameter.
 Input properties used for looking up and filtering Parameter resources.
 
 <h4 class="pdoc-member-header" id="ParameterState-allowedPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L197">property <b>allowedPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L197">property <b>allowedPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3623,7 +3623,7 @@ Input properties used for looking up and filtering Parameter resources.
 A regular expression used to validate the parameter value.
 
 <h4 class="pdoc-member-header" id="ParameterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L201">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L201">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3631,7 +3631,7 @@ A regular expression used to validate the parameter value.
 The ARN of the parameter.
 
 <h4 class="pdoc-member-header" id="ParameterState-dataType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L206">property <b>dataType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L206">property <b>dataType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3640,7 +3640,7 @@ The dataType of the parameter. Valid values: text and aws:ec2:image for AMI form
 ](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html)
 
 <h4 class="pdoc-member-header" id="ParameterState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L210">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L210">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3648,7 +3648,7 @@ The dataType of the parameter. Valid values: text and aws:ec2:image for AMI form
 The description of the parameter.
 
 <h4 class="pdoc-member-header" id="ParameterState-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L214">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L214">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3656,7 +3656,7 @@ The description of the parameter.
 The KMS key id or arn for encrypting a SecureString.
 
 <h4 class="pdoc-member-header" id="ParameterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L218">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L218">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3664,7 +3664,7 @@ The KMS key id or arn for encrypting a SecureString.
 The name of the parameter. If the name contains a path (e.g. any forward slashes (`/`)), it must be fully qualified with a leading forward slash (`/`). For additional requirements and constraints, see the [AWS SSM User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html).
 
 <h4 class="pdoc-member-header" id="ParameterState-overwrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L222">property <b>overwrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L222">property <b>overwrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overwrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3672,7 +3672,7 @@ The name of the parameter. If the name contains a path (e.g. any forward slashes
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
 
 <h4 class="pdoc-member-header" id="ParameterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L226">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L226">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3680,7 +3680,7 @@ Overwrite an existing parameter. If not specified, will default to `false` if th
 A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="ParameterState-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L230">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L230">property <b>tier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3688,7 +3688,7 @@ A map of tags to assign to the object.
 The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard` and `Advanced`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
 
 <h4 class="pdoc-member-header" id="ParameterState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L234">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L234">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;ParameterType&gt;;</code></pre>
@@ -3696,7 +3696,7 @@ The tier of the parameter. If not specified, will default to `Standard`. Valid t
 The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
 
 <h4 class="pdoc-member-header" id="ParameterState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L238">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L238">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3704,7 +3704,7 @@ The type of the parameter. Valid types are `String`, `StringList` and `SecureStr
 The value of the parameter.
 
 <h4 class="pdoc-member-header" id="ParameterState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameter.ts#L242">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameter.ts#L242">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3712,7 +3712,7 @@ The value of the parameter.
 The version of the parameter.
 
 <h3 class="pdoc-module-header" id="PatchBaselineArgs" data-link-title="PatchBaselineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L299">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L299">
         interface <strong>PatchBaselineArgs</strong>
     </a>
 </h3>
@@ -3722,7 +3722,7 @@ The version of the parameter.
 The set of arguments for constructing a PatchBaseline resource.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-approvalRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L303">property <b>approvalRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L303">property <b>approvalRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineApprovalRule'>PatchBaselineApprovalRule</a>&gt;[]&gt;;</code></pre>
@@ -3730,7 +3730,7 @@ The set of arguments for constructing a PatchBaseline resource.
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-approvedPatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L307">property <b>approvedPatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L307">property <b>approvedPatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvedPatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3738,7 +3738,7 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
 A list of explicitly approved patches for the baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-approvedPatchesComplianceLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L311">property <b>approvedPatchesComplianceLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L311">property <b>approvedPatchesComplianceLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvedPatchesComplianceLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3746,7 +3746,7 @@ A list of explicitly approved patches for the baseline.
 Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L315">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L315">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3754,7 +3754,7 @@ Defines the compliance level for approved patches. This means that if an approve
 The description of the patch baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-globalFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L319">property <b>globalFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L319">property <b>globalFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineGlobalFilter'>PatchBaselineGlobalFilter</a>&gt;[]&gt;;</code></pre>
@@ -3762,7 +3762,7 @@ The description of the patch baseline.
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L323">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L323">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3770,7 +3770,7 @@ A set of global filters used to exclude patches from the baseline. Up to 4 globa
 The name of the patch baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-operatingSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L327">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L327">property <b>operatingSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operatingSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3778,7 +3778,7 @@ The name of the patch baseline.
 Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-rejectedPatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L331">property <b>rejectedPatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L331">property <b>rejectedPatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rejectedPatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3786,7 +3786,7 @@ Defines the operating system the patch baseline applies to. Supported operating 
 A list of rejected patches.
 
 <h4 class="pdoc-member-header" id="PatchBaselineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L335">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L335">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3794,7 +3794,7 @@ A list of rejected patches.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="PatchBaselineState" data-link-title="PatchBaselineState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L257">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L257">
         interface <strong>PatchBaselineState</strong>
     </a>
 </h3>
@@ -3804,7 +3804,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering PatchBaseline resources.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-approvalRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L261">property <b>approvalRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L261">property <b>approvalRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineApprovalRule'>PatchBaselineApprovalRule</a>&gt;[]&gt;;</code></pre>
@@ -3812,7 +3812,7 @@ Input properties used for looking up and filtering PatchBaseline resources.
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-approvedPatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L265">property <b>approvedPatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L265">property <b>approvedPatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvedPatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3820,7 +3820,7 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
 A list of explicitly approved patches for the baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-approvedPatchesComplianceLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L269">property <b>approvedPatchesComplianceLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L269">property <b>approvedPatchesComplianceLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvedPatchesComplianceLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3828,7 +3828,7 @@ A list of explicitly approved patches for the baseline.
 Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L273">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L273">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3836,7 +3836,7 @@ Defines the compliance level for approved patches. This means that if an approve
 The description of the patch baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-globalFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L277">property <b>globalFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L277">property <b>globalFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineGlobalFilter'>PatchBaselineGlobalFilter</a>&gt;[]&gt;;</code></pre>
@@ -3844,7 +3844,7 @@ The description of the patch baseline.
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L281">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L281">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3852,7 +3852,7 @@ A set of global filters used to exclude patches from the baseline. Up to 4 globa
 The name of the patch baseline.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-operatingSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L285">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L285">property <b>operatingSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operatingSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3860,7 +3860,7 @@ The name of the patch baseline.
 Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-rejectedPatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L289">property <b>rejectedPatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L289">property <b>rejectedPatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rejectedPatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3868,7 +3868,7 @@ Defines the operating system the patch baseline applies to. Supported operating 
 A list of rejected patches.
 
 <h4 class="pdoc-member-header" id="PatchBaselineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchBaseline.ts#L293">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchBaseline.ts#L293">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3876,7 +3876,7 @@ A list of rejected patches.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="PatchGroupArgs" data-link-title="PatchGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L113">
         interface <strong>PatchGroupArgs</strong>
     </a>
 </h3>
@@ -3886,7 +3886,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a PatchGroup resource.
 
 <h4 class="pdoc-member-header" id="PatchGroupArgs-baselineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L117">property <b>baselineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L117">property <b>baselineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baselineId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3894,7 +3894,7 @@ The set of arguments for constructing a PatchGroup resource.
 The ID of the patch baseline to register the patch group with.
 
 <h4 class="pdoc-member-header" id="PatchGroupArgs-patchGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L121">property <b>patchGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L121">property <b>patchGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>patchGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3902,7 +3902,7 @@ The ID of the patch baseline to register the patch group with.
 The name of the patch group that should be registered with the patch baseline.
 
 <h3 class="pdoc-module-header" id="PatchGroupState" data-link-title="PatchGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L99">
         interface <strong>PatchGroupState</strong>
     </a>
 </h3>
@@ -3912,7 +3912,7 @@ The name of the patch group that should be registered with the patch baseline.
 Input properties used for looking up and filtering PatchGroup resources.
 
 <h4 class="pdoc-member-header" id="PatchGroupState-baselineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L103">property <b>baselineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L103">property <b>baselineId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baselineId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3920,7 +3920,7 @@ Input properties used for looking up and filtering PatchGroup resources.
 The ID of the patch baseline to register the patch group with.
 
 <h4 class="pdoc-member-header" id="PatchGroupState-patchGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/patchGroup.ts#L107">property <b>patchGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/patchGroup.ts#L107">property <b>patchGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>patchGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3928,7 +3928,7 @@ The ID of the patch baseline to register the patch group with.
 The name of the patch group that should be registered with the patch baseline.
 
 <h3 class="pdoc-module-header" id="ResourceDataSyncArgs" data-link-title="ResourceDataSyncArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L145">
         interface <strong>ResourceDataSyncArgs</strong>
     </a>
 </h3>
@@ -3938,7 +3938,7 @@ The name of the patch group that should be registered with the patch baseline.
 The set of arguments for constructing a ResourceDataSync resource.
 
 <h4 class="pdoc-member-header" id="ResourceDataSyncArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L149">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3946,7 +3946,7 @@ The set of arguments for constructing a ResourceDataSync resource.
 Name for the configuration.
 
 <h4 class="pdoc-member-header" id="ResourceDataSyncArgs-s3Destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L153">property <b>s3Destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L153">property <b>s3Destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceDataSyncS3Destination'>ResourceDataSyncS3Destination</a>&gt;;</code></pre>
@@ -3954,7 +3954,7 @@ Name for the configuration.
 Amazon S3 configuration details for the sync.
 
 <h3 class="pdoc-module-header" id="ResourceDataSyncState" data-link-title="ResourceDataSyncState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L131">
         interface <strong>ResourceDataSyncState</strong>
     </a>
 </h3>
@@ -3964,7 +3964,7 @@ Amazon S3 configuration details for the sync.
 Input properties used for looking up and filtering ResourceDataSync resources.
 
 <h4 class="pdoc-member-header" id="ResourceDataSyncState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L135">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3972,7 +3972,7 @@ Input properties used for looking up and filtering ResourceDataSync resources.
 Name for the configuration.
 
 <h4 class="pdoc-member-header" id="ResourceDataSyncState-s3Destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/resourceDataSync.ts#L139">property <b>s3Destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/resourceDataSync.ts#L139">property <b>s3Destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceDataSyncS3Destination'>ResourceDataSyncS3Destination</a>&gt;;</code></pre>
@@ -3980,7 +3980,7 @@ Name for the configuration.
 Amazon S3 configuration details for the sync.
 
 <h3 class="pdoc-module-header" id="SecureStringParameter" data-link-title="SecureStringParameter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameterType.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameterType.ts#L19">
         let <strong>SecureStringParameter</strong>
     </a>
 </h3>
@@ -3991,7 +3991,7 @@ Use ParameterType.SecureString instead.
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> SecureStringParameter: ParameterType = <span class='s2'>&#34;SecureString&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="StringListParameter" data-link-title="StringListParameter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameterType.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameterType.ts#L17">
         let <strong>StringListParameter</strong>
     </a>
 </h3>
@@ -4002,7 +4002,7 @@ Use ParameterType.StringList instead.
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> StringListParameter: ParameterType = <span class='s2'>&#34;StringList&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="StringParameter" data-link-title="StringParameter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/bfaec7a64d2c6e86da46a4f8671eca2edc1002a8/sdk/nodejs/ssm/parameterType.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/ssm/parameterType.ts#L15">
         let <strong>StringParameter</strong>
     </a>
 </h3>

@@ -399,6 +399,103 @@ const example = new aws.glue.Crawler("example", {
 
 {{% /example %}}
 
+### MongoDB Target
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
+        {
+            DatabaseName = aws_glue_catalog_database.Example.Name,
+            Role = aws_iam_role.Example.Arn,
+            MongodbTargets = 
+            {
+                new Aws.Glue.Inputs.CrawlerMongodbTargetArgs
+                {
+                    ConnectionName = aws_glue_connection.Example.Name,
+                    Path = "database-name/%",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
+			DatabaseName: pulumi.Any(aws_glue_catalog_database.Example.Name),
+			Role:         pulumi.Any(aws_iam_role.Example.Arn),
+			MongodbTargets: glue.CrawlerMongodbTargetArray{
+				&glue.CrawlerMongodbTargetArgs{
+					ConnectionName: pulumi.Any(aws_glue_connection.Example.Name),
+					Path:           pulumi.String(fmt.Sprintf("%v%v", "database-name/", "%")),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Crawler("example",
+    database_name=aws_glue_catalog_database["example"]["name"],
+    role=aws_iam_role["example"]["arn"],
+    mongodb_targets=[aws.glue.CrawlerMongodbTargetArgs(
+        connection_name=aws_glue_connection["example"]["name"],
+        path="database-name/%",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.glue.Crawler("example", {
+    databaseName: aws_glue_catalog_database.example.name,
+    role: aws_iam_role.example.arn,
+    mongodbTargets: [{
+        connectionName: aws_glue_connection.example.name,
+        path: `database-name/%`,
+    }],
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -411,7 +508,7 @@ const example = new aws.glue.Crawler("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Crawler">Crawler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerCatalogTargetArgs]]</span> = None<span class="p">, </span><span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerDynamodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerJdbcTargetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerS3TargetArgs]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerSchemaChangePolicyArgs]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Crawler">Crawler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerCatalogTargetArgs]]</span> = None<span class="p">, </span><span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerDynamodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerJdbcTargetArgs]]</span> = None<span class="p">, </span><span class="nx">mongodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerMongodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerS3TargetArgs]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerSchemaChangePolicyArgs]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -672,6 +769,17 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="mongodbtargets_csharp">
+<a href="#mongodbtargets_csharp" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Targets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">List&lt;Crawler<wbr>Mongodb<wbr>Target<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List nested MongoDB target arguments. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -839,6 +947,17 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#crawlerjdbctarget">[]Crawler<wbr>Jdbc<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mongodbtargets_go">
+<a href="#mongodbtargets_go" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Targets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">[]Crawler<wbr>Mongodb<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}List nested MongoDB target arguments. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1014,6 +1133,17 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="mongodbtargets_nodejs">
+<a href="#mongodbtargets_nodejs" style="color: inherit; text-decoration: inherit;">mongodb<wbr>Targets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">Crawler<wbr>Mongodb<wbr>Target[]</a></span>
+    </dt>
+    <dd>{{% md %}}List nested MongoDB target arguments. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1181,6 +1311,17 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#crawlerjdbctarget">Sequence[Crawler<wbr>Jdbc<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mongodb_targets_python">
+<a href="#mongodb_targets_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>targets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">Sequence[Crawler<wbr>Mongodb<wbr>Target<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List nested MongoDB target arguments. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1403,7 +1544,7 @@ Get an existing Crawler resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerCatalogTargetArgs]]</span> = None<span class="p">, </span><span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerDynamodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerJdbcTargetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerS3TargetArgs]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerSchemaChangePolicyArgs]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Crawler</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerCatalogTargetArgs]]</span> = None<span class="p">, </span><span class="nx">classifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerDynamodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">jdbc_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerJdbcTargetArgs]]</span> = None<span class="p">, </span><span class="nx">mongodb_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerMongodbTargetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CrawlerS3TargetArgs]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_change_policy</span><span class="p">:</span> <span class="nx">Optional[CrawlerSchemaChangePolicyArgs]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Crawler</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1606,6 +1747,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mongodbtargets_csharp">
+<a href="#state_mongodbtargets_csharp" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Targets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">List&lt;Crawler<wbr>Mongodb<wbr>Target<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List nested MongoDB target arguments. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1784,6 +1936,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#crawlerjdbctarget">[]Crawler<wbr>Jdbc<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mongodbtargets_go">
+<a href="#state_mongodbtargets_go" style="color: inherit; text-decoration: inherit;">Mongodb<wbr>Targets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">[]Crawler<wbr>Mongodb<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}List nested MongoDB target arguments. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1970,6 +2133,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mongodbtargets_nodejs">
+<a href="#state_mongodbtargets_nodejs" style="color: inherit; text-decoration: inherit;">mongodb<wbr>Targets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">Crawler<wbr>Mongodb<wbr>Target[]</a></span>
+    </dt>
+    <dd>{{% md %}}List nested MongoDB target arguments. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -2148,6 +2322,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#crawlerjdbctarget">Sequence[Crawler<wbr>Jdbc<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested JBDC target arguments. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mongodb_targets_python">
+<a href="#state_mongodb_targets_python" style="color: inherit; text-decoration: inherit;">mongodb_<wbr>targets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crawlermongodbtarget">Sequence[Crawler<wbr>Mongodb<wbr>Target<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List nested MongoDB target arguments. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2734,6 +2919,184 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of glob patterns used to exclude from the crawl.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="crawlermongodbtarget">Crawler<wbr>Mongodb<wbr>Target</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CrawlerMongodbTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CrawlerMongodbTarget">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerMongodbTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CrawlerMongodbTargetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerMongodbTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerMongodbTarget.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionname_csharp">
+<a href="#connectionname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanall_csharp">
+<a href="#scanall_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionname_go">
+<a href="#connectionname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanall_go">
+<a href="#scanall_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionname_nodejs">
+<a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanall_nodejs">
+<a href="#scanall_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connection_name_python">
+<a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the Amazon DocumentDB or MongoDB target (database/collection).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scan_all_python">
+<a href="#scan_all_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>all</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
 {{% /md %}}</dd>
 
 </dl>
