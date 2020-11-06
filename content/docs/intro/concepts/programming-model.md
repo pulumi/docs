@@ -848,6 +848,8 @@ The `dependsOn` option provides a list of explicit resource dependency resources
 
 Pulumi automatically tracks dependencies between resources when you supply an input argument that came from another resource's [output properties](#outputs). In some cases, however, you may need to explicitly specify additional dependencies that Pulumi doesn't know about, but must respect. This might happen if a dependency is external to the infrastructure itself---such as an application dependency---or is implied due to an ordering or eventual consistency requirement. These dependencies ensure that resource creation, update, and deletion is done in the correct order.
 
+> **Note:** Currently `dependsOn` doesn't work if you depend on [Helm Charts](https://www.pulumi.com/docs/reference/pkg/kubernetes/helm/) or [ConfigFiles](https://www.pulumi.com/docs/reference/pkg/kubernetes/yaml/configfile). The issue is tracked in the following issues: [Helm](https://github.com/pulumi/pulumi-kubernetes/issues/861), [ConfigFile](https://github.com/pulumi/pulumi-kubernetes/issues/1315). 
+
 This example demonstrates making `res2` dependent on `res1`, even if there is no property-level dependency:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
