@@ -1,8 +1,20 @@
 .pulumi-event-list-container {
     @each $filter-name in "all", "featured", "upcoming", "videos", "pulumitv" {
         ##{$filter-name}:target {
+            @if $filter-name != "all" {
+                ~ .event-list-filter li[data-filter-name="all"] a {
+                    @apply text-gray-700;
+                }
+            }
+
             ~ .event-list-filter li[data-filter-name="#{$filter-name}"] a {
                 @apply text-blue-500;
+            }
+
+            // To support intially loading all the items on the page we first need
+            // to hide all the elements and then set the specific items to be visible.
+            ~ ul li {
+                @apply hidden;
             }
 
             ~ ul li[data-filters~="#{$filter-name}"] {
