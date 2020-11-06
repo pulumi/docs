@@ -61,7 +61,7 @@ Explore the resources and functions of the networking module in the Open Stack p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
+	<dd>2.8.1</dd>
 </dl>
 
 
