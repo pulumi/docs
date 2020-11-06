@@ -35,7 +35,7 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-infrastrcuture-as-code"
+url_slug: "getting-started-with-infrastructure-as-code"
 
 # The content of the hero section.
 hero:
