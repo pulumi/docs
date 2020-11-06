@@ -156,7 +156,7 @@ const exampleLinkedServiceDataLakeStorageGen2 = new azure.datafactory.LinkedServ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2">LinkedServiceDataLakeStorageGen2</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2">LinkedServiceDataLakeStorageGen2</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_managed_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -347,40 +347,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalid_csharp">
-<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalkey_csharp">
-<a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="tenant_csharp">
-<a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -402,7 +369,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -413,7 +380,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -424,7 +391,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description for the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,7 +402,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -446,7 +413,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
+    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -457,7 +424,51 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_csharp">
+<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_csharp">
+<a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_csharp">
+<a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemanagedidentity_csharp">
+<a href="#usemanagedidentity_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 
 </dl>
@@ -486,40 +497,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalid_go">
-<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalkey_go">
-<a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="tenant_go">
-<a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -541,7 +519,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,7 +530,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -563,7 +541,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description for the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,7 +552,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -585,7 +563,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
+    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -596,7 +574,51 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_go">
+<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_go">
+<a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_go">
+<a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemanagedidentity_go">
+<a href="#usemanagedidentity_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 
 </dl>
@@ -625,40 +647,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalid_nodejs">
-<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="serviceprincipalkey_nodejs">
-<a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="tenant_nodejs">
-<a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -680,7 +669,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -691,7 +680,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -702,7 +691,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description for the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -713,7 +702,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -724,7 +713,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
+    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -735,7 +724,51 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_nodejs">
+<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_nodejs">
+<a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_nodejs">
+<a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemanagedidentity_nodejs">
+<a href="#usemanagedidentity_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Managed<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 
 </dl>
@@ -764,40 +797,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="service_principal_id_python">
-<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="service_principal_key_python">
-<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="tenant_python">
-<a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -819,7 +819,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -830,7 +830,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -841,7 +841,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description for the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -852,7 +852,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -863,7 +863,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
+    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -874,7 +874,51 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_python">
+<a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_managed_identity_python">
+<a href="#use_managed_identity_python" style="color: inherit; text-decoration: inherit;">use_<wbr>managed_<wbr>identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 
 </dl>
@@ -976,7 +1020,7 @@ Get an existing LinkedServiceDataLakeStorageGen2 resource's state with the given
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LinkedServiceDataLakeStorageGen2</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_managed_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> LinkedServiceDataLakeStorageGen2</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1098,7 +1142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1109,7 +1153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1131,7 +1175,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description for the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1142,7 +1186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1153,7 +1197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
+    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1164,7 +1208,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1175,7 +1219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
+    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1186,7 +1230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1197,7 +1241,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1208,7 +1252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1220,6 +1264,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint for the Azure Data Lake Storage Gen2 service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usemanagedidentity_csharp">
+<a href="#state_usemanagedidentity_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 
 </dl>
@@ -1237,7 +1292,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1248,7 +1303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1270,7 +1325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description for the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1281,7 +1336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,7 +1347,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
+    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1303,7 +1358,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,7 +1369,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
+    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1325,7 +1380,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1336,7 +1391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1347,7 +1402,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1359,6 +1414,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint for the Azure Data Lake Storage Gen2 service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usemanagedidentity_go">
+<a href="#state_usemanagedidentity_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 
 </dl>
@@ -1376,7 +1442,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1387,7 +1453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1409,7 +1475,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description for the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1420,7 +1486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1431,7 +1497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
+    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1442,7 +1508,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1453,7 +1519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
+    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1464,7 +1530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1475,7 +1541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1486,7 +1552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1498,6 +1564,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint for the Azure Data Lake Storage Gen2 service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usemanagedidentity_nodejs">
+<a href="#state_usemanagedidentity_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Managed<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 
 </dl>
@@ -1515,7 +1592,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1526,7 +1603,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1548,7 +1625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description for the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The description for the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1559,7 +1636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1570,7 +1647,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
+    <dd>{{% md %}}Specifies the name of the Data Factory Linked Service. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1581,7 +1658,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service MySQL.
+    <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1592,7 +1669,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
+    <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1603,7 +1680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account. Required if `use_managed_identity` is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1614,7 +1691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.  Required if `use_managed_identity` is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1625,7 +1702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1637,6 +1714,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The endpoint for the Azure Data Lake Storage Gen2 service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_use_managed_identity_python">
+<a href="#state_use_managed_identity_python" style="color: inherit; text-decoration: inherit;">use_<wbr>managed_<wbr>identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 
 </dl>
