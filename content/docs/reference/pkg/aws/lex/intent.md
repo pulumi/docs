@@ -673,7 +673,7 @@ resource is created and on each update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -710,7 +710,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -750,7 +750,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -833,7 +833,7 @@ resource is created and on each update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -870,7 +870,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -910,7 +910,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -993,7 +993,7 @@ resource is created and on each update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1030,7 +1030,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1070,7 +1070,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1153,7 +1153,7 @@ resource is created and on each update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1190,7 +1190,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1230,7 +1230,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1764,7 +1764,7 @@ resource is created and on each update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1825,7 +1825,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1865,7 +1865,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1980,7 +1980,7 @@ resource is created and on each update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2041,7 +2041,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2081,7 +2081,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2196,7 +2196,7 @@ resource is created and on each update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2257,7 +2257,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2297,7 +2297,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2412,7 +2412,7 @@ resource is created and on each update. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2473,7 +2473,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2513,7 +2513,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2582,7 +2582,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2595,7 +2595,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2615,7 +2615,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2628,7 +2628,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2648,7 +2648,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2661,7 +2661,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2681,7 +2681,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2694,7 +2694,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2730,7 +2730,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2753,7 +2753,7 @@ slot values into the response card. For more information, see
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -2771,7 +2771,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2794,7 +2794,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -2812,7 +2812,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2835,7 +2835,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -2853,7 +2853,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2876,7 +2876,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -2912,7 +2912,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2925,7 +2925,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2938,7 +2938,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2956,7 +2956,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2969,7 +2969,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2982,7 +2982,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3000,7 +3000,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3013,7 +3013,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3026,7 +3026,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3044,7 +3044,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3057,7 +3057,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3070,7 +3070,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3106,7 +3106,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3129,7 +3129,7 @@ slot values into the response card. For more information, see
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -3147,7 +3147,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3170,7 +3170,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -3188,7 +3188,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3211,7 +3211,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -3229,7 +3229,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3252,7 +3252,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -3290,7 +3290,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
-[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html).
+[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3321,7 +3321,7 @@ to invoke your Lambda function. For more information, see
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
-[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html).
+[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3352,7 +3352,7 @@ to invoke your Lambda function. For more information, see
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
-[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html).
+[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3383,7 +3383,7 @@ to invoke your Lambda function. For more information, see
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
-[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html).
+[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3572,7 +3572,7 @@ documented below under statement.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3585,7 +3585,7 @@ documented below under statement.
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3598,7 +3598,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3616,7 +3616,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3629,7 +3629,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3642,7 +3642,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3660,7 +3660,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3673,7 +3673,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3686,7 +3686,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3704,7 +3704,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3717,7 +3717,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3730,7 +3730,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3766,7 +3766,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3789,7 +3789,7 @@ slot values into the response card. For more information, see
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -3807,7 +3807,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3830,7 +3830,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -3848,7 +3848,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3871,7 +3871,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -3889,7 +3889,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3912,7 +3912,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -3950,7 +3950,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3963,7 +3963,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3983,7 +3983,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3996,7 +3996,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -4016,7 +4016,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4029,7 +4029,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -4049,7 +4049,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4062,7 +4062,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -4098,7 +4098,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4121,7 +4121,7 @@ slot values into the response card. For more information, see
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -4139,7 +4139,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4162,7 +4162,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -4180,7 +4180,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4203,7 +4203,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -4221,7 +4221,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4244,7 +4244,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -4424,7 +4424,7 @@ Required if type is CodeHook. Attributes are documented under code_hook.
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
-[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html).
+[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4455,7 +4455,7 @@ to invoke your Lambda function. For more information, see
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
-[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html).
+[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4486,7 +4486,7 @@ to invoke your Lambda function. For more information, see
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
-[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html).
+[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4517,7 +4517,7 @@ to invoke your Lambda function. For more information, see
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
-[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html).
+[Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4566,7 +4566,7 @@ to invoke your Lambda function. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4579,7 +4579,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -4599,7 +4599,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4612,7 +4612,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -4632,7 +4632,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4645,7 +4645,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -4665,7 +4665,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4678,7 +4678,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -4714,7 +4714,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4737,7 +4737,7 @@ slot values into the response card. For more information, see
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -4755,7 +4755,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4778,7 +4778,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -4796,7 +4796,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4819,7 +4819,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -4837,7 +4837,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4860,7 +4860,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -4896,7 +4896,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4919,7 +4919,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
-the built-in slot types.
+the built-in slot types. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4930,7 +4930,7 @@ the built-in slot types.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4944,7 +4944,7 @@ the built-in slot types.
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
 the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-values is arbitrary.
+values is arbitrary. Must be between 1 and 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4957,7 +4957,7 @@ values is arbitrary.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4970,7 +4970,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4981,7 +4981,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the slot type.
+    <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5011,7 +5011,7 @@ from the user. Attributes are documented under prompt.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5034,7 +5034,7 @@ from the user. Attributes are documented under prompt.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
-the built-in slot types.
+the built-in slot types. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5045,7 +5045,7 @@ the built-in slot types.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5059,7 +5059,7 @@ the built-in slot types.
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
 the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-values is arbitrary.
+values is arbitrary. Must be between 1 and 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5072,7 +5072,7 @@ values is arbitrary.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5085,7 +5085,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5096,7 +5096,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the slot type.
+    <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5126,7 +5126,7 @@ from the user. Attributes are documented under prompt.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5149,7 +5149,7 @@ from the user. Attributes are documented under prompt.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
-the built-in slot types.
+the built-in slot types. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5160,7 +5160,7 @@ the built-in slot types.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5174,7 +5174,7 @@ the built-in slot types.
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
 the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-values is arbitrary.
+values is arbitrary. Must be between 1 and 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5187,7 +5187,7 @@ values is arbitrary.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5200,7 +5200,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5211,7 +5211,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the slot type.
+    <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5241,7 +5241,7 @@ from the user. Attributes are documented under prompt.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive.
+    <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5264,7 +5264,7 @@ from the user. Attributes are documented under prompt.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
-the built-in slot types.
+the built-in slot types. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5275,7 +5275,7 @@ the built-in slot types.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5289,7 +5289,7 @@ the built-in slot types.
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
 the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-values is arbitrary.
+values is arbitrary. Must be between 1 and 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5302,7 +5302,7 @@ values is arbitrary.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5315,7 +5315,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-is optional. In most cases, Amazon Lex is capable of understanding user utterances.
+is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5326,7 +5326,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of the slot type.
+    <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5374,7 +5374,7 @@ from the user. Attributes are documented under prompt.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5387,7 +5387,7 @@ from the user. Attributes are documented under prompt.
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5400,7 +5400,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -5418,7 +5418,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5431,7 +5431,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5444,7 +5444,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -5462,7 +5462,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5475,7 +5475,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5488,7 +5488,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -5506,7 +5506,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times to prompt the user for information.
+    <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5519,7 +5519,7 @@ slot values into the response card. For more information, see
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-Attributes are documented under message.
+Attributes are documented under message. Must contain between 1 and 15 messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5532,7 +5532,7 @@ Attributes are documented under message.
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
-[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+[Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -5568,7 +5568,7 @@ slot values into the response card. For more information, see
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5591,7 +5591,7 @@ slot values into the response card. For more information, see
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -5609,7 +5609,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5632,7 +5632,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -5650,7 +5650,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5673,7 +5673,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>
@@ -5691,7 +5691,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The text of the message.
+    <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5714,7 +5714,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
-is assigned to a message, Amazon Lex returns one message from each group in the response.
+is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd>
 
 </dl>

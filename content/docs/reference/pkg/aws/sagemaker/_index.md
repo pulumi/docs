@@ -19,6 +19,11 @@ Explore the resources and functions of the sagemaker module in the AWS package.
     <li><a href="notebookinstancelifecycleconfiguration" title="NotebookInstanceLifecycleConfiguration"><span class="symbol resource"></span>NotebookInstanceLifecycleConfiguration</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getprebuiltecrimage" title="GetPrebuiltEcrImage"><span class="symbol function"></span>GetPrebuiltEcrImage</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -28,7 +33,7 @@ Explore the resources and functions of the sagemaker module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.11.0</dd>
+	<dd>3.12.0</dd>
 </dl>
 
 

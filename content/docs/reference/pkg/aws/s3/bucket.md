@@ -1681,7 +1681,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1692,7 +1692,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1922,7 +1922,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1933,7 +1933,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2163,7 +2163,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2174,7 +2174,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2404,7 +2404,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2415,7 +2415,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2994,7 +2994,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3005,7 +3005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3257,7 +3257,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3279,7 +3279,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3531,7 +3531,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3553,7 +3553,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3805,7 +3805,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3827,7 +3827,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4593,7 +4593,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4699,7 +4699,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4805,7 +4805,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4911,7 +4911,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6285,7 +6285,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6296,7 +6296,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6369,7 +6369,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6380,7 +6380,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6453,7 +6453,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6464,7 +6464,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6537,7 +6537,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6548,7 +6548,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6966,7 +6966,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6996,7 +6996,7 @@ The rule applies only to objects having all the tags in its tagset.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7026,7 +7026,7 @@ The rule applies only to objects having all the tags in its tagset.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7056,7 +7056,7 @@ The rule applies only to objects having all the tags in its tagset.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

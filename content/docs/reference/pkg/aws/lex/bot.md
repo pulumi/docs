@@ -416,7 +416,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botintent">List&lt;Bot<wbr>Intent<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
+    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -449,7 +449,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -482,7 +482,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
+    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -504,7 +504,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bot that you want to create, case sensitive.
+    <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -515,7 +515,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`.
+    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -577,7 +577,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botintent">[]Bot<wbr>Intent</a></span>
     </dt>
-    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
+    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -610,7 +610,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -643,7 +643,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
+    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -665,7 +665,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bot that you want to create, case sensitive.
+    <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -676,7 +676,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`.
+    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,7 +738,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botintent">Bot<wbr>Intent[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
+    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -771,7 +771,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -804,7 +804,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
+    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -826,7 +826,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bot that you want to create, case sensitive.
+    <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -837,7 +837,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`.
+    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,7 +899,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botintent">Sequence[Bot<wbr>Intent<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
+    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -932,7 +932,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -965,7 +965,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
+    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -987,7 +987,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bot that you want to create, case sensitive.
+    <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -998,7 +998,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`.
+    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1641,7 +1641,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1685,7 +1685,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
+    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1696,7 +1696,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botintent">List&lt;Bot<wbr>Intent<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
+    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1729,7 +1729,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bot that you want to create, case sensitive.
+    <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1740,7 +1740,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`.
+    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1882,7 +1882,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1926,7 +1926,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
+    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1937,7 +1937,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botintent">[]Bot<wbr>Intent</a></span>
     </dt>
-    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
+    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1970,7 +1970,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bot that you want to create, case sensitive.
+    <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1981,7 +1981,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`.
+    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2123,7 +2123,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2167,7 +2167,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
+    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2178,7 +2178,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botintent">Bot<wbr>Intent[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
+    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2211,7 +2211,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bot that you want to create, case sensitive.
+    <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2222,7 +2222,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`.
+    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2364,7 +2364,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the bot.
+    <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2408,7 +2408,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`.
+    <dd>{{% md %}}The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2419,7 +2419,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botintent">Sequence[Bot<wbr>Intent<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent.
+    <dd>{{% md %}}A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2452,7 +2452,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the bot that you want to create, case sensitive.
+    <dd>{{% md %}}The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2463,7 +2463,7 @@ included as an argument because the resource will add it automatically when upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`.
+    <dd>{{% md %}}Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3262,7 +3262,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent.
+    <dd>{{% md %}}The name of the intent. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3273,7 +3273,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the intent.
+    <dd>{{% md %}}The version of the intent. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3291,7 +3291,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent.
+    <dd>{{% md %}}The name of the intent. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3302,7 +3302,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the intent.
+    <dd>{{% md %}}The version of the intent. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3320,7 +3320,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent.
+    <dd>{{% md %}}The name of the intent. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3331,7 +3331,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the intent.
+    <dd>{{% md %}}The version of the intent. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3349,7 +3349,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the intent.
+    <dd>{{% md %}}The name of the intent. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3360,7 +3360,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of the intent.
+    <dd>{{% md %}}The version of the intent. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>

@@ -26,14 +26,6 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var model = new Aws.Sagemaker.Model("model", new Aws.Sagemaker.ModelArgs
-        {
-            ExecutionRoleArn = aws_iam_role.Foo.Arn,
-            PrimaryContainer = new Aws.Sagemaker.Inputs.ModelPrimaryContainerArgs
-            {
-                Image = "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
-            },
-        });
         var assumeRole = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
         {
             Statements = 
@@ -58,9 +50,17 @@ class MyStack : Stack
                 },
             },
         }));
-        var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
         {
             AssumeRolePolicy = assumeRole.Apply(assumeRole => assumeRole.Json),
+        });
+        var exampleModel = new Aws.Sagemaker.Model("exampleModel", new Aws.Sagemaker.ModelArgs
+        {
+            ExecutionRoleArn = exampleRole.Arn,
+            PrimaryContainer = new Aws.Sagemaker.Inputs.ModelPrimaryContainerArgs
+            {
+                Image = "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
+            },
         });
     }
 
@@ -81,15 +81,6 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sagemaker.NewModel(ctx, "model", &sagemaker.ModelArgs{
-			ExecutionRoleArn: pulumi.Any(aws_iam_role.Foo.Arn),
-			PrimaryContainer: &sagemaker.ModelPrimaryContainerArgs{
-				Image: pulumi.String("174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
 		assumeRole, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
 			Statements: []iam.GetPolicyDocumentStatement{
 				iam.GetPolicyDocumentStatement{
@@ -110,8 +101,17 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = iam.NewRole(ctx, "role", &iam.RoleArgs{
+		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
 			AssumeRolePolicy: pulumi.String(assumeRole.Json),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sagemaker.NewModel(ctx, "exampleModel", &sagemaker.ModelArgs{
+			ExecutionRoleArn: exampleRole.Arn,
+			PrimaryContainer: &sagemaker.ModelPrimaryContainerArgs{
+				Image: pulumi.String("174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1"),
+			},
 		})
 		if err != nil {
 			return err
@@ -128,11 +128,6 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-model = aws.sagemaker.Model("model",
-    execution_role_arn=aws_iam_role["foo"]["arn"],
-    primary_container=aws.sagemaker.ModelPrimaryContainerArgs(
-        image="174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
-    ))
 assume_role = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
     actions=["sts:AssumeRole"],
     principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
@@ -140,7 +135,12 @@ assume_role = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentS
         identifiers=["sagemaker.amazonaws.com"],
     )],
 )])
-role = aws.iam.Role("role", assume_role_policy=assume_role.json)
+example_role = aws.iam.Role("exampleRole", assume_role_policy=assume_role.json)
+example_model = aws.sagemaker.Model("exampleModel",
+    execution_role_arn=example_role.arn,
+    primary_container=aws.sagemaker.ModelPrimaryContainerArgs(
+        image="174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
+    ))
 ```
 
 {{% /example %}}
@@ -151,12 +151,6 @@ role = aws.iam.Role("role", assume_role_policy=assume_role.json)
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const model = new aws.sagemaker.Model("model", {
-    executionRoleArn: aws_iam_role.foo.arn,
-    primaryContainer: {
-        image: "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
-    },
-});
 const assumeRole = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
@@ -166,7 +160,13 @@ const assumeRole = aws.iam.getPolicyDocument({
         }],
     }],
 });
-const role = new aws.iam.Role("role", {assumeRolePolicy: assumeRole.then(assumeRole => assumeRole.json)});
+const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: assumeRole.then(assumeRole => assumeRole.json)});
+const exampleModel = new aws.sagemaker.Model("exampleModel", {
+    executionRoleArn: exampleRole.arn,
+    primaryContainer: {
+        image: "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
+    },
+});
 ```
 
 {{% /example %}}
@@ -1383,6 +1383,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="imageconfig_csharp">
+<a href="#imageconfig_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
@@ -1442,6 +1453,17 @@ A list of key value pairs.
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imageconfig_go">
+<a href="#imageconfig_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1509,6 +1531,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="imageconfig_nodejs">
+<a href="#imageconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
@@ -1572,6 +1605,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="image_config_python">
+<a href="#image_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
@@ -1590,6 +1634,96 @@ A list of key value pairs.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the S3 location where model artifacts are stored.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="modelcontainerimageconfig">Model<wbr>Container<wbr>Image<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelContainerImageConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelContainerImageConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#ModelContainerImageConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#ModelContainerImageConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.ModelContainerImageConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.ModelContainerImageConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repositoryaccessmode_csharp">
+<a href="#repositoryaccessmode_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repositoryaccessmode_go">
+<a href="#repositoryaccessmode_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repositoryaccessmode_nodejs">
+<a href="#repositoryaccessmode_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_access_mode_python">
+<a href="#repository_access_mode_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>access_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1653,6 +1787,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="imageconfig_csharp">
+<a href="#imageconfig_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span> 
@@ -1712,6 +1857,17 @@ A list of key value pairs.
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imageconfig_go">
+<a href="#imageconfig_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1779,6 +1935,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="imageconfig_nodejs">
+<a href="#imageconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
@@ -1842,6 +2009,17 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="image_config_python">
+<a href="#image_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
@@ -1860,6 +2038,96 @@ A list of key value pairs.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the S3 location where model artifacts are stored.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="modelprimarycontainerimageconfig">Model<wbr>Primary<wbr>Container<wbr>Image<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelPrimaryContainerImageConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelPrimaryContainerImageConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#ModelPrimaryContainerImageConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#ModelPrimaryContainerImageConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.ModelPrimaryContainerImageConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.ModelPrimaryContainerImageConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repositoryaccessmode_csharp">
+<a href="#repositoryaccessmode_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repositoryaccessmode_go">
+<a href="#repositoryaccessmode_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repositoryaccessmode_nodejs">
+<a href="#repositoryaccessmode_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_access_mode_python">
+<a href="#repository_access_mode_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>access_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
 {{% /md %}}</dd>
 
 </dl>

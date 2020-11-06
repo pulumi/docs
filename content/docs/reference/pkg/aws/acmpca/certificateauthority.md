@@ -2252,7 +2252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject.
+    <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2263,7 +2263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located.
+    <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2274,7 +2274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Disambiguating information for the certificate subject.
+    <dd>{{% md %}}Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2285,7 +2285,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third.
+    <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2296,7 +2296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}First name.
+    <dd>{{% md %}}First name. Must be less than or equal to 16 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2307,7 +2307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`.
+    <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2318,7 +2318,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located.
+    <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2329,7 +2329,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated.
+    <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2340,7 +2340,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated.
+    <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2351,7 +2351,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza.
+    <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2362,7 +2362,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}State in which the subject of the certificate is located.
+    <dd>{{% md %}}State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2373,7 +2373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first.
+    <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2384,7 +2384,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject.
+    <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2402,7 +2402,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject.
+    <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2413,7 +2413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located.
+    <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2424,7 +2424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Disambiguating information for the certificate subject.
+    <dd>{{% md %}}Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2435,7 +2435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third.
+    <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2446,7 +2446,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}First name.
+    <dd>{{% md %}}First name. Must be less than or equal to 16 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2457,7 +2457,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`.
+    <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2468,7 +2468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located.
+    <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2479,7 +2479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated.
+    <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2490,7 +2490,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated.
+    <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2501,7 +2501,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza.
+    <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2512,7 +2512,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}State in which the subject of the certificate is located.
+    <dd>{{% md %}}State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2523,7 +2523,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first.
+    <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2534,7 +2534,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject.
+    <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2552,7 +2552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject.
+    <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2563,7 +2563,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located.
+    <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2574,7 +2574,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Disambiguating information for the certificate subject.
+    <dd>{{% md %}}Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2585,7 +2585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third.
+    <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2596,7 +2596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}First name.
+    <dd>{{% md %}}First name. Must be less than or equal to 16 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2607,7 +2607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`.
+    <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2618,7 +2618,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located.
+    <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2629,7 +2629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated.
+    <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2640,7 +2640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated.
+    <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2651,7 +2651,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza.
+    <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2662,7 +2662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}State in which the subject of the certificate is located.
+    <dd>{{% md %}}State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2673,7 +2673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first.
+    <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2684,7 +2684,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject.
+    <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2702,7 +2702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject.
+    <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2713,7 +2713,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located.
+    <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2724,7 +2724,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Disambiguating information for the certificate subject.
+    <dd>{{% md %}}Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2735,7 +2735,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third.
+    <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2746,7 +2746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}First name.
+    <dd>{{% md %}}First name. Must be less than or equal to 16 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2757,7 +2757,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`.
+    <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2768,7 +2768,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located.
+    <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2779,7 +2779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated.
+    <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2790,7 +2790,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated.
+    <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2801,7 +2801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza.
+    <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2812,7 +2812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}State in which the subject of the certificate is located.
+    <dd>{{% md %}}State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2823,7 +2823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first.
+    <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2834,7 +2834,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject.
+    <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2971,7 +2971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public.
+    <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2993,7 +2993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.
+    <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3022,7 +3022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public.
+    <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3044,7 +3044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.
+    <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3073,7 +3073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public.
+    <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3095,7 +3095,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.
+    <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3124,7 +3124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public.
+    <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3146,7 +3146,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket.
+    <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>

@@ -1832,6 +1832,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="codestarconnections_csharp">
+<a href="#codestarconnections_csharp" style="color: inherit; text-decoration: inherit;">Codestarconnections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="cognitoidentity_csharp">
 <a href="#cognitoidentity_csharp" style="color: inherit; text-decoration: inherit;">Cognitoidentity</a>
 </span> 
@@ -3271,6 +3281,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="codepipeline_go">
 <a href="#codepipeline_go" style="color: inherit; text-decoration: inherit;">Codepipeline</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="codestarconnections_go">
+<a href="#codestarconnections_go" style="color: inherit; text-decoration: inherit;">Codestarconnections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -4726,6 +4746,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="codestarconnections_nodejs">
+<a href="#codestarconnections_nodejs" style="color: inherit; text-decoration: inherit;">codestarconnections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="cognitoidentity_nodejs">
 <a href="#cognitoidentity_nodejs" style="color: inherit; text-decoration: inherit;">cognitoidentity</a>
 </span> 
@@ -6165,6 +6195,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="codepipeline_python">
 <a href="#codepipeline_python" style="color: inherit; text-decoration: inherit;">codepipeline</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="codestarconnections_python">
+<a href="#codestarconnections_python" style="color: inherit; text-decoration: inherit;">codestarconnections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

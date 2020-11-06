@@ -473,6 +473,222 @@ func main() {
 }
 ```
 
+## Example Input Transformer Usage - JSON Object
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleEventRule = new aws.cloudwatch.EventRule("exampleEventRule", {});
+// ...
+const exampleEventTarget = new aws.cloudwatch.EventTarget("exampleEventTarget", {
+    arn: aws_lambda_function.example.arn,
+    rule: exampleEventRule.id,
+    inputTransformer: {
+        inputPaths: {
+            instance: `$.detail.instance`,
+            status: `$.detail.status`,
+        },
+        inputTemplate: `{
+  "instance_id": <instance>,
+  "instance_status": <status>
+}
+`,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_event_rule = aws.cloudwatch.EventRule("exampleEventRule")
+# ...
+example_event_target = aws.cloudwatch.EventTarget("exampleEventTarget",
+    arn=aws_lambda_function["example"]["arn"],
+    rule=example_event_rule.id,
+    input_transformer=aws.cloudwatch.EventTargetInputTransformerArgs(
+        input_paths={
+            "instance": "$.detail.instance",
+            "status": "$.detail.status",
+        },
+        input_template="""{
+  "instance_id": <instance>,
+  "instance_status": <status>
+}
+""",
+    ))
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleEventRule = new Aws.CloudWatch.EventRule("exampleEventRule", new Aws.CloudWatch.EventRuleArgs
+        {
+        });
+        // ...
+        var exampleEventTarget = new Aws.CloudWatch.EventTarget("exampleEventTarget", new Aws.CloudWatch.EventTargetArgs
+        {
+            Arn = aws_lambda_function.Example.Arn,
+            Rule = exampleEventRule.Id,
+            InputTransformer = new Aws.CloudWatch.Inputs.EventTargetInputTransformerArgs
+            {
+                InputPaths = 
+                {
+                    { "instance", "$.detail.instance" },
+                    { "status", "$.detail.status" },
+                },
+                InputTemplate = @"{
+  ""instance_id"": <instance>,
+  ""instance_status"": <status>
+}
+",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleEventRule, err := cloudwatch.NewEventRule(ctx, "exampleEventRule", nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudwatch.NewEventTarget(ctx, "exampleEventTarget", &cloudwatch.EventTargetArgs{
+			Arn:  pulumi.Any(aws_lambda_function.Example.Arn),
+			Rule: exampleEventRule.ID(),
+			InputTransformer: &cloudwatch.EventTargetInputTransformerArgs{
+				InputPaths: pulumi.StringMap{
+					"instance": pulumi.String(fmt.Sprintf("%v%v", "$", ".detail.instance")),
+					"status":   pulumi.String(fmt.Sprintf("%v%v", "$", ".detail.status")),
+				},
+				InputTemplate: pulumi.String(fmt.Sprintf("%v%v%v%v", "{\n", "  \"instance_id\": <instance>,\n", "  \"instance_status\": <status>\n", "}\n")),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## Example Input Transformer Usage - Simple String
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleEventRule = new aws.cloudwatch.EventRule("exampleEventRule", {});
+// ...
+const exampleEventTarget = new aws.cloudwatch.EventTarget("exampleEventTarget", {
+    arn: aws_lambda_function.example.arn,
+    rule: exampleEventRule.id,
+    inputTransformer: {
+        inputPaths: {
+            instance: `$.detail.instance`,
+            status: `$.detail.status`,
+        },
+        inputTemplate: "\"<instance> is in state <status>\"",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_event_rule = aws.cloudwatch.EventRule("exampleEventRule")
+# ...
+example_event_target = aws.cloudwatch.EventTarget("exampleEventTarget",
+    arn=aws_lambda_function["example"]["arn"],
+    rule=example_event_rule.id,
+    input_transformer=aws.cloudwatch.EventTargetInputTransformerArgs(
+        input_paths={
+            "instance": "$.detail.instance",
+            "status": "$.detail.status",
+        },
+        input_template="\"<instance> is in state <status>\"",
+    ))
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleEventRule = new Aws.CloudWatch.EventRule("exampleEventRule", new Aws.CloudWatch.EventRuleArgs
+        {
+        });
+        // ...
+        var exampleEventTarget = new Aws.CloudWatch.EventTarget("exampleEventTarget", new Aws.CloudWatch.EventTargetArgs
+        {
+            Arn = aws_lambda_function.Example.Arn,
+            Rule = exampleEventRule.Id,
+            InputTransformer = new Aws.CloudWatch.Inputs.EventTargetInputTransformerArgs
+            {
+                InputPaths = 
+                {
+                    { "instance", "$.detail.instance" },
+                    { "status", "$.detail.status" },
+                },
+                InputTemplate = "\"<instance> is in state <status>\"",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleEventRule, err := cloudwatch.NewEventRule(ctx, "exampleEventRule", nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudwatch.NewEventTarget(ctx, "exampleEventTarget", &cloudwatch.EventTargetArgs{
+			Arn:  pulumi.Any(aws_lambda_function.Example.Arn),
+			Rule: exampleEventRule.ID(),
+			InputTransformer: &cloudwatch.EventTargetInputTransformerArgs{
+				InputPaths: pulumi.StringMap{
+					"instance": pulumi.String(fmt.Sprintf("%v%v", "$", ".detail.instance")),
+					"status":   pulumi.String(fmt.Sprintf("%v%v", "$", ".detail.status")),
+				},
+				InputTemplate: pulumi.String("\"<instance> is in state <status>\""),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% examples %}}
 ## Example Usage
 
@@ -682,7 +898,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.EventTarget">EventTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.EventTarget">EventTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -900,13 +1116,24 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="eventbusname_csharp">
+<a href="#eventbusname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="input_csharp">
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid JSON text passed to the target.
+    <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -918,7 +1145,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-that is used for extracting part of the matched event when passing it to the target.
+that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -929,7 +1156,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
+    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1040,13 +1267,24 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
+        <span id="eventbusname_go">
+<a href="#eventbusname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="input_go">
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid JSON text passed to the target.
+    <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,7 +1296,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-that is used for extracting part of the matched event when passing it to the target.
+that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,7 +1307,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
+    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1180,13 +1418,24 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
+        <span id="eventbusname_nodejs">
+<a href="#eventbusname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="input_nodejs">
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid JSON text passed to the target.
+    <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1198,7 +1447,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-that is used for extracting part of the matched event when passing it to the target.
+that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1209,7 +1458,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
+    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1320,13 +1569,24 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
+        <span id="event_bus_name_python">
+<a href="#event_bus_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>bus_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="input_python">
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Valid JSON text passed to the target.
+    <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1338,7 +1598,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-that is used for extracting part of the matched event when passing it to the target.
+that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1349,7 +1609,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
+    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1506,7 +1766,7 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventTarget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventTarget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1655,13 +1915,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_eventbusname_csharp">
+<a href="#state_eventbusname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_input_csharp">
 <a href="#state_input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid JSON text passed to the target.
+    <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1673,7 +1944,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-that is used for extracting part of the matched event when passing it to the target.
+that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1684,7 +1955,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
+    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1795,13 +2066,24 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_eventbusname_go">
+<a href="#state_eventbusname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_input_go">
 <a href="#state_input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid JSON text passed to the target.
+    <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1813,7 +2095,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-that is used for extracting part of the matched event when passing it to the target.
+that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1824,7 +2106,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
+    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1935,13 +2217,24 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_eventbusname_nodejs">
+<a href="#state_eventbusname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Bus<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_input_nodejs">
 <a href="#state_input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Valid JSON text passed to the target.
+    <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1953,7 +2246,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-that is used for extracting part of the matched event when passing it to the target.
+that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1964,7 +2257,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
+    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2075,13 +2368,24 @@ that is used for extracting part of the matched event when passing it to the tar
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_event_bus_name_python">
+<a href="#state_event_bus_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>bus_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_input_python">
 <a href="#state_input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Valid JSON text passed to the target.
+    <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2093,7 +2397,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-that is used for extracting part of the matched event when passing it to the target.
+that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2104,7 +2408,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
+    <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2458,7 +2762,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
+    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2531,7 +2835,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
+    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2604,7 +2908,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
+    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2677,7 +2981,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
+    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2924,8 +3228,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Structure containing the template body.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2956,8 +3259,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Structure containing the template body.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2988,8 +3290,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Structure containing the template body.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3020,8 +3321,7 @@ that is used for extracting part of the matched event when passing it to the tar
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Structure containing the template body.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

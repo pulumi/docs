@@ -136,7 +136,7 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.EndpointConfiguration">EndpointConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointConfigurationProductionVariantArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.EndpointConfiguration">EndpointConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_capture_config</span><span class="p">:</span> <span class="nx">Optional[EndpointConfigurationDataCaptureConfigArgs]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointConfigurationProductionVariantArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -321,6 +321,17 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
+        <span id="datacaptureconfig_csharp">
+<a href="#datacaptureconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="kmskeyarn_csharp">
 <a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
 </span> 
@@ -368,6 +379,17 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacaptureconfig_go">
+<a href="#datacaptureconfig_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -423,6 +445,17 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
+        <span id="datacaptureconfig_nodejs">
+<a href="#datacaptureconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Capture<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="kmskeyarn_nodejs">
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span> 
@@ -470,6 +503,17 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#endpointconfigurationproductionvariant">Sequence[Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_capture_config_python">
+<a href="#data_capture_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>capture_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -648,7 +692,7 @@ Get an existing EndpointConfiguration resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointConfigurationProductionVariantArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> EndpointConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_capture_config</span><span class="p">:</span> <span class="nx">Optional[EndpointConfigurationDataCaptureConfigArgs]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_variants</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointConfigurationProductionVariantArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> EndpointConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -775,6 +819,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_datacaptureconfig_csharp">
+<a href="#state_datacaptureconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_kmskeyarn_csharp">
 <a href="#state_kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
 </span> 
@@ -833,6 +888,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datacaptureconfig_go">
+<a href="#state_datacaptureconfig_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,6 +965,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_datacaptureconfig_nodejs">
+<a href="#state_datacaptureconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Capture<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_kmskeyarn_nodejs">
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span> 
@@ -961,6 +1038,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_data_capture_config_python">
+<a href="#state_data_capture_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>capture_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_kms_key_arn_python">
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span> 
@@ -1016,6 +1104,540 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationDataCaptureConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointConfigurationDataCaptureConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#EndpointConfigurationDataCaptureConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#EndpointConfigurationDataCaptureConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.EndpointConfigurationDataCaptureConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.EndpointConfigurationDataCaptureConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="captureoptions_csharp">
+<a href="#captureoptions_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">List&lt;Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destinations3uri_csharp">
+<a href="#destinations3uri_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>S3Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for S3 location where the captured data is stored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialsamplingpercentage_csharp">
+<a href="#initialsamplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Sampling<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capturecontenttypeheader_csharp">
+<a href="#capturecontenttypeheader_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Content<wbr>Type<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The content type headers to capture. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablecapture_csharp">
+<a href="#enablecapture_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Capture</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="captureoptions_go">
+<a href="#captureoptions_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">[]Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destinations3uri_go">
+<a href="#destinations3uri_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>S3Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for S3 location where the captured data is stored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialsamplingpercentage_go">
+<a href="#initialsamplingpercentage_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Sampling<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capturecontenttypeheader_go">
+<a href="#capturecontenttypeheader_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Content<wbr>Type<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The content type headers to capture. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablecapture_go">
+<a href="#enablecapture_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Capture</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="captureoptions_nodejs">
+<a href="#captureoptions_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destinations3uri_nodejs">
+<a href="#destinations3uri_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>S3Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for S3 location where the captured data is stored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialsamplingpercentage_nodejs">
+<a href="#initialsamplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Sampling<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capturecontenttypeheader_nodejs">
+<a href="#capturecontenttypeheader_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Content<wbr>Type<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The content type headers to capture. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablecapture_nodejs">
+<a href="#enablecapture_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Capture</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capture_options_python">
+<a href="#capture_options_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Sequence[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_s3_uri_python">
+<a href="#destination_s3_uri_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>s3_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for S3 location where the captured data is stored.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initial_sampling_percentage_python">
+<a href="#initial_sampling_percentage_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>sampling_<wbr>percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Portion of data to capture. Should be between 0 and 100.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capture_content_type_header_python">
+<a href="#capture_content_type_header_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>content_<wbr>type_<wbr>header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The content type headers to capture. Fields are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_capture_python">
+<a href="#enable_capture_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>capture</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag to enable data capture. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="csvcontenttypes_csharp">
+<a href="#csvcontenttypes_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Content<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The CSV content type headers to capture.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jsoncontenttypes_csharp">
+<a href="#jsoncontenttypes_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Content<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON content type headers to capture.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="csvcontenttypes_go">
+<a href="#csvcontenttypes_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Content<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The CSV content type headers to capture.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jsoncontenttypes_go">
+<a href="#jsoncontenttypes_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Content<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON content type headers to capture.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="csvcontenttypes_nodejs">
+<a href="#csvcontenttypes_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Content<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The CSV content type headers to capture.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jsoncontenttypes_nodejs">
+<a href="#jsoncontenttypes_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Content<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON content type headers to capture.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="csv_content_types_python">
+<a href="#csv_content_types_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>content_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The CSV content type headers to capture.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="json_content_types_python">
+<a href="#json_content_types_python" style="color: inherit; text-decoration: inherit;">json_<wbr>content_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON content type headers to capture.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="endpointconfigurationdatacaptureconfigcaptureoption">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationDataCaptureConfigCaptureOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointConfigurationDataCaptureConfigCaptureOption">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#EndpointConfigurationDataCaptureConfigCaptureOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#EndpointConfigurationDataCaptureConfigCaptureOptionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.EndpointConfigurationDataCaptureConfigCaptureOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.EndpointConfigurationDataCaptureConfigCaptureOption.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capturemode_csharp">
+<a href="#capturemode_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capturemode_go">
+<a href="#capturemode_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capturemode_nodejs">
+<a href="#capturemode_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capture_mode_python">
+<a href="#capture_mode_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the data to be captured. Should be one of `Input` or `Output`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</h4>

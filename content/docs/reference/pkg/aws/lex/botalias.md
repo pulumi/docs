@@ -323,7 +323,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the alias.
+    <dd>{{% md %}}A description of the alias. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -334,7 +334,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the alias. The name is not case sensitive.
+    <dd>{{% md %}}The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -385,7 +385,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the alias.
+    <dd>{{% md %}}A description of the alias. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,7 +396,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the alias. The name is not case sensitive.
+    <dd>{{% md %}}The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -447,7 +447,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the alias.
+    <dd>{{% md %}}A description of the alias. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -458,7 +458,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the alias. The name is not case sensitive.
+    <dd>{{% md %}}The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -509,7 +509,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the alias.
+    <dd>{{% md %}}A description of the alias. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -520,7 +520,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the alias. The name is not case sensitive.
+    <dd>{{% md %}}The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -986,7 +986,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the alias.
+    <dd>{{% md %}}A description of the alias. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,7 +1008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the alias. The name is not case sensitive.
+    <dd>{{% md %}}The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1092,7 +1092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the alias.
+    <dd>{{% md %}}A description of the alias. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1114,7 +1114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the alias. The name is not case sensitive.
+    <dd>{{% md %}}The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1198,7 +1198,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of the alias.
+    <dd>{{% md %}}A description of the alias. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1220,7 +1220,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the alias. The name is not case sensitive.
+    <dd>{{% md %}}The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1304,7 +1304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of the alias.
+    <dd>{{% md %}}A description of the alias. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1326,7 +1326,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the alias. The name is not case sensitive.
+    <dd>{{% md %}}The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1370,7 +1370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1399,7 +1399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1428,7 +1428,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1457,7 +1457,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered. Must be less than or equal to 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1537,7 +1537,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket. This can only be specified when `destination` is set to `S3`.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket. This can only be specified when `destination` is set to `S3`. Must be between 20 and 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1588,7 +1588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered. Must be less than or equal to 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket. This can only be specified when `destination` is set to `S3`.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket. This can only be specified when `destination` is set to `S3`. Must be between 20 and 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1650,7 +1650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered. Must be less than or equal to 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1661,7 +1661,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket. This can only be specified when `destination` is set to `S3`.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket. This can only be specified when `destination` is set to `S3`. Must be between 20 and 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1712,7 +1712,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered. Must be less than or equal to 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1723,7 +1723,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket. This can only be specified when `destination` is set to `S3`.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket. This can only be specified when `destination` is set to `S3`. Must be between 20 and 2048 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
