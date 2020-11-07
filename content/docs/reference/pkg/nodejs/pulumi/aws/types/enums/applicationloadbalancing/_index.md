@@ -3,7 +3,7 @@ title: "Module types/enums/applicationloadbalancing"
 title_tag: "Module types/enums/applicationloadbalancing | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/applicationloadbalancing"
 meta_desc: "Explore members of the enums/applicationloadbalancing module in the @pulumi/aws package."
-git_sha: "ba950603a03d9aef54bd22a8c5fcb8e8846f8832"
+git_sha: "9558abc0d823a6881528ac78b8908fb1ea24cffc"
 block_external_search_index: true
 ---
 
@@ -28,14 +28,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="IpAddressType" data-link-title="IpAddressType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/types/enums/applicationloadbalancing/index.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/9558abc0d823a6881528ac78b8908fb1ea24cffc/sdk/nodejs/types/enums/applicationloadbalancing/index.ts#L10">
         type <strong>IpAddressType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> IpAddressType = <span class='s2'>"ipv4"</span> | <span class='s2'>"dualstack"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="LoadBalancerType" data-link-title="LoadBalancerType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ba950603a03d9aef54bd22a8c5fcb8e8846f8832/sdk/nodejs/types/enums/applicationloadbalancing/index.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/9558abc0d823a6881528ac78b8908fb1ea24cffc/sdk/nodejs/types/enums/applicationloadbalancing/index.ts#L17">
         type <strong>LoadBalancerType</strong>
     </a>
 </h3>

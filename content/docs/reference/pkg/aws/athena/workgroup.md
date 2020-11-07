@@ -34,7 +34,7 @@ class MyStack : Stack
                 PublishCloudwatchMetricsEnabled = true,
                 ResultConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationArgs
                 {
-                    OutputLocation = "s3://{aws_s3_bucket.example.bucket}/output/",
+                    OutputLocation = $"s3://{aws_s3_bucket.Example.Bucket}/output/",
                     EncryptionConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs
                     {
                         EncryptionOption = "SSE_KMS",
@@ -55,6 +55,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -66,7 +68,7 @@ func main() {
 				EnforceWorkgroupConfiguration:   pulumi.Bool(true),
 				PublishCloudwatchMetricsEnabled: pulumi.Bool(true),
 				ResultConfiguration: &athena.WorkgroupConfigurationResultConfigurationArgs{
-					OutputLocation: pulumi.String("s3://{aws_s3_bucket.example.bucket}/output/"),
+					OutputLocation: pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Example.Bucket, "/output/")),
 					EncryptionConfiguration: &athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs{
 						EncryptionOption: pulumi.String("SSE_KMS"),
 						KmsKeyArn:        pulumi.Any(aws_kms_key.Example.Arn),
@@ -93,7 +95,7 @@ example = aws.athena.Workgroup("example", configuration=aws.athena.WorkgroupConf
     enforce_workgroup_configuration=True,
     publish_cloudwatch_metrics_enabled=True,
     result_configuration=aws.athena.WorkgroupConfigurationResultConfigurationArgs(
-        output_location="s3://{aws_s3_bucket.example.bucket}/output/",
+        output_location=f"s3://{aws_s3_bucket['example']['bucket']}/output/",
         encryption_configuration={
             "encryptionOption": "SSE_KMS",
             "kms_key_arn": aws_kms_key["example"]["arn"],
@@ -114,7 +116,7 @@ const example = new aws.athena.Workgroup("example", {configuration: {
     enforceWorkgroupConfiguration: true,
     publishCloudwatchMetricsEnabled: true,
     resultConfiguration: {
-        outputLocation: "s3://{aws_s3_bucket.example.bucket}/output/",
+        outputLocation: `s3://${aws_s3_bucket.example.bucket}/output/`,
         encryptionConfiguration: {
             encryptionOption: "SSE_KMS",
             kmsKeyArn: aws_kms_key.example.arn,
