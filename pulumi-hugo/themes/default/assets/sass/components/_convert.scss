@@ -211,7 +211,7 @@ pulumi-convert {
                 }
 
                 .alert {
-                    @apply hidden absolute right-0 left-0 z-10 bg-red-100 border-red-500 text-sm rounded-t border-2 border-red-800 text-red-800 py-2 px-4;
+                    @apply hidden absolute right-0 left-0 z-10 text-sm rounded-t border-2 py-2 px-4 max-h-25 overflow-y-scroll;
                     bottom: 100%;
 
                     p {
@@ -229,8 +229,20 @@ pulumi-convert {
                         @extend .fa-times;
                     }
 
-                    .alert {
-                        @apply block;
+                    .alert-error {
+                        @apply block bg-red-100 border-red-800 text-red-800 ;
+                    }
+                }
+
+                &.warn {
+                    .icon {
+                        @apply text-yellow-300;
+                        @extend .fas;
+                        @extend .fa-exclamation-triangle;
+                    }
+
+                    .alert-warn {
+                        @apply block bg-yellow-100 border-yellow-800 text-yellow-800 ;
                     }
                 }
             }
@@ -261,6 +273,14 @@ pulumi-convert {
                     .CodeMirror-scroll {
                         @apply opacity-0;
                     }
+                }
+            }
+
+            .diagnostics {
+                @apply mt-4 p-2 rounded bg-gray-100;
+
+                .details {
+                    @apply font-mono py-0 text-xs whitespace-pre overflow-scroll;
                 }
             }
         }
