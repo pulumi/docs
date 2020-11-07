@@ -29,6 +29,7 @@ interface ConvertServiceResult {
 interface OutputEditorResult {
     filename: string;
     code: string;
+    diagnostics: string;
     status: {
         success: boolean;
         message: string;
@@ -344,6 +345,7 @@ export class Convert {
                 this.setOutputResult({
                     filename: "",
                     code: "",
+                    diagnostics: result.diagnostics || "",
                     status: {
                         success: false,
                         message: result.error,
@@ -361,15 +363,24 @@ export class Convert {
                     filename = this.supportedLanguages.find(sl => sl.key === language.key).filename;
                 }
 
+                // Additionally, the kube2pulumi endpoint returns "no diagnostics" when
+                // there are no diagnostics.
+                const diagnostics = result.diagnostics?.replace(/^no diagnostics$/, "") || ""
+
                 if (filename && code) {
                     this.setOutputResult({
                         filename,
                         code,
+                        diagnostics,
                         status: {
                             success: true,
                             message: filename,
                         }
                     });
+                }
+
+                if (diagnostics) {
+                    this.outputResult.diagnostics = diagnostics;
                 }
             }
         }
@@ -389,7 +400,11 @@ export class Convert {
         };
 
         if (this.outputResult) {
-            classes.push(this.outputResult.status.success ? "success" : "error");
+            if (this.outputResult.diagnostics) {
+                classes.push("warn");
+            } else {
+                classes.push(this.outputResult.status.success ? "success" : "error");
+            }
         }
 
         return classes.join(" ");
@@ -460,16 +475,28 @@ export class Convert {
                 return <div class={ this.statusBarClasses }>
                     <span class="icon"></span>
                     <span class="message">{ this.outputResult?.status?.message }</span>
-                    <div class="alert">
+                    <div class="alert alert-error">
                         <p>
-                            <strong>Sorry, we couldn't convert your code.</strong>
+                            <strong>Sorry, we were unable to convert your code.</strong>
                         </p>
                         <p>
                             There could be a problem with the code you submitted, or it might use a
                             feature { this.conversionTool.name } doesn't yet support. For help converting
-                            a { this.sourceLanguageName } project to Pulumi,
+                            this or another { this.sourceLanguageName } project to Pulumi,
                             please <a href="https://pulumi.com/about#contact">contact us</a> or join us in
                             our <a href="https://slack.pulumi.com/">Community Slack</a>. We're here to help!
+                        </p>
+                    </div>
+                    <div class="alert alert-warn">
+                        <p>
+                            <strong>Sorry, we were unable to convert your code completely.</strong>
+                        </p>
+                        <p>
+                            The code you submitted was valid, but { this.conversionTool.name } was unable to
+                            convert it completely, so a partial conversion has been provided for you. See below for details.
+                            For help converting this or another { this.sourceLanguageName } project to Pulumi,
+                            please <a href="https://pulumi.com/about#contact">contact us</a>, or join us in
+                            the <a href="https://slack.pulumi.com/">Community Slack</a>. We're here to help!
                         </p>
                     </div>
                 </div>;
@@ -477,6 +504,22 @@ export class Convert {
                 return <div class="status-bar">
                     <span class="message">&nbsp;</span>
                 </div>;
+        }
+    }
+
+    private renderDiagnostics() {
+        if (this.outputResult?.diagnostics) {
+            console.log("Conversion completed with errors. Diagnostics:")
+            console.log(this.outputResult?.diagnostics);
+
+            return <div class="diagnostics">
+                <p>
+                    <strong>Diagnostics:</strong>
+                </p>
+                <p class="details">
+                    { this.outputResult.diagnostics }
+                </p>
+            </div>;
         }
     }
 
@@ -557,6 +600,7 @@ export class Convert {
                         <textarea id="editor-output"></textarea>
                         { this.renderStatusBar("output") }
                     </div>
+                    { this.renderDiagnostics() }
                 </div>
             </div>
         </div>;
