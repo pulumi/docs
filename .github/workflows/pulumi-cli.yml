@@ -41,7 +41,7 @@ jobs:
         with:
           repository: pulumi/pulumi
           path: pulumi
-          ref: ${{ github.event.client_payload.ref }}
+          ref: v${{ github.event.client_payload.ref }}
       - name: Install pulumictl
         uses: jaxxstorm/action-install-gh-release@d62853bc9e466834c74cefb34fad78535582e21a
         with:
