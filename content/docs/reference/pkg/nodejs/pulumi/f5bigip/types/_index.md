@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/f5bigip | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/f5bigip package."
-git_sha: "56393db822a2b0f207469fbcbaf3ddb6a9ea1f57"
+git_sha: "45e612f0721dded3ade4f83ca377a157bf4a052b"
 block_external_search_index: true
 ---
 
