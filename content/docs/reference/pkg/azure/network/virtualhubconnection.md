@@ -188,7 +188,7 @@ const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualHubConnection">VirtualHubConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hub_to_vitual_network_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vitual_network_to_hub_gateways_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualHubConnection">VirtualHubConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hub_to_vitual_network_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[VirtualHubConnectionRoutingArgs]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vitual_network_to_hub_gateways_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -414,6 +414,17 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routing_csharp">
+<a href="#routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vitualnetworktohubgatewaystrafficallowed_csharp">
@@ -483,6 +494,17 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routing_go">
+<a href="#routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -556,6 +578,17 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routing_nodejs">
+<a href="#routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vitualnetworktohubgatewaystrafficallowed_nodejs">
@@ -625,6 +658,17 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routing_python">
+<a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -736,7 +780,7 @@ Get an existing VirtualHubConnection resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hub_to_vitual_network_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vitual_network_to_hub_gateways_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> VirtualHubConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hub_to_vitual_network_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[VirtualHubConnectionRoutingArgs]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vitual_network_to_hub_gateways_traffic_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> VirtualHubConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -895,6 +939,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routing_csharp">
+<a href="#state_routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_virtualhubid_csharp">
 <a href="#state_virtualhubid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
 </span> 
@@ -962,6 +1017,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_routing_go">
+<a href="#state_routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1037,6 +1103,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routing_nodejs">
+<a href="#state_routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_virtualhubid_nodejs">
 <a href="#state_virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
 </span> 
@@ -1108,6 +1185,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_routing_python">
+<a href="#state_routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `routing` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_virtual_hub_id_python">
 <a href="#state_virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
 </span> 
@@ -1131,6 +1219,502 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualHubConnectionRouting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualHubConnectionRouting">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualHubConnectionRoutingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualHubConnectionRoutingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualHubConnectionRoutingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualHubConnectionRouting.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="associatedroutetableid_csharp">
+<a href="#associatedroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetable_csharp">
+<a href="#propagatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `propagated_route_table` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticvnetroutes_csharp">
+<a href="#staticvnetroutes_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Vnet<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">List&lt;Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `static_vnet_route` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="associatedroutetableid_go">
+<a href="#associatedroutetableid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetable_go">
+<a href="#propagatedroutetable_go" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}A `propagated_route_table` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticvnetroutes_go">
+<a href="#staticvnetroutes_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Vnet<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">[]Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}A `static_vnet_route` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="associatedroutetableid_nodejs">
+<a href="#associatedroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetable_nodejs">
+<a href="#propagatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}A `propagated_route_table` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticvnetroutes_nodejs">
+<a href="#staticvnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Vnet<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `static_vnet_route` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="associated_route_table_id_python">
+<a href="#associated_route_table_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagated_route_table_python">
+<a href="#propagated_route_table_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `propagated_route_table` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="static_vnet_routes_python">
+<a href="#static_vnet_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>vnet_<wbr>routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Sequence[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `static_vnet_route` block as defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualHubConnectionRoutingPropagatedRouteTable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualHubConnectionRoutingPropagatedRouteTable">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualHubConnectionRoutingPropagatedRouteTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualHubConnectionRoutingPropagatedRouteTableOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualHubConnectionRoutingPropagatedRouteTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualHubConnectionRoutingPropagatedRouteTable.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels to assign to this route table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routetableids_csharp">
+<a href="#routetableids_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels to assign to this route table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routetableids_go">
+<a href="#routetableids_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels to assign to this route table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routetableids_nodejs">
+<a href="#routetableids_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels to assign to this route table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="route_table_ids_python">
+<a href="#route_table_ids_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualhubconnectionroutingstaticvnetroute">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualHubConnectionRoutingStaticVnetRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualHubConnectionRoutingStaticVnetRoute">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualHubConnectionRoutingStaticVnetRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualHubConnectionRoutingStaticVnetRouteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualHubConnectionRoutingStaticVnetRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualHubConnectionRoutingStaticVnetRoute.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_csharp">
+<a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name which should be used for this Static Route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nexthopipaddress_csharp">
+<a href="#nexthopipaddress_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address which should be used for the Next Hop.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_go">
+<a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name which should be used for this Static Route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nexthopipaddress_go">
+<a href="#nexthopipaddress_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address which should be used for the Next Hop.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_nodejs">
+<a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name which should be used for this Static Route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nexthopipaddress_nodejs">
+<a href="#nexthopipaddress_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address which should be used for the Next Hop.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_prefixes_python">
+<a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name which should be used for this Static Route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="next_hop_ip_address_python">
+<a href="#next_hop_ip_address_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address which should be used for the Next Hop.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

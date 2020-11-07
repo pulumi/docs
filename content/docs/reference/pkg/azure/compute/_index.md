@@ -41,6 +41,7 @@ Explore the resources and functions of the compute module in the Azure package.
     <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="symbol function"></span>GetDedicatedHostGroup</a></li>
     <li><a href="getdiskencryptionset" title="GetDiskEncryptionSet"><span class="symbol function"></span>GetDiskEncryptionSet</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
+    <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
     <li><a href="getmanageddisk" title="GetManagedDisk"><span class="symbol function"></span>GetManagedDisk</a></li>
     <li><a href="getplatformimage" title="GetPlatformImage"><span class="symbol function"></span>GetPlatformImage</a></li>
     <li><a href="getsharedimage" title="GetSharedImage"><span class="symbol function"></span>GetSharedImage</a></li>
@@ -61,7 +62,7 @@ Explore the resources and functions of the compute module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.29.0</dd>
+	<dd>3.30.0</dd>
 </dl>
 
 

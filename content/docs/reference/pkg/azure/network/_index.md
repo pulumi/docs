@@ -23,6 +23,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="firewallnatrulecollection" title="FirewallNatRuleCollection"><span class="symbol resource"></span>FirewallNatRuleCollection</a></li>
     <li><a href="firewallnetworkrulecollection" title="FirewallNetworkRuleCollection"><span class="symbol resource"></span>FirewallNetworkRuleCollection</a></li>
     <li><a href="firewallpolicy" title="FirewallPolicy"><span class="symbol resource"></span>FirewallPolicy</a></li>
+    <li><a href="firewallpolicyrulecollectiongroup" title="FirewallPolicyRuleCollectionGroup"><span class="symbol resource"></span>FirewallPolicyRuleCollectionGroup</a></li>
     <li><a href="ipgroup" title="IPGroup"><span class="symbol resource"></span>IPGroup</a></li>
     <li><a href="localnetworkgateway" title="LocalNetworkGateway"><span class="symbol resource"></span>LocalNetworkGateway</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
@@ -55,6 +56,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="trafficmanagerprofile" title="TrafficManagerProfile"><span class="symbol resource"></span>TrafficManagerProfile</a></li>
     <li><a href="virtualhub" title="VirtualHub"><span class="symbol resource"></span>VirtualHub</a></li>
     <li><a href="virtualhubconnection" title="VirtualHubConnection"><span class="symbol resource"></span>VirtualHubConnection</a></li>
+    <li><a href="virtualhubroutetable" title="VirtualHubRouteTable"><span class="symbol resource"></span>VirtualHubRouteTable</a></li>
     <li><a href="virtualnetwork" title="VirtualNetwork"><span class="symbol resource"></span>VirtualNetwork</a></li>
     <li><a href="virtualnetworkgateway" title="VirtualNetworkGateway"><span class="symbol resource"></span>VirtualNetworkGateway</a></li>
     <li><a href="virtualnetworkgatewayconnection" title="VirtualNetworkGatewayConnection"><span class="symbol resource"></span>VirtualNetworkGatewayConnection</a></li>
@@ -100,7 +102,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.29.0</dd>
+	<dd>3.30.0</dd>
 </dl>
 
 

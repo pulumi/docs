@@ -1542,7 +1542,7 @@ The following state arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
@@ -1593,7 +1593,7 @@ The following state arguments are supported:
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
@@ -1644,7 +1644,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
@@ -1695,7 +1695,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
