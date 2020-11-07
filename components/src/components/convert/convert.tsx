@@ -363,11 +363,15 @@ export class Convert {
                     filename = this.supportedLanguages.find(sl => sl.key === language.key).filename;
                 }
 
+                // Additionally, the kube2pulumi endpoint returns "no diagnostics" when
+                // there are no diagnostics.
+                const diagnostics = result.diagnostics?.replace(/^no diagnostics$/, "") || ""
+
                 if (filename && code) {
                     this.setOutputResult({
                         filename,
                         code,
-                        diagnostics: result.diagnostics || "",
+                        diagnostics,
                         status: {
                             success: true,
                             message: filename,
@@ -375,8 +379,8 @@ export class Convert {
                     });
                 }
 
-                if (result.diagnostics) {
-                    this.outputResult.diagnostics = result.diagnostics;
+                if (diagnostics) {
+                    this.outputResult.diagnostics = diagnostics;
                 }
             }
         }
