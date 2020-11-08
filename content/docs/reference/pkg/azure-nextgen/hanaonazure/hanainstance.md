@@ -107,18 +107,18 @@ import pulumi_azure_nextgen as azure_nextgen
 hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance",
     hana_instance_name="myHanaInstance",
     location="westus",
-    network_profile={
-        "networkInterfaces": [{
-            "ipAddress": "100.100.100.100",
-        }],
-    },
-    os_profile={
-        "computerName": "myComputerName",
-        "sshPublicKey": "AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
-    },
+    network_profile=azure_nextgen.hanaonazure.v20171103preview.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.hanaonazure.v20171103preview.IpAddressArgs(
+            ip_address="100.100.100.100",
+        )],
+    ),
+    os_profile=azure_nextgen.hanaonazure.v20171103preview.OSProfileArgs(
+        computer_name="myComputerName",
+        ssh_public_key="AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
+    ),
     partner_node_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2",
     resource_group_name="myResourceGroup",
-    storage_profile={})
+    storage_profile=azure_nextgen.hanaonazure.v20171103preview.StorageProfileArgs())
 
 ```
 
@@ -163,7 +163,7 @@ const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hana_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[OSProfile]]</span> = None<span class="p">, </span><span class="nx">partner_node_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[StorageProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hana_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[OSProfileArgs]</span> = None<span class="p">, </span><span class="nx">partner_node_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[StorageProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -602,7 +602,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Dict[Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network settings for the HANA instance.{{% /md %}}</dd>
 
@@ -612,7 +612,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Dict[OSProfile]</a></span>
+        <span class="property-type"><a href="#osprofile">OSProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the HANA instance.{{% /md %}}</dd>
 
@@ -632,7 +632,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd>
 
@@ -1051,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1071,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Dict[Hardware<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
 
@@ -1714,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List[Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd>
 
@@ -1833,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd>
 
@@ -2230,7 +2230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">List[Disk]</a></span>
+        <span class="property-type"><a href="#disk">Sequence[Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd>
 
@@ -2349,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">List[Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskresponse">Sequence[Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd>
 

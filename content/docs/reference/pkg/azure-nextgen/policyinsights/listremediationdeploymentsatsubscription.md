@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationdeploymentresponse">List[Remediation<wbr>Deployment<wbr>Response]</a></span>
+        <span class="property-type"><a href="#remediationdeploymentresponse">Sequence[Remediation<wbr>Deployment<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of deployments for the remediation.{{% /md %}}</dd>
 
@@ -472,7 +472,7 @@ The following output properties are available:
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typederrorinforesponse">List[Typed<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#typederrorinforesponse">Sequence[Typed<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional scenario specific error details.{{% /md %}}</dd>
 
@@ -492,7 +492,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordefinitionresponse">List[Error<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Sequence[Error<wbr>Definition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Internal error details.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordefinitionresponse">Dict[Error<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Error<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error encountered while remediated the resource.{{% /md %}}</dd>
 
@@ -807,8 +807,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="remediatedresourceid_python">
-<a href="#remediatedresourceid_python" style="color: inherit; text-decoration: inherit;">remediated<wbr>Resource<wbr>Id</a>
+        <span id="remediated_resource_id_python">
+<a href="#remediated_resource_id_python" style="color: inherit; text-decoration: inherit;">remediated_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -940,7 +940,7 @@ The following output properties are available:
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The scenario specific error details.{{% /md %}}</dd>
 

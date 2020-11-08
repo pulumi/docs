@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertcriteriaresponse">Dict[Health<wbr>Alert<wbr>Criteria<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthalertcriteriaresponse">Health<wbr>Alert<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertactionresponse">List[Health<wbr>Alert<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthalertactionresponse">Sequence[Health<wbr>Alert<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -700,8 +700,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -710,11 +710,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookproperties_python">
-<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
+        <span id="web_hook_properties_python">
+<a href="#web_hook_properties_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
 
@@ -793,7 +793,7 @@ The following output properties are available:
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
 
@@ -898,8 +898,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthstatename_python">
-<a href="#healthstatename_python" style="color: inherit; text-decoration: inherit;">health<wbr>State<wbr>Name</a>
+        <span id="health_state_name_python">
+<a href="#health_state_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1017,8 +1017,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthmonitorname_python">
-<a href="#healthmonitorname_python" style="color: inherit; text-decoration: inherit;">health<wbr>Monitor<wbr>Name</a>
+        <span id="health_monitor_name_python">
+<a href="#health_monitor_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>monitor_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1027,11 +1027,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstates_python">
-<a href="#healthstates_python" style="color: inherit; text-decoration: inherit;">health<wbr>States</a>
+        <span id="health_states_python">
+<a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">List[Health<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthstateresponse">Sequence[Health<wbr>State<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
 

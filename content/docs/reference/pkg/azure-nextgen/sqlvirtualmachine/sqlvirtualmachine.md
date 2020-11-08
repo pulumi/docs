@@ -95,11 +95,11 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
     sql_virtual_machine_group_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
     sql_virtual_machine_name="testvm",
     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
-    wsfc_domain_credentials={
-        "clusterBootstrapAccountPassword": "<Password>",
-        "clusterOperatorAccountPassword": "<Password>",
-        "sqlServiceAccountPassword": "<Password>",
-    })
+    wsfc_domain_credentials=azure_nextgen.sqlvirtualmachine.v20170301preview.WsfcDomainCredentialsArgs(
+        cluster_bootstrap_account_password="<Password>",
+        cluster_operator_account_password="<Password>",
+        sql_service_account_password="<Password>",
+    ))
 
 ```
 
@@ -178,12 +178,12 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
-    storage_configuration_settings={
-        "diskConfigurationType": "EXTEND",
-        "sqlDataSettings": {
-            "luns": [2],
-        },
-    },
+    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.StorageConfigurationSettingsArgs(
+        disk_configuration_type="EXTEND",
+        sql_data_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+            luns=[2],
+        ),
+    ),
     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
 
 ```
@@ -277,21 +277,21 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
-    storage_configuration_settings={
-        "diskConfigurationType": "NEW",
-        "sqlDataSettings": {
-            "defaultFilePath": "F:\\folderpath\\",
-            "luns": [0],
-        },
-        "sqlLogSettings": {
-            "defaultFilePath": "G:\\folderpath\\",
-            "luns": [1],
-        },
-        "sqlTempDbSettings": {
-            "defaultFilePath": "D:\\TEMP",
-        },
-        "storageWorkloadType": "OLTP",
-    },
+    storage_configuration_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.StorageConfigurationSettingsArgs(
+        disk_configuration_type="NEW",
+        sql_data_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+            default_file_path="F:\\folderpath\\",
+            luns=[0],
+        ),
+        sql_log_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+            default_file_path="G:\\folderpath\\",
+            luns=[1],
+        ),
+        sql_temp_db_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SQLStorageSettingsArgs(
+            default_file_path="D:\\TEMP",
+        ),
+        storage_workload_type="OLTP",
+    ),
     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
 
 ```
@@ -489,50 +489,50 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
-    auto_backup_settings={
-        "backupScheduleType": "Manual",
-        "backupSystemDbs": True,
-        "enable": True,
-        "enableEncryption": True,
-        "fullBackupFrequency": "Daily",
-        "fullBackupStartTime": 6,
-        "fullBackupWindowHours": 11,
-        "logBackupFrequency": 10,
-        "password": "<Password>",
-        "retentionPeriod": 17,
-        "storageAccessKey": "<primary storage access key>",
-        "storageAccountUrl": "https://teststorage.blob.core.windows.net/",
-    },
-    auto_patching_settings={
-        "dayOfWeek": "Sunday",
-        "enable": True,
-        "maintenanceWindowDuration": 60,
-        "maintenanceWindowStartingHour": 2,
-    },
-    key_vault_credential_settings={
-        "enable": False,
-    },
+    auto_backup_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.AutoBackupSettingsArgs(
+        backup_schedule_type="Manual",
+        backup_system_dbs=True,
+        enable=True,
+        enable_encryption=True,
+        full_backup_frequency="Daily",
+        full_backup_start_time=6,
+        full_backup_window_hours=11,
+        log_backup_frequency=10,
+        password="<Password>",
+        retention_period=17,
+        storage_access_key="<primary storage access key>",
+        storage_account_url="https://teststorage.blob.core.windows.net/",
+    ),
+    auto_patching_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.AutoPatchingSettingsArgs(
+        day_of_week="Sunday",
+        enable=True,
+        maintenance_window_duration=60,
+        maintenance_window_starting_hour=2,
+    ),
+    key_vault_credential_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.KeyVaultCredentialSettingsArgs(
+        enable=False,
+    ),
     location="northeurope",
     resource_group_name="testrg",
-    server_configurations_management_settings={
-        "additionalFeaturesServerConfigurations": {
-            "isRServicesEnabled": False,
-        },
-        "sqlConnectivityUpdateSettings": {
-            "connectivityType": "PRIVATE",
-            "port": 1433,
-            "sqlAuthUpdatePassword": "<password>",
-            "sqlAuthUpdateUserName": "sqllogin",
-        },
-        "sqlStorageUpdateSettings": {
-            "diskConfigurationType": "NEW",
-            "diskCount": 1,
-            "startingDeviceId": 2,
-        },
-        "sqlWorkloadTypeUpdateSettings": {
-            "sqlWorkloadType": "OLTP",
-        },
-    },
+    server_configurations_management_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.ServerConfigurationsManagementSettingsArgs(
+        additional_features_server_configurations=azure_nextgen.sqlvirtualmachine.v20170301preview.AdditionalFeaturesServerConfigurationsArgs(
+            is_r_services_enabled=False,
+        ),
+        sql_connectivity_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlConnectivityUpdateSettingsArgs(
+            connectivity_type="PRIVATE",
+            port=1433,
+            sql_auth_update_password="<password>",
+            sql_auth_update_user_name="sqllogin",
+        ),
+        sql_storage_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlStorageUpdateSettingsArgs(
+            disk_configuration_type="NEW",
+            disk_count=1,
+            starting_device_id=2,
+        ),
+        sql_workload_type_update_settings=azure_nextgen.sqlvirtualmachine.v20170301preview.SqlWorkloadTypeUpdateSettingsArgs(
+            sql_workload_type="OLTP",
+        ),
+    ),
     sql_image_sku="Enterprise",
     sql_management="Full",
     sql_server_license_type="PAYG",
@@ -704,7 +704,7 @@ const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.S
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[AutoBackupSettings]]</span> = None<span class="p">, </span><span class="nx">auto_patching_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[AutoPatchingSettings]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceIdentity]]</span> = None<span class="p">, </span><span class="nx">key_vault_credential_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[KeyVaultCredentialSettings]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_configurations_management_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerConfigurationsManagementSettings]]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_management</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_server_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[StorageConfigurationSettings]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_credentials</span><span class="p">:</span> <span class="nx">Optional[Dict[WsfcDomainCredentials]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup_settings</span><span class="p">:</span> <span class="nx">Optional[AutoBackupSettingsArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching_settings</span><span class="p">:</span> <span class="nx">Optional[AutoPatchingSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential_settings</span><span class="p">:</span> <span class="nx">Optional[KeyVaultCredentialSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_configurations_management_settings</span><span class="p">:</span> <span class="nx">Optional[ServerConfigurationsManagementSettingsArgs]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_management</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_server_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration_settings</span><span class="p">:</span> <span class="nx">Optional[StorageConfigurationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_credentials</span><span class="p">:</span> <span class="nx">Optional[WsfcDomainCredentialsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1443,7 +1443,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#auto_backup_settings_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autobackupsettings">Dict[Auto<wbr>Backup<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#autobackupsettings">Auto<wbr>Backup<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd>
 
@@ -1453,7 +1453,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#auto_patching_settings_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopatchingsettings">Dict[Auto<wbr>Patching<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#autopatchingsettings">Auto<wbr>Patching<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd>
 
@@ -1463,7 +1463,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Dict[Resource<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd>
 
@@ -1473,7 +1473,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#key_vault_credential_settings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialsettings">Dict[Key<wbr>Vault<wbr>Credential<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialsettings">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd>
 
@@ -1483,7 +1483,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#server_configurations_management_settings_python" style="color: inherit; text-decoration: inherit;">server_<wbr>configurations_<wbr>management_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Dict[Server<wbr>Configurations<wbr>Management<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd>
 
@@ -1543,7 +1543,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#storage_configuration_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageconfigurationsettings">Dict[Storage<wbr>Configuration<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#storageconfigurationsettings">Storage<wbr>Configuration<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd>
 
@@ -1553,7 +1553,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1573,7 +1573,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#wsfc_domain_credentials_python" style="color: inherit; text-decoration: inherit;">wsfc_<wbr>domain_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomaincredentials">Dict[Wsfc<wbr>Domain<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#wsfcdomaincredentials">Wsfc<wbr>Domain<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd>
 
@@ -4210,7 +4210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
 
@@ -4329,7 +4329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
 
@@ -4498,7 +4498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Dict[Additional<wbr>Features<wbr>Server<wbr>Configurations]</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
 
@@ -4508,7 +4508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Dict[Sql<wbr>Connectivity<wbr>Update<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
 
@@ -4518,7 +4518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettings">Dict[Sql<wbr>Storage<wbr>Update<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
 
@@ -4528,7 +4528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Dict[Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
 
@@ -4697,7 +4697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Dict[Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
 
@@ -4707,7 +4707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Dict[Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
 
@@ -4717,7 +4717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Dict[Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
 
@@ -4727,7 +4727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Dict[Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
 
@@ -5810,7 +5810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Dict[SQLStorage<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
 
@@ -5820,7 +5820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Dict[SQLStorage<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
 
@@ -5830,7 +5830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Dict[SQLStorage<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
 
@@ -6049,7 +6049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
 
@@ -6059,7 +6059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
 
@@ -6069,7 +6069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
 

@@ -65,12 +65,12 @@ import pulumi_azure_nextgen as azure_nextgen
 transform = azure_nextgen.media.latest.Transform("transform",
     account_name="contosomedia",
     description="Example Transform to illustrate create and update.",
-    outputs=[{
-        "preset": {
+    outputs=[azure_nextgen.media.latest.TransformOutputArgs(
+        preset={
             "odataType": "#Microsoft.Media.BuiltInStandardEncoderPreset",
             "presetName": "AdaptiveStreaming",
         },
-    }],
+    )],
     resource_group_name="contosoresources",
     transform_name="createdTransform")
 
@@ -113,7 +113,7 @@ const transform = new azure_nextgen.media.latest.Transform("transform", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[TransformOutput]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[TransformOutputArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -472,7 +472,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">List[Transform<wbr>Output]</a></span>
+        <span class="property-type"><a href="#transformoutput">Sequence[Transform<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more TransformOutputs that the Transform should generate.{{% /md %}}</dd>
 
@@ -572,7 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -629,7 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -686,7 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -743,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -945,8 +945,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplingrate_python">
-<a href="#samplingrate_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
+        <span id="sampling_rate_python">
+<a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1084,8 +1084,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="audiolanguage_python">
-<a href="#audiolanguage_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
+        <span id="audio_language_python">
+<a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1094,11 +1094,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="experimentaloptions_python">
-<a href="#experimentaloptions_python" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+        <span id="experimental_options_python">
+<a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
 
@@ -1243,8 +1243,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="audiolanguage_python">
-<a href="#audiolanguage_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
+        <span id="audio_language_python">
+<a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1253,11 +1253,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="experimentaloptions_python">
-<a href="#experimentaloptions_python" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+        <span id="experimental_options_python">
+<a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
 
@@ -1492,8 +1492,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="inputlabel_python">
-<a href="#inputlabel_python" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
+        <span id="input_label_python">
+<a href="#input_label_python" style="color: inherit; text-decoration: inherit;">input_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1502,8 +1502,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="audiogainlevel_python">
-<a href="#audiogainlevel_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
+        <span id="audio_gain_level_python">
+<a href="#audio_gain_level_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>gain_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1522,8 +1522,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fadeinduration_python">
-<a href="#fadeinduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
+        <span id="fade_in_duration_python">
+<a href="#fade_in_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>in_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1532,8 +1532,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fadeoutduration_python">
-<a href="#fadeoutduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
+        <span id="fade_out_duration_python">
+<a href="#fade_out_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>out_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1771,8 +1771,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="inputlabel_python">
-<a href="#inputlabel_python" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
+        <span id="input_label_python">
+<a href="#input_label_python" style="color: inherit; text-decoration: inherit;">input_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1781,8 +1781,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="audiogainlevel_python">
-<a href="#audiogainlevel_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
+        <span id="audio_gain_level_python">
+<a href="#audio_gain_level_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>gain_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1801,8 +1801,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fadeinduration_python">
-<a href="#fadeinduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
+        <span id="fade_in_duration_python">
+<a href="#fade_in_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>in_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1811,8 +1811,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fadeoutduration_python">
-<a href="#fadeoutduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
+        <span id="fade_out_duration_python">
+<a href="#fade_out_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>out_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2020,8 +2020,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplingrate_python">
-<a href="#samplingrate_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
+        <span id="sampling_rate_python">
+<a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2841,11 +2841,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="experimentaloptions_python">
-<a href="#experimentaloptions_python" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+        <span id="experimental_options_python">
+<a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
 
@@ -2960,11 +2960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="experimentaloptions_python">
-<a href="#experimentaloptions_python" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+        <span id="experimental_options_python">
+<a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
 
@@ -3143,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Dict[Rectangle]</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd>
 
@@ -3153,7 +3153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_python" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlace">Dict[Deinterlace]</a></span>
+        <span class="property-type"><a href="#deinterlace">Deinterlace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd>
 
@@ -3163,7 +3163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Audio<wbr>Overlay, Azure-Nextgen:Media/Latest:Video<wbr>Overlay, Default=>]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Args, Video<wbr>Overlay<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd>
 
@@ -3342,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Dict[Rectangle<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd>
 
@@ -3352,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_python" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Dict[Deinterlace<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd>
 
@@ -3362,7 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Audio<wbr>Overlay<wbr>Response, Azure-Nextgen:Media/Latest:Video<wbr>Overlay<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Response<wbr>Args, Video<wbr>Overlay<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd>
 
@@ -3447,8 +3447,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filenamepattern_python">
-<a href="#filenamepattern_python" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3526,8 +3526,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filenamepattern_python">
-<a href="#filenamepattern_python" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3635,8 +3635,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filenamepattern_python">
-<a href="#filenamepattern_python" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3645,11 +3645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputfiles_python">
-<a href="#outputfiles_python" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
+        <span id="output_files_python">
+<a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">List[Output<wbr>File]</a></span>
+        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 
@@ -3754,8 +3754,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="filenamepattern_python">
-<a href="#filenamepattern_python" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3764,11 +3764,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputfiles_python">
-<a href="#outputfiles_python" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
+        <span id="output_files_python">
+<a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List[Output<wbr>File<wbr>Response]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 
@@ -3847,7 +3847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd>
 
@@ -3926,7 +3926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd>
 
@@ -4463,7 +4463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Audio, Azure-Nextgen:Media/Latest:Copy<wbr>Audio, Azure-Nextgen:Media/Latest:Copy<wbr>Video, Azure-Nextgen:Media/Latest:Video, Default=>]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Args, Copy<wbr>Audio<wbr>Args, Copy<wbr>Video<wbr>Args, Video<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
 
@@ -4473,7 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Image<wbr>Format, Azure-Nextgen:Media/Latest:Multi<wbr>Bitrate<wbr>Format, Default=>]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
 
@@ -4483,7 +4483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filters">Dict[Filters]</a></span>
+        <span class="property-type"><a href="#filters">Filters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd>
 
@@ -4622,7 +4622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Audio<wbr>Response, Azure-Nextgen:Media/Latest:Copy<wbr>Audio<wbr>Response, Azure-Nextgen:Media/Latest:Copy<wbr>Video<wbr>Response, Azure-Nextgen:Media/Latest:Video<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Response<wbr>Args, Copy<wbr>Audio<wbr>Response<wbr>Args, Copy<wbr>Video<wbr>Response<wbr>Args, Video<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
 
@@ -4632,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Image<wbr>Format<wbr>Response, Azure-Nextgen:Media/Latest:Multi<wbr>Bitrate<wbr>Format<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Response<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
 
@@ -4642,7 +4642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Dict[Filters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd>
 
@@ -4781,14 +4781,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Audio<wbr>Analyzer<wbr>Preset] | Dict[Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset] | Dict[Face<wbr>Detector<wbr>Preset] | Dict[Standard<wbr>Encoder<wbr>Preset]</span>
+        <span class="property-type">Union[Audio<wbr>Analyzer<wbr>Preset<wbr>Args, Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args, Face<wbr>Detector<wbr>Preset<wbr>Args, Standard<wbr>Encoder<wbr>Preset<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onerror_python">
-<a href="#onerror_python" style="color: inherit; text-decoration: inherit;">on<wbr>Error</a>
+        <span id="on_error_python">
+<a href="#on_error_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4797,8 +4797,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativepriority_python">
-<a href="#relativepriority_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Priority</a>
+        <span id="relative_priority_python">
+<a href="#relative_priority_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4940,14 +4940,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Audio<wbr>Analyzer<wbr>Preset<wbr>Response] | Dict[Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response] | Dict[Face<wbr>Detector<wbr>Preset<wbr>Response] | Dict[Standard<wbr>Encoder<wbr>Preset<wbr>Response]</span>
+        <span class="property-type">Union[Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args, Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args, Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args, Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onerror_python">
-<a href="#onerror_python" style="color: inherit; text-decoration: inherit;">on<wbr>Error</a>
+        <span id="on_error_python">
+<a href="#on_error_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4956,8 +4956,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativepriority_python">
-<a href="#relativepriority_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Priority</a>
+        <span id="relative_priority_python">
+<a href="#relative_priority_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5155,8 +5155,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="syncmode_python">
-<a href="#syncmode_python" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5474,8 +5474,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="inputlabel_python">
-<a href="#inputlabel_python" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
+        <span id="input_label_python">
+<a href="#input_label_python" style="color: inherit; text-decoration: inherit;">input_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5484,8 +5484,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="audiogainlevel_python">
-<a href="#audiogainlevel_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
+        <span id="audio_gain_level_python">
+<a href="#audio_gain_level_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>gain_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5494,11 +5494,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="croprectangle_python">
-<a href="#croprectangle_python" style="color: inherit; text-decoration: inherit;">crop<wbr>Rectangle</a>
+        <span id="crop_rectangle_python">
+<a href="#crop_rectangle_python" style="color: inherit; text-decoration: inherit;">crop_<wbr>rectangle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Dict[Rectangle]</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd>
 
@@ -5514,8 +5514,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fadeinduration_python">
-<a href="#fadeinduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
+        <span id="fade_in_duration_python">
+<a href="#fade_in_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>in_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5524,8 +5524,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fadeoutduration_python">
-<a href="#fadeoutduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
+        <span id="fade_out_duration_python">
+<a href="#fade_out_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>out_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5548,7 +5548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Dict[Rectangle]</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd>
 
@@ -5873,8 +5873,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="inputlabel_python">
-<a href="#inputlabel_python" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
+        <span id="input_label_python">
+<a href="#input_label_python" style="color: inherit; text-decoration: inherit;">input_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5883,8 +5883,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="audiogainlevel_python">
-<a href="#audiogainlevel_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
+        <span id="audio_gain_level_python">
+<a href="#audio_gain_level_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>gain_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5893,11 +5893,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="croprectangle_python">
-<a href="#croprectangle_python" style="color: inherit; text-decoration: inherit;">crop<wbr>Rectangle</a>
+        <span id="crop_rectangle_python">
+<a href="#crop_rectangle_python" style="color: inherit; text-decoration: inherit;">crop_<wbr>rectangle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Dict[Rectangle<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd>
 
@@ -5913,8 +5913,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fadeinduration_python">
-<a href="#fadeinduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
+        <span id="fade_in_duration_python">
+<a href="#fade_in_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>in_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5923,8 +5923,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fadeoutduration_python">
-<a href="#fadeoutduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
+        <span id="fade_out_duration_python">
+<a href="#fade_out_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>out_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5947,7 +5947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Dict[Rectangle<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd>
 
@@ -6152,8 +6152,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="syncmode_python">
-<a href="#syncmode_python" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

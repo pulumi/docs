@@ -81,10 +81,10 @@ import pulumi_azure_nextgen as azure_nextgen
 service = azure_nextgen.servicefabric.latest.Service("service",
     application_name="myApp",
     cluster_name="myCluster",
-    correlation_scheme=[{
-        "scheme": "Affinity",
-        "serviceName": "fabric:/app1/app1~svc1",
-    }],
+    correlation_scheme=[azure_nextgen.servicefabric.latest.ServiceCorrelationDescriptionArgs(
+        scheme="Affinity",
+        service_name="fabric:/app1/app1~svc1",
+    )],
     default_move_cost="Medium",
     partition_description={
         "partitionScheme": "Singleton",
@@ -93,10 +93,10 @@ service = azure_nextgen.servicefabric.latest.Service("service",
     resource_group_name="resRg",
     service_dns_name="my.service.dns",
     service_kind="Stateless",
-    service_load_metrics=[{
-        "name": "metric1",
-        "weight": "Low",
-    }],
+    service_load_metrics=[azure_nextgen.servicefabric.latest.ServiceLoadMetricDescriptionArgs(
+        name="metric1",
+        weight="Low",
+    )],
     service_name="myService",
     service_package_activation_mode="SharedProcess",
     service_placement_policies=[],
@@ -231,7 +231,7 @@ const service = new azure_nextgen.servicefabric.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_scheme</span><span class="p">:</span> <span class="nx">Optional[List[ServiceCorrelationDescription]]</span> = None<span class="p">, </span><span class="nx">default_move_cost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_description</span><span class="p">:</span> <span class="nx">Optional[Dict[NamedPartitionSchemeDescription] | Dict[SingletonPartitionSchemeDescription] | Dict[UniformInt64RangePartitionSchemeDescription]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_load_metrics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLoadMetricDescription]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_package_activation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_placement_policies</span><span class="p">:</span> <span class="nx">Optional[List[ServicePlacementPolicyDescription]]</span> = None<span class="p">, </span><span class="nx">service_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_scheme</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorrelationDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">default_move_cost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_description</span><span class="p">:</span> <span class="nx">Optional[Union[NamedPartitionSchemeDescriptionArgs, SingletonPartitionSchemeDescriptionArgs, UniformInt64RangePartitionSchemeDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_load_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_package_activation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_placement_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementPolicyDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -960,7 +960,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#correlation_scheme_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorrelationdescription">List[Service<wbr>Correlation<wbr>Description]</a></span>
+        <span class="property-type"><a href="#servicecorrelationdescription">Sequence[Service<wbr>Correlation<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
 
@@ -990,7 +990,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partition_description_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Named<wbr>Partition<wbr>Scheme<wbr>Description] | Dict[Singleton<wbr>Partition<wbr>Scheme<wbr>Description] | Dict[Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description]</span>
+        <span class="property-type">Union[Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args, Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args, Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -1020,7 +1020,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_load_metrics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>load_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadmetricdescription">List[Service<wbr>Load<wbr>Metric<wbr>Description]</a></span>
+        <span class="property-type"><a href="#serviceloadmetricdescription">Sequence[Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd>
 
@@ -1040,7 +1040,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_placement_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>placement_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementpolicydescription">List[Service<wbr>Placement<wbr>Policy<wbr>Description]</a></span>
+        <span class="property-type"><a href="#serviceplacementpolicydescription">Sequence[Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
 
@@ -1060,7 +1060,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
 
@@ -1427,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd>
 
@@ -1546,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd>
 
@@ -1989,8 +1989,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultload_python">
-<a href="#defaultload_python" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
+        <span id="default_load_python">
+<a href="#default_load_python" style="color: inherit; text-decoration: inherit;">default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1999,8 +1999,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarydefaultload_python">
-<a href="#primarydefaultload_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
+        <span id="primary_default_load_python">
+<a href="#primary_default_load_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2009,8 +2009,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondarydefaultload_python">
-<a href="#secondarydefaultload_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
+        <span id="secondary_default_load_python">
+<a href="#secondary_default_load_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2228,8 +2228,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultload_python">
-<a href="#defaultload_python" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
+        <span id="default_load_python">
+<a href="#default_load_python" style="color: inherit; text-decoration: inherit;">default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2238,8 +2238,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarydefaultload_python">
-<a href="#primarydefaultload_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
+        <span id="primary_default_load_python">
+<a href="#primary_default_load_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2248,8 +2248,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondarydefaultload_python">
-<a href="#secondarydefaultload_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
+        <span id="secondary_default_load_python">
+<a href="#secondary_default_load_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2655,8 +2655,8 @@ should be split between the partition ‘count’
 
     <dt class="property-required"
             title="Required">
-        <span id="highkey_python">
-<a href="#highkey_python" style="color: inherit; text-decoration: inherit;">high<wbr>Key</a>
+        <span id="high_key_python">
+<a href="#high_key_python" style="color: inherit; text-decoration: inherit;">high_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2667,8 +2667,8 @@ should be split between the partition ‘count’
 
     <dt class="property-required"
             title="Required">
-        <span id="lowkey_python">
-<a href="#lowkey_python" style="color: inherit; text-decoration: inherit;">low<wbr>Key</a>
+        <span id="low_key_python">
+<a href="#low_key_python" style="color: inherit; text-decoration: inherit;">low_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2830,8 +2830,8 @@ should be split between the partition ‘count’
 
     <dt class="property-required"
             title="Required">
-        <span id="highkey_python">
-<a href="#highkey_python" style="color: inherit; text-decoration: inherit;">high<wbr>Key</a>
+        <span id="high_key_python">
+<a href="#high_key_python" style="color: inherit; text-decoration: inherit;">high_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2842,8 +2842,8 @@ should be split between the partition ‘count’
 
     <dt class="property-required"
             title="Required">
-        <span id="lowkey_python">
-<a href="#lowkey_python" style="color: inherit; text-decoration: inherit;">low<wbr>Key</a>
+        <span id="low_key_python">
+<a href="#low_key_python" style="color: inherit; text-decoration: inherit;">low_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

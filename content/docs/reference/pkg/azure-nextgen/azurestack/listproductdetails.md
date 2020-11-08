@@ -577,7 +577,7 @@ The following output properties are available:
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageresponse">List[Data<wbr>Disk<wbr>Image<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskimageresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of attached data disks.{{% /md %}}</dd>
 
@@ -607,7 +607,7 @@ The following output properties are available:
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageresponse">Dict[Os<wbr>Disk<wbr>Image<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osdiskimageresponse">Os<wbr>Disk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OS disk image used by product.{{% /md %}}</dd>
 
@@ -788,8 +788,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceblobsasuri_python">
-<a href="#sourceblobsasuri_python" style="color: inherit; text-decoration: inherit;">source<wbr>Blob<wbr>Sas<wbr>Uri</a>
+        <span id="source_blob_sas_uri_python">
+<a href="#source_blob_sas_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>blob_<wbr>sas_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -907,8 +907,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceblobsasuri_python">
-<a href="#sourceblobsasuri_python" style="color: inherit; text-decoration: inherit;">source<wbr>Blob<wbr>Sas<wbr>Uri</a>
+        <span id="source_blob_sas_uri_python">
+<a href="#source_blob_sas_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>blob_<wbr>sas_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

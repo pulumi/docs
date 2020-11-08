@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#supported_optimization_types_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>optimization_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Supported optimization types for a profile.{{% /md %}}</dd>
 

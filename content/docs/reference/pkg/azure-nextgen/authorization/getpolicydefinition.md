@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Definitions<wbr>Value<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Definitions<wbr>Value<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#policy_rule_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The policy rule.{{% /md %}}</dd>
 
@@ -680,11 +680,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedvalues_python">
-<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+        <span id="allowed_values_python">
+<a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The following output properties are available:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Dict[Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
 

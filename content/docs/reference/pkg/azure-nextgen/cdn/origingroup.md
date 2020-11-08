@@ -112,22 +112,22 @@ import pulumi_azure_nextgen as azure_nextgen
 
 origin_group = azure_nextgen.cdn.latest.OriginGroup("originGroup",
     endpoint_name="endpoint1",
-    health_probe_settings={
-        "probeIntervalInSeconds": 120,
-        "probePath": "/health.aspx",
-        "probeProtocol": "Http",
-        "probeRequestType": "GET",
-    },
+    health_probe_settings=azure_nextgen.cdn.latest.HealthProbeParametersArgs(
+        probe_interval_in_seconds=120,
+        probe_path="/health.aspx",
+        probe_protocol="Http",
+        probe_request_type="GET",
+    ),
     origin_group_name="origingroup1",
-    origins=[{
-        "id": "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-    }],
+    origins=[azure_nextgen.cdn.latest.ResourceReferenceArgs(
+        id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
+    )],
     profile_name="profile1",
     resource_group_name="RG",
-    response_based_origin_error_detection_settings={
-        "responseBasedDetectedErrorTypes": "TcpErrorsOnly",
-        "responseBasedFailoverThresholdPercentage": 10,
-    })
+    response_based_origin_error_detection_settings=azure_nextgen.cdn.latest.ResponseBasedOriginErrorDetectionParametersArgs(
+        response_based_detected_error_types="TcpErrorsOnly",
+        response_based_failover_threshold_percentage=10,
+    ))
 
 ```
 
@@ -175,7 +175,7 @@ const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OriginGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[HealthProbeParameters]]</span> = None<span class="p">, </span><span class="nx">origin_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[ResourceReference]]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_based_origin_error_detection_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ResponseBasedOriginErrorDetectionParameters]]</span> = None<span class="p">, </span><span class="nx">traffic_restoration_time_to_healed_or_new_endpoints_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OriginGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[HealthProbeParametersArgs]</span> = None<span class="p">, </span><span class="nx">origin_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_based_origin_error_detection_settings</span><span class="p">:</span> <span class="nx">Optional[ResponseBasedOriginErrorDetectionParametersArgs]</span> = None<span class="p">, </span><span class="nx">traffic_restoration_time_to_healed_or_new_endpoints_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +634,7 @@ The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List[Resource<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd>
 
@@ -664,7 +664,7 @@ The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparameters">Dict[Health<wbr>Probe<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#healthprobeparameters">Health<wbr>Probe<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The OriginGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#response_based_origin_error_detection_settings_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>origin_<wbr>error_<wbr>detection_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Dict[Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.{{% /md %}}</dd>
 
@@ -1865,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">List[Http<wbr>Error<wbr>Range<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
 
@@ -2024,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">List[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
 

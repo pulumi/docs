@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendpropertiesresponse">Dict[Backend<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendpropertiesresponse">Backend<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialscontractresponse">Dict[Backend<wbr>Credentials<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendcredentialscontractresponse">Backend<wbr>Credentials<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxycontractresponse">Dict[Backend<wbr>Proxy<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendproxycontractresponse">Backend<wbr>Proxy<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtlspropertiesresponse">Dict[Backend<wbr>Tls<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendtlspropertiesresponse">Backend<wbr>Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd>
 
@@ -963,7 +963,7 @@ The following output properties are available:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Dict[Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
 
@@ -973,7 +973,7 @@ The following output properties are available:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd>
 
@@ -983,7 +983,7 @@ The following output properties are available:
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd>
 
@@ -993,7 +993,7 @@ The following output properties are available:
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd>
 
@@ -1072,7 +1072,7 @@ The following output properties are available:
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Dict[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
 
@@ -1440,7 +1440,7 @@ The following output properties are available:
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd>
 
@@ -1460,7 +1460,7 @@ The following output properties are available:
 <a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd>
 
@@ -1470,7 +1470,7 @@ The following output properties are available:
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">List[X509Certificate<wbr>Name<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">Sequence[X509Certificate<wbr>Name<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
 
@@ -1694,8 +1694,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issuercertificatethumbprint_python">
-<a href="#issuercertificatethumbprint_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Certificate<wbr>Thumbprint</a>
+        <span id="issuer_certificate_thumbprint_python">
+<a href="#issuer_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>certificate_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

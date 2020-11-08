@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Dict[Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the export pipeline.{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypropertiesresponse">Dict[Identity<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the export pipeline.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 
@@ -890,7 +890,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 

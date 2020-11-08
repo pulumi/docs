@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#streaming_locators_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>locators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetstreaminglocatorresponse">List[Asset<wbr>Streaming<wbr>Locator<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assetstreaminglocatorresponse">Sequence[Asset<wbr>Streaming<wbr>Locator<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd>
 

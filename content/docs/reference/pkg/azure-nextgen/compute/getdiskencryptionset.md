@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#previous_keys_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">List[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Sequence[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#active_key_python" style="color: inherit; text-decoration: inherit;">active_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Dict[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsetidentityresponse">Dict[Encryption<wbr>Set<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionsetidentityresponse">Encryption<wbr>Set<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Dict[Source<wbr>Vault<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 

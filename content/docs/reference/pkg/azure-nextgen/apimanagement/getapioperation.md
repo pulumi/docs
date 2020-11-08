@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestcontractresponse">Dict[Request<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#requestcontractresponse">Request<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#responses_python" style="color: inherit; text-decoration: inherit;">responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsecontractresponse">List[Response<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#responsecontractresponse">Sequence[Response<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#template_parameters_python" style="color: inherit; text-decoration: inherit;">template_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd>
 
@@ -954,7 +954,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
 
@@ -1159,11 +1159,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formparameters_python">
-<a href="#formparameters_python" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
+        <span id="form_parameters_python">
+<a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
 
@@ -1372,7 +1372,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
 
@@ -1382,7 +1382,7 @@ The following output properties are available:
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
 
@@ -1392,7 +1392,7 @@ The following output properties are available:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List[Representation<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
 
@@ -1581,7 +1581,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
 
@@ -1591,7 +1591,7 @@ The following output properties are available:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List[Representation<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
 

@@ -181,52 +181,52 @@ import pulumi_azure_nextgen as azure_nextgen
 account_filter = azure_nextgen.media.latest.AccountFilter("accountFilter",
     account_name="contosomedia",
     filter_name="newAccountFilter",
-    first_quality={
-        "bitrate": 128000,
-    },
-    presentation_time_range={
-        "endTimestamp": 170000000,
-        "forceEndTimestamp": False,
-        "liveBackoffDuration": 0,
-        "presentationWindowDuration": 9.223372036854776e+18,
-        "startTimestamp": 0,
-        "timescale": 10000000,
-    },
+    first_quality=azure_nextgen.media.latest.FirstQualityArgs(
+        bitrate=128000,
+    ),
+    presentation_time_range=azure_nextgen.media.latest.PresentationTimeRangeArgs(
+        end_timestamp=170000000,
+        force_end_timestamp=False,
+        live_backoff_duration=0,
+        presentation_window_duration=9.223372036854776e+18,
+        start_timestamp=0,
+        timescale=10000000,
+    ),
     resource_group_name="contoso",
     tracks=[
-        {
-            "trackSelections": [
-                {
-                    "operation": "Equal",
-                    "property": "Type",
-                    "value": "Audio",
-                },
-                {
-                    "operation": "NotEqual",
-                    "property": "Language",
-                    "value": "en",
-                },
-                {
-                    "operation": "NotEqual",
-                    "property": "FourCC",
-                    "value": "EC-3",
-                },
+        azure_nextgen.media.latest.FilterTrackSelectionArgs(
+            track_selections=[
+                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                    operation="Equal",
+                    property="Type",
+                    value="Audio",
+                ),
+                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                    operation="NotEqual",
+                    property="Language",
+                    value="en",
+                ),
+                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                    operation="NotEqual",
+                    property="FourCC",
+                    value="EC-3",
+                ),
             ],
-        },
-        {
-            "trackSelections": [
-                {
-                    "operation": "Equal",
-                    "property": "Type",
-                    "value": "Video",
-                },
-                {
-                    "operation": "Equal",
-                    "property": "Bitrate",
-                    "value": "3000000-5000000",
-                },
+        ),
+        azure_nextgen.media.latest.FilterTrackSelectionArgs(
+            track_selections=[
+                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                    operation="Equal",
+                    property="Type",
+                    value="Video",
+                ),
+                azure_nextgen.media.latest.FilterTrackPropertyConditionArgs(
+                    operation="Equal",
+                    property="Bitrate",
+                    value="3000000-5000000",
+                ),
             ],
-        },
+        ),
     ])
 
 ```
@@ -307,7 +307,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_quality</span><span class="p">:</span> <span class="nx">Optional[Dict[FirstQuality]]</span> = None<span class="p">, </span><span class="nx">presentation_time_range</span><span class="p">:</span> <span class="nx">Optional[Dict[PresentationTimeRange]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tracks</span><span class="p">:</span> <span class="nx">Optional[List[FilterTrackSelection]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_quality</span><span class="p">:</span> <span class="nx">Optional[FirstQualityArgs]</span> = None<span class="p">, </span><span class="nx">presentation_time_range</span><span class="p">:</span> <span class="nx">Optional[PresentationTimeRangeArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tracks</span><span class="p">:</span> <span class="nx">Optional[Sequence[FilterTrackSelectionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -716,7 +716,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#first_quality_python" style="color: inherit; text-decoration: inherit;">first_<wbr>quality</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firstquality">Dict[First<wbr>Quality]</a></span>
+        <span class="property-type"><a href="#firstquality">First<wbr>Quality<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd>
 
@@ -726,7 +726,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#presentation_time_range_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>time_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presentationtimerange">Dict[Presentation<wbr>Time<wbr>Range]</a></span>
+        <span class="property-type"><a href="#presentationtimerange">Presentation<wbr>Time<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd>
 
@@ -736,7 +736,7 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackselection">List[Filter<wbr>Track<wbr>Selection]</a></span>
+        <span class="property-type"><a href="#filtertrackselection">Sequence[Filter<wbr>Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd>
 
@@ -786,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -823,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -860,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1297,11 +1297,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="trackselections_python">
-<a href="#trackselections_python" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
+        <span id="track_selections_python">
+<a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertycondition">List[Filter<wbr>Track<wbr>Property<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertycondition">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
 
@@ -1376,11 +1376,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="trackselections_python">
-<a href="#trackselections_python" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
+        <span id="track_selections_python">
+<a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">List[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
 

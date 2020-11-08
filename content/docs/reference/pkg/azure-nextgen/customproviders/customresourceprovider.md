@@ -107,19 +107,19 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 custom_resource_provider = azure_nextgen.customproviders.v20180901preview.CustomResourceProvider("customResourceProvider",
-    actions=[{
-        "endpoint": "https://mytestendpoint/",
-        "name": "TestAction",
-        "routingType": "Proxy",
-    }],
+    actions=[azure_nextgen.customproviders.v20180901preview.CustomRPActionRouteDefinitionArgs(
+        endpoint="https://mytestendpoint/",
+        name="TestAction",
+        routing_type="Proxy",
+    )],
     location="eastus",
     resource_group_name="testRG",
     resource_provider_name="newrp",
-    resource_types=[{
-        "endpoint": "https://mytestendpoint2/",
-        "name": "TestResource",
-        "routingType": "Proxy,Cache",
-    }])
+    resource_types=[azure_nextgen.customproviders.v20180901preview.CustomRPResourceTypeRouteDefinitionArgs(
+        endpoint="https://mytestendpoint2/",
+        name="TestResource",
+        routing_type="Proxy,Cache",
+    )])
 
 ```
 
@@ -163,7 +163,7 @@ const customResourceProvider = new azure_nextgen.customproviders.v20180901previe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomRPActionRouteDefinition]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[List[CustomRPResourceTypeRouteDefinition]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">validations</span><span class="p">:</span> <span class="nx">Optional[List[CustomRPValidations]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomRPActionRouteDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomRPResourceTypeRouteDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validations</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomRPValidationsArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -602,7 +602,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpactionroutedefinition">List[Custom<wbr>RPAction<wbr>Route<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#customrpactionroutedefinition">Sequence[Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
 
@@ -612,7 +612,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">List[Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">Sequence[Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd>
 
@@ -622,7 +622,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -632,7 +632,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#validations_python" style="color: inherit; text-decoration: inherit;">validations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpvalidations">List[Custom<wbr>RPValidations]</a></span>
+        <span class="property-type"><a href="#customrpvalidations">Sequence[Custom<wbr>RPValidations<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd>
 
@@ -995,8 +995,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingtype_python">
-<a href="#routingtype_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
+        <span id="routing_type_python">
+<a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1154,8 +1154,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingtype_python">
-<a href="#routingtype_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
+        <span id="routing_type_python">
+<a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1313,8 +1313,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingtype_python">
-<a href="#routingtype_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
+        <span id="routing_type_python">
+<a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1472,8 +1472,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingtype_python">
-<a href="#routingtype_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
+        <span id="routing_type_python">
+<a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1591,8 +1591,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationtype_python">
-<a href="#validationtype_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Type</a>
+        <span id="validation_type_python">
+<a href="#validation_type_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1710,8 +1710,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validationtype_python">
-<a href="#validationtype_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Type</a>
+        <span id="validation_type_python">
+<a href="#validation_type_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

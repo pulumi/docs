@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoversetresponse">List[Failover<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#failoversetresponse">Sequence[Failover<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd>
 
@@ -388,8 +388,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iseligibleforfailover_python">
-<a href="#iseligibleforfailover_python" style="color: inherit; text-decoration: inherit;">is<wbr>Eligible<wbr>For<wbr>Failover</a>
+        <span id="is_eligible_for_failover_python">
+<a href="#is_eligible_for_failover_python" style="color: inherit; text-decoration: inherit;">is_<wbr>eligible_<wbr>for_<wbr>failover</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -497,21 +497,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eligibilityresult_python">
-<a href="#eligibilityresult_python" style="color: inherit; text-decoration: inherit;">eligibility<wbr>Result</a>
+        <span id="eligibility_result_python">
+<a href="#eligibility_result_python" style="color: inherit; text-decoration: inherit;">eligibility_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoverseteligibilityresultresponse">Dict[Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#failoverseteligibilityresultresponse">Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumecontainers_python">
-<a href="#volumecontainers_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Containers</a>
+        <span id="volume_containers_python">
+<a href="#volume_containers_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">List[Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">Sequence[Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd>
 
@@ -630,7 +630,7 @@ The following output properties are available:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumefailovermetadataresponse">List[Volume<wbr>Failover<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumefailovermetadataresponse">Sequence[Volume<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd>
 
@@ -885,8 +885,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupcreateddate_python">
-<a href="#backupcreateddate_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Created<wbr>Date</a>
+        <span id="backup_created_date_python">
+<a href="#backup_created_date_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>created_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -895,8 +895,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupelementid_python">
-<a href="#backupelementid_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Element<wbr>Id</a>
+        <span id="backup_element_id_python">
+<a href="#backup_element_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>element_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -935,8 +935,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumeid_python">
-<a href="#volumeid_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
+        <span id="volume_id_python">
+<a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#azure_file_parameters_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeproviderparametersazurefileresponse">Dict[Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumeproviderparametersazurefileresponse">Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This type describes a volume provided by an Azure Files file share.{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

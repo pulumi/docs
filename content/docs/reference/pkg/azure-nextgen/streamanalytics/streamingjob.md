@@ -126,16 +126,16 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
     events_out_of_order_max_delay_in_seconds=0,
     events_out_of_order_policy="Drop",
     functions=[],
-    inputs=[{
-        "name": "inputtest",
-        "properties": {
+    inputs=[azure_nextgen.streamanalytics.latest.InputArgs(
+        name="inputtest",
+        properties={
             "datasource": {
                 "container": "containerName",
                 "pathPattern": "",
-                "storageAccounts": [{
-                    "accountKey": "yourAccountKey==",
-                    "accountName": "yourAccountName",
-                }],
+                "storageAccounts": [azure_nextgen.streamanalytics.latest.StorageAccountArgs(
+                    account_key="yourAccountKey==",
+                    account_name="yourAccountName",
+                )],
                 "type": "Microsoft.Storage/Blob",
             },
             "serialization": {
@@ -144,12 +144,12 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
             },
             "type": "Stream",
         },
-    }],
+    )],
     job_name="sj7804",
     location="West US",
     output_error_policy="Drop",
-    outputs=[{
-        "datasource": {
+    outputs=[azure_nextgen.streamanalytics.latest.OutputArgs(
+        datasource={
             "database": "databaseName",
             "password": "userPassword",
             "server": "serverName",
@@ -157,22 +157,22 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
             "type": "Microsoft.Sql/Server/Database",
             "user": "userName",
         },
-        "name": "outputtest",
-    }],
+        name="outputtest",
+    )],
     resource_group_name="sjrg3276",
-    sku={
-        "name": "Standard",
-    },
+    sku=azure_nextgen.streamanalytics.latest.SkuArgs(
+        name="Standard",
+    ),
     tags={
         "key1": "value1",
         "key3": "value3",
         "randomKey": "randomValue",
     },
-    transformation={
-        "name": "transformationtest",
-        "query": "Select Id, Name from inputtest",
-        "streamingUnits": 1,
-    })
+    transformation=azure_nextgen.streamanalytics.latest.TransformationArgs(
+        name="transformationtest",
+        query="Select Id, Name from inputtest",
+        streaming_units=1,
+    ))
 
 ```
 
@@ -351,9 +351,9 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
     output_error_policy="Drop",
     outputs=[],
     resource_group_name="sjrg6936",
-    sku={
-        "name": "Standard",
-    },
+    sku=azure_nextgen.streamanalytics.latest.SkuArgs(
+        name="Standard",
+    ),
     tags={
         "key1": "value1",
         "key3": "value3",
@@ -409,7 +409,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compatibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events_late_arrival_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">functions</span><span class="p">:</span> <span class="nx">Optional[List[Function]]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[List[Input]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_error_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_start_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[Output]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">transformation</span><span class="p">:</span> <span class="nx">Optional[Dict[Transformation]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compatibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events_late_arrival_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[FunctionArgs]]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InputArgs]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_error_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_start_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[OutputArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transformation</span><span class="p">:</span> <span class="nx">Optional[TransformationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1188,7 +1188,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#functions_python" style="color: inherit; text-decoration: inherit;">functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#function">List[Function]</a></span>
+        <span class="property-type"><a href="#function">Sequence[Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.{{% /md %}}</dd>
 
@@ -1198,7 +1198,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#input">List[Input]</a></span>
+        <span class="property-type"><a href="#input">Sequence[Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.{{% /md %}}</dd>
 
@@ -1248,7 +1248,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#output">List[Output]</a></span>
+        <span class="property-type"><a href="#output">Sequence[Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.{{% /md %}}</dd>
 
@@ -1258,7 +1258,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -1268,7 +1268,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1278,7 +1278,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#transformation_python" style="color: inherit; text-decoration: inherit;">transformation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">Dict[Transformation]</a></span>
+        <span class="property-type"><a href="#transformation">Transformation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.{{% /md %}}</dd>
 
@@ -2059,8 +2059,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2069,8 +2069,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filepathprefix_python">
-<a href="#filepathprefix_python" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>Prefix</a>
+        <span id="file_path_prefix_python">
+<a href="#file_path_prefix_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2099,8 +2099,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2109,8 +2109,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserdisplayname_python">
-<a href="#tokenuserdisplayname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
+        <span id="token_user_display_name_python">
+<a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2119,8 +2119,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserprincipalname_python">
-<a href="#tokenuserprincipalname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
+        <span id="token_user_principal_name_python">
+<a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2418,8 +2418,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2428,8 +2428,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filepathprefix_python">
-<a href="#filepathprefix_python" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>Prefix</a>
+        <span id="file_path_prefix_python">
+<a href="#file_path_prefix_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2458,8 +2458,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2468,8 +2468,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserdisplayname_python">
-<a href="#tokenuserdisplayname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
+        <span id="token_user_display_name_python">
+<a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2478,8 +2478,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserprincipalname_python">
-<a href="#tokenuserprincipalname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
+        <span id="token_user_principal_name_python">
+<a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2677,8 +2677,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apikey_python">
-<a href="#apikey_python" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
+        <span id="api_key_python">
+<a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2711,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Dict[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
 
@@ -2721,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">List[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
 
@@ -2916,8 +2916,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apikey_python">
-<a href="#apikey_python" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
+        <span id="api_key_python">
+<a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2950,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Dict[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
 
@@ -2960,7 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
 
@@ -3105,8 +3105,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mapto_python">
-<a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
+        <span id="map_to_python">
+<a href="#map_to_python" style="color: inherit; text-decoration: inherit;">map_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3264,8 +3264,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mapto_python">
-<a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
+        <span id="map_to_python">
+<a href="#map_to_python" style="color: inherit; text-decoration: inherit;">map_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3383,11 +3383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columnnames_python">
-<a href="#columnnames_python" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
+        <span id="column_names_python">
+<a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">List[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
 
@@ -3502,11 +3502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columnnames_python">
-<a href="#columnnames_python" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
+        <span id="column_names_python">
+<a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
 
@@ -4517,11 +4517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columnstoremove_python">
-<a href="#columnstoremove_python" style="color: inherit; text-decoration: inherit;">columns<wbr>To<wbr>Remove</a>
+        <span id="columns_to_remove_python">
+<a href="#columns_to_remove_python" style="color: inherit; text-decoration: inherit;">columns_<wbr>to_<wbr>remove</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If specified, each item in the array is the name of a column to remove (if present) from output event entities.{{% /md %}}</dd>
 
@@ -4537,8 +4537,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rowkey_python">
-<a href="#rowkey_python" style="color: inherit; text-decoration: inherit;">row<wbr>Key</a>
+        <span id="row_key_python">
+<a href="#row_key_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4836,11 +4836,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columnstoremove_python">
-<a href="#columnstoremove_python" style="color: inherit; text-decoration: inherit;">columns<wbr>To<wbr>Remove</a>
+        <span id="columns_to_remove_python">
+<a href="#columns_to_remove_python" style="color: inherit; text-decoration: inherit;">columns_<wbr>to_<wbr>remove</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If specified, each item in the array is the name of a column to remove (if present) from output event entities.{{% /md %}}</dd>
 
@@ -4856,8 +4856,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rowkey_python">
-<a href="#rowkey_python" style="color: inherit; text-decoration: inherit;">row<wbr>Key</a>
+        <span id="row_key_python">
+<a href="#row_key_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5075,8 +5075,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5085,8 +5085,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5099,14 +5099,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List[Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5314,8 +5314,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5324,8 +5324,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5338,14 +5338,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List[Storage<wbr>Account<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5553,8 +5553,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5563,8 +5563,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5577,14 +5577,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List[Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5792,8 +5792,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5802,8 +5802,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5816,14 +5816,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List[Storage<wbr>Account<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6061,8 +6061,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6071,8 +6071,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6081,8 +6081,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcepartitioncount_python">
-<a href="#sourcepartitioncount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
+        <span id="source_partition_count_python">
+<a href="#source_partition_count_python" style="color: inherit; text-decoration: inherit;">source_<wbr>partition_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6095,14 +6095,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List[Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6340,8 +6340,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6350,8 +6350,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathpattern_python">
-<a href="#pathpattern_python" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
+        <span id="path_pattern_python">
+<a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6360,8 +6360,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcepartitioncount_python">
-<a href="#sourcepartitioncount_python" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
+        <span id="source_partition_count_python">
+<a href="#source_partition_count_python" style="color: inherit; text-decoration: inherit;">source_<wbr>partition_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6374,14 +6374,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List[Storage<wbr>Account<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6499,8 +6499,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6618,8 +6618,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6860,7 +6860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">List[Diagnostic<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">Sequence[Diagnostic<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd>
 
@@ -7105,8 +7105,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectionnamepattern_python">
-<a href="#collectionnamepattern_python" style="color: inherit; text-decoration: inherit;">collection<wbr>Name<wbr>Pattern</a>
+        <span id="collection_name_pattern_python">
+<a href="#collection_name_pattern_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7125,8 +7125,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="documentid_python">
-<a href="#documentid_python" style="color: inherit; text-decoration: inherit;">document<wbr>Id</a>
+        <span id="document_id_python">
+<a href="#document_id_python" style="color: inherit; text-decoration: inherit;">document_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7384,8 +7384,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="collectionnamepattern_python">
-<a href="#collectionnamepattern_python" style="color: inherit; text-decoration: inherit;">collection<wbr>Name<wbr>Pattern</a>
+        <span id="collection_name_pattern_python">
+<a href="#collection_name_pattern_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7404,8 +7404,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="documentid_python">
-<a href="#documentid_python" style="color: inherit; text-decoration: inherit;">document<wbr>Id</a>
+        <span id="document_id_python">
+<a href="#document_id_python" style="color: inherit; text-decoration: inherit;">document_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7643,8 +7643,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7653,8 +7653,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7882,8 +7882,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7892,8 +7892,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8121,8 +8121,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8131,8 +8131,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8360,8 +8360,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8370,8 +8370,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8493,7 +8493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Dict[Scalar<wbr>Function<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd>
 
@@ -8608,8 +8608,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isconfigurationparameter_python">
-<a href="#isconfigurationparameter_python" style="color: inherit; text-decoration: inherit;">is<wbr>Configuration<wbr>Parameter</a>
+        <span id="is_configuration_parameter_python">
+<a href="#is_configuration_parameter_python" style="color: inherit; text-decoration: inherit;">is_<wbr>configuration_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8727,8 +8727,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isconfigurationparameter_python">
-<a href="#isconfigurationparameter_python" style="color: inherit; text-decoration: inherit;">is<wbr>Configuration<wbr>Parameter</a>
+        <span id="is_configuration_parameter_python">
+<a href="#is_configuration_parameter_python" style="color: inherit; text-decoration: inherit;">is_<wbr>configuration_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9088,7 +9088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Dict[Scalar<wbr>Function<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Scalar<wbr>Function<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd>
 
@@ -9207,7 +9207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Reference<wbr>Input<wbr>Properties] | Dict[Stream<wbr>Input<wbr>Properties]</span>
+        <span class="property-type">Union[Reference<wbr>Input<wbr>Properties<wbr>Args, Stream<wbr>Input<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -9406,7 +9406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Reference<wbr>Input<wbr>Properties<wbr>Response] | Dict[Stream<wbr>Input<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Union[Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args, Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -9621,8 +9621,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iothubnamespace_python">
-<a href="#iothubnamespace_python" style="color: inherit; text-decoration: inherit;">iot<wbr>Hub<wbr>Namespace</a>
+        <span id="iot_hub_namespace_python">
+<a href="#iot_hub_namespace_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hub_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9631,8 +9631,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9641,8 +9641,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9860,8 +9860,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iothubnamespace_python">
-<a href="#iothubnamespace_python" style="color: inherit; text-decoration: inherit;">iot<wbr>Hub<wbr>Namespace</a>
+        <span id="iot_hub_namespace_python">
+<a href="#iot_hub_namespace_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hub_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9870,8 +9870,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9880,8 +9880,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10419,7 +10419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source] | Dict[Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source] | Dict[Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source] | Dict[Blob<wbr>Output<wbr>Data<wbr>Source] | Dict[Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source] | Dict[Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source] | Dict[Power<wbr>BIOutput<wbr>Data<wbr>Source] | Dict[Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source] | Dict[Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source]</span>
+        <span class="property-type">Union[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args, Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args, Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args, Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args, Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args, Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args, Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args, Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args, Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -10439,7 +10439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Serialization] | Dict[Csv<wbr>Serialization] | Dict[Json<wbr>Serialization]</span>
+        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Args, Csv<wbr>Serialization<wbr>Args, Json<wbr>Serialization<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -10698,7 +10698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Dict[Diagnostics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
 
@@ -10738,7 +10738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response] | Dict[Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response] | Dict[Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -10758,7 +10758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Serialization<wbr>Response] | Dict[Csv<wbr>Serialization<wbr>Response] | Dict[Json<wbr>Serialization<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Response<wbr>Args, Csv<wbr>Serialization<wbr>Response<wbr>Args, Json<wbr>Serialization<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -11063,8 +11063,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserdisplayname_python">
-<a href="#tokenuserdisplayname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
+        <span id="token_user_display_name_python">
+<a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11073,8 +11073,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserprincipalname_python">
-<a href="#tokenuserprincipalname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
+        <span id="token_user_principal_name_python">
+<a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11382,8 +11382,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserdisplayname_python">
-<a href="#tokenuserdisplayname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
+        <span id="token_user_display_name_python">
+<a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11392,8 +11392,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenuserprincipalname_python">
-<a href="#tokenuserprincipalname_python" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
+        <span id="token_user_principal_name_python">
+<a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11505,7 +11505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasource">Dict[Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source]</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -11515,7 +11515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Serialization] | Dict[Csv<wbr>Serialization] | Dict[Json<wbr>Serialization]</span>
+        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Args, Csv<wbr>Serialization<wbr>Args, Json<wbr>Serialization<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -11684,7 +11684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Dict[Diagnostics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
 
@@ -11704,7 +11704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Dict[Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -11714,7 +11714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Serialization<wbr>Response] | Dict[Csv<wbr>Serialization<wbr>Response] | Dict[Json<wbr>Serialization<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Response<wbr>Args, Csv<wbr>Serialization<wbr>Response<wbr>Args, Json<wbr>Serialization<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -11853,7 +11853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding] | Dict[Java<wbr>Script<wbr>Function<wbr>Binding]</span>
+        <span class="property-type">Union[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args, Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -11863,7 +11863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">List[Function<wbr>Input]</a></span>
+        <span class="property-type"><a href="#functioninput">Sequence[Function<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
 
@@ -11873,7 +11873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Dict[Function<wbr>Output]</a></span>
+        <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 
@@ -12052,7 +12052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response] | Dict[Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args, Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -12062,7 +12062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">List[Function<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#functioninputresponse">Sequence[Function<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
 
@@ -12072,7 +12072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Dict[Function<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 
@@ -12267,11 +12267,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertycolumns_python">
-<a href="#propertycolumns_python" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
+        <span id="property_columns_python">
+<a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd>
 
@@ -12297,8 +12297,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12307,8 +12307,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12506,11 +12506,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertycolumns_python">
-<a href="#propertycolumns_python" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
+        <span id="property_columns_python">
+<a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd>
 
@@ -12536,8 +12536,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12546,8 +12546,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12745,11 +12745,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertycolumns_python">
-<a href="#propertycolumns_python" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
+        <span id="property_columns_python">
+<a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd>
 
@@ -12765,8 +12765,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12775,8 +12775,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12984,11 +12984,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertycolumns_python">
-<a href="#propertycolumns_python" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
+        <span id="property_columns_python">
+<a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd>
 
@@ -13004,8 +13004,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicykey_python">
-<a href="#sharedaccesspolicykey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
+        <span id="shared_access_policy_key_python">
+<a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13014,8 +13014,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedaccesspolicyname_python">
-<a href="#sharedaccesspolicyname_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
+        <span id="shared_access_policy_name_python">
+<a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13533,7 +13533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source] | Dict[Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source] | Dict[Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source]</span>
+        <span class="property-type">Union[Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args, Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args, Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -13543,7 +13543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Serialization] | Dict[Csv<wbr>Serialization] | Dict[Json<wbr>Serialization]</span>
+        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Args, Csv<wbr>Serialization<wbr>Args, Json<wbr>Serialization<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -13712,7 +13712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Dict[Diagnostics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
 
@@ -13732,7 +13732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response] | Dict[Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response] | Dict[Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response]</span>
+        <span class="property-type">Union[Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 
@@ -13742,7 +13742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Avro<wbr>Serialization<wbr>Response] | Dict[Csv<wbr>Serialization<wbr>Response] | Dict[Json<wbr>Serialization<wbr>Response]</span>
+        <span class="property-type">Union[Avro<wbr>Serialization<wbr>Response<wbr>Args, Csv<wbr>Serialization<wbr>Response<wbr>Args, Json<wbr>Serialization<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 

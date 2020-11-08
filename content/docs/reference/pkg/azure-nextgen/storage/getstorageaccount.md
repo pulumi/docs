@@ -430,7 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -747,7 +747,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1064,7 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1179,7 +1179,7 @@ The following output properties are available:
 <a href="#blob_restore_status_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>restore_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorestatusresponse">Dict[Blob<wbr>Restore<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobrestorestatusresponse">Blob<wbr>Restore<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Blob restore status{{% /md %}}</dd>
 
@@ -1199,7 +1199,7 @@ The following output properties are available:
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainresponse">Dict[Custom<wbr>Domain<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customdomainresponse">Custom<wbr>Domain<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the custom domain the user assigned to this storage account.{{% /md %}}</dd>
 
@@ -1209,7 +1209,7 @@ The following output properties are available:
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Dict[Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the encryption settings on the account. If unspecified, the account is unencrypted.{{% /md %}}</dd>
 
@@ -1229,7 +1229,7 @@ The following output properties are available:
 <a href="#geo_replication_stats_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>replication_<wbr>stats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#georeplicationstatsresponse">Dict[Geo<wbr>Replication<wbr>Stats<wbr>Response]</a></span>
+        <span class="property-type"><a href="#georeplicationstatsresponse">Geo<wbr>Replication<wbr>Stats<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Geo Replication Stats{{% /md %}}</dd>
 
@@ -1279,7 +1279,7 @@ The following output properties are available:
 <a href="#network_rule_set_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Dict[Network<wbr>Rule<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network rule set{{% /md %}}</dd>
 
@@ -1289,7 +1289,7 @@ The following output properties are available:
 <a href="#primary_endpoints_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Dict[Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.{{% /md %}}</dd>
 
@@ -1309,7 +1309,7 @@ The following output properties are available:
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection associated with the specified storage account{{% /md %}}</dd>
 
@@ -1329,7 +1329,7 @@ The following output properties are available:
 <a href="#secondary_endpoints_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Dict[Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.{{% /md %}}</dd>
 
@@ -1349,7 +1349,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the SKU.{{% /md %}}</dd>
 
@@ -1381,7 +1381,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1399,7 +1399,7 @@ The following output properties are available:
 <a href="#azure_files_identity_based_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>files_<wbr>identity_<wbr>based_<wbr>authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesidentitybasedauthenticationresponse">Dict[Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefilesidentitybasedauthenticationresponse">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provides the identity based authentication settings for Azure Files.{{% /md %}}</dd>
 
@@ -1419,7 +1419,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -1459,7 +1459,7 @@ The following output properties are available:
 <a href="#routing_preference_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>preference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpreferenceresponse">Dict[Routing<wbr>Preference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingpreferenceresponse">Routing<wbr>Preference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd>
 
@@ -1469,7 +1469,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1873,7 +1873,7 @@ The following output properties are available:
 <a href="#active_directory_properties_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Dict[Active<wbr>Directory<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
 
@@ -1982,7 +1982,7 @@ The following output properties are available:
 <a href="#blob_ranges_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">List[Blob<wbr>Restore<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">Sequence[Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd>
 
@@ -2097,8 +2097,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="endrange_python">
-<a href="#endrange_python" style="color: inherit; text-decoration: inherit;">end<wbr>Range</a>
+        <span id="end_range_python">
+<a href="#end_range_python" style="color: inherit; text-decoration: inherit;">end_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2107,8 +2107,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="startrange_python">
-<a href="#startrange_python" style="color: inherit; text-decoration: inherit;">start<wbr>Range</a>
+        <span id="start_range_python">
+<a href="#start_range_python" style="color: inherit; text-decoration: inherit;">start_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2290,7 +2290,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Dict[Blob<wbr>Restore<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd>
 
@@ -2608,7 +2608,7 @@ The following output properties are available:
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
 
@@ -2628,7 +2628,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Dict[Encryption<wbr>Services<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
 
@@ -2956,7 +2956,7 @@ The following output properties are available:
 <a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
 
@@ -2966,7 +2966,7 @@ The following output properties are available:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
 
@@ -2976,7 +2976,7 @@ The following output properties are available:
 <a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
 
@@ -2986,7 +2986,7 @@ The following output properties are available:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
 
@@ -3335,7 +3335,7 @@ The following output properties are available:
 <a href="#internet_endpoints_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Dict[Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd>
 
@@ -3345,7 +3345,7 @@ The following output properties are available:
 <a href="#microsoft_endpoints_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Dict[Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd>
 
@@ -3609,8 +3609,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ipaddressorrange_python">
-<a href="#ipaddressorrange_python" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress<wbr>Or<wbr>Range</a>
+        <span id="i_p_address_or_range_python">
+<a href="#i_p_address_or_range_python" style="color: inherit; text-decoration: inherit;">i_<wbr>p_<wbr>address_<wbr>or_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4210,7 +4210,7 @@ The following output properties are available:
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List[IPRule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
 
@@ -4220,7 +4220,7 @@ The following output properties are available:
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
 
@@ -4250,7 +4250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4290,7 +4290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4317,7 +4317,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4357,7 +4357,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4384,7 +4384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4424,7 +4424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4451,7 +4451,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4469,7 +4469,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
 
@@ -4491,7 +4491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4499,7 +4499,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 
@@ -5628,8 +5628,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnetworkresourceid_python">
-<a href="#virtualnetworkresourceid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Resource<wbr>Id</a>
+        <span id="virtual_network_resource_id_python">
+<a href="#virtual_network_resource_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

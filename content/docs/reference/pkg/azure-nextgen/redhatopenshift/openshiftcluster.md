@@ -163,44 +163,44 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 open_shift_cluster = azure_nextgen.redhatopenshift.latest.OpenShiftCluster("openShiftCluster",
-    apiserver_profile={
-        "visibility": "Public",
-    },
-    cluster_profile={
-        "domain": "cluster.location.aroapp.io",
-        "pullSecret": "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
-        "resourceGroupId": "/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
-    },
-    console_profile={},
-    ingress_profiles=[{
-        "name": "default",
-        "visibility": "Public",
-    }],
+    apiserver_profile=azure_nextgen.redhatopenshift.latest.APIServerProfileArgs(
+        visibility="Public",
+    ),
+    cluster_profile=azure_nextgen.redhatopenshift.latest.ClusterProfileArgs(
+        domain="cluster.location.aroapp.io",
+        pull_secret="{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
+        resource_group_id="/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
+    ),
+    console_profile=azure_nextgen.redhatopenshift.latest.ConsoleProfileArgs(),
+    ingress_profiles=[azure_nextgen.redhatopenshift.latest.IngressProfileArgs(
+        name="default",
+        visibility="Public",
+    )],
     location="location",
-    master_profile={
-        "subnetId": "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
-        "vmSize": "Standard_D8s_v3",
-    },
-    network_profile={
-        "podCidr": "10.128.0.0/14",
-        "serviceCidr": "172.30.0.0/16",
-    },
+    master_profile=azure_nextgen.redhatopenshift.latest.MasterProfileArgs(
+        subnet_id="/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
+        vm_size="Standard_D8s_v3",
+    ),
+    network_profile=azure_nextgen.redhatopenshift.latest.NetworkProfileArgs(
+        pod_cidr="10.128.0.0/14",
+        service_cidr="172.30.0.0/16",
+    ),
     resource_group_name="resourceGroup",
     resource_name="resourceName",
-    service_principal_profile={
-        "clientId": "clientId",
-        "clientSecret": "clientSecret",
-    },
+    service_principal_profile=azure_nextgen.redhatopenshift.latest.ServicePrincipalProfileArgs(
+        client_id="clientId",
+        client_secret="clientSecret",
+    ),
     tags={
         "key": "value",
     },
-    worker_profiles=[{
-        "count": 3,
-        "diskSizeGB": 128,
-        "name": "worker",
-        "subnetId": "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker",
-        "vmSize": "Standard_D2s_v3",
-    }])
+    worker_profiles=[azure_nextgen.redhatopenshift.latest.WorkerProfileArgs(
+        count=3,
+        disk_size_gb=128,
+        name="worker",
+        subnet_id="/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker",
+        vm_size="Standard_D2s_v3",
+    )])
 
 ```
 
@@ -269,7 +269,7 @@ const openShiftCluster = new azure_nextgen.redhatopenshift.latest.OpenShiftClust
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apiserver_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[APIServerProfile]]</span> = None<span class="p">, </span><span class="nx">cluster_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterProfile]]</span> = None<span class="p">, </span><span class="nx">console_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ConsoleProfile]]</span> = None<span class="p">, </span><span class="nx">ingress_profiles</span><span class="p">:</span> <span class="nx">Optional[List[IngressProfile]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[MasterProfile]]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkProfile]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ServicePrincipalProfile]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">worker_profiles</span><span class="p">:</span> <span class="nx">Optional[List[WorkerProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OpenShiftCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apiserver_profile</span><span class="p">:</span> <span class="nx">Optional[APIServerProfileArgs]</span> = None<span class="p">, </span><span class="nx">cluster_profile</span><span class="p">:</span> <span class="nx">Optional[ClusterProfileArgs]</span> = None<span class="p">, </span><span class="nx">console_profile</span><span class="p">:</span> <span class="nx">Optional[ConsoleProfileArgs]</span> = None<span class="p">, </span><span class="nx">ingress_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[IngressProfileArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_profile</span><span class="p">:</span> <span class="nx">Optional[MasterProfileArgs]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[ServicePrincipalProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">worker_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkerProfileArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -888,7 +888,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#apiserver_profile_python" style="color: inherit; text-decoration: inherit;">apiserver_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiserverprofile">Dict[APIServer<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#apiserverprofile">APIServer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster API server profile.{{% /md %}}</dd>
 
@@ -898,7 +898,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#cluster_profile_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprofile">Dict[Cluster<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#clusterprofile">Cluster<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster profile.{{% /md %}}</dd>
 
@@ -908,7 +908,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#console_profile_python" style="color: inherit; text-decoration: inherit;">console_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consoleprofile">Dict[Console<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#consoleprofile">Console<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The console profile.{{% /md %}}</dd>
 
@@ -918,7 +918,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#ingress_profiles_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressprofile">List[Ingress<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#ingressprofile">Sequence[Ingress<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster ingress profiles.{{% /md %}}</dd>
 
@@ -928,7 +928,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#master_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterprofile">Dict[Master<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#masterprofile">Master<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster master profile.{{% /md %}}</dd>
 
@@ -938,7 +938,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Dict[Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster network profile.{{% /md %}}</dd>
 
@@ -958,7 +958,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalprofile">Dict[Service<wbr>Principal<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#serviceprincipalprofile">Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster service principal profile.{{% /md %}}</dd>
 
@@ -968,7 +968,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -978,7 +978,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#worker_profiles_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerprofile">List[Worker<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#workerprofile">Sequence[Worker<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster worker profiles.{{% /md %}}</dd>
 
@@ -1028,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1102,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1139,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#custom_image_plan_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>image_<wbr>plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromplanresponse">Dict[Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromplanresponse">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#data_disk_storage_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>storage_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskstoragetypeinforesponse">List[Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskstoragetypeinforesponse">Sequence[Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The following output properties are available:
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiescustomresponse">Dict[Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customimagepropertiescustomresponse">Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following output properties are available:
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromvmresponse">Dict[Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromvmresponse">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd>
 
@@ -1372,7 +1372,7 @@ The following output properties are available:
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Dict[Linux<wbr>Os<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
 
@@ -1392,7 +1392,7 @@ The following output properties are available:
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Dict[Windows<wbr>Os<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
 

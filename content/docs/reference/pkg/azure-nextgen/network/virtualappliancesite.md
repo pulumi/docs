@@ -95,13 +95,13 @@ import pulumi_azure_nextgen as azure_nextgen
 virtual_appliance_site = azure_nextgen.network.latest.VirtualApplianceSite("virtualApplianceSite",
     address_prefix="192.168.1.0/24",
     network_virtual_appliance_name="nva",
-    o365_policy={
-        "breakOutCategories": {
-            "allow": True,
-            "default": True,
-            "optimize": True,
-        },
-    },
+    o365_policy=azure_nextgen.network.latest.Office365PolicyPropertiesArgs(
+        break_out_categories=azure_nextgen.network.latest.BreakOutCategoryPoliciesArgs(
+            allow=True,
+            default=True,
+            optimize=True,
+        ),
+    ),
     resource_group_name="rg1",
     site_name="site1")
 
@@ -145,7 +145,7 @@ const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_virtual_appliance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">o365_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[Office365PolicyProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_virtual_appliance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">o365_policy</span><span class="p">:</span> <span class="nx">Optional[Office365PolicyPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -614,7 +614,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#o365_policy_python" style="color: inherit; text-decoration: inherit;">o365_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#office365policyproperties">Dict[Office365Policy<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#office365policyproperties">Office365Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 Policy.{{% /md %}}</dd>
 
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypolicies">Dict[Break<wbr>Out<wbr>Category<wbr>Policies]</a></span>
+        <span class="property-type"><a href="#breakoutcategorypolicies">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd>
 
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Dict[Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd>
 

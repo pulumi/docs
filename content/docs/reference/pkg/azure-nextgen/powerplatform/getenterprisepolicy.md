@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Dict[System<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertiesresponseencryption">Dict[Properties<wbr>Response<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#propertiesresponseencryption">Properties<wbr>Response<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentityresponse">Dict[Enterprise<wbr>Policy<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enterprisepolicyidentityresponse">Enterprise<wbr>Policy<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the EnterprisePolicy.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#lockbox_python" style="color: inherit; text-decoration: inherit;">lockbox</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertiesresponselockbox">Dict[Properties<wbr>Response<wbr>Lockbox]</a></span>
+        <span class="property-type"><a href="#propertiesresponselockbox">Properties<wbr>Response<wbr>Lockbox</a></span>
     </dt>
     <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -952,7 +952,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keypropertiesresponse">Dict[Key<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keypropertiesresponse">Key<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd>
 
@@ -1031,7 +1031,7 @@ The following output properties are available:
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd>
 

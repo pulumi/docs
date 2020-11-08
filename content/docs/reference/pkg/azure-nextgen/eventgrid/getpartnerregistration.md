@@ -773,7 +773,7 @@ integration on an event source.{{% /md %}}</dd>
 <a href="#authorized_azure_subscription_ids_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>azure_<wbr>subscription_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
@@ -891,7 +891,7 @@ integration on an event source.{{% /md %}}</dd>
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
 

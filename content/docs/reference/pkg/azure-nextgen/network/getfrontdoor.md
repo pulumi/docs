@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#rules_engines_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineresponse">List[Rules<wbr>Engine<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rulesengineresponse">Sequence[Rules<wbr>Engine<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Rules Engine Configurations available to routing rules.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendpoolresponse">List[Backend<wbr>Pool<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendpoolresponse">Sequence[Backend<wbr>Pool<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Backend pools available to routing rules.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#backend_pools_settings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendpoolssettingsresponse">Dict[Backend<wbr>Pools<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendpoolssettingsresponse">Backend<wbr>Pools<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for all backendPools{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendendpointresponse">List[Frontend<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#frontendendpointresponse">Sequence[Frontend<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Frontend endpoints available to routing rules.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobesettingsmodelresponse">List[Health<wbr>Probe<wbr>Settings<wbr>Model<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthprobesettingsmodelresponse">Sequence[Health<wbr>Probe<wbr>Settings<wbr>Model<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings associated with this Front Door instance.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#load_balancing_settings_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingsettingsmodelresponse">List[Load<wbr>Balancing<wbr>Settings<wbr>Model<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loadbalancingsettingsmodelresponse">Sequence[Load<wbr>Balancing<wbr>Settings<wbr>Model<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings associated with this Front Door instance.{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruleresponse">List[Routing<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingruleresponse">Sequence[Routing<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Routing rules associated with this Front Door.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1154,7 +1154,7 @@ The following output properties are available:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendresponse">List[Backend<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendresponse">Sequence[Backend<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends for this pool{{% /md %}}</dd>
 
@@ -1164,7 +1164,7 @@ The following output properties are available:
 <a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}L7 health probe settings for a backend pool{{% /md %}}</dd>
 
@@ -1184,7 +1184,7 @@ The following output properties are available:
 <a href="#load_balancing_settings_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd>
 
@@ -1738,8 +1738,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backendhostheader_python">
-<a href="#backendhostheader_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Host<wbr>Header</a>
+        <span id="backend_host_header_python">
+<a href="#backend_host_header_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>host_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1997,8 +1997,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacheduration_python">
-<a href="#cacheduration_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
+        <span id="cache_duration_python">
+<a href="#cache_duration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2007,8 +2007,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dynamiccompression_python">
-<a href="#dynamiccompression_python" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Compression</a>
+        <span id="dynamic_compression_python">
+<a href="#dynamic_compression_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>compression</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2017,8 +2017,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="queryparameterstripdirective_python">
-<a href="#queryparameterstripdirective_python" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
+        <span id="query_parameter_strip_directive_python">
+<a href="#query_parameter_strip_directive_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>strip_<wbr>directive</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2286,8 +2286,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="certificatesource_python">
-<a href="#certificatesource_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
+        <span id="certificate_source_python">
+<a href="#certificate_source_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2306,8 +2306,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="protocoltype_python">
-<a href="#protocoltype_python" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
+        <span id="protocol_type_python">
+<a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2316,23 +2316,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatetype_python">
-<a href="#certificatetype_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Type</a>
+        <span id="certificate_type_python">
+<a href="#certificate_type_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the type of the certificate used for secure connections to a frontendEndpoint{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="secretversion_python">
-<a href="#secretversion_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2346,11 +2336,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="vault_python">
 <a href="#vault_python" style="color: inherit; text-decoration: inherit;">vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponsevault">Dict[Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponsevault">Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault containing the SSL certificate{{% /md %}}</dd>
 
@@ -2515,28 +2515,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backendpool_python">
-<a href="#backendpool_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool</a>
+        <span id="backend_pool_python">
+<a href="#backend_pool_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacheconfiguration_python">
-<a href="#cacheconfiguration_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Configuration</a>
+        <span id="cache_configuration_python">
+<a href="#cache_configuration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfigurationresponse">Dict[Cache<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customforwardingpath_python">
-<a href="#customforwardingpath_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Forwarding<wbr>Path</a>
+        <span id="custom_forwarding_path_python">
+<a href="#custom_forwarding_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>forwarding_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2545,8 +2545,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forwardingprotocol_python">
-<a href="#forwardingprotocol_python" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
+        <span id="forwarding_protocol_python">
+<a href="#forwarding_protocol_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2924,11 +2924,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="customhttpsconfiguration_python">
-<a href="#customhttpsconfiguration_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
+        <span id="custom_https_configuration_python">
+<a href="#custom_https_configuration_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhttpsconfigurationresponse">Dict[Custom<wbr>Https<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customhttpsconfigurationresponse">Custom<wbr>Https<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration specifying how to enable HTTPS{{% /md %}}</dd>
 
@@ -3004,8 +3004,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionaffinityenabledstate_python">
-<a href="#sessionaffinityenabledstate_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Enabled<wbr>State</a>
+        <span id="session_affinity_enabled_state_python">
+<a href="#session_affinity_enabled_state_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>enabled_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3014,8 +3014,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionaffinityttlseconds_python">
-<a href="#sessionaffinityttlseconds_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
+        <span id="session_affinity_ttl_seconds_python">
+<a href="#session_affinity_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>ttl_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3028,7 +3028,7 @@ The following output properties are available:
 <a href="#web_application_firewall_policy_link_python" style="color: inherit; text-decoration: inherit;">web_<wbr>application_<wbr>firewall_<wbr>policy_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendendpointupdateparametersresponsewebapplicationfirewallpolicylink">Dict[Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link]</a></span>
+        <span class="property-type"><a href="#frontendendpointupdateparametersresponsewebapplicationfirewallpolicylink">Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each host (if applicable){{% /md %}}</dd>
 
@@ -3242,8 +3242,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="headeractiontype_python">
-<a href="#headeractiontype_python" style="color: inherit; text-decoration: inherit;">header<wbr>Action<wbr>Type</a>
+        <span id="header_action_type_python">
+<a href="#header_action_type_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3252,8 +3252,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3611,8 +3611,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthprobemethod_python">
-<a href="#healthprobemethod_python" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Method</a>
+        <span id="health_probe_method_python">
+<a href="#health_probe_method_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4019,8 +4019,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionallatencymilliseconds_python">
-<a href="#additionallatencymilliseconds_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>Milliseconds</a>
+        <span id="additional_latency_milliseconds_python">
+<a href="#additional_latency_milliseconds_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>latency_<wbr>milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4049,8 +4049,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplesize_python">
-<a href="#samplesize_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
+        <span id="sample_size_python">
+<a href="#sample_size_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4059,8 +4059,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successfulsamplesrequired_python">
-<a href="#successfulsamplesrequired_python" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
+        <span id="successful_samples_required_python">
+<a href="#successful_samples_required_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>samples_<wbr>required</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4288,8 +4288,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customfragment_python">
-<a href="#customfragment_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
+        <span id="custom_fragment_python">
+<a href="#custom_fragment_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fragment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4298,8 +4298,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customhost_python">
-<a href="#customhost_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Host</a>
+        <span id="custom_host_python">
+<a href="#custom_host_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4308,8 +4308,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custompath_python">
-<a href="#custompath_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
+        <span id="custom_path_python">
+<a href="#custom_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4318,8 +4318,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customquerystring_python">
-<a href="#customquerystring_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
+        <span id="custom_query_string_python">
+<a href="#custom_query_string_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4328,8 +4328,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectprotocol_python">
-<a href="#redirectprotocol_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Protocol</a>
+        <span id="redirect_protocol_python">
+<a href="#redirect_protocol_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4338,8 +4338,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirecttype_python">
-<a href="#redirecttype_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+        <span id="redirect_type_python">
+<a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4737,11 +4737,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="acceptedprotocols_python">
-<a href="#acceptedprotocols_python" style="color: inherit; text-decoration: inherit;">accepted<wbr>Protocols</a>
+        <span id="accepted_protocols_python">
+<a href="#accepted_protocols_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for this rule{{% /md %}}</dd>
 
@@ -4761,7 +4761,7 @@ The following output properties are available:
 <a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Frontend endpoints associated with this rule{{% /md %}}</dd>
 
@@ -4787,31 +4787,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="patternstomatch_python">
-<a href="#patternstomatch_python" style="color: inherit; text-decoration: inherit;">patterns<wbr>To<wbr>Match</a>
+        <span id="patterns_to_match_python">
+<a href="#patterns_to_match_python" style="color: inherit; text-decoration: inherit;">patterns_<wbr>to_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routeconfiguration_python">
-<a href="#routeconfiguration_python" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
+        <span id="route_configuration_python">
+<a href="#route_configuration_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Forwarding<wbr>Configuration<wbr>Response] | Dict[Redirect<wbr>Configuration<wbr>Response]</span>
+        <span class="property-type">Union[Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Redirect<wbr>Configuration<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rulesengine_python">
-<a href="#rulesengine_python" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine</a>
+        <span id="rules_engine_python">
+<a href="#rules_engine_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a specific Rules Engine Configuration to apply to this route.{{% /md %}}</dd>
 
@@ -4821,7 +4821,7 @@ The following output properties are available:
 <a href="#web_application_firewall_policy_link_python" style="color: inherit; text-decoration: inherit;">web_<wbr>application_<wbr>firewall_<wbr>policy_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruleupdateparametersresponsewebapplicationfirewallpolicylink">Dict[Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link]</a></span>
+        <span class="property-type"><a href="#routingruleupdateparametersresponsewebapplicationfirewallpolicylink">Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each routing rule (if applicable){{% /md %}}</dd>
 
@@ -5035,31 +5035,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderactions_python">
-<a href="#requestheaderactions_python" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Actions</a>
+        <span id="request_header_actions_python">
+<a href="#request_header_actions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">List[Header<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#headeractionresponse">Sequence[Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaderactions_python">
-<a href="#responseheaderactions_python" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Actions</a>
+        <span id="response_header_actions_python">
+<a href="#response_header_actions_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">List[Header<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#headeractionresponse">Sequence[Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routeconfigurationoverride_python">
-<a href="#routeconfigurationoverride_python" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration<wbr>Override</a>
+        <span id="route_configuration_override_python">
+<a href="#route_configuration_override_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Forwarding<wbr>Configuration<wbr>Response] | Dict[Redirect<wbr>Configuration<wbr>Response]</span>
+        <span class="property-type">Union[Forwarding<wbr>Configuration<wbr>Response<wbr>Args, Redirect<wbr>Configuration<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
 
@@ -5284,18 +5284,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rulesenginematchvalue_python">
-<a href="#rulesenginematchvalue_python" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Match<wbr>Value</a>
+        <span id="rules_engine_match_value_python">
+<a href="#rules_engine_match_value_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>match_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="rulesenginematchvariable_python">
-<a href="#rulesenginematchvariable_python" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Match<wbr>Variable</a>
+        <span id="rules_engine_match_variable_python">
+<a href="#rules_engine_match_variable_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5304,8 +5304,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rulesengineoperator_python">
-<a href="#rulesengineoperator_python" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Operator</a>
+        <span id="rules_engine_operator_python">
+<a href="#rules_engine_operator_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5314,8 +5314,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5338,7 +5338,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
 
@@ -5577,7 +5577,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineruleresponse">List[Rules<wbr>Engine<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rulesengineruleresponse">Sequence[Rules<wbr>Engine<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd>
 
@@ -5776,7 +5776,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineactionresponse">Dict[Rules<wbr>Engine<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
 
@@ -5802,18 +5802,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchconditionresponse">List[Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rulesenginematchconditionresponse">Sequence[Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchprocessingbehavior_python">
-<a href="#matchprocessingbehavior_python" style="color: inherit; text-decoration: inherit;">match<wbr>Processing<wbr>Behavior</a>
+        <span id="match_processing_behavior_python">
+<a href="#match_processing_behavior_python" style="color: inherit; text-decoration: inherit;">match_<wbr>processing_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -87,11 +87,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 solution = azure_nextgen.migrate.v20180901preview.Solution("solution",
     migrate_project_name="project01",
-    properties={
-        "goal": "Databases",
-        "purpose": "Assessment",
-        "tool": "DataMigrationAssistant",
-    },
+    properties=azure_nextgen.migrate.v20180901preview.SolutionPropertiesArgs(
+        goal="Databases",
+        purpose="Assessment",
+        tool="DataMigrationAssistant",
+    ),
     resource_group_name="myResourceGroup",
     solution_name="dbsolution")
 
@@ -132,7 +132,7 @@ const solution = new azure_nextgen.migrate.v20180901preview.Solution("solution",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[SolutionProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SolutionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -521,7 +521,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Dict[Solution<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of the solution.{{% /md %}}</dd>
 
@@ -824,8 +824,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databaseinstancesassessedcount_python">
-<a href="#databaseinstancesassessedcount_python" style="color: inherit; text-decoration: inherit;">database<wbr>Instances<wbr>Assessed<wbr>Count</a>
+        <span id="database_instances_assessed_count_python">
+<a href="#database_instances_assessed_count_python" style="color: inherit; text-decoration: inherit;">database_<wbr>instances_<wbr>assessed_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -834,8 +834,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databasesassessedcount_python">
-<a href="#databasesassessedcount_python" style="color: inherit; text-decoration: inherit;">databases<wbr>Assessed<wbr>Count</a>
+        <span id="databases_assessed_count_python">
+<a href="#databases_assessed_count_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>assessed_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -844,8 +844,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationreadycount_python">
-<a href="#migrationreadycount_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Ready<wbr>Count</a>
+        <span id="migration_ready_count_python">
+<a href="#migration_ready_count_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>ready_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1043,8 +1043,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="assessedcount_python">
-<a href="#assessedcount_python" style="color: inherit; text-decoration: inherit;">assessed<wbr>Count</a>
+        <span id="assessed_count_python">
+<a href="#assessed_count_python" style="color: inherit; text-decoration: inherit;">assessed_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1053,8 +1053,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="discoveredcount_python">
-<a href="#discoveredcount_python" style="color: inherit; text-decoration: inherit;">discovered<wbr>Count</a>
+        <span id="discovered_count_python">
+<a href="#discovered_count_python" style="color: inherit; text-decoration: inherit;">discovered_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1063,8 +1063,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migratedcount_python">
-<a href="#migratedcount_python" style="color: inherit; text-decoration: inherit;">migrated<wbr>Count</a>
+        <span id="migrated_count_python">
+<a href="#migrated_count_python" style="color: inherit; text-decoration: inherit;">migrated_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1073,8 +1073,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicatingcount_python">
-<a href="#replicatingcount_python" style="color: inherit; text-decoration: inherit;">replicating<wbr>Count</a>
+        <span id="replicating_count_python">
+<a href="#replicating_count_python" style="color: inherit; text-decoration: inherit;">replicating_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1083,8 +1083,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="testmigratedcount_python">
-<a href="#testmigratedcount_python" style="color: inherit; text-decoration: inherit;">test<wbr>Migrated<wbr>Count</a>
+        <span id="test_migrated_count_python">
+<a href="#test_migrated_count_python" style="color: inherit; text-decoration: inherit;">test_<wbr>migrated_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1236,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_details_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd>
 
@@ -1395,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_details_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd>
 
@@ -1644,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetails">Dict[Solution<wbr>Details]</a></span>
+        <span class="property-type"><a href="#solutiondetails">Solution<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
 
@@ -1953,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Dict[Solution<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
 
@@ -1993,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Databases<wbr>Solution<wbr>Summary<wbr>Response] | Dict[Servers<wbr>Solution<wbr>Summary<wbr>Response]</span>
+        <span class="property-type">Union[Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args, Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
 

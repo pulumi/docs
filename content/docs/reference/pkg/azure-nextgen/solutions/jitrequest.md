@@ -23,7 +23,7 @@ Information about JIT request definition.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JitRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jit_authorization_policies</span><span class="p">:</span> <span class="nx">Optional[List[JitAuthorizationPolicies]]</span> = None<span class="p">, </span><span class="nx">jit_request_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jit_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[JitSchedulingPolicy]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JitRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jit_authorization_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[JitAuthorizationPoliciesArgs]]</span> = None<span class="p">, </span><span class="nx">jit_request_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jit_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[JitSchedulingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -442,7 +442,7 @@ The JitRequest resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#jit_authorization_policies_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>authorization_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitauthorizationpolicies">List[Jit<wbr>Authorization<wbr>Policies]</a></span>
+        <span class="property-type"><a href="#jitauthorizationpolicies">Sequence[Jit<wbr>Authorization<wbr>Policies<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The JIT authorization policies.{{% /md %}}</dd>
 
@@ -462,7 +462,7 @@ The JitRequest resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#jit_scheduling_policy_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>scheduling_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitschedulingpolicy">Dict[Jit<wbr>Scheduling<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#jitschedulingpolicy">Jit<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JIT request properties.{{% /md %}}</dd>
 
@@ -492,7 +492,7 @@ The JitRequest resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -781,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Dict[Application<wbr>Client<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that created the JIT request.{{% /md %}}</dd>
 
@@ -851,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Dict[Application<wbr>Client<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that last updated the JIT request.{{% /md %}}</dd>
 

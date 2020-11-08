@@ -118,10 +118,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 adc_catalog = azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog",
-    admins=[{
-        "objectId": "99999999-9999-9999-999999999999",
-        "upn": "myupn@microsoft.com",
-    }],
+    admins=[azure_nextgen.datacatalog.latest.PrincipalsArgs(
+        object_id="99999999-9999-9999-999999999999",
+        upn="myupn@microsoft.com",
+    )],
     catalog_name="exampleCatalog",
     enable_automatic_unit_adjustment=False,
     location="North US",
@@ -132,10 +132,10 @@ adc_catalog = azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog",
         "mykey2": "myvalue2",
     },
     units=1,
-    users=[{
-        "objectId": "99999999-9999-9999-999999999999",
-        "upn": "myupn@microsoft.com",
-    }])
+    users=[azure_nextgen.datacatalog.latest.PrincipalsArgs(
+        object_id="99999999-9999-9999-999999999999",
+        upn="myupn@microsoft.com",
+    )])
 
 ```
 
@@ -184,7 +184,7 @@ const adcCatalog = new azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ADCCatalog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admins</span><span class="p">:</span> <span class="nx">Optional[List[Principals]]</span> = None<span class="p">, </span><span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_automatic_unit_adjustment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">successfully_provisioned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[Principals]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ADCCatalog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admins</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrincipalsArgs]]</span> = None<span class="p">, </span><span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_automatic_unit_adjustment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">successfully_provisioned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrincipalsArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -733,7 +733,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#admins_python" style="color: inherit; text-decoration: inherit;">admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principals">List[Principals]</a></span>
+        <span class="property-type"><a href="#principals">Sequence[Principals<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd>
 
@@ -793,7 +793,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -813,7 +813,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principals">List[Principals]</a></span>
+        <span class="property-type"><a href="#principals">Sequence[Principals<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd>
 

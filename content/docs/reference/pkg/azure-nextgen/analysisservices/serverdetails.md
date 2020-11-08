@@ -107,20 +107,20 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 server_details = azure_nextgen.analysisservices.latest.ServerDetails("serverDetails",
-    as_administrators={
-        "members": [
+    as_administrators=azure_nextgen.analysisservices.latest.ServerAdministratorsArgs(
+        members=[
             "azsdktest@microsoft.com",
             "azsdktest2@microsoft.com",
         ],
-    },
+    ),
     location="West US",
     resource_group_name="TestRG",
     server_name="azsdktest",
-    sku={
-        "capacity": 1,
-        "name": "S1",
-        "tier": "Standard",
-    },
+    sku=azure_nextgen.analysisservices.latest.ResourceSkuArgs(
+        capacity=1,
+        name="S1",
+        tier="Standard",
+    ),
     tags={
         "testKey": "testValue",
     })
@@ -171,7 +171,7 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerAdministrators]]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[Dict[GatewayDetails]]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[IPv4FirewallSettings]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[ServerAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[GatewayDetailsArgs]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[IPv4FirewallSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -700,7 +700,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Dict[Resource<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd>
 
@@ -710,7 +710,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#as_administrators_python" style="color: inherit; text-decoration: inherit;">as_<wbr>administrators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveradministrators">Dict[Server<wbr>Administrators]</a></span>
+        <span class="property-type"><a href="#serveradministrators">Server<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd>
 
@@ -730,7 +730,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#gateway_details_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydetails">Dict[Gateway<wbr>Details]</a></span>
+        <span class="property-type"><a href="#gatewaydetails">Gateway<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd>
 
@@ -740,7 +740,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ip_v4_firewall_settings_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>v4_<wbr>firewall_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallsettings">Dict[IPv4Firewall<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
 
@@ -760,7 +760,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd>
 
@@ -1431,8 +1431,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangeend_python">
-<a href="#rangeend_python" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
+        <span id="range_end_python">
+<a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1441,8 +1441,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangestart_python">
-<a href="#rangestart_python" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
+        <span id="range_start_python">
+<a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1590,8 +1590,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangeend_python">
-<a href="#rangeend_python" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
+        <span id="range_end_python">
+<a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1600,8 +1600,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangestart_python">
-<a href="#rangestart_python" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
+        <span id="range_start_python">
+<a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1723,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallrule">List[IPv4Firewall<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#ipv4firewallrule">Sequence[IPv4Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
 
@@ -1842,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">List[IPv4Firewall<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">Sequence[IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
 
@@ -2239,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
 
@@ -2318,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
 

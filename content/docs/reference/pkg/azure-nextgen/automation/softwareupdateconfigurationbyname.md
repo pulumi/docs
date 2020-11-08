@@ -167,56 +167,56 @@ import pulumi_azure_nextgen as azure_nextgen
 software_update_configuration_by_name = azure_nextgen.automation.v20170515preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
     automation_account_name="myaccount",
     resource_group_name="mygroup",
-    schedule_info={
-        "advancedSchedule": {
-            "weekDays": [
+    schedule_info=azure_nextgen.automation.v20170515preview.SchedulePropertiesArgs(
+        advanced_schedule=azure_nextgen.automation.v20170515preview.AdvancedScheduleArgs(
+            week_days=[
                 "Monday",
                 "Thursday",
             ],
-        },
-        "expiryTime": "2018-11-09T11:22:57+00:00",
-        "frequency": "Hour",
-        "interval": 1,
-        "startTime": "2017-10-19T12:22:57+00:00",
-        "timeZone": "America/Los_Angeles",
-    },
+        ),
+        expiry_time="2018-11-09T11:22:57+00:00",
+        frequency="Hour",
+        interval=1,
+        start_time="2017-10-19T12:22:57+00:00",
+        time_zone="America/Los_Angeles",
+    ),
     software_update_configuration_name="testpatch",
-    tasks={
-        "postTask": {
-            "source": "GetCache",
-        },
-        "preTask": {
-            "parameters": {
+    tasks=azure_nextgen.automation.v20170515preview.SoftwareUpdateConfigurationTasksArgs(
+        post_task=azure_nextgen.automation.v20170515preview.TaskPropertiesArgs(
+            source="GetCache",
+        ),
+        pre_task=azure_nextgen.automation.v20170515preview.TaskPropertiesArgs(
+            parameters={
                 "COMPUTERNAME": "Computer1",
             },
-            "source": "HelloWorld",
-        },
-    },
-    update_configuration={
-        "azureVirtualMachines": [
+            source="HelloWorld",
+        ),
+    ),
+    update_configuration=azure_nextgen.automation.v20170515preview.UpdateConfigurationArgs(
+        azure_virtual_machines=[
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03",
         ],
-        "duration": "PT2H0M",
-        "nonAzureComputerNames": [
+        duration="PT2H0M",
+        non_azure_computer_names=[
             "box1.contoso.com",
             "box2.contoso.com",
         ],
-        "operatingSystem": "Windows",
-        "targets": {
-            "azureQueries": [{
-                "locations": [
+        operating_system="Windows",
+        targets=azure_nextgen.automation.v20170515preview.TargetPropertiesArgs(
+            azure_queries=[azure_nextgen.automation.v20170515preview.AzureQueryPropertiesArgs(
+                locations=[
                     "Japan East",
                     "UK South",
                 ],
-                "scope": [
+                scope=[
                     "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
                     "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
                 ],
-                "tagSettings": {
-                    "filterOperator": "All",
-                    "tags": [
+                tag_settings=azure_nextgen.automation.v20170515preview.TagSettingsPropertiesArgs(
+                    filter_operator="All",
+                    tags=[
                         {
                             "tag1": [
                                 "tag1Value1",
@@ -232,28 +232,28 @@ software_update_configuration_by_name = azure_nextgen.automation.v20170515previe
                             ],
                         },
                     ],
-                },
-            }],
-            "nonAzureQueries": [
-                {
-                    "functionAlias": "SavedSearch1",
-                    "workspaceId": "WorkspaceId1",
-                },
-                {
-                    "functionAlias": "SavedSearch2",
-                    "workspaceId": "WorkspaceId2",
-                },
+                ),
+            )],
+            non_azure_queries=[
+                azure_nextgen.automation.v20170515preview.NonAzureQueryPropertiesArgs(
+                    function_alias="SavedSearch1",
+                    workspace_id="WorkspaceId1",
+                ),
+                azure_nextgen.automation.v20170515preview.NonAzureQueryPropertiesArgs(
+                    function_alias="SavedSearch2",
+                    workspace_id="WorkspaceId2",
+                ),
             ],
-        },
-        "windows": {
-            "excludedKbNumbers": [
+        ),
+        windows=azure_nextgen.automation.v20170515preview.WindowsPropertiesArgs(
+            excluded_kb_numbers=[
                 "168934",
                 "168973",
             ],
-            "includedUpdateClassifications": "Critical",
-            "rebootSetting": "IfRequired",
-        },
-    })
+            included_update_classifications="Critical",
+            reboot_setting="IfRequired",
+        ),
+    ))
 
 ```
 
@@ -373,7 +373,7 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.v20170515
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error</span><span class="p">:</span> <span class="nx">Optional[Dict[ErrorResponse]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_info</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleProperties]]</span> = None<span class="p">, </span><span class="nx">software_update_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tasks</span><span class="p">:</span> <span class="nx">Optional[Dict[SoftwareUpdateConfigurationTasks]]</span> = None<span class="p">, </span><span class="nx">update_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[UpdateConfiguration]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error</span><span class="p">:</span> <span class="nx">Optional[ErrorResponseArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_info</span><span class="p">:</span> <span class="nx">Optional[SchedulePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">software_update_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tasks</span><span class="p">:</span> <span class="nx">Optional[SoftwareUpdateConfigurationTasksArgs]</span> = None<span class="p">, </span><span class="nx">update_configuration</span><span class="p">:</span> <span class="nx">Optional[UpdateConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -802,7 +802,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#schedule_info_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleproperties">Dict[Schedule<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#scheduleproperties">Schedule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
 
@@ -822,7 +822,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#update_configuration_python" style="color: inherit; text-decoration: inherit;">update_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updateconfiguration">Dict[Update<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#updateconfiguration">Update<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponse">Dict[Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorresponse">Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd>
 
@@ -842,7 +842,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#tasks_python" style="color: inherit; text-decoration: inherit;">tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareupdateconfigurationtasks">Dict[Software<wbr>Update<wbr>Configuration<wbr>Tasks]</a></span>
+        <span class="property-type"><a href="#softwareupdateconfigurationtasks">Software<wbr>Update<wbr>Configuration<wbr>Tasks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd>
 
@@ -1349,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
 
@@ -1359,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">List[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
 
@@ -1369,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -1746,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
 
@@ -1756,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
 
@@ -1766,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
 
@@ -1905,7 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
 
@@ -1915,17 +1915,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagsettings_python">
-<a href="#tagsettings_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Settings</a>
+        <span id="tag_settings_python">
+<a href="#tag_settings_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagsettingsproperties">Dict[Tag<wbr>Settings<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#tagsettingsproperties">Tag<wbr>Settings<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
 
@@ -2064,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of locations to scope the query to.{{% /md %}}</dd>
 
@@ -2074,17 +2074,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Subscription or Resource Group ARM Ids.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagsettings_python">
-<a href="#tagsettings_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Settings</a>
+        <span id="tag_settings_python">
+<a href="#tag_settings_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagsettingspropertiesresponse">Dict[Tag<wbr>Settings<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tagsettingspropertiesresponse">Tag<wbr>Settings<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd>
 
@@ -2491,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_package_name_masks_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>package_<wbr>name_<wbr>masks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
 
@@ -2511,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_package_name_masks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>package_<wbr>name_<wbr>masks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
 
@@ -2690,7 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_package_name_masks_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>package_<wbr>name_<wbr>masks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}packages excluded from the software update configuration.{{% /md %}}</dd>
 
@@ -2710,7 +2710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_package_name_masks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>package_<wbr>name_<wbr>masks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}packages included from the software update configuration.{{% /md %}}</dd>
 
@@ -3397,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advanced_schedule_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedule">Dict[Advanced<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
 
@@ -3996,7 +3996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advanced_schedule_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedscheduleresponse">Dict[Advanced<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd>
 
@@ -4225,7 +4225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_task_python" style="color: inherit; text-decoration: inherit;">post_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskproperties">Dict[Task<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#taskproperties">Task<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
 
@@ -4235,7 +4235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_task_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskproperties">Dict[Task<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#taskproperties">Task<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
 
@@ -4344,7 +4344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_task_python" style="color: inherit; text-decoration: inherit;">post_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskpropertiesresponse">Dict[Task<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Post task properties.{{% /md %}}</dd>
 
@@ -4354,7 +4354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_task_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskpropertiesresponse">Dict[Task<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pre task properties.{{% /md %}}</dd>
 
@@ -4459,8 +4459,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filteroperator_python">
-<a href="#filteroperator_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Operator</a>
+        <span id="filter_operator_python">
+<a href="#filter_operator_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4473,7 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
 
@@ -4578,8 +4578,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filteroperator_python">
-<a href="#filteroperator_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Operator</a>
+        <span id="filter_operator_python">
+<a href="#filter_operator_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4592,7 +4592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Dictionary of tags with its list of values.{{% /md %}}</dd>
 
@@ -4701,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_queries_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurequeryproperties">List[Azure<wbr>Query<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#azurequeryproperties">Sequence[Azure<wbr>Query<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
 
@@ -4711,7 +4711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_azure_queries_python" style="color: inherit; text-decoration: inherit;">non_<wbr>azure_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonazurequeryproperties">List[Non<wbr>Azure<wbr>Query<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#nonazurequeryproperties">Sequence[Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
 
@@ -4820,7 +4820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_queries_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurequerypropertiesresponse">List[Azure<wbr>Query<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurequerypropertiesresponse">Sequence[Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd>
 
@@ -4830,7 +4830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_azure_queries_python" style="color: inherit; text-decoration: inherit;">non_<wbr>azure_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonazurequerypropertiesresponse">List[Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nonazurequerypropertiesresponse">Sequence[Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd>
 
@@ -4939,7 +4939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
 
@@ -5058,7 +5058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the parameters of the task.{{% /md %}}</dd>
 
@@ -5337,7 +5337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_virtual_machines_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>virtual_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
 
@@ -5357,7 +5357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_python" style="color: inherit; text-decoration: inherit;">linux</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxproperties">Dict[Linux<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#linuxproperties">Linux<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
 
@@ -5367,7 +5367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_azure_computer_names_python" style="color: inherit; text-decoration: inherit;">non_<wbr>azure_<wbr>computer_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
 
@@ -5377,7 +5377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetproperties">Dict[Target<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#targetproperties">Target<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
 
@@ -5387,7 +5387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_python" style="color: inherit; text-decoration: inherit;">windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsproperties">Dict[Windows<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#windowsproperties">Windows<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
 
@@ -5656,7 +5656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_virtual_machines_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>virtual_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of azure resource Ids for azure virtual machines targeted by the software update configuration.{{% /md %}}</dd>
 
@@ -5676,7 +5676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_python" style="color: inherit; text-decoration: inherit;">linux</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpropertiesresponse">Dict[Linux<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxpropertiesresponse">Linux<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd>
 
@@ -5686,7 +5686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_azure_computer_names_python" style="color: inherit; text-decoration: inherit;">non_<wbr>azure_<wbr>computer_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of names of non-azure machines targeted by the software update configuration.{{% /md %}}</dd>
 
@@ -5696,7 +5696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetpropertiesresponse">Dict[Target<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targetpropertiesresponse">Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd>
 
@@ -5706,7 +5706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_python" style="color: inherit; text-decoration: inherit;">windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowspropertiesresponse">Dict[Windows<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowspropertiesresponse">Windows<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd>
 
@@ -5875,7 +5875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_kb_numbers_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>kb_<wbr>numbers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
 
@@ -5885,7 +5885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_kb_numbers_python" style="color: inherit; text-decoration: inherit;">included_<wbr>kb_<wbr>numbers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
 
@@ -6074,7 +6074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_kb_numbers_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>kb_<wbr>numbers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}KB numbers excluded from the software update configuration.{{% /md %}}</dd>
 
@@ -6084,7 +6084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_kb_numbers_python" style="color: inherit; text-decoration: inherit;">included_<wbr>kb_<wbr>numbers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}KB numbers included from the software update configuration.{{% /md %}}</dd>
 

@@ -294,6 +294,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="connectionmode_csharp">
+<a href="#connectionmode_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="connectionprotocol_csharp">
 <a href="#connectionprotocol_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
 </span> 
@@ -568,6 +578,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="connectionmode_go">
+<a href="#connectionmode_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -848,6 +868,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="connectionmode_nodejs">
+<a href="#connectionmode_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="connectionprotocol_nodejs">
 <a href="#connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
 </span> 
@@ -1089,7 +1119,7 @@ The following output properties are available:
 <a href="#tunnel_connection_status_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>connection_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tunnelconnectionhealthresponse">List[Tunnel<wbr>Connection<wbr>Health<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tunnelconnectionhealthresponse">Sequence[Tunnel<wbr>Connection<wbr>Health<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd>
 
@@ -1109,7 +1139,7 @@ The following output properties are available:
 <a href="#virtual_network_gateway1_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway1</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayresponse">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
 
@@ -1122,6 +1152,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="connection_mode_python">
+<a href="#connection_mode_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1169,7 +1209,7 @@ The following output properties are available:
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">List[Ipsec<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd>
 
@@ -1179,7 +1219,7 @@ The following output properties are available:
 <a href="#local_network_gateway2_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localnetworkgatewayresponse">Dict[Local<wbr>Network<wbr>Gateway<wbr>Response]</a></span>
+        <span class="property-type"><a href="#localnetworkgatewayresponse">Local<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd>
 
@@ -1199,7 +1239,7 @@ The following output properties are available:
 <a href="#peer_python" style="color: inherit; text-decoration: inherit;">peer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd>
 
@@ -1229,7 +1269,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1239,7 +1279,7 @@ The following output properties are available:
 <a href="#traffic_selector_policies_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficselectorpolicyresponse">List[Traffic<wbr>Selector<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trafficselectorpolicyresponse">Sequence[Traffic<wbr>Selector<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd>
 
@@ -1269,7 +1309,7 @@ The following output properties are available:
 <a href="#virtual_network_gateway2_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayresponse">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
 
@@ -1354,7 +1394,7 @@ The following output properties are available:
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 
@@ -1543,7 +1583,7 @@ The following output properties are available:
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
 
@@ -1556,6 +1596,125 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1718,38 +1877,38 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultbgpipaddresses_python">
-<a href="#defaultbgpipaddresses_python" style="color: inherit; text-decoration: inherit;">default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+        <span id="default_bgp_ip_addresses_python">
+<a href="#default_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="tunnelipaddresses_python">
-<a href="#tunnelipaddresses_python" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
+        <span id="tunnel_ip_addresses_python">
+<a href="#tunnel_ip_addresses_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custombgpipaddresses_python">
-<a href="#custombgpipaddresses_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+        <span id="custom_bgp_ip_addresses_python">
+<a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipconfigurationid_python">
-<a href="#ipconfigurationid_python" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
+        <span id="ipconfiguration_id_python">
+<a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2037,8 +2196,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dhgroup_python">
-<a href="#dhgroup_python" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+        <span id="dh_group_python">
+<a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2047,8 +2206,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeencryption_python">
-<a href="#ikeencryption_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+        <span id="ike_encryption_python">
+<a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2057,8 +2216,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeintegrity_python">
-<a href="#ikeintegrity_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+        <span id="ike_integrity_python">
+<a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2067,8 +2226,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecencryption_python">
-<a href="#ipsecencryption_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+        <span id="ipsec_encryption_python">
+<a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2077,8 +2236,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecintegrity_python">
-<a href="#ipsecintegrity_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+        <span id="ipsec_integrity_python">
+<a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2087,8 +2246,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="pfsgroup_python">
-<a href="#pfsgroup_python" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+        <span id="pfs_group_python">
+<a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2097,8 +2256,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sadatasizekilobytes_python">
-<a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+        <span id="sa_data_size_kilobytes_python">
+<a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2107,8 +2266,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="salifetimeseconds_python">
-<a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
+        <span id="sa_life_time_seconds_python">
+<a href="#sa_life_time_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>life_<wbr>time_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2570,7 +2729,7 @@ The following output properties are available:
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Dict[Bgp<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd>
 
@@ -2610,7 +2769,7 @@ The following output properties are available:
 <a href="#local_network_address_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd>
 
@@ -2630,7 +2789,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -2775,8 +2934,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="radiusserverscore_python">
-<a href="#radiusserverscore_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Score</a>
+        <span id="radius_server_score_python">
+<a href="#radius_server_score_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>score</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2973,21 +3132,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localaddressranges_python">
-<a href="#localaddressranges_python" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Ranges</a>
+        <span id="local_address_ranges_python">
+<a href="#local_address_ranges_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="remoteaddressranges_python">
-<a href="#remoteaddressranges_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Ranges</a>
+        <span id="remote_address_ranges_python">
+<a href="#remote_address_ranges_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd>
 
@@ -3212,8 +3371,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastconnectionestablishedutctime_python">
-<a href="#lastconnectionestablishedutctime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Connection<wbr>Established<wbr>Utc<wbr>Time</a>
+        <span id="last_connection_established_utc_time_python">
+<a href="#last_connection_established_utc_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>connection_<wbr>established_<wbr>utc_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3575,7 +3734,7 @@ The following output properties are available:
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
 
@@ -3585,7 +3744,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
 
@@ -3729,6 +3888,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_csharp">
 <a href="#gatewaydefaultsite_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
 </span> 
@@ -3796,6 +3965,16 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkextendedlocationresourceid_csharp">
+<a href="#virtualnetworkextendedlocationresourceid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Extended<wbr>Location<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3956,6 +4135,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_go">
 <a href="#gatewaydefaultsite_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
 </span> 
@@ -4023,6 +4212,16 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkextendedlocationresourceid_go">
+<a href="#virtualnetworkextendedlocationresourceid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Extended<wbr>Location<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4183,6 +4382,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_nodejs">
 <a href="#gatewaydefaultsite_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Default<wbr>Site</a>
 </span> 
@@ -4250,6 +4459,16 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkextendedlocationresourceid_nodejs">
+<a href="#virtualnetworkextendedlocationresourceid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Extended<wbr>Location<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4364,7 +4583,7 @@ The following output properties are available:
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Dict[Bgp<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd>
 
@@ -4374,7 +4593,7 @@ The following output properties are available:
 <a href="#custom_routes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd>
 
@@ -4410,11 +4629,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="gateway_default_site_python">
 <a href="#gateway_default_site_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>default_<wbr>site</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd>
 
@@ -4444,7 +4673,7 @@ The following output properties are available:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">List[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd>
 
@@ -4464,7 +4693,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd>
 
@@ -4474,9 +4703,19 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_network_extended_location_resource_id_python">
+<a href="#virtual_network_extended_location_resource_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>extended_<wbr>location_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4484,7 +4723,7 @@ The following output properties are available:
 <a href="#vpn_client_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfigurationresponse">Dict[Vpn<wbr>Client<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd>
 
@@ -5092,7 +5331,7 @@ The following output properties are available:
 <a href="#radius_servers_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserverresponse">List[Radius<wbr>Server<wbr>Response]</a></span>
+        <span class="property-type"><a href="#radiusserverresponse">Sequence[Radius<wbr>Server<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
 
@@ -5102,7 +5341,7 @@ The following output properties are available:
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
 
@@ -5112,7 +5351,7 @@ The following output properties are available:
 <a href="#vpn_client_ipsec_policies_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>ipsec_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">List[Ipsec<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
 
@@ -5122,7 +5361,7 @@ The following output properties are available:
 <a href="#vpn_client_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
 
@@ -5132,7 +5371,7 @@ The following output properties are available:
 <a href="#vpn_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>revoked_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">List[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
 
@@ -5142,7 +5381,7 @@ The following output properties are available:
 <a href="#vpn_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificateresponse">List[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
 
@@ -5596,8 +5835,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publiccertdata_python">
-<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

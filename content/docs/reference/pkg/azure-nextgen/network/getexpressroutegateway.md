@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#express_route_connections_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteconnectionresponse">List[Express<wbr>Route<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressrouteconnectionresponse">Sequence[Express<wbr>Route<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of ExpressRoute connections to the ExpressRoute gateway.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubidresponse">Dict[Virtual<wbr>Hub<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualhubidresponse">Virtual<wbr>Hub<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Virtual Hub where the ExpressRoute gateway is or will be deployed.{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#auto_scale_configuration_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesresponseautoscaleconfiguration">Dict[Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scale<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesresponseautoscaleconfiguration">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scale<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for auto scaling.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -708,6 +708,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="expressroutegatewaybypass_csharp">
+<a href="#expressroutegatewaybypass_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -792,6 +802,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expressroutegatewaybypass_go">
+<a href="#expressroutegatewaybypass_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -882,6 +902,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="expressroutegatewaybypass_nodejs">
+<a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -923,7 +953,7 @@ The following output properties are available:
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Dict[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExpressRoute circuit peering.{{% /md %}}</dd>
 
@@ -969,6 +999,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="express_route_gateway_bypass_python">
+<a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -983,7 +1023,7 @@ The following output properties are available:
 <a href="#routing_configuration_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Dict[Routing<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd>
 
@@ -1072,7 +1112,7 @@ The following output properties are available:
 <a href="#bounds_python" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Dict[Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds]</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd>
 
@@ -1300,7 +1340,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
 
@@ -1310,7 +1350,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd>
 
@@ -1449,7 +1489,7 @@ The following output properties are available:
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
 
@@ -1459,7 +1499,7 @@ The following output properties are available:
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Dict[Propagated<wbr>Route<wbr>Table<wbr>Response]</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
 
@@ -1469,7 +1509,7 @@ The following output properties are available:
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Dict[Vnet<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
 
@@ -1608,7 +1648,7 @@ The following output properties are available:
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd>
 
@@ -1865,7 +1905,7 @@ The following output properties are available:
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">List[Static<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Sequence[Static<wbr>Route<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 

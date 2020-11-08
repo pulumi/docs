@@ -145,7 +145,7 @@ const ipGroup = new azure_nextgen.network.latest.IpGroup("ipGroup", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IpGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_groups_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IpGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_groups_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -554,7 +554,7 @@ The IpGroup resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IpAddresses/IpAddressPrefixes in the IpGroups resource.{{% /md %}}</dd>
 
@@ -574,7 +574,7 @@ The IpGroup resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -608,13 +608,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="firewallpolicies_csharp">
+<a href="#firewallpolicies_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="firewalls_csharp">
 <a href="#firewalls_csharp" style="color: inherit; text-decoration: inherit;">Firewalls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure resources that this IpGroups is associated with.{{% /md %}}</dd>
+    <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -675,13 +685,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="firewallpolicies_go">
+<a href="#firewallpolicies_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="firewalls_go">
 <a href="#firewalls_go" style="color: inherit; text-decoration: inherit;">Firewalls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure resources that this IpGroups is associated with.{{% /md %}}</dd>
+    <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -742,13 +762,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="firewallpolicies_nodejs">
+<a href="#firewallpolicies_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="firewalls_nodejs">
 <a href="#firewalls_nodejs" style="color: inherit; text-decoration: inherit;">firewalls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure resources that this IpGroups is associated with.{{% /md %}}</dd>
+    <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -809,13 +839,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="firewall_policies_python">
+<a href="#firewall_policies_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of references to Firewall Policies resources that this IpGroups is associated with.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="firewalls_python">
 <a href="#firewalls_python" style="color: inherit; text-decoration: inherit;">firewalls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure resources that this IpGroups is associated with.{{% /md %}}</dd>
+    <dd>{{% md %}}List of references to Firewall resources that this IpGroups is associated with.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

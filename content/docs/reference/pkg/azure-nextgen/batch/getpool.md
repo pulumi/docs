@@ -1099,7 +1099,7 @@ The following output properties are available:
 <a href="#auto_scale_run_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale_<wbr>run</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunresponse">Dict[Auto<wbr>Scale<wbr>Run<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalerunresponse">Auto<wbr>Scale<wbr>Run<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.{{% /md %}}</dd>
 
@@ -1189,7 +1189,7 @@ The following output properties are available:
 <a href="#resize_operation_status_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>operation_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeoperationstatusresponse">Dict[Resize<wbr>Operation<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resizeoperationstatusresponse">Resize<wbr>Operation<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).{{% /md %}}</dd>
 
@@ -1209,7 +1209,7 @@ The following output properties are available:
 <a href="#application_licenses_python" style="color: inherit; text-decoration: inherit;">application_<wbr>licenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.{{% /md %}}</dd>
 
@@ -1219,7 +1219,7 @@ The following output properties are available:
 <a href="#application_packages_python" style="color: inherit; text-decoration: inherit;">application_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagereferenceresponse">List[Application<wbr>Package<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationpackagereferenceresponse">Sequence[Application<wbr>Package<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.{{% /md %}}</dd>
 
@@ -1229,7 +1229,7 @@ The following output properties are available:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatereferenceresponse">List[Certificate<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#certificatereferenceresponse">Sequence[Certificate<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
 
@@ -1239,7 +1239,7 @@ The following output properties are available:
 <a href="#deployment_configuration_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigurationresponse">Dict[Deployment<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#deploymentconfigurationresponse">Deployment<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).{{% /md %}}</dd>
 
@@ -1269,7 +1269,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataitemresponse">List[Metadata<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metadataitemresponse">Sequence[Metadata<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Batch service does not assign any meaning to metadata; it is solely for the use of user code.{{% /md %}}</dd>
 
@@ -1279,7 +1279,7 @@ The following output properties are available:
 <a href="#mount_configuration_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountconfigurationresponse">List[Mount<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mountconfigurationresponse">Sequence[Mount<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.{{% /md %}}</dd>
 
@@ -1289,7 +1289,7 @@ The following output properties are available:
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">Dict[Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for a pool.{{% /md %}}</dd>
 
@@ -1299,7 +1299,7 @@ The following output properties are available:
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettingsresponse">Dict[Scale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.{{% /md %}}</dd>
 
@@ -1309,7 +1309,7 @@ The following output properties are available:
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#starttaskresponse">Dict[Start<wbr>Task<wbr>Response]</a></span>
+        <span class="property-type"><a href="#starttaskresponse">Start<wbr>Task<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.{{% /md %}}</dd>
 
@@ -1319,7 +1319,7 @@ The following output properties are available:
 <a href="#task_scheduling_policy_python" style="color: inherit; text-decoration: inherit;">task_<wbr>scheduling_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskschedulingpolicyresponse">Dict[Task<wbr>Scheduling<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#taskschedulingpolicyresponse">Task<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
 
@@ -1339,7 +1339,7 @@ The following output properties are available:
 <a href="#user_accounts_python" style="color: inherit; text-decoration: inherit;">user_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountresponse">List[User<wbr>Account<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useraccountresponse">Sequence[User<wbr>Account<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1633,7 +1633,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">List[Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Sequence[Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1782,7 +1782,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Dict[Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2275,8 +2275,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2295,8 +2295,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobfuseoptions_python">
-<a href="#blobfuseoptions_python" style="color: inherit; text-decoration: inherit;">blobfuse<wbr>Options</a>
+        <span id="blobfuse_options_python">
+<a href="#blobfuse_options_python" style="color: inherit; text-decoration: inherit;">blobfuse_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2524,8 +2524,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="azurefileurl_python">
-<a href="#azurefileurl_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
+        <span id="azure_file_url_python">
+<a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2534,8 +2534,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2544,8 +2544,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2753,8 +2753,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2783,8 +2783,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2962,8 +2962,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storelocation_python">
-<a href="#storelocation_python" style="color: inherit; text-decoration: inherit;">store<wbr>Location</a>
+        <span id="store_location_python">
+<a href="#store_location_python" style="color: inherit; text-decoration: inherit;">store_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2986,7 +2986,7 @@ The following output properties are available:
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3254,7 +3254,7 @@ The following output properties are available:
 <a href="#container_image_names_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.{{% /md %}}</dd>
 
@@ -3264,7 +3264,7 @@ The following output properties are available:
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">List[Container<wbr>Registry<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Sequence[Container<wbr>Registry<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd>
 
@@ -3767,7 +3767,7 @@ The following output properties are available:
 <a href="#cloud_service_configuration_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>service_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Dict[Cloud<wbr>Service<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd>
 
@@ -3777,7 +3777,7 @@ The following output properties are available:
 <a href="#virtual_machine_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Dict[Virtual<wbr>Machine<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -3856,7 +3856,7 @@ The following output properties are available:
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.{{% /md %}}</dd>
 
@@ -4648,8 +4648,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportrangeend_python">
-<a href="#frontendportrangeend_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range<wbr>End</a>
+        <span id="frontend_port_range_end_python">
+<a href="#frontend_port_range_end_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4658,8 +4658,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportrangestart_python">
-<a href="#frontendportrangestart_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range<wbr>Start</a>
+        <span id="frontend_port_range_start_python">
+<a href="#frontend_port_range_start_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4688,11 +4688,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networksecuritygrouprules_python">
-<a href="#networksecuritygrouprules_python" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
+        <span id="network_security_group_rules_python">
+<a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupruleresponse">List[Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networksecuritygroupruleresponse">Sequence[Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
 
@@ -4837,8 +4837,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshprivatekey_python">
-<a href="#sshprivatekey_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Private<wbr>Key</a>
+        <span id="ssh_private_key_python">
+<a href="#ssh_private_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5135,41 +5135,41 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureblobfilesystemconfiguration_python">
-<a href="#azureblobfilesystemconfiguration_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
+        <span id="azure_blob_file_system_configuration_python">
+<a href="#azure_blob_file_system_configuration_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>system_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Dict[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurefileshareconfiguration_python">
-<a href="#azurefileshareconfiguration_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Share<wbr>Configuration</a>
+        <span id="azure_file_share_configuration_python">
+<a href="#azure_file_share_configuration_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>share_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Dict[Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cifsmountconfiguration_python">
-<a href="#cifsmountconfiguration_python" style="color: inherit; text-decoration: inherit;">cifs<wbr>Mount<wbr>Configuration</a>
+        <span id="cifs_mount_configuration_python">
+<a href="#cifs_mount_configuration_python" style="color: inherit; text-decoration: inherit;">cifs_<wbr>mount_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfigurationresponse">Dict[CIFSMount<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cifsmountconfigurationresponse">CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nfsmountconfiguration_python">
-<a href="#nfsmountconfiguration_python" style="color: inherit; text-decoration: inherit;">nfs<wbr>Mount<wbr>Configuration</a>
+        <span id="nfs_mount_configuration_python">
+<a href="#nfs_mount_configuration_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>mount_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfigurationresponse">Dict[NFSMount<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nfsmountconfigurationresponse">NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
@@ -5304,8 +5304,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5324,8 +5324,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5467,7 +5467,7 @@ The following output properties are available:
 <a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfigurationresponse">Dict[Pool<wbr>Endpoint<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
 
@@ -5477,7 +5477,7 @@ The following output properties are available:
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Dict[Public<wbr>IPAddress<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
 
@@ -5686,7 +5686,7 @@ The following output properties are available:
 <a href="#source_port_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.{{% /md %}}</dd>
 
@@ -5765,7 +5765,7 @@ The following output properties are available:
 <a href="#inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpoolresponse">List[Inbound<wbr>Nat<wbr>Pool<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inboundnatpoolresponse">Sequence[Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
@@ -5874,7 +5874,7 @@ The following output properties are available:
 <a href="#ip_address_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
@@ -6043,7 +6043,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List[Resize<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">Sequence[Resize<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6272,7 +6272,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List[Resize<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">Sequence[Resize<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.{{% /md %}}</dd>
 
@@ -6547,8 +6547,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autostoragecontainername_python">
-<a href="#autostoragecontainername_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Container<wbr>Name</a>
+        <span id="auto_storage_container_name_python">
+<a href="#auto_storage_container_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>container_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6557,8 +6557,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobprefix_python">
-<a href="#blobprefix_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix</a>
+        <span id="blob_prefix_python">
+<a href="#blob_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6567,8 +6567,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6597,8 +6597,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storagecontainerurl_python">
-<a href="#storagecontainerurl_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Url</a>
+        <span id="storage_container_url_python">
+<a href="#storage_container_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6710,7 +6710,7 @@ The following output properties are available:
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Dict[Auto<wbr>Scale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -6720,7 +6720,7 @@ The following output properties are available:
 <a href="#fixed_scale_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettingsresponse">Dict[Fixed<wbr>Scale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fixedscalesettingsresponse">Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -6989,7 +6989,7 @@ The following output properties are available:
 <a href="#container_settings_python" style="color: inherit; text-decoration: inherit;">container_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettingsresponse">Dict[Task<wbr>Container<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#taskcontainersettingsresponse">Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd>
 
@@ -6999,7 +6999,7 @@ The following output properties are available:
 <a href="#environment_settings_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsettingresponse">List[Environment<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentsettingresponse">Sequence[Environment<wbr>Setting<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7019,7 +7019,7 @@ The following output properties are available:
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefileresponse">List[Resource<wbr>File<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcefileresponse">Sequence[Resource<wbr>File<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7029,7 +7029,7 @@ The following output properties are available:
 <a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">Dict[User<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useridentityresponse">User<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd>
 
@@ -7228,7 +7228,7 @@ The following output properties are available:
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Dict[Container<wbr>Registry<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd>
 
@@ -7542,21 +7542,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linuxuserconfiguration_python">
-<a href="#linuxuserconfiguration_python" style="color: inherit; text-decoration: inherit;">linux<wbr>User<wbr>Configuration</a>
+        <span id="linux_user_configuration_python">
+<a href="#linux_user_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>user_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfigurationresponse">Dict[Linux<wbr>User<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxuserconfigurationresponse">Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="windowsuserconfiguration_python">
-<a href="#windowsuserconfiguration_python" style="color: inherit; text-decoration: inherit;">windows<wbr>User<wbr>Configuration</a>
+        <span id="windows_user_configuration_python">
+<a href="#windows_user_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>user_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfigurationresponse">Dict[Windows<wbr>User<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowsuserconfigurationresponse">Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd>
 
@@ -7665,7 +7665,7 @@ The following output properties are available:
 <a href="#auto_user_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecificationresponse">Dict[Auto<wbr>User<wbr>Specification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autouserspecificationresponse">Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd>
 
@@ -7946,7 +7946,7 @@ The following output properties are available:
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Dict[Image<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7966,7 +7966,7 @@ The following output properties are available:
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfigurationresponse">Dict[Container<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerconfigurationresponse">Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd>
 
@@ -7976,7 +7976,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List[Data<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd>
 
@@ -7986,7 +7986,7 @@ The following output properties are available:
 <a href="#disk_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Dict[Disk<wbr>Encryption<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
 
@@ -8010,7 +8010,7 @@ The following output properties are available:
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Dict[Windows<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd>
 

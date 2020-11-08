@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var digitalTwin = new AzureNextGen.DigitalTwins.Latest.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.Latest.DigitalTwinArgs
         {
-            Location = "WestUS",
+            Location = "WestUS2",
             ResourceGroupName = "resRg",
             ResourceName = "myDigitalTwinsService",
         });
@@ -53,7 +53,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := digitaltwins.NewDigitalTwin(ctx, "digitalTwin", &digitaltwins.DigitalTwinArgs{
-			Location:          pulumi.String("WestUS"),
+			Location:          pulumi.String("WestUS2"),
 			ResourceGroupName: pulumi.String("resRg"),
 			ResourceName:      pulumi.String("myDigitalTwinsService"),
 		})
@@ -75,7 +75,7 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
-    location="WestUS",
+    location="WestUS2",
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
 
@@ -90,7 +90,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
-    location: "WestUS",
+    location: "WestUS2",
     resourceGroupName: "resRg",
     resourceName: "myDigitalTwinsService",
 });
@@ -111,7 +111,7 @@ const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTw
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DigitalTwin</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DigitalTwin</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -460,7 +460,7 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 

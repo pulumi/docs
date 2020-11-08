@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Dict[Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The chap password.{{% /md %}}</dd>
 

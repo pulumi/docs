@@ -35,6 +35,7 @@ Explore the resources and functions of the machinelearningservices module in the
     <li><a href="getworkspaceconnection" title="GetWorkspaceConnection"><span class="symbol function"></span>GetWorkspaceConnection</a></li>
     <li><a href="listmachinelearningcomputekeys" title="ListMachineLearningComputeKeys"><span class="symbol function"></span>ListMachineLearningComputeKeys</a></li>
     <li><a href="listmachinelearningcomputenodes" title="ListMachineLearningComputeNodes"><span class="symbol function"></span>ListMachineLearningComputeNodes</a></li>
+    <li><a href="listnotebookkeys" title="ListNotebookKeys"><span class="symbol function"></span>ListNotebookKeys</a></li>
     <li><a href="listworkspacekeys" title="ListWorkspaceKeys"><span class="symbol function"></span>ListWorkspaceKeys</a></li>
 </ul>
 
@@ -45,7 +46,7 @@ Explore the resources and functions of the machinelearningservices module in the
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

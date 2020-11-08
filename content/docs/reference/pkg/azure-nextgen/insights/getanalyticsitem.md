@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentanalyticsitempropertiesresponse">Dict[Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentanalyticsitempropertiesresponse">Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd>
 

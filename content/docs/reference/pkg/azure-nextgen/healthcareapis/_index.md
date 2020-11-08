@@ -11,11 +11,13 @@ Explore the resources and functions of the healthcareapis module in the Azure Ne
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
@@ -26,7 +28,7 @@ Explore the resources and functions of the healthcareapis module in the Azure Ne
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

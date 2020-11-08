@@ -110,23 +110,23 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 order = azure_nextgen.databoxedge.latest.Order("order",
-    contact_information={
-        "companyName": "Microsoft",
-        "contactPerson": "John Mcclane",
-        "emailList": ["john@microsoft.com"],
-        "phone": "(800) 426-9400",
-    },
+    contact_information=azure_nextgen.databoxedge.latest.ContactDetailsArgs(
+        company_name="Microsoft",
+        contact_person="John Mcclane",
+        email_list=["john@microsoft.com"],
+        phone="(800) 426-9400",
+    ),
     device_name="testedgedevice",
     resource_group_name="GroupForEdgeAutomation",
-    shipping_address={
-        "addressLine1": "Microsoft Corporation",
-        "addressLine2": "One Microsoft Way",
-        "addressLine3": "Redmond",
-        "city": "WA",
-        "country": "USA",
-        "postalCode": "98052",
-        "state": "WA",
-    })
+    shipping_address=azure_nextgen.databoxedge.latest.AddressArgs(
+        address_line1="Microsoft Corporation",
+        address_line2="One Microsoft Way",
+        address_line3="Redmond",
+        city="WA",
+        country="USA",
+        postal_code="98052",
+        state="WA",
+    ))
 
 ```
 
@@ -174,7 +174,7 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_information</span><span class="p">:</span> <span class="nx">Optional[Dict[ContactDetails]]</span> = None<span class="p">, </span><span class="nx">current_status</span><span class="p">:</span> <span class="nx">Optional[Dict[OrderStatus]]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shipping_address</span><span class="p">:</span> <span class="nx">Optional[Dict[Address]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_information</span><span class="p">:</span> <span class="nx">Optional[ContactDetailsArgs]</span> = None<span class="p">, </span><span class="nx">current_status</span><span class="p">:</span> <span class="nx">Optional[OrderStatusArgs]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shipping_address</span><span class="p">:</span> <span class="nx">Optional[AddressArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -523,7 +523,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contact_information_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Dict[Contact<wbr>Details]</a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd>
 
@@ -553,7 +553,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Dict[Address]</a></span>
+        <span class="property-type"><a href="#address">Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shipping address.{{% /md %}}</dd>
 
@@ -563,7 +563,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">Dict[Order<wbr>Status]</a></span>
+        <span class="property-type"><a href="#orderstatus">Order<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
 
@@ -822,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delivery_tracking_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>tracking_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">List[Tracking<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Sequence[Tracking<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device.{{% /md %}}</dd>
 
@@ -852,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_history_python" style="color: inherit; text-decoration: inherit;">order_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">List[Order<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#orderstatusresponse">Sequence[Order<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order.{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_tracking_info_python" style="color: inherit; text-decoration: inherit;">return_<wbr>tracking_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">List[Tracking<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Sequence[Tracking<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device.{{% /md %}}</dd>
 
@@ -1718,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The email list.{{% /md %}}</dd>
 
@@ -1917,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The email list.{{% /md %}}</dd>
 
@@ -2218,7 +2218,7 @@ by the already existing properties{{% /md %}}</dd>
 <a href="#additional_order_details_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>order_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored
 by the already existing properties{{% /md %}}</dd>
@@ -2434,8 +2434,8 @@ by the already existing properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackingid_python">
-<a href="#trackingid_python" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
+        <span id="tracking_id_python">
+<a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2444,8 +2444,8 @@ by the already existing properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackingurl_python">
-<a href="#trackingurl_python" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
+        <span id="tracking_url_python">
+<a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

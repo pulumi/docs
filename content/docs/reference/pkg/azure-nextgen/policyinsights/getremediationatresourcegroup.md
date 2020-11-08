@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Dict[Remediation<wbr>Deployment<wbr>Summary<wbr>Response]</a></span>
+        <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
 
@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationfiltersresponse">Dict[Remediation<wbr>Filters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#remediationfiltersresponse">Remediation<wbr>Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd>
 

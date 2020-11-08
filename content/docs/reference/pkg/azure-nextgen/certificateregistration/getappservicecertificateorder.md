@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#app_service_certificate_not_renewable_reasons_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service_<wbr>certificate_<wbr>not_<wbr>renewable_<wbr>reasons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#intermediate_python" style="color: inherit; text-decoration: inherit;">intermediate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Dict[Certificate<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intermediate certificate.{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#root_python" style="color: inherit; text-decoration: inherit;">root</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Dict[Certificate<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Root certificate.{{% /md %}}</dd>
 
@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#signed_certificate_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedetailsresponse">Dict[Certificate<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#certificatedetailsresponse">Certificate<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Signed certificate.{{% /md %}}</dd>
 
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, App<wbr>Service<wbr>Certificate<wbr>Response]</span>
+        <span class="property-type">Mapping[str, App<wbr>Service<wbr>Certificate<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}State of the Key Vault secret.{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

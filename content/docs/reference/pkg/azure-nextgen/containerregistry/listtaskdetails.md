@@ -687,7 +687,7 @@ The following output properties are available:
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Dict[Platform<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
 
@@ -707,7 +707,7 @@ The following output properties are available:
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Docker<wbr>Build<wbr>Step<wbr>Response] | Dict[Encoded<wbr>Task<wbr>Step<wbr>Response] | Dict[File<wbr>Task<wbr>Step<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
 
@@ -727,7 +727,7 @@ The following output properties are available:
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Dict[Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -737,7 +737,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Dict[Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
 
@@ -747,7 +747,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypropertiesresponse">Dict[Identity<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
 
@@ -767,7 +767,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -787,7 +787,7 @@ The following output properties are available:
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpropertiesresponse">Dict[Trigger<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#triggerpropertiesresponse">Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd>
 
@@ -1027,8 +1027,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1783,7 +1783,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1795,7 +1795,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Dict[Source<wbr>Registry<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
 
@@ -1963,7 +1963,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Dict[Secret<wbr>Object<wbr>Response]</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
@@ -1974,7 +1974,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Dict[Secret<wbr>Object<wbr>Response]</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
 
@@ -2293,7 +2293,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
 
@@ -2313,7 +2313,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List[Argument<wbr>Response]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
 
@@ -2343,7 +2343,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
 
@@ -2602,14 +2602,14 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="encodedtaskcontent_python">
-<a href="#encodedtaskcontent_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Task<wbr>Content</a>
+        <span id="encoded_task_content_python">
+<a href="#encoded_task_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>task_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2638,8 +2638,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodedvaluescontent_python">
-<a href="#encodedvaluescontent_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Values<wbr>Content</a>
+        <span id="encoded_values_content_python">
+<a href="#encoded_values_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>values_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2652,7 +2652,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 
@@ -2881,14 +2881,14 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="taskfilepath_python">
-<a href="#taskfilepath_python" style="color: inherit; text-decoration: inherit;">task<wbr>File<wbr>Path</a>
+        <span id="task_file_path_python">
+<a href="#task_file_path_python" style="color: inherit; text-decoration: inherit;">task_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2921,14 +2921,14 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesfilepath_python">
-<a href="#valuesfilepath_python" style="color: inherit; text-decoration: inherit;">values<wbr>File<wbr>Path</a>
+        <span id="values_file_path_python">
+<a href="#values_file_path_python" style="color: inherit; text-decoration: inherit;">values_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3139,7 +3139,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3587,8 +3587,8 @@ used as is without any modification.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3793,7 +3793,7 @@ webhooks for notifications.{{% /md %}}</dd>
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinforesponse">Dict[Auth<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd>
@@ -4056,23 +4056,23 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcetriggerevents_python">
-<a href="#sourcetriggerevents_python" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="source_repository_python">
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Dict[Source<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_trigger_events_python">
+<a href="#source_trigger_events_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger_<wbr>events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4378,7 +4378,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#base_image_trigger_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetriggerresponse">Dict[Base<wbr>Image<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
 
@@ -4388,7 +4388,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#source_triggers_python" style="color: inherit; text-decoration: inherit;">source_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerresponse">List[Source<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcetriggerresponse">Sequence[Source<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
 
@@ -4398,7 +4398,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#timer_triggers_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerresponse">List[Timer<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timertriggerresponse">Sequence[Timer<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
 

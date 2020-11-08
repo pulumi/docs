@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputenodeinformationresponse">List[Aml<wbr>Compute<wbr>Node<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#amlcomputenodeinformationresponse">Sequence[Aml<wbr>Compute<wbr>Node<wbr>Information<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd>
 
@@ -538,8 +538,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -548,8 +548,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodestate_python">
-<a href="#nodestate_python" style="color: inherit; text-decoration: inherit;">node<wbr>State</a>
+        <span id="node_state_python">
+<a href="#node_state_python" style="color: inherit; text-decoration: inherit;">node_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

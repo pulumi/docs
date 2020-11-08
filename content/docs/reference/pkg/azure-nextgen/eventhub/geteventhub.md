@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#partition_ids_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Current number of shards on the Event Hub.{{% /md %}}</dd>
 
@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#capture_description_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capturedescriptionresponse">Dict[Capture<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#capturedescriptionresponse">Capture<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of capture description{{% /md %}}</dd>
 
@@ -824,7 +824,7 @@ The following output properties are available:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">Dict[Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#destinationresponse">Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd>
 

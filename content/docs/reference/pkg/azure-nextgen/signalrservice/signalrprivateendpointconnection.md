@@ -91,14 +91,14 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 signal_r_private_endpoint_connection = azure_nextgen.signalrservice.latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection",
-    private_endpoint={
-        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
-    },
+    private_endpoint=azure_nextgen.signalrservice.latest.PrivateEndpointArgs(
+        id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
+    ),
     private_endpoint_connection_name="mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-    private_link_service_connection_state={
-        "actionsRequired": "None",
-        "status": "Approved",
-    },
+    private_link_service_connection_state=azure_nextgen.signalrservice.latest.PrivateLinkServiceConnectionStateArgs(
+        actions_required="None",
+        status="Approved",
+    ),
     resource_group_name="myResourceGroup",
     resource_name="mySignalRService")
 
@@ -141,7 +141,7 @@ const signalRPrivateEndpointConnection = new azure_nextgen.signalrservice.latest
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SignalRPrivateEndpointConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">private_endpoint</span><span class="p">:</span> <span class="nx">Optional[Dict[PrivateEndpoint]]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_service_connection_state</span><span class="p">:</span> <span class="nx">Optional[Dict[PrivateLinkServiceConnectionState]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SignalRPrivateEndpointConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">private_endpoint</span><span class="p">:</span> <span class="nx">Optional[PrivateEndpointArgs]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_service_connection_state</span><span class="p">:</span> <span class="nx">Optional[PrivateLinkServiceConnectionStateArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -520,7 +520,7 @@ The SignalRPrivateEndpointConnection resource accepts the following [input]({{< 
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpoint">Dict[Private<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#privateendpoint">Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
 
@@ -530,7 +530,7 @@ The SignalRPrivateEndpointConnection resource accepts the following [input]({{< 
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
 

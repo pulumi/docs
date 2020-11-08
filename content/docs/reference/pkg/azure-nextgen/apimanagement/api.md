@@ -116,12 +116,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="tempgroup",
-    authentication_settings={
-        "oAuth2": {
-            "authorizationServerId": "authorizationServerId2283",
-            "scope": "oauth2scope2580",
-        },
-    },
+    authentication_settings=azure_nextgen.apimanagement.latest.AuthenticationSettingsContractArgs(
+        o_auth2=azure_nextgen.apimanagement.latest.OAuth2AuthenticationSettingsContractArgs(
+            authorization_server_id="authorizationServerId2283",
+            scope="oauth2scope2580",
+        ),
+    ),
     description="apidescription5200",
     display_name="apiname1463",
     path="newapiPath",
@@ -132,10 +132,10 @@ api = azure_nextgen.apimanagement.latest.Api("api",
     resource_group_name="rg1",
     service_name="apimService1",
     service_url="http://newechoapi.cloudapp.net/api",
-    subscription_key_parameter_names={
-        "header": "header4520",
-        "query": "query3037",
-    })
+    subscription_key_parameter_names=azure_nextgen.apimanagement.latest.SubscriptionKeyParameterNamesContractArgs(
+        header="header4520",
+        query="query3037",
+    ))
 
 ```
 
@@ -1025,12 +1025,12 @@ import pulumi_azure_nextgen as azure_nextgen
 
 api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="tempgroup",
-    authentication_settings={
-        "openid": {
-            "bearerTokenSendingMethods": ["authorizationHeader"],
-            "openidProviderId": "testopenid",
-        },
-    },
+    authentication_settings=azure_nextgen.apimanagement.latest.AuthenticationSettingsContractArgs(
+        openid=azure_nextgen.apimanagement.latest.OpenIdAuthenticationSettingsContractArgs(
+            bearer_token_sending_methods=["authorizationHeader"],
+            openid_provider_id="testopenid",
+        ),
+    ),
     description="This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
     display_name="Swagger Petstore",
     path="petstore",
@@ -1038,10 +1038,10 @@ api = azure_nextgen.apimanagement.latest.Api("api",
     resource_group_name="rg1",
     service_name="apimService1",
     service_url="http://petstore.swagger.io/v2",
-    subscription_key_parameter_names={
-        "header": "Ocp-Apim-Subscription-Key",
-        "query": "subscription-key",
-    })
+    subscription_key_parameter_names=azure_nextgen.apimanagement.latest.SubscriptionKeyParameterNamesContractArgs(
+        header="Ocp-Apim-Subscription-Key",
+        query="subscription-key",
+    ))
 
 ```
 
@@ -1161,10 +1161,10 @@ api = azure_nextgen.apimanagement.latest.Api("api",
     service_name="apimService1",
     soap_api_type="soap",
     value="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
-    wsdl_selector={
-        "wsdlEndpointName": "CurrencyConvertorSoap",
-        "wsdlServiceName": "CurrencyConvertor",
-    })
+    wsdl_selector=azure_nextgen.apimanagement.latest.ApiCreateOrUpdatePropertiesWsdlSelectorArgs(
+        wsdl_endpoint_name="CurrencyConvertorSoap",
+        wsdl_service_name="CurrencyConvertor",
+    ))
 
 ```
 
@@ -1274,10 +1274,10 @@ api = azure_nextgen.apimanagement.latest.Api("api",
     resource_group_name="rg1",
     service_name="apimService1",
     value="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
-    wsdl_selector={
-        "wsdlEndpointName": "CurrencyConvertorSoap",
-        "wsdlServiceName": "CurrencyConvertor",
-    })
+    wsdl_selector=azure_nextgen.apimanagement.latest.ApiCreateOrUpdatePropertiesWsdlSelectorArgs(
+        wsdl_endpoint_name="CurrencyConvertorSoap",
+        wsdl_service_name="CurrencyConvertor",
+    ))
 
 ```
 
@@ -1318,7 +1318,7 @@ const api = new azure_nextgen.apimanagement.latest.Api("api", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_set</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiVersionSetContractDetails]]</span> = None<span class="p">, </span><span class="nx">api_version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[AuthenticationSettingsContract]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_api_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[Dict[SubscriptionKeyParameterNamesContract]]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsdl_selector</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiCreateOrUpdatePropertiesWsdlSelector]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_set</span><span class="p">:</span> <span class="nx">Optional[ApiVersionSetContractDetailsArgs]</span> = None<span class="p">, </span><span class="nx">api_version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_settings</span><span class="p">:</span> <span class="nx">Optional[AuthenticationSettingsContractArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_api_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[SubscriptionKeyParameterNamesContractArgs]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsdl_selector</span><span class="p">:</span> <span class="nx">Optional[ApiCreateOrUpdatePropertiesWsdlSelectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2333,7 +2333,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_version_set_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionsetcontractdetails">Dict[Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details]</a></span>
+        <span class="property-type"><a href="#apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd>
 
@@ -2353,7 +2353,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#authentication_settings_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationsettingscontract">Dict[Authentication<wbr>Settings<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
 
@@ -2403,7 +2403,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
 
@@ -2445,7 +2445,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Dict[Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
 
@@ -2475,7 +2475,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#wsdl_selector_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Dict[Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criteria to limit import of WSDL to a subset of the document.{{% /md %}}</dd>
 
@@ -3469,7 +3469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontract">Dict[OAuth2Authentication<wbr>Settings<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
 
@@ -3479,7 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontract">Dict[Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
 
@@ -3588,7 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Dict[OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
 
@@ -3598,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Dict[Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
 
@@ -3945,7 +3945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
 
@@ -4064,7 +4064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
 

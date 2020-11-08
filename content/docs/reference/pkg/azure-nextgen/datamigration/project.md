@@ -123,7 +123,7 @@ const project = new azure_nextgen.datamigration.latest.Project("project", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">databases_info</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseInfo]]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_connection_info</span><span class="p">:</span> <span class="nx">Optional[Dict[MiSqlConnectionInfo] | Dict[MySqlConnectionInfo] | Dict[PostgreSqlConnectionInfo] | Dict[SqlConnectionInfo]]</span> = None<span class="p">, </span><span class="nx">source_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_connection_info</span><span class="p">:</span> <span class="nx">Optional[Dict[MiSqlConnectionInfo] | Dict[MySqlConnectionInfo] | Dict[PostgreSqlConnectionInfo] | Dict[SqlConnectionInfo]]</span> = None<span class="p">, </span><span class="nx">target_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">databases_info</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInfoArgs]]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_connection_info</span><span class="p">:</span> <span class="nx">Optional[Union[MiSqlConnectionInfoArgs, MySqlConnectionInfoArgs, PostgreSqlConnectionInfoArgs, SqlConnectionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">source_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_connection_info</span><span class="p">:</span> <span class="nx">Optional[Union[MiSqlConnectionInfoArgs, MySqlConnectionInfoArgs, PostgreSqlConnectionInfoArgs, SqlConnectionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">target_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -682,7 +682,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#databases_info_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinfo">List[Database<wbr>Info]</a></span>
+        <span class="property-type"><a href="#databaseinfo">Sequence[Database<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of DatabaseInfo{{% /md %}}</dd>
 
@@ -692,7 +692,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Mi<wbr>Sql<wbr>Connection<wbr>Info] | Dict[My<wbr>Sql<wbr>Connection<wbr>Info] | Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info] | Dict[Sql<wbr>Connection<wbr>Info]</span>
+        <span class="property-type">Union[Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Sql<wbr>Connection<wbr>Info<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd>
 
@@ -702,7 +702,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -712,7 +712,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Mi<wbr>Sql<wbr>Connection<wbr>Info] | Dict[My<wbr>Sql<wbr>Connection<wbr>Info] | Dict[Postgre<wbr>Sql<wbr>Connection<wbr>Info] | Dict[Sql<wbr>Connection<wbr>Info]</span>
+        <span class="property-type">Union[Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args, Sql<wbr>Connection<wbr>Info<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd>
 
@@ -1035,8 +1035,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedatabasename_python">
-<a href="#sourcedatabasename_python" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Name</a>
+        <span id="source_database_name_python">
+<a href="#source_database_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1114,8 +1114,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedatabasename_python">
-<a href="#sourcedatabasename_python" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Name</a>
+        <span id="source_database_name_python">
+<a href="#source_database_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1253,8 +1253,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="managedinstanceresourceid_python">
-<a href="#managedinstanceresourceid_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Resource<wbr>Id</a>
+        <span id="managed_instance_resource_id_python">
+<a href="#managed_instance_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1412,8 +1412,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="managedinstanceresourceid_python">
-<a href="#managedinstanceresourceid_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Resource<wbr>Id</a>
+        <span id="managed_instance_resource_id_python">
+<a href="#managed_instance_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2597,8 +2597,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2607,8 +2607,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalsettings_python">
-<a href="#additionalsettings_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Settings</a>
+        <span id="additional_settings_python">
+<a href="#additional_settings_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2627,8 +2627,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptconnection_python">
-<a href="#encryptconnection_python" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Connection</a>
+        <span id="encrypt_connection_python">
+<a href="#encrypt_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2657,8 +2657,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustservercertificate_python">
-<a href="#trustservercertificate_python" style="color: inherit; text-decoration: inherit;">trust<wbr>Server<wbr>Certificate</a>
+        <span id="trust_server_certificate_python">
+<a href="#trust_server_certificate_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>server_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2956,8 +2956,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2966,8 +2966,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalsettings_python">
-<a href="#additionalsettings_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Settings</a>
+        <span id="additional_settings_python">
+<a href="#additional_settings_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2986,8 +2986,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptconnection_python">
-<a href="#encryptconnection_python" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Connection</a>
+        <span id="encrypt_connection_python">
+<a href="#encrypt_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3016,8 +3016,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustservercertificate_python">
-<a href="#trustservercertificate_python" style="color: inherit; text-decoration: inherit;">trust<wbr>Server<wbr>Certificate</a>
+        <span id="trust_server_certificate_python">
+<a href="#trust_server_certificate_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>server_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

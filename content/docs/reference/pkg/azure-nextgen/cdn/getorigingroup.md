@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparametersresponse">Dict[Health<wbr>Probe<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthprobeparametersresponse">Health<wbr>Probe<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#response_based_origin_error_detection_settings_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>origin_<wbr>error_<wbr>detection_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Dict[Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.{{% /md %}}</dd>
 
@@ -1131,7 +1131,7 @@ The following output properties are available:
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">List[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
 

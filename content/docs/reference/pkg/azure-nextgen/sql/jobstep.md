@@ -132,31 +132,31 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
-    action={
-        "source": "Inline",
-        "type": "TSql",
-        "value": "select 2",
-    },
+    action=azure_nextgen.sql.v20170301preview.JobStepActionArgs(
+        source="Inline",
+        type="TSql",
+        value="select 2",
+    ),
     credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
-    execution_options={
-        "initialRetryIntervalSeconds": 11,
-        "maximumRetryIntervalSeconds": 222,
-        "retryAttempts": 42,
-        "retryIntervalBackoffMultiplier": 3,
-        "timeoutSeconds": 1234,
-    },
+    execution_options=azure_nextgen.sql.v20170301preview.JobStepExecutionOptionsArgs(
+        initial_retry_interval_seconds=11,
+        maximum_retry_interval_seconds=222,
+        retry_attempts=42,
+        retry_interval_backoff_multiplier=3,
+        timeout_seconds=1234,
+    ),
     job_agent_name="agent1",
     job_name="job1",
-    output={
-        "credential": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
-        "databaseName": "database3",
-        "resourceGroupName": "group3",
-        "schemaName": "myschema1234",
-        "serverName": "server3",
-        "subscriptionId": "3501b905-a848-4b5d-96e8-b253f62d735a",
-        "tableName": "mytable5678",
-        "type": "SqlDatabase",
-    },
+    output=azure_nextgen.sql.v20170301preview.JobStepOutputArgs(
+        credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
+        database_name="database3",
+        resource_group_name="group3",
+        schema_name="myschema1234",
+        server_name="server3",
+        subscription_id="3501b905-a848-4b5d-96e8-b253f62d735a",
+        table_name="mytable5678",
+        type="SqlDatabase",
+    ),
     resource_group_name="group1",
     server_name="server1",
     step_id=1,
@@ -284,9 +284,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
-    action={
-        "value": "select 1",
-    },
+    action=azure_nextgen.sql.v20170301preview.JobStepActionArgs(
+        value="select 1",
+    ),
     credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
     job_agent_name="agent1",
     job_name="job1",
@@ -334,7 +334,7 @@ const jobStep = new azure_nextgen.sql.v20170301preview.JobStep("jobStep", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobStep</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Dict[JobStepAction]]</span> = None<span class="p">, </span><span class="nx">credential</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_options</span><span class="p">:</span> <span class="nx">Optional[Dict[JobStepExecutionOptions]]</span> = None<span class="p">, </span><span class="nx">job_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output</span><span class="p">:</span> <span class="nx">Optional[Dict[JobStepOutput]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">step_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobStep</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[JobStepActionArgs]</span> = None<span class="p">, </span><span class="nx">credential</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_options</span><span class="p">:</span> <span class="nx">Optional[JobStepExecutionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">job_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output</span><span class="p">:</span> <span class="nx">Optional[JobStepOutputArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">step_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -863,7 +863,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepaction">Dict[Job<wbr>Step<wbr>Action]</a></span>
+        <span class="property-type"><a href="#jobstepaction">Job<wbr>Step<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd>
 
@@ -943,7 +943,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#execution_options_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepexecutionoptions">Dict[Job<wbr>Step<wbr>Execution<wbr>Options]</a></span>
+        <span class="property-type"><a href="#jobstepexecutionoptions">Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd>
 
@@ -953,7 +953,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepoutput">Dict[Job<wbr>Step<wbr>Output]</a></span>
+        <span class="property-type"><a href="#jobstepoutput">Job<wbr>Step<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
 

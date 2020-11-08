@@ -102,13 +102,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 workbook_template = azure_nextgen.insights.v20191017preview.WorkbookTemplate("workbookTemplate",
     author="Contoso",
-    galleries=[{
-        "category": "Failures",
-        "name": "Simple Template",
-        "order": 100,
-        "resourceType": "microsoft.insights/components",
-        "type": "tsg",
-    }],
+    galleries=[azure_nextgen.insights.v20191017preview.WorkbookTemplateGalleryArgs(
+        category="Failures",
+        name="Simple Template",
+        order=100,
+        resource_type="microsoft.insights/components",
+        type="tsg",
+    )],
     location="west us",
     priority=1,
     resource_group_name="my-resource-group",
@@ -157,7 +157,7 @@ const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTem
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">galleries</span><span class="p">:</span> <span class="nx">Optional[List[WorkbookTemplateGallery]]</span> = None<span class="p">, </span><span class="nx">localized</span><span class="p">:</span> <span class="nx">Optional[Dict[str, WorkbookTemplateLocalizedGallery&gt;]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">template_data</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">galleries</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkbookTemplateGalleryArgs]]</span> = None<span class="p">, </span><span class="nx">localized</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Sequence[WorkbookTemplateLocalizedGalleryArgs]]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_data</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -626,7 +626,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">List[Workbook<wbr>Template<wbr>Gallery]</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
 
@@ -666,7 +666,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#template_data_python" style="color: inherit; text-decoration: inherit;">template_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
 
@@ -686,7 +686,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#localized_python" style="color: inherit; text-decoration: inherit;">localized</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Workbook<wbr>Template<wbr>Localized<wbr>Gallery>]</span>
+        <span class="property-type">Mapping[str, Sequence[Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
 
@@ -706,7 +706,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1461,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">List[Workbook<wbr>Template<wbr>Gallery]</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
 
@@ -1471,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_data_python" style="color: inherit; text-decoration: inherit;">template_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
 
@@ -1580,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">List[Workbook<wbr>Template<wbr>Gallery<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
 
@@ -1590,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_data_python" style="color: inherit; text-decoration: inherit;">template_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
 

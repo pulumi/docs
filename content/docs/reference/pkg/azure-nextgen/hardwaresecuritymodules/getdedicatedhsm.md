@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
 
@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Dict[Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces of the dedicated hsm.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Dedicated Hsm zones.{{% /md %}}</dd>
 
@@ -902,7 +902,7 @@ The following output properties are available:
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List[Network<wbr>Interface<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.{{% /md %}}</dd>
 
@@ -912,7 +912,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Dict[Api<wbr>Entity<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd>
 

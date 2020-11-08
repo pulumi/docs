@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">List[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd>
 

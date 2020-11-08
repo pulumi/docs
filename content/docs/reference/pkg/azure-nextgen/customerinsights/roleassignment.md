@@ -103,14 +103,14 @@ role_assignment = azure_nextgen.customerinsights.latest.RoleAssignment("roleAssi
     assignment_name="assignmentName8976",
     hub_name="sdkTestHub",
     principals=[
-        {
-            "principalId": "4c54c38ffa9b416ba5a6d6c8a20cbe7e",
-            "principalType": "User",
-        },
-        {
-            "principalId": "93061d15a5054f2b9948ae25724cf9d5",
-            "principalType": "User",
-        },
+        azure_nextgen.customerinsights.latest.AssignmentPrincipalArgs(
+            principal_id="4c54c38ffa9b416ba5a6d6c8a20cbe7e",
+            principal_type="User",
+        ),
+        azure_nextgen.customerinsights.latest.AssignmentPrincipalArgs(
+            principal_id="93061d15a5054f2b9948ae25724cf9d5",
+            principal_type="User",
+        ),
     ],
     resource_group_name="TestHubRG",
     role="Admin")
@@ -158,7 +158,7 @@ const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflation_policies</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">connectors</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interactions</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">kpis</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">principals</span><span class="p">:</span> <span class="nx">Optional[List[AssignmentPrincipal]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">relationship_links</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">relationships</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_assignments</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">sas_policies</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">segments</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">views</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">, </span><span class="nx">widget_types</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSetDescription]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflation_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">connectors</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interactions</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">kpis</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssignmentPrincipalArgs]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">relationship_links</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">relationships</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_assignments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">sas_policies</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">segments</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">views</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">widget_types</span><span class="p">:</span> <span class="nx">Optional[ResourceSetDescriptionArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -977,7 +977,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentprincipal">List[Assignment<wbr>Principal]</a></span>
+        <span class="property-type"><a href="#assignmentprincipal">Sequence[Assignment<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
 
@@ -1007,7 +1007,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#conflation_policies_python" style="color: inherit; text-decoration: inherit;">conflation_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connectors_python" style="color: inherit; text-decoration: inherit;">connectors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
 
@@ -1027,7 +1027,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
 
@@ -1037,7 +1037,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
 
@@ -1047,7 +1047,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#interactions_python" style="color: inherit; text-decoration: inherit;">interactions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
 
@@ -1057,7 +1057,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kpis_python" style="color: inherit; text-decoration: inherit;">kpis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
 
@@ -1067,7 +1067,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
 
@@ -1077,7 +1077,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
 
@@ -1087,7 +1087,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#relationship_links_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
 
@@ -1097,7 +1097,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#relationships_python" style="color: inherit; text-decoration: inherit;">relationships</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
 
@@ -1107,7 +1107,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_assignments_python" style="color: inherit; text-decoration: inherit;">role_<wbr>assignments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
 
@@ -1117,7 +1117,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sas_policies_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
 
@@ -1127,7 +1127,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
 
@@ -1137,7 +1137,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#views_python" style="color: inherit; text-decoration: inherit;">views</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
 
@@ -1147,7 +1147,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#widget_types_python" style="color: inherit; text-decoration: inherit;">widget_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Dict[Resource<wbr>Set<wbr>Description]</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
 
@@ -1550,11 +1550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="principalmetadata_python">
-<a href="#principalmetadata_python" style="color: inherit; text-decoration: inherit;">principal<wbr>Metadata</a>
+        <span id="principal_metadata_python">
+<a href="#principal_metadata_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
 
@@ -1709,11 +1709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="principalmetadata_python">
-<a href="#principalmetadata_python" style="color: inherit; text-decoration: inherit;">principal<wbr>Metadata</a>
+        <span id="principal_metadata_python">
+<a href="#principal_metadata_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
 
@@ -1822,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elements_python" style="color: inherit; text-decoration: inherit;">elements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
 
@@ -1832,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_python" style="color: inherit; text-decoration: inherit;">exceptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
 
@@ -1941,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elements_python" style="color: inherit; text-decoration: inherit;">elements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
 
@@ -1951,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_python" style="color: inherit; text-decoration: inherit;">exceptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
 

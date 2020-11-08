@@ -502,7 +502,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#data_flows_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponse">List[Data<wbr>Flow<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataflowresponse">Sequence[Data<wbr>Flow<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd>
 
@@ -512,7 +512,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Dict[Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations]</a></span>
+        <span class="property-type"><a href="#datacollectionruleresponsedestinations">Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Destinations</a></span>
     </dt>
     <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd>
 
@@ -572,7 +572,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#data_sources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruleresponsedatasources">Dict[Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Data<wbr>Sources]</a></span>
+        <span class="property-type"><a href="#datacollectionruleresponsedatasources">Data<wbr>Collection<wbr>Rule<wbr>Response<wbr>Data<wbr>Sources</a></span>
     </dt>
     <dd>{{% md %}}The specification of data sources. 
 This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.{{% /md %}}</dd>
@@ -593,7 +593,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -768,7 +768,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">List[Extension<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">Sequence[Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd>
 
@@ -778,7 +778,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#performance_counters_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">List[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd>
 
@@ -788,7 +788,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#syslog_python" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">List[Syslog<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">Sequence[Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd>
 
@@ -798,7 +798,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#windows_event_logs_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>event_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd>
 
@@ -907,7 +907,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#azure_monitor_metrics_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Dict[Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics]</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd>
 
@@ -917,7 +917,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">List[Log<wbr>Analytics<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">Sequence[Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd>
 
@@ -1026,7 +1026,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd>
 
@@ -1036,7 +1036,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd>
 
@@ -1315,18 +1315,18 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extensionsettings_python">
-<a href="#extensionsettings_python" style="color: inherit; text-decoration: inherit;">extension<wbr>Settings</a>
+        <span id="extension_settings_python">
+<a href="#extension_settings_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The extension settings. The format is specific for particular extension.{{% /md %}}</dd>
 
@@ -1656,11 +1656,11 @@ A stream indicates what schema will be used for this data and usually what table
 
     <dt class="property-required"
             title="Required">
-        <span id="counterspecifiers_python">
-<a href="#counterspecifiers_python" style="color: inherit; text-decoration: inherit;">counter<wbr>Specifiers</a>
+        <span id="counter_specifiers_python">
+<a href="#counter_specifiers_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>specifiers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
@@ -1679,8 +1679,8 @@ This name should be unique across all data sources (regardless of type) within t
 
     <dt class="property-required"
             title="Required">
-        <span id="samplingfrequencyinseconds_python">
-<a href="#samplingfrequencyinseconds_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Frequency<wbr>In<wbr>Seconds</a>
+        <span id="sampling_frequency_in_seconds_python">
+<a href="#sampling_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1689,8 +1689,8 @@ This name should be unique across all data sources (regardless of type) within t
 
     <dt class="property-required"
             title="Required">
-        <span id="scheduledtransferperiod_python">
-<a href="#scheduledtransferperiod_python" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Transfer<wbr>Period</a>
+        <span id="scheduled_transfer_period_python">
+<a href="#scheduled_transfer_period_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>transfer_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1703,7 +1703,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
@@ -1875,11 +1875,11 @@ A stream indicates what schema will be used for this data and usually what table
 
     <dt class="property-required"
             title="Required">
-        <span id="facilitynames_python">
-<a href="#facilitynames_python" style="color: inherit; text-decoration: inherit;">facility<wbr>Names</a>
+        <span id="facility_names_python">
+<a href="#facility_names_python" style="color: inherit; text-decoration: inherit;">facility_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd>
 
@@ -1900,18 +1900,18 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loglevels_python">
-<a href="#loglevels_python" style="color: inherit; text-decoration: inherit;">log<wbr>Levels</a>
+        <span id="log_levels_python">
+<a href="#log_levels_python" style="color: inherit; text-decoration: inherit;">log_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd>
 
@@ -2093,8 +2093,8 @@ This name should be unique across all data sources (regardless of type) within t
 
     <dt class="property-required"
             title="Required">
-        <span id="scheduledtransferperiod_python">
-<a href="#scheduledtransferperiod_python" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Transfer<wbr>Period</a>
+        <span id="scheduled_transfer_period_python">
+<a href="#scheduled_transfer_period_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>transfer_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2107,18 +2107,18 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="xpathqueries_python">
-<a href="#xpathqueries_python" style="color: inherit; text-decoration: inherit;">x<wbr>Path<wbr>Queries</a>
+        <span id="x_path_queries_python">
+<a href="#x_path_queries_python" style="color: inherit; text-decoration: inherit;">x_<wbr>path_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Windows Event Log queries in XPATH format.{{% /md %}}</dd>
 

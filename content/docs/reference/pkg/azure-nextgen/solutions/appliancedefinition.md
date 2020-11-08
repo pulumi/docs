@@ -98,10 +98,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 appliance_definition = azure_nextgen.solutions.v20160901preview.ApplianceDefinition("applianceDefinition",
     appliance_definition_name="myApplianceDef",
-    authorizations=[{
-        "principalId": "validprincipalguid",
-        "roleDefinitionId": "validroleguid",
-    }],
+    authorizations=[azure_nextgen.solutions.v20160901preview.ApplianceProviderAuthorizationArgs(
+        principal_id="validprincipalguid",
+        role_definition_id="validroleguid",
+    )],
     description="myApplianceDef description",
     display_name="myApplianceDef",
     location="East US 2",
@@ -149,7 +149,7 @@ const applianceDefinition = new azure_nextgen.solutions.v20160901preview.Applian
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplianceDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">appliance_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[List[ApplianceArtifact]]</span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[List[ApplianceProviderAuthorization]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[Identity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_file_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplianceDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">appliance_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplianceArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplianceProviderAuthorizationArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_file_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -748,7 +748,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applianceproviderauthorization">List[Appliance<wbr>Provider<wbr>Authorization]</a></span>
+        <span class="property-type"><a href="#applianceproviderauthorization">Sequence[Appliance<wbr>Provider<wbr>Authorization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The appliance provider authorizations.{{% /md %}}</dd>
 
@@ -788,7 +788,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applianceartifact">List[Appliance<wbr>Artifact]</a></span>
+        <span class="property-type"><a href="#applianceartifact">Sequence[Appliance<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of appliance artifacts. The portal will use the files specified as artifacts to construct the user experience of creating an appliance from an appliance definition.{{% /md %}}</dd>
 
@@ -818,7 +818,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Dict[Identity]</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -848,7 +848,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
 
@@ -858,7 +858,7 @@ The ApplianceDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 

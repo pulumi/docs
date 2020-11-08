@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Synapse/V20190601preview:Ssis<wbr>Environment<wbr>Response, Azure-Nextgen:Synapse/V20190601preview:Ssis<wbr>Folder<wbr>Response, Azure-Nextgen:Synapse/V20190601preview:Ssis<wbr>Package<wbr>Response, Azure-Nextgen:Synapse/V20190601preview:Ssis<wbr>Project<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of SSIS object metadata.{{% /md %}}</dd>
 
@@ -518,8 +518,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmentfoldername_python">
-<a href="#environmentfoldername_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Folder<wbr>Name</a>
+        <span id="environment_folder_name_python">
+<a href="#environment_folder_name_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>folder_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -548,8 +548,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="referencetype_python">
-<a href="#referencetype_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Type</a>
+        <span id="reference_type_python">
+<a href="#reference_type_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -757,8 +757,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="folderid_python">
-<a href="#folderid_python" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
+        <span id="folder_id_python">
+<a href="#folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisvariableresponse">List[Ssis<wbr>Variable<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ssisvariableresponse">Sequence[Ssis<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Variable in environment{{% /md %}}</dd>
 
@@ -1215,8 +1215,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="folderid_python">
-<a href="#folderid_python" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
+        <span id="folder_id_python">
+<a href="#folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1249,19 +1249,9 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisparameterresponse">List[Ssis<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ssisparameterresponse">Sequence[Ssis<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters in package{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="projectversion_python">
-<a href="#projectversion_python" style="color: inherit; text-decoration: inherit;">project<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Project version which contains package.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1272,6 +1262,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Project id which contains package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_version_python">
+<a href="#project_version_python" style="color: inherit; text-decoration: inherit;">project_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Project version which contains package.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1704,8 +1704,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="designdefaultvalue_python">
-<a href="#designdefaultvalue_python" style="color: inherit; text-decoration: inherit;">design<wbr>Default<wbr>Value</a>
+        <span id="design_default_value_python">
+<a href="#design_default_value_python" style="color: inherit; text-decoration: inherit;">design_<wbr>default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1754,8 +1754,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sensitivedefaultvalue_python">
-<a href="#sensitivedefaultvalue_python" style="color: inherit; text-decoration: inherit;">sensitive<wbr>Default<wbr>Value</a>
+        <span id="sensitive_default_value_python">
+<a href="#sensitive_default_value_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1764,8 +1764,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valueset_python">
-<a href="#valueset_python" style="color: inherit; text-decoration: inherit;">value<wbr>Set</a>
+        <span id="value_set_python">
+<a href="#value_set_python" style="color: inherit; text-decoration: inherit;">value_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1774,8 +1774,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuetype_python">
-<a href="#valuetype_python" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+        <span id="value_type_python">
+<a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2053,18 +2053,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmentrefs_python">
-<a href="#environmentrefs_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Refs</a>
+        <span id="environment_refs_python">
+<a href="#environment_refs_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisenvironmentreferenceresponse">List[Ssis<wbr>Environment<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ssisenvironmentreferenceresponse">Sequence[Ssis<wbr>Environment<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Environment reference in project{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="folderid_python">
-<a href="#folderid_python" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
+        <span id="folder_id_python">
+<a href="#folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2097,7 +2097,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisparameterresponse">List[Ssis<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ssisparameterresponse">Sequence[Ssis<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters in project{{% /md %}}</dd>
 
@@ -2412,8 +2412,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sensitivevalue_python">
-<a href="#sensitivevalue_python" style="color: inherit; text-decoration: inherit;">sensitive<wbr>Value</a>
+        <span id="sensitive_value_python">
+<a href="#sensitive_value_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

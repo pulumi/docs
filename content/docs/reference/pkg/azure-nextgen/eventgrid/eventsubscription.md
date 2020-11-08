@@ -67,21 +67,21 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
-    dead_letter_destination={
-        "blobContainerName": "contosocontainer",
-        "endpointType": "StorageBlob",
-        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
-    },
+    dead_letter_destination=azure_nextgen.eventgrid.latest.StorageBlobDeadLetterDestinationArgs(
+        blob_container_name="contosocontainer",
+        endpoint_type="StorageBlob",
+        resource_id="/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
+    ),
     destination={
         "endpointType": "EventHub",
         "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
     },
     event_subscription_name="examplesubscription1",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
+    filter=azure_nextgen.eventgrid.latest.EventSubscriptionFilterArgs(
+        is_subject_case_sensitive=False,
+        subject_begins_with="ExamplePrefix",
+        subject_ends_with="ExampleSuffix",
+    ),
     scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1")
 
 ```
@@ -168,21 +168,21 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
-    dead_letter_destination={
-        "blobContainerName": "contosocontainer",
-        "endpointType": "StorageBlob",
-        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
-    },
+    dead_letter_destination=azure_nextgen.eventgrid.latest.StorageBlobDeadLetterDestinationArgs(
+        blob_container_name="contosocontainer",
+        endpoint_type="StorageBlob",
+        resource_id="/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
+    ),
     destination={
         "endpointType": "HybridConnection",
         "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
     },
     event_subscription_name="examplesubscription1",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
+    filter=azure_nextgen.eventgrid.latest.EventSubscriptionFilterArgs(
+        is_subject_case_sensitive=False,
+        subject_begins_with="ExamplePrefix",
+        subject_ends_with="ExampleSuffix",
+    ),
     scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1")
 
 ```
@@ -270,22 +270,22 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
-    dead_letter_destination={
-        "blobContainerName": "contosocontainer",
-        "endpointType": "StorageBlob",
-        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
-    },
+    dead_letter_destination=azure_nextgen.eventgrid.latest.StorageBlobDeadLetterDestinationArgs(
+        blob_container_name="contosocontainer",
+        endpoint_type="StorageBlob",
+        resource_id="/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
+    ),
     destination={
         "endpointType": "StorageQueue",
         "queueName": "queue1",
         "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     },
     event_subscription_name="examplesubscription1",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
+    filter=azure_nextgen.eventgrid.latest.EventSubscriptionFilterArgs(
+        is_subject_case_sensitive=False,
+        subject_begins_with="ExamplePrefix",
+        subject_ends_with="ExampleSuffix",
+    ),
     scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1")
 
 ```
@@ -372,11 +372,11 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
         "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
     },
     event_subscription_name="examplesubscription1",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
+    filter=azure_nextgen.eventgrid.latest.EventSubscriptionFilterArgs(
+        is_subject_case_sensitive=False,
+        subject_begins_with="ExamplePrefix",
+        subject_ends_with="ExampleSuffix",
+    ),
     scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1")
 
 ```
@@ -457,11 +457,11 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
         "endpointUrl": "https://requestb.in/15ksip71",
     },
     event_subscription_name="examplesubscription10",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
+    filter=azure_nextgen.eventgrid.latest.EventSubscriptionFilterArgs(
+        is_subject_case_sensitive=False,
+        subject_begins_with="ExamplePrefix",
+        subject_ends_with="ExampleSuffix",
+    ),
     scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1")
 
 ```
@@ -542,11 +542,11 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
         "endpointUrl": "https://requestb.in/15ksip71",
     },
     event_subscription_name="examplesubscription2",
-    filter={
-        "isSubjectCaseSensitive": False,
-        "subjectBeginsWith": "ExamplePrefix",
-        "subjectEndsWith": "ExampleSuffix",
-    },
+    filter=azure_nextgen.eventgrid.latest.EventSubscriptionFilterArgs(
+        is_subject_case_sensitive=False,
+        subject_begins_with="ExamplePrefix",
+        subject_ends_with="ExampleSuffix",
+    ),
     scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg")
 
 ```
@@ -625,9 +625,9 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
         "endpointUrl": "https://requestb.in/15ksip71",
     },
     event_subscription_name="examplesubscription3",
-    filter={
-        "isSubjectCaseSensitive": False,
-    },
+    filter=azure_nextgen.eventgrid.latest.EventSubscriptionFilterArgs(
+        is_subject_case_sensitive=False,
+    ),
     scope="subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4")
 
 ```
@@ -668,7 +668,7 @@ const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[Dict[StorageBlobDeadLetterDestination]]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureFunctionEventSubscriptionDestination] | Dict[EventHubEventSubscriptionDestination] | Dict[HybridConnectionEventSubscriptionDestination] | Dict[ServiceBusQueueEventSubscriptionDestination] | Dict[ServiceBusTopicEventSubscriptionDestination] | Dict[StorageQueueEventSubscriptionDestination] | Dict[WebHookEventSubscriptionDestination]]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[Dict[EventSubscriptionFilter]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[RetryPolicy]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[StorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFunctionEventSubscriptionDestinationArgs, EventHubEventSubscriptionDestinationArgs, HybridConnectionEventSubscriptionDestinationArgs, ServiceBusQueueEventSubscriptionDestinationArgs, ServiceBusTopicEventSubscriptionDestinationArgs, StorageQueueEventSubscriptionDestinationArgs, WebHookEventSubscriptionDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionFilterArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[RetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1157,7 +1157,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Dict[Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DeadLetter destination of the event subscription.{{% /md %}}</dd>
 
@@ -1167,7 +1167,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination] | Dict[Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination] | Dict[Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination] | Dict[Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination] | Dict[Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination] | Dict[Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination] | Dict[Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination]</span>
+        <span class="property-type">Union[Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args, Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd>
 
@@ -1197,7 +1197,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionfilter">Dict[Event<wbr>Subscription<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionfilter">Event<wbr>Subscription<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event subscription.{{% /md %}}</dd>
 
@@ -1207,7 +1207,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of user defined labels.{{% /md %}}</dd>
 
@@ -1217,7 +1217,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Dict[Retry<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.{{% /md %}}</dd>
 
@@ -1600,8 +1600,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxeventsperbatch_python">
-<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+        <span id="max_events_per_batch_python">
+<a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1610,8 +1610,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredbatchsizeinkilobytes_python">
-<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+        <span id="preferred_batch_size_in_kilobytes_python">
+<a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1759,8 +1759,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxeventsperbatch_python">
-<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+        <span id="max_events_per_batch_python">
+<a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1769,8 +1769,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredbatchsizeinkilobytes_python">
-<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+        <span id="preferred_batch_size_in_kilobytes_python">
+<a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2390,7 +2390,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Eventgrid/Latest:Bool<wbr>Equals<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:Number<wbr>In<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:String<wbr>Contains<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:String<wbr>In<wbr>Advanced<wbr>Filter, Azure-Nextgen:Eventgrid/Latest:String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter, Default=>]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
 
@@ -2400,7 +2400,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd>
 
@@ -2645,7 +2645,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Eventgrid/Latest:Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azure-Nextgen:Eventgrid/Latest:String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
 
@@ -2655,7 +2655,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd>
 
@@ -3442,7 +3442,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -3561,7 +3561,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -4156,7 +4156,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -4275,7 +4275,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -5424,7 +5424,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -5543,7 +5543,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -5662,7 +5662,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -5781,7 +5781,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -5900,7 +5900,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -6019,7 +6019,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -6138,7 +6138,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -6257,7 +6257,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -6376,7 +6376,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -6495,7 +6495,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 
@@ -6690,8 +6690,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureactivedirectoryapplicationidoruri_python">
-<a href="#azureactivedirectoryapplicationidoruri_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
+        <span id="azure_active_directory_application_id_or_uri_python">
+<a href="#azure_active_directory_application_id_or_uri_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>application_<wbr>id_<wbr>or_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6700,8 +6700,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureactivedirectorytenantid_python">
-<a href="#azureactivedirectorytenantid_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+        <span id="azure_active_directory_tenant_id_python">
+<a href="#azure_active_directory_tenant_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6710,8 +6710,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointurl_python">
-<a href="#endpointurl_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
+        <span id="endpoint_url_python">
+<a href="#endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6720,8 +6720,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxeventsperbatch_python">
-<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+        <span id="max_events_per_batch_python">
+<a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6730,8 +6730,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredbatchsizeinkilobytes_python">
-<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+        <span id="preferred_batch_size_in_kilobytes_python">
+<a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6959,8 +6959,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="endpointbaseurl_python">
-<a href="#endpointbaseurl_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Base<wbr>Url</a>
+        <span id="endpoint_base_url_python">
+<a href="#endpoint_base_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>base_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6969,8 +6969,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureactivedirectoryapplicationidoruri_python">
-<a href="#azureactivedirectoryapplicationidoruri_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
+        <span id="azure_active_directory_application_id_or_uri_python">
+<a href="#azure_active_directory_application_id_or_uri_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>application_<wbr>id_<wbr>or_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6979,8 +6979,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureactivedirectorytenantid_python">
-<a href="#azureactivedirectorytenantid_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+        <span id="azure_active_directory_tenant_id_python">
+<a href="#azure_active_directory_tenant_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>tenant_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6989,8 +6989,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointurl_python">
-<a href="#endpointurl_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
+        <span id="endpoint_url_python">
+<a href="#endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6999,8 +6999,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxeventsperbatch_python">
-<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+        <span id="max_events_per_batch_python">
+<a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -7009,8 +7009,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredbatchsizeinkilobytes_python">
-<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+        <span id="preferred_batch_size_in_kilobytes_python">
+<a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

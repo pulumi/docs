@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationartifactresponse">List[Application<wbr>Artifact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationartifactresponse">Sequence[Application<wbr>Artifact<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts.{{% /md %}}</dd>
 
@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorizationresponse">List[Application<wbr>Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationauthorizationresponse">Sequence[Application<wbr>Authorization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The  read-only authorizations property that is retrieved from the application package.{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#billing_details_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationbillingdetailsdefinitionresponse">Dict[Application<wbr>Billing<wbr>Details<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationbillingdetailsdefinitionresponse">Application<wbr>Billing<wbr>Details<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application billing details.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Dict[Application<wbr>Client<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that created the JIT request.{{% /md %}}</dd>
 
@@ -959,7 +959,7 @@ The following output properties are available:
 <a href="#customer_support_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>support</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagecontactresponse">Dict[Application<wbr>Package<wbr>Contact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationpackagecontactresponse">Application<wbr>Package<wbr>Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The read-only customer support property that is retrieved from the application package.{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the managed application outputs.{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#support_urls_python" style="color: inherit; text-decoration: inherit;">support_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagesupporturlsresponse">Dict[Application<wbr>Package<wbr>Support<wbr>Urls<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationpackagesupporturlsresponse">Application<wbr>Package<wbr>Support<wbr>Urls<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The read-only support URLs property that is retrieved from the application package.{{% /md %}}</dd>
 
@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationclientdetailsresponse">Dict[Application<wbr>Client<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationclientdetailsresponse">Application<wbr>Client<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client entity that last updated the JIT request.{{% /md %}}</dd>
 
@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -1079,7 +1079,7 @@ The following output properties are available:
 <a href="#jit_access_policy_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>access_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationjitaccesspolicyresponse">Dict[Application<wbr>Jit<wbr>Access<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationjitaccesspolicyresponse">Application<wbr>Jit<wbr>Access<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed application Jit access policy.{{% /md %}}</dd>
 
@@ -1119,7 +1119,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.{{% /md %}}</dd>
 
@@ -1129,7 +1129,7 @@ The following output properties are available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Dict[Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#planresponse">Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The plan information.{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
 
@@ -1149,7 +1149,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1860,7 +1860,7 @@ The following output properties are available:
 <a href="#jit_approvers_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>approvers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinitionresponse">List[Jit<wbr>Approver<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jitapproverdefinitionresponse">Sequence[Jit<wbr>Approver<wbr>Definition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd>
 
@@ -2347,7 +2347,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 

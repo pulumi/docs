@@ -136,32 +136,32 @@ import pulumi_azure_nextgen as azure_nextgen
 
 domain_service = azure_nextgen.aad.latest.DomainService("domainService",
     domain_name="TestDomainService.com",
-    domain_security_settings={
-        "ntlmV1": "Enabled",
-        "syncNtlmPasswords": "Enabled",
-        "tlsV1": "Disabled",
-    },
+    domain_security_settings=azure_nextgen.aad.latest.DomainSecuritySettingsArgs(
+        ntlm_v1="Enabled",
+        sync_ntlm_passwords="Enabled",
+        tls_v1="Disabled",
+    ),
     domain_service_name="TestDomainService.com",
     filtered_sync="Enabled",
-    ldaps_settings={
-        "externalAccess": "Enabled",
-        "ldaps": "Enabled",
-        "pfxCertificate": "MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
-        "pfxCertificatePassword": "Password01",
-    },
+    ldaps_settings=azure_nextgen.aad.latest.LdapsSettingsArgs(
+        external_access="Enabled",
+        ldaps="Enabled",
+        pfx_certificate="MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
+        pfx_certificate_password="Password01",
+    ),
     location="West US",
-    notification_settings={
-        "additionalRecipients": [
+    notification_settings=azure_nextgen.aad.latest.NotificationSettingsArgs(
+        additional_recipients=[
             "jicha@microsoft.com",
             "caalmont@microsoft.com",
         ],
-        "notifyDcAdmins": "Enabled",
-        "notifyGlobalAdmins": "Enabled",
-    },
-    replica_sets=[{
-        "location": "West US",
-        "subnetId": "/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
-    }],
+        notify_dc_admins="Enabled",
+        notify_global_admins="Enabled",
+    ),
+    replica_sets=[azure_nextgen.aad.latest.ReplicaSetArgs(
+        location="West US",
+        subnet_id="/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
+    )],
     resource_group_name="TestResourceGroup")
 
 ```
@@ -221,7 +221,7 @@ const domainService = new azure_nextgen.aad.latest.DomainService("domainService"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_security_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[DomainSecuritySettings]]</span> = None<span class="p">, </span><span class="nx">domain_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filtered_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ldaps_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[LdapsSettings]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[NotificationSettings]]</span> = None<span class="p">, </span><span class="nx">replica_sets</span><span class="p">:</span> <span class="nx">Optional[List[ReplicaSet]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_security_settings</span><span class="p">:</span> <span class="nx">Optional[DomainSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">domain_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filtered_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ldaps_settings</span><span class="p">:</span> <span class="nx">Optional[LdapsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[NotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">replica_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicaSetArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -780,7 +780,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#domain_security_settings_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>security_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsecuritysettings">Dict[Domain<wbr>Security<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#domainsecuritysettings">Domain<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DomainSecurity Settings{{% /md %}}</dd>
 
@@ -810,7 +810,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ldaps_settings_python" style="color: inherit; text-decoration: inherit;">ldaps_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ldapssettings">Dict[Ldaps<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#ldapssettings">Ldaps<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secure LDAP Settings{{% /md %}}</dd>
 
@@ -830,7 +830,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Dict[Notification<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification Settings{{% /md %}}</dd>
 
@@ -840,7 +840,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#replica_sets_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicaset">List[Replica<wbr>Set]</a></span>
+        <span class="property-type"><a href="#replicaset">Sequence[Replica<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ReplicaSets{{% /md %}}</dd>
 
@@ -850,7 +850,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1811,8 +1811,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="lastdetected_python">
-<a href="#lastdetected_python" style="color: inherit; text-decoration: inherit;">last<wbr>Detected</a>
+        <span id="last_detected_python">
+<a href="#last_detected_python" style="color: inherit; text-decoration: inherit;">last_<wbr>detected</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1841,8 +1841,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="resolutionuri_python">
-<a href="#resolutionuri_python" style="color: inherit; text-decoration: inherit;">resolution<wbr>Uri</a>
+        <span id="resolution_uri_python">
+<a href="#resolution_uri_python" style="color: inherit; text-decoration: inherit;">resolution_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2671,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_recipients_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of additional recipients{{% /md %}}</dd>
 
@@ -2830,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_recipients_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of additional recipients{{% /md %}}</dd>
 
@@ -3314,18 +3314,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="domaincontrolleripaddress_python">
-<a href="#domaincontrolleripaddress_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Controller<wbr>Ip<wbr>Address</a>
+        <span id="domain_controller_ip_address_python">
+<a href="#domain_controller_ip_address_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>controller_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Controller IP Address{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="externalaccessipaddress_python">
-<a href="#externalaccessipaddress_python" style="color: inherit; text-decoration: inherit;">external<wbr>Access<wbr>Ip<wbr>Address</a>
+        <span id="external_access_ip_address_python">
+<a href="#external_access_ip_address_python" style="color: inherit; text-decoration: inherit;">external_<wbr>access_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3334,18 +3334,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="healthalerts_python">
-<a href="#healthalerts_python" style="color: inherit; text-decoration: inherit;">health<wbr>Alerts</a>
+        <span id="health_alerts_python">
+<a href="#health_alerts_python" style="color: inherit; text-decoration: inherit;">health_<wbr>alerts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">List[Health<wbr>Alert<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthalertresponse">Sequence[Health<wbr>Alert<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="healthlastevaluated_python">
-<a href="#healthlastevaluated_python" style="color: inherit; text-decoration: inherit;">health<wbr>Last<wbr>Evaluated</a>
+        <span id="health_last_evaluated_python">
+<a href="#health_last_evaluated_python" style="color: inherit; text-decoration: inherit;">health_<wbr>last_<wbr>evaluated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3354,18 +3354,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="healthmonitors_python">
-<a href="#healthmonitors_python" style="color: inherit; text-decoration: inherit;">health<wbr>Monitors</a>
+        <span id="health_monitors_python">
+<a href="#health_monitors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>monitors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">List[Health<wbr>Monitor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">Sequence[Health<wbr>Monitor<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="replicasetid_python">
-<a href="#replicasetid_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Set<wbr>Id</a>
+        <span id="replica_set_id_python">
+<a href="#replica_set_id_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>set_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3384,8 +3384,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="vnetsiteid_python">
-<a href="#vnetsiteid_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Site<wbr>Id</a>
+        <span id="vnet_site_id_python">
+<a href="#vnet_site_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>site_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

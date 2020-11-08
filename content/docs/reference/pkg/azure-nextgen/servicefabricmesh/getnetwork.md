@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkresourcepropertiesresponse">Dict[Network<wbr>Resource<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkresourcepropertiesresponse">Network<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of a network resource.{{% /md %}}</dd>
 
@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

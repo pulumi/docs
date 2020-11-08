@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Dict[Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
 
@@ -654,7 +654,7 @@ The following output properties are available:
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
 
@@ -664,7 +664,7 @@ The following output properties are available:
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The following output properties are available:
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
 

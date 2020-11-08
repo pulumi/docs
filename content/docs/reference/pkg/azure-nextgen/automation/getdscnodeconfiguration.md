@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dscconfigurationassociationpropertyresponse">Dict[Dsc<wbr>Configuration<wbr>Association<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dscconfigurationassociationpropertyresponse">Dsc<wbr>Configuration<wbr>Association<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the configuration of the node.{{% /md %}}</dd>
 

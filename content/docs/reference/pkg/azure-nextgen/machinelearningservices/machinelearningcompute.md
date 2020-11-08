@@ -145,19 +145,19 @@ import pulumi_azure_nextgen as azure_nextgen
 
 machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
-    identity={
-        "type": "SystemAssigned,UserAssigned",
-    },
+    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
+        type="SystemAssigned,UserAssigned",
+    ),
     location="eastus",
     properties={
         "computeType": "AmlCompute",
         "properties": {
             "remoteLoginPortPublicAccess": "NotSpecified",
-            "scaleSettings": {
-                "maxNodeCount": 1,
-                "minNodeCount": 0,
-                "nodeIdleTimeBeforeScaleDown": "PT5M",
-            },
+            "scaleSettings": azure_nextgen.machinelearningservices.latest.ScaleSettingsArgs(
+                max_node_count=1,
+                min_node_count=0,
+                node_idle_time_before_scale_down="PT5M",
+            ),
             "vmPriority": "Dedicated",
             "vmSize": "STANDARD_NC6",
         },
@@ -258,9 +258,9 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
         "computeType": "ComputeInstance",
         "properties": {
             "applicationSharingPolicy": "Personal",
-            "sshSettings": {
-                "sshPublicAccess": "Disabled",
-            },
+            "sshSettings": azure_nextgen.machinelearningservices.latest.ComputeInstanceSshSettingsArgs(
+                ssh_public_access="Disabled",
+            ),
             "subnet": "test-subnet-resource-id",
             "vmSize": "STANDARD_NC6",
         },
@@ -596,18 +596,18 @@ import pulumi_azure_nextgen as azure_nextgen
 
 machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
-    identity={
-        "type": "SystemAssigned,UserAssigned",
-    },
+    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
+        type="SystemAssigned,UserAssigned",
+    ),
     location="eastus",
     properties={
         "computeType": "AmlCompute",
         "properties": {
-            "scaleSettings": {
-                "maxNodeCount": 1,
-                "minNodeCount": 0,
-                "nodeIdleTimeBeforeScaleDown": "PT5M",
-            },
+            "scaleSettings": azure_nextgen.machinelearningservices.latest.ScaleSettingsArgs(
+                max_node_count=1,
+                min_node_count=0,
+                node_idle_time_before_scale_down="PT5M",
+            ),
         },
     },
     resource_group_name="testrg123",
@@ -659,7 +659,7 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compute_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[Identity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AKS] | Dict[AmlCompute] | Dict[ComputeInstance] | Dict[DataFactory] | Dict[DataLakeAnalytics] | Dict[Databricks] | Dict[HDInsight] | Dict[VirtualMachine]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compute_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AKSArgs, AmlComputeArgs, ComputeInstanceArgs, DataFactoryArgs, DataLakeAnalyticsArgs, DatabricksArgs, HDInsightArgs, VirtualMachineArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1128,7 +1128,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Dict[Identity]</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -1148,7 +1148,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[AKS] | Dict[Aml<wbr>Compute] | Dict[Compute<wbr>Instance] | Dict[Data<wbr>Factory] | Dict[Data<wbr>Lake<wbr>Analytics] | Dict[Databricks] | Dict[HDInsight] | Dict[Virtual<wbr>Machine]</span>
+        <span class="property-type">Union[AKSArgs, Aml<wbr>Compute<wbr>Args, Compute<wbr>Instance<wbr>Args, Data<wbr>Factory<wbr>Args, Data<wbr>Lake<wbr>Analytics<wbr>Args, Databricks<wbr>Args, HDInsight<wbr>Args, Virtual<wbr>Machine<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Compute properties{{% /md %}}</dd>
 
@@ -1158,7 +1158,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
 
@@ -1168,7 +1168,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1501,8 +1501,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1525,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksproperties">Dict[AKSProperties]</a></span>
+        <span class="property-type"><a href="#aksproperties">AKSProperties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd>
 
@@ -1730,16 +1730,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agentvmsize_python">
-<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="agent_count_python">
 <a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
 </span> 
@@ -1750,11 +1740,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aksnetworkingconfiguration_python">
-<a href="#aksnetworkingconfiguration_python" style="color: inherit; text-decoration: inherit;">aks<wbr>Networking<wbr>Configuration</a>
+        <span id="agent_vm_size_python">
+<a href="#agent_vm_size_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>vm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfiguration">Dict[Aks<wbr>Networking<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aks_networking_configuration_python">
+<a href="#aks_networking_configuration_python" style="color: inherit; text-decoration: inherit;">aks_<wbr>networking_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksnetworkingconfiguration">Aks<wbr>Networking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd>
 
@@ -1770,11 +1770,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslconfiguration_python">
-<a href="#sslconfiguration_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configuration</a>
+        <span id="ssl_configuration_python">
+<a href="#ssl_configuration_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Dict[Ssl<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd>
 
@@ -2099,8 +2099,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isattachedcompute_python">
-<a href="#isattachedcompute_python" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
+        <span id="is_attached_compute_python">
+<a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2123,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
 
@@ -2139,8 +2139,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2163,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksresponseproperties">Dict[AKSResponse<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd>
 
@@ -2402,19 +2402,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">List[System<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}System services{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="agentvmsize_python">
-<a href="#agentvmsize_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2428,11 +2418,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aksnetworkingconfiguration_python">
-<a href="#aksnetworkingconfiguration_python" style="color: inherit; text-decoration: inherit;">aks<wbr>Networking<wbr>Configuration</a>
+        <span id="agent_vm_size_python">
+<a href="#agent_vm_size_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>vm_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Dict[Aks<wbr>Networking<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aks_networking_configuration_python">
+<a href="#aks_networking_configuration_python" style="color: inherit; text-decoration: inherit;">aks_<wbr>networking_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd>
 
@@ -2448,11 +2448,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslconfiguration_python">
-<a href="#sslconfiguration_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configuration</a>
+        <span id="ssl_configuration_python">
+<a href="#ssl_configuration_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Dict[Ssl<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd>
 
@@ -3015,8 +3015,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3039,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeproperties">Dict[Aml<wbr>Compute<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#amlcomputeproperties">Aml<wbr>Compute<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd>
 
@@ -3274,8 +3274,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteloginportpublicaccess_python">
-<a href="#remoteloginportpublicaccess_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
+        <span id="remote_login_port_public_access_python">
+<a href="#remote_login_port_public_access_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>login_<wbr>port_<wbr>public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3288,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Dict[Scale<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd>
 
@@ -3298,17 +3298,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useraccountcredentials_python">
-<a href="#useraccountcredentials_python" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Credentials</a>
+        <span id="user_account_credentials_python">
+<a href="#user_account_credentials_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentials">Dict[User<wbr>Account<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#useraccountcredentials">User<wbr>Account<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
 
@@ -3653,8 +3653,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isattachedcompute_python">
-<a href="#isattachedcompute_python" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
+        <span id="is_attached_compute_python">
+<a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3677,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
 
@@ -3693,8 +3693,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3717,7 +3717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeresponseproperties">Dict[Aml<wbr>Compute<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd>
 
@@ -4166,7 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
 
@@ -4176,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_state_counts_python" style="color: inherit; text-decoration: inherit;">node_<wbr>state_<wbr>counts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatecountsresponse">Dict[Node<wbr>State<wbr>Counts<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd>
 
@@ -4192,8 +4192,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteloginportpublicaccess_python">
-<a href="#remoteloginportpublicaccess_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
+        <span id="remote_login_port_public_access_python">
+<a href="#remote_login_port_public_access_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>login_<wbr>port_<wbr>public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4206,7 +4206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettingsresponse">Dict[Scale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd>
 
@@ -4216,17 +4216,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useraccountcredentials_python">
-<a href="#useraccountcredentials_python" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Credentials</a>
+        <span id="user_account_credentials_python">
+<a href="#user_account_credentials_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentialsresponse">Dict[User<wbr>Account<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
 
@@ -4411,8 +4411,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4435,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceproperties">Dict[Compute<wbr>Instance<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#computeinstanceproperties">Compute<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd>
 
@@ -4560,8 +4560,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4818,16 +4818,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="userorgid_python">
-<a href="#userorgid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Org<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span> 
@@ -4845,6 +4835,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the user.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_org_id_python">
+<a href="#user_org_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>org_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4977,23 +4977,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="operationname_python">
-<a href="#operationname_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+        <span id="operation_name_python">
+<a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="operationtime_python">
-<a href="#operationtime_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5004,6 +4994,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Operation status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_time_python">
+<a href="#operation_time_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5166,8 +5166,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationsharingpolicy_python">
-<a href="#applicationsharingpolicy_python" style="color: inherit; text-decoration: inherit;">application<wbr>Sharing<wbr>Policy</a>
+        <span id="application_sharing_policy_python">
+<a href="#application_sharing_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>sharing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5176,11 +5176,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshsettings_python">
-<a href="#sshsettings_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
+        <span id="ssh_settings_python">
+<a href="#ssh_settings_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettings">Dict[Compute<wbr>Instance<wbr>Ssh<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettings">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd>
 
@@ -5190,7 +5190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
 
@@ -5525,8 +5525,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isattachedcompute_python">
-<a href="#isattachedcompute_python" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
+        <span id="is_attached_compute_python">
+<a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5549,7 +5549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
 
@@ -5565,8 +5565,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5589,7 +5589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceresponseproperties">Dict[Compute<wbr>Instance<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd>
 
@@ -5948,7 +5948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceapplicationresponse">List[Compute<wbr>Instance<wbr>Application<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computeinstanceapplicationresponse">Sequence[Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd>
 
@@ -5958,7 +5958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Dict[Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd>
 
@@ -5968,7 +5968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Dict[Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd>
 
@@ -5978,17 +5978,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="lastoperation_python">
-<a href="#lastoperation_python" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
+        <span id="last_operation_python">
+<a href="#last_operation_python" style="color: inherit; text-decoration: inherit;">last_<wbr>operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancelastoperationresponse">Dict[Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
 
@@ -6004,8 +6004,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationsharingpolicy_python">
-<a href="#applicationsharingpolicy_python" style="color: inherit; text-decoration: inherit;">application<wbr>Sharing<wbr>Policy</a>
+        <span id="application_sharing_policy_python">
+<a href="#application_sharing_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>sharing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6014,11 +6014,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshsettings_python">
-<a href="#sshsettings_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
+        <span id="ssh_settings_python">
+<a href="#ssh_settings_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Dict[Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd>
 
@@ -6028,7 +6028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
 
@@ -6143,8 +6143,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminpublickey_python">
-<a href="#adminpublickey_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Public<wbr>Key</a>
+        <span id="admin_public_key_python">
+<a href="#admin_public_key_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6153,8 +6153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpublicaccess_python">
-<a href="#sshpublicaccess_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Access</a>
+        <span id="ssh_public_access_python">
+<a href="#ssh_public_access_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6332,8 +6332,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6342,8 +6342,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminpublickey_python">
-<a href="#adminpublickey_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Public<wbr>Key</a>
+        <span id="admin_public_key_python">
+<a href="#admin_public_key_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6352,8 +6352,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpublicaccess_python">
-<a href="#sshpublicaccess_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Access</a>
+        <span id="ssh_public_access_python">
+<a href="#ssh_public_access_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6491,8 +6491,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6810,8 +6810,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isattachedcompute_python">
-<a href="#isattachedcompute_python" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
+        <span id="is_attached_compute_python">
+<a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6834,7 +6834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
 
@@ -6850,8 +6850,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7039,8 +7039,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7063,7 +7063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsproperties">Dict[Data<wbr>Lake<wbr>Analytics<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsproperties">Data<wbr>Lake<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7148,8 +7148,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datalakestoreaccountname_python">
-<a href="#datalakestoreaccountname_python" style="color: inherit; text-decoration: inherit;">data<wbr>Lake<wbr>Store<wbr>Account<wbr>Name</a>
+        <span id="data_lake_store_account_name_python">
+<a href="#data_lake_store_account_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>lake_<wbr>store_<wbr>account_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7477,8 +7477,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isattachedcompute_python">
-<a href="#isattachedcompute_python" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
+        <span id="is_attached_compute_python">
+<a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7501,7 +7501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
 
@@ -7517,8 +7517,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7541,7 +7541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Dict[Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7626,8 +7626,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datalakestoreaccountname_python">
-<a href="#datalakestoreaccountname_python" style="color: inherit; text-decoration: inherit;">data<wbr>Lake<wbr>Store<wbr>Account<wbr>Name</a>
+        <span id="data_lake_store_account_name_python">
+<a href="#data_lake_store_account_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>lake_<wbr>store_<wbr>account_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7795,8 +7795,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7819,7 +7819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksproperties">Dict[Databricks<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#databricksproperties">Databricks<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7904,8 +7904,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databricksaccesstoken_python">
-<a href="#databricksaccesstoken_python" style="color: inherit; text-decoration: inherit;">databricks<wbr>Access<wbr>Token</a>
+        <span id="databricks_access_token_python">
+<a href="#databricks_access_token_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8233,8 +8233,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isattachedcompute_python">
-<a href="#isattachedcompute_python" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
+        <span id="is_attached_compute_python">
+<a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8257,7 +8257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
 
@@ -8273,8 +8273,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8297,7 +8297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksresponseproperties">Dict[Databricks<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8382,8 +8382,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databricksaccesstoken_python">
-<a href="#databricksaccesstoken_python" style="color: inherit; text-decoration: inherit;">databricks<wbr>Access<wbr>Token</a>
+        <span id="databricks_access_token_python">
+<a href="#databricks_access_token_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8654,7 +8654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
 
@@ -8829,8 +8829,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8853,7 +8853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightproperties">Dict[HDInsight<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#hdinsightproperties">HDInsight<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9008,18 +9008,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="administratoraccount_python">
-<a href="#administratoraccount_python" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
+        <span id="administrator_account_python">
+<a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Dict[Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9347,8 +9347,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isattachedcompute_python">
-<a href="#isattachedcompute_python" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
+        <span id="is_attached_compute_python">
+<a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9371,7 +9371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
 
@@ -9387,8 +9387,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9411,7 +9411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightresponseproperties">Dict[HDInsight<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9566,18 +9566,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="administratoraccount_python">
-<a href="#administratoraccount_python" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
+        <span id="administrator_account_python">
+<a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Dict[Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9858,7 +9858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -10056,7 +10056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Dict[Error<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd>
 
@@ -10301,8 +10301,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="preemptednodecount_python">
-<a href="#preemptednodecount_python" style="color: inherit; text-decoration: inherit;">preempted<wbr>Node<wbr>Count</a>
+        <span id="preempted_node_count_python">
+<a href="#preempted_node_count_python" style="color: inherit; text-decoration: inherit;">preempted_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -10648,8 +10648,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodeidletimebeforescaledown_python">
-<a href="#nodeidletimebeforescaledown_python" style="color: inherit; text-decoration: inherit;">node<wbr>Idle<wbr>Time<wbr>Before<wbr>Scale<wbr>Down</a>
+        <span id="node_idle_time_before_scale_down_python">
+<a href="#node_idle_time_before_scale_down_python" style="color: inherit; text-decoration: inherit;">node_<wbr>idle_<wbr>time_<wbr>before_<wbr>scale_<wbr>down</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10807,8 +10807,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodeidletimebeforescaledown_python">
-<a href="#nodeidletimebeforescaledown_python" style="color: inherit; text-decoration: inherit;">node<wbr>Idle<wbr>Time<wbr>Before<wbr>Scale<wbr>Down</a>
+        <span id="node_idle_time_before_scale_down_python">
+<a href="#node_idle_time_before_scale_down_python" style="color: inherit; text-decoration: inherit;">node_<wbr>idle_<wbr>time_<wbr>before_<wbr>scale_<wbr>down</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11592,8 +11592,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="systemservicetype_python">
-<a href="#systemservicetype_python" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Type</a>
+        <span id="system_service_type_python">
+<a href="#system_service_type_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12089,8 +12089,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12113,7 +12113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineproperties">Dict[Virtual<wbr>Machine<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#virtualmachineproperties">Virtual<wbr>Machine<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12298,18 +12298,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="administratoraccount_python">
-<a href="#administratoraccount_python" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
+        <span id="administrator_account_python">
+<a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Dict[Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -12318,8 +12318,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachinesize_python">
-<a href="#virtualmachinesize_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
+        <span id="virtual_machine_size_python">
+<a href="#virtual_machine_size_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12647,8 +12647,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="isattachedcompute_python">
-<a href="#isattachedcompute_python" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
+        <span id="is_attached_compute_python">
+<a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -12671,7 +12671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
 
@@ -12687,8 +12687,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computelocation_python">
-<a href="#computelocation_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
+        <span id="compute_location_python">
+<a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12711,7 +12711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineresponseproperties">Dict[Virtual<wbr>Machine<wbr>Response<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12896,18 +12896,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="administratoraccount_python">
-<a href="#administratoraccount_python" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
+        <span id="administrator_account_python">
+<a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Dict[Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -12916,8 +12916,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachinesize_python">
-<a href="#virtualmachinesize_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
+        <span id="virtual_machine_size_python">
+<a href="#virtual_machine_size_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13095,8 +13095,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatekeydata_python">
-<a href="#privatekeydata_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Data</a>
+        <span id="private_key_data_python">
+<a href="#private_key_data_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13105,8 +13105,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickeydata_python">
-<a href="#publickeydata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Data</a>
+        <span id="public_key_data_python">
+<a href="#public_key_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13294,8 +13294,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatekeydata_python">
-<a href="#privatekeydata_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Data</a>
+        <span id="private_key_data_python">
+<a href="#private_key_data_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13304,8 +13304,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickeydata_python">
-<a href="#publickeydata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Data</a>
+        <span id="public_key_data_python">
+<a href="#public_key_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

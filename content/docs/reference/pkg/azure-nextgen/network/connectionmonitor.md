@@ -29,17 +29,53 @@ class MyStack : Stack
         var connectionMonitor = new AzureNextGen.Network.Latest.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.Latest.ConnectionMonitorArgs
         {
             ConnectionMonitorName = "cm1",
-            Destination = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorDestinationArgs
+            Endpoints = 
             {
-                Address = "bing.com",
-                Port = 80,
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
+                {
+                    Name = "source",
+                    ResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1",
+                },
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
+                {
+                    Address = "bing.com",
+                    Name = "destination",
+                },
             },
-            MonitoringIntervalInSeconds = 60,
+            Location = "eastus",
             NetworkWatcherName = "nw1",
             ResourceGroupName = "rg1",
-            Source = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorSourceArgs
+            TestConfigurations = 
             {
-                ResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1",
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTestConfigurationArgs
+                {
+                    Name = "tcp",
+                    Protocol = "Tcp",
+                    TcpConfiguration = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTcpConfigurationArgs
+                    {
+                        Port = 80,
+                    },
+                    TestFrequencySec = 60,
+                },
+            },
+            TestGroups = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTestGroupArgs
+                {
+                    Destinations = 
+                    {
+                        "destination",
+                    },
+                    Name = "tg",
+                    Sources = 
+                    {
+                        "source",
+                    },
+                    TestConfigurations = 
+                    {
+                        "tcp",
+                    },
+                },
             },
         });
     }
@@ -64,15 +100,42 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewConnectionMonitor(ctx, "connectionMonitor", &network.ConnectionMonitorArgs{
 			ConnectionMonitorName: pulumi.String("cm1"),
-			Destination: &network.ConnectionMonitorDestinationArgs{
-				Address: pulumi.String("bing.com"),
-				Port:    pulumi.Int(80),
+			Endpoints: network.ConnectionMonitorEndpointArray{
+				&network.ConnectionMonitorEndpointArgs{
+					Name:       pulumi.String("source"),
+					ResourceId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1"),
+				},
+				&network.ConnectionMonitorEndpointArgs{
+					Address: pulumi.String("bing.com"),
+					Name:    pulumi.String("destination"),
+				},
 			},
-			MonitoringIntervalInSeconds: pulumi.Int(60),
-			NetworkWatcherName:          pulumi.String("nw1"),
-			ResourceGroupName:           pulumi.String("rg1"),
-			Source: &network.ConnectionMonitorSourceArgs{
-				ResourceId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1"),
+			Location:           pulumi.String("eastus"),
+			NetworkWatcherName: pulumi.String("nw1"),
+			ResourceGroupName:  pulumi.String("rg1"),
+			TestConfigurations: network.ConnectionMonitorTestConfigurationArray{
+				&network.ConnectionMonitorTestConfigurationArgs{
+					Name:     pulumi.String("tcp"),
+					Protocol: pulumi.String("Tcp"),
+					TcpConfiguration: &network.ConnectionMonitorTcpConfigurationArgs{
+						Port: pulumi.Int(80),
+					},
+					TestFrequencySec: pulumi.Int(60),
+				},
+			},
+			TestGroups: network.ConnectionMonitorTestGroupArray{
+				&network.ConnectionMonitorTestGroupArgs{
+					Destinations: pulumi.StringArray{
+						pulumi.String("destination"),
+					},
+					Name: pulumi.String("tg"),
+					Sources: pulumi.StringArray{
+						pulumi.String("source"),
+					},
+					TestConfigurations: pulumi.StringArray{
+						pulumi.String("tcp"),
+					},
+				},
 			},
 		})
 		if err != nil {
@@ -94,16 +157,33 @@ import pulumi_azure_nextgen as azure_nextgen
 
 connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor",
     connection_monitor_name="cm1",
-    destination={
-        "address": "bing.com",
-        "port": 80,
-    },
-    monitoring_interval_in_seconds=60,
+    endpoints=[
+        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+            name="source",
+            resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1",
+        ),
+        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+            address="bing.com",
+            name="destination",
+        ),
+    ],
+    location="eastus",
     network_watcher_name="nw1",
     resource_group_name="rg1",
-    source={
-        "resourceId": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1",
-    })
+    test_configurations=[azure_nextgen.network.latest.ConnectionMonitorTestConfigurationArgs(
+        name="tcp",
+        protocol="Tcp",
+        tcp_configuration=azure_nextgen.network.latest.ConnectionMonitorTcpConfigurationArgs(
+            port=80,
+        ),
+        test_frequency_sec=60,
+    )],
+    test_groups=[azure_nextgen.network.latest.ConnectionMonitorTestGroupArgs(
+        destinations=["destination"],
+        name="tg",
+        sources=["source"],
+        test_configurations=["tcp"],
+    )])
 
 ```
 
@@ -117,16 +197,33 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor", {
     connectionMonitorName: "cm1",
-    destination: {
-        address: "bing.com",
-        port: 80,
-    },
-    monitoringIntervalInSeconds: 60,
+    endpoints: [
+        {
+            name: "source",
+            resourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1",
+        },
+        {
+            address: "bing.com",
+            name: "destination",
+        },
+    ],
+    location: "eastus",
     networkWatcherName: "nw1",
     resourceGroupName: "rg1",
-    source: {
-        resourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1",
-    },
+    testConfigurations: [{
+        name: "tcp",
+        protocol: "Tcp",
+        tcpConfiguration: {
+            port: 80,
+        },
+        testFrequencySec: 60,
+    }],
+    testGroups: [{
+        destinations: ["destination"],
+        name: "tg",
+        sources: ["source"],
+        testConfigurations: ["tcp"],
+    }],
 });
 
 ```
@@ -322,55 +419,55 @@ import pulumi_azure_nextgen as azure_nextgen
 connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor",
     connection_monitor_name="cm1",
     endpoints=[
-        {
-            "name": "vm1",
-            "resourceId": "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
-        },
-        {
-            "filter": {
-                "items": [{
-                    "address": "npmuser",
-                    "type": "AgentAddress",
-                }],
-                "type": "Include",
-            },
-            "name": "CanaryWorkspaceVamshi",
-            "resourceId": "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
-        },
-        {
-            "address": "bing.com",
-            "name": "bing",
-        },
-        {
-            "address": "google.com",
-            "name": "google",
-        },
+        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+            name="vm1",
+            resource_id="/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
+        ),
+        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+            filter=azure_nextgen.network.latest.ConnectionMonitorEndpointFilterArgs(
+                items=[azure_nextgen.network.latest.ConnectionMonitorEndpointFilterItemArgs(
+                    address="npmuser",
+                    type="AgentAddress",
+                )],
+                type="Include",
+            ),
+            name="CanaryWorkspaceVamshi",
+            resource_id="/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
+        ),
+        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+            address="bing.com",
+            name="bing",
+        ),
+        azure_nextgen.network.latest.ConnectionMonitorEndpointArgs(
+            address="google.com",
+            name="google",
+        ),
     ],
     network_watcher_name="nw1",
     outputs=[],
     resource_group_name="rg1",
-    test_configurations=[{
-        "name": "testConfig1",
-        "protocol": "Tcp",
-        "tcpConfiguration": {
-            "disableTraceRoute": False,
-            "port": 80,
-        },
-        "testFrequencySec": 60,
-    }],
-    test_groups=[{
-        "destinations": [
+    test_configurations=[azure_nextgen.network.latest.ConnectionMonitorTestConfigurationArgs(
+        name="testConfig1",
+        protocol="Tcp",
+        tcp_configuration=azure_nextgen.network.latest.ConnectionMonitorTcpConfigurationArgs(
+            disable_trace_route=False,
+            port=80,
+        ),
+        test_frequency_sec=60,
+    )],
+    test_groups=[azure_nextgen.network.latest.ConnectionMonitorTestGroupArgs(
+        destinations=[
             "bing",
             "google",
         ],
-        "disable": False,
-        "name": "test1",
-        "sources": [
+        disable=False,
+        name="test1",
+        sources=[
             "vm1",
             "CanaryWorkspaceVamshi",
         ],
-        "testConfigurations": ["testConfig1"],
-    }])
+        test_configurations=["testConfig1"],
+    )])
 
 ```
 
@@ -452,7 +549,7 @@ const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("co
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionMonitorDestination]]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorEndpoint]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorOutput]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionMonitorSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorTestConfiguration]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionMonitorTestGroup]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[ConnectionMonitorDestinationArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorOutputArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ConnectionMonitorSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorTestGroupArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -696,6 +793,16 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="migrate_csharp">
+<a href="#migrate_csharp" style="color: inherit; text-decoration: inherit;">Migrate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether connection monitor V1 should be migrated to V2 format.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="monitoringintervalinseconds_csharp">
 <a href="#monitoringintervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span> 
@@ -840,6 +947,16 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrate_go">
+<a href="#migrate_go" style="color: inherit; text-decoration: inherit;">Migrate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether connection monitor V1 should be migrated to V2 format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -990,6 +1107,16 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="migrate_nodejs">
+<a href="#migrate_nodejs" style="color: inherit; text-decoration: inherit;">migrate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether connection monitor V1 should be migrated to V2 format.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="monitoringintervalinseconds_nodejs">
 <a href="#monitoringintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span> 
@@ -1111,7 +1238,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitordestination">Dict[Connection<wbr>Monitor<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#connectionmonitordestination">Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd>
 
@@ -1121,7 +1248,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpoint">List[Connection<wbr>Monitor<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpoint">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd>
 
@@ -1134,6 +1261,16 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrate_python">
+<a href="#migrate_python" style="color: inherit; text-decoration: inherit;">migrate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether connection monitor V1 should be migrated to V2 format.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1161,7 +1298,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoroutput">List[Connection<wbr>Monitor<wbr>Output]</a></span>
+        <span class="property-type"><a href="#connectionmonitoroutput">Sequence[Connection<wbr>Monitor<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd>
 
@@ -1171,7 +1308,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsource">Dict[Connection<wbr>Monitor<wbr>Source]</a></span>
+        <span class="property-type"><a href="#connectionmonitorsource">Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd>
 
@@ -1181,7 +1318,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd>
 
@@ -1191,7 +1328,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestconfiguration">List[Connection<wbr>Monitor<wbr>Test<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#connectionmonitortestconfiguration">Sequence[Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd>
 
@@ -1201,7 +1338,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#test_groups_python" style="color: inherit; text-decoration: inherit;">test_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestgroup">List[Connection<wbr>Monitor<wbr>Test<wbr>Group]</a></span>
+        <span class="property-type"><a href="#connectionmonitortestgroup">Sequence[Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd>
 
@@ -2162,8 +2299,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="coveragelevel_python">
-<a href="#coveragelevel_python" style="color: inherit; text-decoration: inherit;">coverage<wbr>Level</a>
+        <span id="coverage_level_python">
+<a href="#coverage_level_python" style="color: inherit; text-decoration: inherit;">coverage_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2176,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilter">Dict[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilter">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd>
 
@@ -2196,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscope">Dict[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscope">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd>
 
@@ -2315,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd>
 
@@ -2672,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd>
 
@@ -2957,8 +3094,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="coveragelevel_python">
-<a href="#coveragelevel_python" style="color: inherit; text-decoration: inherit;">coverage<wbr>Level</a>
+        <span id="coverage_level_python">
+<a href="#coverage_level_python" style="color: inherit; text-decoration: inherit;">coverage_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2971,7 +3108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Dict[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd>
 
@@ -2991,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Dict[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd>
 
@@ -3110,7 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_python" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd>
 
@@ -3120,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd>
 
@@ -3387,7 +3524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_python" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd>
 
@@ -3397,7 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd>
 
@@ -3652,8 +3789,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferhttps_python">
-<a href="#preferhttps_python" style="color: inherit; text-decoration: inherit;">prefer<wbr>HTTPS</a>
+        <span id="prefer_https_python">
+<a href="#prefer_https_python" style="color: inherit; text-decoration: inherit;">prefer_<wbr>https</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3662,21 +3799,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaders_python">
-<a href="#requestheaders_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
+        <span id="request_headers_python">
+<a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">List[HTTPHeader]</a></span>
+        <span class="property-type"><a href="#httpheader">Sequence[HTTPHeader<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validstatuscoderanges_python">
-<a href="#validstatuscoderanges_python" style="color: inherit; text-decoration: inherit;">valid<wbr>Status<wbr>Code<wbr>Ranges</a>
+        <span id="valid_status_code_ranges_python">
+<a href="#valid_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd>
 
@@ -3931,8 +4068,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferhttps_python">
-<a href="#preferhttps_python" style="color: inherit; text-decoration: inherit;">prefer<wbr>HTTPS</a>
+        <span id="prefer_https_python">
+<a href="#prefer_https_python" style="color: inherit; text-decoration: inherit;">prefer_<wbr>https</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3941,21 +4078,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaders_python">
-<a href="#requestheaders_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
+        <span id="request_headers_python">
+<a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">List[HTTPHeader<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httpheaderresponse">Sequence[HTTPHeader<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validstatuscoderanges_python">
-<a href="#validstatuscoderanges_python" style="color: inherit; text-decoration: inherit;">valid<wbr>Status<wbr>Code<wbr>Ranges</a>
+        <span id="valid_status_code_ranges_python">
+<a href="#valid_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd>
 
@@ -4030,8 +4167,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabletraceroute_python">
-<a href="#disabletraceroute_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Route</a>
+        <span id="disable_trace_route_python">
+<a href="#disable_trace_route_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4109,8 +4246,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabletraceroute_python">
-<a href="#disabletraceroute_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Route</a>
+        <span id="disable_trace_route_python">
+<a href="#disable_trace_route_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4228,11 +4365,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workspacesettings_python">
-<a href="#workspacesettings_python" style="color: inherit; text-decoration: inherit;">workspace<wbr>Settings</a>
+        <span id="workspace_settings_python">
+<a href="#workspace_settings_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Dict[Connection<wbr>Monitor<wbr>Workspace<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd>
 
@@ -4347,11 +4484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workspacesettings_python">
-<a href="#workspacesettings_python" style="color: inherit; text-decoration: inherit;">workspace<wbr>Settings</a>
+        <span id="workspace_settings_python">
+<a href="#workspace_settings_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Dict[Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd>
 
@@ -4694,8 +4831,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checksfailedpercent_python">
-<a href="#checksfailedpercent_python" style="color: inherit; text-decoration: inherit;">checks<wbr>Failed<wbr>Percent</a>
+        <span id="checks_failed_percent_python">
+<a href="#checks_failed_percent_python" style="color: inherit; text-decoration: inherit;">checks_<wbr>failed_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4704,8 +4841,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="roundtriptimems_python">
-<a href="#roundtriptimems_python" style="color: inherit; text-decoration: inherit;">round<wbr>Trip<wbr>Time<wbr>Ms</a>
+        <span id="round_trip_time_ms_python">
+<a href="#round_trip_time_ms_python" style="color: inherit; text-decoration: inherit;">round_<wbr>trip_<wbr>time_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4813,8 +4950,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checksfailedpercent_python">
-<a href="#checksfailedpercent_python" style="color: inherit; text-decoration: inherit;">checks<wbr>Failed<wbr>Percent</a>
+        <span id="checks_failed_percent_python">
+<a href="#checks_failed_percent_python" style="color: inherit; text-decoration: inherit;">checks_<wbr>failed_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4823,8 +4960,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="roundtriptimems_python">
-<a href="#roundtriptimems_python" style="color: inherit; text-decoration: inherit;">round<wbr>Trip<wbr>Time<wbr>Ms</a>
+        <span id="round_trip_time_ms_python">
+<a href="#round_trip_time_ms_python" style="color: inherit; text-decoration: inherit;">round_<wbr>trip_<wbr>time_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4962,8 +5099,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationportbehavior_python">
-<a href="#destinationportbehavior_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Behavior</a>
+        <span id="destination_port_behavior_python">
+<a href="#destination_port_behavior_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4972,8 +5109,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabletraceroute_python">
-<a href="#disabletraceroute_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Route</a>
+        <span id="disable_trace_route_python">
+<a href="#disable_trace_route_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5121,8 +5258,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationportbehavior_python">
-<a href="#destinationportbehavior_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Behavior</a>
+        <span id="destination_port_behavior_python">
+<a href="#destination_port_behavior_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5131,8 +5268,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabletraceroute_python">
-<a href="#disabletraceroute_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Route</a>
+        <span id="disable_trace_route_python">
+<a href="#disable_trace_route_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5450,28 +5587,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpconfiguration_python">
-<a href="#httpconfiguration_python" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
+        <span id="http_configuration_python">
+<a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Dict[Connection<wbr>Monitor<wbr>Http<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="icmpconfiguration_python">
-<a href="#icmpconfiguration_python" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
+        <span id="icmp_configuration_python">
+<a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Dict[Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredipversion_python">
-<a href="#preferredipversion_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>IPVersion</a>
+        <span id="preferred_ip_version_python">
+<a href="#preferred_ip_version_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5480,28 +5617,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Dict[Connection<wbr>Monitor<wbr>Success<wbr>Threshold]</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tcpconfiguration_python">
-<a href="#tcpconfiguration_python" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
+        <span id="tcp_configuration_python">
+<a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Dict[Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="testfrequencysec_python">
-<a href="#testfrequencysec_python" style="color: inherit; text-decoration: inherit;">test<wbr>Frequency<wbr>Sec</a>
+        <span id="test_frequency_sec_python">
+<a href="#test_frequency_sec_python" style="color: inherit; text-decoration: inherit;">test_<wbr>frequency_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5809,28 +5946,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpconfiguration_python">
-<a href="#httpconfiguration_python" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
+        <span id="http_configuration_python">
+<a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Dict[Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="icmpconfiguration_python">
-<a href="#icmpconfiguration_python" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
+        <span id="icmp_configuration_python">
+<a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Dict[Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preferredipversion_python">
-<a href="#preferredipversion_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>IPVersion</a>
+        <span id="preferred_ip_version_python">
+<a href="#preferred_ip_version_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5839,28 +5976,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Dict[Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tcpconfiguration_python">
-<a href="#tcpconfiguration_python" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
+        <span id="tcp_configuration_python">
+<a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Dict[Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="testfrequencysec_python">
-<a href="#testfrequencysec_python" style="color: inherit; text-decoration: inherit;">test<wbr>Frequency<wbr>Sec</a>
+        <span id="test_frequency_sec_python">
+<a href="#test_frequency_sec_python" style="color: inherit; text-decoration: inherit;">test_<wbr>frequency_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6062,7 +6199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd>
 
@@ -6082,7 +6219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd>
 
@@ -6092,7 +6229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd>
 
@@ -6301,7 +6438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd>
 
@@ -6321,7 +6458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd>
 
@@ -6331,7 +6468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd>
 

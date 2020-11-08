@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#activity_settings_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitysettingsresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitysettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#initiator_role_settings_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>role_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#responder_role_settings_python" style="color: inherit; text-decoration: inherit;">responder_<wbr>role_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1412,7 +1412,7 @@ The following output properties are available:
 <a href="#acknowledgment_of_receipt_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgment_<wbr>of_<wbr>receipt_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
 
@@ -1422,7 +1422,7 @@ The following output properties are available:
 <a href="#activity_behavior_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
 
@@ -1860,7 +1860,7 @@ The following output properties are available:
 <a href="#business_document_python" style="color: inherit; text-decoration: inherit;">business_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Dict[Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
 

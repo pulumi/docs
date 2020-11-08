@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#managed_instance_pairs_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>pairs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancepairinforesponse">List[Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedinstancepairinforesponse">Sequence[Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of managed instance pairs in the failover group.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#partner_regions_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerregioninforesponse">List[Partner<wbr>Region<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#partnerregioninforesponse">Sequence[Partner<wbr>Region<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Partner region information for the failover group.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#read_write_endpoint_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadwriteendpointresponse">Dict[Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadwriteendpointresponse">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#read_only_endpoint_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadonlyendpointresponse">Dict[Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadonlyendpointresponse">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd>
 
@@ -858,8 +858,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="partnermanagedinstanceid_python">
-<a href="#partnermanagedinstanceid_python" style="color: inherit; text-decoration: inherit;">partner<wbr>Managed<wbr>Instance<wbr>Id</a>
+        <span id="partner_managed_instance_id_python">
+<a href="#partner_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -868,8 +868,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarymanagedinstanceid_python">
-<a href="#primarymanagedinstanceid_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Managed<wbr>Instance<wbr>Id</a>
+        <span id="primary_managed_instance_id_python">
+<a href="#primary_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

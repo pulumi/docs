@@ -327,7 +327,7 @@ The following output properties are available:
 <a href="#function_keys_python" style="color: inherit; text-decoration: inherit;">function_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Host level function keys.{{% /md %}}</dd>
 
@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#system_keys_python" style="color: inherit; text-decoration: inherit;">system_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}System keys.{{% /md %}}</dd>
 

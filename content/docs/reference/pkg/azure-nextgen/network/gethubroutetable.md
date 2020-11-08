@@ -218,7 +218,7 @@ The following output properties are available:
 <a href="#associatedconnections_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all connections associated with this route table.{{% /md %}}</dd>
 
@@ -238,7 +238,7 @@ The following output properties are available:
 <a href="#propagatingconnections_csharp" style="color: inherit; text-decoration: inherit;">Propagating<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all connections that advertise to this route table.{{% /md %}}</dd>
 
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#associatedconnections_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of all connections associated with this route table.{{% /md %}}</dd>
 
@@ -325,7 +325,7 @@ The following output properties are available:
 <a href="#propagatingconnections_go" style="color: inherit; text-decoration: inherit;">Propagating<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of all connections that advertise to this route table.{{% /md %}}</dd>
 
@@ -392,7 +392,7 @@ The following output properties are available:
 <a href="#associatedconnections_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of all connections associated with this route table.{{% /md %}}</dd>
 
@@ -412,7 +412,7 @@ The following output properties are available:
 <a href="#propagatingconnections_nodejs" style="color: inherit; text-decoration: inherit;">propagating<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of all connections that advertise to this route table.{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#associated_connections_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all connections associated with this route table.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#propagating_connections_python" style="color: inherit; text-decoration: inherit;">propagating_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all connections that advertise to this route table.{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of labels associated with this route table.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubrouteresponse">List[Hub<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hubrouteresponse">Sequence[Hub<wbr>Route<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
 
@@ -764,7 +764,7 @@ The following output properties are available:
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
 
@@ -780,8 +780,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nexthop_python">
-<a href="#nexthop_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
+        <span id="next_hop_python">
+<a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -797,85 +797,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of next hop (eg: ResourceId).{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

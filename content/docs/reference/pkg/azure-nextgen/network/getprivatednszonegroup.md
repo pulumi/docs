@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#private_dns_zone_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatednszoneconfigresponse">List[Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatednszoneconfigresponse">Sequence[Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of private dns zone configurations of the private dns zone group.{{% /md %}}</dd>
 
@@ -530,11 +530,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="recordsets_python">
-<a href="#recordsets_python" style="color: inherit; text-decoration: inherit;">record<wbr>Sets</a>
+        <span id="record_sets_python">
+<a href="#record_sets_python" style="color: inherit; text-decoration: inherit;">record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordsetresponse">List[Record<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recordsetresponse">Sequence[Record<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of information regarding a recordSet, holding information to identify private resources.{{% /md %}}</dd>
 
@@ -550,8 +550,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatednszoneid_python">
-<a href="#privatednszoneid_python" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Id</a>
+        <span id="private_dns_zone_id_python">
+<a href="#private_dns_zone_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -803,14 +803,14 @@ The following output properties are available:
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The private ip address of the private endpoint.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recordsetname_python">
-<a href="#recordsetname_python" style="color: inherit; text-decoration: inherit;">record<wbr>Set<wbr>Name</a>
+        <span id="record_set_name_python">
+<a href="#record_set_name_python" style="color: inherit; text-decoration: inherit;">record_<wbr>set_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

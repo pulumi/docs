@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#correlation_scheme_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>scheme</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorrelationdescriptionresponse">List[Service<wbr>Correlation<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicecorrelationdescriptionresponse">Sequence[Service<wbr>Correlation<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#partition_description_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response] | Dict[Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response] | Dict[Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#service_load_metrics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>load_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadmetricdescriptionresponse">List[Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceloadmetricdescriptionresponse">Sequence[Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#service_placement_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>placement_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementpolicydescriptionresponse">List[Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceplacementpolicydescriptionresponse">Sequence[Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
 
@@ -1034,7 +1034,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd>
 
@@ -1358,8 +1358,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultload_python">
-<a href="#defaultload_python" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
+        <span id="default_load_python">
+<a href="#default_load_python" style="color: inherit; text-decoration: inherit;">default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1368,8 +1368,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primarydefaultload_python">
-<a href="#primarydefaultload_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
+        <span id="primary_default_load_python">
+<a href="#primary_default_load_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1378,8 +1378,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondarydefaultload_python">
-<a href="#secondarydefaultload_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
+        <span id="secondary_default_load_python">
+<a href="#secondary_default_load_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>default_<wbr>load</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1667,8 +1667,8 @@ should be split between the partition ‘count’
 
     <dt class="property-required"
             title="Required">
-        <span id="highkey_python">
-<a href="#highkey_python" style="color: inherit; text-decoration: inherit;">high<wbr>Key</a>
+        <span id="high_key_python">
+<a href="#high_key_python" style="color: inherit; text-decoration: inherit;">high_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1679,8 +1679,8 @@ should be split between the partition ‘count’
 
     <dt class="property-required"
             title="Required">
-        <span id="lowkey_python">
-<a href="#lowkey_python" style="color: inherit; text-decoration: inherit;">low<wbr>Key</a>
+        <span id="low_key_python">
+<a href="#low_key_python" style="color: inherit; text-decoration: inherit;">low_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

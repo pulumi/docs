@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#machines_python" style="color: inherit; text-decoration: inherit;">machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinereferencewithhintsresponse">List[Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machinereferencewithhintsresponse">Sequence[Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd>
 
@@ -790,8 +790,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="displaynamehint_python">
-<a href="#displaynamehint_python" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Hint</a>
+        <span id="display_name_hint_python">
+<a href="#display_name_hint_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>hint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -820,8 +820,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="osfamilyhint_python">
-<a href="#osfamilyhint_python" style="color: inherit; text-decoration: inherit;">os<wbr>Family<wbr>Hint</a>
+        <span id="os_family_hint_python">
+<a href="#os_family_hint_python" style="color: inherit; text-decoration: inherit;">os_<wbr>family_<wbr>hint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

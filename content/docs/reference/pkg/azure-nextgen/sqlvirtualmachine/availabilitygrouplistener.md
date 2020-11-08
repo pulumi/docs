@@ -113,18 +113,18 @@ import pulumi_azure_nextgen as azure_nextgen
 availability_group_listener = azure_nextgen.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener",
     availability_group_listener_name="agl-test",
     availability_group_name="ag-test",
-    load_balancer_configurations=[{
-        "loadBalancerResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
-        "privateIpAddress": {
-            "ipAddress": "10.1.0.112",
-            "subnetResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
-        },
-        "probePort": 59983,
-        "sqlVirtualMachineInstances": [
+    load_balancer_configurations=[azure_nextgen.sqlvirtualmachine.v20170301preview.LoadBalancerConfigurationArgs(
+        load_balancer_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
+        private_ip_address=azure_nextgen.sqlvirtualmachine.v20170301preview.PrivateIPAddressArgs(
+            ip_address="10.1.0.112",
+            subnet_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
+        ),
+        probe_port=59983,
+        sql_virtual_machine_instances=[
             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm2",
             "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm3",
         ],
-    }],
+    )],
     port=1433,
     resource_group_name="testrg",
     sql_virtual_machine_group_name="testvmgroup")
@@ -175,7 +175,7 @@ const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301p
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_group_listener_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_default_availability_group_if_not_exist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_configurations</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerConfiguration]]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_group_listener_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_default_availability_group_if_not_exist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +634,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#load_balancer_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">List[Load<wbr>Balancer<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">Sequence[Load<wbr>Balancer<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of load balancer configurations for an availability group listener.{{% /md %}}</dd>
 
@@ -1047,8 +1047,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerresourceid_python">
-<a href="#loadbalancerresourceid_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Resource<wbr>Id</a>
+        <span id="load_balancer_resource_id_python">
+<a href="#load_balancer_resource_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1061,14 +1061,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddress">Dict[Private<wbr>IPAddress]</a></span>
+        <span class="property-type"><a href="#privateipaddress">Private<wbr>IPAddress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="probeport_python">
-<a href="#probeport_python" style="color: inherit; text-decoration: inherit;">probe<wbr>Port</a>
+        <span id="probe_port_python">
+<a href="#probe_port_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1077,8 +1077,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressresourceid_python">
-<a href="#publicipaddressresourceid_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Resource<wbr>Id</a>
+        <span id="public_ip_address_resource_id_python">
+<a href="#public_ip_address_resource_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1087,11 +1087,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sqlvirtualmachineinstances_python">
-<a href="#sqlvirtualmachineinstances_python" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Instances</a>
+        <span id="sql_virtual_machine_instances_python">
+<a href="#sql_virtual_machine_instances_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.{{% /md %}}</dd>
 
@@ -1286,8 +1286,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerresourceid_python">
-<a href="#loadbalancerresourceid_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Resource<wbr>Id</a>
+        <span id="load_balancer_resource_id_python">
+<a href="#load_balancer_resource_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1300,14 +1300,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Dict[Private<wbr>IPAddress<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="probeport_python">
-<a href="#probeport_python" style="color: inherit; text-decoration: inherit;">probe<wbr>Port</a>
+        <span id="probe_port_python">
+<a href="#probe_port_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1316,8 +1316,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressresourceid_python">
-<a href="#publicipaddressresourceid_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Resource<wbr>Id</a>
+        <span id="public_ip_address_resource_id_python">
+<a href="#public_ip_address_resource_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1326,11 +1326,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sqlvirtualmachineinstances_python">
-<a href="#sqlvirtualmachineinstances_python" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Instances</a>
+        <span id="sql_virtual_machine_instances_python">
+<a href="#sql_virtual_machine_instances_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.{{% /md %}}</dd>
 

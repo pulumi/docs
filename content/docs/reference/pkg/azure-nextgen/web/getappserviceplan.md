@@ -1062,7 +1062,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#hosting_environment_profile_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofileresponse">Dict[Hosting<wbr>Environment<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofileresponse">Hosting<wbr>Environment<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specification for the App Service Environment to use for the App Service plan.{{% /md %}}</dd>
 
@@ -1143,7 +1143,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescriptionresponse">Dict[Sku<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd>
 
@@ -1163,7 +1163,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -2005,7 +2005,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List[Capability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
 
@@ -2035,7 +2035,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
 
@@ -2065,7 +2065,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Dict[Sku<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
 

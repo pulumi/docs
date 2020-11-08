@@ -487,7 +487,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Alexa<wbr>Channel<wbr>Response] | Dict[Direct<wbr>Line<wbr>Channel<wbr>Response] | Dict[Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Response] | Dict[Email<wbr>Channel<wbr>Response] | Dict[Facebook<wbr>Channel<wbr>Response] | Dict[Kik<wbr>Channel<wbr>Response] | Dict[Line<wbr>Channel<wbr>Response] | Dict[Ms<wbr>Teams<wbr>Channel<wbr>Response] | Dict[Skype<wbr>Channel<wbr>Response] | Dict[Slack<wbr>Channel<wbr>Response] | Dict[Sms<wbr>Channel<wbr>Response] | Dict[Telegram<wbr>Channel<wbr>Response] | Dict[Web<wbr>Chat<wbr>Channel<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -537,7 +537,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
 
@@ -547,7 +547,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -718,8 +718,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="alexaskillid_python">
-<a href="#alexaskillid_python" style="color: inherit; text-decoration: inherit;">alexa<wbr>Skill<wbr>Id</a>
+        <span id="alexa_skill_id_python">
+<a href="#alexa_skill_id_python" style="color: inherit; text-decoration: inherit;">alexa_<wbr>skill_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -738,8 +738,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceendpointuri_python">
-<a href="#serviceendpointuri_python" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Uri</a>
+        <span id="service_endpoint_uri_python">
+<a href="#service_endpoint_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -748,8 +748,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="urlfragment_python">
-<a href="#urlfragment_python" style="color: inherit; text-decoration: inherit;">url<wbr>Fragment</a>
+        <span id="url_fragment_python">
+<a href="#url_fragment_python" style="color: inherit; text-decoration: inherit;">url_<wbr>fragment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -831,7 +831,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelpropertiesresponse">Dict[Alexa<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
 
@@ -910,7 +910,7 @@ The following output properties are available:
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesiteresponse">List[Direct<wbr>Line<wbr>Site<wbr>Response]</a></span>
+        <span class="property-type"><a href="#directlinesiteresponse">Sequence[Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Dict[Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
 
@@ -1304,26 +1304,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isv1enabled_python">
-<a href="#isv1enabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>V1Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="isv3enabled_python">
-<a href="#isv3enabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>V3Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
@@ -1331,6 +1311,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="is_v1_enabled_python">
+<a href="#is_v1_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v1_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="is_v3_enabled_python">
+<a href="#is_v3_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v3_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1354,8 +1354,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="siteid_python">
-<a href="#siteid_python" style="color: inherit; text-decoration: inherit;">site<wbr>Id</a>
+        <span id="site_id_python">
+<a href="#site_id_python" style="color: inherit; text-decoration: inherit;">site_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1374,8 +1374,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecuresiteenabled_python">
-<a href="#issecuresiteenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secure<wbr>Site<wbr>Enabled</a>
+        <span id="is_secure_site_enabled_python">
+<a href="#is_secure_site_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secure_<wbr>site_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1384,11 +1384,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedorigins_python">
-<a href="#trustedorigins_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Origins</a>
+        <span id="trusted_origins_python">
+<a href="#trusted_origins_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
 
@@ -1583,8 +1583,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cognitiveservicessubscriptionid_python">
-<a href="#cognitiveservicessubscriptionid_python" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
+        <span id="cognitive_services_subscription_id_python">
+<a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1593,8 +1593,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customspeechmodelid_python">
-<a href="#customspeechmodelid_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
+        <span id="custom_speech_model_id_python">
+<a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1603,8 +1603,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customvoicedeploymentid_python">
-<a href="#customvoicedeploymentid_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
+        <span id="custom_voice_deployment_id_python">
+<a href="#custom_voice_deployment_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>voice_<wbr>deployment_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1613,8 +1613,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isdefaultbotforcogsvcaccount_python">
-<a href="#isdefaultbotforcogsvcaccount_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
+        <span id="is_default_bot_for_cog_svc_account_python">
+<a href="#is_default_bot_for_cog_svc_account_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default_<wbr>bot_<wbr>for_<wbr>cog_<wbr>svc_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1706,7 +1706,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Dict[Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
 
@@ -1841,8 +1841,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1944,7 +1944,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelpropertiesresponse">Dict[Email<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
 
@@ -2169,16 +2169,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="appsecret_python">
-<a href="#appsecret_python" style="color: inherit; text-decoration: inherit;">app<wbr>Secret</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span> 
@@ -2189,8 +2179,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="callbackurl_python">
-<a href="#callbackurl_python" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
+        <span id="app_secret_python">
+<a href="#app_secret_python" style="color: inherit; text-decoration: inherit;">app_<wbr>secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="callback_url_python">
+<a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2209,8 +2209,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="verifytoken_python">
-<a href="#verifytoken_python" style="color: inherit; text-decoration: inherit;">verify<wbr>Token</a>
+        <span id="verify_token_python">
+<a href="#verify_token_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2223,7 +2223,7 @@ The following output properties are available:
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpageresponse">List[Facebook<wbr>Page<wbr>Response]</a></span>
+        <span class="property-type"><a href="#facebookpageresponse">Sequence[Facebook<wbr>Page<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
 
@@ -2302,7 +2302,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Dict[Facebook<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
 
@@ -2586,8 +2586,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="apikey_python">
-<a href="#apikey_python" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
+        <span id="api_key_python">
+<a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2616,8 +2616,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isvalidated_python">
-<a href="#isvalidated_python" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
+        <span id="is_validated_python">
+<a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2699,7 +2699,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelpropertiesresponse">Dict[Kik<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
 
@@ -2834,8 +2834,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="callbackurl_python">
-<a href="#callbackurl_python" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
+        <span id="callback_url_python">
+<a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2844,8 +2844,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isvalidated_python">
-<a href="#isvalidated_python" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
+        <span id="is_validated_python">
+<a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2854,11 +2854,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lineregistrations_python">
-<a href="#lineregistrations_python" style="color: inherit; text-decoration: inherit;">line<wbr>Registrations</a>
+        <span id="line_registrations_python">
+<a href="#line_registrations_python" style="color: inherit; text-decoration: inherit;">line_<wbr>registrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistrationresponse">List[Line<wbr>Registration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#lineregistrationresponse">Sequence[Line<wbr>Registration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
 
@@ -2937,7 +2937,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelpropertiesresponse">Dict[Line<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
 
@@ -3072,8 +3072,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="generatedid_python">
-<a href="#generatedid_python" style="color: inherit; text-decoration: inherit;">generated<wbr>Id</a>
+        <span id="generated_id_python">
+<a href="#generated_id_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3082,8 +3082,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="channelaccesstoken_python">
-<a href="#channelaccesstoken_python" style="color: inherit; text-decoration: inherit;">channel<wbr>Access<wbr>Token</a>
+        <span id="channel_access_token_python">
+<a href="#channel_access_token_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3092,8 +3092,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="channelsecret_python">
-<a href="#channelsecret_python" style="color: inherit; text-decoration: inherit;">channel<wbr>Secret</a>
+        <span id="channel_secret_python">
+<a href="#channel_secret_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3241,8 +3241,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="callingwebhook_python">
-<a href="#callingwebhook_python" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
+        <span id="calling_web_hook_python">
+<a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3251,8 +3251,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablecalling_python">
-<a href="#enablecalling_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
+        <span id="enable_calling_python">
+<a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3334,7 +3334,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Dict[Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
 
@@ -3778,8 +3778,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="callingwebhook_python">
-<a href="#callingwebhook_python" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
+        <span id="calling_web_hook_python">
+<a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3788,8 +3788,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablecalling_python">
-<a href="#enablecalling_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
+        <span id="enable_calling_python">
+<a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3798,8 +3798,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablegroups_python">
-<a href="#enablegroups_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Groups</a>
+        <span id="enable_groups_python">
+<a href="#enable_groups_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3808,8 +3808,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablemediacards_python">
-<a href="#enablemediacards_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Media<wbr>Cards</a>
+        <span id="enable_media_cards_python">
+<a href="#enable_media_cards_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>media_<wbr>cards</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3818,8 +3818,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablemessaging_python">
-<a href="#enablemessaging_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Messaging</a>
+        <span id="enable_messaging_python">
+<a href="#enable_messaging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>messaging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3828,8 +3828,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablescreensharing_python">
-<a href="#enablescreensharing_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Screen<wbr>Sharing</a>
+        <span id="enable_screen_sharing_python">
+<a href="#enable_screen_sharing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>screen_<wbr>sharing</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3838,8 +3838,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablevideo_python">
-<a href="#enablevideo_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Video</a>
+        <span id="enable_video_python">
+<a href="#enable_video_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>video</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3848,8 +3848,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupsmode_python">
-<a href="#groupsmode_python" style="color: inherit; text-decoration: inherit;">groups<wbr>Mode</a>
+        <span id="groups_mode_python">
+<a href="#groups_mode_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3931,7 +3931,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelpropertiesresponse">Dict[Skype<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
 
@@ -4296,16 +4296,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isvalidated_python">
-<a href="#isvalidated_python" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
@@ -4316,8 +4306,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastsubmissionid_python">
-<a href="#lastsubmissionid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Submission<wbr>Id</a>
+        <span id="is_validated_python">
+<a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_submission_id_python">
+<a href="#last_submission_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>submission_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4326,8 +4326,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="redirectaction_python">
-<a href="#redirectaction_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Action</a>
+        <span id="redirect_action_python">
+<a href="#redirect_action_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4336,8 +4336,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="registerbeforeoauthflow_python">
-<a href="#registerbeforeoauthflow_python" style="color: inherit; text-decoration: inherit;">register<wbr>Before<wbr>OAuth<wbr>Flow</a>
+        <span id="register_before_o_auth_flow_python">
+<a href="#register_before_o_auth_flow_python" style="color: inherit; text-decoration: inherit;">register_<wbr>before_<wbr>o_<wbr>auth_<wbr>flow</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4346,8 +4346,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="verificationtoken_python">
-<a href="#verificationtoken_python" style="color: inherit; text-decoration: inherit;">verification<wbr>Token</a>
+        <span id="verification_token_python">
+<a href="#verification_token_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4356,8 +4356,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="landingpageurl_python">
-<a href="#landingpageurl_python" style="color: inherit; text-decoration: inherit;">landing<wbr>Page<wbr>Url</a>
+        <span id="landing_page_url_python">
+<a href="#landing_page_url_python" style="color: inherit; text-decoration: inherit;">landing_<wbr>page_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4366,8 +4366,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="signingsecret_python">
-<a href="#signingsecret_python" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
+        <span id="signing_secret_python">
+<a href="#signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4449,7 +4449,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelpropertiesresponse">Dict[Slack<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
 
@@ -4644,8 +4644,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accountsid_python">
-<a href="#accountsid_python" style="color: inherit; text-decoration: inherit;">account<wbr>SID</a>
+        <span id="account_sid_python">
+<a href="#account_sid_python" style="color: inherit; text-decoration: inherit;">account_<wbr>sid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4654,8 +4654,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authtoken_python">
-<a href="#authtoken_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
+        <span id="auth_token_python">
+<a href="#auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4684,8 +4684,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isvalidated_python">
-<a href="#isvalidated_python" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
+        <span id="is_validated_python">
+<a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4767,7 +4767,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelpropertiesresponse">Dict[Sms<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
 
@@ -4922,8 +4922,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isvalidated_python">
-<a href="#isvalidated_python" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
+        <span id="is_validated_python">
+<a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5005,7 +5005,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Dict[Telegram<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
 
@@ -5110,8 +5110,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="webchatembedcode_python">
-<a href="#webchatembedcode_python" style="color: inherit; text-decoration: inherit;">web<wbr>Chat<wbr>Embed<wbr>Code</a>
+        <span id="web_chat_embed_code_python">
+<a href="#web_chat_embed_code_python" style="color: inherit; text-decoration: inherit;">web_<wbr>chat_<wbr>embed_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5124,7 +5124,7 @@ The following output properties are available:
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsiteresponse">List[Web<wbr>Chat<wbr>Site<wbr>Response]</a></span>
+        <span class="property-type"><a href="#webchatsiteresponse">Sequence[Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
 
@@ -5203,7 +5203,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Dict[Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
 
@@ -5428,8 +5428,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enablepreview_python">
-<a href="#enablepreview_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Preview</a>
+        <span id="enable_preview_python">
+<a href="#enable_preview_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>preview</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5468,8 +5468,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="siteid_python">
-<a href="#siteid_python" style="color: inherit; text-decoration: inherit;">site<wbr>Id</a>
+        <span id="site_id_python">
+<a href="#site_id_python" style="color: inherit; text-decoration: inherit;">site_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

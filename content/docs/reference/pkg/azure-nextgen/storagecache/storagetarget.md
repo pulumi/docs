@@ -115,21 +115,21 @@ import pulumi_azure_nextgen as azure_nextgen
 storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget",
     cache_name="sc1",
     junctions=[
-        {
-            "namespacePath": "/path/on/cache",
-            "nfsExport": "exp1",
-            "targetPath": "/path/on/exp1",
-        },
-        {
-            "namespacePath": "/path2/on/cache",
-            "nfsExport": "exp2",
-            "targetPath": "/path2/on/exp2",
-        },
+        azure_nextgen.storagecache.latest.NamespaceJunctionArgs(
+            namespace_path="/path/on/cache",
+            nfs_export="exp1",
+            target_path="/path/on/exp1",
+        ),
+        azure_nextgen.storagecache.latest.NamespaceJunctionArgs(
+            namespace_path="/path2/on/cache",
+            nfs_export="exp2",
+            target_path="/path2/on/exp2",
+        ),
     ],
-    nfs3={
-        "target": "10.0.44.44",
-        "usageModel": "READ_HEAVY_INFREQ",
-    },
+    nfs3=azure_nextgen.storagecache.latest.Nfs3TargetArgs(
+        target="10.0.44.44",
+        usage_model="READ_HEAVY_INFREQ",
+    ),
     resource_group_name="scgroup",
     storage_target_name="st1",
     target_type="nfs3")
@@ -183,7 +183,7 @@ const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("stora
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clfs</span><span class="p">:</span> <span class="nx">Optional[Dict[ClfsTarget]]</span> = None<span class="p">, </span><span class="nx">junctions</span><span class="p">:</span> <span class="nx">Optional[List[NamespaceJunction]]</span> = None<span class="p">, </span><span class="nx">nfs3</span><span class="p">:</span> <span class="nx">Optional[Dict[Nfs3Target]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unknown</span><span class="p">:</span> <span class="nx">Optional[Dict[UnknownTarget]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clfs</span><span class="p">:</span> <span class="nx">Optional[ClfsTargetArgs]</span> = None<span class="p">, </span><span class="nx">junctions</span><span class="p">:</span> <span class="nx">Optional[Sequence[NamespaceJunctionArgs]]</span> = None<span class="p">, </span><span class="nx">nfs3</span><span class="p">:</span> <span class="nx">Optional[Nfs3TargetArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unknown</span><span class="p">:</span> <span class="nx">Optional[UnknownTargetArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -692,7 +692,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#clfs_python" style="color: inherit; text-decoration: inherit;">clfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clfstarget">Dict[Clfs<wbr>Target]</a></span>
+        <span class="property-type"><a href="#clfstarget">Clfs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is clfs.{{% /md %}}</dd>
 
@@ -702,7 +702,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#junctions_python" style="color: inherit; text-decoration: inherit;">junctions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacejunction">List[Namespace<wbr>Junction]</a></span>
+        <span class="property-type"><a href="#namespacejunction">Sequence[Namespace<wbr>Junction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Cache namespace junctions to target for namespace associations.{{% /md %}}</dd>
 
@@ -712,7 +712,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#nfs3_python" style="color: inherit; text-decoration: inherit;">nfs3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfs3target">Dict[Nfs3Target]</a></span>
+        <span class="property-type"><a href="#nfs3target">Nfs3Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is nfs3.{{% /md %}}</dd>
 
@@ -732,7 +732,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unknowntarget">Dict[Unknown<wbr>Target]</a></span>
+        <span class="property-type"><a href="#unknowntarget">Unknown<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is unknown.{{% /md %}}</dd>
 
@@ -1193,8 +1193,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="namespacepath_python">
-<a href="#namespacepath_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Path</a>
+        <span id="namespace_path_python">
+<a href="#namespace_path_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1203,8 +1203,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nfsexport_python">
-<a href="#nfsexport_python" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
+        <span id="nfs_export_python">
+<a href="#nfs_export_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1213,8 +1213,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetpath_python">
-<a href="#targetpath_python" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
+        <span id="target_path_python">
+<a href="#target_path_python" style="color: inherit; text-decoration: inherit;">target_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1352,8 +1352,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="namespacepath_python">
-<a href="#namespacepath_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Path</a>
+        <span id="namespace_path_python">
+<a href="#namespace_path_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1362,8 +1362,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nfsexport_python">
-<a href="#nfsexport_python" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
+        <span id="nfs_export_python">
+<a href="#nfs_export_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1372,8 +1372,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetpath_python">
-<a href="#targetpath_python" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
+        <span id="target_path_python">
+<a href="#target_path_python" style="color: inherit; text-decoration: inherit;">target_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1693,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unknown_map_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd>
 
@@ -1772,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unknown_map_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd>
 

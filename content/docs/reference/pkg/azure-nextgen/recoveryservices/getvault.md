@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesresponse">Dict[Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitydataresponse">Dict[Identity<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identitydataresponse">Identity<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identifies the unique system identifier for each Azure resource.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -813,7 +813,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint network resource that is linked to the Private Endpoint connection.{{% /md %}}</dd>
 
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets private link service connection state.{{% /md %}}</dd>
 
@@ -952,7 +952,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Dict[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private Endpoint Connection Response Properties.{{% /md %}}</dd>
 
@@ -1867,7 +1867,7 @@ The following output properties are available:
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionvaultpropertiesresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionvaultpropertiesresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection.{{% /md %}}</dd>
 
@@ -1907,7 +1907,7 @@ The following output properties are available:
 <a href="#upgrade_details_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgradedetailsresponse">Dict[Upgrade<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#upgradedetailsresponse">Upgrade<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details for upgrading vault.{{% /md %}}</dd>
 

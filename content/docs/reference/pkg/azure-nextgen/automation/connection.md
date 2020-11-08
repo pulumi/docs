@@ -97,9 +97,9 @@ import pulumi_azure_nextgen as azure_nextgen
 connection = azure_nextgen.automation.latest.Connection("connection",
     automation_account_name="myAutomationAccount28",
     connection_name="mysConnection",
-    connection_type={
-        "name": "Azure",
-    },
+    connection_type=azure_nextgen.automation.latest.ConnectionTypeAssociationPropertyArgs(
+        name="Azure",
+    ),
     description="my description goes here",
     field_definition_values={
         "AutomationCertificateName": "mysCertificateName",
@@ -149,7 +149,7 @@ const connection = new azure_nextgen.automation.latest.Connection("connection", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionTypeAssociationProperty]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">field_definition_values</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[ConnectionTypeAssociationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">field_definition_values</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -578,7 +578,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiontypeassociationproperty">Dict[Connection<wbr>Type<wbr>Association<wbr>Property]</a></span>
+        <span class="property-type"><a href="#connectiontypeassociationproperty">Connection<wbr>Type<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectionType of the connection.{{% /md %}}</dd>
 
@@ -618,7 +618,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#field_definition_values_python" style="color: inherit; text-decoration: inherit;">field_<wbr>definition_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the field definition properties of the connection.{{% /md %}}</dd>
 

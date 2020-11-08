@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streaminglocatorcontentkeyresponse">List[Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streaminglocatorcontentkeyresponse">Sequence[Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}ContentKeys used by current Streaming Locator{{% /md %}}</dd>
 
@@ -522,7 +522,7 @@ The following output properties are available:
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this Content Key{{% /md %}}</dd>
 
@@ -538,8 +538,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="labelreferenceinstreamingpolicy_python">
-<a href="#labelreferenceinstreamingpolicy_python" style="color: inherit; text-decoration: inherit;">label<wbr>Reference<wbr>In<wbr>Streaming<wbr>Policy</a>
+        <span id="label_reference_in_streaming_policy_python">
+<a href="#label_reference_in_streaming_policy_python" style="color: inherit; text-decoration: inherit;">label_<wbr>reference_<wbr>in_<wbr>streaming_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -786,11 +786,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackselections_python">
-<a href="#trackselections_python" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
+        <span id="track_selections_python">
+<a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">List[Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
 

@@ -107,18 +107,18 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 event_hub = azure_nextgen.eventhub.latest.EventHub("eventHub",
-    capture_description={
-        "destination": {
-            "archiveNameFormat": "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
-            "blobContainer": "container",
-            "name": "EventHubArchive.AzureBlockBlob",
-            "storageAccountResourceId": "/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage",
-        },
-        "enabled": True,
-        "encoding": "Avro",
-        "intervalInSeconds": 120,
-        "sizeLimitInBytes": 10485763,
-    },
+    capture_description=azure_nextgen.eventhub.latest.CaptureDescriptionArgs(
+        destination=azure_nextgen.eventhub.latest.DestinationArgs(
+            archive_name_format="{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
+            blob_container="container",
+            name="EventHubArchive.AzureBlockBlob",
+            storage_account_resource_id="/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage",
+        ),
+        enabled=True,
+        encoding="Avro",
+        interval_in_seconds=120,
+        size_limit_in_bytes=10485763,
+    ),
     event_hub_name="sdk-EventHub-6547",
     message_retention_in_days=4,
     namespace_name="sdk-Namespace-5357",
@@ -173,7 +173,7 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[Dict[CaptureDescription]]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[CaptureDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -612,7 +612,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capture_description_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capturedescription">Dict[Capture<wbr>Description]</a></span>
+        <span class="property-type"><a href="#capturedescription">Capture<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of capture description{{% /md %}}</dd>
 
@@ -901,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_ids_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Current number of shards on the Event Hub.{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">Dict[Destination]</a></span>
+        <span class="property-type"><a href="#destination">Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd>
 
@@ -1438,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">Dict[Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#destinationresponse">Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd>
 

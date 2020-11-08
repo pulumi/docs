@@ -129,14 +129,14 @@ relationship_link = azure_nextgen.customerinsights.latest.RelationshipLink("rela
     },
     hub_name="sdkTestHub",
     interaction_type="testInteraction4332",
-    profile_property_references=[{
-        "interactionPropertyName": "profile1",
-        "profilePropertyName": "ProfileId",
-    }],
-    related_profile_property_references=[{
-        "interactionPropertyName": "profile1",
-        "profilePropertyName": "ProfileId",
-    }],
+    profile_property_references=[azure_nextgen.customerinsights.latest.ParticipantProfilePropertyReferenceArgs(
+        interaction_property_name="profile1",
+        profile_property_name="ProfileId",
+    )],
+    related_profile_property_references=[azure_nextgen.customerinsights.latest.ParticipantProfilePropertyReferenceArgs(
+        interaction_property_name="profile1",
+        profile_property_name="ProfileId",
+    )],
     relationship_link_name="Somelink",
     relationship_name="testProfile2326994",
     resource_group_name="TestHubRG")
@@ -189,7 +189,7 @@ const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipL
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interaction_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[List[RelationshipLinkFieldMapping]]</span> = None<span class="p">, </span><span class="nx">profile_property_references</span><span class="p">:</span> <span class="nx">Optional[List[ParticipantProfilePropertyReference]]</span> = None<span class="p">, </span><span class="nx">related_profile_property_references</span><span class="p">:</span> <span class="nx">Optional[List[ParticipantProfilePropertyReference]]</span> = None<span class="p">, </span><span class="nx">relationship_link_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relationship_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RelationshipLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interaction_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[RelationshipLinkFieldMappingArgs]]</span> = None<span class="p">, </span><span class="nx">profile_property_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParticipantProfilePropertyReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">related_profile_property_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParticipantProfilePropertyReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">relationship_link_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relationship_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -708,7 +708,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#profile_property_references_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">List[Participant<wbr>Profile<wbr>Property<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">Sequence[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd>
 
@@ -718,7 +718,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#related_profile_property_references_python" style="color: inherit; text-decoration: inherit;">related_<wbr>profile_<wbr>property_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">List[Participant<wbr>Profile<wbr>Property<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">Sequence[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd>
 
@@ -758,7 +758,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd>
 
@@ -768,7 +768,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd>
 
@@ -778,7 +778,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiplinkfieldmapping">List[Relationship<wbr>Link<wbr>Field<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#relationshiplinkfieldmapping">Sequence[Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd>
 
@@ -1211,8 +1211,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="interactionpropertyname_python">
-<a href="#interactionpropertyname_python" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
+        <span id="interaction_property_name_python">
+<a href="#interaction_property_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1221,8 +1221,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="profilepropertyname_python">
-<a href="#profilepropertyname_python" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
+        <span id="profile_property_name_python">
+<a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1330,8 +1330,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="interactionpropertyname_python">
-<a href="#interactionpropertyname_python" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
+        <span id="interaction_property_name_python">
+<a href="#interaction_property_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1340,8 +1340,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="profilepropertyname_python">
-<a href="#profilepropertyname_python" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
+        <span id="profile_property_name_python">
+<a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1479,8 +1479,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="interactionfieldname_python">
-<a href="#interactionfieldname_python" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
+        <span id="interaction_field_name_python">
+<a href="#interaction_field_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1489,8 +1489,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relationshipfieldname_python">
-<a href="#relationshipfieldname_python" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
+        <span id="relationship_field_name_python">
+<a href="#relationship_field_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1638,8 +1638,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="interactionfieldname_python">
-<a href="#interactionfieldname_python" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
+        <span id="interaction_field_name_python">
+<a href="#interaction_field_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1648,8 +1648,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relationshipfieldname_python">
-<a href="#relationshipfieldname_python" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
+        <span id="relationship_field_name_python">
+<a href="#relationship_field_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

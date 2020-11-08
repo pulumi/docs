@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconnectionhealthdetailresponse">List[Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vpnclientconnectionhealthdetailresponse">Sequence[Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of vpn client connection health.{{% /md %}}</dd>
 
@@ -638,16 +638,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="egresspacketstransferred_python">
-<a href="#egresspacketstransferred_python" style="color: inherit; text-decoration: inherit;">egress<wbr>Packets<wbr>Transferred</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="egress_bytes_transferred_python">
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span> 
@@ -658,13 +648,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ingresspacketstransferred_python">
-<a href="#ingresspacketstransferred_python" style="color: inherit; text-decoration: inherit;">ingress<wbr>Packets<wbr>Transferred</a>
+        <span id="egress_packets_transferred_python">
+<a href="#egress_packets_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>packets_<wbr>transferred</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
+    <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -678,8 +668,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxbandwidth_python">
-<a href="#maxbandwidth_python" style="color: inherit; text-decoration: inherit;">max<wbr>Bandwidth</a>
+        <span id="ingress_packets_transferred_python">
+<a href="#ingress_packets_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>packets_<wbr>transferred</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_bandwidth_python">
+<a href="#max_bandwidth_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bandwidth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -688,8 +688,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxpacketspersecond_python">
-<a href="#maxpacketspersecond_python" style="color: inherit; text-decoration: inherit;">max<wbr>Packets<wbr>Per<wbr>Second</a>
+        <span id="max_packets_per_second_python">
+<a href="#max_packets_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>packets_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -718,8 +718,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vpnconnectionduration_python">
-<a href="#vpnconnectionduration_python" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Duration</a>
+        <span id="vpn_connection_duration_python">
+<a href="#vpn_connection_duration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -728,8 +728,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vpnconnectionid_python">
-<a href="#vpnconnectionid_python" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Id</a>
+        <span id="vpn_connection_id_python">
+<a href="#vpn_connection_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -738,8 +738,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vpnconnectiontime_python">
-<a href="#vpnconnectiontime_python" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Time</a>
+        <span id="vpn_connection_time_python">
+<a href="#vpn_connection_time_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -748,8 +748,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vpnusername_python">
-<a href="#vpnusername_python" style="color: inherit; text-decoration: inherit;">vpn<wbr>User<wbr>Name</a>
+        <span id="vpn_user_name_python">
+<a href="#vpn_user_name_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

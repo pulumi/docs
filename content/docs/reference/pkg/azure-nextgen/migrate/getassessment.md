@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentpropertiesresponse">Dict[Assessment<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assessmentpropertiesresponse">Assessment<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd>
 
@@ -1444,7 +1444,7 @@ The following output properties are available:
 <a href="#azure_vm_families_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
 
@@ -1674,7 +1674,7 @@ The following output properties are available:
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Dict[Vm<wbr>Uptime<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
 

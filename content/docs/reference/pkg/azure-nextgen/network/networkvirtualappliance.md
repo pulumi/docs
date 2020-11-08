@@ -125,24 +125,24 @@ import pulumi_azure_nextgen as azure_nextgen
 network_virtual_appliance = azure_nextgen.network.latest.NetworkVirtualAppliance("networkVirtualAppliance",
     boot_strap_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
     cloud_init_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
-    identity={
-        "type": "UserAssigned",
-    },
+    identity=azure_nextgen.network.latest.ManagedServiceIdentityArgs(
+        type="UserAssigned",
+    ),
     location="West US",
     network_virtual_appliance_name="nva",
-    nva_sku={
-        "bundledScaleUnit": "1",
-        "marketPlaceVersion": "12.1",
-        "vendor": "Cisco SDWAN",
-    },
+    nva_sku=azure_nextgen.network.latest.VirtualApplianceSkuPropertiesArgs(
+        bundled_scale_unit="1",
+        market_place_version="12.1",
+        vendor="Cisco SDWAN",
+    ),
     resource_group_name="rg1",
     tags={
         "key1": "value1",
     },
     virtual_appliance_asn=10000,
-    virtual_hub={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
-    })
+    virtual_hub=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+    ))
 
 ```
 
@@ -193,7 +193,7 @@ const networkVirtualAppliance = new azure_nextgen.network.latest.NetworkVirtualA
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NetworkVirtualAppliance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boot_strap_configuration_blobs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cloud_init_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_init_configuration_blobs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedServiceIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_virtual_appliance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nva_sku</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualApplianceSkuProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_appliance_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NetworkVirtualAppliance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boot_strap_configuration_blobs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cloud_init_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_init_configuration_blobs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_virtual_appliance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nva_sku</span><span class="p">:</span> <span class="nx">Optional[VirtualApplianceSkuPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_appliance_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -772,7 +772,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#boot_strap_configuration_blobs_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>strap_<wbr>configuration_<wbr>blobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}BootStrapConfigurationBlobs storage URLs.{{% /md %}}</dd>
 
@@ -792,7 +792,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#cloud_init_configuration_blobs_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>init_<wbr>configuration_<wbr>blobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}CloudInitConfigurationBlob storage URLs.{{% /md %}}</dd>
 
@@ -812,7 +812,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Dict[Managed<wbr>Service<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service principal that has read access to cloud-init and config blob.{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#nva_sku_python" style="color: inherit; text-decoration: inherit;">nva_<wbr>sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplianceskuproperties">Dict[Virtual<wbr>Appliance<wbr>Sku<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#virtualapplianceskuproperties">Virtual<wbr>Appliance<wbr>Sku<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Virtual Appliance SKU.{{% /md %}}</dd>
 
@@ -842,7 +842,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ The NetworkVirtualAppliance resource accepts the following [input]({{< relref "/
 <a href="#virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Virtual Hub where Network Virtual Appliance is being deployed.{{% /md %}}</dd>
 
@@ -1211,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inbound_security_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>security_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of references to InboundSecurityRules.{{% /md %}}</dd>
 
@@ -1251,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_appliance_nics_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>appliance_<wbr>nics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualappliancenicpropertiesresponse">List[Virtual<wbr>Appliance<wbr>Nic<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualappliancenicpropertiesresponse">Sequence[Virtual<wbr>Appliance<wbr>Nic<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Appliance Network Interfaces.{{% /md %}}</dd>
 
@@ -1261,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_appliance_sites_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>appliance_<wbr>sites</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of references to VirtualApplianceSite.{{% /md %}}</dd>
 
@@ -1548,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 

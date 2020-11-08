@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailtemplateparameterscontractpropertiesresponse">List[Email<wbr>Template<wbr>Parameters<wbr>Contract<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#emailtemplateparameterscontractpropertiesresponse">Sequence[Email<wbr>Template<wbr>Parameters<wbr>Contract<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Email Template Parameter values.{{% /md %}}</dd>
 

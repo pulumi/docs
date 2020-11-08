@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceskuresponse">Dict[Resource<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceskuresponse">Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the PowerBI Dedicated resource.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#administration_python" style="color: inherit; text-decoration: inherit;">administration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedcapacityadministratorsresponse">Dict[Dedicated<wbr>Capacity<wbr>Administrators<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dedicatedcapacityadministratorsresponse">Dedicated<wbr>Capacity<wbr>Administrators<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of Dedicated capacity administrators{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
 

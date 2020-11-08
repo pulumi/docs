@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#collection_info_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectioninforesponse">Dict[Connector<wbr>Collection<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection information{{% /md %}}</dd>
 
@@ -1313,7 +1313,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Dict[Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
 

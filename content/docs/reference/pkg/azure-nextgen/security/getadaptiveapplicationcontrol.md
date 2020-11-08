@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#issues_python" style="color: inherit; text-decoration: inherit;">issues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">List[Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response]</a></span>
+        <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">Sequence[Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#path_recommendations_python" style="color: inherit; text-decoration: inherit;">path_<wbr>recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathrecommendationresponse">List[Path<wbr>Recommendation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pathrecommendationresponse">Sequence[Path<wbr>Recommendation<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#protection_mode_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionmoderesponse">Dict[Protection<wbr>Mode<wbr>Response]</a></span>
+        <span class="property-type"><a href="#protectionmoderesponse">Protection<wbr>Mode<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#vm_recommendations_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmrecommendationresponse">List[Vm<wbr>Recommendation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmrecommendationresponse">Sequence[Vm<wbr>Recommendation<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -750,8 +750,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numberofvms_python">
-<a href="#numberofvms_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Vms</a>
+        <span id="number_of_vms_python">
+<a href="#number_of_vms_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>vms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1119,11 +1119,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publisherinfo_python">
-<a href="#publisherinfo_python" style="color: inherit; text-decoration: inherit;">publisher<wbr>Info</a>
+        <span id="publisher_info_python">
+<a href="#publisher_info_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinforesponse">Dict[Publisher<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd>
 
@@ -1139,11 +1139,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usersids_python">
-<a href="#usersids_python" style="color: inherit; text-decoration: inherit;">user<wbr>Sids</a>
+        <span id="user_sids_python">
+<a href="#user_sids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>sids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ The following output properties are available:
 <a href="#usernames_python" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendationresponse">List[User<wbr>Recommendation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userrecommendationresponse">Sequence[User<wbr>Recommendation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1517,8 +1517,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="binaryname_python">
-<a href="#binaryname_python" style="color: inherit; text-decoration: inherit;">binary<wbr>Name</a>
+        <span id="binary_name_python">
+<a href="#binary_name_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1656,8 +1656,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationaction_python">
-<a href="#recommendationaction_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
+        <span id="recommendation_action_python">
+<a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1845,8 +1845,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcementsupport_python">
-<a href="#enforcementsupport_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Support</a>
+        <span id="enforcement_support_python">
+<a href="#enforcement_support_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>support</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1855,8 +1855,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendationaction_python">
-<a href="#recommendationaction_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
+        <span id="recommendation_action_python">
+<a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

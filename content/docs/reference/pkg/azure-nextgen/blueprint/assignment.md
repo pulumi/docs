@@ -138,29 +138,29 @@ assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
     assignment_name="assignSimpleBlueprint",
     blueprint_id="/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description="enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-    identity={
-        "type": "SystemAssigned",
-    },
+    identity=azure_nextgen.blueprint.v20181101preview.ManagedServiceIdentityArgs(
+        type="SystemAssigned",
+    ),
     location="eastus",
     parameters={
-        "costCenter": {
-            "value": "Contoso/Online/Shopping/Production",
-        },
-        "owners": {
-            "value": [
+        "costCenter": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value="Contoso/Online/Shopping/Production",
+        ),
+        "owners": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value=[
                 "johnDoe@contoso.com",
                 "johnsteam@contoso.com",
             ],
-        },
-        "storage_account_type": {
-            "value": "Standard_LRS",
-        },
+        ),
+        "storage_account_type": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value="Standard_LRS",
+        ),
     },
     resource_groups={
-        "storageRG": {
-            "location": "eastus",
-            "name": "defaultRG",
-        },
+        "storageRG": azure_nextgen.blueprint.v20181101preview.ResourceGroupValueArgs(
+            location="eastus",
+            name="defaultRG",
+        ),
     },
     resource_scope="managementGroups/ContosoOnlineGroup",
     scope="subscriptions/00000000-0000-0000-0000-000000000000")
@@ -331,29 +331,29 @@ assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
     assignment_name="assignSimpleBlueprint",
     blueprint_id="/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description="enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-    identity={
-        "type": "SystemAssigned",
-    },
+    identity=azure_nextgen.blueprint.v20181101preview.ManagedServiceIdentityArgs(
+        type="SystemAssigned",
+    ),
     location="eastus",
     parameters={
-        "costCenter": {
-            "value": "Contoso/Online/Shopping/Production",
-        },
-        "owners": {
-            "value": [
+        "costCenter": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value="Contoso/Online/Shopping/Production",
+        ),
+        "owners": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value=[
                 "johnDoe@contoso.com",
                 "johnsteam@contoso.com",
             ],
-        },
-        "storage_account_type": {
-            "value": "Standard_LRS",
-        },
+        ),
+        "storage_account_type": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value="Standard_LRS",
+        ),
     },
     resource_groups={
-        "storageRG": {
-            "location": "eastus",
-            "name": "defaultRG",
-        },
+        "storageRG": azure_nextgen.blueprint.v20181101preview.ResourceGroupValueArgs(
+            location="eastus",
+            name="defaultRG",
+        ),
     },
     resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
 
@@ -478,32 +478,32 @@ assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
     assignment_name="assignSimpleBlueprint",
     blueprint_id="/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description="enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-    identity={
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resource-group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-identity": {},
+    identity=azure_nextgen.blueprint.v20181101preview.ManagedServiceIdentityArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resource-group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-identity": azure_nextgen.blueprint.v20181101preview.UserAssignedIdentityArgs(),
         },
-    },
+    ),
     location="eastus",
     parameters={
-        "costCenter": {
-            "value": "Contoso/Online/Shopping/Production",
-        },
-        "owners": {
-            "value": [
+        "costCenter": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value="Contoso/Online/Shopping/Production",
+        ),
+        "owners": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value=[
                 "johnDoe@contoso.com",
                 "johnsteam@contoso.com",
             ],
-        },
-        "storage_account_type": {
-            "value": "Standard_LRS",
-        },
+        ),
+        "storage_account_type": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value="Standard_LRS",
+        ),
     },
     resource_groups={
-        "storageRG": {
-            "location": "eastus",
-            "name": "defaultRG",
-        },
+        "storageRG": azure_nextgen.blueprint.v20181101preview.ResourceGroupValueArgs(
+            location="eastus",
+            name="defaultRG",
+        ),
     },
     resource_scope="managementGroups/ContosoOnlineGroup",
     scope="subscriptions/00000000-0000-0000-0000-000000000000")
@@ -632,32 +632,32 @@ assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
     assignment_name="assignSimpleBlueprint",
     blueprint_id="/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description="enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-    identity={
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resource-group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-identity": {},
+    identity=azure_nextgen.blueprint.v20181101preview.ManagedServiceIdentityArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resource-group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-identity": azure_nextgen.blueprint.v20181101preview.UserAssignedIdentityArgs(),
         },
-    },
+    ),
     location="eastus",
     parameters={
-        "costCenter": {
-            "value": "Contoso/Online/Shopping/Production",
-        },
-        "owners": {
-            "value": [
+        "costCenter": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value="Contoso/Online/Shopping/Production",
+        ),
+        "owners": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value=[
                 "johnDoe@contoso.com",
                 "johnsteam@contoso.com",
             ],
-        },
-        "storage_account_type": {
-            "value": "Standard_LRS",
-        },
+        ),
+        "storage_account_type": azure_nextgen.blueprint.v20181101preview.ParameterValueArgs(
+            value="Standard_LRS",
+        ),
     },
     resource_groups={
-        "storageRG": {
-            "location": "eastus",
-            "name": "defaultRG",
-        },
+        "storageRG": azure_nextgen.blueprint.v20181101preview.ResourceGroupValueArgs(
+            location="eastus",
+            name="defaultRG",
+        ),
     },
     resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
 
@@ -721,7 +721,7 @@ const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blueprint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedServiceIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locks</span><span class="p">:</span> <span class="nx">Optional[Dict[AssignmentLockSettings]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ParameterValue]]</span> = None<span class="p">, </span><span class="nx">resource_groups</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ResourceGroupValue]]</span> = None<span class="p">, </span><span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blueprint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locks</span><span class="p">:</span> <span class="nx">Optional[AssignmentLockSettingsArgs]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterValueArgs]]</span> = None<span class="p">, </span><span class="nx">resource_groups</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ResourceGroupValueArgs]]</span> = None<span class="p">, </span><span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1260,7 +1260,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Dict[Managed<wbr>Service<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd>
 
@@ -1280,7 +1280,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Value]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Value<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Blueprint assignment parameter values.{{% /md %}}</dd>
 
@@ -1290,7 +1290,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_groups_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Resource<wbr>Group<wbr>Value]</span>
+        <span class="property-type">Mapping[str, Resource<wbr>Group<wbr>Value<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Names and locations of resource group placeholders.{{% /md %}}</dd>
 
@@ -1340,7 +1340,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locks_python" style="color: inherit; text-decoration: inherit;">locks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentlocksettings">Dict[Assignment<wbr>Lock<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#assignmentlocksettings">Assignment<wbr>Lock<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how resources deployed by a blueprint assignment are locked.{{% /md %}}</dd>
 
@@ -1579,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentstatusresponse">Dict[Assignment<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assignmentstatusresponse">Assignment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of blueprint assignment. This field is readonly.{{% /md %}}</dd>
 
@@ -1737,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_actions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.{{% /md %}}</dd>
 
@@ -1747,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_principals_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.{{% /md %}}</dd>
 
@@ -1896,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_actions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.{{% /md %}}</dd>
 
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_principals_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.{{% /md %}}</dd>
 
@@ -2065,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_resources_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of resources that were created by the blueprint assignment.{{% /md %}}</dd>
 
@@ -2432,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 
@@ -2631,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd>
 
@@ -2740,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Dict[Secret<wbr>Value<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd>
 
@@ -2750,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -2859,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Dict[Secret<wbr>Value<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd>
 
@@ -2869,7 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.{{% /md %}}</dd>
 
@@ -3246,7 +3246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Dict[Key<wbr>Vault<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd>
 
@@ -3262,8 +3262,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretversion_python">
-<a href="#secretversion_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3405,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Dict[Key<wbr>Vault<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd>
 
@@ -3421,8 +3421,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretversion_python">
-<a href="#secretversion_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

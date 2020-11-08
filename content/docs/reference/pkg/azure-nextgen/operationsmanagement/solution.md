@@ -114,23 +114,23 @@ import pulumi_azure_nextgen as azure_nextgen
 
 solution = azure_nextgen.operationsmanagement.v20151101preview.Solution("solution",
     location="East US",
-    plan={
-        "name": "name1",
-        "product": "product1",
-        "promotionCode": "promocode1",
-        "publisher": "publisher1",
-    },
-    properties={
-        "containedResources": [
+    plan=azure_nextgen.operationsmanagement.v20151101preview.SolutionPlanArgs(
+        name="name1",
+        product="product1",
+        promotion_code="promocode1",
+        publisher="publisher1",
+    ),
+    properties=azure_nextgen.operationsmanagement.v20151101preview.SolutionPropertiesArgs(
+        contained_resources=[
             "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource1",
             "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource2",
         ],
-        "referencedResources": [
+        referenced_resources=[
             "/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource2",
             "/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource3",
         ],
-        "workspaceResourceId": "/subscriptions/sub2/resourceGroups/rg2/providers/Microsoft.OperationalInsights/workspaces/ws1",
-    },
+        workspace_resource_id="/subscriptions/sub2/resourceGroups/rg2/providers/Microsoft.OperationalInsights/workspaces/ws1",
+    ),
     resource_group_name="rg1",
     solution_name="solution1")
 
@@ -183,7 +183,7 @@ const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solutio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[SolutionPlan]]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[SolutionProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[SolutionPlanArgs]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SolutionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -592,7 +592,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionplan">Dict[Solution<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#solutionplan">Solution<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
 
@@ -602,7 +602,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Dict[Solution<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
 
@@ -612,7 +612,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1327,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contained_resources_python" style="color: inherit; text-decoration: inherit;">contained_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.{{% /md %}}</dd>
 
@@ -1337,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referenced_resources_python" style="color: inherit; text-decoration: inherit;">referenced_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.{{% /md %}}</dd>
 
@@ -1526,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contained_resources_python" style="color: inherit; text-decoration: inherit;">contained_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.{{% /md %}}</dd>
 
@@ -1536,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referenced_resources_python" style="color: inherit; text-decoration: inherit;">referenced_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.{{% /md %}}</dd>
 

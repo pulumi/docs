@@ -111,9 +111,9 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
         "runOutputName": "image_it_pir_1",
         "type": "ManagedImage",
     }],
-    identity={
-        "type": "UserAssigned",
-    },
+    identity=azure_nextgen.virtualmachineimages.latest.ImageTemplateIdentityArgs(
+        type="UserAssigned",
+    ),
     image_template_name="myImageTemplate",
     location="westus",
     resource_group_name="myResourceGroup",
@@ -125,13 +125,13 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2",
     },
-    vm_profile={
-        "osDiskSizeGB": 64,
-        "vmSize": "Standard_D2s_v3",
-        "vnetConfig": {
-            "subnetId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
-        },
-    })
+    vm_profile=azure_nextgen.virtualmachineimages.latest.ImageTemplateVmProfileArgs(
+        os_disk_size_gb=64,
+        vm_size="Standard_D2s_v3",
+        vnet_config=azure_nextgen.virtualmachineimages.latest.VirtualNetworkConfigArgs(
+            subnet_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
+        ),
+    ))
 
 ```
 
@@ -212,7 +212,57 @@ class MyStack : Stack
                 },
                 
                 {
+                    { "inline", 
+                    {
+                        "Powershell command-1",
+                        "Powershell command-2",
+                        "Powershell command-3",
+                    } },
+                    { "name", "PowerShell (inline) Customizer Elevated user Example" },
+                    { "runElevated", true },
+                    { "type", "PowerShell" },
+                },
+                
+                {
+                    { "inline", 
+                    {
+                        "Powershell command-1",
+                        "Powershell command-2",
+                        "Powershell command-3",
+                    } },
+                    { "name", "PowerShell (inline) Customizer Elevated Local System user Example" },
+                    { "runAsSystem", true },
+                    { "runElevated", true },
+                    { "type", "PowerShell" },
+                },
+                
+                {
                     { "name", "PowerShell (script) Customizer Example" },
+                    { "scriptUri", "https://example.com/path/to/script.ps1" },
+                    { "type", "PowerShell" },
+                    { "validExitCodes", 
+                    {
+                        0,
+                        1,
+                    } },
+                },
+                
+                {
+                    { "name", "PowerShell (script) Customizer Elevated Local System user Example" },
+                    { "runElevated", true },
+                    { "scriptUri", "https://example.com/path/to/script.ps1" },
+                    { "type", "PowerShell" },
+                    { "validExitCodes", 
+                    {
+                        0,
+                        1,
+                    } },
+                },
+                
+                {
+                    { "name", "PowerShell (script) Customizer Elevated Local System user Example" },
+                    { "runAsSystem", true },
+                    { "runElevated", true },
                     { "scriptUri", "https://example.com/path/to/script.ps1" },
                     { "type", "PowerShell" },
                     { "validExitCodes", 
@@ -312,7 +362,49 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
             "type": "PowerShell",
         },
         {
+            "inline": [
+                "Powershell command-1",
+                "Powershell command-2",
+                "Powershell command-3",
+            ],
+            "name": "PowerShell (inline) Customizer Elevated user Example",
+            "runElevated": True,
+            "type": "PowerShell",
+        },
+        {
+            "inline": [
+                "Powershell command-1",
+                "Powershell command-2",
+                "Powershell command-3",
+            ],
+            "name": "PowerShell (inline) Customizer Elevated Local System user Example",
+            "runAsSystem": True,
+            "runElevated": True,
+            "type": "PowerShell",
+        },
+        {
             "name": "PowerShell (script) Customizer Example",
+            "scriptUri": "https://example.com/path/to/script.ps1",
+            "type": "PowerShell",
+            "validExitCodes": [
+                0,
+                1,
+            ],
+        },
+        {
+            "name": "PowerShell (script) Customizer Elevated Local System user Example",
+            "runElevated": True,
+            "scriptUri": "https://example.com/path/to/script.ps1",
+            "type": "PowerShell",
+            "validExitCodes": [
+                0,
+                1,
+            ],
+        },
+        {
+            "name": "PowerShell (script) Customizer Elevated Local System user Example",
+            "runAsSystem": True,
+            "runElevated": True,
             "scriptUri": "https://example.com/path/to/script.ps1",
             "type": "PowerShell",
             "validExitCodes": [
@@ -344,9 +436,9 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
         "runOutputName": "image_it_pir_1",
         "type": "ManagedImage",
     }],
-    identity={
-        "type": "UserAssigned",
-    },
+    identity=azure_nextgen.virtualmachineimages.latest.ImageTemplateIdentityArgs(
+        type="UserAssigned",
+    ),
     image_template_name="myImageTemplate",
     location="westus",
     resource_group_name="myResourceGroup",
@@ -358,13 +450,13 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2",
     },
-    vm_profile={
-        "osDiskSizeGB": 64,
-        "vmSize": "Standard_D2s_v3",
-        "vnetConfig": {
-            "subnetId": "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
-        },
-    })
+    vm_profile=azure_nextgen.virtualmachineimages.latest.ImageTemplateVmProfileArgs(
+        os_disk_size_gb=64,
+        vm_size="Standard_D2s_v3",
+        vnet_config=azure_nextgen.virtualmachineimages.latest.VirtualNetworkConfigArgs(
+            subnet_id="/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
+        ),
+    ))
 
 ```
 
@@ -388,7 +480,49 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
             type: "PowerShell",
         },
         {
+            inline: [
+                "Powershell command-1",
+                "Powershell command-2",
+                "Powershell command-3",
+            ],
+            name: "PowerShell (inline) Customizer Elevated user Example",
+            runElevated: true,
+            type: "PowerShell",
+        },
+        {
+            inline: [
+                "Powershell command-1",
+                "Powershell command-2",
+                "Powershell command-3",
+            ],
+            name: "PowerShell (inline) Customizer Elevated Local System user Example",
+            runAsSystem: true,
+            runElevated: true,
+            type: "PowerShell",
+        },
+        {
             name: "PowerShell (script) Customizer Example",
+            scriptUri: "https://example.com/path/to/script.ps1",
+            type: "PowerShell",
+            validExitCodes: [
+                0,
+                1,
+            ],
+        },
+        {
+            name: "PowerShell (script) Customizer Elevated Local System user Example",
+            runElevated: true,
+            scriptUri: "https://example.com/path/to/script.ps1",
+            type: "PowerShell",
+            validExitCodes: [
+                0,
+                1,
+            ],
+        },
+        {
+            name: "PowerShell (script) Customizer Elevated Local System user Example",
+            runAsSystem: true,
+            runElevated: true,
             scriptUri: "https://example.com/path/to/script.ps1",
             type: "PowerShell",
             validExitCodes: [
@@ -459,7 +593,7 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customize</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateFileCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplatePowerShellCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateRestartCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateShellCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateWindowsUpdateCustomizer, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">distribute</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateManagedImageDistributor, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateSharedImageDistributor, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateVhdDistributor, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateIdentity]]</span> = None<span class="p">, </span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateManagedImageSource] | Dict[ImageTemplatePlatformImageSource] | Dict[ImageTemplateSharedImageVersionSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateVmProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customize</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[ImageTemplateFileCustomizerArgs, ImageTemplatePowerShellCustomizerArgs, ImageTemplateRestartCustomizerArgs, ImageTemplateShellCustomizerArgs, ImageTemplateWindowsUpdateCustomizerArgs]]]</span> = None<span class="p">, </span><span class="nx">distribute</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[ImageTemplateManagedImageDistributorArgs, ImageTemplateSharedImageDistributorArgs, ImageTemplateVhdDistributorArgs]]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ImageTemplateIdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[ImageTemplateManagedImageSourceArgs, ImageTemplatePlatformImageSourceArgs, ImageTemplateSharedImageVersionSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_profile</span><span class="p">:</span> <span class="nx">Optional[ImageTemplateVmProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -958,7 +1092,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#distribute_python" style="color: inherit; text-decoration: inherit;">distribute</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Virtualmachineimages/Latest:Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor, Azure-Nextgen:Virtualmachineimages/Latest:Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor, Azure-Nextgen:Virtualmachineimages/Latest:Image<wbr>Template<wbr>Vhd<wbr>Distributor, Default=>]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Args, Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Args, Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd>
 
@@ -968,7 +1102,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplateidentity">Dict[Image<wbr>Template<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#imagetemplateidentity">Image<wbr>Template<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd>
 
@@ -1008,7 +1142,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source] | Dict[Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source] | Dict[Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source]</span>
+        <span class="property-type">Union[Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args, Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args, Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
 
@@ -1028,7 +1162,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#customize_python" style="color: inherit; text-decoration: inherit;">customize</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Virtualmachineimages/Latest:Image<wbr>Template<wbr>File<wbr>Customizer, Azure-Nextgen:Virtualmachineimages/Latest:Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer, Azure-Nextgen:Virtualmachineimages/Latest:Image<wbr>Template<wbr>Restart<wbr>Customizer, Azure-Nextgen:Virtualmachineimages/Latest:Image<wbr>Template<wbr>Shell<wbr>Customizer, Azure-Nextgen:Virtualmachineimages/Latest:Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer, Default=>]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
 
@@ -1038,7 +1172,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1048,7 +1182,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#vm_profile_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatevmprofile">Dict[Image<wbr>Template<wbr>Vm<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd>
 
@@ -1287,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_run_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Dict[Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd>
 
@@ -1307,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_error_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#provisioningerrorresponse">Dict[Provisioning<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#provisioningerrorresponse">Provisioning<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd>
 
@@ -1521,8 +1655,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sha256checksum_python">
-<a href="#sha256checksum_python" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
+        <span id="sha256_checksum_python">
+<a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1720,8 +1854,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sha256checksum_python">
-<a href="#sha256checksum_python" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
+        <span id="sha256_checksum_python">
+<a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1932,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -2455,8 +2589,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageid_python">
-<a href="#imageid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2475,8 +2609,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="runoutputname_python">
-<a href="#runoutputname_python" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
+        <span id="run_output_name_python">
+<a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2485,11 +2619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttags_python">
-<a href="#artifacttags_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
+        <span id="artifact_tags_python">
+<a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
 
@@ -2654,8 +2788,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageid_python">
-<a href="#imageid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2674,8 +2808,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="runoutputname_python">
-<a href="#runoutputname_python" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
+        <span id="run_output_name_python">
+<a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2684,11 +2818,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttags_python">
-<a href="#artifacttags_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
+        <span id="artifact_tags_python">
+<a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
 
@@ -2763,8 +2897,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageid_python">
-<a href="#imageid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2842,8 +2976,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageid_python">
-<a href="#imageid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3051,11 +3185,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="planinfo_python">
-<a href="#planinfo_python" style="color: inherit; text-decoration: inherit;">plan<wbr>Info</a>
+        <span id="plan_info_python">
+<a href="#plan_info_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplan">Dict[Platform<wbr>Image<wbr>Purchase<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
 
@@ -3290,11 +3424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="planinfo_python">
-<a href="#planinfo_python" style="color: inherit; text-decoration: inherit;">plan<wbr>Info</a>
+        <span id="plan_info_python">
+<a href="#plan_info_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Dict[Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
 
@@ -3368,6 +3502,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="runassystem_csharp">
+<a href="#runassystem_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>System</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="runelevated_csharp">
 <a href="#runelevated_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Elevated</a>
 </span> 
@@ -3432,6 +3576,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runassystem_go">
+<a href="#runassystem_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>System</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3502,6 +3656,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="runassystem_nodejs">
+<a href="#runassystem_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>System</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="runelevated_nodejs">
 <a href="#runelevated_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Elevated</a>
 </span> 
@@ -3553,7 +3717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
 
@@ -3569,8 +3733,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runelevated_python">
-<a href="#runelevated_python" style="color: inherit; text-decoration: inherit;">run<wbr>Elevated</a>
+        <span id="run_as_system_python">
+<a href="#run_as_system_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>system</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_elevated_python">
+<a href="#run_elevated_python" style="color: inherit; text-decoration: inherit;">run_<wbr>elevated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3579,8 +3753,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scripturi_python">
-<a href="#scripturi_python" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
+        <span id="script_uri_python">
+<a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3589,8 +3763,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sha256checksum_python">
-<a href="#sha256checksum_python" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
+        <span id="sha256_checksum_python">
+<a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3599,11 +3773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validexitcodes_python">
-<a href="#validexitcodes_python" style="color: inherit; text-decoration: inherit;">valid<wbr>Exit<wbr>Codes</a>
+        <span id="valid_exit_codes_python">
+<a href="#valid_exit_codes_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>exit_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
 
@@ -3647,6 +3821,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="runassystem_csharp">
+<a href="#runassystem_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>System</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="runelevated_csharp">
 <a href="#runelevated_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Elevated</a>
 </span> 
@@ -3711,6 +3895,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runassystem_go">
+<a href="#runassystem_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>System</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3781,6 +3975,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="runassystem_nodejs">
+<a href="#runassystem_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>System</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="runelevated_nodejs">
 <a href="#runelevated_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Elevated</a>
 </span> 
@@ -3832,7 +4036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
 
@@ -3848,8 +4052,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runelevated_python">
-<a href="#runelevated_python" style="color: inherit; text-decoration: inherit;">run<wbr>Elevated</a>
+        <span id="run_as_system_python">
+<a href="#run_as_system_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>system</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_elevated_python">
+<a href="#run_elevated_python" style="color: inherit; text-decoration: inherit;">run_<wbr>elevated</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3858,8 +4072,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scripturi_python">
-<a href="#scripturi_python" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
+        <span id="script_uri_python">
+<a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3868,8 +4082,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sha256checksum_python">
-<a href="#sha256checksum_python" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
+        <span id="sha256_checksum_python">
+<a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3878,11 +4092,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validexitcodes_python">
-<a href="#validexitcodes_python" style="color: inherit; text-decoration: inherit;">valid<wbr>Exit<wbr>Codes</a>
+        <span id="valid_exit_codes_python">
+<a href="#valid_exit_codes_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>exit_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
 
@@ -4057,8 +4271,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restartcheckcommand_python">
-<a href="#restartcheckcommand_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Check<wbr>Command</a>
+        <span id="restart_check_command_python">
+<a href="#restart_check_command_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>check_<wbr>command</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4067,8 +4281,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restartcommand_python">
-<a href="#restartcommand_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Command</a>
+        <span id="restart_command_python">
+<a href="#restart_command_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>command</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4077,8 +4291,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restarttimeout_python">
-<a href="#restarttimeout_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Timeout</a>
+        <span id="restart_timeout_python">
+<a href="#restart_timeout_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4256,8 +4470,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restartcheckcommand_python">
-<a href="#restartcheckcommand_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Check<wbr>Command</a>
+        <span id="restart_check_command_python">
+<a href="#restart_check_command_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>check_<wbr>command</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4266,8 +4480,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restartcommand_python">
-<a href="#restartcommand_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Command</a>
+        <span id="restart_command_python">
+<a href="#restart_command_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>command</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4276,8 +4490,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restarttimeout_python">
-<a href="#restarttimeout_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Timeout</a>
+        <span id="restart_timeout_python">
+<a href="#restart_timeout_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4505,8 +4719,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="galleryimageid_python">
-<a href="#galleryimageid_python" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Id</a>
+        <span id="gallery_image_id_python">
+<a href="#gallery_image_id_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4515,18 +4729,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="replicationregions_python">
-<a href="#replicationregions_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Regions</a>
+        <span id="replication_regions_python">
+<a href="#replication_regions_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="runoutputname_python">
-<a href="#runoutputname_python" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
+        <span id="run_output_name_python">
+<a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4535,11 +4749,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttags_python">
-<a href="#artifacttags_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
+        <span id="artifact_tags_python">
+<a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
 
@@ -4784,8 +4998,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="galleryimageid_python">
-<a href="#galleryimageid_python" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Id</a>
+        <span id="gallery_image_id_python">
+<a href="#gallery_image_id_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4794,18 +5008,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="replicationregions_python">
-<a href="#replicationregions_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Regions</a>
+        <span id="replication_regions_python">
+<a href="#replication_regions_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="runoutputname_python">
-<a href="#runoutputname_python" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
+        <span id="run_output_name_python">
+<a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4814,11 +5028,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttags_python">
-<a href="#artifacttags_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
+        <span id="artifact_tags_python">
+<a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
 
@@ -4913,8 +5127,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageversionid_python">
-<a href="#imageversionid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version<wbr>Id</a>
+        <span id="image_version_id_python">
+<a href="#image_version_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4992,8 +5206,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageversionid_python">
-<a href="#imageversionid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version<wbr>Id</a>
+        <span id="image_version_id_python">
+<a href="#image_version_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5165,7 +5379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
 
@@ -5181,8 +5395,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scripturi_python">
-<a href="#scripturi_python" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
+        <span id="script_uri_python">
+<a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5191,8 +5405,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sha256checksum_python">
-<a href="#sha256checksum_python" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
+        <span id="sha256_checksum_python">
+<a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5364,7 +5578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
 
@@ -5380,8 +5594,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scripturi_python">
-<a href="#scripturi_python" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
+        <span id="script_uri_python">
+<a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5390,8 +5604,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sha256checksum_python">
-<a href="#sha256checksum_python" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
+        <span id="sha256_checksum_python">
+<a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5499,8 +5713,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="runoutputname_python">
-<a href="#runoutputname_python" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
+        <span id="run_output_name_python">
+<a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5509,11 +5723,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttags_python">
-<a href="#artifacttags_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
+        <span id="artifact_tags_python">
+<a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
 
@@ -5618,8 +5832,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="runoutputname_python">
-<a href="#runoutputname_python" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
+        <span id="run_output_name_python">
+<a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5628,11 +5842,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttags_python">
-<a href="#artifacttags_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
+        <span id="artifact_tags_python">
+<a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
 
@@ -5791,7 +6005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfig">Dict[Virtual<wbr>Network<wbr>Config]</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
 
@@ -5950,7 +6164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Dict[Virtual<wbr>Network<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
 
@@ -6119,7 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
 
@@ -6135,8 +6349,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="searchcriteria_python">
-<a href="#searchcriteria_python" style="color: inherit; text-decoration: inherit;">search<wbr>Criteria</a>
+        <span id="search_criteria_python">
+<a href="#search_criteria_python" style="color: inherit; text-decoration: inherit;">search_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6145,8 +6359,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatelimit_python">
-<a href="#updatelimit_python" style="color: inherit; text-decoration: inherit;">update<wbr>Limit</a>
+        <span id="update_limit_python">
+<a href="#update_limit_python" style="color: inherit; text-decoration: inherit;">update_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6318,7 +6532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
 
@@ -6334,8 +6548,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="searchcriteria_python">
-<a href="#searchcriteria_python" style="color: inherit; text-decoration: inherit;">search<wbr>Criteria</a>
+        <span id="search_criteria_python">
+<a href="#search_criteria_python" style="color: inherit; text-decoration: inherit;">search_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6344,8 +6558,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatelimit_python">
-<a href="#updatelimit_python" style="color: inherit; text-decoration: inherit;">update<wbr>Limit</a>
+        <span id="update_limit_python">
+<a href="#update_limit_python" style="color: inherit; text-decoration: inherit;">update_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -6483,8 +6697,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="planname_python">
-<a href="#planname_python" style="color: inherit; text-decoration: inherit;">plan<wbr>Name</a>
+        <span id="plan_name_python">
+<a href="#plan_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6493,8 +6707,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="planproduct_python">
-<a href="#planproduct_python" style="color: inherit; text-decoration: inherit;">plan<wbr>Product</a>
+        <span id="plan_product_python">
+<a href="#plan_product_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>product</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6503,8 +6717,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="planpublisher_python">
-<a href="#planpublisher_python" style="color: inherit; text-decoration: inherit;">plan<wbr>Publisher</a>
+        <span id="plan_publisher_python">
+<a href="#plan_publisher_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6642,8 +6856,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="planname_python">
-<a href="#planname_python" style="color: inherit; text-decoration: inherit;">plan<wbr>Name</a>
+        <span id="plan_name_python">
+<a href="#plan_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6652,8 +6866,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="planproduct_python">
-<a href="#planproduct_python" style="color: inherit; text-decoration: inherit;">plan<wbr>Product</a>
+        <span id="plan_product_python">
+<a href="#plan_product_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>product</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6662,8 +6876,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="planpublisher_python">
-<a href="#planpublisher_python" style="color: inherit; text-decoration: inherit;">plan<wbr>Publisher</a>
+        <span id="plan_publisher_python">
+<a href="#plan_publisher_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>publisher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

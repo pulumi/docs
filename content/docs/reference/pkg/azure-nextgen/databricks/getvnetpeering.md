@@ -627,7 +627,7 @@ The following output properties are available:
 <a href="#remote_virtual_network_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Dict[Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network]</a></span>
+        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
 
@@ -677,7 +677,7 @@ The following output properties are available:
 <a href="#databricks_address_space_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd>
 
@@ -687,7 +687,7 @@ The following output properties are available:
 <a href="#databricks_virtual_network_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>virtual_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Dict[Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network]</a></span>
+        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#remote_address_space_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
 
@@ -792,7 +792,7 @@ The following output properties are available:
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 

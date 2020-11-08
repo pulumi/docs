@@ -150,35 +150,35 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cost_allocation_rule = azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule",
     billing_account_id="100",
-    properties={
-        "description": "This is a testRule",
-        "details": {
-            "sourceResources": [{
-                "name": "ResourceGroupName",
-                "resourceType": "Dimension",
-                "values": [
+    properties=azure_nextgen.billing.v20200301preview.CostAllocationRulePropertiesArgs(
+        description="This is a testRule",
+        details=azure_nextgen.billing.v20200301preview.CostAllocationRuleDetailsArgs(
+            source_resources=[azure_nextgen.billing.v20200301preview.SourceCostAllocationResourceArgs(
+                name="ResourceGroupName",
+                resource_type="Dimension",
+                values=[
                     "sampleRG",
                     "secondRG",
                 ],
-            }],
-            "targetResources": [{
-                "name": "ResourceGroupName",
-                "policyType": "FixedProportion",
-                "resourceType": "Dimension",
-                "values": [
-                    {
-                        "name": "destinationRG",
-                        "percentage": 45,
-                    },
-                    {
-                        "name": "destinationRG2",
-                        "percentage": 54,
-                    },
+            )],
+            target_resources=[azure_nextgen.billing.v20200301preview.TargetCostAllocationResourceArgs(
+                name="ResourceGroupName",
+                policy_type="FixedProportion",
+                resource_type="Dimension",
+                values=[
+                    azure_nextgen.billing.v20200301preview.CostAllocationProportionArgs(
+                        name="destinationRG",
+                        percentage=45,
+                    ),
+                    azure_nextgen.billing.v20200301preview.CostAllocationProportionArgs(
+                        name="destinationRG2",
+                        percentage=54,
+                    ),
                 ],
-            }],
-        },
-        "status": "Active",
-    },
+            )],
+        ),
+        status="Active",
+    ),
     rule_name="testRule")
 
 ```
@@ -370,36 +370,36 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cost_allocation_rule = azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule",
     billing_account_id="100",
-    properties={
-        "description": "This is a testRule",
-        "details": {
-            "sourceResources": [{
-                "name": "category",
-                "resourceType": "Tag",
-                "values": ["devops"],
-            }],
-            "targetResources": [{
-                "name": "ResourceGroupName",
-                "policyType": "FixedProportion",
-                "resourceType": "Dimension",
-                "values": [
-                    {
-                        "name": "destinationRG",
-                        "percentage": 33.33,
-                    },
-                    {
-                        "name": "destinationRG2",
-                        "percentage": 33.33,
-                    },
-                    {
-                        "name": "destinationRG3",
-                        "percentage": 33.34,
-                    },
+    properties=azure_nextgen.billing.v20200301preview.CostAllocationRulePropertiesArgs(
+        description="This is a testRule",
+        details=azure_nextgen.billing.v20200301preview.CostAllocationRuleDetailsArgs(
+            source_resources=[azure_nextgen.billing.v20200301preview.SourceCostAllocationResourceArgs(
+                name="category",
+                resource_type="Tag",
+                values=["devops"],
+            )],
+            target_resources=[azure_nextgen.billing.v20200301preview.TargetCostAllocationResourceArgs(
+                name="ResourceGroupName",
+                policy_type="FixedProportion",
+                resource_type="Dimension",
+                values=[
+                    azure_nextgen.billing.v20200301preview.CostAllocationProportionArgs(
+                        name="destinationRG",
+                        percentage=33.33,
+                    ),
+                    azure_nextgen.billing.v20200301preview.CostAllocationProportionArgs(
+                        name="destinationRG2",
+                        percentage=33.33,
+                    ),
+                    azure_nextgen.billing.v20200301preview.CostAllocationProportionArgs(
+                        name="destinationRG3",
+                        percentage=33.34,
+                    ),
                 ],
-            }],
-        },
-        "status": "Active",
-    },
+            )],
+        ),
+        status="Active",
+    ),
     rule_name="testRule")
 
 ```
@@ -463,7 +463,7 @@ const costAllocationRule = new azure_nextgen.billing.v20200301preview.CostAlloca
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[CostAllocationRuleProperties]]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CostAllocationRulePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -772,7 +772,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruleproperties">Dict[Cost<wbr>Allocation<wbr>Rule<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd>
 
@@ -1287,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresource">List[Source<wbr>Cost<wbr>Allocation<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresource">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
 
@@ -1297,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresource">List[Target<wbr>Cost<wbr>Allocation<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresource">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
 
@@ -1406,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">List[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
 
@@ -1416,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">List[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
 
@@ -1555,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetails">Dict[Cost<wbr>Allocation<wbr>Rule<wbr>Details]</a></span>
+        <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
 
@@ -1784,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Dict[Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
 
@@ -1973,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
 
@@ -2132,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
 
@@ -2331,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportion">List[Cost<wbr>Allocation<wbr>Proportion]</a></span>
+        <span class="property-type"><a href="#costallocationproportion">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
 
@@ -2530,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">List[Cost<wbr>Allocation<wbr>Proportion<wbr>Response]</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
 

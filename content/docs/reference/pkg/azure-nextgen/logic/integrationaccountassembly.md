@@ -91,11 +91,11 @@ integration_account_assembly = azure_nextgen.logic.latest.IntegrationAccountAsse
     assembly_artifact_name="testAssembly",
     integration_account_name="testIntegrationAccount",
     location="westus",
-    properties={
-        "assemblyName": "System.IdentityModel.Tokens.Jwt",
-        "content": "Base64 encoded Assembly Content",
-        "metadata": {},
-    },
+    properties=azure_nextgen.logic.latest.AssemblyPropertiesArgs(
+        assembly_name="System.IdentityModel.Tokens.Jwt",
+        content="Base64 encoded Assembly Content",
+        metadata={},
+    ),
     resource_group_name="testResourceGroup")
 
 ```
@@ -136,7 +136,7 @@ const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAcc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountAssembly</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assembly_artifact_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AssemblyProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountAssembly</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assembly_artifact_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[AssemblyPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -535,7 +535,7 @@ The IntegrationAccountAssembly resource accepts the following [input]({{< relref
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assemblyproperties">Dict[Assembly<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#assemblyproperties">Assembly<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The assembly properties.{{% /md %}}</dd>
 
@@ -565,7 +565,7 @@ The IntegrationAccountAssembly resource accepts the following [input]({{< relref
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1132,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1142,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_link_python" style="color: inherit; text-decoration: inherit;">content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Dict[Content<wbr>Link]</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content link.{{% /md %}}</dd>
 
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1571,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1581,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_link_python" style="color: inherit; text-decoration: inherit;">content_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Dict[Content<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content link.{{% /md %}}</dd>
 
@@ -1611,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2048,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Dict[Content<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content hash.{{% /md %}}</dd>
 
@@ -2078,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -2287,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Dict[Content<wbr>Hash<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content hash.{{% /md %}}</dd>
 
@@ -2317,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 

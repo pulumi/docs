@@ -43,6 +43,10 @@ class MyStack : Stack
             },
             FriendlyName = "HelloName",
             HbiWorkspace = false,
+            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
             KeyVault = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
             Location = "eastus2euap",
             ResourceGroupName = "workspace-1234",
@@ -97,8 +101,11 @@ func main() {
 				},
 				Status: pulumi.String("Enabled"),
 			},
-			FriendlyName:      pulumi.String("HelloName"),
-			HbiWorkspace:      pulumi.Bool(false),
+			FriendlyName: pulumi.String("HelloName"),
+			HbiWorkspace: pulumi.Bool(false),
+			Identity: &machinelearningservices.IdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
 			KeyVault:          pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv"),
 			Location:          pulumi.String("eastus2euap"),
 			ResourceGroupName: pulumi.String("workspace-1234"),
@@ -139,30 +146,33 @@ workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
     application_insights="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
     container_registry="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
     description="test description",
-    encryption={
-        "keyVaultProperties": {
-            "identityClientId": "",
-            "keyIdentifier": "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
-            "keyVaultArmId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-        },
-        "status": "Enabled",
-    },
+    encryption=azure_nextgen.machinelearningservices.latest.EncryptionPropertyArgs(
+        key_vault_properties=azure_nextgen.machinelearningservices.latest.KeyVaultPropertiesArgs(
+            identity_client_id="",
+            key_identifier="https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
+            key_vault_arm_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
+        ),
+        status="Enabled",
+    ),
     friendly_name="HelloName",
     hbi_workspace=False,
+    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
+        type="SystemAssigned",
+    ),
     key_vault="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
     location="eastus2euap",
     resource_group_name="workspace-1234",
-    shared_private_link_resources=[{
-        "groupId": "Sql",
-        "name": "testdbresource",
-        "privateLinkResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql",
-        "requestMessage": "Please approve",
-        "status": "Approved",
-    }],
-    sku={
-        "name": "Basic",
-        "tier": "Basic",
-    },
+    shared_private_link_resources=[azure_nextgen.machinelearningservices.latest.SharedPrivateLinkResourceArgs(
+        group_id="Sql",
+        name="testdbresource",
+        private_link_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql",
+        request_message="Please approve",
+        status="Approved",
+    )],
+    sku=azure_nextgen.machinelearningservices.latest.SkuArgs(
+        name="Basic",
+        tier="Basic",
+    ),
     storage_account="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
     workspace_name="testworkspace")
 
@@ -190,6 +200,9 @@ const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("wo
     },
     friendlyName: "HelloName",
     hbiWorkspace: false,
+    identity: {
+        type: "SystemAssigned",
+    },
     keyVault: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
     location: "eastus2euap",
     resourceGroupName: "workspace-1234",
@@ -224,7 +237,7 @@ const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("wo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_public_access_when_behind_vnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_registry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionProperty]]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hbi_workspace</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[Identity]]</span> = None<span class="p">, </span><span class="nx">image_build_compute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_private_link_resources</span><span class="p">:</span> <span class="nx">Optional[List[SharedPrivateLinkResource]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_public_access_when_behind_vnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_registry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionPropertyArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hbi_workspace</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_build_compute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_private_link_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[SharedPrivateLinkResourceArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">storage_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1033,7 +1046,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionproperty">Dict[Encryption<wbr>Property]</a></span>
+        <span class="property-type"><a href="#encryptionproperty">Encryption<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption settings of Azure ML workspace.{{% /md %}}</dd>
 
@@ -1063,7 +1076,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Dict[Identity]</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -1103,7 +1116,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#shared_private_link_resources_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>private_<wbr>link_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresource">List[Shared<wbr>Private<wbr>Link<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresource">Sequence[Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of shared private link resources in this workspace.{{% /md %}}</dd>
 
@@ -1113,7 +1126,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
 
@@ -1133,7 +1146,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1512,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebook_info_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebookresourceinforesponse">Dict[Notebook<wbr>Resource<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notebookresourceinforesponse">Notebook<wbr>Resource<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The notebook info of Azure ML workspace.{{% /md %}}</dd>
 
@@ -1522,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections in the workspace.{{% /md %}}</dd>
 
@@ -1690,7 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Dict[Key<wbr>Vault<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd>
 
@@ -1809,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd>
 
@@ -2097,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -2802,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebook_preparation_error_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>preparation_<wbr>error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebookpreparationerrorresponse">Dict[Notebook<wbr>Preparation<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notebookpreparationerrorresponse">Notebook<wbr>Preparation<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error that occurs when preparing notebook.{{% /md %}}</dd>
 
@@ -3061,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
 
@@ -3091,7 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
 

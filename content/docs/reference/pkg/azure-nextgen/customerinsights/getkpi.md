@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#group_by_metadata_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpigroupbymetadataresponse">List[Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kpigroupbymetadataresponse">Sequence[Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#participant_profiles_metadata_python" style="color: inherit; text-decoration: inherit;">participant_<wbr>profiles_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">List[Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">Sequence[Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The participant profiles.{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpialiasresponse">List[Kpi<wbr>Alias<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kpialiasresponse">Sequence[Kpi<wbr>Alias<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The aliases.{{% /md %}}</dd>
 
@@ -1009,7 +1009,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd>
 
@@ -1019,7 +1019,7 @@ The following output properties are available:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#extracts_python" style="color: inherit; text-decoration: inherit;">extracts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiextractresponse">List[Kpi<wbr>Extract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kpiextractresponse">Sequence[Kpi<wbr>Extract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd>
 
@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#group_by_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd>
 
@@ -1059,7 +1059,7 @@ The following output properties are available:
 <a href="#thres_holds_python" style="color: inherit; text-decoration: inherit;">thres_<wbr>holds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpithresholdsresponse">Dict[Kpi<wbr>Thresholds<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kpithresholdsresponse">Kpi<wbr>Thresholds<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd>
 
@@ -1309,8 +1309,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="extractname_python">
-<a href="#extractname_python" style="color: inherit; text-decoration: inherit;">extract<wbr>Name</a>
+        <span id="extract_name_python">
+<a href="#extract_name_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1452,14 +1452,14 @@ The following output properties are available:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The display name.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fieldname_python">
-<a href="#fieldname_python" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
+        <span id="field_name_python">
+<a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1468,8 +1468,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fieldtype_python">
-<a href="#fieldtype_python" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
+        <span id="field_type_python">
+<a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

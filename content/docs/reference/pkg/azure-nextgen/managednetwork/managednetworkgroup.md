@@ -114,17 +114,17 @@ managed_network_group = azure_nextgen.managednetwork.v20190601preview.ManagedNet
     managed_network_name="myManagedNetwork",
     management_groups=[],
     resource_group_name="myResourceGroup",
-    subnets=[{
-        "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
-    }],
+    subnets=[azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+        id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
+    )],
     subscriptions=[],
     virtual_networks=[
-        {
-            "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
-        },
-        {
-            "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
-        },
+        azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
+        ),
+        azure_nextgen.managednetwork.v20190601preview.ResourceIdArgs(
+            id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
+        ),
     ])
 
 ```
@@ -172,7 +172,7 @@ const managedNetworkGroup = new azure_nextgen.managednetwork.v20190601preview.Ma
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedNetworkGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_network_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_groups</span><span class="p">:</span> <span class="nx">Optional[List[ResourceId]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[List[ResourceId]]</span> = None<span class="p">, </span><span class="nx">subscriptions</span><span class="p">:</span> <span class="nx">Optional[List[ResourceId]]</span> = None<span class="p">, </span><span class="nx">virtual_networks</span><span class="p">:</span> <span class="nx">Optional[List[ResourceId]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedNetworkGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_network_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceIdArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceIdArgs]]</span> = None<span class="p">, </span><span class="nx">subscriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceIdArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceIdArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -691,7 +691,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#management_groups_python" style="color: inherit; text-decoration: inherit;">management_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
 
@@ -701,7 +701,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
 
@@ -711,7 +711,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
 
@@ -721,7 +721,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 

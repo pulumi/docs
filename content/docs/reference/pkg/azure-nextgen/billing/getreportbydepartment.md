@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdefinitionresponse">Dict[Report<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportdefinitionresponse">Report<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has definition for the report.{{% /md %}}</dd>
 
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdeliveryinforesponse">Dict[Report<wbr>Delivery<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportdeliveryinforesponse">Report<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the report.{{% /md %}}</dd>
 
@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportscheduleresponse">Dict[Report<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportscheduleresponse">Report<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the report.{{% /md %}}</dd>
 
@@ -753,7 +753,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The following output properties are available:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
 
@@ -1031,7 +1031,7 @@ The following output properties are available:
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Report<wbr>Aggregation<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Report<wbr>Aggregation<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
 
@@ -1041,7 +1041,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdatasetconfigurationresponse">Dict[Report<wbr>Dataset<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportdatasetconfigurationresponse">Report<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
 
@@ -1051,7 +1051,7 @@ The following output properties are available:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilterresponse">Dict[Report<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
 
@@ -1071,7 +1071,7 @@ The following output properties are available:
 <a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportgroupingresponse">List[Report<wbr>Grouping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportgroupingresponse">Sequence[Report<wbr>Grouping<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
 
@@ -1260,7 +1260,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdatasetresponse">Dict[Report<wbr>Dataset<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportdatasetresponse">Report<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
 
@@ -1270,7 +1270,7 @@ The following output properties are available:
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reporttimeperiodresponse">Dict[Report<wbr>Time<wbr>Period<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reporttimeperiodresponse">Report<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
 
@@ -1508,7 +1508,7 @@ The following output properties are available:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdeliverydestinationresponse">Dict[Report<wbr>Delivery<wbr>Destination<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportdeliverydestinationresponse">Report<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
 
@@ -1707,7 +1707,7 @@ The following output properties are available:
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilterresponse">List[Report<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportfilterresponse">Sequence[Report<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
 
@@ -1717,7 +1717,7 @@ The following output properties are available:
 <a href="#dimension_python" style="color: inherit; text-decoration: inherit;">dimension</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportcomparisonexpressionresponse">Dict[Report<wbr>Comparison<wbr>Expression<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
 
@@ -1727,7 +1727,7 @@ The following output properties are available:
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilterresponse">Dict[Report<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
 
@@ -1737,7 +1737,7 @@ The following output properties are available:
 <a href="#or__python" style="color: inherit; text-decoration: inherit;">or_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilterresponse">List[Report<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportfilterresponse">Sequence[Report<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
 
@@ -1747,7 +1747,7 @@ The following output properties are available:
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportcomparisonexpressionresponse">Dict[Report<wbr>Comparison<wbr>Expression<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 
@@ -2134,7 +2134,7 @@ The following output properties are available:
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportrecurrenceperiodresponse">Dict[Report<wbr>Recurrence<wbr>Period<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportrecurrenceperiodresponse">Report<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
 

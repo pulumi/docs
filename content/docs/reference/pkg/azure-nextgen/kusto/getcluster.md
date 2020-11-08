@@ -260,7 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -311,6 +311,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates if the streaming ingest is enabled.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enginetype_csharp">
+<a href="#enginetype_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine type{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -477,7 +487,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -528,6 +538,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates if the streaming ingest is enabled.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enginetype_go">
+<a href="#enginetype_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine type{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -694,7 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -745,6 +765,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates if the streaming ingest is enabled.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enginetype_nodejs">
+<a href="#enginetype_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The engine type{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -839,7 +869,7 @@ The following output properties are available:
 <a href="#language_extensions_python" style="color: inherit; text-decoration: inherit;">language_<wbr>extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionslistresponse">Dict[Language<wbr>Extensions<wbr>List<wbr>Response]</a></span>
+        <span class="property-type"><a href="#languageextensionslistresponse">Language<wbr>Extensions<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of the cluster's language extensions.{{% /md %}}</dd>
 
@@ -879,7 +909,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureskuresponse">Dict[Azure<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureskuresponse">Azure<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the cluster.{{% /md %}}</dd>
 
@@ -911,7 +941,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -965,11 +995,21 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="engine_type_python">
+<a href="#engine_type_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The engine type{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cluster, if configured.{{% /md %}}</dd>
 
@@ -979,7 +1019,7 @@ The following output properties are available:
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KeyVault properties for the cluster encryption.{{% /md %}}</dd>
 
@@ -989,7 +1029,7 @@ The following output properties are available:
 <a href="#optimized_autoscale_python" style="color: inherit; text-decoration: inherit;">optimized_<wbr>autoscale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optimizedautoscaleresponse">Dict[Optimized<wbr>Autoscale<wbr>Response]</a></span>
+        <span class="property-type"><a href="#optimizedautoscaleresponse">Optimized<wbr>Autoscale<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optimized auto scale definition.{{% /md %}}</dd>
 
@@ -999,7 +1039,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1009,7 +1049,7 @@ The following output properties are available:
 <a href="#trusted_external_tenants_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>external_<wbr>tenants</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustedexternaltenantresponse">List[Trusted<wbr>External<wbr>Tenant<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trustedexternaltenantresponse">Sequence[Trusted<wbr>External<wbr>Tenant<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The cluster's external tenants.{{% /md %}}</dd>
 
@@ -1019,7 +1059,7 @@ The following output properties are available:
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Dict[Virtual<wbr>Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Virtual<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network definition.{{% /md %}}</dd>
 
@@ -1029,7 +1069,7 @@ The following output properties are available:
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The availability zones of the cluster.{{% /md %}}</dd>
 
@@ -1244,7 +1284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1291,7 +1331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1338,7 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1385,7 +1425,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1393,7 +1433,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -1554,8 +1594,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Uri of the key vault.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyversion_csharp">
 <a href="#keyversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
 </span> 
@@ -1563,6 +1603,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the key vault key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useridentity_csharp">
+<a href="#useridentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity (ARM resource id) that has access to the key.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1591,8 +1641,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Uri of the key vault.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyversion_go">
 <a href="#keyversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
 </span> 
@@ -1600,6 +1650,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the key vault key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useridentity_go">
+<a href="#useridentity_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity (ARM resource id) that has access to the key.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1628,8 +1688,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Uri of the key vault.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyversion_nodejs">
 <a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
 </span> 
@@ -1637,6 +1697,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the key vault key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="useridentity_nodejs">
+<a href="#useridentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity (ARM resource id) that has access to the key.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1665,8 +1735,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Uri of the key vault.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="key_version_python">
 <a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
 </span> 
@@ -1674,6 +1744,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the key vault key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_identity_python">
+<a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity (ARM resource id) that has access to the key.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1746,8 +1826,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="languageextensionname_python">
-<a href="#languageextensionname_python" style="color: inherit; text-decoration: inherit;">language<wbr>Extension<wbr>Name</a>
+        <span id="language_extension_name_python">
+<a href="#language_extension_name_python" style="color: inherit; text-decoration: inherit;">language_<wbr>extension_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1829,7 +1909,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionresponse">List[Language<wbr>Extension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#languageextensionresponse">Sequence[Language<wbr>Extension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of language extensions.{{% /md %}}</dd>
 

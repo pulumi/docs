@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#peer_contact_detail_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>contact_<wbr>detail</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailresponse">List[Contact<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactdetailresponse">Sequence[Contact<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The contact details of the peer.{{% /md %}}</dd>
 

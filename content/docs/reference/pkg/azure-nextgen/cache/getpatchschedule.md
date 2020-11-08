@@ -339,7 +339,7 @@ The following output properties are available:
 <a href="#schedule_entries_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>entries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleentryresponse">List[Schedule<wbr>Entry<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleentryresponse">Sequence[Schedule<wbr>Entry<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd>
 
@@ -500,8 +500,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="starthourutc_python">
-<a href="#starthourutc_python" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
+        <span id="start_hour_utc_python">
+<a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -510,8 +510,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maintenancewindow_python">
-<a href="#maintenancewindow_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

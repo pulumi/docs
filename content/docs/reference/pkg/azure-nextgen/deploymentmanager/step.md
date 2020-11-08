@@ -137,55 +137,55 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
     properties={
         "attributes": {
             "healthChecks": [
-                {
-                    "name": "appHealth",
-                    "request": {
-                        "authentication": {
+                azure_nextgen.deploymentmanager.v20191101preview.RestHealthCheckArgs(
+                    name="appHealth",
+                    request=azure_nextgen.deploymentmanager.v20191101preview.RestRequestArgs(
+                        authentication={
                             "in": "Query",
                             "name": "Code",
                             "type": "ApiKey",
                             "value": "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
                         },
-                        "method": "GET",
-                        "uri": "https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
-                    },
-                    "response": {
-                        "regex": {
-                            "matchQuantifier": "All",
-                            "matches": [
+                        method="GET",
+                        uri="https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
+                    ),
+                    response=azure_nextgen.deploymentmanager.v20191101preview.RestResponseArgs(
+                        regex=azure_nextgen.deploymentmanager.v20191101preview.RestResponseRegexArgs(
+                            match_quantifier="All",
+                            matches=[
                                 "(?i)Contoso-App",
                                 """(?i)"health_status":((.|
 )*)"(green|yellow)"""",
                                 "(?mi)^(\"application_host\": 94781052)$",
                             ],
-                        },
-                        "successStatusCodes": ["OK"],
-                    },
-                },
-                {
-                    "name": "serviceHealth",
-                    "request": {
-                        "authentication": {
+                        ),
+                        success_status_codes=["OK"],
+                    ),
+                ),
+                azure_nextgen.deploymentmanager.v20191101preview.RestHealthCheckArgs(
+                    name="serviceHealth",
+                    request=azure_nextgen.deploymentmanager.v20191101preview.RestRequestArgs(
+                        authentication={
                             "in": "Header",
                             "name": "code",
                             "type": "ApiKey",
                             "value": "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
                         },
-                        "method": "GET",
-                        "uri": "https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
-                    },
-                    "response": {
-                        "regex": {
-                            "matchQuantifier": "All",
-                            "matches": [
+                        method="GET",
+                        uri="https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
+                    ),
+                    response=azure_nextgen.deploymentmanager.v20191101preview.RestResponseArgs(
+                        regex=azure_nextgen.deploymentmanager.v20191101preview.RestResponseRegexArgs(
+                            match_quantifier="All",
+                            matches=[
                                 "(?i)Contoso-Service-EndToEnd",
                                 """(?i)"health_status":((.|
 )*)"(green)"""",
                             ],
-                        },
-                        "successStatusCodes": ["OK"],
-                    },
-                },
+                        ),
+                        success_status_codes=["OK"],
+                    ),
+                ),
             ],
             "healthyStateDuration": "PT2H",
             "maxElasticDuration": "PT30M",
@@ -373,7 +373,7 @@ const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Step</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[HealthCheckStepProperties] | Dict[WaitStepProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Step</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[HealthCheckStepPropertiesArgs, WaitStepPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -732,7 +732,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Health<wbr>Check<wbr>Step<wbr>Properties] | Dict[Wait<wbr>Step<wbr>Properties]</span>
+        <span class="property-type">Union[Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args, Wait<wbr>Step<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd>
 
@@ -762,7 +762,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -812,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -849,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -923,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1065,8 +1065,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="in_python">
-<a href="#in_python" style="color: inherit; text-decoration: inherit;">in</a>
+        <span id="in__python">
+<a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1224,8 +1224,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="in_python">
-<a href="#in_python" style="color: inherit; text-decoration: inherit;">in</a>
+        <span id="in__python">
+<a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1327,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributes">Dict[Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes]</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd>
 
@@ -1406,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Dict[Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd>
 
@@ -1555,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequest">Dict[Rest<wbr>Request]</a></span>
+        <span class="property-type"><a href="#restrequest">Rest<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd>
 
@@ -1565,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponse">Dict[Rest<wbr>Response]</a></span>
+        <span class="property-type"><a href="#restresponse">Rest<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd>
 
@@ -1714,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Dict[Rest<wbr>Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd>
 
@@ -1724,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Dict[Rest<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd>
 
@@ -1889,18 +1889,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="healthchecks_python">
-<a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
+        <span id="health_checks_python">
+<a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheck">List[Rest<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#resthealthcheck">Sequence[Rest<wbr>Health<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="healthystateduration_python">
-<a href="#healthystateduration_python" style="color: inherit; text-decoration: inherit;">healthy<wbr>State<wbr>Duration</a>
+        <span id="healthy_state_duration_python">
+<a href="#healthy_state_duration_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>state_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1909,8 +1909,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxelasticduration_python">
-<a href="#maxelasticduration_python" style="color: inherit; text-decoration: inherit;">max<wbr>Elastic<wbr>Duration</a>
+        <span id="max_elastic_duration_python">
+<a href="#max_elastic_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>elastic_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1919,8 +1919,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitduration_python">
-<a href="#waitduration_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Duration</a>
+        <span id="wait_duration_python">
+<a href="#wait_duration_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2088,18 +2088,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="healthchecks_python">
-<a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
+        <span id="health_checks_python">
+<a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">List[Rest<wbr>Health<wbr>Check<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">Sequence[Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="healthystateduration_python">
-<a href="#healthystateduration_python" style="color: inherit; text-decoration: inherit;">healthy<wbr>State<wbr>Duration</a>
+        <span id="healthy_state_duration_python">
+<a href="#healthy_state_duration_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>state_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2108,8 +2108,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxelasticduration_python">
-<a href="#maxelasticduration_python" style="color: inherit; text-decoration: inherit;">max<wbr>Elastic<wbr>Duration</a>
+        <span id="max_elastic_duration_python">
+<a href="#max_elastic_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>elastic_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2118,8 +2118,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitduration_python">
-<a href="#waitduration_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Duration</a>
+        <span id="wait_duration_python">
+<a href="#wait_duration_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2261,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Api<wbr>Key<wbr>Authentication] | Dict[Rollout<wbr>Identity<wbr>Authentication]</span>
+        <span class="property-type">Union[Api<wbr>Key<wbr>Authentication<wbr>Args, Rollout<wbr>Identity<wbr>Authentication<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2420,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Api<wbr>Key<wbr>Authentication<wbr>Response] | Dict[Rollout<wbr>Identity<wbr>Authentication<wbr>Response]</span>
+        <span class="property-type">Union[Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args, Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd>
 
@@ -2549,17 +2549,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseregex">Dict[Rest<wbr>Response<wbr>Regex]</a></span>
+        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successstatuscodes_python">
-<a href="#successstatuscodes_python" style="color: inherit; text-decoration: inherit;">success<wbr>Status<wbr>Codes</a>
+        <span id="success_status_codes_python">
+<a href="#success_status_codes_python" style="color: inherit; text-decoration: inherit;">success_<wbr>status_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.{{% /md %}}</dd>
 
@@ -2664,8 +2664,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchquantifier_python">
-<a href="#matchquantifier_python" style="color: inherit; text-decoration: inherit;">match<wbr>Quantifier</a>
+        <span id="match_quantifier_python">
+<a href="#match_quantifier_python" style="color: inherit; text-decoration: inherit;">match_<wbr>quantifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2678,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matches_python" style="color: inherit; text-decoration: inherit;">matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of regular expressions.{{% /md %}}</dd>
 
@@ -2787,17 +2787,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Dict[Rest<wbr>Response<wbr>Response<wbr>Regex]</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successstatuscodes_python">
-<a href="#successstatuscodes_python" style="color: inherit; text-decoration: inherit;">success<wbr>Status<wbr>Codes</a>
+        <span id="success_status_codes_python">
+<a href="#success_status_codes_python" style="color: inherit; text-decoration: inherit;">success_<wbr>status_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.{{% /md %}}</dd>
 
@@ -2902,8 +2902,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchquantifier_python">
-<a href="#matchquantifier_python" style="color: inherit; text-decoration: inherit;">match<wbr>Quantifier</a>
+        <span id="match_quantifier_python">
+<a href="#match_quantifier_python" style="color: inherit; text-decoration: inherit;">match_<wbr>quantifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2916,7 +2916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matches_python" style="color: inherit; text-decoration: inherit;">matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of regular expressions.{{% /md %}}</dd>
 
@@ -3231,7 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributes">Dict[Wait<wbr>Step<wbr>Attributes]</a></span>
+        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd>
 
@@ -3310,7 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Dict[Wait<wbr>Step<wbr>Attributes<wbr>Response]</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd>
 

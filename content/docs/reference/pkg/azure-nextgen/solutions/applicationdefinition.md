@@ -98,10 +98,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 application_definition = azure_nextgen.solutions.latest.ApplicationDefinition("applicationDefinition",
     application_definition_name="myManagedApplicationDef",
-    authorizations=[{
-        "principalId": "validprincipalguid",
-        "roleDefinitionId": "validroleguid",
-    }],
+    authorizations=[azure_nextgen.solutions.latest.ApplicationAuthorizationArgs(
+        principal_id="validprincipalguid",
+        role_definition_id="validroleguid",
+    )],
     description="myManagedApplicationDef description",
     display_name="myManagedApplicationDef",
     location="East US 2",
@@ -149,7 +149,7 @@ const applicationDefinition = new azure_nextgen.solutions.latest.ApplicationDefi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationDefinitionArtifact]]</span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationAuthorization]]</span> = None<span class="p">, </span><span class="nx">create_ui_definition</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">deployment_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationDeploymentPolicy]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locking_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationPackageLockingPolicyDefinition]]</span> = None<span class="p">, </span><span class="nx">main_template</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationManagementPolicy]]</span> = None<span class="p">, </span><span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationNotificationPolicy]]</span> = None<span class="p">, </span><span class="nx">package_file_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationPolicy]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationDefinitionArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationAuthorizationArgs]]</span> = None<span class="p">, </span><span class="nx">create_ui_definition</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">deployment_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationDeploymentPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locking_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationPackageLockingPolicyDefinitionArgs]</span> = None<span class="p">, </span><span class="nx">main_template</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationManagementPolicyArgs]</span> = None<span class="p">, </span><span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationNotificationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">package_file_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -978,7 +978,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdefinitionartifact">List[Application<wbr>Definition<wbr>Artifact]</a></span>
+        <span class="property-type"><a href="#applicationdefinitionartifact">Sequence[Application<wbr>Definition<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.{{% /md %}}</dd>
 
@@ -988,7 +988,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorization">List[Application<wbr>Authorization]</a></span>
+        <span class="property-type"><a href="#applicationauthorization">Sequence[Application<wbr>Authorization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider authorizations.{{% /md %}}</dd>
 
@@ -998,7 +998,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#create_ui_definition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>ui_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -1008,7 +1008,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#deployment_policy_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdeploymentpolicy">Dict[Application<wbr>Deployment<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#applicationdeploymentpolicy">Application<wbr>Deployment<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment policy.{{% /md %}}</dd>
 
@@ -1058,7 +1058,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#locking_policy_python" style="color: inherit; text-decoration: inherit;">locking_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Dict[Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application locking policy.{{% /md %}}</dd>
 
@@ -1068,7 +1068,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#main_template_python" style="color: inherit; text-decoration: inherit;">main_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.{{% /md %}}</dd>
 
@@ -1088,7 +1088,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#management_policy_python" style="color: inherit; text-decoration: inherit;">management_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmanagementpolicy">Dict[Application<wbr>Management<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#applicationmanagementpolicy">Application<wbr>Management<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application management policy that determines publisher's access to the managed resource group.{{% /md %}}</dd>
 
@@ -1098,7 +1098,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#notification_policy_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationpolicy">Dict[Application<wbr>Notification<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#applicationnotificationpolicy">Application<wbr>Notification<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification policy.{{% /md %}}</dd>
 
@@ -1118,7 +1118,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpolicy">List[Application<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#applicationpolicy">Sequence[Application<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider policies.{{% /md %}}</dd>
 
@@ -1128,7 +1128,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
 
@@ -1138,7 +1138,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -2415,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpoint">List[Application<wbr>Notification<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpoint">Sequence[Application<wbr>Notification<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd>
 
@@ -2494,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">List[Application<wbr>Notification<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">Sequence[Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd>
 
@@ -2573,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_actions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The deny assignment excluded actions.{{% /md %}}</dd>
 
@@ -2652,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_actions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The deny assignment excluded actions.{{% /md %}}</dd>
 

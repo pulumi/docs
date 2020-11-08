@@ -297,7 +297,7 @@ The following output properties are available:
 <a href="#asset_file_encryption_metadata_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>file_<wbr>encryption_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfileencryptionmetadataresponse">List[Asset<wbr>File<wbr>Encryption<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assetfileencryptionmetadataresponse">Sequence[Asset<wbr>File<wbr>Encryption<wbr>Metadata<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd>
 
@@ -448,8 +448,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="assetfileid_python">
-<a href="#assetfileid_python" style="color: inherit; text-decoration: inherit;">asset<wbr>File<wbr>Id</a>
+        <span id="asset_file_id_python">
+<a href="#asset_file_id_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>file_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -458,8 +458,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="assetfilename_python">
-<a href="#assetfilename_python" style="color: inherit; text-decoration: inherit;">asset<wbr>File<wbr>Name</a>
+        <span id="asset_file_name_python">
+<a href="#asset_file_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -468,8 +468,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initializationvector_python">
-<a href="#initializationvector_python" style="color: inherit; text-decoration: inherit;">initialization<wbr>Vector</a>
+        <span id="initialization_vector_python">
+<a href="#initialization_vector_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>vector</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

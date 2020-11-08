@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#contact_information_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Dict[Contact<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#delivery_tracking_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>tracking_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">List[Tracking<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Sequence[Tracking<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#order_history_python" style="color: inherit; text-decoration: inherit;">order_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">List[Order<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#orderstatusresponse">Sequence[Order<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#return_tracking_info_python" style="color: inherit; text-decoration: inherit;">return_<wbr>tracking_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">List[Tracking<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Sequence[Tracking<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device.{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressresponse">Dict[Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressresponse">Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The shipping address.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">Dict[Order<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
 
@@ -1063,7 +1063,7 @@ The following output properties are available:
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The email list.{{% /md %}}</dd>
 
@@ -1245,7 +1245,7 @@ by the already existing properties{{% /md %}}</dd>
 <a href="#additional_order_details_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>order_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored
 by the already existing properties{{% /md %}}</dd>
@@ -1461,8 +1461,8 @@ by the already existing properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackingid_python">
-<a href="#trackingid_python" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
+        <span id="tracking_id_python">
+<a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1471,8 +1471,8 @@ by the already existing properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackingurl_python">
-<a href="#trackingurl_python" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
+        <span id="tracking_url_python">
+<a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

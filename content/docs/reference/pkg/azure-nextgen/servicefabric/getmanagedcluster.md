@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryresponse">Dict[Azure<wbr>Active<wbr>Directory<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure active directory.{{% /md %}}</dd>
 
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#clients_python" style="color: inherit; text-decoration: inherit;">clients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificateresponse">List[Client<wbr>Certificate<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clientcertificateresponse">Sequence[Client<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}client certificates for the cluster.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
 <a href="#cluster_upgrade_description_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>upgrade_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicyresponse">Dict[Cluster<wbr>Upgrade<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicyresponse">Cluster<wbr>Upgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the policy used when upgrading the cluster.{{% /md %}}</dd>
 
@@ -1133,7 +1133,7 @@ The following output properties are available:
 <a href="#fabric_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingssectiondescriptionresponse">List[Settings<wbr>Section<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#settingssectiondescriptionresponse">Sequence[Settings<wbr>Section<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ The following output properties are available:
 <a href="#load_balancing_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingruleresponse">List[Load<wbr>Balancing<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loadbalancingruleresponse">Sequence[Load<wbr>Balancing<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes load balancing rules.{{% /md %}}</dd>
 
@@ -1163,7 +1163,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the managed cluster{{% /md %}}</dd>
 
@@ -1173,7 +1173,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
 
@@ -1284,21 +1284,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultservicetypedeltahealthpolicy_python">
-<a href="#defaultservicetypedeltahealthpolicy_python" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
+        <span id="default_service_type_delta_health_policy_python">
+<a href="#default_service_type_delta_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Dict[Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetypedeltahealthpolicies_python">
-<a href="#servicetypedeltahealthpolicies_python" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
+        <span id="service_type_delta_health_policies_python">
+<a href="#service_type_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 
@@ -1407,17 +1407,17 @@ The following output properties are available:
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Dict[Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetypehealthpolicies_python">
-<a href="#servicetypehealthpolicies_python" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
+        <span id="service_type_health_policies_python">
+<a href="#service_type_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
 
@@ -1741,8 +1741,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isadmin_python">
-<a href="#isadmin_python" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
+        <span id="is_admin_python">
+<a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1751,8 +1751,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1761,8 +1761,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issuerthumbprint_python">
-<a href="#issuerthumbprint_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Thumbprint</a>
+        <span id="issuer_thumbprint_python">
+<a href="#issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1956,7 +1956,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#application_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Application<wbr>Health<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
 
@@ -2225,7 +2225,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#application_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>delta_<wbr>health_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
 
@@ -2574,7 +2574,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Dict[Cluster<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
 
@@ -2614,7 +2614,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#delta_health_policy_python" style="color: inherit; text-decoration: inherit;">delta_<wbr>health_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Dict[Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
 
@@ -2859,8 +2859,8 @@ The check is performed after every upgrade domain upgrade completion for all com
 
     <dt class="property-optional"
             title="Optional">
-        <span id="proberequestpath_python">
-<a href="#proberequestpath_python" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Path</a>
+        <span id="probe_request_path_python">
+<a href="#probe_request_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>request_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2947,8 +2947,8 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpercentdeltaunhealthyservices_python">
-<a href="#maxpercentdeltaunhealthyservices_python" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
+        <span id="max_percent_delta_unhealthy_services_python">
+<a href="#max_percent_delta_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3275,7 +3275,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List[Settings<wbr>Parameter<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Sequence[Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
 

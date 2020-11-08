@@ -107,14 +107,14 @@ management_group_diagnostic_setting = azure_nextgen.management.v20200101preview.
     event_hub_authorization_rule_id="/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     event_hub_name="myeventhub",
     logs=[
-        {
-            "category": "Administrative",
-            "enabled": True,
-        },
-        {
-            "category": "Policy",
-            "enabled": True,
-        },
+        azure_nextgen.management.v20200101preview.ManagementGroupLogSettingsArgs(
+            category="Administrative",
+            enabled=True,
+        ),
+        azure_nextgen.management.v20200101preview.ManagementGroupLogSettingsArgs(
+            category="Policy",
+            enabled=True,
+        ),
     ],
     management_group_id="testChildMG7",
     name="setting1",
@@ -166,7 +166,7 @@ const managementGroupDiagnosticSetting = new azure_nextgen.management.v20200101p
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementGroupDiagnosticSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_hub_authorization_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[List[ManagementGroupLogSettings]]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementGroupDiagnosticSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_hub_authorization_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagementGroupLogSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -685,7 +685,7 @@ The ManagementGroupDiagnosticSetting resource accepts the following [input]({{< 
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouplogsettings">List[Management<wbr>Group<wbr>Log<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#managementgrouplogsettings">Sequence[Management<wbr>Group<wbr>Log<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
 

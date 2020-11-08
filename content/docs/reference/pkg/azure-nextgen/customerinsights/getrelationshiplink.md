@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#profile_property_references_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreferenceresponse">List[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreferenceresponse">Sequence[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#related_profile_property_references_python" style="color: inherit; text-decoration: inherit;">related_<wbr>profile_<wbr>property_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreferenceresponse">List[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreferenceresponse">Sequence[Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd>
 
@@ -729,7 +729,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Relationship Link.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the Relationship Link.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiplinkfieldmappingresponse">List[Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#relationshiplinkfieldmappingresponse">Sequence[Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd>
 
@@ -860,8 +860,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="interactionpropertyname_python">
-<a href="#interactionpropertyname_python" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
+        <span id="interaction_property_name_python">
+<a href="#interaction_property_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -870,8 +870,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="profilepropertyname_python">
-<a href="#profilepropertyname_python" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
+        <span id="profile_property_name_python">
+<a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1009,8 +1009,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="interactionfieldname_python">
-<a href="#interactionfieldname_python" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
+        <span id="interaction_field_name_python">
+<a href="#interaction_field_name_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1019,8 +1019,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="relationshipfieldname_python">
-<a href="#relationshipfieldname_python" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
+        <span id="relationship_field_name_python">
+<a href="#relationship_field_name_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#descendantparentgroupinforesponse">Dict[Descendant<wbr>Parent<wbr>Group<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#descendantparentgroupinforesponse">Descendant<wbr>Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of the parent management group.{{% /md %}}</dd>
 

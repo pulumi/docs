@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivebitlockerkeyresponse">List[Drive<wbr>Bit<wbr>Locker<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#drivebitlockerkeyresponse">Sequence[Drive<wbr>Bit<wbr>Locker<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}drive status{{% /md %}}</dd>
 
@@ -338,8 +338,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bitlockerkey_python">
-<a href="#bitlockerkey_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Locker<wbr>Key</a>
+        <span id="bit_locker_key_python">
+<a href="#bit_locker_key_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>locker_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -348,8 +348,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveid_python">
-<a href="#driveid_python" style="color: inherit; text-decoration: inherit;">drive<wbr>Id</a>
+        <span id="drive_id_python">
+<a href="#drive_id_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

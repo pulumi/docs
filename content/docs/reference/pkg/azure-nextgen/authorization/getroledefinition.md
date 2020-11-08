@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#assignable_scopes_python" style="color: inherit; text-decoration: inherit;">assignable_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd>
 
@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionresponse">List[Permission<wbr>Response]</a></span>
+        <span class="property-type"><a href="#permissionresponse">Sequence[Permission<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd>
 
@@ -584,17 +584,17 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notactions_python">
-<a href="#notactions_python" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
+        <span id="not_actions_python">
+<a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
 

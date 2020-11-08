@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#regional_availability_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>availability</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalavailabilityresponse">List[Regional<wbr>Availability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#regionalavailabilityresponse">Sequence[Regional<wbr>Availability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Availability information for different size categories per region{{% /md %}}</dd>
 
@@ -348,11 +348,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizeavailabilities_python">
-<a href="#sizeavailabilities_python" style="color: inherit; text-decoration: inherit;">size<wbr>Availabilities</a>
+        <span id="size_availabilities_python">
+<a href="#size_availabilities_python" style="color: inherit; text-decoration: inherit;">size_<wbr>availabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeavailabilityresponse">List[Size<wbr>Availability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sizeavailabilityresponse">Sequence[Size<wbr>Availability<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all the size information for the region{{% /md %}}</dd>
 
@@ -457,8 +457,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isavailable_python">
-<a href="#isavailable_python" style="color: inherit; text-decoration: inherit;">is<wbr>Available</a>
+        <span id="is_available_python">
+<a href="#is_available_python" style="color: inherit; text-decoration: inherit;">is_<wbr>available</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -467,8 +467,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizecategory_python">
-<a href="#sizecategory_python" style="color: inherit; text-decoration: inherit;">size<wbr>Category</a>
+        <span id="size_category_python">
+<a href="#size_category_python" style="color: inherit; text-decoration: inherit;">size_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

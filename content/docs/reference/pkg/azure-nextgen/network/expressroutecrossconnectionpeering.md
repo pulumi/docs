@@ -93,10 +93,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 express_route_cross_connection_peering = azure_nextgen.network.latest.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering",
     cross_connection_name="<circuitServiceKey>",
-    ipv6_peering_config={
-        "primaryPeerAddressPrefix": "3FFE:FFFF:0:CD30::/126",
-        "secondaryPeerAddressPrefix": "3FFE:FFFF:0:CD30::4/126",
-    },
+    ipv6_peering_config=azure_nextgen.network.latest.Ipv6ExpressRouteCircuitPeeringConfigArgs(
+        primary_peer_address_prefix="3FFE:FFFF:0:CD30::/126",
+        secondary_peer_address_prefix="3FFE:FFFF:0:CD30::4/126",
+    ),
     peer_asn=200,
     peering_name="AzurePrivatePeering",
     primary_peer_address_prefix="192.168.16.252/30",
@@ -144,7 +144,7 @@ const expressRouteCrossConnectionPeering = new azure_nextgen.network.latest.Expr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCrossConnectionPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cross_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_manager_etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_peering_config</span><span class="p">:</span> <span class="nx">Optional[Dict[Ipv6ExpressRouteCircuitPeeringConfig]]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ExpressRouteCircuitPeeringConfig]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCrossConnectionPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cross_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_manager_etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_peering_config</span><span class="p">:</span> <span class="nx">Optional[Ipv6ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -843,7 +843,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#ipv6_peering_config_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>peering_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Dict[Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config]</a></span>
+        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 peering configuration.{{% /md %}}</dd>
 
@@ -853,7 +853,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Dict[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
 
@@ -1460,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_communities_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>communities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The communities of bgp peering. Specified for microsoft peering.{{% /md %}}</dd>
 
@@ -1470,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The reference to AdvertisedPublicPrefixes.{{% /md %}}</dd>
 
@@ -1739,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_communities_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>communities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The communities of bgp peering. Specified for microsoft peering.{{% /md %}}</dd>
 
@@ -1749,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The reference to AdvertisedPublicPrefixes.{{% /md %}}</dd>
 
@@ -1978,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Dict[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
 
@@ -1998,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_filter_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd>
 
@@ -2217,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Dict[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd>
 
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_filter_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd>
 

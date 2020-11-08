@@ -200,7 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -337,7 +337,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -474,7 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -611,7 +611,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#apiserver_profile_python" style="color: inherit; text-decoration: inherit;">apiserver_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiserverprofileresponse">Dict[APIServer<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiserverprofileresponse">APIServer<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster API server profile.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#cluster_profile_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprofileresponse">Dict[Cluster<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterprofileresponse">Cluster<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster profile.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#console_profile_python" style="color: inherit; text-decoration: inherit;">console_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consoleprofileresponse">Dict[Console<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#consoleprofileresponse">Console<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The console profile.{{% /md %}}</dd>
 
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#ingress_profiles_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressprofileresponse">List[Ingress<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ingressprofileresponse">Sequence[Ingress<wbr>Profile<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The cluster ingress profiles.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#master_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterprofileresponse">Dict[Master<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#masterprofileresponse">Master<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster master profile.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Dict[Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster network profile.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalprofileresponse">Dict[Service<wbr>Principal<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceprincipalprofileresponse">Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster service principal profile.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#worker_profiles_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerprofileresponse">List[Worker<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workerprofileresponse">Sequence[Worker<wbr>Profile<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The cluster worker profiles.{{% /md %}}</dd>
 

@@ -420,7 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -677,7 +677,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -934,7 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1039,7 +1039,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetvminstanceviewresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMInstance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetvminstanceviewresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMInstance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine instance view.{{% /md %}}</dd>
 
@@ -1099,7 +1099,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensionresponse">List[Virtual<wbr>Machine<wbr>Extension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachineextensionresponse">Sequence[Virtual<wbr>Machine<wbr>Extension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine child extension resources.{{% /md %}}</dd>
 
@@ -1109,7 +1109,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine SKU.{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ The following output properties are available:
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine zones.{{% /md %}}</dd>
 
@@ -1149,7 +1149,7 @@ The following output properties are available:
 <a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcapabilitiesresponse">Dict[Additional<wbr>Capabilities<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcapabilitiesresponse">Additional<wbr>Capabilities<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ The following output properties are available:
 <a href="#availability_set_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ The following output properties are available:
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofileresponse">Dict[Diagnostics<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd>
 
@@ -1179,7 +1179,7 @@ The following output properties are available:
 <a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Dict[Hardware<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the hardware settings for the virtual machine.{{% /md %}}</dd>
 
@@ -1191,7 +1191,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1199,7 +1199,7 @@ The following output properties are available:
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Dict[Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces of the virtual machine.{{% /md %}}</dd>
 
@@ -1209,7 +1209,7 @@ The following output properties are available:
 <a href="#network_profile_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetvmnetworkprofileconfigurationresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMNetwork<wbr>Profile<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetvmnetworkprofileconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMNetwork<wbr>Profile<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network profile configuration of the virtual machine.{{% /md %}}</dd>
 
@@ -1219,7 +1219,7 @@ The following output properties are available:
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Dict[OSProfile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osprofileresponse">OSProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machine.{{% /md %}}</dd>
 
@@ -1229,7 +1229,7 @@ The following output properties are available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Dict[Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#planresponse">Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.{{% /md %}}</dd>
 
@@ -1239,7 +1239,7 @@ The following output properties are available:
 <a href="#protection_policy_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetvmprotectionpolicyresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMProtection<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetvmprotectionpolicyresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMProtection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection policy of the virtual machine.{{% /md %}}</dd>
 
@@ -1249,7 +1249,7 @@ The following output properties are available:
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Dict[Security<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machine.{{% /md %}}</dd>
 
@@ -1259,7 +1259,7 @@ The following output properties are available:
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Dict[Storage<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
 
@@ -1269,7 +1269,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1519,8 +1519,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="componentname_python">
-<a href="#componentname_python" style="color: inherit; text-decoration: inherit;">component<wbr>Name</a>
+        <span id="component_name_python">
+<a href="#component_name_python" style="color: inherit; text-decoration: inherit;">component_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1539,8 +1539,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passname_python">
-<a href="#passname_python" style="color: inherit; text-decoration: inherit;">pass<wbr>Name</a>
+        <span id="pass_name_python">
+<a href="#pass_name_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1549,8 +1549,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="settingname_python">
-<a href="#settingname_python" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
+        <span id="setting_name_python">
+<a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1791,7 +1791,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Dict[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.{{% /md %}}</dd>
 
@@ -2379,7 +2379,7 @@ The following output properties are available:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Dict[Virtual<wbr>Hard<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.{{% /md %}}</dd>
 
@@ -2389,7 +2389,7 @@ The following output properties are available:
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Dict[Managed<wbr>Disk<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd>
 
@@ -2405,8 +2405,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tobedetached_python">
-<a href="#tobedetached_python" style="color: inherit; text-decoration: inherit;">to<wbr>Be<wbr>Detached</a>
+        <span id="to_be_detached_python">
+<a href="#to_be_detached_python" style="color: inherit; text-decoration: inherit;">to_<wbr>be_<wbr>detached</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2419,7 +2419,7 @@ The following output properties are available:
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Dict[Virtual<wbr>Hard<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
 
@@ -2508,7 +2508,7 @@ The following output properties are available:
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Dict[Boot<wbr>Diagnostics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd>
 
@@ -2845,7 +2845,7 @@ The following output properties are available:
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the disk encryption key, which is a Key Vault Secret.{{% /md %}}</dd>
 
@@ -2865,7 +2865,7 @@ The following output properties are available:
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd>
 
@@ -3004,7 +3004,7 @@ The following output properties are available:
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">List[Disk<wbr>Encryption<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">Sequence[Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
@@ -3024,7 +3024,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 
@@ -3740,7 +3740,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the key.{{% /md %}}</dd>
 
@@ -3859,7 +3859,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the secret.{{% /md %}}</dd>
 
@@ -4018,7 +4018,7 @@ The following output properties are available:
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Dict[Ssh<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
 
@@ -4476,7 +4476,7 @@ The following output properties are available:
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Dict[Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd>
 
@@ -4694,7 +4694,7 @@ The following output properties are available:
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacereferenceresponse">List[Network<wbr>Interface<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkinterfacereferenceresponse">Sequence[Network<wbr>Interface<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource Ids for the network interfaces associated with the virtual machine.{{% /md %}}</dd>
 
@@ -5093,7 +5093,7 @@ The following output properties are available:
 <a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettingsresponse">Dict[Diff<wbr>Disk<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.{{% /md %}}</dd>
 
@@ -5113,7 +5113,7 @@ The following output properties are available:
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">Dict[Disk<wbr>Encryption<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
 
@@ -5123,7 +5123,7 @@ The following output properties are available:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Dict[Virtual<wbr>Hard<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.{{% /md %}}</dd>
 
@@ -5133,7 +5133,7 @@ The following output properties are available:
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Dict[Managed<wbr>Disk<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd>
 
@@ -5163,7 +5163,7 @@ The following output properties are available:
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Dict[Virtual<wbr>Hard<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd>
 
@@ -5542,7 +5542,7 @@ The following output properties are available:
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Dict[Linux<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
 
@@ -5562,7 +5562,7 @@ The following output properties are available:
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">List[Vault<wbr>Secret<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machine.{{% /md %}}</dd>
 
@@ -5572,7 +5572,7 @@ The following output properties are available:
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Dict[Windows<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd>
 
@@ -6167,7 +6167,7 @@ The following output properties are available:
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List[Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd>
 
@@ -6272,8 +6272,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6425,7 +6425,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List[Data<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -6435,7 +6435,7 @@ The following output properties are available:
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Dict[Image<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd>
 
@@ -6445,7 +6445,7 @@ The following output properties are available:
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskresponse">Dict[OSDisk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osdiskresponse">OSDisk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
 
@@ -6629,8 +6629,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6639,8 +6639,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6752,17 +6752,17 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">List[Vault<wbr>Certificate<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 
@@ -6980,7 +6980,7 @@ The following output properties are available:
 <a href="#extension_handlers_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>handlers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensionhandlerinstanceviewresponse">List[Virtual<wbr>Machine<wbr>Extension<wbr>Handler<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachineextensionhandlerinstanceviewresponse">Sequence[Virtual<wbr>Machine<wbr>Extension<wbr>Handler<wbr>Instance<wbr>View<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine extension handler instance view.{{% /md %}}</dd>
 
@@ -6990,7 +6990,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 
@@ -7139,7 +7139,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Dict[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extension handler status.{{% /md %}}</dd>
 
@@ -7368,7 +7368,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 
@@ -7378,7 +7378,7 @@ The following output properties are available:
 <a href="#substatuses_python" style="color: inherit; text-decoration: inherit;">substatuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 
@@ -7947,7 +7947,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Dict[Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine extension instance view.{{% /md %}}</dd>
 
@@ -7957,7 +7957,7 @@ The following output properties are available:
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -7977,7 +7977,7 @@ The following output properties are available:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -7987,7 +7987,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -8076,7 +8076,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Dict[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health status information for the VM.{{% /md %}}</dd>
 
@@ -8435,7 +8435,7 @@ The following output properties are available:
 <a href="#application_gateway_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd>
 
@@ -8445,7 +8445,7 @@ The following output properties are available:
 <a href="#application_security_groups_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd>
 
@@ -8461,23 +8461,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerinboundnatpools_python">
-<a href="#loadbalancerinboundnatpools_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Pools</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="load_balancer_backend_address_pools_python">
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_inbound_nat_pools_python">
+<a href="#load_balancer_inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8505,7 +8505,7 @@ The following output properties are available:
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd>
 
@@ -8515,7 +8515,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Dict[Api<wbr>Entity<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd>
 
@@ -8620,8 +8620,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iptagtype_python">
-<a href="#iptagtype_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Tag<wbr>Type</a>
+        <span id="ip_tag_type_python">
+<a href="#ip_tag_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tag_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8713,7 +8713,7 @@ The following output properties are available:
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DNS servers IP addresses{{% /md %}}</dd>
 
@@ -9002,7 +9002,7 @@ The following output properties are available:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd>
 
@@ -9022,7 +9022,7 @@ The following output properties are available:
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd>
 
@@ -9062,7 +9062,7 @@ The following output properties are available:
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd>
 
@@ -9390,7 +9390,7 @@ The following output properties are available:
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Dict[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd>
 
@@ -9410,7 +9410,7 @@ The following output properties are available:
 <a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd>
 
@@ -9430,7 +9430,7 @@ The following output properties are available:
 <a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd>
 
@@ -9849,7 +9849,7 @@ The following output properties are available:
 <a href="#vm_health_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>health</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinehealthstatusresponse">Dict[Virtual<wbr>Machine<wbr>Health<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinehealthstatusresponse">Virtual<wbr>Machine<wbr>Health<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health status for the VM.{{% /md %}}</dd>
 
@@ -9859,7 +9859,7 @@ The following output properties are available:
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsinstanceviewresponse">Dict[Boot<wbr>Diagnostics<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsinstanceviewresponse">Boot<wbr>Diagnostics<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd>
 
@@ -9869,7 +9869,7 @@ The following output properties are available:
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskinstanceviewresponse">List[Disk<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskinstanceviewresponse">Sequence[Disk<wbr>Instance<wbr>View<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The disks information.{{% /md %}}</dd>
 
@@ -9879,7 +9879,7 @@ The following output properties are available:
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">List[Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Sequence[Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The extensions information.{{% /md %}}</dd>
 
@@ -9889,7 +9889,7 @@ The following output properties are available:
 <a href="#maintenance_redeploy_status_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>redeploy_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenanceredeploystatusresponse">Dict[Maintenance<wbr>Redeploy<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#maintenanceredeploystatusresponse">Maintenance<wbr>Redeploy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Maintenance Operation status on the virtual machine.{{% /md %}}</dd>
 
@@ -9939,7 +9939,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 
@@ -9949,7 +9949,7 @@ The following output properties are available:
 <a href="#vm_agent_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>agent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineagentinstanceviewresponse">Dict[Virtual<wbr>Machine<wbr>Agent<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachineagentinstanceviewresponse">Virtual<wbr>Machine<wbr>Agent<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VM Agent running on the virtual machine.{{% /md %}}</dd>
 
@@ -10028,7 +10028,7 @@ The following output properties are available:
 <a href="#network_interface_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">List[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd>
 
@@ -10226,7 +10226,7 @@ The following output properties are available:
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">List[Win<wbr>RMListener<wbr>Response]</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">Sequence[Win<wbr>RMListener<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd>
 
@@ -10331,8 +10331,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10574,7 +10574,7 @@ The following output properties are available:
 <a href="#additional_unattend_content_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">List[Additional<wbr>Unattend<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd>
 
@@ -10594,7 +10594,7 @@ The following output properties are available:
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Dict[Patch<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
 
@@ -10624,7 +10624,7 @@ The following output properties are available:
 <a href="#win_rm_python" style="color: inherit; text-decoration: inherit;">win_<wbr>rm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Dict[Win<wbr>RMConfiguration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd>
 

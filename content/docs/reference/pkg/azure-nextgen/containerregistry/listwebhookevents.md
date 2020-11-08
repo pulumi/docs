@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List[Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.{{% /md %}}</dd>
 
@@ -661,7 +661,7 @@ The following output properties are available:
 <a href="#actor_python" style="color: inherit; text-decoration: inherit;">actor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actorresponse">Dict[Actor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#actorresponse">Actor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent that initiated the event. For most situations, this could be from the authorization context of the request.{{% /md %}}</dd>
 
@@ -681,7 +681,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestresponse">Dict[Request<wbr>Response]</a></span>
+        <span class="property-type"><a href="#requestresponse">Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request that generated the event.{{% /md %}}</dd>
 
@@ -691,7 +691,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">Dict[Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.{{% /md %}}</dd>
 
@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetresponse">Dict[Target<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targetresponse">Target<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target of the event.{{% /md %}}</dd>
 
@@ -910,7 +910,7 @@ The following output properties are available:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventcontentresponse">Dict[Event<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventcontentresponse">Event<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of the event request message.{{% /md %}}</dd>
 
@@ -920,7 +920,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The headers of the event request message.{{% /md %}}</dd>
 
@@ -1085,21 +1085,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventrequestmessage_python">
-<a href="#eventrequestmessage_python" style="color: inherit; text-decoration: inherit;">event<wbr>Request<wbr>Message</a>
+        <span id="event_request_message_python">
+<a href="#event_request_message_python" style="color: inherit; text-decoration: inherit;">event_<wbr>request_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventrequestmessageresponse">Dict[Event<wbr>Request<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventrequestmessageresponse">Event<wbr>Request<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event request message sent to the service URI.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventresponsemessage_python">
-<a href="#eventresponsemessage_python" style="color: inherit; text-decoration: inherit;">event<wbr>Response<wbr>Message</a>
+        <span id="event_response_message_python">
+<a href="#event_response_message_python" style="color: inherit; text-decoration: inherit;">event_<wbr>response_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponsemessageresponse">Dict[Event<wbr>Response<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponsemessageresponse">Event<wbr>Response<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event response message received from the service URI.{{% /md %}}</dd>
 
@@ -1318,14 +1318,14 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The headers of the event response message.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reasonphrase_python">
-<a href="#reasonphrase_python" style="color: inherit; text-decoration: inherit;">reason<wbr>Phrase</a>
+        <span id="reason_phrase_python">
+<a href="#reason_phrase_python" style="color: inherit; text-decoration: inherit;">reason_<wbr>phrase</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1702,8 +1702,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instanceid_python">
-<a href="#instanceid_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

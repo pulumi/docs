@@ -23,7 +23,7 @@ An Azure ML commitment plan resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">commitment_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">commitment_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -442,7 +442,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Dict[Resource<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd>
 
@@ -452,7 +452,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd>
 
@@ -641,7 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplanpropertiesresponse">Dict[Commitment<wbr>Plan<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#commitmentplanpropertiesresponse">Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd>
 
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_quantities_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Plan<wbr>Quantity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Plan<wbr>Quantity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd>
 
@@ -1284,8 +1284,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="includedquantitymeter_python">
-<a href="#includedquantitymeter_python" style="color: inherit; text-decoration: inherit;">included<wbr>Quantity<wbr>Meter</a>
+        <span id="included_quantity_meter_python">
+<a href="#included_quantity_meter_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantity_<wbr>meter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1294,8 +1294,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="overagemeter_python">
-<a href="#overagemeter_python" style="color: inherit; text-decoration: inherit;">overage<wbr>Meter</a>
+        <span id="overage_meter_python">
+<a href="#overage_meter_python" style="color: inherit; text-decoration: inherit;">overage_<wbr>meter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

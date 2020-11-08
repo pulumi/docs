@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd>
 
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#ipv6_circuit_connection_config_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>circuit_<wbr>connection_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfigresponse">Dict[Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfigresponse">Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#peer_express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd>
 

@@ -304,96 +304,96 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 policy = azure_nextgen.cdn.latest.Policy("policy",
-    custom_rules={
-        "rules": [{
-            "action": "Block",
-            "enabledState": "Enabled",
-            "matchConditions": [
-                {
-                    "matchValue": ["CH"],
-                    "matchVariable": "RemoteAddr",
-                    "negateCondition": False,
-                    "operator": "GeoMatch",
-                    "transforms": [],
-                },
-                {
-                    "matchValue": ["windows"],
-                    "matchVariable": "RequestHeader",
-                    "negateCondition": False,
-                    "operator": "Contains",
-                    "selector": "UserAgent",
-                    "transforms": [],
-                },
-                {
-                    "matchValue": [
+    custom_rules=azure_nextgen.cdn.latest.CustomRuleListArgs(
+        rules=[azure_nextgen.cdn.latest.CustomRuleArgs(
+            action="Block",
+            enabled_state="Enabled",
+            match_conditions=[
+                azure_nextgen.cdn.latest.MatchConditionArgs(
+                    match_value=["CH"],
+                    match_variable="RemoteAddr",
+                    negate_condition=False,
+                    operator="GeoMatch",
+                    transforms=[],
+                ),
+                azure_nextgen.cdn.latest.MatchConditionArgs(
+                    match_value=["windows"],
+                    match_variable="RequestHeader",
+                    negate_condition=False,
+                    operator="Contains",
+                    selector="UserAgent",
+                    transforms=[],
+                ),
+                azure_nextgen.cdn.latest.MatchConditionArgs(
+                    match_value=[
                         "<?php",
                         "?>",
                     ],
-                    "matchVariable": "QueryString",
-                    "negateCondition": False,
-                    "operator": "Contains",
-                    "selector": "search",
-                    "transforms": [
+                    match_variable="QueryString",
+                    negate_condition=False,
+                    operator="Contains",
+                    selector="search",
+                    transforms=[
                         "UrlDecode",
                         "Lowercase",
                     ],
-                },
+                ),
             ],
-            "name": "CustomRule1",
-            "priority": 2,
-        }],
-    },
+            name="CustomRule1",
+            priority=2,
+        )],
+    ),
     location="WestUs",
-    managed_rules={
-        "managedRuleSets": [{
-            "ruleGroupOverrides": [{
-                "ruleGroupName": "Group1",
-                "rules": [
-                    {
-                        "action": "Redirect",
-                        "enabledState": "Enabled",
-                        "ruleId": "GROUP1-0001",
-                    },
-                    {
-                        "enabledState": "Disabled",
-                        "ruleId": "GROUP1-0002",
-                    },
+    managed_rules=azure_nextgen.cdn.latest.ManagedRuleSetListArgs(
+        managed_rule_sets=[azure_nextgen.cdn.latest.ManagedRuleSetArgs(
+            rule_group_overrides=[azure_nextgen.cdn.latest.ManagedRuleGroupOverrideArgs(
+                rule_group_name="Group1",
+                rules=[
+                    azure_nextgen.cdn.latest.ManagedRuleOverrideArgs(
+                        action="Redirect",
+                        enabled_state="Enabled",
+                        rule_id="GROUP1-0001",
+                    ),
+                    azure_nextgen.cdn.latest.ManagedRuleOverrideArgs(
+                        enabled_state="Disabled",
+                        rule_id="GROUP1-0002",
+                    ),
                 ],
-            }],
-            "ruleSetType": "DefaultRuleSet",
-            "ruleSetVersion": "preview-1.0",
-        }],
-    },
+            )],
+            rule_set_type="DefaultRuleSet",
+            rule_set_version="preview-1.0",
+        )],
+    ),
     policy_name="MicrosoftCdnWafPolicy",
-    policy_settings={
-        "defaultCustomBlockResponseBody": "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
-        "defaultCustomBlockResponseStatusCode": 200,
-        "defaultRedirectUrl": "http://www.bing.com",
-    },
-    rate_limit_rules={
-        "rules": [{
-            "action": "Block",
-            "enabledState": "Enabled",
-            "matchConditions": [{
-                "matchValue": [
+    policy_settings=azure_nextgen.cdn.latest.PolicySettingsArgs(
+        default_custom_block_response_body="PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+        default_custom_block_response_status_code=200,
+        default_redirect_url="http://www.bing.com",
+    ),
+    rate_limit_rules=azure_nextgen.cdn.latest.RateLimitRuleListArgs(
+        rules=[azure_nextgen.cdn.latest.RateLimitRuleArgs(
+            action="Block",
+            enabled_state="Enabled",
+            match_conditions=[azure_nextgen.cdn.latest.MatchConditionArgs(
+                match_value=[
                     "192.168.1.0/24",
                     "10.0.0.0/24",
                 ],
-                "matchVariable": "RemoteAddr",
-                "negateCondition": False,
-                "operator": "IPMatch",
-                "transforms": [],
-            }],
-            "name": "RateLimitRule1",
-            "priority": 1,
-            "rateLimitDurationInMinutes": 0,
-            "rateLimitThreshold": 1000,
-        }],
-    },
+                match_variable="RemoteAddr",
+                negate_condition=False,
+                operator="IPMatch",
+                transforms=[],
+            )],
+            name="RateLimitRule1",
+            priority=1,
+            rate_limit_duration_in_minutes=0,
+            rate_limit_threshold=1000,
+        )],
+    ),
     resource_group_name="rg1",
-    sku={
-        "name": "Standard_Microsoft",
-    })
+    sku=azure_nextgen.cdn.latest.SkuArgs(
+        name="Standard_Microsoft",
+    ))
 
 ```
 
@@ -514,7 +514,7 @@ const policy = new azure_nextgen.cdn.latest.Policy("policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomRuleList]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedRuleSetList]]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicySettings]]</span> = None<span class="p">, </span><span class="nx">rate_limit_rules</span><span class="p">:</span> <span class="nx">Optional[Dict[RateLimitRuleList]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[CustomRuleListArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[ManagedRuleSetListArgs]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">rate_limit_rules</span><span class="p">:</span> <span class="nx">Optional[RateLimitRuleListArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1043,7 +1043,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.{{% /md %}}</dd>
 
@@ -1053,7 +1053,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#custom_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrulelist">Dict[Custom<wbr>Rule<wbr>List]</a></span>
+        <span class="property-type"><a href="#customrulelist">Custom<wbr>Rule<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd>
 
@@ -1073,7 +1073,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#managed_rules_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetlist">Dict[Managed<wbr>Rule<wbr>Set<wbr>List]</a></span>
+        <span class="property-type"><a href="#managedrulesetlist">Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd>
 
@@ -1083,7 +1083,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policy_settings_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysettings">Dict[Policy<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#policysettings">Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes  policySettings for policy{{% /md %}}</dd>
 
@@ -1093,7 +1093,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#rate_limit_rules_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrulelist">Dict[Rate<wbr>Limit<wbr>Rule<wbr>List]</a></span>
+        <span class="property-type"><a href="#ratelimitrulelist">Rate<wbr>Limit<wbr>Rule<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes rate limit rules inside the policy.{{% /md %}}</dd>
 
@@ -1103,7 +1103,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1332,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_links_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cdnendpointresponse">List[Cdn<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cdnendpointresponse">Sequence[Cdn<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes Azure CDN endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd>
 
@@ -1675,11 +1675,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">List[Match<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#matchcondition">Sequence[Match<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
 
@@ -1788,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrule">List[Custom<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#customrule">Sequence[Custom<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 
@@ -1867,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">List[Custom<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 
@@ -2072,11 +2072,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List[Match<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
 
@@ -2225,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">List[Managed<wbr>Rule<wbr>Override]</a></span>
+        <span class="property-type"><a href="#managedruleoverride">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
 
@@ -2344,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">List[Managed<wbr>Rule<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
 
@@ -2847,8 +2847,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anomalyscore_python">
-<a href="#anomalyscore_python" style="color: inherit; text-decoration: inherit;">anomaly<wbr>Score</a>
+        <span id="anomaly_score_python">
+<a href="#anomaly_score_python" style="color: inherit; text-decoration: inherit;">anomaly_<wbr>score</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2857,11 +2857,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rulegroupoverrides_python">
-<a href="#rulegroupoverrides_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
+        <span id="rule_group_overrides_python">
+<a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">List[Managed<wbr>Rule<wbr>Group<wbr>Override]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverride">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd>
 
@@ -2940,7 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">List[Managed<wbr>Rule<wbr>Set]</a></span>
+        <span class="property-type"><a href="#managedruleset">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
 
@@ -3019,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">List[Managed<wbr>Rule<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
 
@@ -3204,8 +3204,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anomalyscore_python">
-<a href="#anomalyscore_python" style="color: inherit; text-decoration: inherit;">anomaly<wbr>Score</a>
+        <span id="anomaly_score_python">
+<a href="#anomaly_score_python" style="color: inherit; text-decoration: inherit;">anomaly_<wbr>score</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3214,11 +3214,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rulegroupoverrides_python">
-<a href="#rulegroupoverrides_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
+        <span id="rule_group_overrides_python">
+<a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd>
 
@@ -3443,18 +3443,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalue_python">
-<a href="#matchvalue_python" style="color: inherit; text-decoration: inherit;">match<wbr>Value</a>
+        <span id="match_value_python">
+<a href="#match_value_python" style="color: inherit; text-decoration: inherit;">match_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of possible match values.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3473,8 +3473,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3497,7 +3497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms.{{% /md %}}</dd>
 
@@ -3722,18 +3722,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalue_python">
-<a href="#matchvalue_python" style="color: inherit; text-decoration: inherit;">match<wbr>Value</a>
+        <span id="match_value_python">
+<a href="#match_value_python" style="color: inherit; text-decoration: inherit;">match_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of possible match values.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3752,8 +3752,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3776,7 +3776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms.{{% /md %}}</dd>
 
@@ -4519,11 +4519,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">List[Match<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#matchcondition">Sequence[Match<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
 
@@ -4549,8 +4549,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ratelimitdurationinminutes_python">
-<a href="#ratelimitdurationinminutes_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
+        <span id="rate_limit_duration_in_minutes_python">
+<a href="#rate_limit_duration_in_minutes_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>duration_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4559,8 +4559,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ratelimitthreshold_python">
-<a href="#ratelimitthreshold_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
+        <span id="rate_limit_threshold_python">
+<a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4652,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrule">List[Rate<wbr>Limit<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#ratelimitrule">Sequence[Rate<wbr>Limit<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 
@@ -4731,7 +4731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitruleresponse">List[Rate<wbr>Limit<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ratelimitruleresponse">Sequence[Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 
@@ -4996,11 +4996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List[Match<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
 
@@ -5026,8 +5026,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ratelimitdurationinminutes_python">
-<a href="#ratelimitdurationinminutes_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
+        <span id="rate_limit_duration_in_minutes_python">
+<a href="#rate_limit_duration_in_minutes_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>duration_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5036,8 +5036,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ratelimitthreshold_python">
-<a href="#ratelimitthreshold_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
+        <span id="rate_limit_threshold_python">
+<a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

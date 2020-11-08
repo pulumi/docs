@@ -417,7 +417,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharesynchronizationresponse">List[Share<wbr>Synchronization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharesynchronizationresponse">Sequence[Share<wbr>Synchronization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of items of type DataTransferObjects.{{% /md %}}</dd>
 
@@ -778,8 +778,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="synchronizationmode_python">
-<a href="#synchronizationmode_python" style="color: inherit; text-decoration: inherit;">synchronization<wbr>Mode</a>
+        <span id="synchronization_mode_python">
+<a href="#synchronization_mode_python" style="color: inherit; text-decoration: inherit;">synchronization_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -788,8 +788,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumeremail_python">
-<a href="#consumeremail_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Email</a>
+        <span id="consumer_email_python">
+<a href="#consumer_email_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>email</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -798,8 +798,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumername_python">
-<a href="#consumername_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Name</a>
+        <span id="consumer_name_python">
+<a href="#consumer_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -808,8 +808,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumertenantname_python">
-<a href="#consumertenantname_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Tenant<wbr>Name</a>
+        <span id="consumer_tenant_name_python">
+<a href="#consumer_tenant_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>tenant_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -818,8 +818,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="durationms_python">
-<a href="#durationms_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Ms</a>
+        <span id="duration_ms_python">
+<a href="#duration_ms_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -868,8 +868,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="synchronizationid_python">
-<a href="#synchronizationid_python" style="color: inherit; text-decoration: inherit;">synchronization<wbr>Id</a>
+        <span id="synchronization_id_python">
+<a href="#synchronization_id_python" style="color: inherit; text-decoration: inherit;">synchronization_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

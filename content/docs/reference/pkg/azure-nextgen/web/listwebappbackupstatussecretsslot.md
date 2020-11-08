@@ -24,7 +24,7 @@ meta_desc: "Explore the ListWebAppBackupStatusSecretsSlot function of the web mo
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_web_app_backup_status_secrets_slot(</span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[BackupSchedule]]</span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseBackupSetting]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListWebAppBackupStatusSecretsSlotResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_web_app_backup_status_secrets_slot(</span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule</span><span class="p">:</span> <span class="nx">Optional[BackupScheduleArgs]</span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseBackupSettingArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListWebAppBackupStatusSecretsSlotResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -436,7 +436,7 @@ The following arguments are supported:
 <a href="#backup_schedule_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Dict[Backup<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd>
 
@@ -446,7 +446,7 @@ The following arguments are supported:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsetting">List[Database<wbr>Backup<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#databasebackupsetting">Sequence[Database<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd>
 
@@ -1037,7 +1037,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsettingresponse">List[Database<wbr>Backup<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databasebackupsettingresponse">Sequence[Database<wbr>Backup<wbr>Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd>
 
@@ -1348,8 +1348,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyinterval_python">
-<a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+        <span id="frequency_interval_python">
+<a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1358,8 +1358,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyunit_python">
-<a href="#frequencyunit_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Unit</a>
+        <span id="frequency_unit_python">
+<a href="#frequency_unit_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1368,8 +1368,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keepatleastonebackup_python">
-<a href="#keepatleastonebackup_python" style="color: inherit; text-decoration: inherit;">keep<wbr>At<wbr>Least<wbr>One<wbr>Backup</a>
+        <span id="keep_at_least_one_backup_python">
+<a href="#keep_at_least_one_backup_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>at_<wbr>least_<wbr>one_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1378,8 +1378,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionperiodindays_python">
-<a href="#retentionperiodindays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
+        <span id="retention_period_in_days_python">
+<a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1570,17 +1570,6 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionstringname_python">
-<a href="#connectionstringname_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
@@ -1588,6 +1577,17 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_string_name_python">
+<a href="#connection_string_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1773,17 +1773,6 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionstringname_python">
-<a href="#connectionstringname_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
@@ -1791,6 +1780,17 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_string_name_python">
+<a href="#connection_string_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Dict[Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#frontend_python" style="color: inherit; text-decoration: inherit;">frontend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Dict[Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#sampling_python" style="color: inherit; text-decoration: inherit;">sampling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingsettingsresponse">Dict[Sampling<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#samplingsettingsresponse">Sampling<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
 
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Dict[Body<wbr>Diagnostic<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
 
@@ -942,7 +942,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Dict[Http<wbr>Message<wbr>Diagnostic<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
 
@@ -952,7 +952,7 @@ The following output properties are available:
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Dict[Http<wbr>Message<wbr>Diagnostic<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
 

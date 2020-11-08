@@ -23,7 +23,7 @@ A Service Fabric.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceFabric</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_service_fabric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceFabric</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_service_fabric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -532,7 +532,7 @@ The ServiceFabric resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -731,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicable_schedule_python" style="color: inherit; text-decoration: inherit;">applicable_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicablescheduleresponse">Dict[Applicable<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicablescheduleresponse">Applicable<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The applicable schedule for the virtual machine.{{% /md %}}</dd>
 
@@ -1069,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lab_vms_shutdown_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vms_<wbr>shutdown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Dict[Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-shutdown schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd>
 
@@ -1079,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lab_vms_startup_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vms_<wbr>startup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Dict[Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-startup schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd>
 
@@ -1099,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -2085,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Dict[Day<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
 
@@ -2095,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Dict[Hour<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
 
@@ -2115,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Dict[Notification<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
 
@@ -2135,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -2175,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Dict[Week<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
 
@@ -2294,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
 

@@ -65,13 +65,13 @@ replication_network_mapping = azure_nextgen.recoveryservices.latest.ReplicationN
     fabric_name="b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     network_mapping_name="corpe2amap",
     network_name="e2267b5c-2650-49bd-ab3f-d66aae694c06",
-    properties={
-        "fabricSpecificDetails": {
+    properties=azure_nextgen.recoveryservices.latest.CreateNetworkMappingInputPropertiesArgs(
+        fabric_specific_details={
             "instanceType": "VmmToAzure",
         },
-        "recoveryFabricName": "Microsoft Azure",
-        "recoveryNetworkId": "/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
-    },
+        recovery_fabric_name="Microsoft Azure",
+        recovery_network_id="/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai",
+    ),
     resource_group_name="srcBvte2a14C27",
     resource_name="srce2avaultbvtaC27")
 
@@ -116,7 +116,7 @@ const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.Repl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[CreateNetworkMappingInputProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreateNetworkMappingInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -545,7 +545,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createnetworkmappinginputproperties">Dict[Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#createnetworkmappinginputproperties">Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input properties for creating network mapping.{{% /md %}}</dd>
 
@@ -937,8 +937,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryfabriclocation_python">
-<a href="#primaryfabriclocation_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Location</a>
+        <span id="primary_fabric_location_python">
+<a href="#primary_fabric_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -947,8 +947,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryfabriclocation_python">
-<a href="#recoveryfabriclocation_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Location</a>
+        <span id="recovery_fabric_location_python">
+<a href="#recovery_fabric_location_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1090,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_specific_details_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input] | Dict[Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input] | Dict[Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input]</span>
+        <span class="property-type">Union[Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args, Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args, Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Fabric specific input properties.{{% /md %}}</dd>
 
@@ -1429,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_specific_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response] | Dict[Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response] | Dict[Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args, Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args, Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
 

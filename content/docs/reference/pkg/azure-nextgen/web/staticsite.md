@@ -102,20 +102,20 @@ import pulumi_azure_nextgen as azure_nextgen
 
 static_site = azure_nextgen.web.latest.StaticSite("staticSite",
     branch="master",
-    build_properties={
-        "apiLocation": "api",
-        "appArtifactLocation": "build",
-        "appLocation": "app",
-    },
+    build_properties=azure_nextgen.web.latest.StaticSiteBuildPropertiesArgs(
+        api_location="api",
+        app_artifact_location="build",
+        app_location="app",
+    ),
     location="West US 2",
     name="testStaticSite0",
     repository_token="repoToken123",
     repository_url="https://github.com/username/RepoName",
     resource_group_name="rg",
-    sku={
-        "name": "Basic",
-        "tier": "Basic",
-    })
+    sku=azure_nextgen.web.latest.SkuDescriptionArgs(
+        name="Basic",
+        tier="Basic",
+    ))
 
 ```
 
@@ -161,7 +161,7 @@ const staticSite = new azure_nextgen.web.latest.StaticSite("staticSite", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[StaticSiteBuildProperties]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[SkuDescription]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_properties</span><span class="p">:</span> <span class="nx">Optional[StaticSiteBuildPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -700,7 +700,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#build_properties_python" style="color: inherit; text-decoration: inherit;">build_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticsitebuildproperties">Dict[Static<wbr>Site<wbr>Build<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#staticsitebuildproperties">Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Build properties to configure on the repository.{{% /md %}}</dd>
 
@@ -740,7 +740,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Dict[Sku<wbr>Description]</a></span>
+        <span class="property-type"><a href="#skudescription">Sku<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd>
 
@@ -750,7 +750,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_domains_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The custom domains associated with this static site.{{% /md %}}</dd>
 
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">List[Capability]</a></span>
+        <span class="property-type"><a href="#capability">Sequence[Capability<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
 
@@ -1993,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
 
@@ -2023,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Dict[Sku<wbr>Capacity]</a></span>
+        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
 
@@ -2322,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List[Capability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
 
@@ -2352,7 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
 
@@ -2382,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Dict[Sku<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
 

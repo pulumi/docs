@@ -729,7 +729,7 @@ The following output properties are available:
 <a href="#arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrolereceiverresponse">List[Arm<wbr>Role<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armrolereceiverresponse">Sequence[Arm<wbr>Role<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrunbookreceiverresponse">List[Automation<wbr>Runbook<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#automationrunbookreceiverresponse">Sequence[Automation<wbr>Runbook<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of AutomationRunbook receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureapppushreceiverresponse">List[Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureapppushreceiverresponse">Sequence[Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of AzureAppPush receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctionreceiverresponse">List[Azure<wbr>Function<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefunctionreceiverresponse">Sequence[Azure<wbr>Function<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of azure function receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailreceiverresponse">List[Email<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#emailreceiverresponse">Sequence[Email<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of email receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#itsmreceiverresponse">List[Itsm<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#itsmreceiverresponse">Sequence[Itsm<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of ITSM receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logicappreceiverresponse">List[Logic<wbr>App<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#logicappreceiverresponse">Sequence[Logic<wbr>App<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of logic app receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smsreceiverresponse">List[Sms<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#smsreceiverresponse">Sequence[Sms<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of SMS receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#voicereceiverresponse">List[Voice<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#voicereceiverresponse">Sequence[Voice<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of voice receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookreceiverresponse">List[Webhook<wbr>Receiver<wbr>Response]</a></span>
+        <span class="property-type"><a href="#webhookreceiverresponse">Sequence[Webhook<wbr>Receiver<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of webhook receivers that are part of this action group.{{% /md %}}</dd>
 
@@ -980,8 +980,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="roleid_python">
-<a href="#roleid_python" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -990,8 +990,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1249,8 +1249,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="automationaccountid_python">
-<a href="#automationaccountid_python" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Id</a>
+        <span id="automation_account_id_python">
+<a href="#automation_account_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1259,8 +1259,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isglobalrunbook_python">
-<a href="#isglobalrunbook_python" style="color: inherit; text-decoration: inherit;">is<wbr>Global<wbr>Runbook</a>
+        <span id="is_global_runbook_python">
+<a href="#is_global_runbook_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global_<wbr>runbook</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1279,8 +1279,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1289,8 +1289,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="webhookresourceid_python">
-<a href="#webhookresourceid_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
+        <span id="webhook_resource_id_python">
+<a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1418,8 +1418,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1627,8 +1627,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="functionappresourceid_python">
-<a href="#functionappresourceid_python" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
+        <span id="function_app_resource_id_python">
+<a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1647,8 +1647,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="httptriggerurl_python">
-<a href="#httptriggerurl_python" style="color: inherit; text-decoration: inherit;">http<wbr>Trigger<wbr>Url</a>
+        <span id="http_trigger_url_python">
+<a href="#http_trigger_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>trigger_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1667,8 +1667,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1836,8 +1836,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1866,8 +1866,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2065,8 +2065,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionid_python">
-<a href="#connectionid_python" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
+        <span id="connection_id_python">
+<a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2095,8 +2095,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ticketconfiguration_python">
-<a href="#ticketconfiguration_python" style="color: inherit; text-decoration: inherit;">ticket<wbr>Configuration</a>
+        <span id="ticket_configuration_python">
+<a href="#ticket_configuration_python" style="color: inherit; text-decoration: inherit;">ticket_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2274,8 +2274,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="callbackurl_python">
-<a href="#callbackurl_python" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
+        <span id="callback_url_python">
+<a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2304,8 +2304,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2473,8 +2473,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2493,8 +2493,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="phonenumber_python">
-<a href="#phonenumber_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
+        <span id="phone_number_python">
+<a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2642,8 +2642,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2662,8 +2662,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="phonenumber_python">
-<a href="#phonenumber_python" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
+        <span id="phone_number_python">
+<a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2941,8 +2941,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_python">
-<a href="#usecommonalertschema_python" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2951,8 +2951,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identifieruri_python">
-<a href="#identifieruri_python" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
+        <span id="identifier_uri_python">
+<a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2981,8 +2981,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useaadauth_python">
-<a href="#useaadauth_python" style="color: inherit; text-decoration: inherit;">use<wbr>Aad<wbr>Auth</a>
+        <span id="use_aad_auth_python">
+<a href="#use_aad_auth_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aad_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

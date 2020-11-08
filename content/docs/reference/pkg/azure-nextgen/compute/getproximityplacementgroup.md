@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#availability_sets_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#virtual_machine_scale_sets_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd>
 
@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#colocation_status_python" style="color: inherit; text-decoration: inherit;">colocation_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Dict[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -943,7 +943,7 @@ The following output properties are available:
 <a href="#colocation_status_python" style="color: inherit; text-decoration: inherit;">colocation_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Dict[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd>
 

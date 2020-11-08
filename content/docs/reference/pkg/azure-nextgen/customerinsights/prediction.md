@@ -132,11 +132,11 @@ prediction = azure_nextgen.customerinsights.latest.Prediction("prediction",
     involved_interaction_types=[],
     involved_kpi_types=[],
     involved_relationships=[],
-    mappings={
-        "grade": "sdktest_Grade",
-        "reason": "sdktest_Reason",
-        "score": "sdktest_Score",
-    },
+    mappings=azure_nextgen.customerinsights.latest.PredictionMappingsArgs(
+        grade="sdktest_Grade",
+        reason="sdktest_Reason",
+        score="sdktest_Score",
+    ),
     negative_outcome_expression="Customers.FirstName = 'Mike'",
     positive_outcome_expression="Customers.FirstName = 'David'",
     prediction_name="sdktest",
@@ -198,7 +198,7 @@ const prediction = new azure_nextgen.customerinsights.latest.Prediction("predict
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_analyze</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">grades</span><span class="p">:</span> <span class="nx">Optional[List[PredictionGrades]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">involved_interaction_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">involved_kpi_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">involved_relationships</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[Dict[PredictionMappings]]</span> = None<span class="p">, </span><span class="nx">negative_outcome_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">positive_outcome_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prediction_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_profile_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">score_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_analyze</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">grades</span><span class="p">:</span> <span class="nx">Optional[Sequence[PredictionGradesArgs]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">involved_interaction_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">involved_kpi_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">involved_relationships</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[PredictionMappingsArgs]</span> = None<span class="p">, </span><span class="nx">negative_outcome_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">positive_outcome_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prediction_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_profile_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">score_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -897,7 +897,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionmappings">Dict[Prediction<wbr>Mappings]</a></span>
+        <span class="property-type"><a href="#predictionmappings">Prediction<wbr>Mappings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd>
 
@@ -977,7 +977,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd>
 
@@ -987,7 +987,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd>
 
@@ -997,7 +997,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#grades_python" style="color: inherit; text-decoration: inherit;">grades</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiongrades">List[Prediction<wbr>Grades]</a></span>
+        <span class="property-type"><a href="#predictiongrades">Sequence[Prediction<wbr>Grades<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The prediction grades.{{% /md %}}</dd>
 
@@ -1007,7 +1007,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involved_interaction_types_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>interaction_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involved_kpi_types_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>kpi_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd>
 
@@ -1027,7 +1027,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involved_relationships_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>relationships</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd>
 
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_generated_entities_python" style="color: inherit; text-decoration: inherit;">system_<wbr>generated_<wbr>entities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Dict[Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities]</a></span>
+        <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
     </dt>
     <dd>{{% md %}}System generated entities.{{% /md %}}</dd>
 
@@ -1450,8 +1450,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gradename_python">
-<a href="#gradename_python" style="color: inherit; text-decoration: inherit;">grade<wbr>Name</a>
+        <span id="grade_name_python">
+<a href="#grade_name_python" style="color: inherit; text-decoration: inherit;">grade_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1460,8 +1460,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxscorethreshold_python">
-<a href="#maxscorethreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
+        <span id="max_score_threshold_python">
+<a href="#max_score_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>score_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1470,8 +1470,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minscorethreshold_python">
-<a href="#minscorethreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
+        <span id="min_score_threshold_python">
+<a href="#min_score_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>score_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1768,8 +1768,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gradename_python">
-<a href="#gradename_python" style="color: inherit; text-decoration: inherit;">grade<wbr>Name</a>
+        <span id="grade_name_python">
+<a href="#grade_name_python" style="color: inherit; text-decoration: inherit;">grade_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1778,8 +1778,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxscorethreshold_python">
-<a href="#maxscorethreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
+        <span id="max_score_threshold_python">
+<a href="#max_score_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>score_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1788,8 +1788,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minscorethreshold_python">
-<a href="#minscorethreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
+        <span id="min_score_threshold_python">
+<a href="#min_score_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>score_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2090,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generated_interaction_types_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>interaction_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd>
 
@@ -2100,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generated_kpis_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>kpis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd>
 
@@ -2110,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generated_links_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Generated links.{{% /md %}}</dd>
 

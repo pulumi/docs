@@ -1515,7 +1515,7 @@ The following output properties are available:
 <a href="#environment_capacities_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>capacities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stampcapacityresponse">List[Stamp<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#stampcapacityresponse">Sequence[Stamp<wbr>Capacity<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Current total, used, and available worker capacities.{{% /md %}}</dd>
 
@@ -1655,7 +1655,7 @@ The following output properties are available:
 <a href="#vip_mappings_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualipmappingresponse">List[Virtual<wbr>IPMapping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualipmappingresponse">Sequence[Virtual<wbr>IPMapping<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Description of IP SSL mapping for the App Service Environment.{{% /md %}}</dd>
 
@@ -1665,7 +1665,7 @@ The following output properties are available:
 <a href="#virtual_network_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofileresponse">Dict[Virtual<wbr>Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd>
 
@@ -1675,7 +1675,7 @@ The following output properties are available:
 <a href="#worker_pools_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerpoolresponse">List[Worker<wbr>Pool<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workerpoolresponse">Sequence[Worker<wbr>Pool<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool.{{% /md %}}</dd>
 
@@ -1695,7 +1695,7 @@ The following output properties are available:
 <a href="#cluster_settings_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">List[Name<wbr>Value<wbr>Pair<wbr>Response]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd>
 
@@ -1796,7 +1796,7 @@ The following output properties are available:
 <a href="#network_access_control_list_python" style="color: inherit; text-decoration: inherit;">network_<wbr>access_<wbr>control_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaccesscontrolentryresponse">List[Network<wbr>Access<wbr>Control<wbr>Entry<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkaccesscontrolentryresponse">Sequence[Network<wbr>Access<wbr>Control<wbr>Entry<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Access control list for controlling traffic to the App Service Environment.{{% /md %}}</dd>
 
@@ -1837,7 +1837,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1847,7 +1847,7 @@ The following output properties are available:
 <a href="#user_whitelisted_ip_ranges_python" style="color: inherit; text-decoration: inherit;">user_<wbr>whitelisted_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}User added ip ranges to whitelist on ASE db{{% /md %}}</dd>
 
@@ -2356,8 +2356,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remotesubnet_python">
-<a href="#remotesubnet_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnet</a>
+        <span id="remote_subnet_python">
+<a href="#remote_subnet_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnet</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2848,7 +2848,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List[Capability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
 
@@ -2878,7 +2878,7 @@ The following output properties are available:
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
 
@@ -2908,7 +2908,7 @@ The following output properties are available:
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Dict[Sku<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
 
@@ -3285,8 +3285,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computemode_python">
-<a href="#computemode_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
+        <span id="compute_mode_python">
+<a href="#compute_mode_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3295,8 +3295,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="excludefromcapacityallocation_python">
-<a href="#excludefromcapacityallocation_python" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Capacity<wbr>Allocation</a>
+        <span id="exclude_from_capacity_allocation_python">
+<a href="#exclude_from_capacity_allocation_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>capacity_<wbr>allocation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3306,8 +3306,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isapplicableforallcomputemodes_python">
-<a href="#isapplicableforallcomputemodes_python" style="color: inherit; text-decoration: inherit;">is<wbr>Applicable<wbr>For<wbr>All<wbr>Compute<wbr>Modes</a>
+        <span id="is_applicable_for_all_compute_modes_python">
+<a href="#is_applicable_for_all_compute_modes_python" style="color: inherit; text-decoration: inherit;">is_<wbr>applicable_<wbr>for_<wbr>all_<wbr>compute_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3326,8 +3326,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sitemode_python">
-<a href="#sitemode_python" style="color: inherit; text-decoration: inherit;">site<wbr>Mode</a>
+        <span id="site_mode_python">
+<a href="#site_mode_python" style="color: inherit; text-decoration: inherit;">site_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3336,8 +3336,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalcapacity_python">
-<a href="#totalcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Capacity</a>
+        <span id="total_capacity_python">
+<a href="#total_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3356,8 +3356,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workersize_python">
-<a href="#workersize_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
+        <span id="worker_size_python">
+<a href="#worker_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3366,8 +3366,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workersizeid_python">
-<a href="#workersizeid_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
+        <span id="worker_size_id_python">
+<a href="#worker_size_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3538,8 +3538,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inuse_python">
-<a href="#inuse_python" style="color: inherit; text-decoration: inherit;">in<wbr>Use</a>
+        <span id="in_use_python">
+<a href="#in_use_python" style="color: inherit; text-decoration: inherit;">in_<wbr>use</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3548,8 +3548,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="internalhttpport_python">
-<a href="#internalhttpport_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Http<wbr>Port</a>
+        <span id="internal_http_port_python">
+<a href="#internal_http_port_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3558,8 +3558,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="internalhttpsport_python">
-<a href="#internalhttpsport_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Https<wbr>Port</a>
+        <span id="internal_https_port_python">
+<a href="#internal_https_port_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4186,8 +4186,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computemode_python">
-<a href="#computemode_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
+        <span id="compute_mode_python">
+<a href="#compute_mode_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4206,11 +4206,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancenames_python">
-<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
 
@@ -4240,7 +4240,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescriptionresponse">Dict[Sku<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
 
@@ -4250,7 +4250,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -4266,8 +4266,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workersize_python">
-<a href="#workersize_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
+        <span id="worker_count_python">
+<a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="worker_size_python">
+<a href="#worker_size_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4276,23 +4286,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workersizeid_python">
-<a href="#workersizeid_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
+        <span id="worker_size_id_python">
+<a href="#worker_size_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>size_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="worker_count_python">
-<a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

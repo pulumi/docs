@@ -86,15 +86,15 @@ import pulumi_azure_nextgen as azure_nextgen
 trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
     factory_name="exampleFactoryName",
     properties={
-        "pipelines": [{
-            "parameters": {
+        "pipelines": [azure_nextgen.datafactory.latest.TriggerPipelineReferenceArgs(
+            parameters={
                 "OutputBlobNameList": ["exampleoutput.csv"],
             },
-            "pipelineReference": {
-                "referenceName": "examplePipeline",
-                "type": "PipelineReference",
-            },
-        }],
+            pipeline_reference=azure_nextgen.datafactory.latest.PipelineReferenceArgs(
+                reference_name="examplePipeline",
+                type="PipelineReference",
+            ),
+        )],
         "type": "ScheduleTrigger",
         "typeProperties": {
             "recurrence": {
@@ -222,15 +222,15 @@ trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
     factory_name="exampleFactoryName",
     properties={
         "description": "Example description",
-        "pipelines": [{
-            "parameters": {
+        "pipelines": [azure_nextgen.datafactory.latest.TriggerPipelineReferenceArgs(
+            parameters={
                 "OutputBlobNameList": ["exampleoutput.csv"],
             },
-            "pipelineReference": {
-                "referenceName": "examplePipeline",
-                "type": "PipelineReference",
-            },
-        }],
+            pipeline_reference=azure_nextgen.datafactory.latest.PipelineReferenceArgs(
+                reference_name="examplePipeline",
+                type="PipelineReference",
+            ),
+        )],
         "type": "ScheduleTrigger",
         "typeProperties": {
             "recurrence": {
@@ -299,7 +299,7 @@ const trigger = new azure_nextgen.datafactory.latest.Trigger("trigger", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ChainingTrigger] | Dict[MultiplePipelineTrigger] | Dict[RerunTumblingWindowTrigger] | Dict[TumblingWindowTrigger]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ChainingTriggerArgs, MultiplePipelineTriggerArgs, RerunTumblingWindowTriggerArgs, TumblingWindowTriggerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -628,7 +628,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Chaining<wbr>Trigger] | Dict[Multiple<wbr>Pipeline<wbr>Trigger] | Dict[Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger] | Dict[Tumbling<wbr>Window<wbr>Trigger]</span>
+        <span class="property-type">Union[Chaining<wbr>Trigger<wbr>Args, Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args, Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
 
@@ -1055,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">List[Pipeline<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#pipelinereference">Sequence[Pipeline<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd>
 
@@ -1065,14 +1065,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Dict[Trigger<wbr>Pipeline<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="rundimension_python">
-<a href="#rundimension_python" style="color: inherit; text-decoration: inherit;">run<wbr>Dimension</a>
+        <span id="run_dimension_python">
+<a href="#run_dimension_python" style="color: inherit; text-decoration: inherit;">run_<wbr>dimension</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1085,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1324,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">List[Pipeline<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Sequence[Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd>
 
@@ -1334,14 +1334,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Dict[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="rundimension_python">
-<a href="#rundimension_python" style="color: inherit; text-decoration: inherit;">run<wbr>Dimension</a>
+        <span id="run_dimension_python">
+<a href="#run_dimension_python" style="color: inherit; text-decoration: inherit;">run_<wbr>dimension</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1350,8 +1350,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="runtimestate_python">
-<a href="#runtimestate_python" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
+        <span id="runtime_state_python">
+<a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1364,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1513,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1533,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List[Trigger<wbr>Pipeline<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 
@@ -1698,8 +1698,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="runtimestate_python">
-<a href="#runtimestate_python" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
+        <span id="runtime_state_python">
+<a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1712,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -1732,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 
@@ -1867,8 +1867,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2026,8 +2026,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2275,18 +2275,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="parenttrigger_python">
-<a href="#parenttrigger_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Trigger</a>
+        <span id="parent_trigger_python">
+<a href="#parent_trigger_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="requestedendtime_python">
-<a href="#requestedendtime_python" style="color: inherit; text-decoration: inherit;">requested<wbr>End<wbr>Time</a>
+        <span id="requested_end_time_python">
+<a href="#requested_end_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2295,8 +2295,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="requestedstarttime_python">
-<a href="#requestedstarttime_python" style="color: inherit; text-decoration: inherit;">requested<wbr>Start<wbr>Time</a>
+        <span id="requested_start_time_python">
+<a href="#requested_start_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2305,8 +2305,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rerunconcurrency_python">
-<a href="#rerunconcurrency_python" style="color: inherit; text-decoration: inherit;">rerun<wbr>Concurrency</a>
+        <span id="rerun_concurrency_python">
+<a href="#rerun_concurrency_python" style="color: inherit; text-decoration: inherit;">rerun_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2319,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2584,18 +2584,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="parenttrigger_python">
-<a href="#parenttrigger_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Trigger</a>
+        <span id="parent_trigger_python">
+<a href="#parent_trigger_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="requestedendtime_python">
-<a href="#requestedendtime_python" style="color: inherit; text-decoration: inherit;">requested<wbr>End<wbr>Time</a>
+        <span id="requested_end_time_python">
+<a href="#requested_end_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2604,8 +2604,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="requestedstarttime_python">
-<a href="#requestedstarttime_python" style="color: inherit; text-decoration: inherit;">requested<wbr>Start<wbr>Time</a>
+        <span id="requested_start_time_python">
+<a href="#requested_start_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2614,8 +2614,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rerunconcurrency_python">
-<a href="#rerunconcurrency_python" style="color: inherit; text-decoration: inherit;">rerun<wbr>Concurrency</a>
+        <span id="rerun_concurrency_python">
+<a href="#rerun_concurrency_python" style="color: inherit; text-decoration: inherit;">rerun_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2624,8 +2624,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="runtimestate_python">
-<a href="#runtimestate_python" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
+        <span id="runtime_state_python">
+<a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2638,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -2757,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -2876,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
 
@@ -3199,11 +3199,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencetrigger_python">
-<a href="#referencetrigger_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
+        <span id="reference_trigger_python">
+<a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Dict[Trigger<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
 
@@ -3278,11 +3278,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencetrigger_python">
-<a href="#referencetrigger_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
+        <span id="reference_trigger_python">
+<a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Dict[Trigger<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
 
@@ -3391,17 +3391,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pipelinereference_python">
-<a href="#pipelinereference_python" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Reference</a>
+        <span id="pipeline_reference_python">
+<a href="#pipeline_reference_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Dict[Pipeline<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
 
@@ -3510,17 +3510,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pipelinereference_python">
-<a href="#pipelinereference_python" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Reference</a>
+        <span id="pipeline_reference_python">
+<a href="#pipeline_reference_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Dict[Pipeline<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
 
@@ -3625,8 +3625,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3744,8 +3744,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4153,8 +4153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="maxconcurrency_python">
-<a href="#maxconcurrency_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
+        <span id="max_concurrency_python">
+<a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4167,7 +4167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Dict[Trigger<wbr>Pipeline<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd>
 
@@ -4187,7 +4187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -4197,7 +4197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -4207,7 +4207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datafactory/Latest:Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference, Azure-Nextgen:Datafactory/Latest:Trigger<wbr>Dependency<wbr>Reference, Default=>]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
 
@@ -4237,7 +4237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Dict[Retry<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
 
@@ -4662,8 +4662,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="maxconcurrency_python">
-<a href="#maxconcurrency_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
+        <span id="max_concurrency_python">
+<a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4676,14 +4676,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Dict[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="runtimestate_python">
-<a href="#runtimestate_python" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
+        <span id="runtime_state_python">
+<a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4706,7 +4706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
 
@@ -4716,7 +4716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
 
@@ -4726,7 +4726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Datafactory/Latest:Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response, Azure-Nextgen:Datafactory/Latest:Trigger<wbr>Dependency<wbr>Reference<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
 
@@ -4756,7 +4756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Dict[Retry<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
 

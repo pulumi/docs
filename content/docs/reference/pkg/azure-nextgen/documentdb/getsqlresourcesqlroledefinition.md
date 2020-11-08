@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#assignable_scopes_python" style="color: inherit; text-decoration: inherit;">assignable_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.{{% /md %}}</dd>
 
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionresponse">List[Permission<wbr>Response]</a></span>
+        <span class="property-type"><a href="#permissionresponse">Sequence[Permission<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The set of operations allowed through this Role Definition.{{% /md %}}</dd>
 
@@ -540,21 +540,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataactions_python">
-<a href="#dataactions_python" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
+        <span id="data_actions_python">
+<a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of data actions that are allowed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notdataactions_python">
-<a href="#notdataactions_python" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
+        <span id="not_data_actions_python">
+<a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of data actions that are denied.{{% /md %}}</dd>
 

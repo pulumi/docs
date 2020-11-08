@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponsewrapperresponse">List[Error<wbr>Response<wbr>Wrapper<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorresponsewrapperresponse">Sequence[Error<wbr>Response<wbr>Wrapper<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of provisioning errors reported by the resource provider.{{% /md %}}</dd>
 
@@ -729,7 +729,7 @@ The following output properties are available:
 <a href="#app_insights_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightspropertiesresponse">Dict[App<wbr>Insights<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#appinsightspropertiesresponse">App<wbr>Insights<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}AppInsights configuration.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#container_registry_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistrypropertiesresponse">Dict[Container<wbr>Registry<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerregistrypropertiesresponse">Container<wbr>Registry<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Container Registry properties.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#container_service_python" style="color: inherit; text-decoration: inherit;">container_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acsclusterpropertiesresponse">Dict[Acs<wbr>Cluster<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#acsclusterpropertiesresponse">Acs<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the Azure Container Service cluster.{{% /md %}}</dd>
 
@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#global_service_configuration_python" style="color: inherit; text-decoration: inherit;">global_<wbr>service_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalserviceconfigurationresponse">Dict[Global<wbr>Service<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#globalserviceconfigurationresponse">Global<wbr>Service<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountpropertiesresponse">Dict[Storage<wbr>Account<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountpropertiesresponse">Storage<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage Account properties.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1104,7 +1104,7 @@ The following output properties are available:
 <a href="#orchestrator_properties_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Dict[Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd>
 
@@ -1114,7 +1114,7 @@ The following output properties are available:
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">List[System<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd>
 
@@ -1789,7 +1789,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
 
@@ -1868,7 +1868,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Dict[Error<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd>
 
@@ -2037,7 +2037,7 @@ The following output properties are available:
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Dict[Auto<wbr>Scale<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd>
 
@@ -2057,7 +2057,7 @@ The following output properties are available:
 <a href="#service_auth_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Dict[Service<wbr>Auth<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd>
 
@@ -2067,7 +2067,7 @@ The following output properties are available:
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Dict[Ssl<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd>
 
@@ -2146,7 +2146,7 @@ The following output properties are available:
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Dict[Service<wbr>Principal<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd>
 
@@ -2807,8 +2807,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="systemservicetype_python">
-<a href="#systemservicetype_python" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Type</a>
+        <span id="system_service_type_python">
+<a href="#system_service_type_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

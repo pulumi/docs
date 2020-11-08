@@ -94,14 +94,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
-    no_encryption={
-        "enabledProtocols": {
-            "dash": True,
-            "download": True,
-            "hls": True,
-            "smoothStreaming": True,
-        },
-    },
+    no_encryption=azure_nextgen.media.latest.NoEncryptionArgs(
+        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+            dash=True,
+            download=True,
+            hls=True,
+            smooth_streaming=True,
+        ),
+    ),
     resource_group_name="contoso",
     streaming_policy_name="UserCreatedClearStreamingPolicy")
 
@@ -239,25 +239,25 @@ import pulumi_azure_nextgen as azure_nextgen
 
 streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
-    common_encryption_cbcs={
-        "contentKeys": {
-            "defaultKey": {
-                "label": "cbcsDefaultKey",
-            },
-        },
-        "drm": {
-            "fairPlay": {
-                "allowPersistentLicense": True,
-                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
-            },
-        },
-        "enabledProtocols": {
-            "dash": False,
-            "download": False,
-            "hls": True,
-            "smoothStreaming": False,
-        },
-    },
+    common_encryption_cbcs=azure_nextgen.media.latest.CommonEncryptionCbcsArgs(
+        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+                label="cbcsDefaultKey",
+            ),
+        ),
+        drm=azure_nextgen.media.latest.CbcsDrmConfigurationArgs(
+            fair_play=azure_nextgen.media.latest.StreamingPolicyFairPlayConfigurationArgs(
+                allow_persistent_license=True,
+                custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
+            ),
+        ),
+        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+            dash=False,
+            download=False,
+            hls=True,
+            smooth_streaming=False,
+        ),
+    ),
     default_content_key_policy_name="PolicyWithMultipleOptions",
     resource_group_name="contoso",
     streaming_policy_name="UserCreatedSecureStreamingPolicyWithCommonEncryptionCbcsOnly")
@@ -441,35 +441,35 @@ import pulumi_azure_nextgen as azure_nextgen
 
 streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
-    common_encryption_cenc={
-        "clearTracks": [{
-            "trackSelections": [{
-                "operation": "Equal",
-                "property": "FourCC",
-                "value": "hev1",
-            }],
-        }],
-        "contentKeys": {
-            "defaultKey": {
-                "label": "cencDefaultKey",
-            },
-        },
-        "drm": {
-            "playReady": {
-                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
-                "playReadyCustomAttributes": "PlayReady CustomAttributes",
-            },
-            "widevine": {
-                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
-            },
-        },
-        "enabledProtocols": {
-            "dash": True,
-            "download": False,
-            "hls": False,
-            "smoothStreaming": True,
-        },
-    },
+    common_encryption_cenc=azure_nextgen.media.latest.CommonEncryptionCencArgs(
+        clear_tracks=[azure_nextgen.media.latest.TrackSelectionArgs(
+            track_selections=[azure_nextgen.media.latest.TrackPropertyConditionArgs(
+                operation="Equal",
+                property="FourCC",
+                value="hev1",
+            )],
+        )],
+        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+                label="cencDefaultKey",
+            ),
+        ),
+        drm=azure_nextgen.media.latest.CencDrmConfigurationArgs(
+            play_ready=azure_nextgen.media.latest.StreamingPolicyPlayReadyConfigurationArgs(
+                custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
+                play_ready_custom_attributes="PlayReady CustomAttributes",
+            ),
+            widevine=azure_nextgen.media.latest.StreamingPolicyWidevineConfigurationArgs(
+                custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
+            ),
+        ),
+        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+            dash=True,
+            download=False,
+            hls=False,
+            smooth_streaming=True,
+        ),
+    ),
     default_content_key_policy_name="PolicyWithPlayReadyOptionAndOpenRestriction",
     resource_group_name="contoso",
     streaming_policy_name="UserCreatedSecureStreamingPolicyWithCommonEncryptionCencOnly")
@@ -619,20 +619,20 @@ import pulumi_azure_nextgen as azure_nextgen
 streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
     default_content_key_policy_name="PolicyWithClearKeyOptionAndTokenRestriction",
-    envelope_encryption={
-        "contentKeys": {
-            "defaultKey": {
-                "label": "aesDefaultKey",
-            },
-        },
-        "customKeyAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
-        "enabledProtocols": {
-            "dash": True,
-            "download": False,
-            "hls": True,
-            "smoothStreaming": True,
-        },
-    },
+    envelope_encryption=azure_nextgen.media.latest.EnvelopeEncryptionArgs(
+        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+                label="aesDefaultKey",
+            ),
+        ),
+        custom_key_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
+        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+            dash=True,
+            download=False,
+            hls=True,
+            smooth_streaming=True,
+        ),
+    ),
     resource_group_name="contoso",
     streaming_policy_name="UserCreatedSecureStreamingPolicyWithEnvelopeEncryptionOnly")
 
@@ -886,69 +886,69 @@ import pulumi_azure_nextgen as azure_nextgen
 
 streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
-    common_encryption_cbcs={
-        "contentKeys": {
-            "defaultKey": {
-                "label": "cbcsDefaultKey",
-            },
-        },
-        "drm": {
-            "fairPlay": {
-                "allowPersistentLicense": True,
-                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
-            },
-        },
-        "enabledProtocols": {
-            "dash": False,
-            "download": False,
-            "hls": True,
-            "smoothStreaming": False,
-        },
-    },
-    common_encryption_cenc={
-        "clearTracks": [{
-            "trackSelections": [{
-                "operation": "Equal",
-                "property": "FourCC",
-                "value": "hev1",
-            }],
-        }],
-        "contentKeys": {
-            "defaultKey": {
-                "label": "cencDefaultKey",
-            },
-        },
-        "drm": {
-            "playReady": {
-                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
-                "playReadyCustomAttributes": "PlayReady CustomAttributes",
-            },
-            "widevine": {
-                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
-            },
-        },
-        "enabledProtocols": {
-            "dash": True,
-            "download": False,
-            "hls": False,
-            "smoothStreaming": True,
-        },
-    },
+    common_encryption_cbcs=azure_nextgen.media.latest.CommonEncryptionCbcsArgs(
+        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+                label="cbcsDefaultKey",
+            ),
+        ),
+        drm=azure_nextgen.media.latest.CbcsDrmConfigurationArgs(
+            fair_play=azure_nextgen.media.latest.StreamingPolicyFairPlayConfigurationArgs(
+                allow_persistent_license=True,
+                custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
+            ),
+        ),
+        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+            dash=False,
+            download=False,
+            hls=True,
+            smooth_streaming=False,
+        ),
+    ),
+    common_encryption_cenc=azure_nextgen.media.latest.CommonEncryptionCencArgs(
+        clear_tracks=[azure_nextgen.media.latest.TrackSelectionArgs(
+            track_selections=[azure_nextgen.media.latest.TrackPropertyConditionArgs(
+                operation="Equal",
+                property="FourCC",
+                value="hev1",
+            )],
+        )],
+        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+                label="cencDefaultKey",
+            ),
+        ),
+        drm=azure_nextgen.media.latest.CencDrmConfigurationArgs(
+            play_ready=azure_nextgen.media.latest.StreamingPolicyPlayReadyConfigurationArgs(
+                custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
+                play_ready_custom_attributes="PlayReady CustomAttributes",
+            ),
+            widevine=azure_nextgen.media.latest.StreamingPolicyWidevineConfigurationArgs(
+                custom_license_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
+            ),
+        ),
+        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+            dash=True,
+            download=False,
+            hls=False,
+            smooth_streaming=True,
+        ),
+    ),
     default_content_key_policy_name="PolicyWithMultipleOptions",
-    envelope_encryption={
-        "contentKeys": {
-            "defaultKey": {
-                "label": "aesDefaultKey",
-            },
-        },
-        "customKeyAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
-        "enabledProtocols": {
-            "dash": True,
-            "download": False,
-            "hls": True,
-            "smoothStreaming": True,
-        },
-    },
+    envelope_encryption=azure_nextgen.media.latest.EnvelopeEncryptionArgs(
+        content_keys=azure_nextgen.media.latest.StreamingPolicyContentKeysArgs(
+            default_key=azure_nextgen.media.latest.DefaultKeyArgs(
+                label="aesDefaultKey",
+            ),
+        ),
+        custom_key_acquisition_url_template="https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
+        enabled_protocols=azure_nextgen.media.latest.EnabledProtocolsArgs(
+            dash=True,
+            download=False,
+            hls=True,
+            smooth_streaming=True,
+        ),
+    ),
     resource_group_name="contoso",
     streaming_policy_name="UserCreatedSecureStreamingPolicy")
 
@@ -1047,7 +1047,7 @@ const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">common_encryption_cbcs</span><span class="p">:</span> <span class="nx">Optional[Dict[CommonEncryptionCbcs]]</span> = None<span class="p">, </span><span class="nx">common_encryption_cenc</span><span class="p">:</span> <span class="nx">Optional[Dict[CommonEncryptionCenc]]</span> = None<span class="p">, </span><span class="nx">default_content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">envelope_encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[EnvelopeEncryption]]</span> = None<span class="p">, </span><span class="nx">no_encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[NoEncryption]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">streaming_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">common_encryption_cbcs</span><span class="p">:</span> <span class="nx">Optional[CommonEncryptionCbcsArgs]</span> = None<span class="p">, </span><span class="nx">common_encryption_cenc</span><span class="p">:</span> <span class="nx">Optional[CommonEncryptionCencArgs]</span> = None<span class="p">, </span><span class="nx">default_content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">envelope_encryption</span><span class="p">:</span> <span class="nx">Optional[EnvelopeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">no_encryption</span><span class="p">:</span> <span class="nx">Optional[NoEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">streaming_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1516,7 +1516,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#common_encryption_cbcs_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cbcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncbcs">Dict[Common<wbr>Encryption<wbr>Cbcs]</a></span>
+        <span class="property-type"><a href="#commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd>
 
@@ -1526,7 +1526,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#common_encryption_cenc_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cenc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncenc">Dict[Common<wbr>Encryption<wbr>Cenc]</a></span>
+        <span class="property-type"><a href="#commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd>
 
@@ -1546,7 +1546,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#envelope_encryption_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envelopeencryption">Dict[Envelope<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#envelopeencryption">Envelope<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd>
 
@@ -1556,7 +1556,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#no_encryption_python" style="color: inherit; text-decoration: inherit;">no_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noencryption">Dict[No<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#noencryption">No<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd>
 
@@ -1616,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1663,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1710,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1757,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1903,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fair_play_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Dict[Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
 
@@ -1913,7 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Dict[Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
 
@@ -1923,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Dict[Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 
@@ -2062,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fair_play_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
 
@@ -2072,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
 
@@ -2082,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 
@@ -2191,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Dict[Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
 
@@ -2201,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Dict[Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 
@@ -2310,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
 
@@ -2320,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 
@@ -2489,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List[Track<wbr>Selection]</a></span>
+        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -2499,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -2509,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfiguration">Dict[Cbcs<wbr>Drm<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
 
@@ -2519,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Dict[Enabled<wbr>Protocols]</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -2688,7 +2688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -2698,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -2708,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Dict[Cbcs<wbr>Drm<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
 
@@ -2718,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Dict[Enabled<wbr>Protocols<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -2887,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List[Track<wbr>Selection]</a></span>
+        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -2897,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -2907,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfiguration">Dict[Cenc<wbr>Drm<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
 
@@ -2917,7 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Dict[Enabled<wbr>Protocols]</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -3086,7 +3086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -3096,7 +3096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -3106,7 +3106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Dict[Cenc<wbr>Drm<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
 
@@ -3116,7 +3116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Dict[Enabled<wbr>Protocols<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -3921,7 +3921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List[Track<wbr>Selection]</a></span>
+        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -3931,7 +3931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -3951,7 +3951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Dict[Enabled<wbr>Protocols]</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -4120,7 +4120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -4130,7 +4130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -4150,7 +4150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Dict[Enabled<wbr>Protocols<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -4229,7 +4229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Dict[Enabled<wbr>Protocols]</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -4308,7 +4308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Dict[Enabled<wbr>Protocols<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -4467,7 +4467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List[Track<wbr>Selection]</a></span>
+        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
 
@@ -4626,7 +4626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
 
@@ -4735,7 +4735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkey">Dict[Default<wbr>Key]</a></span>
+        <span class="property-type"><a href="#defaultkey">Default<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
 
@@ -4745,7 +4745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_to_track_mappings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>track_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkey">List[Streaming<wbr>Policy<wbr>Content<wbr>Key]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkey">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
 
@@ -4854,7 +4854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Dict[Default<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
 
@@ -4864,7 +4864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_to_track_mappings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>track_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
 
@@ -5891,11 +5891,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackselections_python">
-<a href="#trackselections_python" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
+        <span id="track_selections_python">
+<a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertycondition">List[Track<wbr>Property<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#trackpropertycondition">Sequence[Track<wbr>Property<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
 
@@ -5970,11 +5970,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackselections_python">
-<a href="#trackselections_python" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
+        <span id="track_selections_python">
+<a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">List[Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
 

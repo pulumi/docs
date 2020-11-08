@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#lenses_python" style="color: inherit; text-decoration: inherit;">lenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlensresponse">List[Dashboard<wbr>Lens<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dashboardlensresponse">Sequence[Dashboard<wbr>Lens<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
 
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -584,7 +584,7 @@ The following output properties are available:
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponse">List[Dashboard<wbr>Parts<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">Sequence[Dashboard<wbr>Parts<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
 
@@ -703,7 +703,7 @@ The following output properties are available:
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponseposition">Dict[Dashboard<wbr>Parts<wbr>Response<wbr>Position]</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
 
@@ -713,7 +713,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponse">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
 
@@ -908,8 +908,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="colspan_python">
-<a href="#colspan_python" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
+        <span id="col_span_python">
+<a href="#col_span_python" style="color: inherit; text-decoration: inherit;">col_<wbr>span</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -918,8 +918,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rowspan_python">
-<a href="#rowspan_python" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
+        <span id="row_span_python">
+<a href="#row_span_python" style="color: inherit; text-decoration: inherit;">row_<wbr>span</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -952,7 +952,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
 
@@ -1061,7 +1061,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
 
@@ -1071,7 +1071,7 @@ The following output properties are available:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
 
@@ -1150,7 +1150,7 @@ The following output properties are available:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
 
@@ -1229,7 +1229,7 @@ The following output properties are available:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
 

@@ -452,7 +452,7 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The name and SendRule connection string of the event hub for azureEventHub logger.
 Instrumentation key for applicationInsights logger.{{% /md %}}</dd>

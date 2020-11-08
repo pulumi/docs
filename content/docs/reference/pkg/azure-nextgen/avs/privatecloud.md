@@ -94,15 +94,15 @@ import pulumi_azure_nextgen as azure_nextgen
 
 private_cloud = azure_nextgen.avs.latest.PrivateCloud("privateCloud",
     location="eastus2",
-    management_cluster={
-        "clusterSize": 4,
-    },
+    management_cluster=azure_nextgen.avs.latest.ManagementClusterArgs(
+        cluster_size=4,
+    ),
     network_block="192.168.48.0/22",
     private_cloud_name="cloud1",
     resource_group_name="group1",
-    sku={
-        "name": "AV36",
-    },
+    sku=azure_nextgen.avs.latest.SkuArgs(
+        name="AV36",
+    ),
     tags={})
 
 ```
@@ -145,7 +145,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_sources</span><span class="p">:</span> <span class="nx">Optional[List[IdentitySource]]</span> = None<span class="p">, </span><span class="nx">internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagementCluster]]</span> = None<span class="p">, </span><span class="nx">network_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentitySourceArgs]]</span> = None<span class="p">, </span><span class="nx">internet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[ManagementClusterArgs]</span> = None<span class="p">, </span><span class="nx">network_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -684,7 +684,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementcluster">Dict[Management<wbr>Cluster]</a></span>
+        <span class="property-type"><a href="#managementcluster">Management<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
 
@@ -724,7 +724,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitysource">List[Identity<wbr>Source]</a></span>
+        <span class="property-type"><a href="#identitysource">Sequence[Identity<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
 
@@ -764,7 +764,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1153,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Dict[Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints{{% /md %}}</dd>
 
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuit_python" style="color: inherit; text-decoration: inherit;">circuit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#circuitresponse">Dict[Circuit<wbr>Response]</a></span>
+        <span class="property-type"><a href="#circuitresponse">Circuit<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
 
@@ -1975,8 +1975,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="basegroupdn_python">
-<a href="#basegroupdn_python" style="color: inherit; text-decoration: inherit;">base<wbr>Group<wbr>DN</a>
+        <span id="base_group_dn_python">
+<a href="#base_group_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>group_<wbr>dn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1985,8 +1985,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseuserdn_python">
-<a href="#baseuserdn_python" style="color: inherit; text-decoration: inherit;">base<wbr>User<wbr>DN</a>
+        <span id="base_user_dn_python">
+<a href="#base_user_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>user_<wbr>dn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2025,8 +2025,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryserver_python">
-<a href="#primaryserver_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Server</a>
+        <span id="primary_server_python">
+<a href="#primary_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2035,8 +2035,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondaryserver_python">
-<a href="#secondaryserver_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Server</a>
+        <span id="secondary_server_python">
+<a href="#secondary_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2414,8 +2414,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="basegroupdn_python">
-<a href="#basegroupdn_python" style="color: inherit; text-decoration: inherit;">base<wbr>Group<wbr>DN</a>
+        <span id="base_group_dn_python">
+<a href="#base_group_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>group_<wbr>dn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2424,8 +2424,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseuserdn_python">
-<a href="#baseuserdn_python" style="color: inherit; text-decoration: inherit;">base<wbr>User<wbr>DN</a>
+        <span id="base_user_dn_python">
+<a href="#base_user_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>user_<wbr>dn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2464,8 +2464,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryserver_python">
-<a href="#primaryserver_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Server</a>
+        <span id="primary_server_python">
+<a href="#primary_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2474,8 +2474,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondaryserver_python">
-<a href="#secondaryserver_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Server</a>
+        <span id="secondary_server_python">
+<a href="#secondary_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2629,6 +2629,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2665,6 +2675,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2703,6 +2723,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2736,9 +2766,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

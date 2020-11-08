@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentdetailsresponse">Dict[Environment<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentdetailsresponse">Environment<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the environment{{% /md %}}</dd>
 
@@ -598,8 +598,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="environmentstate_python">
-<a href="#environmentstate_python" style="color: inherit; text-decoration: inherit;">environment<wbr>State</a>
+        <span id="environment_state_python">
+<a href="#environment_state_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -622,7 +622,7 @@ The following output properties are available:
 <a href="#latest_operation_result_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>operation_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Dict[Latest<wbr>Operation<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
 
@@ -668,11 +668,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualmachinedetails_python">
-<a href="#virtualmachinedetails_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Details</a>
+        <span id="virtual_machine_details_python">
+<a href="#virtual_machine_details_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedetailsresponse">Dict[Virtual<wbr>Machine<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinedetailsresponse">Virtual<wbr>Machine<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of backing DTL virtual machine with compute and network details.{{% /md %}}</dd>
 

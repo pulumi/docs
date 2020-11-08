@@ -109,18 +109,18 @@ import pulumi_azure_nextgen as azure_nextgen
 machine_learning_dataset = azure_nextgen.machinelearningservices.v20200501preview.MachineLearningDataset("machineLearningDataset",
     dataset_name="datasetName123",
     dataset_type="file",
-    parameters={
-        "path": {
-            "dataPath": {
-                "datastoreName": "testblobfromarm",
-                "relativePath": "UI/03-26-2020_083359_UTC/latin1encoding.csv",
-            },
-        },
-    },
-    registration={
-        "description": "test description",
-        "name": "datasetName123",
-    },
+    parameters=azure_nextgen.machinelearningservices.v20200501preview.DatasetCreateRequestParametersArgs(
+        path=azure_nextgen.machinelearningservices.v20200501preview.DatasetCreateRequestPathArgs(
+            data_path=azure_nextgen.machinelearningservices.v20200501preview.DatasetCreateRequestDataPathArgs(
+                datastore_name="testblobfromarm",
+                relative_path="UI/03-26-2020_083359_UTC/latin1encoding.csv",
+            ),
+        ),
+    ),
+    registration=azure_nextgen.machinelearningservices.v20200501preview.DatasetCreateRequestRegistrationArgs(
+        description="test description",
+        name="datasetName123",
+    ),
     resource_group_name="acjain-mleastUS2",
     skip_validation=False,
     workspace_name="acjain-mleastUS2")
@@ -171,7 +171,7 @@ const machineLearningDataset = new azure_nextgen.machinelearningservices.v202005
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataset_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetCreateRequestParameters]]</span> = None<span class="p">, </span><span class="nx">registration</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetCreateRequestRegistration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">time_series</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetCreateRequestTimeSeries]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataset_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestParametersArgs]</span> = None<span class="p">, </span><span class="nx">registration</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestRegistrationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">time_series</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestTimeSeriesArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -630,7 +630,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestparameters">Dict[Dataset<wbr>Create<wbr>Request<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -640,7 +640,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestregistration">Dict[Dataset<wbr>Create<wbr>Request<wbr>Registration]</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -680,7 +680,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dict[Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series]</a></span>
+        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponse">Dict[Dataset<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetresponse">Dataset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset properties{{% /md %}}</dd>
 
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
 
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1456,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestpath">Dict[Dataset<wbr>Create<wbr>Request<wbr>Path]</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1466,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestquery">Dict[Dataset<wbr>Create<wbr>Request<wbr>Query]</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1595,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dict[Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path]</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1883,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
 
@@ -2501,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd>
 
@@ -2511,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dict[Dataset<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd>
 
@@ -2521,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponselatest">Dict[Dataset<wbr>Response<wbr>Latest]</a></span>
+        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd>
 
@@ -2890,7 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd>
 
@@ -2910,7 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
 
@@ -2920,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_path_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsesqldatapath">Dict[Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path]</a></span>
+        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd>
 
@@ -3609,7 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
 
@@ -3619,7 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#telemetry_info_python" style="color: inherit; text-decoration: inherit;">telemetry_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd>
 
@@ -3649,7 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User who created.{{% /md %}}</dd>
 
@@ -3659,7 +3659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsedatapath">Dict[Dataset<wbr>Response<wbr>Data<wbr>Path]</a></span>
+        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd>
 
@@ -3669,7 +3669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_definition_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>definition_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dict[Dataset<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd>
 
@@ -3679,7 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
 
@@ -4027,7 +4027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deprecated_by_python" style="color: inherit; text-decoration: inherit;">deprecated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dict[Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By]</a></span>
+        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd>
 
@@ -4355,7 +4355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 

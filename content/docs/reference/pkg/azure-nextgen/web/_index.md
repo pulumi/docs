@@ -44,6 +44,7 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="webappsiteextension" title="WebAppSiteExtension"><span class="symbol resource"></span>WebAppSiteExtension</a></li>
     <li><a href="webappsiteextensionslot" title="WebAppSiteExtensionSlot"><span class="symbol resource"></span>WebAppSiteExtensionSlot</a></li>
     <li><a href="webappslot" title="WebAppSlot"><span class="symbol resource"></span>WebAppSlot</a></li>
+    <li><a href="webappslotconfigurationnames" title="WebAppSlotConfigurationNames"><span class="symbol resource"></span>WebAppSlotConfigurationNames</a></li>
     <li><a href="webappsourcecontrol" title="WebAppSourceControl"><span class="symbol resource"></span>WebAppSourceControl</a></li>
     <li><a href="webappsourcecontrolslot" title="WebAppSourceControlSlot"><span class="symbol resource"></span>WebAppSourceControlSlot</a></li>
     <li><a href="webappswiftvirtualnetworkconnection" title="WebAppSwiftVirtualNetworkConnection"><span class="symbol resource"></span>WebAppSwiftVirtualNetworkConnection</a></li>
@@ -86,6 +87,7 @@ Explore the resources and functions of the web module in the Azure NextGen packa
     <li><a href="getwebappsiteextension" title="GetWebAppSiteExtension"><span class="symbol function"></span>GetWebAppSiteExtension</a></li>
     <li><a href="getwebappsiteextensionslot" title="GetWebAppSiteExtensionSlot"><span class="symbol function"></span>GetWebAppSiteExtensionSlot</a></li>
     <li><a href="getwebappslot" title="GetWebAppSlot"><span class="symbol function"></span>GetWebAppSlot</a></li>
+    <li><a href="getwebappslotconfigurationnames" title="GetWebAppSlotConfigurationNames"><span class="symbol function"></span>GetWebAppSlotConfigurationNames</a></li>
     <li><a href="getwebappsourcecontrol" title="GetWebAppSourceControl"><span class="symbol function"></span>GetWebAppSourceControl</a></li>
     <li><a href="getwebappsourcecontrolslot" title="GetWebAppSourceControlSlot"><span class="symbol function"></span>GetWebAppSourceControlSlot</a></li>
     <li><a href="getwebappswiftvirtualnetworkconnection" title="GetWebAppSwiftVirtualNetworkConnection"><span class="symbol function"></span>GetWebAppSwiftVirtualNetworkConnection</a></li>
@@ -140,7 +142,7 @@ Explore the resources and functions of the web module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

@@ -294,23 +294,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -404,16 +394,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
 </span> 
@@ -431,23 +411,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -541,16 +511,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
 </span> 
@@ -568,23 +528,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -678,16 +628,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
 </span> 
@@ -705,23 +645,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -779,7 +709,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Dict[Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine extension instance view.{{% /md %}}</dd>
 
@@ -789,7 +719,7 @@ The following output properties are available:
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -809,19 +739,9 @@ The following output properties are available:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1283,7 +1203,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 
@@ -1293,7 +1213,7 @@ The following output properties are available:
 <a href="#substatuses_python" style="color: inherit; text-decoration: inherit;">substatuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 

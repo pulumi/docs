@@ -70,13 +70,13 @@ task_run = azure_nextgen.containerregistry.v20190601preview.TaskRun("taskRun",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     run_request={
-        "credentials": {},
+        "credentials": azure_nextgen.containerregistry.v20190601preview.CredentialsArgs(),
         "encodedTaskContent": "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
         "encodedValuesContent": "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
-        "platform": {
-            "architecture": "amd64",
-            "os": "Linux",
-        },
+        "platform": azure_nextgen.containerregistry.v20190601preview.PlatformPropertiesArgs(
+            architecture="amd64",
+            os="Linux",
+        ),
         "type": "EncodedTaskRunRequest",
         "values": [],
     },
@@ -126,7 +126,7 @@ const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("ta
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[IdentityProperties]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_request</span><span class="p">:</span> <span class="nx">Optional[Dict[DockerBuildRequest] | Dict[EncodedTaskRunRequest] | Dict[FileTaskRunRequest] | Dict[TaskRunRequest]]</span> = None<span class="p">, </span><span class="nx">task_run_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_request</span><span class="p">:</span> <span class="nx">Optional[Union[DockerBuildRequestArgs, EncodedTaskRunRequestArgs, FileTaskRunRequestArgs, TaskRunRequestArgs]]</span> = None<span class="p">, </span><span class="nx">task_run_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -575,7 +575,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Dict[Identity<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
 
@@ -595,7 +595,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#run_request_python" style="color: inherit; text-decoration: inherit;">run_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Docker<wbr>Build<wbr>Request] | Dict[Encoded<wbr>Task<wbr>Run<wbr>Request] | Dict[File<wbr>Task<wbr>Run<wbr>Request] | Dict[Task<wbr>Run<wbr>Request]</span>
+        <span class="property-type">Union[Docker<wbr>Build<wbr>Request<wbr>Args, Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args, File<wbr>Task<wbr>Run<wbr>Request<wbr>Args, Task<wbr>Run<wbr>Request<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The request (parameters) for the run{{% /md %}}</dd>
 
@@ -824,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_result_python" style="color: inherit; text-decoration: inherit;">run_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runresponse">Dict[Run<wbr>Response]</a></span>
+        <span class="property-type"><a href="#runresponse">Run<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The result of this task run{{% /md %}}</dd>
 
@@ -1156,8 +1156,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1315,8 +1315,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1434,7 +1434,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Custom<wbr>Registry<wbr>Credentials]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1446,7 +1446,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Dict[Source<wbr>Registry<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
 
@@ -1561,7 +1561,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1573,7 +1573,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Dict[Source<wbr>Registry<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
 
@@ -1741,7 +1741,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Dict[Secret<wbr>Object]</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
@@ -1752,7 +1752,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Dict[Secret<wbr>Object]</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
 
@@ -1920,7 +1920,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Dict[Secret<wbr>Object<wbr>Response]</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
@@ -1931,7 +1931,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Dict[Secret<wbr>Object<wbr>Response]</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
 
@@ -2413,7 +2413,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Dict[Platform<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
 
@@ -2423,7 +2423,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Dict[Agent<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -2443,7 +2443,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">List[Argument]</a></span>
+        <span class="property-type"><a href="#argument">Sequence[Argument<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd>
 
@@ -2453,7 +2453,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Dict[Credentials]</a></span>
+        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
 
@@ -2463,7 +2463,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
 
@@ -2489,8 +2489,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logtemplate_python">
-<a href="#logtemplate_python" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2509,8 +2509,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcelocation_python">
-<a href="#sourcelocation_python" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
+        <span id="source_location_python">
+<a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3016,7 +3016,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Dict[Platform<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
 
@@ -3026,7 +3026,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Dict[Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -3046,7 +3046,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List[Argument<wbr>Response]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd>
 
@@ -3056,7 +3056,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Dict[Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
 
@@ -3066,7 +3066,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
 
@@ -3092,8 +3092,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logtemplate_python">
-<a href="#logtemplate_python" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3112,8 +3112,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcelocation_python">
-<a href="#sourcelocation_python" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
+        <span id="source_location_python">
+<a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3515,8 +3515,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-required"
             title="Required">
-        <span id="encodedtaskcontent_python">
-<a href="#encodedtaskcontent_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Task<wbr>Content</a>
+        <span id="encoded_task_content_python">
+<a href="#encoded_task_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>task_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3529,7 +3529,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Dict[Platform<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
 
@@ -3539,7 +3539,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Dict[Agent<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -3559,14 +3559,14 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Dict[Credentials]</a></span>
+        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodedvaluescontent_python">
-<a href="#encodedvaluescontent_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Values<wbr>Content</a>
+        <span id="encoded_values_content_python">
+<a href="#encoded_values_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>values_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3585,8 +3585,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logtemplate_python">
-<a href="#logtemplate_python" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3595,8 +3595,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcelocation_python">
-<a href="#sourcelocation_python" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
+        <span id="source_location_python">
+<a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3620,7 +3620,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">List[Set<wbr>Value]</a></span>
+        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 
@@ -3998,8 +3998,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-required"
             title="Required">
-        <span id="encodedtaskcontent_python">
-<a href="#encodedtaskcontent_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Task<wbr>Content</a>
+        <span id="encoded_task_content_python">
+<a href="#encoded_task_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>task_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4012,7 +4012,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Dict[Platform<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
 
@@ -4022,7 +4022,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Dict[Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -4042,14 +4042,14 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Dict[Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodedvaluescontent_python">
-<a href="#encodedvaluescontent_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Values<wbr>Content</a>
+        <span id="encoded_values_content_python">
+<a href="#encoded_values_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>values_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4068,8 +4068,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logtemplate_python">
-<a href="#logtemplate_python" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4078,8 +4078,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcelocation_python">
-<a href="#sourcelocation_python" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
+        <span id="source_location_python">
+<a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4103,7 +4103,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 
@@ -4485,14 +4485,14 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Dict[Platform<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="taskfilepath_python">
-<a href="#taskfilepath_python" style="color: inherit; text-decoration: inherit;">task<wbr>File<wbr>Path</a>
+        <span id="task_file_path_python">
+<a href="#task_file_path_python" style="color: inherit; text-decoration: inherit;">task_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4505,7 +4505,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Dict[Agent<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -4525,7 +4525,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Dict[Credentials]</a></span>
+        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
 
@@ -4541,8 +4541,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logtemplate_python">
-<a href="#logtemplate_python" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4551,8 +4551,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcelocation_python">
-<a href="#sourcelocation_python" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
+        <span id="source_location_python">
+<a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4576,14 +4576,14 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">List[Set<wbr>Value]</a></span>
+        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesfilepath_python">
-<a href="#valuesfilepath_python" style="color: inherit; text-decoration: inherit;">values<wbr>File<wbr>Path</a>
+        <span id="values_file_path_python">
+<a href="#values_file_path_python" style="color: inherit; text-decoration: inherit;">values_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4968,14 +4968,14 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Dict[Platform<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="taskfilepath_python">
-<a href="#taskfilepath_python" style="color: inherit; text-decoration: inherit;">task<wbr>File<wbr>Path</a>
+        <span id="task_file_path_python">
+<a href="#task_file_path_python" style="color: inherit; text-decoration: inherit;">task_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4988,7 +4988,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Dict[Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -5008,7 +5008,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Dict[Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
 
@@ -5024,8 +5024,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logtemplate_python">
-<a href="#logtemplate_python" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5034,8 +5034,8 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcelocation_python">
-<a href="#sourcelocation_python" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
+        <span id="source_location_python">
+<a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5059,14 +5059,14 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesfilepath_python">
-<a href="#valuesfilepath_python" style="color: inherit; text-decoration: inherit;">values<wbr>File<wbr>Path</a>
+        <span id="values_file_path_python">
+<a href="#values_file_path_python" style="color: inherit; text-decoration: inherit;">values_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5277,7 +5277,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -5488,7 +5488,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -5839,7 +5839,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">List[Image<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Sequence[Image<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of image updates that caused the build.{{% /md %}}</dd>
 
@@ -6081,7 +6081,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">List[Argument]</a></span>
+        <span class="property-type"><a href="#argument">Sequence[Argument<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd>
@@ -6132,7 +6132,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">List[Set<wbr>Value]</a></span>
+        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd>
 
@@ -6364,7 +6364,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List[Argument<wbr>Response]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd>
@@ -6415,7 +6415,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd>
 
@@ -7542,7 +7542,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#log_artifact_python" style="color: inherit; text-decoration: inherit;">log_<wbr>artifact</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Dict[Image<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The image description for the log artifact.{{% /md %}}</dd>
 
@@ -7582,7 +7582,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Dict[Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -7612,7 +7612,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom registries that were logged in during this run.{{% /md %}}</dd>
 
@@ -7632,7 +7632,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#image_update_trigger_python" style="color: inherit; text-decoration: inherit;">image_<wbr>update_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageupdatetriggerresponse">Dict[Image<wbr>Update<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imageupdatetriggerresponse">Image<wbr>Update<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The image update trigger that caused the run. This is applicable if the task has base image trigger configured.{{% /md %}}</dd>
 
@@ -7662,7 +7662,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#output_images_python" style="color: inherit; text-decoration: inherit;">output_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">List[Image<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Sequence[Image<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.{{% /md %}}</dd>
 
@@ -7672,7 +7672,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Dict[Platform<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run will happen.{{% /md %}}</dd>
 
@@ -7722,7 +7722,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Dict[Source<wbr>Trigger<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the run.{{% /md %}}</dd>
 
@@ -7762,7 +7762,7 @@ executing a build step.{{% /md %}}</dd>
 <a href="#timer_trigger_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerdescriptorresponse">Dict[Timer<wbr>Trigger<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timertriggerdescriptorresponse">Timer<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timer trigger that caused the run.{{% /md %}}</dd>
 
@@ -8189,8 +8189,8 @@ used as is without any modification.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8348,8 +8348,8 @@ used as is without any modification.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9040,8 +9040,8 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="taskid_python">
-<a href="#taskid_python" style="color: inherit; text-decoration: inherit;">task<wbr>Id</a>
+        <span id="task_id_python">
+<a href="#task_id_python" style="color: inherit; text-decoration: inherit;">task_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9070,8 +9070,8 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logtemplate_python">
-<a href="#logtemplate_python" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9080,11 +9080,11 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overridetaskstepproperties_python">
-<a href="#overridetaskstepproperties_python" style="color: inherit; text-decoration: inherit;">override<wbr>Task<wbr>Step<wbr>Properties</a>
+        <span id="override_task_step_properties_python">
+<a href="#override_task_step_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>task_<wbr>step_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetaskstepproperties">Dict[Override<wbr>Task<wbr>Step<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#overridetaskstepproperties">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd>
 
@@ -9279,8 +9279,8 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="taskid_python">
-<a href="#taskid_python" style="color: inherit; text-decoration: inherit;">task<wbr>Id</a>
+        <span id="task_id_python">
+<a href="#task_id_python" style="color: inherit; text-decoration: inherit;">task_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9309,8 +9309,8 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logtemplate_python">
-<a href="#logtemplate_python" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
+        <span id="log_template_python">
+<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9319,11 +9319,11 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overridetaskstepproperties_python">
-<a href="#overridetaskstepproperties_python" style="color: inherit; text-decoration: inherit;">override<wbr>Task<wbr>Step<wbr>Properties</a>
+        <span id="override_task_step_properties_python">
+<a href="#override_task_step_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>task_<wbr>step_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Dict[Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd>
 

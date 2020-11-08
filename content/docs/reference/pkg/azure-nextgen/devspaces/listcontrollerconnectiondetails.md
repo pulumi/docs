@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#connection_details_list_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>details_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerconnectiondetailsresponse">List[Controller<wbr>Connection<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#controllerconnectiondetailsresponse">Sequence[Controller<wbr>Connection<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd>
 
@@ -348,11 +348,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="orchestratorspecificconnectiondetails_python">
-<a href="#orchestratorspecificconnectiondetails_python" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Specific<wbr>Connection<wbr>Details</a>
+        <span id="orchestrator_specific_connection_details_python">
+<a href="#orchestrator_specific_connection_details_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>specific_<wbr>connection_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesconnectiondetailsresponse">Dict[Kubernetes<wbr>Connection<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kubernetesconnectiondetailsresponse">Kubernetes<wbr>Connection<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd>
 
@@ -427,8 +427,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kubeconfig_python">
-<a href="#kubeconfig_python" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
+        <span id="kube_config_python">
+<a href="#kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

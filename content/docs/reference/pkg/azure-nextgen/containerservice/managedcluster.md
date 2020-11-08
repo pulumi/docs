@@ -206,61 +206,61 @@ import pulumi_azure_nextgen as azure_nextgen
 
 managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
     addon_profiles={},
-    agent_pool_profiles=[{
-        "count": 3,
-        "enableNodePublicIP": True,
-        "mode": "System",
-        "name": "nodepool1",
-        "osType": "Linux",
-        "proximityPlacementGroupID": "/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
-        "type": "VirtualMachineScaleSets",
-        "vmSize": "Standard_DS2_v2",
-    }],
-    auto_scaler_profile={
-        "scaleDownDelayAfterAdd": "15m",
-        "scanInterval": "20s",
-    },
+    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+        count=3,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        proximity_placement_group_id="/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS2_v2",
+    )],
+    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
     disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
     dns_prefix="dnsprefix1",
     enable_pod_security_policy=True,
     enable_rbac=True,
     kubernetes_version="",
-    linux_profile={
-        "adminUsername": "azureuser",
-        "ssh": {
-            "publicKeys": [{
-                "keyData": "keydata",
-            }],
-        },
-    },
+    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
     location="location1",
-    network_profile={
-        "loadBalancerProfile": {
-            "managedOutboundIPs": {
-                "count": 2,
-            },
-        },
-        "loadBalancerSku": "standard",
-        "outboundType": "loadBalancer",
-    },
+    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile={
-        "clientId": "clientid",
-        "secret": "secret",
-    },
-    sku={
-        "name": "Basic",
-        "tier": "Free",
-    },
+    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
     tags={
         "archv2": "",
         "tier": "production",
     },
-    windows_profile={
-        "adminPassword": "replacePassword1234$",
-        "adminUsername": "azureuser",
-    })
+    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
 
 ```
 
@@ -542,70 +542,70 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
-    aad_profile={
-        "enableAzureRBAC": True,
-        "managed": True,
-    },
+    aad_profile=azure_nextgen.containerservice.latest.ManagedClusterAADProfileArgs(
+        enable_azure_rbac=True,
+        managed=True,
+    ),
     addon_profiles={},
-    agent_pool_profiles=[{
-        "availabilityZones": [
+    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+        availability_zones=[
             "1",
             "2",
             "3",
         ],
-        "count": 3,
-        "enableNodePublicIP": True,
-        "mode": "System",
-        "name": "nodepool1",
-        "osType": "Linux",
-        "type": "VirtualMachineScaleSets",
-        "vmSize": "Standard_DS1_v2",
-    }],
-    auto_scaler_profile={
-        "scaleDownDelayAfterAdd": "15m",
-        "scanInterval": "20s",
-    },
+        count=3,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS1_v2",
+    )],
+    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
     disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
     dns_prefix="dnsprefix1",
     enable_pod_security_policy=True,
     enable_rbac=True,
     kubernetes_version="",
-    linux_profile={
-        "adminUsername": "azureuser",
-        "ssh": {
-            "publicKeys": [{
-                "keyData": "keydata",
-            }],
-        },
-    },
+    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
     location="location1",
-    network_profile={
-        "loadBalancerProfile": {
-            "managedOutboundIPs": {
-                "count": 2,
-            },
-        },
-        "loadBalancerSku": "standard",
-        "outboundType": "loadBalancer",
-    },
+    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile={
-        "clientId": "clientid",
-        "secret": "secret",
-    },
-    sku={
-        "name": "Basic",
-        "tier": "Free",
-    },
+    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
     tags={
         "archv2": "",
         "tier": "production",
     },
-    windows_profile={
-        "adminPassword": "replacePassword1234$",
-        "adminUsername": "azureuser",
-    })
+    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
 
 ```
 
@@ -902,72 +902,72 @@ import pulumi_azure_nextgen as azure_nextgen
 
 managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
     addon_profiles={},
-    agent_pool_profiles=[{
-        "availabilityZones": [
+    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+        availability_zones=[
             "1",
             "2",
             "3",
         ],
-        "count": 3,
-        "enableNodePublicIP": True,
-        "mode": "System",
-        "name": "nodepool1",
-        "osType": "Linux",
-        "type": "VirtualMachineScaleSets",
-        "vmSize": "Standard_DS1_v2",
-    }],
-    auto_scaler_profile={
-        "balanceSimilarNodeGroups": "true",
-        "expander": "most-pods",
-        "newPodScaleUpDelay": "1m",
-        "scaleDownDelayAfterAdd": "15m",
-        "scanInterval": "20s",
-        "skipNodesWithSystemPods": "false",
-    },
+        count=3,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS1_v2",
+    )],
+    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+        balance_similar_node_groups="true",
+        expander="most-pods",
+        new_pod_scale_up_delay="1m",
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+        skip_nodes_with_system_pods="false",
+    ),
     disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
     dns_prefix="dnsprefix1",
     enable_pod_security_policy=True,
     enable_rbac=True,
-    identity={
-        "type": "UserAssigned",
-    },
+    identity=azure_nextgen.containerservice.latest.ManagedClusterIdentityArgs(
+        type="UserAssigned",
+    ),
     kubernetes_version="",
-    linux_profile={
-        "adminUsername": "azureuser",
-        "ssh": {
-            "publicKeys": [{
-                "keyData": "keydata",
-            }],
-        },
-    },
+    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
     location="location1",
-    network_profile={
-        "loadBalancerProfile": {
-            "managedOutboundIPs": {
-                "count": 2,
-            },
-        },
-        "loadBalancerSku": "standard",
-        "outboundType": "loadBalancer",
-    },
+    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile={
-        "clientId": "clientid",
-        "secret": "secret",
-    },
-    sku={
-        "name": "Basic",
-        "tier": "Free",
-    },
+    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
     tags={
         "archv2": "",
         "tier": "production",
     },
-    windows_profile={
-        "adminPassword": "replacePassword1234$",
-        "adminUsername": "azureuser",
-    })
+    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
 
 ```
 
@@ -1261,69 +1261,69 @@ import pulumi_azure_nextgen as azure_nextgen
 
 managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
     addon_profiles={},
-    agent_pool_profiles=[{
-        "availabilityZones": [
+    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+        availability_zones=[
             "1",
             "2",
             "3",
         ],
-        "count": 3,
-        "enableNodePublicIP": True,
-        "mode": "System",
-        "name": "nodepool1",
-        "osType": "Linux",
-        "type": "VirtualMachineScaleSets",
-        "vmSize": "Standard_DS1_v2",
-    }],
-    auto_scaler_profile={
-        "scaleDownDelayAfterAdd": "15m",
-        "scanInterval": "20s",
-    },
+        count=3,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS1_v2",
+    )],
+    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
     disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
     dns_prefix="dnsprefix1",
     enable_pod_security_policy=True,
     enable_rbac=True,
-    identity={
-        "type": "UserAssigned",
-    },
+    identity=azure_nextgen.containerservice.latest.ManagedClusterIdentityArgs(
+        type="UserAssigned",
+    ),
     kubernetes_version="",
-    linux_profile={
-        "adminUsername": "azureuser",
-        "ssh": {
-            "publicKeys": [{
-                "keyData": "keydata",
-            }],
-        },
-    },
+    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
     location="location1",
-    network_profile={
-        "loadBalancerProfile": {
-            "managedOutboundIPs": {
-                "count": 2,
-            },
-        },
-        "loadBalancerSku": "standard",
-        "outboundType": "loadBalancer",
-    },
+    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
     resource_group_name="rg1",
     resource_name="clustername1",
-    service_principal_profile={
-        "clientId": "clientid",
-        "secret": "secret",
-    },
-    sku={
-        "name": "Basic",
-        "tier": "Free",
-    },
+    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
     tags={
         "archv2": "",
         "tier": "production",
     },
-    windows_profile={
-        "adminPassword": "replacePassword1234$",
-        "adminUsername": "azureuser",
-        "licenseType": "Windows_Server",
-    })
+    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+        license_type="Windows_Server",
+    ))
 
 ```
 
@@ -1418,7 +1418,7 @@ const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedClusterAADProfile]]</span> = None<span class="p">, </span><span class="nx">addon_profiles</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ManagedClusterAddonProfile]]</span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ManagedClusterAgentPoolProfile]]</span> = None<span class="p">, </span><span class="nx">api_server_access_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedClusterAPIServerAccessProfile]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedClusterPropertiesAutoScalerProfile]]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_rbac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedClusterIdentity]]</span> = None<span class="p">, </span><span class="nx">identity_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ManagedClusterPropertiesIdentityProfile]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceLinuxProfile]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedClusterServicePrincipalProfile]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedClusterSKU]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedClusterWindowsProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterAADProfileArgs]</span> = None<span class="p">, </span><span class="nx">addon_profiles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ManagedClusterAddonProfileArgs]]</span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedClusterAgentPoolProfileArgs]]</span> = None<span class="p">, </span><span class="nx">api_server_access_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterAPIServerAccessProfileArgs]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterPropertiesAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_rbac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">identity_profile</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ManagedClusterPropertiesIdentityProfileArgs]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[ContainerServiceLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[ContainerServiceNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterServicePrincipalProfileArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterSKUArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[ManagedClusterWindowsProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2307,7 +2307,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#aad_profile_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraadprofile">Dict[Managed<wbr>Cluster<wbr>AADProfile]</a></span>
+        <span class="property-type"><a href="#managedclusteraadprofile">Managed<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd>
 
@@ -2317,7 +2317,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#addon_profiles_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Cluster<wbr>Addon<wbr>Profile]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd>
 
@@ -2327,7 +2327,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteragentpoolprofile">List[Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#managedclusteragentpoolprofile">Sequence[Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
 
@@ -2337,7 +2337,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#api_server_access_profile_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>access_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterapiserveraccessprofile">Dict[Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#managedclusterapiserveraccessprofile">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd>
 
@@ -2347,7 +2347,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#auto_scaler_profile_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpropertiesautoscalerprofile">Dict[Managed<wbr>Cluster<wbr>Properties<wbr>Auto<wbr>Scaler<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#managedclusterpropertiesautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd>
 
@@ -2397,7 +2397,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteridentity">Dict[Managed<wbr>Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#managedclusteridentity">Managed<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd>
 
@@ -2407,7 +2407,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_profile_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Cluster<wbr>Properties<wbr>Identity<wbr>Profile]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Properties<wbr>Identity<wbr>Profile<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd>
 
@@ -2427,7 +2427,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicelinuxprofile">Dict[Container<wbr>Service<wbr>Linux<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
 
@@ -2437,7 +2437,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicenetworkprofile">Dict[Container<wbr>Service<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#containerservicenetworkprofile">Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd>
 
@@ -2457,7 +2457,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterserviceprincipalprofile">Dict[Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#managedclusterserviceprincipalprofile">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd>
 
@@ -2467,7 +2467,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclustersku">Dict[Managed<wbr>Cluster<wbr>SKU]</a></span>
+        <span class="property-type"><a href="#managedclustersku">Managed<wbr>Cluster<wbr>SKUArgs</a></span>
     </dt>
     <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd>
 
@@ -2477,7 +2477,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -2487,7 +2487,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterwindowsprofile">Dict[Managed<wbr>Cluster<wbr>Windows<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#managedclusterwindowsprofile">Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
 
@@ -2816,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Dict[Power<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd>
 
@@ -3132,7 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfiguration">Dict[Container<wbr>Service<wbr>Ssh<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 
@@ -3251,7 +3251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Dict[Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
 
@@ -3620,7 +3620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
 
@@ -4059,7 +4059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
 
@@ -4208,7 +4208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickey">List[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickey">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 
@@ -4287,7 +4287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
 
@@ -4362,8 +4362,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4441,8 +4441,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4700,11 +4700,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="admin_group_object_i_ds_python">
-<a href="#admin_group_object_i_ds_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>i_<wbr>ds</a>
+        <span id="admin_group_object_ids_python">
+<a href="#admin_group_object_ids_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd>
 
@@ -5019,11 +5019,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="admin_group_object_i_ds_python">
-<a href="#admin_group_object_i_ds_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>i_<wbr>ds</a>
+        <span id="admin_group_object_ids_python">
+<a href="#admin_group_object_ids_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd>
 
@@ -5192,7 +5192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_ip_ranges_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd>
 
@@ -5311,7 +5311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_ip_ranges_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd>
 
@@ -5440,7 +5440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd>
 
@@ -5589,7 +5589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Dict[Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd>
 
@@ -5599,7 +5599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd>
 
@@ -6537,7 +6537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
 
@@ -6617,7 +6617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
 
@@ -6627,7 +6627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
 
@@ -6717,7 +6717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
 
@@ -6737,7 +6737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettings">Dict[Agent<wbr>Pool<wbr>Upgrade<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
 
@@ -7636,7 +7636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Dict[Power<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
 
@@ -7656,7 +7656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
 
@@ -7736,7 +7736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
 
@@ -7746,7 +7746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
 
@@ -7836,7 +7836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
 
@@ -7856,7 +7856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Dict[Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
 
@@ -8154,7 +8154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -8508,11 +8508,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="effective_outbound_i_ps_python">
-<a href="#effective_outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>i_<wbr>ps</a>
+        <span id="effective_outbound_ips_python">
+<a href="#effective_outbound_ips_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List[Resource<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
 
@@ -8528,23 +8528,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="managed_outbound_i_ps_python">
-<a href="#managed_outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>i_<wbr>ps</a>
+        <span id="managed_outbound_ips_python">
+<a href="#managed_outbound_ips_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="outbound_i_ps_python">
-<a href="#outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>i_<wbr>ps</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs]</a></span>
-    </dt>
-    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8552,9 +8542,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outbound_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outbound_ips_python">
+<a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8710,7 +8710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List[Resource<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
 
@@ -8785,11 +8785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_python">
-<a href="#public_i_ps_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps</a>
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List[Resource<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
 
@@ -9024,11 +9024,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="effective_outbound_i_ps_python">
-<a href="#effective_outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>i_<wbr>ps</a>
+        <span id="effective_outbound_ips_python">
+<a href="#effective_outbound_ips_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
 
@@ -9044,23 +9044,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="managed_outbound_i_ps_python">
-<a href="#managed_outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>i_<wbr>ps</a>
+        <span id="managed_outbound_ips_python">
+<a href="#managed_outbound_ips_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="outbound_i_ps_python">
-<a href="#outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>i_<wbr>ps</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs]</a></span>
-    </dt>
-    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9068,9 +9058,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outbound_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Dict[Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes]</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outbound_ips_python">
+<a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9226,7 +9226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
 
@@ -9301,11 +9301,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_i_ps_python">
-<a href="#public_i_ps_python" style="color: inherit; text-decoration: inherit;">public_<wbr>i_<wbr>ps</a>
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
 
@@ -11487,7 +11487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11497,7 +11497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11524,7 +11524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11534,7 +11534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11561,7 +11561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11571,7 +11571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11598,7 +11598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11608,7 +11608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11646,7 +11646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11656,7 +11656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11683,7 +11683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11693,7 +11693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11720,7 +11720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11730,7 +11730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11757,7 +11757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11767,7 +11767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

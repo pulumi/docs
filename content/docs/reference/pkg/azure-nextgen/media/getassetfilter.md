@@ -270,7 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -327,7 +327,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -384,7 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -441,7 +441,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#first_quality_python" style="color: inherit; text-decoration: inherit;">first_<wbr>quality</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firstqualityresponse">Dict[First<wbr>Quality<wbr>Response]</a></span>
+        <span class="property-type"><a href="#firstqualityresponse">First<wbr>Quality<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd>
 
@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#presentation_time_range_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>time_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presentationtimerangeresponse">Dict[Presentation<wbr>Time<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#presentationtimerangeresponse">Presentation<wbr>Time<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackselectionresponse">List[Filter<wbr>Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filtertrackselectionresponse">Sequence[Filter<wbr>Track<wbr>Selection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd>
 
@@ -709,11 +709,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="trackselections_python">
-<a href="#trackselections_python" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
+        <span id="track_selections_python">
+<a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">List[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
 

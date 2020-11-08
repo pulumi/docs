@@ -106,15 +106,15 @@ express_route_circuit_connection = azure_nextgen.network.latest.ExpressRouteCirc
     authorization_key="946a1918-b7a2-4917-b43c-8c4cdaee006a",
     circuit_name="ExpressRouteARMCircuitA",
     connection_name="circuitConnectionUSAUS",
-    express_route_circuit_peering={
-        "id": "/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
-    },
-    ipv6_circuit_connection_config={
-        "addressPrefix": "aa:bb::/125",
-    },
-    peer_express_route_circuit_peering={
-        "id": "/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
-    },
+    express_route_circuit_peering=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
+    ),
+    ipv6_circuit_connection_config=azure_nextgen.network.latest.Ipv6CircuitConnectionConfigArgs(
+        address_prefix="aa:bb::/125",
+    ),
+    peer_express_route_circuit_peering=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
+    ),
     peering_name="AzurePrivatePeering",
     resource_group_name="rg1")
 
@@ -162,7 +162,7 @@ const expressRouteCircuitConnection = new azure_nextgen.network.latest.ExpressRo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_circuit_connection_config</span><span class="p">:</span> <span class="nx">Optional[Dict[Ipv6CircuitConnectionConfig]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_circuit_connection_config</span><span class="p">:</span> <span class="nx">Optional[Ipv6CircuitConnectionConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -751,7 +751,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd>
 
@@ -771,7 +771,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#ipv6_circuit_connection_config_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>circuit_<wbr>connection_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Dict[Ipv6Circuit<wbr>Connection<wbr>Config]</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#peer_express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd>
 

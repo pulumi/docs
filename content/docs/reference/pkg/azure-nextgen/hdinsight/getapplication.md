@@ -399,7 +399,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpropertiesresponse">Dict[Application<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationpropertiesresponse">Application<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the application.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags for the application.{{% /md %}}</dd>
 
@@ -819,11 +819,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accessmodes_python">
-<a href="#accessmodes_python" style="color: inherit; text-decoration: inherit;">access<wbr>Modes</a>
+        <span id="access_modes_python">
+<a href="#access_modes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd>
 
@@ -839,8 +839,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablegatewayauth_python">
-<a href="#disablegatewayauth_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Gateway<wbr>Auth</a>
+        <span id="disable_gateway_auth_python">
+<a href="#disable_gateway_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gateway_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -869,8 +869,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subdomainsuffix_python">
-<a href="#subdomainsuffix_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Domain<wbr>Suffix</a>
+        <span id="sub_domain_suffix_python">
+<a href="#sub_domain_suffix_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>domain_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1302,7 +1302,7 @@ The following output properties are available:
 <a href="#compute_profile_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeprofileresponse">Dict[Compute<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computeprofileresponse">Compute<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
 
@@ -1312,7 +1312,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorsresponse">List[Errors<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorsresponse">Sequence[Errors<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
 
@@ -1322,7 +1322,7 @@ The following output properties are available:
 <a href="#https_endpoints_python" style="color: inherit; text-decoration: inherit;">https_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgethttpsendpointresponse">List[Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationgethttpsendpointresponse">Sequence[Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd>
 
@@ -1332,7 +1332,7 @@ The following output properties are available:
 <a href="#install_script_actions_python" style="color: inherit; text-decoration: inherit;">install_<wbr>script_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimescriptactionresponse">List[Runtime<wbr>Script<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#runtimescriptactionresponse">Sequence[Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd>
 
@@ -1342,7 +1342,7 @@ The following output properties are available:
 <a href="#ssh_endpoints_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgetendpointresponse">List[Application<wbr>Get<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationgetendpointresponse">Sequence[Application<wbr>Get<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd>
 
@@ -1352,7 +1352,7 @@ The following output properties are available:
 <a href="#uninstall_script_actions_python" style="color: inherit; text-decoration: inherit;">uninstall_<wbr>script_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimescriptactionresponse">List[Runtime<wbr>Script<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#runtimescriptactionresponse">Sequence[Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd>
 
@@ -1457,8 +1457,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxinstancecount_python">
-<a href="#maxinstancecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
+        <span id="max_instance_count_python">
+<a href="#max_instance_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1467,8 +1467,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1580,7 +1580,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalescheduleresponse">List[Autoscale<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalescheduleresponse">Sequence[Autoscale<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
 
@@ -1699,7 +1699,7 @@ The following output properties are available:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalecapacityresponse">Dict[Autoscale<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalecapacityresponse">Autoscale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
 
@@ -1709,7 +1709,7 @@ The following output properties are available:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerecurrenceresponse">Dict[Autoscale<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
 
@@ -1818,17 +1818,17 @@ The following output properties are available:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeandcapacity_python">
-<a href="#timeandcapacity_python" style="color: inherit; text-decoration: inherit;">time<wbr>And<wbr>Capacity</a>
+        <span id="time_and_capacity_python">
+<a href="#time_and_capacity_python" style="color: inherit; text-decoration: inherit;">time_<wbr>and_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Dict[Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
 
@@ -1963,8 +1963,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxinstancecount_python">
-<a href="#maxinstancecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
+        <span id="max_instance_count_python">
+<a href="#max_instance_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1973,8 +1973,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2066,7 +2066,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleresponse">List[Role<wbr>Response]</a></span>
+        <span class="property-type"><a href="#roleresponse">Sequence[Role<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
 
@@ -2221,8 +2221,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskspernode_python">
-<a href="#diskspernode_python" style="color: inherit; text-decoration: inherit;">disks<wbr>Per<wbr>Node</a>
+        <span id="disks_per_node_python">
+<a href="#disks_per_node_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2568,11 +2568,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshprofile_python">
-<a href="#sshprofile_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Profile</a>
+        <span id="ssh_profile_python">
+<a href="#ssh_profile_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshprofileresponse">Dict[Ssh<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshprofileresponse">Ssh<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
 
@@ -2657,11 +2657,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linuxoperatingsystemprofile_python">
-<a href="#linuxoperatingsystemprofile_python" style="color: inherit; text-decoration: inherit;">linux<wbr>Operating<wbr>System<wbr>Profile</a>
+        <span id="linux_operating_system_profile_python">
+<a href="#linux_operating_system_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>operating_<wbr>system_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Dict[Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
 
@@ -2980,17 +2980,17 @@ The following output properties are available:
 <a href="#autoscale_configuration_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleresponse">Dict[Autoscale<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscaleresponse">Autoscale<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datadisksgroups_python">
-<a href="#datadisksgroups_python" style="color: inherit; text-decoration: inherit;">data<wbr>Disks<wbr>Groups</a>
+        <span id="data_disks_groups_python">
+<a href="#data_disks_groups_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisksgroupsresponse">List[Data<wbr>Disks<wbr>Groups<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadisksgroupsresponse">Sequence[Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
 
@@ -3000,14 +3000,14 @@ The following output properties are available:
 <a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Dict[Hardware<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3030,24 +3030,24 @@ The following output properties are available:
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Dict[Os<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scriptactions_python">
-<a href="#scriptactions_python" style="color: inherit; text-decoration: inherit;">script<wbr>Actions</a>
+        <span id="script_actions_python">
+<a href="#script_actions_python" style="color: inherit; text-decoration: inherit;">script_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptactionresponse">List[Script<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scriptactionresponse">Sequence[Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetinstancecount_python">
-<a href="#targetinstancecount_python" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+        <span id="target_instance_count_python">
+<a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3060,7 +3060,7 @@ The following output properties are available:
 <a href="#virtual_network_profile_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofileresponse">Dict[Virtual<wbr>Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
 
@@ -3279,7 +3279,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd>
 
@@ -3537,7 +3537,7 @@ The following output properties are available:
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List[Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
 
@@ -3612,8 +3612,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatedata_python">
-<a href="#certificatedata_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
+        <span id="certificate_data_python">
+<a href="#certificate_data_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

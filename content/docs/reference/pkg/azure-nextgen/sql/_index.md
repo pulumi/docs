@@ -47,6 +47,7 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <li><a href="syncagent" title="SyncAgent"><span class="symbol resource"></span>SyncAgent</a></li>
     <li><a href="syncgroup" title="SyncGroup"><span class="symbol resource"></span>SyncGroup</a></li>
     <li><a href="syncmember" title="SyncMember"><span class="symbol resource"></span>SyncMember</a></li>
+    <li><a href="transparentdataencryption" title="TransparentDataEncryption"><span class="symbol resource"></span>TransparentDataEncryption</a></li>
     <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
     <li><a href="workloadclassifier" title="WorkloadClassifier"><span class="symbol resource"></span>WorkloadClassifier</a></li>
     <li><a href="workloadgroup" title="WorkloadGroup"><span class="symbol resource"></span>WorkloadGroup</a></li>
@@ -90,6 +91,7 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <li><a href="getsyncagent" title="GetSyncAgent"><span class="symbol function"></span>GetSyncAgent</a></li>
     <li><a href="getsyncgroup" title="GetSyncGroup"><span class="symbol function"></span>GetSyncGroup</a></li>
     <li><a href="getsyncmember" title="GetSyncMember"><span class="symbol function"></span>GetSyncMember</a></li>
+    <li><a href="gettransparentdataencryption" title="GetTransparentDataEncryption"><span class="symbol function"></span>GetTransparentDataEncryption</a></li>
     <li><a href="getvirtualnetworkrule" title="GetVirtualNetworkRule"><span class="symbol function"></span>GetVirtualNetworkRule</a></li>
     <li><a href="getworkloadclassifier" title="GetWorkloadClassifier"><span class="symbol function"></span>GetWorkloadClassifier</a></li>
     <li><a href="getworkloadgroup" title="GetWorkloadGroup"><span class="symbol function"></span>GetWorkloadGroup</a></li>
@@ -102,7 +104,7 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

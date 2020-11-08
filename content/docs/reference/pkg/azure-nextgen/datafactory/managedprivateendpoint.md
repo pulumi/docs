@@ -91,11 +91,11 @@ managed_private_endpoint = azure_nextgen.datafactory.latest.ManagedPrivateEndpoi
     factory_name="exampleFactoryName",
     managed_private_endpoint_name="exampleManagedPrivateEndpointName",
     managed_virtual_network_name="exampleManagedVirtualNetworkName",
-    properties={
-        "fqdns": [],
-        "groupId": "blob",
-        "privateLinkResourceId": "/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
-    },
+    properties=azure_nextgen.datafactory.latest.ManagedPrivateEndpointArgs(
+        fqdns=[],
+        group_id="blob",
+        private_link_resource_id="/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
+    ),
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -136,7 +136,7 @@ const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPriva
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedPrivateEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_private_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedPrivateEndpoint]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedPrivateEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_private_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ManagedPrivateEndpointArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -515,7 +515,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedprivateendpoint">Dict[Managed<wbr>Private<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#managedprivateendpoint">Managed<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd>
 
@@ -1031,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
 
@@ -1300,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatepropertiesresponse">Dict[Connection<wbr>State<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd>
 
@@ -1310,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified domain names{{% /md %}}</dd>
 

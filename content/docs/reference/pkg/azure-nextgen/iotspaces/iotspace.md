@@ -101,19 +101,19 @@ import pulumi_azure_nextgen as azure_nextgen
 
 io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
     location="string",
-    properties={
-        "storageContainer": {
-            "connectionString": "string",
-            "containerName": "string",
-            "resourceGroup": "string",
-            "subscriptionId": "string",
-        },
-    },
+    properties=azure_nextgen.iotspaces.v20171001preview.IoTSpacesPropertiesArgs(
+        storage_container=azure_nextgen.iotspaces.v20171001preview.StorageContainerPropertiesArgs(
+            connection_string="string",
+            container_name="string",
+            resource_group="string",
+            subscription_id="string",
+        ),
+    ),
     resource_group_name="resRg",
     resource_name="myIoTSpacesService",
-    sku={
-        "name": "F1",
-    })
+    sku=azure_nextgen.iotspaces.v20171001preview.IoTSpacesSkuInfoArgs(
+        name="F1",
+    ))
 
 ```
 
@@ -158,7 +158,7 @@ const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[IoTSpacesProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[IoTSpacesSkuInfo]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[IoTSpacesPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IoTSpacesSkuInfoArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -567,7 +567,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesskuinfo">Dict[Io<wbr>TSpaces<wbr>Sku<wbr>Info]</a></span>
+        <span class="property-type"><a href="#iotspacesskuinfo">Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A valid instance SKU.{{% /md %}}</dd>
 
@@ -577,7 +577,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesproperties">Dict[Io<wbr>TSpaces<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#iotspacesproperties">Io<wbr>TSpaces<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The common properties of a IoTSpaces service.{{% /md %}}</dd>
 
@@ -587,7 +587,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -834,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_container_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerproperties">Dict[Storage<wbr>Container<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#storagecontainerproperties">Storage<wbr>Container<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd>
 
@@ -1033,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_container_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Dict[Storage<wbr>Container<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd>
 

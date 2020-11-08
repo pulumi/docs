@@ -150,28 +150,28 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 streaming_endpoint = azure_nextgen.media.latest.StreamingEndpoint("streamingEndpoint",
-    access_control={
-        "akamai": {
-            "akamaiSignatureHeaderAuthenticationKeyList": [
-                {
-                    "base64Key": "dGVzdGlkMQ==",
-                    "expiration": "2029-12-31T16:00:00-08:00",
-                    "identifier": "id1",
-                },
-                {
-                    "base64Key": "dGVzdGlkMQ==",
-                    "expiration": "2030-12-31T16:00:00-08:00",
-                    "identifier": "id2",
-                },
+    access_control=azure_nextgen.media.latest.StreamingEndpointAccessControlArgs(
+        akamai=azure_nextgen.media.latest.AkamaiAccessControlArgs(
+            akamai_signature_header_authentication_key_list=[
+                azure_nextgen.media.latest.AkamaiSignatureHeaderAuthenticationKeyArgs(
+                    base64_key="dGVzdGlkMQ==",
+                    expiration="2029-12-31T16:00:00-08:00",
+                    identifier="id1",
+                ),
+                azure_nextgen.media.latest.AkamaiSignatureHeaderAuthenticationKeyArgs(
+                    base64_key="dGVzdGlkMQ==",
+                    expiration="2030-12-31T16:00:00-08:00",
+                    identifier="id2",
+                ),
             ],
-        },
-        "ip": {
-            "allow": [{
-                "address": "192.168.1.1",
-                "name": "AllowedIp",
-            }],
-        },
-    },
+        ),
+        ip=azure_nextgen.media.latest.IPAccessControlArgs(
+            allow=[azure_nextgen.media.latest.IPRangeArgs(
+                address="192.168.1.1",
+                name="AllowedIp",
+            )],
+        ),
+    ),
     account_name="slitestmedia10",
     availability_set_name="availableset",
     cdn_enabled=False,
@@ -248,7 +248,7 @@ const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("stre
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[Dict[StreamingEndpointAccessControl]]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policies</span><span class="p">:</span> <span class="nx">Optional[Dict[CrossSiteAccessPolicies]]</span> = None<span class="p">, </span><span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_cache_age</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">streaming_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[StreamingEndpointAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policies</span><span class="p">:</span> <span class="nx">Optional[CrossSiteAccessPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_cache_age</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">streaming_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -977,7 +977,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">Dict[Streaming<wbr>Endpoint<wbr>Access<wbr>Control]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd>
 
@@ -1037,7 +1037,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cross_site_access_policies_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspolicies">Dict[Cross<wbr>Site<wbr>Access<wbr>Policies]</a></span>
+        <span class="property-type"><a href="#crosssiteaccesspolicies">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd>
 
@@ -1047,7 +1047,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#custom_host_names_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint{{% /md %}}</dd>
 
@@ -1077,7 +1077,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1284,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1478,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1564,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_signature_header_authentication_key_list_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>key_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">List[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd>
 
@@ -1643,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_signature_header_authentication_key_list_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>key_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">List[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd>
 
@@ -1778,8 +1778,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="base64key_python">
-<a href="#base64key_python" style="color: inherit; text-decoration: inherit;">base64Key</a>
+        <span id="base64_key_python">
+<a href="#base64_key_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1937,8 +1937,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="base64key_python">
-<a href="#base64key_python" style="color: inherit; text-decoration: inherit;">base64Key</a>
+        <span id="base64_key_python">
+<a href="#base64_key_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2278,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">List[IPRange]</a></span>
+        <span class="property-type"><a href="#iprange">Sequence[IPRange<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd>
 
@@ -2357,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">List[IPRange<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd>
 
@@ -2512,8 +2512,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetprefixlength_python">
-<a href="#subnetprefixlength_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
+        <span id="subnet_prefix_length_python">
+<a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2671,8 +2671,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetprefixlength_python">
-<a href="#subnetprefixlength_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
+        <span id="subnet_prefix_length_python">
+<a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2784,7 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_python" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrol">Dict[Akamai<wbr>Access<wbr>Control]</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrol">Akamai<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd>
 
@@ -2794,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">Dict[IPAccess<wbr>Control]</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 
@@ -2903,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_python" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Dict[Akamai<wbr>Access<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd>
 
@@ -2913,7 +2913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Dict[IPAccess<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 

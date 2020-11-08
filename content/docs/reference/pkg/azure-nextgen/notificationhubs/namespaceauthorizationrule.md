@@ -91,12 +91,12 @@ import pulumi_azure_nextgen as azure_nextgen
 namespace_authorization_rule = azure_nextgen.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-1788",
     namespace_name="nh-sdk-ns",
-    properties={
-        "rights": [
+    properties=azure_nextgen.notificationhubs.latest.SharedAccessAuthorizationRulePropertiesArgs(
+        rights=[
             "Listen",
             "Send",
         ],
-    },
+    ),
     resource_group_name="5ktrial")
 
 ```
@@ -137,7 +137,7 @@ const namespaceAuthorizationRule = new azure_nextgen.notificationhubs.latest.Nam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[SharedAccessAuthorizationRuleProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NamespaceAuthorizationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SharedAccessAuthorizationRulePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -476,7 +476,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Dict[Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Namespace AuthorizationRules.{{% /md %}}</dd>
 
@@ -1105,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -1115,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd>
 
@@ -1125,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 

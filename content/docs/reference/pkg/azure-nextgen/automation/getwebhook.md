@@ -719,7 +719,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#runbook_python" style="color: inherit; text-decoration: inherit;">runbook</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookassociationpropertyresponse">Dict[Runbook<wbr>Association<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#runbookassociationpropertyresponse">Runbook<wbr>Association<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook the webhook is associated with.{{% /md %}}</dd>
 

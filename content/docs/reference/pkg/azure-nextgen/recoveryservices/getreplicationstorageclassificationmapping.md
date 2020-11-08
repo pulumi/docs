@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageclassificationmappingpropertiesresponse">Dict[Storage<wbr>Classification<wbr>Mapping<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageclassificationmappingpropertiesresponse">Storage<wbr>Classification<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the storage mapping object.{{% /md %}}</dd>
 

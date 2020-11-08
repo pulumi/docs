@@ -240,7 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -327,7 +327,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -414,7 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -501,7 +501,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#common_encryption_cbcs_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cbcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncbcsresponse">Dict[Common<wbr>Encryption<wbr>Cbcs<wbr>Response]</a></span>
+        <span class="property-type"><a href="#commonencryptioncbcsresponse">Common<wbr>Encryption<wbr>Cbcs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#common_encryption_cenc_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cenc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncencresponse">Dict[Common<wbr>Encryption<wbr>Cenc<wbr>Response]</a></span>
+        <span class="property-type"><a href="#commonencryptioncencresponse">Common<wbr>Encryption<wbr>Cenc<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#envelope_encryption_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envelopeencryptionresponse">Dict[Envelope<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#envelopeencryptionresponse">Envelope<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#no_encryption_python" style="color: inherit; text-decoration: inherit;">no_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noencryptionresponse">Dict[No<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#noencryptionresponse">No<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The following output properties are available:
 <a href="#fair_play_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ The following output properties are available:
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
 
@@ -714,7 +714,7 @@ The following output properties are available:
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Dict[Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
 
@@ -1002,7 +1002,7 @@ The following output properties are available:
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -1012,7 +1012,7 @@ The following output properties are available:
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ The following output properties are available:
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Dict[Cbcs<wbr>Drm<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
 
@@ -1032,7 +1032,7 @@ The following output properties are available:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Dict[Enabled<wbr>Protocols<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -1201,7 +1201,7 @@ The following output properties are available:
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -1211,7 +1211,7 @@ The following output properties are available:
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -1221,7 +1221,7 @@ The following output properties are available:
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Dict[Cenc<wbr>Drm<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
 
@@ -1231,7 +1231,7 @@ The following output properties are available:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Dict[Enabled<wbr>Protocols<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -1718,7 +1718,7 @@ The following output properties are available:
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
 
@@ -1728,7 +1728,7 @@ The following output properties are available:
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Dict[Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
 
@@ -1748,7 +1748,7 @@ The following output properties are available:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Dict[Enabled<wbr>Protocols<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -1827,7 +1827,7 @@ The following output properties are available:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Dict[Enabled<wbr>Protocols<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
 
@@ -1986,7 +1986,7 @@ The following output properties are available:
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List[Track<wbr>Selection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
 
@@ -2095,7 +2095,7 @@ The following output properties are available:
 <a href="#default_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Dict[Default<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
 
@@ -2105,7 +2105,7 @@ The following output properties are available:
 <a href="#key_to_track_mappings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>track_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
 
@@ -2656,11 +2656,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackselections_python">
-<a href="#trackselections_python" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
+        <span id="track_selections_python">
+<a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">List[Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
 

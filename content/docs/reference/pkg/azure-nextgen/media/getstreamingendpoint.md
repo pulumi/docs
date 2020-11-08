@@ -310,7 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -517,7 +517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -724,7 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -931,7 +931,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolresponse">Dict[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolresponse">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#cross_site_access_policies_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Dict[Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#crosssiteaccesspoliciesresponse">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#custom_host_names_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1114,7 +1114,7 @@ The following output properties are available:
 <a href="#akamai_signature_header_authentication_key_list_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>key_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">List[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd>
 
@@ -1249,8 +1249,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="base64key_python">
-<a href="#base64key_python" style="color: inherit; text-decoration: inherit;">base64Key</a>
+        <span id="base64_key_python">
+<a href="#base64_key_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1471,7 +1471,7 @@ The following output properties are available:
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">List[IPRange<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd>
 
@@ -1626,8 +1626,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetprefixlength_python">
-<a href="#subnetprefixlength_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
+        <span id="subnet_prefix_length_python">
+<a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1739,7 +1739,7 @@ The following output properties are available:
 <a href="#akamai_python" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Dict[Akamai<wbr>Access<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd>
 
@@ -1749,7 +1749,7 @@ The following output properties are available:
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Dict[IPAccess<wbr>Control<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 

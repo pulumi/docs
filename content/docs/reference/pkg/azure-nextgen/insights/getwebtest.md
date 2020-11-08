@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webtestgeolocationresponse">List[Web<wbr>Test<wbr>Geolocation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#webtestgeolocationresponse">Sequence[Web<wbr>Test<wbr>Geolocation<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd>
 
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webtestpropertiesresponseconfiguration">Dict[Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#webtestpropertiesresponseconfiguration">Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 

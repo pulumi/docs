@@ -221,128 +221,128 @@ autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSet
     autoscale_setting_name="MySetting",
     enabled=True,
     location="West US",
-    notifications=[{
-        "email": {
-            "customEmails": [
+    notifications=[azure_nextgen.insights.latest.AutoscaleNotificationArgs(
+        email=azure_nextgen.insights.latest.EmailNotificationArgs(
+            custom_emails=[
                 "gu@ms.com",
                 "ge@ns.net",
             ],
-            "sendToSubscriptionAdministrator": True,
-            "sendToSubscriptionCoAdministrators": True,
-        },
-        "operation": "Scale",
-        "webhooks": [{
-            "properties": {},
-            "serviceUri": "http://myservice.com",
-        }],
-    }],
+            send_to_subscription_administrator=True,
+            send_to_subscription_co_administrators=True,
+        ),
+        operation="Scale",
+        webhooks=[azure_nextgen.insights.latest.WebhookNotificationArgs(
+            properties={},
+            service_uri="http://myservice.com",
+        )],
+    )],
     profiles=[
-        {
-            "capacity": {
-                "default": "1",
-                "maximum": "10",
-                "minimum": "1",
-            },
-            "fixedDate": {
-                "end": "2015-03-05T14:30:00Z",
-                "start": "2015-03-05T14:00:00Z",
-                "timeZone": "UTC",
-            },
-            "name": "adios",
-            "rules": [
-                {
-                    "metricTrigger": {
-                        "metricName": "Percentage CPU",
-                        "metricResourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
-                        "operator": "GreaterThan",
-                        "statistic": "Average",
-                        "threshold": 10,
-                        "timeAggregation": "Average",
-                        "timeGrain": "PT1M",
-                        "timeWindow": "PT5M",
-                    },
-                    "scaleAction": {
-                        "cooldown": "PT5M",
-                        "direction": "Increase",
-                        "type": "ChangeCount",
-                        "value": "1",
-                    },
-                },
-                {
-                    "metricTrigger": {
-                        "metricName": "Percentage CPU",
-                        "metricResourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
-                        "operator": "GreaterThan",
-                        "statistic": "Average",
-                        "threshold": 15,
-                        "timeAggregation": "Average",
-                        "timeGrain": "PT2M",
-                        "timeWindow": "PT5M",
-                    },
-                    "scaleAction": {
-                        "cooldown": "PT6M",
-                        "direction": "Decrease",
-                        "type": "ChangeCount",
-                        "value": "2",
-                    },
-                },
+        azure_nextgen.insights.latest.AutoscaleProfileArgs(
+            capacity=azure_nextgen.insights.latest.ScaleCapacityArgs(
+                default="1",
+                maximum="10",
+                minimum="1",
+            ),
+            fixed_date=azure_nextgen.insights.latest.TimeWindowArgs(
+                end="2015-03-05T14:30:00Z",
+                start="2015-03-05T14:00:00Z",
+                time_zone="UTC",
+            ),
+            name="adios",
+            rules=[
+                azure_nextgen.insights.latest.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                        metric_name="Percentage CPU",
+                        metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+                        operator="GreaterThan",
+                        statistic="Average",
+                        threshold=10,
+                        time_aggregation="Average",
+                        time_grain="PT1M",
+                        time_window="PT5M",
+                    ),
+                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                        cooldown="PT5M",
+                        direction="Increase",
+                        type="ChangeCount",
+                        value="1",
+                    ),
+                ),
+                azure_nextgen.insights.latest.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                        metric_name="Percentage CPU",
+                        metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+                        operator="GreaterThan",
+                        statistic="Average",
+                        threshold=15,
+                        time_aggregation="Average",
+                        time_grain="PT2M",
+                        time_window="PT5M",
+                    ),
+                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                        cooldown="PT6M",
+                        direction="Decrease",
+                        type="ChangeCount",
+                        value="2",
+                    ),
+                ),
             ],
-        },
-        {
-            "capacity": {
-                "default": "1",
-                "maximum": "10",
-                "minimum": "1",
-            },
-            "name": "saludos",
-            "recurrence": {
-                "frequency": "Week",
-                "schedule": {
-                    "days": ["1"],
-                    "hours": [5],
-                    "minutes": [15],
-                    "timeZone": "UTC",
-                },
-            },
-            "rules": [
-                {
-                    "metricTrigger": {
-                        "metricName": "Percentage CPU",
-                        "metricResourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
-                        "operator": "GreaterThan",
-                        "statistic": "Average",
-                        "threshold": 10,
-                        "timeAggregation": "Average",
-                        "timeGrain": "PT1M",
-                        "timeWindow": "PT5M",
-                    },
-                    "scaleAction": {
-                        "cooldown": "PT5M",
-                        "direction": "Increase",
-                        "type": "ChangeCount",
-                        "value": "1",
-                    },
-                },
-                {
-                    "metricTrigger": {
-                        "metricName": "Percentage CPU",
-                        "metricResourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
-                        "operator": "GreaterThan",
-                        "statistic": "Average",
-                        "threshold": 15,
-                        "timeAggregation": "Average",
-                        "timeGrain": "PT2M",
-                        "timeWindow": "PT5M",
-                    },
-                    "scaleAction": {
-                        "cooldown": "PT6M",
-                        "direction": "Decrease",
-                        "type": "ChangeCount",
-                        "value": "2",
-                    },
-                },
+        ),
+        azure_nextgen.insights.latest.AutoscaleProfileArgs(
+            capacity=azure_nextgen.insights.latest.ScaleCapacityArgs(
+                default="1",
+                maximum="10",
+                minimum="1",
+            ),
+            name="saludos",
+            recurrence=azure_nextgen.insights.latest.RecurrenceArgs(
+                frequency="Week",
+                schedule=azure_nextgen.insights.latest.RecurrentScheduleArgs(
+                    days=["1"],
+                    hours=[5],
+                    minutes=[15],
+                    time_zone="UTC",
+                ),
+            ),
+            rules=[
+                azure_nextgen.insights.latest.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                        metric_name="Percentage CPU",
+                        metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+                        operator="GreaterThan",
+                        statistic="Average",
+                        threshold=10,
+                        time_aggregation="Average",
+                        time_grain="PT1M",
+                        time_window="PT5M",
+                    ),
+                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                        cooldown="PT5M",
+                        direction="Increase",
+                        type="ChangeCount",
+                        value="1",
+                    ),
+                ),
+                azure_nextgen.insights.latest.ScaleRuleArgs(
+                    metric_trigger=azure_nextgen.insights.latest.MetricTriggerArgs(
+                        metric_name="Percentage CPU",
+                        metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+                        operator="GreaterThan",
+                        statistic="Average",
+                        threshold=15,
+                        time_aggregation="Average",
+                        time_grain="PT2M",
+                        time_window="PT5M",
+                    ),
+                    scale_action=azure_nextgen.insights.latest.ScaleActionArgs(
+                        cooldown="PT6M",
+                        direction="Decrease",
+                        type="ChangeCount",
+                        value="2",
+                    ),
+                ),
             ],
-        },
+        ),
     ],
     resource_group_name="TestingMetricsScaleSet",
     tags={},
@@ -506,7 +506,7 @@ const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("aut
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[AutoscaleNotification]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[List[AutoscaleProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleProfileArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -995,7 +995,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleprofile">List[Autoscale<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#autoscaleprofile">Sequence[Autoscale<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.{{% /md %}}</dd>
 
@@ -1035,7 +1035,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalenotification">List[Autoscale<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#autoscalenotification">Sequence[Autoscale<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the collection of notifications.{{% /md %}}</dd>
 
@@ -1045,7 +1045,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1332,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotification">Dict[Email<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd>
 
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotification">List[Webhook<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#webhooknotification">Sequence[Webhook<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd>
 
@@ -1491,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Dict[Email<wbr>Notification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd>
 
@@ -1501,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">List[Webhook<wbr>Notification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">Sequence[Webhook<wbr>Notification<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd>
 
@@ -1700,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacity">Dict[Scale<wbr>Capacity]</a></span>
+        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd>
 
@@ -1720,17 +1720,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerule">List[Scale<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#scalerule">Sequence[Scale<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixeddate_python">
-<a href="#fixeddate_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
+        <span id="fixed_date_python">
+<a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindow">Dict[Time<wbr>Window]</a></span>
+        <span class="property-type"><a href="#timewindow">Time<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd>
 
@@ -1740,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrence">Dict[Recurrence]</a></span>
+        <span class="property-type"><a href="#recurrence">Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd>
 
@@ -1939,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Dict[Scale<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd>
 
@@ -1959,17 +1959,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">List[Scale<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">Sequence[Scale<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixeddate_python">
-<a href="#fixeddate_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
+        <span id="fixed_date_python">
+<a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Dict[Time<wbr>Window<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd>
 
@@ -1979,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Dict[Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd>
 
@@ -2114,18 +2114,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customemails_python">
-<a href="#customemails_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+        <span id="custom_emails_python">
+<a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtosubscriptionadministrator_python">
-<a href="#sendtosubscriptionadministrator_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Administrator</a>
+        <span id="send_to_subscription_administrator_python">
+<a href="#send_to_subscription_administrator_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>administrator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2134,8 +2134,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtosubscriptioncoadministrators_python">
-<a href="#sendtosubscriptioncoadministrators_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrators</a>
+        <span id="send_to_subscription_co_administrators_python">
+<a href="#send_to_subscription_co_administrators_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>co_<wbr>administrators</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2273,18 +2273,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customemails_python">
-<a href="#customemails_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+        <span id="custom_emails_python">
+<a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtosubscriptionadministrator_python">
-<a href="#sendtosubscriptionadministrator_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Administrator</a>
+        <span id="send_to_subscription_administrator_python">
+<a href="#send_to_subscription_administrator_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>administrator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2293,8 +2293,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtosubscriptioncoadministrators_python">
-<a href="#sendtosubscriptioncoadministrators_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrators</a>
+        <span id="send_to_subscription_co_administrators_python">
+<a href="#send_to_subscription_co_administrators_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>co_<wbr>administrators</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2642,8 +2642,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2652,8 +2652,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metricresourceuri_python">
-<a href="#metricresourceuri_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Uri</a>
+        <span id="metric_resource_uri_python">
+<a href="#metric_resource_uri_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>resource_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2692,23 +2692,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}time aggregation type. How the data that is collected should be combined over time. The default value is Average.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="timewindow_python">
-<a href="#timewindow_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2720,20 +2710,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="time_window_python">
+<a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimension">List[Scale<wbr>Rule<wbr>Metric<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimension">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3081,8 +3081,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3091,8 +3091,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metricresourceuri_python">
-<a href="#metricresourceuri_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Uri</a>
+        <span id="metric_resource_uri_python">
+<a href="#metric_resource_uri_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>resource_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3131,23 +3131,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}time aggregation type. How the data that is collected should be combined over time. The default value is Average.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="timewindow_python">
-<a href="#timewindow_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3159,20 +3149,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="time_window_python">
+<a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">List[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3294,7 +3294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentschedule">Dict[Recurrent<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd>
 
@@ -3413,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Dict[Recurrent<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd>
 
@@ -3582,7 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the collection of days that the profile takes effect on. Possible values are Sunday through Saturday.{{% /md %}}</dd>
 
@@ -3592,7 +3592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM times are not supported).{{% /md %}}</dd>
 
@@ -3602,7 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A collection of minutes at which the profile takes effect at.{{% /md %}}</dd>
 
@@ -3781,7 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the collection of days that the profile takes effect on. Possible values are Sunday through Saturday.{{% /md %}}</dd>
 
@@ -3791,7 +3791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM times are not supported).{{% /md %}}</dd>
 
@@ -3801,7 +3801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A collection of minutes at which the profile takes effect at.{{% /md %}}</dd>
 
@@ -4632,21 +4632,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metrictrigger_python">
-<a href="#metrictrigger_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+        <span id="metric_trigger_python">
+<a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictrigger">Dict[Metric<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleaction_python">
-<a href="#scaleaction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
+        <span id="scale_action_python">
+<a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleaction">Dict[Scale<wbr>Action]</a></span>
+        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd>
 
@@ -4781,8 +4781,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dimensionname_python">
-<a href="#dimensionname_python" style="color: inherit; text-decoration: inherit;">dimension<wbr>Name</a>
+        <span id="dimension_name_python">
+<a href="#dimension_name_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4805,7 +4805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of dimension values. For example: ["App1","App2"].{{% /md %}}</dd>
 
@@ -4940,8 +4940,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dimensionname_python">
-<a href="#dimensionname_python" style="color: inherit; text-decoration: inherit;">dimension<wbr>Name</a>
+        <span id="dimension_name_python">
+<a href="#dimension_name_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4964,7 +4964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of dimension values. For example: ["App1","App2"].{{% /md %}}</dd>
 
@@ -5069,21 +5069,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metrictrigger_python">
-<a href="#metrictrigger_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+        <span id="metric_trigger_python">
+<a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Dict[Metric<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleaction_python">
-<a href="#scaleaction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
+        <span id="scale_action_python">
+<a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Dict[Scale<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd>
 
@@ -5510,7 +5510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}a property bag of settings. This value can be empty.{{% /md %}}</dd>
 
@@ -5629,7 +5629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}a property bag of settings. This value can be empty.{{% /md %}}</dd>
 

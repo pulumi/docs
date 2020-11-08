@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#replication_status_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationstatusresponse">Dict[Replication<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#replicationstatusresponse">Replication<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionstorageprofileresponse">Dict[Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryimageversionstorageprofileresponse">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#publishing_profile_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionpublishingprofileresponse">Dict[Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryimageversionpublishingprofileresponse">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -863,7 +863,7 @@ The following output properties are available:
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">List[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
 
@@ -873,7 +873,7 @@ The following output properties are available:
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">Dict[OSDisk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 
@@ -1191,7 +1191,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -1470,7 +1470,7 @@ The following output properties are available:
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">List[Target<wbr>Region<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targetregionresponse">Sequence[Target<wbr>Region<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 
@@ -1609,7 +1609,7 @@ The following output properties are available:
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">List[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
 
@@ -1619,7 +1619,7 @@ The following output properties are available:
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">Dict[Gallery<wbr>OSDisk<wbr>Image<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
 
@@ -1629,7 +1629,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -1788,7 +1788,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -2185,7 +2185,7 @@ The following output properties are available:
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">List[Regional<wbr>Replication<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Sequence[Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
 
@@ -2364,14 +2364,14 @@ The following output properties are available:
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Dict[Encryption<wbr>Images<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionalreplicacount_python">
-<a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
+        <span id="regional_replica_count_python">
+<a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

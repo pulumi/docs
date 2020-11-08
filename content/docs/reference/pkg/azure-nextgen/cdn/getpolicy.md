@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#endpoint_links_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cdnendpointresponse">List[Cdn<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cdnendpointresponse">Sequence[Cdn<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes Azure CDN endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#custom_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrulelistresponse">Dict[Custom<wbr>Rule<wbr>List<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customrulelistresponse">Custom<wbr>Rule<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#managed_rules_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetlistresponse">Dict[Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedrulesetlistresponse">Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#policy_settings_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysettingsresponse">Dict[Policy<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#policysettingsresponse">Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes  policySettings for policy{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#rate_limit_rules_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrulelistresponse">Dict[Rate<wbr>Limit<wbr>Rule<wbr>List<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ratelimitrulelistresponse">Rate<wbr>Limit<wbr>Rule<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes rate limit rules inside the policy.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -873,7 +873,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">List[Custom<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 
@@ -1078,11 +1078,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List[Match<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
 
@@ -1231,7 +1231,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">List[Managed<wbr>Rule<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
 
@@ -1469,7 +1469,7 @@ The following output properties are available:
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">List[Managed<wbr>Rule<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
 
@@ -1654,8 +1654,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="anomalyscore_python">
-<a href="#anomalyscore_python" style="color: inherit; text-decoration: inherit;">anomaly<wbr>Score</a>
+        <span id="anomaly_score_python">
+<a href="#anomaly_score_python" style="color: inherit; text-decoration: inherit;">anomaly_<wbr>score</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1664,11 +1664,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rulegroupoverrides_python">
-<a href="#rulegroupoverrides_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
+        <span id="rule_group_overrides_python">
+<a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd>
 
@@ -1893,18 +1893,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalue_python">
-<a href="#matchvalue_python" style="color: inherit; text-decoration: inherit;">match<wbr>Value</a>
+        <span id="match_value_python">
+<a href="#match_value_python" style="color: inherit; text-decoration: inherit;">match_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of possible match values.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1923,8 +1923,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negatecondition_python">
-<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+        <span id="negate_condition_python">
+<a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1947,7 +1947,7 @@ The following output properties are available:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of transforms.{{% /md %}}</dd>
 
@@ -2265,7 +2265,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitruleresponse">List[Rate<wbr>Limit<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ratelimitruleresponse">Sequence[Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd>
 
@@ -2530,11 +2530,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List[Match<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
 
@@ -2560,8 +2560,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ratelimitdurationinminutes_python">
-<a href="#ratelimitdurationinminutes_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
+        <span id="rate_limit_duration_in_minutes_python">
+<a href="#rate_limit_duration_in_minutes_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>duration_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2570,8 +2570,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ratelimitthreshold_python">
-<a href="#ratelimitthreshold_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
+        <span id="rate_limit_threshold_python">
+<a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

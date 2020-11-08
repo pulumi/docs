@@ -111,11 +111,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 share = azure_nextgen.databoxedge.latest.Share("share",
     access_protocol="SMB",
-    azure_container_info={
-        "containerName": "testContainerSMB",
-        "dataFormat": "BlockBlob",
-        "storageAccountCredentialId": "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
-    },
+    azure_container_info=azure_nextgen.databoxedge.latest.AzureContainerInfoArgs(
+        container_name="testContainerSMB",
+        data_format="BlockBlob",
+        storage_account_credential_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
+    ),
     data_policy="Cloud",
     description="",
     device_name="testedgedevice",
@@ -123,10 +123,10 @@ share = azure_nextgen.databoxedge.latest.Share("share",
     name="smbshare",
     resource_group_name="GroupForEdgeAutomation",
     share_status="Online",
-    user_access_rights=[{
-        "accessType": "Change",
-        "userId": "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
-    }])
+    user_access_rights=[azure_nextgen.databoxedge.latest.UserAccessRightArgs(
+        access_type="Change",
+        user_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
+    )])
 
 ```
 
@@ -174,7 +174,7 @@ const share = new azure_nextgen.databoxedge.latest.Share("share", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Share</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_container_info</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureContainerInfo]]</span> = None<span class="p">, </span><span class="nx">client_access_rights</span><span class="p">:</span> <span class="nx">Optional[List[ClientAccessRight]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_details</span><span class="p">:</span> <span class="nx">Optional[Dict[RefreshDetails]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_access_rights</span><span class="p">:</span> <span class="nx">Optional[List[UserAccessRight]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Share</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_container_info</span><span class="p">:</span> <span class="nx">Optional[AzureContainerInfoArgs]</span> = None<span class="p">, </span><span class="nx">client_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientAccessRightArgs]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_details</span><span class="p">:</span> <span class="nx">Optional[RefreshDetailsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccessRightArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -793,7 +793,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#azure_container_info_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>container_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecontainerinfo">Dict[Azure<wbr>Container<wbr>Info]</a></span>
+        <span class="property-type"><a href="#azurecontainerinfo">Azure<wbr>Container<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd>
 
@@ -803,7 +803,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#client_access_rights_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaccessright">List[Client<wbr>Access<wbr>Right]</a></span>
+        <span class="property-type"><a href="#clientaccessright">Sequence[Client<wbr>Access<wbr>Right<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd>
 
@@ -833,7 +833,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#refresh_details_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetails">Dict[Refresh<wbr>Details]</a></span>
+        <span class="property-type"><a href="#refreshdetails">Refresh<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd>
 
@@ -843,7 +843,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#user_access_rights_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access_<wbr>rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccessright">List[User<wbr>Access<wbr>Right]</a></span>
+        <span class="property-type"><a href="#useraccessright">Sequence[User<wbr>Access<wbr>Right<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd>
 
@@ -992,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_mappings_python" style="color: inherit; text-decoration: inherit;">share_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmapresponse">List[Mount<wbr>Point<wbr>Map<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mountpointmapresponse">Sequence[Mount<wbr>Point<wbr>Map<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd>
 
@@ -1434,8 +1434,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="accesspermission_python">
-<a href="#accesspermission_python" style="color: inherit; text-decoration: inherit;">access<wbr>Permission</a>
+        <span id="access_permission_python">
+<a href="#access_permission_python" style="color: inherit; text-decoration: inherit;">access_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1553,8 +1553,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="accesspermission_python">
-<a href="#accesspermission_python" style="color: inherit; text-decoration: inherit;">access<wbr>Permission</a>
+        <span id="access_permission_python">
+<a href="#access_permission_python" style="color: inherit; text-decoration: inherit;">access_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1742,8 +1742,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="roleid_python">
-<a href="#roleid_python" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1762,8 +1762,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="shareid_python">
-<a href="#shareid_python" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+        <span id="share_id_python">
+<a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2269,8 +2269,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="accesstype_python">
-<a href="#accesstype_python" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2388,8 +2388,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="accesstype_python">
-<a href="#accesstype_python" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

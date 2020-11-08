@@ -89,38 +89,38 @@ import pulumi_azure_nextgen as azure_nextgen
 
 scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
     action={
-        "aznsAction": {
-            "actionGroup": [],
-            "customWebhookPayload": "{}",
-            "emailSubject": "Email Header",
-        },
+        "aznsAction": azure_nextgen.insights.latest.AzNsActionGroupArgs(
+            action_group=[],
+            custom_webhook_payload="{}",
+            email_subject="Email Header",
+        ),
         "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
         "severity": "1",
-        "trigger": {
-            "metricTrigger": {
-                "metricColumn": "Computer",
-                "metricTriggerType": "Consecutive",
-                "threshold": 5,
-                "thresholdOperator": "GreaterThan",
-            },
-            "threshold": 3,
-            "thresholdOperator": "GreaterThan",
-        },
+        "trigger": azure_nextgen.insights.latest.TriggerConditionArgs(
+            metric_trigger=azure_nextgen.insights.latest.LogMetricTriggerArgs(
+                metric_column="Computer",
+                metric_trigger_type="Consecutive",
+                threshold=5,
+                threshold_operator="GreaterThan",
+            ),
+            threshold=3,
+            threshold_operator="GreaterThan",
+        ),
     },
     description="log alert description",
     enabled="true",
     location="eastus",
     resource_group_name="Rac46PostSwapRG",
     rule_name="logalertfoo",
-    schedule={
-        "frequencyInMinutes": 15,
-        "timeWindowInMinutes": 15,
-    },
-    source={
-        "dataSourceId": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-        "query": "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
-        "queryType": "ResultCount",
-    },
+    schedule=azure_nextgen.insights.latest.ScheduleArgs(
+        frequency_in_minutes=15,
+        time_window_in_minutes=15,
+    ),
+    source=azure_nextgen.insights.latest.SourceArgs(
+        data_source_id="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
+        query="Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
+        query_type="ResultCount",
+    ),
     tags={})
 
 ```
@@ -247,35 +247,35 @@ import pulumi_azure_nextgen as azure_nextgen
 
 scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
     action={
-        "aznsAction": {
-            "actionGroup": ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
-            "emailSubject": "Cross Resource Mail!!",
-        },
+        "aznsAction": azure_nextgen.insights.latest.AzNsActionGroupArgs(
+            action_group=["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
+            email_subject="Cross Resource Mail!!",
+        ),
         "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
         "severity": "3",
-        "trigger": {
-            "threshold": 5000,
-            "thresholdOperator": "GreaterThan",
-        },
+        "trigger": azure_nextgen.insights.latest.TriggerConditionArgs(
+            threshold=5000,
+            threshold_operator="GreaterThan",
+        ),
     },
     description="Sample Cross Resource alert",
     enabled="true",
     location="eastus",
     resource_group_name="Rac46PostSwapRG",
     rule_name="SampleCrossResourceAlert",
-    schedule={
-        "frequencyInMinutes": 60,
-        "timeWindowInMinutes": 60,
-    },
-    source={
-        "authorizedResources": [
+    schedule=azure_nextgen.insights.latest.ScheduleArgs(
+        frequency_in_minutes=60,
+        time_window_in_minutes=60,
+    ),
+    source=azure_nextgen.insights.latest.SourceArgs(
+        authorized_resources=[
             "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
             "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
         ],
-        "dataSourceId": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        "query": "union requests, workspace(\"sampleWorkspace\").Update",
-        "queryType": "ResultCount",
-    },
+        data_source_id="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
+        query="union requests, workspace(\"sampleWorkspace\").Update",
+        query_type="ResultCount",
+    ),
     tags={})
 
 ```
@@ -381,10 +381,10 @@ import pulumi_azure_nextgen as azure_nextgen
 
 scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
     action={
-        "criteria": [{
-            "dimensions": [],
-            "metricName": "Average_% Idle Time",
-        }],
+        "criteria": [azure_nextgen.insights.latest.CriteriaArgs(
+            dimensions=[],
+            metric_name="Average_% Idle Time",
+        )],
         "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
     },
     description="log to metric description",
@@ -392,9 +392,9 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
     location="West Europe",
     resource_group_name="alertsweu",
     rule_name="logtometricfoo",
-    source={
-        "dataSourceId": "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
-    },
+    source=azure_nextgen.insights.latest.SourceArgs(
+        data_source_id="/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
+    ),
     tags={})
 
 ```
@@ -442,7 +442,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Dict[AlertingAction] | Dict[LogToMetricAction]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[Schedule]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[Source]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -911,7 +911,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Alerting<wbr>Action] | Dict[Log<wbr>To<wbr>Metric<wbr>Action]</span>
+        <span class="property-type">Union[Alerting<wbr>Action<wbr>Args, Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
 
@@ -951,7 +951,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">Dict[Source]</a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
 
@@ -981,7 +981,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Dict[Schedule]</a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
 
@@ -991,7 +991,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1418,24 +1418,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggercondition">Dict[Trigger<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aznsaction_python">
-<a href="#aznsaction_python" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
+        <span id="azns_action_python">
+<a href="#azns_action_python" style="color: inherit; text-decoration: inherit;">azns_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroup">Dict[Az<wbr>Ns<wbr>Action<wbr>Group]</a></span>
+        <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlinginmin_python">
-<a href="#throttlinginmin_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
+        <span id="throttling_in_min_python">
+<a href="#throttling_in_min_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>in_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1617,24 +1617,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerconditionresponse">Dict[Trigger<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aznsaction_python">
-<a href="#aznsaction_python" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
+        <span id="azns_action_python">
+<a href="#azns_action_python" style="color: inherit; text-decoration: inherit;">azns_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroupresponse">Dict[Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlinginmin_python">
-<a href="#throttlinginmin_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
+        <span id="throttling_in_min_python">
+<a href="#throttling_in_min_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>in_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1772,11 +1772,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiongroup_python">
-<a href="#actiongroup_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group</a>
+        <span id="action_group_python">
+<a href="#action_group_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
 
@@ -1792,8 +1792,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailsubject_python">
-<a href="#emailsubject_python" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
+        <span id="email_subject_python">
+<a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1931,11 +1931,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiongroup_python">
-<a href="#actiongroup_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group</a>
+        <span id="action_group_python">
+<a href="#action_group_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
 
@@ -1951,8 +1951,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailsubject_python">
-<a href="#emailsubject_python" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
+        <span id="email_subject_python">
+<a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2060,8 +2060,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2074,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimension">List[Dimension]</a></span>
+        <span class="property-type"><a href="#dimension">Sequence[Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
 
@@ -2179,8 +2179,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimensionresponse">List[Dimension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dimensionresponse">Sequence[Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
 
@@ -2352,7 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
 
@@ -2511,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
 
@@ -2676,8 +2676,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metriccolumn_python">
-<a href="#metriccolumn_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Column</a>
+        <span id="metric_column_python">
+<a href="#metric_column_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>column</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2686,8 +2686,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metrictriggertype_python">
-<a href="#metrictriggertype_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger<wbr>Type</a>
+        <span id="metric_trigger_type_python">
+<a href="#metric_trigger_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2706,8 +2706,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdoperator_python">
-<a href="#thresholdoperator_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
+        <span id="threshold_operator_python">
+<a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2875,8 +2875,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metriccolumn_python">
-<a href="#metriccolumn_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Column</a>
+        <span id="metric_column_python">
+<a href="#metric_column_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>column</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2885,8 +2885,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metrictriggertype_python">
-<a href="#metrictriggertype_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger<wbr>Type</a>
+        <span id="metric_trigger_type_python">
+<a href="#metric_trigger_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2905,8 +2905,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdoperator_python">
-<a href="#thresholdoperator_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
+        <span id="threshold_operator_python">
+<a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2988,7 +2988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteria">List[Criteria]</a></span>
+        <span class="property-type"><a href="#criteria">Sequence[Criteria<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
 
@@ -3067,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteriaresponse">List[Criteria<wbr>Response]</a></span>
+        <span class="property-type"><a href="#criteriaresponse">Sequence[Criteria<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
 
@@ -3484,7 +3484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_resources_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
 
@@ -3683,7 +3683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_resources_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
 
@@ -3848,8 +3848,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="thresholdoperator_python">
-<a href="#thresholdoperator_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
+        <span id="threshold_operator_python">
+<a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3858,11 +3858,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metrictrigger_python">
-<a href="#metrictrigger_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+        <span id="metric_trigger_python">
+<a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictrigger">Dict[Log<wbr>Metric<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
 
@@ -4007,8 +4007,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="thresholdoperator_python">
-<a href="#thresholdoperator_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
+        <span id="threshold_operator_python">
+<a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4017,11 +4017,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metrictrigger_python">
-<a href="#metrictrigger_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+        <span id="metric_trigger_python">
+<a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictriggerresponse">Dict[Log<wbr>Metric<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
 

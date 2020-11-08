@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsresponse">Dict[Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementclusterresponse">Dict[Management<wbr>Cluster<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementclusterresponse">Management<wbr>Cluster<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The following output properties are available:
 <a href="#circuit_python" style="color: inherit; text-decoration: inherit;">circuit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#circuitresponse">Dict[Circuit<wbr>Response]</a></span>
+        <span class="property-type"><a href="#circuitresponse">Circuit<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following output properties are available:
 <a href="#identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitysourceresponse">List[Identity<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identitysourceresponse">Sequence[Identity<wbr>Source<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1668,8 +1668,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="basegroupdn_python">
-<a href="#basegroupdn_python" style="color: inherit; text-decoration: inherit;">base<wbr>Group<wbr>DN</a>
+        <span id="base_group_dn_python">
+<a href="#base_group_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>group_<wbr>dn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1678,8 +1678,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseuserdn_python">
-<a href="#baseuserdn_python" style="color: inherit; text-decoration: inherit;">base<wbr>User<wbr>DN</a>
+        <span id="base_user_dn_python">
+<a href="#base_user_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>user_<wbr>dn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1718,8 +1718,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primaryserver_python">
-<a href="#primaryserver_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Server</a>
+        <span id="primary_server_python">
+<a href="#primary_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1728,8 +1728,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secondaryserver_python">
-<a href="#secondaryserver_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Server</a>
+        <span id="secondary_server_python">
+<a href="#secondary_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1804,6 +1804,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1840,6 +1850,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1878,6 +1898,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1911,9 +1941,19 @@ The following output properties are available:
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

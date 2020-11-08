@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#registration_virtual_networks_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>virtual_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#resolution_virtual_networks_python" style="color: inherit; text-decoration: inherit;">resolution_<wbr>virtual_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

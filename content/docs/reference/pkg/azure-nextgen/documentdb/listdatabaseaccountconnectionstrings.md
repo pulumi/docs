@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseaccountconnectionstringresponse">List[Database<wbr>Account<wbr>Connection<wbr>String<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databaseaccountconnectionstringresponse">Sequence[Database<wbr>Account<wbr>Connection<wbr>String<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the connection strings for the Cosmos DB account.{{% /md %}}</dd>
 

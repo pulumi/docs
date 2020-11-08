@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#participant_property_references_python" style="color: inherit; text-decoration: inherit;">participant_<wbr>property_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantpropertyreferenceresponse">List[Participant<wbr>Property<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#participantpropertyreferenceresponse">Sequence[Participant<wbr>Property<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The properties that represent the participating profile.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Link.{{% /md %}}</dd>
 
@@ -799,7 +799,7 @@ The following output properties are available:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the Link.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typepropertiesmappingresponse">List[Type<wbr>Properties<wbr>Mapping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#typepropertiesmappingresponse">Sequence[Type<wbr>Properties<wbr>Mapping<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The set of properties mappings between the source and target Types.{{% /md %}}</dd>
 
@@ -940,8 +940,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepropertyname_python">
-<a href="#sourcepropertyname_python" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
+        <span id="source_property_name_python">
+<a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -950,8 +950,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetpropertyname_python">
-<a href="#targetpropertyname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
+        <span id="target_property_name_python">
+<a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1089,8 +1089,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepropertyname_python">
-<a href="#sourcepropertyname_python" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
+        <span id="source_property_name_python">
+<a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1099,8 +1099,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetpropertyname_python">
-<a href="#targetpropertyname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
+        <span id="target_property_name_python">
+<a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

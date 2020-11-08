@@ -184,50 +184,50 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 task = azure_nextgen.containerregistry.latest.Task("task",
-    agent_configuration={
-        "cpu": 2,
-    },
-    identity={
-        "type": "SystemAssigned",
-    },
+    agent_configuration=azure_nextgen.containerregistry.latest.AgentPropertiesArgs(
+        cpu=2,
+    ),
+    identity=azure_nextgen.containerregistry.latest.IdentityPropertiesArgs(
+        type="SystemAssigned",
+    ),
     location="eastus",
-    platform={
-        "architecture": "amd64",
-        "os": "Linux",
-    },
+    platform=azure_nextgen.containerregistry.latest.PlatformPropertiesArgs(
+        architecture="amd64",
+        os="Linux",
+    ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step={
-        "contextPath": "src",
-    },
+    step=azure_nextgen.containerregistry.latest.TaskStepPropertiesArgs(
+        context_path="src",
+    ),
     tags={
         "testkey": "value",
     },
     task_name="mytTask",
-    trigger={
-        "baseImageTrigger": {
-            "baseImageTriggerType": "Runtime",
-            "name": "myBaseImageTrigger",
-        },
-        "sourceTriggers": [{
-            "name": "mySourceTrigger",
-            "sourceRepository": {
-                "branch": "master",
-                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-                "sourceControlAuthProperties": {
-                    "token": "xxxxx",
-                    "tokenType": "PAT",
-                },
-                "sourceControlType": "Github",
-            },
-            "sourceTriggerEvents": ["commit"],
-        }],
-        "timerTriggers": [{
-            "name": "myTimerTrigger",
-            "schedule": "30 9 * * 1-5",
-        }],
-    })
+    trigger=azure_nextgen.containerregistry.latest.TriggerPropertiesArgs(
+        base_image_trigger=azure_nextgen.containerregistry.latest.BaseImageTriggerArgs(
+            base_image_trigger_type="Runtime",
+            name="myBaseImageTrigger",
+        ),
+        source_triggers=[azure_nextgen.containerregistry.latest.SourceTriggerArgs(
+            name="mySourceTrigger",
+            source_repository=azure_nextgen.containerregistry.latest.SourcePropertiesArgs(
+                branch="master",
+                repository_url="https://github.com/Azure/azure-rest-api-specs",
+                source_control_auth_properties=azure_nextgen.containerregistry.latest.AuthInfoArgs(
+                    token="xxxxx",
+                    token_type="PAT",
+                ),
+                source_control_type="Github",
+            ),
+            source_trigger_events=["commit"],
+        )],
+        timer_triggers=[azure_nextgen.containerregistry.latest.TimerTriggerArgs(
+            name="myTimerTrigger",
+            schedule="30 9 * * 1-5",
+        )],
+    ))
 
 ```
 
@@ -390,53 +390,53 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 task = azure_nextgen.containerregistry.latest.Task("task",
-    agent_configuration={
-        "cpu": 2,
-    },
-    identity={
-        "type": "SystemAssigned, UserAssigned",
-        "userAssignedIdentities": {
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+    agent_configuration=azure_nextgen.containerregistry.latest.AgentPropertiesArgs(
+        cpu=2,
+    ),
+    identity=azure_nextgen.containerregistry.latest.IdentityPropertiesArgs(
+        type="SystemAssigned, UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.latest.UserIdentityPropertiesArgs(),
         },
-    },
+    ),
     location="eastus",
-    platform={
-        "architecture": "amd64",
-        "os": "Linux",
-    },
+    platform=azure_nextgen.containerregistry.latest.PlatformPropertiesArgs(
+        architecture="amd64",
+        os="Linux",
+    ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step={
-        "contextPath": "src",
-    },
+    step=azure_nextgen.containerregistry.latest.TaskStepPropertiesArgs(
+        context_path="src",
+    ),
     tags={
         "testkey": "value",
     },
     task_name="mytTask",
-    trigger={
-        "baseImageTrigger": {
-            "baseImageTriggerType": "Runtime",
-            "name": "myBaseImageTrigger",
-        },
-        "sourceTriggers": [{
-            "name": "mySourceTrigger",
-            "sourceRepository": {
-                "branch": "master",
-                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-                "sourceControlAuthProperties": {
-                    "token": "xxxxx",
-                    "tokenType": "PAT",
-                },
-                "sourceControlType": "Github",
-            },
-            "sourceTriggerEvents": ["commit"],
-        }],
-        "timerTriggers": [{
-            "name": "myTimerTrigger",
-            "schedule": "30 9 * * 1-5",
-        }],
-    })
+    trigger=azure_nextgen.containerregistry.latest.TriggerPropertiesArgs(
+        base_image_trigger=azure_nextgen.containerregistry.latest.BaseImageTriggerArgs(
+            base_image_trigger_type="Runtime",
+            name="myBaseImageTrigger",
+        ),
+        source_triggers=[azure_nextgen.containerregistry.latest.SourceTriggerArgs(
+            name="mySourceTrigger",
+            source_repository=azure_nextgen.containerregistry.latest.SourcePropertiesArgs(
+                branch="master",
+                repository_url="https://github.com/Azure/azure-rest-api-specs",
+                source_control_auth_properties=azure_nextgen.containerregistry.latest.AuthInfoArgs(
+                    token="xxxxx",
+                    token_type="PAT",
+                ),
+                source_control_type="Github",
+            ),
+            source_trigger_events=["commit"],
+        )],
+        timer_triggers=[azure_nextgen.containerregistry.latest.TimerTriggerArgs(
+            name="myTimerTrigger",
+            schedule="30 9 * * 1-5",
+        )],
+    ))
 
 ```
 
@@ -603,54 +603,54 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 task = azure_nextgen.containerregistry.latest.Task("task",
-    agent_configuration={
-        "cpu": 2,
-    },
-    identity={
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+    agent_configuration=azure_nextgen.containerregistry.latest.AgentPropertiesArgs(
+        cpu=2,
+    ),
+    identity=azure_nextgen.containerregistry.latest.IdentityPropertiesArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": azure_nextgen.containerregistry.latest.UserIdentityPropertiesArgs(),
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.latest.UserIdentityPropertiesArgs(),
         },
-    },
+    ),
     location="eastus",
-    platform={
-        "architecture": "amd64",
-        "os": "Linux",
-    },
+    platform=azure_nextgen.containerregistry.latest.PlatformPropertiesArgs(
+        architecture="amd64",
+        os="Linux",
+    ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step={
-        "contextPath": "src",
-    },
+    step=azure_nextgen.containerregistry.latest.TaskStepPropertiesArgs(
+        context_path="src",
+    ),
     tags={
         "testkey": "value",
     },
     task_name="mytTask",
-    trigger={
-        "baseImageTrigger": {
-            "baseImageTriggerType": "Runtime",
-            "name": "myBaseImageTrigger",
-        },
-        "sourceTriggers": [{
-            "name": "mySourceTrigger",
-            "sourceRepository": {
-                "branch": "master",
-                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-                "sourceControlAuthProperties": {
-                    "token": "xxxxx",
-                    "tokenType": "PAT",
-                },
-                "sourceControlType": "Github",
-            },
-            "sourceTriggerEvents": ["commit"],
-        }],
-        "timerTriggers": [{
-            "name": "myTimerTrigger",
-            "schedule": "30 9 * * 1-5",
-        }],
-    })
+    trigger=azure_nextgen.containerregistry.latest.TriggerPropertiesArgs(
+        base_image_trigger=azure_nextgen.containerregistry.latest.BaseImageTriggerArgs(
+            base_image_trigger_type="Runtime",
+            name="myBaseImageTrigger",
+        ),
+        source_triggers=[azure_nextgen.containerregistry.latest.SourceTriggerArgs(
+            name="mySourceTrigger",
+            source_repository=azure_nextgen.containerregistry.latest.SourcePropertiesArgs(
+                branch="master",
+                repository_url="https://github.com/Azure/azure-rest-api-specs",
+                source_control_auth_properties=azure_nextgen.containerregistry.latest.AuthInfoArgs(
+                    token="xxxxx",
+                    token_type="PAT",
+                ),
+                source_control_type="Github",
+            ),
+            source_trigger_events=["commit"],
+        )],
+        timer_triggers=[azure_nextgen.containerregistry.latest.TimerTriggerArgs(
+            name="myTimerTrigger",
+            schedule="30 9 * * 1-5",
+        )],
+    ))
 
 ```
 
@@ -884,50 +884,50 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 task = azure_nextgen.containerregistry.latest.Task("task",
-    agent_configuration={
-        "cpu": 2,
-    },
-    identity={
-        "type": "SystemAssigned",
-    },
+    agent_configuration=azure_nextgen.containerregistry.latest.AgentPropertiesArgs(
+        cpu=2,
+    ),
+    identity=azure_nextgen.containerregistry.latest.IdentityPropertiesArgs(
+        type="SystemAssigned",
+    ),
     location="eastus",
-    platform={
-        "architecture": "amd64",
-        "os": "Linux",
-    },
+    platform=azure_nextgen.containerregistry.latest.PlatformPropertiesArgs(
+        architecture="amd64",
+        os="Linux",
+    ),
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
     status="Enabled",
-    step={
-        "contextPath": "src",
-    },
+    step=azure_nextgen.containerregistry.latest.TaskStepPropertiesArgs(
+        context_path="src",
+    ),
     tags={
         "testkey": "value",
     },
     task_name="mytTask",
-    trigger={
-        "baseImageTrigger": {
-            "baseImageTriggerType": "Runtime",
-            "name": "myBaseImageTrigger",
-        },
-        "sourceTriggers": [{
-            "name": "mySourceTrigger",
-            "sourceRepository": {
-                "branch": "master",
-                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
-                "sourceControlAuthProperties": {
-                    "token": "xxxxx",
-                    "tokenType": "PAT",
-                },
-                "sourceControlType": "Github",
-            },
-            "sourceTriggerEvents": ["commit"],
-        }],
-        "timerTriggers": [{
-            "name": "myTimerTrigger",
-            "schedule": "30 9 * * 1-5",
-        }],
-    })
+    trigger=azure_nextgen.containerregistry.latest.TriggerPropertiesArgs(
+        base_image_trigger=azure_nextgen.containerregistry.latest.BaseImageTriggerArgs(
+            base_image_trigger_type="Runtime",
+            name="myBaseImageTrigger",
+        ),
+        source_triggers=[azure_nextgen.containerregistry.latest.SourceTriggerArgs(
+            name="mySourceTrigger",
+            source_repository=azure_nextgen.containerregistry.latest.SourcePropertiesArgs(
+                branch="master",
+                repository_url="https://github.com/Azure/azure-rest-api-specs",
+                source_control_auth_properties=azure_nextgen.containerregistry.latest.AuthInfoArgs(
+                    token="xxxxx",
+                    token_type="PAT",
+                ),
+                source_control_type="Github",
+            ),
+            source_trigger_events=["commit"],
+        )],
+        timer_triggers=[azure_nextgen.containerregistry.latest.TimerTriggerArgs(
+            name="myTimerTrigger",
+            schedule="30 9 * * 1-5",
+        )],
+    ))
 
 ```
 
@@ -1002,7 +1002,7 @@ const task = new azure_nextgen.containerregistry.latest.Task("task", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Task</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[AgentProperties]]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Dict[Credentials]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[IdentityProperties]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[Dict[PlatformProperties]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step</span><span class="p">:</span> <span class="nx">Optional[Dict[TaskStepProperties]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[Dict[TriggerProperties]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Task</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_configuration</span><span class="p">:</span> <span class="nx">Optional[AgentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[CredentialsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[PlatformPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step</span><span class="p">:</span> <span class="nx">Optional[TaskStepPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[TriggerPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1601,7 +1601,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Dict[Platform<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd>
 
@@ -1631,7 +1631,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskstepproperties">Dict[Task<wbr>Step<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#taskstepproperties">Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd>
 
@@ -1651,7 +1651,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Dict[Agent<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd>
 
@@ -1661,7 +1661,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Dict[Credentials]</a></span>
+        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd>
 
@@ -1671,7 +1671,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Dict[Identity<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
 
@@ -1691,7 +1691,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -1711,7 +1711,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerproperties">Dict[Trigger<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#triggerproperties">Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe all triggers for the task.{{% /md %}}</dd>
 
@@ -2272,8 +2272,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3426,7 +3426,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Custom<wbr>Registry<wbr>Credentials]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -3438,7 +3438,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Dict[Source<wbr>Registry<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
 
@@ -3553,7 +3553,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -3565,7 +3565,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Dict[Source<wbr>Registry<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd>
 
@@ -3733,7 +3733,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Dict[Secret<wbr>Object]</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
@@ -3744,7 +3744,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Dict[Secret<wbr>Object]</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
 
@@ -3912,7 +3912,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd>
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Dict[Secret<wbr>Object<wbr>Response]</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
@@ -3923,7 +3923,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Dict[Secret<wbr>Object<wbr>Response]</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd>
 
@@ -4242,7 +4242,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
 
@@ -4262,7 +4262,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List[Argument<wbr>Response]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd>
 
@@ -4292,7 +4292,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
 
@@ -4551,14 +4551,14 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="encodedtaskcontent_python">
-<a href="#encodedtaskcontent_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Task<wbr>Content</a>
+        <span id="encoded_task_content_python">
+<a href="#encoded_task_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>task_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4587,8 +4587,8 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encodedvaluescontent_python">
-<a href="#encodedvaluescontent_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Values<wbr>Content</a>
+        <span id="encoded_values_content_python">
+<a href="#encoded_values_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>values_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4601,7 +4601,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 
@@ -4830,14 +4830,14 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="taskfilepath_python">
-<a href="#taskfilepath_python" style="color: inherit; text-decoration: inherit;">task<wbr>File<wbr>Path</a>
+        <span id="task_file_path_python">
+<a href="#task_file_path_python" style="color: inherit; text-decoration: inherit;">task_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4870,14 +4870,14 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesfilepath_python">
-<a href="#valuesfilepath_python" style="color: inherit; text-decoration: inherit;">values<wbr>File<wbr>Path</a>
+        <span id="values_file_path_python">
+<a href="#values_file_path_python" style="color: inherit; text-decoration: inherit;">values_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5088,7 +5088,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -5299,7 +5299,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -6037,8 +6037,8 @@ used as is without any modification.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6243,7 +6243,7 @@ webhooks for notifications.{{% /md %}}</dd>
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinfo">Dict[Auth<wbr>Info]</a></span>
+        <span class="property-type"><a href="#authinfo">Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd>
@@ -6446,7 +6446,7 @@ webhooks for notifications.{{% /md %}}</dd>
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinforesponse">Dict[Auth<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd>
@@ -6796,23 +6796,23 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcetriggerevents_python">
-<a href="#sourcetriggerevents_python" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="source_repository_python">
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceproperties">Dict[Source<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#sourceproperties">Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_trigger_events_python">
+<a href="#source_trigger_events_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger_<wbr>events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6995,23 +6995,23 @@ the source registry during the run.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcetriggerevents_python">
-<a href="#sourcetriggerevents_python" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger<wbr>Events</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="source_repository_python">
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Dict[Source<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_trigger_events_python">
+<a href="#source_trigger_events_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger_<wbr>events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The source event corresponding to the trigger.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7595,7 +7595,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#base_image_trigger_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetrigger">Dict[Base<wbr>Image<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#baseimagetrigger">Base<wbr>Image<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
 
@@ -7605,7 +7605,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#source_triggers_python" style="color: inherit; text-decoration: inherit;">source_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetrigger">List[Source<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#sourcetrigger">Sequence[Source<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
 
@@ -7615,7 +7615,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#timer_triggers_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertrigger">List[Timer<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#timertrigger">Sequence[Timer<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
 
@@ -7754,7 +7754,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#base_image_trigger_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetriggerresponse">Dict[Base<wbr>Image<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd>
 
@@ -7764,7 +7764,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#source_triggers_python" style="color: inherit; text-decoration: inherit;">source_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerresponse">List[Source<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcetriggerresponse">Sequence[Source<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd>
 
@@ -7774,7 +7774,7 @@ the source registry during the run.{{% /md %}}</dd>
 <a href="#timer_triggers_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerresponse">List[Timer<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timertriggerresponse">Sequence[Timer<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd>
 

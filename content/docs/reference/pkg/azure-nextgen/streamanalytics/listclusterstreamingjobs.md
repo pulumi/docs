@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterjobresponse">List[Cluster<wbr>Job<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterjobresponse">Sequence[Cluster<wbr>Job<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd>
 

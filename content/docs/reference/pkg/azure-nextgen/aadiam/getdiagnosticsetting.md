@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettingsresponse">List[Log<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#logsettingsresponse">Sequence[Log<wbr>Settings<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The following output properties are available:
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Dict[Retention<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd>
 

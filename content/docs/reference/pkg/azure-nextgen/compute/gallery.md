@@ -88,9 +88,9 @@ gallery = azure_nextgen.compute.latest.Gallery("gallery",
     gallery_name="myGalleryName",
     location="West US",
     resource_group_name="myResourceGroup",
-    sharing_profile={
-        "permissions": "Groups",
-    })
+    sharing_profile=azure_nextgen.compute.latest.SharingProfileArgs(
+        permissions="Groups",
+    ))
 
 ```
 
@@ -215,7 +215,7 @@ const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Gallery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sharing_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[SharingProfile]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Gallery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sharing_profile</span><span class="p">:</span> <span class="nx">Optional[SharingProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +634,7 @@ The Gallery resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sharing_profile_python" style="color: inherit; text-decoration: inherit;">sharing_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofile">Dict[Sharing<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#sharingprofile">Sharing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for gallery sharing to subscription or tenant{{% /md %}}</dd>
 
@@ -644,7 +644,7 @@ The Gallery resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -883,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryidentifierresponse">Dict[Gallery<wbr>Identifier<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryidentifierresponse">Gallery<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery unique name.{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of subscription/tenant ids the gallery is aimed to be shared to.{{% /md %}}</dd>
 
@@ -1278,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofilegroupresponse">List[Sharing<wbr>Profile<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharingprofilegroupresponse">Sequence[Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of sharing profile groups.{{% /md %}}</dd>
 

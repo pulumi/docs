@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildstepresponse">Dict[Docker<wbr>Build<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a build step.{{% /md %}}</dd>
 
@@ -829,8 +829,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1182,7 +1182,7 @@ The following output properties are available:
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd>
 
@@ -1222,7 +1222,7 @@ The following output properties are available:
 <a href="#build_arguments_python" style="color: inherit; text-decoration: inherit;">build_<wbr>arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildargumentresponse">List[Build<wbr>Argument<wbr>Response]</a></span>
+        <span class="property-type"><a href="#buildargumentresponse">Sequence[Build<wbr>Argument<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The custom arguments for building this build step.{{% /md %}}</dd>
 
@@ -1252,7 +1252,7 @@ The following output properties are available:
 <a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd>
 

@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Relationship.{{% /md %}}</dd>
 
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the Relationship.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertydefinitionresponse">List[Property<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#propertydefinitionresponse">Sequence[Property<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Relationship.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#lookup_mappings_python" style="color: inherit; text-decoration: inherit;">lookup_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypemappingresponse">List[Relationship<wbr>Type<wbr>Mapping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#relationshiptypemappingresponse">Sequence[Relationship<wbr>Type<wbr>Mapping<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Optional property to be used to map fields in profile to their strong ids in related profile.{{% /md %}}</dd>
 
@@ -1020,8 +1020,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datasourcereferenceid_python">
-<a href="#datasourcereferenceid_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Reference<wbr>Id</a>
+        <span id="data_source_reference_id_python">
+<a href="#data_source_reference_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>reference_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1179,11 +1179,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localizedvaluenames_python">
-<a href="#localizedvaluenames_python" style="color: inherit; text-decoration: inherit;">localized<wbr>Value<wbr>Names</a>
+        <span id="localized_value_names_python">
+<a href="#localized_value_names_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>value_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
 
@@ -1718,18 +1718,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datasourceprecedencerules_python">
-<a href="#datasourceprecedencerules_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Precedence<wbr>Rules</a>
+        <span id="data_source_precedence_rules_python">
+<a href="#data_source_precedence_rules_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>precedence_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">List[Data<wbr>Source<wbr>Precedence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">Sequence[Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldname_python">
-<a href="#fieldname_python" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
+        <span id="field_name_python">
+<a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1738,8 +1738,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldtype_python">
-<a href="#fieldtype_python" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
+        <span id="field_type_python">
+<a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1748,8 +1748,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="arrayvalueseparator_python">
-<a href="#arrayvalueseparator_python" style="color: inherit; text-decoration: inherit;">array<wbr>Value<wbr>Separator</a>
+        <span id="array_value_separator_python">
+<a href="#array_value_separator_python" style="color: inherit; text-decoration: inherit;">array_<wbr>value_<wbr>separator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1758,18 +1758,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enumvalidvalues_python">
-<a href="#enumvalidvalues_python" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
+        <span id="enum_valid_values_python">
+<a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isarray_python">
-<a href="#isarray_python" style="color: inherit; text-decoration: inherit;">is<wbr>Array</a>
+        <span id="is_array_python">
+<a href="#is_array_python" style="color: inherit; text-decoration: inherit;">is_<wbr>array</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1778,8 +1778,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isavailableingraph_python">
-<a href="#isavailableingraph_python" style="color: inherit; text-decoration: inherit;">is<wbr>Available<wbr>In<wbr>Graph</a>
+        <span id="is_available_in_graph_python">
+<a href="#is_available_in_graph_python" style="color: inherit; text-decoration: inherit;">is_<wbr>available_<wbr>in_<wbr>graph</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1788,8 +1788,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenum_python">
-<a href="#isenum_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enum</a>
+        <span id="is_enum_python">
+<a href="#is_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1798,8 +1798,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isflagenum_python">
-<a href="#isflagenum_python" style="color: inherit; text-decoration: inherit;">is<wbr>Flag<wbr>Enum</a>
+        <span id="is_flag_enum_python">
+<a href="#is_flag_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>flag_<wbr>enum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1808,8 +1808,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isimage_python">
-<a href="#isimage_python" style="color: inherit; text-decoration: inherit;">is<wbr>Image</a>
+        <span id="is_image_python">
+<a href="#is_image_python" style="color: inherit; text-decoration: inherit;">is_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1818,8 +1818,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="islocalizedstring_python">
-<a href="#islocalizedstring_python" style="color: inherit; text-decoration: inherit;">is<wbr>Localized<wbr>String</a>
+        <span id="is_localized_string_python">
+<a href="#is_localized_string_python" style="color: inherit; text-decoration: inherit;">is_<wbr>localized_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1828,8 +1828,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isname_python">
-<a href="#isname_python" style="color: inherit; text-decoration: inherit;">is<wbr>Name</a>
+        <span id="is_name_python">
+<a href="#is_name_python" style="color: inherit; text-decoration: inherit;">is_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1848,8 +1848,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxlength_python">
-<a href="#maxlength_python" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
+        <span id="max_length_python">
+<a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1858,8 +1858,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertyid_python">
-<a href="#propertyid_python" style="color: inherit; text-decoration: inherit;">property<wbr>Id</a>
+        <span id="property_id_python">
+<a href="#property_id_python" style="color: inherit; text-decoration: inherit;">property_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1868,8 +1868,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaitemproplink_python">
-<a href="#schemaitemproplink_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Prop<wbr>Link</a>
+        <span id="schema_item_prop_link_python">
+<a href="#schema_item_prop_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>prop_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1977,8 +1977,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="profilefieldname_python">
-<a href="#profilefieldname_python" style="color: inherit; text-decoration: inherit;">profile<wbr>Field<wbr>Name</a>
+        <span id="profile_field_name_python">
+<a href="#profile_field_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1987,8 +1987,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="relatedprofilekeyproperty_python">
-<a href="#relatedprofilekeyproperty_python" style="color: inherit; text-decoration: inherit;">related<wbr>Profile<wbr>Key<wbr>Property</a>
+        <span id="related_profile_key_property_python">
+<a href="#related_profile_key_property_python" style="color: inherit; text-decoration: inherit;">related_<wbr>profile_<wbr>key_<wbr>property</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2066,11 +2066,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldmappings_python">
-<a href="#fieldmappings_python" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
+        <span id="field_mappings_python">
+<a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">List[Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">Sequence[Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd>
 

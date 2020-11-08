@@ -72,12 +72,12 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 import_pipeline = azure_nextgen.containerregistry.v20191201preview.ImportPipeline("importPipeline",
-    identity={
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+    identity=azure_nextgen.containerregistry.v20191201preview.IdentityPropertiesArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_nextgen.containerregistry.v20191201preview.UserIdentityPropertiesArgs(),
         },
-    },
+    ),
     import_pipeline_name="myImportPipeline",
     location="westus",
     options=[
@@ -87,11 +87,11 @@ import_pipeline = azure_nextgen.containerregistry.v20191201preview.ImportPipelin
     ],
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
-    source={
-        "keyVaultUri": "https://myvault.vault.azure.net/secrets/acrimportsas",
-        "type": "AzureStorageBlobContainer",
-        "uri": "https://accountname.blob.core.windows.net/containername",
-    })
+    source=azure_nextgen.containerregistry.v20191201preview.ImportPipelineSourcePropertiesArgs(
+        key_vault_uri="https://myvault.vault.azure.net/secrets/acrimportsas",
+        type="AzureStorageBlobContainer",
+        uri="https://accountname.blob.core.windows.net/containername",
+    ))
 
 ```
 
@@ -142,7 +142,7 @@ const importPipeline = new azure_nextgen.containerregistry.v20191201preview.Impo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[IdentityProperties]]</span> = None<span class="p">, </span><span class="nx">import_pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ImportPipelineSourceProperties]]</span> = None<span class="p">, </span><span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[Dict[PipelineTriggerProperties]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ImportPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">import_pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ImportPipelineSourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">trigger</span><span class="p">:</span> <span class="nx">Optional[PipelineTriggerPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -611,7 +611,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourceproperties">Dict[Import<wbr>Pipeline<wbr>Source<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#importpipelinesourceproperties">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd>
 
@@ -621,7 +621,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Dict[Identity<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd>
 
@@ -641,7 +641,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
 
@@ -651,7 +651,7 @@ The ImportPipeline resource accepts the following [input]({{< relref "/docs/intr
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerproperties">Dict[Pipeline<wbr>Trigger<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#pipelinetriggerproperties">Pipeline<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd>
 
@@ -1067,7 +1067,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1278,7 +1278,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -1852,7 +1852,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerproperties">Dict[Pipeline<wbr>Source<wbr>Trigger<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerproperties">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
 
@@ -1931,7 +1931,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Dict[Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
 

@@ -102,17 +102,17 @@ import pulumi_azure_nextgen as azure_nextgen
 pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
-    request={
-        "artifacts": [
+    request=azure_nextgen.containerregistry.v20191201preview.PipelineRunRequestArgs(
+        artifacts=[
             "sourceRepository/hello-world",
             "sourceRepository2@sha256:00000000000000000000000000000000000",
         ],
-        "pipelineResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-        "target": {
-            "name": "myblob.tar.gz",
-            "type": "AzureStorageBlob",
-        },
-    },
+        pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
+        target=azure_nextgen.containerregistry.v20191201preview.PipelineRunTargetPropertiesArgs(
+            name="myblob.tar.gz",
+            type="AzureStorageBlob",
+        ),
+    ),
     resource_group_name="myResourceGroup")
 
 ```
@@ -228,14 +228,14 @@ pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pip
     force_update_tag="2020-03-04T17:23:21.9261521+00:00",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
-    request={
-        "catalogDigest": "sha256@",
-        "pipelineResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-        "source": {
-            "name": "myblob.tar.gz",
-            "type": "AzureStorageBlob",
-        },
-    },
+    request=azure_nextgen.containerregistry.v20191201preview.PipelineRunRequestArgs(
+        catalog_digest="sha256@",
+        pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
+        source=azure_nextgen.containerregistry.v20191201preview.PipelineRunSourcePropertiesArgs(
+            name="myblob.tar.gz",
+            type="AzureStorageBlob",
+        ),
+    ),
     resource_group_name="myResourceGroup")
 
 ```
@@ -279,7 +279,7 @@ const pipelineRun = new azure_nextgen.containerregistry.v20191201preview.Pipelin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipeline_run_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[Dict[PipelineRunRequest]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PipelineRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipeline_run_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[PipelineRunRequestArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -668,7 +668,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunrequest">Dict[Pipeline<wbr>Run<wbr>Request]</a></span>
+        <span class="property-type"><a href="#pipelinerunrequest">Pipeline<wbr>Run<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request parameters for a pipeline run.{{% /md %}}</dd>
 
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunresponseresponse">Dict[Pipeline<wbr>Run<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinerunresponseresponse">Pipeline<wbr>Run<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The response of a pipeline run.{{% /md %}}</dd>
 
@@ -1458,7 +1458,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source artifacts to be transferred by the pipeline. 
 Specify an image by repository ('hello-world'). This will use the 'latest' tag.
@@ -1491,7 +1491,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourceproperties">Dict[Pipeline<wbr>Run<wbr>Source<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#pipelinerunsourceproperties">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd>
 
@@ -1501,7 +1501,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetproperties">Dict[Pipeline<wbr>Run<wbr>Target<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#pipelineruntargetproperties">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd>
 
@@ -1709,7 +1709,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of source artifacts to be transferred by the pipeline. 
 Specify an image by repository ('hello-world'). This will use the 'latest' tag.
@@ -1742,7 +1742,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Dict[Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd>
 
@@ -1752,7 +1752,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Dict[Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd>
 
@@ -2121,7 +2121,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#imported_artifacts_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts imported in the pipeline run.{{% /md %}}</dd>
 
@@ -2141,7 +2141,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progresspropertiesresponse">Dict[Progress<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#progresspropertiesresponse">Progress<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current progress of the copy operation.{{% /md %}}</dd>
 
@@ -2151,7 +2151,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Dict[Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of the pipeline run.{{% /md %}}</dd>
 
@@ -2181,7 +2181,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Dict[Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target of the pipeline run.{{% /md %}}</dd>
 
@@ -2191,7 +2191,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Dict[Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger that caused the pipeline run.{{% /md %}}</dd>
 
@@ -2825,7 +2825,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Dict[Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the pipeline run.{{% /md %}}</dd>
 

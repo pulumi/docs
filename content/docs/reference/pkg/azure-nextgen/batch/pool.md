@@ -97,14 +97,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 pool = azure_nextgen.batch.latest.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration={
-        "virtualMachineConfiguration": {
-            "imageReference": {
-                "id": "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
-            },
-            "nodeAgentSkuId": "batch.node.ubuntu 18.04",
-        },
-    },
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+                id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
     vm_size="STANDARD_D4")
@@ -489,111 +489,111 @@ pool = azure_nextgen.batch.latest.Pool("pool",
         "app-license0",
         "app-license1",
     ],
-    application_packages=[{
-        "id": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
-        "version": "asdf",
-    }],
-    certificates=[{
-        "id": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
-        "storeLocation": "LocalMachine",
-        "storeName": "MY",
-        "visibility": ["RemoteUser"],
-    }],
-    deployment_configuration={
-        "cloudServiceConfiguration": {
-            "osFamily": "4",
-            "osVersion": "WA-GUEST-OS-4.45_201708-01",
-        },
-    },
+    application_packages=[azure_nextgen.batch.latest.ApplicationPackageReferenceArgs(
+        id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
+        version="asdf",
+    )],
+    certificates=[azure_nextgen.batch.latest.CertificateReferenceArgs(
+        id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
+        store_location="LocalMachine",
+        store_name="MY",
+        visibility=["RemoteUser"],
+    )],
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        cloud_service_configuration=azure_nextgen.batch.latest.CloudServiceConfigurationArgs(
+            os_family="4",
+            os_version="WA-GUEST-OS-4.45_201708-01",
+        ),
+    ),
     display_name="my-pool-name",
     inter_node_communication="Enabled",
     metadata=[
-        {
-            "name": "metadata-1",
-            "value": "value-1",
-        },
-        {
-            "name": "metadata-2",
-            "value": "value-2",
-        },
+        azure_nextgen.batch.latest.MetadataItemArgs(
+            name="metadata-1",
+            value="value-1",
+        ),
+        azure_nextgen.batch.latest.MetadataItemArgs(
+            name="metadata-2",
+            value="value-2",
+        ),
     ],
-    network_configuration={
-        "endpointConfiguration": {
-            "inboundNatPools": [{
-                "backendPort": 12001,
-                "frontendPortRangeEnd": 15100,
-                "frontendPortRangeStart": 15000,
-                "name": "testnat",
-                "networkSecurityGroupRules": [
-                    {
-                        "access": "Allow",
-                        "priority": 150,
-                        "sourceAddressPrefix": "192.100.12.45",
-                        "sourcePortRanges": ["*"],
-                    },
-                    {
-                        "access": "Deny",
-                        "priority": 3500,
-                        "sourceAddressPrefix": "*",
-                        "sourcePortRanges": ["*"],
-                    },
+    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
+        endpoint_configuration=azure_nextgen.batch.latest.PoolEndpointConfigurationArgs(
+            inbound_nat_pools=[azure_nextgen.batch.latest.InboundNatPoolArgs(
+                backend_port=12001,
+                frontend_port_range_end=15100,
+                frontend_port_range_start=15000,
+                name="testnat",
+                network_security_group_rules=[
+                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
+                        access="Allow",
+                        priority=150,
+                        source_address_prefix="192.100.12.45",
+                        source_port_ranges=["*"],
+                    ),
+                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
+                        access="Deny",
+                        priority=3500,
+                        source_address_prefix="*",
+                        source_port_ranges=["*"],
+                    ),
                 ],
-                "protocol": "TCP",
-            }],
-        },
-        "publicIPAddressConfiguration": {
-            "ipAddressIds": [
+                protocol="TCP",
+            )],
+        ),
+        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+            ip_address_ids=[
                 "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
                 "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
             ],
-            "provision": "UserManaged",
-        },
-        "subnetId": "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
-    },
+            provision="UserManaged",
+        ),
+        subnet_id="/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings={
-        "fixedScale": {
-            "nodeDeallocationOption": "TaskCompletion",
-            "resizeTimeout": "PT8M",
-            "targetDedicatedNodes": 6,
-            "targetLowPriorityNodes": 28,
-        },
-    },
-    start_task={
-        "commandLine": "cmd /c SET",
-        "environmentSettings": [{
-            "name": "MYSET",
-            "value": "1234",
-        }],
-        "maxTaskRetryCount": 6,
-        "resourceFiles": [{
-            "fileMode": "777",
-            "filePath": "c:\\temp\\gohere",
-            "httpUrl": "https://testaccount.blob.core.windows.net/example-blob-file",
-        }],
-        "userIdentity": {
-            "autoUser": {
-                "elevationLevel": "Admin",
-                "scope": "Pool",
-            },
-        },
-        "waitForSuccess": True,
-    },
-    task_scheduling_policy={
-        "nodeFillType": "Pack",
-    },
+    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
+        fixed_scale=azure_nextgen.batch.latest.FixedScaleSettingsArgs(
+            node_deallocation_option="TaskCompletion",
+            resize_timeout="PT8M",
+            target_dedicated_nodes=6,
+            target_low_priority_nodes=28,
+        ),
+    ),
+    start_task=azure_nextgen.batch.latest.StartTaskArgs(
+        command_line="cmd /c SET",
+        environment_settings=[azure_nextgen.batch.latest.EnvironmentSettingArgs(
+            name="MYSET",
+            value="1234",
+        )],
+        max_task_retry_count=6,
+        resource_files=[azure_nextgen.batch.latest.ResourceFileArgs(
+            file_mode="777",
+            file_path="c:\\temp\\gohere",
+            http_url="https://testaccount.blob.core.windows.net/example-blob-file",
+        )],
+        user_identity=azure_nextgen.batch.latest.UserIdentityArgs(
+            auto_user=azure_nextgen.batch.latest.AutoUserSpecificationArgs(
+                elevation_level="Admin",
+                scope="Pool",
+            ),
+        ),
+        wait_for_success=True,
+    ),
+    task_scheduling_policy=azure_nextgen.batch.latest.TaskSchedulingPolicyArgs(
+        node_fill_type="Pack",
+    ),
     task_slots_per_node=13,
-    user_accounts=[{
-        "elevationLevel": "Admin",
-        "linuxUserConfiguration": {
-            "gid": 4567,
-            "sshPrivateKey": "sshprivatekeyvalue",
-            "uid": 1234,
-        },
-        "name": "username1",
-        "password": "examplepassword",
-    }],
+    user_accounts=[azure_nextgen.batch.latest.UserAccountArgs(
+        elevation_level="Admin",
+        linux_user_configuration=azure_nextgen.batch.latest.LinuxUserConfigurationArgs(
+            gid=4567,
+            ssh_private_key="sshprivatekeyvalue",
+            uid=1234,
+        ),
+        name="username1",
+        password="examplepassword",
+    )],
     vm_size="STANDARD_D4")
 
 ```
@@ -954,77 +954,77 @@ import pulumi_azure_nextgen as azure_nextgen
 
 pool = azure_nextgen.batch.latest.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration={
-        "virtualMachineConfiguration": {
-            "dataDisks": [
-                {
-                    "caching": "ReadWrite",
-                    "diskSizeGB": 30,
-                    "lun": 0,
-                    "storageAccountType": "Premium_LRS",
-                },
-                {
-                    "caching": "None",
-                    "diskSizeGB": 200,
-                    "lun": 1,
-                    "storageAccountType": "Standard_LRS",
-                },
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+            data_disks=[
+                azure_nextgen.batch.latest.DataDiskArgs(
+                    caching="ReadWrite",
+                    disk_size_gb=30,
+                    lun=0,
+                    storage_account_type="Premium_LRS",
+                ),
+                azure_nextgen.batch.latest.DataDiskArgs(
+                    caching="None",
+                    disk_size_gb=200,
+                    lun=1,
+                    storage_account_type="Standard_LRS",
+                ),
             ],
-            "diskEncryptionConfiguration": {
-                "targets": [
+            disk_encryption_configuration=azure_nextgen.batch.latest.DiskEncryptionConfigurationArgs(
+                targets=[
                     "OsDisk",
                     "TemporaryDisk",
                 ],
-            },
-            "imageReference": {
-                "offer": "WindowsServer",
-                "publisher": "MicrosoftWindowsServer",
-                "sku": "2016-Datacenter-SmallDisk",
-                "version": "latest",
-            },
-            "licenseType": "Windows_Server",
-            "nodeAgentSkuId": "batch.node.windows amd64",
-            "windowsConfiguration": {
-                "enableAutomaticUpdates": False,
-            },
-        },
-    },
-    network_configuration={
-        "endpointConfiguration": {
-            "inboundNatPools": [{
-                "backendPort": 12001,
-                "frontendPortRangeEnd": 15100,
-                "frontendPortRangeStart": 15000,
-                "name": "testnat",
-                "networkSecurityGroupRules": [
-                    {
-                        "access": "Allow",
-                        "priority": 150,
-                        "sourceAddressPrefix": "192.100.12.45",
-                        "sourcePortRanges": [
+            ),
+            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter-SmallDisk",
+                version="latest",
+            ),
+            license_type="Windows_Server",
+            node_agent_sku_id="batch.node.windows amd64",
+            windows_configuration=azure_nextgen.batch.latest.WindowsConfigurationArgs(
+                enable_automatic_updates=False,
+            ),
+        ),
+    ),
+    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
+        endpoint_configuration=azure_nextgen.batch.latest.PoolEndpointConfigurationArgs(
+            inbound_nat_pools=[azure_nextgen.batch.latest.InboundNatPoolArgs(
+                backend_port=12001,
+                frontend_port_range_end=15100,
+                frontend_port_range_start=15000,
+                name="testnat",
+                network_security_group_rules=[
+                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
+                        access="Allow",
+                        priority=150,
+                        source_address_prefix="192.100.12.45",
+                        source_port_ranges=[
                             "1",
                             "2",
                         ],
-                    },
-                    {
-                        "access": "Deny",
-                        "priority": 3500,
-                        "sourceAddressPrefix": "*",
-                        "sourcePortRanges": ["*"],
-                    },
+                    ),
+                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
+                        access="Deny",
+                        priority=3500,
+                        source_address_prefix="*",
+                        source_port_ranges=["*"],
+                    ),
                 ],
-                "protocol": "TCP",
-            }],
-        },
-    },
+                protocol="TCP",
+            )],
+        ),
+    ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings={
-        "autoScale": {
-            "evaluationInterval": "PT5M",
-            "formula": "$TargetDedicatedNodes=1",
-        },
-    },
+    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+            evaluation_interval="PT5M",
+            formula="$TargetDedicatedNodes=1",
+        ),
+    ),
     vm_size="STANDARD_D4")
 
 ```
@@ -1203,18 +1203,18 @@ import pulumi_azure_nextgen as azure_nextgen
 
 pool = azure_nextgen.batch.latest.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration={
-        "cloudServiceConfiguration": {
-            "osFamily": "5",
-        },
-    },
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        cloud_service_configuration=azure_nextgen.batch.latest.CloudServiceConfigurationArgs(
+            os_family="5",
+        ),
+    ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings={
-        "fixedScale": {
-            "targetDedicatedNodes": 3,
-        },
-    },
+    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
+        fixed_scale=azure_nextgen.batch.latest.FixedScaleSettingsArgs(
+            target_dedicated_nodes=3,
+        ),
+    ),
     vm_size="STANDARD_D4")
 
 ```
@@ -1351,25 +1351,25 @@ import pulumi_azure_nextgen as azure_nextgen
 
 pool = azure_nextgen.batch.latest.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration={
-        "virtualMachineConfiguration": {
-            "imageReference": {
-                "offer": "UbuntuServer",
-                "publisher": "Canonical",
-                "sku": "18.04-LTS",
-                "version": "latest",
-            },
-            "nodeAgentSkuId": "batch.node.ubuntu 18.04",
-        },
-    },
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+                offer="UbuntuServer",
+                publisher="Canonical",
+                sku="18.04-LTS",
+                version="latest",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
-    scale_settings={
-        "autoScale": {
-            "evaluationInterval": "PT5M",
-            "formula": "$TargetDedicatedNodes=1",
-        },
-    },
+    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+            evaluation_interval="PT5M",
+            formula="$TargetDedicatedNodes=1",
+        ),
+    ),
     vm_size="STANDARD_D4")
 
 ```
@@ -1505,20 +1505,20 @@ import pulumi_azure_nextgen as azure_nextgen
 
 pool = azure_nextgen.batch.latest.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration={
-        "virtualMachineConfiguration": {
-            "imageReference": {
-                "id": "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
-            },
-            "nodeAgentSkuId": "batch.node.ubuntu 18.04",
-        },
-    },
-    network_configuration={
-        "publicIPAddressConfiguration": {
-            "provision": "NoPublicIPAddresses",
-        },
-        "subnetId": "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
-    },
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+                id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
+    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+            provision="NoPublicIPAddresses",
+        ),
+        subnet_id="/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
     vm_size="STANDARD_D4")
@@ -1660,21 +1660,21 @@ import pulumi_azure_nextgen as azure_nextgen
 
 pool = azure_nextgen.batch.latest.Pool("pool",
     account_name="sampleacct",
-    deployment_configuration={
-        "virtualMachineConfiguration": {
-            "imageReference": {
-                "id": "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
-            },
-            "nodeAgentSkuId": "batch.node.ubuntu 18.04",
-        },
-    },
-    network_configuration={
-        "publicIPAddressConfiguration": {
-            "ipAddressIds": ["/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"],
-            "provision": "UserManaged",
-        },
-        "subnetId": "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
-    },
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+                id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
+    network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
+            ip_address_ids=["/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"],
+            provision="UserManaged",
+        ),
+        subnet_id="/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    ),
     pool_name="testpool",
     resource_group_name="default-azurebatch-japaneast",
     vm_size="STANDARD_D4")
@@ -1727,7 +1727,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationPackageReference]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[CertificateReference]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[DeploymentConfiguration]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[List[MetadataItem]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[List[MountConfiguration]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkConfiguration]]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSettings]]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[Dict[StartTask]]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[TaskSchedulingPolicy]]</span> = None<span class="p">, </span><span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[List[UserAccount]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPackageReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetadataItemArgs]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[NetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[StartTaskArgs]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[TaskSchedulingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccountArgs]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2496,7 +2496,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#application_licenses_python" style="color: inherit; text-decoration: inherit;">application_<wbr>licenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.{{% /md %}}</dd>
 
@@ -2506,7 +2506,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#application_packages_python" style="color: inherit; text-decoration: inherit;">application_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagereference">List[Application<wbr>Package<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#applicationpackagereference">Sequence[Application<wbr>Package<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.{{% /md %}}</dd>
 
@@ -2516,7 +2516,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatereference">List[Certificate<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#certificatereference">Sequence[Certificate<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd>
 
@@ -2526,7 +2526,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#deployment_configuration_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfiguration">Dict[Deployment<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#deploymentconfiguration">Deployment<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).{{% /md %}}</dd>
 
@@ -2556,7 +2556,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataitem">List[Metadata<wbr>Item]</a></span>
+        <span class="property-type"><a href="#metadataitem">Sequence[Metadata<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Batch service does not assign any meaning to metadata; it is solely for the use of user code.{{% /md %}}</dd>
 
@@ -2566,7 +2566,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mount_configuration_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountconfiguration">List[Mount<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#mountconfiguration">Sequence[Mount<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.{{% /md %}}</dd>
 
@@ -2576,7 +2576,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfiguration">Dict[Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#networkconfiguration">Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for a pool.{{% /md %}}</dd>
 
@@ -2586,7 +2586,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Dict[Scale<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.{{% /md %}}</dd>
 
@@ -2596,7 +2596,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#starttask">Dict[Start<wbr>Task]</a></span>
+        <span class="property-type"><a href="#starttask">Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.{{% /md %}}</dd>
 
@@ -2606,7 +2606,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#task_scheduling_policy_python" style="color: inherit; text-decoration: inherit;">task_<wbr>scheduling_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskschedulingpolicy">Dict[Task<wbr>Scheduling<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#taskschedulingpolicy">Task<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
 
@@ -2626,7 +2626,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#user_accounts_python" style="color: inherit; text-decoration: inherit;">user_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccount">List[User<wbr>Account]</a></span>
+        <span class="property-type"><a href="#useraccount">Sequence[User<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3125,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_run_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale_<wbr>run</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunresponse">Dict[Auto<wbr>Scale<wbr>Run<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalerunresponse">Auto<wbr>Scale<wbr>Run<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.{{% /md %}}</dd>
 
@@ -3225,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resize_operation_status_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>operation_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeoperationstatusresponse">Dict[Resize<wbr>Operation<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resizeoperationstatusresponse">Resize<wbr>Operation<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).{{% /md %}}</dd>
 
@@ -3641,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">List[Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Sequence[Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3790,7 +3790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Dict[Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4521,8 +4521,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4541,8 +4541,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobfuseoptions_python">
-<a href="#blobfuseoptions_python" style="color: inherit; text-decoration: inherit;">blobfuse<wbr>Options</a>
+        <span id="blobfuse_options_python">
+<a href="#blobfuse_options_python" style="color: inherit; text-decoration: inherit;">blobfuse_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4800,8 +4800,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4820,8 +4820,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobfuseoptions_python">
-<a href="#blobfuseoptions_python" style="color: inherit; text-decoration: inherit;">blobfuse<wbr>Options</a>
+        <span id="blobfuse_options_python">
+<a href="#blobfuse_options_python" style="color: inherit; text-decoration: inherit;">blobfuse_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5049,8 +5049,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azurefileurl_python">
-<a href="#azurefileurl_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
+        <span id="azure_file_url_python">
+<a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5059,8 +5059,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5069,8 +5069,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5288,8 +5288,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azurefileurl_python">
-<a href="#azurefileurl_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
+        <span id="azure_file_url_python">
+<a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5298,8 +5298,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5308,8 +5308,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5517,8 +5517,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5547,8 +5547,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5756,8 +5756,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5786,8 +5786,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5965,8 +5965,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storelocation_python">
-<a href="#storelocation_python" style="color: inherit; text-decoration: inherit;">store<wbr>Location</a>
+        <span id="store_location_python">
+<a href="#store_location_python" style="color: inherit; text-decoration: inherit;">store_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5989,7 +5989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6164,8 +6164,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storelocation_python">
-<a href="#storelocation_python" style="color: inherit; text-decoration: inherit;">store<wbr>Location</a>
+        <span id="store_location_python">
+<a href="#store_location_python" style="color: inherit; text-decoration: inherit;">store_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6188,7 +6188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6575,7 +6575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_image_names_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.{{% /md %}}</dd>
 
@@ -6585,7 +6585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistry">List[Container<wbr>Registry]</a></span>
+        <span class="property-type"><a href="#containerregistry">Sequence[Container<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd>
 
@@ -6734,7 +6734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_image_names_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.{{% /md %}}</dd>
 
@@ -6744,7 +6744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">List[Container<wbr>Registry<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Sequence[Container<wbr>Registry<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd>
 
@@ -7641,7 +7641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_service_configuration_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>service_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfiguration">Dict[Cloud<wbr>Service<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#cloudserviceconfiguration">Cloud<wbr>Service<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd>
 
@@ -7651,7 +7651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfiguration">Dict[Virtual<wbr>Machine<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#virtualmachineconfiguration">Virtual<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -7760,7 +7760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_service_configuration_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>service_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Dict[Cloud<wbr>Service<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd>
 
@@ -7770,7 +7770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Dict[Virtual<wbr>Machine<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -7849,7 +7849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.{{% /md %}}</dd>
 
@@ -7928,7 +7928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.{{% /md %}}</dd>
 
@@ -9277,8 +9277,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportrangeend_python">
-<a href="#frontendportrangeend_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range<wbr>End</a>
+        <span id="frontend_port_range_end_python">
+<a href="#frontend_port_range_end_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9287,8 +9287,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportrangestart_python">
-<a href="#frontendportrangestart_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range<wbr>Start</a>
+        <span id="frontend_port_range_start_python">
+<a href="#frontend_port_range_start_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9317,11 +9317,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networksecuritygrouprules_python">
-<a href="#networksecuritygrouprules_python" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
+        <span id="network_security_group_rules_python">
+<a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygrouprule">List[Network<wbr>Security<wbr>Group<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#networksecuritygrouprule">Sequence[Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
 
@@ -9556,8 +9556,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportrangeend_python">
-<a href="#frontendportrangeend_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range<wbr>End</a>
+        <span id="frontend_port_range_end_python">
+<a href="#frontend_port_range_end_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9566,8 +9566,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportrangestart_python">
-<a href="#frontendportrangestart_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range<wbr>Start</a>
+        <span id="frontend_port_range_start_python">
+<a href="#frontend_port_range_start_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9596,11 +9596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networksecuritygrouprules_python">
-<a href="#networksecuritygrouprules_python" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
+        <span id="network_security_group_rules_python">
+<a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupruleresponse">List[Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networksecuritygroupruleresponse">Sequence[Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
 
@@ -9745,8 +9745,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshprivatekey_python">
-<a href="#sshprivatekey_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Private<wbr>Key</a>
+        <span id="ssh_private_key_python">
+<a href="#ssh_private_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9904,8 +9904,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshprivatekey_python">
-<a href="#sshprivatekey_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Private<wbr>Key</a>
+        <span id="ssh_private_key_python">
+<a href="#ssh_private_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10321,41 +10321,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureblobfilesystemconfiguration_python">
-<a href="#azureblobfilesystemconfiguration_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
+        <span id="azure_blob_file_system_configuration_python">
+<a href="#azure_blob_file_system_configuration_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>system_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfiguration">Dict[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfiguration">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurefileshareconfiguration_python">
-<a href="#azurefileshareconfiguration_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Share<wbr>Configuration</a>
+        <span id="azure_file_share_configuration_python">
+<a href="#azure_file_share_configuration_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>share_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfiguration">Dict[Azure<wbr>File<wbr>Share<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#azurefileshareconfiguration">Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cifsmountconfiguration_python">
-<a href="#cifsmountconfiguration_python" style="color: inherit; text-decoration: inherit;">cifs<wbr>Mount<wbr>Configuration</a>
+        <span id="cifs_mount_configuration_python">
+<a href="#cifs_mount_configuration_python" style="color: inherit; text-decoration: inherit;">cifs_<wbr>mount_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfiguration">Dict[CIFSMount<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#cifsmountconfiguration">CIFSMount<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nfsmountconfiguration_python">
-<a href="#nfsmountconfiguration_python" style="color: inherit; text-decoration: inherit;">nfs<wbr>Mount<wbr>Configuration</a>
+        <span id="nfs_mount_configuration_python">
+<a href="#nfs_mount_configuration_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>mount_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfiguration">Dict[NFSMount<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#nfsmountconfiguration">NFSMount<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
@@ -10520,41 +10520,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureblobfilesystemconfiguration_python">
-<a href="#azureblobfilesystemconfiguration_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
+        <span id="azure_blob_file_system_configuration_python">
+<a href="#azure_blob_file_system_configuration_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>system_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Dict[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurefileshareconfiguration_python">
-<a href="#azurefileshareconfiguration_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Share<wbr>Configuration</a>
+        <span id="azure_file_share_configuration_python">
+<a href="#azure_file_share_configuration_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>share_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Dict[Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cifsmountconfiguration_python">
-<a href="#cifsmountconfiguration_python" style="color: inherit; text-decoration: inherit;">cifs<wbr>Mount<wbr>Configuration</a>
+        <span id="cifs_mount_configuration_python">
+<a href="#cifs_mount_configuration_python" style="color: inherit; text-decoration: inherit;">cifs_<wbr>mount_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfigurationresponse">Dict[CIFSMount<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cifsmountconfigurationresponse">CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nfsmountconfiguration_python">
-<a href="#nfsmountconfiguration_python" style="color: inherit; text-decoration: inherit;">nfs<wbr>Mount<wbr>Configuration</a>
+        <span id="nfs_mount_configuration_python">
+<a href="#nfs_mount_configuration_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>mount_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfigurationresponse">Dict[NFSMount<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nfsmountconfigurationresponse">NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd>
 
@@ -10689,8 +10689,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10709,8 +10709,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10848,8 +10848,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10868,8 +10868,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11011,7 +11011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfiguration">Dict[Pool<wbr>Endpoint<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#poolendpointconfiguration">Pool<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
 
@@ -11021,7 +11021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfiguration">Dict[Public<wbr>IPAddress<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#publicipaddressconfiguration">Public<wbr>IPAddress<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
 
@@ -11170,7 +11170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfigurationresponse">Dict[Pool<wbr>Endpoint<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
 
@@ -11180,7 +11180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Dict[Public<wbr>IPAddress<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd>
 
@@ -11389,7 +11389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_port_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.{{% /md %}}</dd>
 
@@ -11588,7 +11588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_port_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.{{% /md %}}</dd>
 
@@ -11667,7 +11667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpool">List[Inbound<wbr>Nat<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#inboundnatpool">Sequence[Inbound<wbr>Nat<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
@@ -11746,7 +11746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpoolresponse">List[Inbound<wbr>Nat<wbr>Pool<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inboundnatpoolresponse">Sequence[Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
@@ -11855,7 +11855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
@@ -11974,7 +11974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
@@ -12143,7 +12143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List[Resize<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">Sequence[Resize<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12372,7 +12372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List[Resize<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">Sequence[Resize<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.{{% /md %}}</dd>
 
@@ -12647,8 +12647,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autostoragecontainername_python">
-<a href="#autostoragecontainername_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Container<wbr>Name</a>
+        <span id="auto_storage_container_name_python">
+<a href="#auto_storage_container_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>container_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12657,8 +12657,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobprefix_python">
-<a href="#blobprefix_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix</a>
+        <span id="blob_prefix_python">
+<a href="#blob_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12667,8 +12667,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12697,8 +12697,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storagecontainerurl_python">
-<a href="#storagecontainerurl_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Url</a>
+        <span id="storage_container_url_python">
+<a href="#storage_container_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12926,8 +12926,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autostoragecontainername_python">
-<a href="#autostoragecontainername_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Container<wbr>Name</a>
+        <span id="auto_storage_container_name_python">
+<a href="#auto_storage_container_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>container_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12936,8 +12936,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobprefix_python">
-<a href="#blobprefix_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix</a>
+        <span id="blob_prefix_python">
+<a href="#blob_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12946,8 +12946,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12976,8 +12976,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storagecontainerurl_python">
-<a href="#storagecontainerurl_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Url</a>
+        <span id="storage_container_url_python">
+<a href="#storage_container_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13089,7 +13089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Dict[Auto<wbr>Scale<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -13099,7 +13099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_scale_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettings">Dict[Fixed<wbr>Scale<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#fixedscalesettings">Fixed<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -13208,7 +13208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Dict[Auto<wbr>Scale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -13218,7 +13218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_scale_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettingsresponse">Dict[Fixed<wbr>Scale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fixedscalesettingsresponse">Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd>
 
@@ -13487,7 +13487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_settings_python" style="color: inherit; text-decoration: inherit;">container_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettings">Dict[Task<wbr>Container<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#taskcontainersettings">Task<wbr>Container<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd>
 
@@ -13497,7 +13497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_settings_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">List[Environment<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#environmentsetting">Sequence[Environment<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13517,7 +13517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefile">List[Resource<wbr>File]</a></span>
+        <span class="property-type"><a href="#resourcefile">Sequence[Resource<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13527,7 +13527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentity">Dict[User<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#useridentity">User<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd>
 
@@ -13806,7 +13806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_settings_python" style="color: inherit; text-decoration: inherit;">container_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettingsresponse">Dict[Task<wbr>Container<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#taskcontainersettingsresponse">Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd>
 
@@ -13816,7 +13816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_settings_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsettingresponse">List[Environment<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentsettingresponse">Sequence[Environment<wbr>Setting<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13836,7 +13836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefileresponse">List[Resource<wbr>File<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcefileresponse">Sequence[Resource<wbr>File<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13846,7 +13846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">Dict[User<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useridentityresponse">User<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd>
 
@@ -14045,7 +14045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistry">Dict[Container<wbr>Registry]</a></span>
+        <span class="property-type"><a href="#containerregistry">Container<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd>
 
@@ -14244,7 +14244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Dict[Container<wbr>Registry<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd>
 
@@ -14637,21 +14637,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linuxuserconfiguration_python">
-<a href="#linuxuserconfiguration_python" style="color: inherit; text-decoration: inherit;">linux<wbr>User<wbr>Configuration</a>
+        <span id="linux_user_configuration_python">
+<a href="#linux_user_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>user_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfiguration">Dict[Linux<wbr>User<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#linuxuserconfiguration">Linux<wbr>User<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="windowsuserconfiguration_python">
-<a href="#windowsuserconfiguration_python" style="color: inherit; text-decoration: inherit;">windows<wbr>User<wbr>Configuration</a>
+        <span id="windows_user_configuration_python">
+<a href="#windows_user_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>user_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfiguration">Dict[Windows<wbr>User<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#windowsuserconfiguration">Windows<wbr>User<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd>
 
@@ -14876,21 +14876,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linuxuserconfiguration_python">
-<a href="#linuxuserconfiguration_python" style="color: inherit; text-decoration: inherit;">linux<wbr>User<wbr>Configuration</a>
+        <span id="linux_user_configuration_python">
+<a href="#linux_user_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>user_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfigurationresponse">Dict[Linux<wbr>User<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxuserconfigurationresponse">Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="windowsuserconfiguration_python">
-<a href="#windowsuserconfiguration_python" style="color: inherit; text-decoration: inherit;">windows<wbr>User<wbr>Configuration</a>
+        <span id="windows_user_configuration_python">
+<a href="#windows_user_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>user_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfigurationresponse">Dict[Windows<wbr>User<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowsuserconfigurationresponse">Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd>
 
@@ -14999,7 +14999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_user_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecification">Dict[Auto<wbr>User<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#autouserspecification">Auto<wbr>User<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd>
 
@@ -15118,7 +15118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_user_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecificationresponse">Dict[Auto<wbr>User<wbr>Specification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autouserspecificationresponse">Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd>
 
@@ -15399,7 +15399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Dict[Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15419,7 +15419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfiguration">Dict[Container<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#containerconfiguration">Container<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd>
 
@@ -15429,7 +15429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisk">List[Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#datadisk">Sequence[Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd>
 
@@ -15439,7 +15439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfiguration">Dict[Disk<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
 
@@ -15463,7 +15463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfiguration">Dict[Windows<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#windowsconfiguration">Windows<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd>
 
@@ -15734,7 +15734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Dict[Image<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15754,7 +15754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfigurationresponse">Dict[Container<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerconfigurationresponse">Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd>
 
@@ -15764,7 +15764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List[Data<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd>
 
@@ -15774,7 +15774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Dict[Disk<wbr>Encryption<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
 
@@ -15798,7 +15798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Dict[Windows<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd>
 

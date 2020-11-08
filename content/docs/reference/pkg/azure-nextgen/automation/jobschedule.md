@@ -105,12 +105,12 @@ job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
         "jobscheduletag02": "jobschedulevalue02",
     },
     resource_group_name="rg",
-    runbook={
-        "name": "TestRunbook",
-    },
-    schedule={
-        "name": "ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
-    })
+    runbook=azure_nextgen.automation.latest.RunbookAssociationPropertyArgs(
+        name="TestRunbook",
+    ),
+    schedule=azure_nextgen.automation.latest.ScheduleAssociationPropertyArgs(
+        name="ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
+    ))
 
 ```
 
@@ -154,7 +154,7 @@ const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_schedule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook</span><span class="p">:</span> <span class="nx">Optional[Dict[RunbookAssociationProperty]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleAssociationProperty]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_schedule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook</span><span class="p">:</span> <span class="nx">Optional[RunbookAssociationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleAssociationPropertyArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -593,7 +593,7 @@ The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#runbook_python" style="color: inherit; text-decoration: inherit;">runbook</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookassociationproperty">Dict[Runbook<wbr>Association<wbr>Property]</a></span>
+        <span class="property-type"><a href="#runbookassociationproperty">Runbook<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook.{{% /md %}}</dd>
 
@@ -603,7 +603,7 @@ The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleassociationproperty">Dict[Schedule<wbr>Association<wbr>Property]</a></span>
+        <span class="property-type"><a href="#scheduleassociationproperty">Schedule<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the schedule.{{% /md %}}</dd>
 
@@ -613,7 +613,7 @@ The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets a list of job properties.{{% /md %}}</dd>
 

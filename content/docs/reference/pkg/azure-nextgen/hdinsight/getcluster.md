@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustergetpropertiesresponse">Dict[Cluster<wbr>Get<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clustergetpropertiesresponse">Cluster<wbr>Get<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the cluster.{{% /md %}}</dd>
 
@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentityresponse">Dict[Cluster<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusteridentityresponse">Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cluster, if configured.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -580,8 +580,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxinstancecount_python">
-<a href="#maxinstancecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
+        <span id="max_instance_count_python">
+<a href="#max_instance_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -590,8 +590,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -703,7 +703,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalescheduleresponse">List[Autoscale<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalescheduleresponse">Sequence[Autoscale<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
 
@@ -822,7 +822,7 @@ The following output properties are available:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalecapacityresponse">Dict[Autoscale<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalecapacityresponse">Autoscale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The following output properties are available:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerecurrenceresponse">Dict[Autoscale<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
 
@@ -941,17 +941,17 @@ The following output properties are available:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeandcapacity_python">
-<a href="#timeandcapacity_python" style="color: inherit; text-decoration: inherit;">time<wbr>And<wbr>Capacity</a>
+        <span id="time_and_capacity_python">
+<a href="#time_and_capacity_python" style="color: inherit; text-decoration: inherit;">time_<wbr>and_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Dict[Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
 
@@ -1086,8 +1086,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxinstancecount_python">
-<a href="#maxinstancecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
+        <span id="max_instance_count_python">
+<a href="#max_instance_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1096,8 +1096,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1408,7 +1408,7 @@ The following output properties are available:
 <a href="#component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The versions of different services in the cluster.{{% /md %}}</dd>
 
@@ -1418,7 +1418,7 @@ The following output properties are available:
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The cluster configurations.{{% /md %}}</dd>
 
@@ -1459,6 +1459,16 @@ The following output properties are available:
         <span class="property-type"><a href="#clusterdefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Cluster<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1562,13 +1572,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networksettings_csharp">
-<a href="#networksettings_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Settings</a>
+        <span id="networkproperties_csharp">
+<a href="#networkproperties_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Network<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Network<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network settings.{{% /md %}}</dd>
+    <dd>{{% md %}}The network properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1636,6 +1646,16 @@ The following output properties are available:
         <span class="property-type"><a href="#clusterdefinitionresponse">Cluster<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1739,13 +1759,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networksettings_go">
-<a href="#networksettings_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Settings</a>
+        <span id="networkproperties_go">
+<a href="#networkproperties_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksettingsresponse">Network<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkpropertiesresponse">Network<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The network settings.{{% /md %}}</dd>
+    <dd>{{% md %}}The network properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1813,6 +1833,16 @@ The following output properties are available:
         <span class="property-type"><a href="#clusterdefinitionresponse">Cluster<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1916,13 +1946,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networksettings_nodejs">
-<a href="#networksettings_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Settings</a>
+        <span id="networkproperties_nodejs">
+<a href="#networkproperties_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksettingsresponse">Network<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkpropertiesresponse">Network<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The network settings.{{% /md %}}</dd>
+    <dd>{{% md %}}The network properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1987,9 +2017,19 @@ The following output properties are available:
 <a href="#cluster_definition_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefinitionresponse">Dict[Cluster<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterdefinitionresponse">Cluster<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2017,7 +2057,7 @@ The following output properties are available:
 <a href="#compute_profile_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeprofileresponse">Dict[Compute<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#computeprofileresponse">Compute<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute profile.{{% /md %}}</dd>
 
@@ -2027,7 +2067,7 @@ The following output properties are available:
 <a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivityendpointresponse">List[Connectivity<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectivityendpointresponse">Sequence[Connectivity<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of connectivity endpoints.{{% /md %}}</dd>
 
@@ -2047,7 +2087,7 @@ The following output properties are available:
 <a href="#disk_encryption_properties_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionpropertiesresponse">Dict[Disk<wbr>Encryption<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskencryptionpropertiesresponse">Disk<wbr>Encryption<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The disk encryption properties.{{% /md %}}</dd>
 
@@ -2057,7 +2097,7 @@ The following output properties are available:
 <a href="#encryption_in_transit_properties_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>in_<wbr>transit_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionintransitpropertiesresponse">Dict[Encryption<wbr>In<wbr>Transit<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionintransitpropertiesresponse">Encryption<wbr>In<wbr>Transit<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption-in-transit properties.{{% /md %}}</dd>
 
@@ -2067,7 +2107,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorsresponse">List[Errors<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorsresponse">Sequence[Errors<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
 
@@ -2077,7 +2117,7 @@ The following output properties are available:
 <a href="#kafka_rest_properties_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkarestpropertiesresponse">Dict[Kafka<wbr>Rest<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kafkarestpropertiesresponse">Kafka<wbr>Rest<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster kafka rest proxy configuration.{{% /md %}}</dd>
 
@@ -2093,13 +2133,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="network_settings_python">
-<a href="#network_settings_python" style="color: inherit; text-decoration: inherit;">network_<wbr>settings</a>
+        <span id="network_properties_python">
+<a href="#network_properties_python" style="color: inherit; text-decoration: inherit;">network_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksettingsresponse">Dict[Network<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkpropertiesresponse">Network<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network settings.{{% /md %}}</dd>
+    <dd>{{% md %}}The network properties.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2127,7 +2167,7 @@ The following output properties are available:
 <a href="#quota_info_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quotainforesponse">Dict[Quota<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#quotainforesponse">Quota<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota information.{{% /md %}}</dd>
 
@@ -2137,7 +2177,7 @@ The following output properties are available:
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Dict[Security<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security profile.{{% /md %}}</dd>
 
@@ -2346,7 +2386,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -2544,7 +2584,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roleresponse">List[Role<wbr>Response]</a></span>
+        <span class="property-type"><a href="#roleresponse">Sequence[Role<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
 
@@ -2898,8 +2938,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskspernode_python">
-<a href="#diskspernode_python" style="color: inherit; text-decoration: inherit;">disks<wbr>Per<wbr>Node</a>
+        <span id="disks_per_node_python">
+<a href="#disks_per_node_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3537,7 +3577,7 @@ The following output properties are available:
 <a href="#client_group_info_python" style="color: inherit; text-decoration: inherit;">client_<wbr>group_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientgroupinforesponse">Dict[Client<wbr>Group<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clientgroupinforesponse">Client<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The information of AAD security group.{{% /md %}}</dd>
 
@@ -3682,11 +3722,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshprofile_python">
-<a href="#sshprofile_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Profile</a>
+        <span id="ssh_profile_python">
+<a href="#ssh_profile_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshprofileresponse">Dict[Ssh<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshprofileresponse">Ssh<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
 
@@ -3707,7 +3747,7 @@ The following output properties are available:
 
 
 
-<h4 id="networksettingsresponse">Network<wbr>Settings<wbr>Response</h4>
+<h4 id="networkpropertiesresponse">Network<wbr>Properties<wbr>Response</h4>
 
 
 
@@ -3720,23 +3760,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outboundonlypublicnetworkaccesstype_csharp">
-<a href="#outboundonlypublicnetworkaccesstype_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Only<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a>
+        <span id="privatelink_csharp">
+<a href="#privatelink_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The mechanism through which the cluster will have outbound access to the public network.{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not private link is enabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+        <span id="resourceproviderconnection_csharp">
+<a href="#resourceproviderconnection_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether public network access is enabled for inbound and outbound, or outbound only.{{% /md %}}</dd>
+    <dd>{{% md %}}The direction for the resource provider connection.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3747,23 +3787,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outboundonlypublicnetworkaccesstype_go">
-<a href="#outboundonlypublicnetworkaccesstype_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Only<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a>
+        <span id="privatelink_go">
+<a href="#privatelink_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The mechanism through which the cluster will have outbound access to the public network.{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not private link is enabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+        <span id="resourceproviderconnection_go">
+<a href="#resourceproviderconnection_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether public network access is enabled for inbound and outbound, or outbound only.{{% /md %}}</dd>
+    <dd>{{% md %}}The direction for the resource provider connection.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3774,23 +3814,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outboundonlypublicnetworkaccesstype_nodejs">
-<a href="#outboundonlypublicnetworkaccesstype_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Only<wbr>Public<wbr>Network<wbr>Access<wbr>Type</a>
+        <span id="privatelink_nodejs">
+<a href="#privatelink_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The mechanism through which the cluster will have outbound access to the public network.{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not private link is enabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+        <span id="resourceproviderconnection_nodejs">
+<a href="#resourceproviderconnection_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether public network access is enabled for inbound and outbound, or outbound only.{{% /md %}}</dd>
+    <dd>{{% md %}}The direction for the resource provider connection.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3801,23 +3841,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outbound_only_public_network_access_type_python">
-<a href="#outbound_only_public_network_access_type_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>only_<wbr>public_<wbr>network_<wbr>access_<wbr>type</a>
+        <span id="private_link_python">
+<a href="#private_link_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The mechanism through which the cluster will have outbound access to the public network.{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not private link is enabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+        <span id="resource_provider_connection_python">
+<a href="#resource_provider_connection_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether public network access is enabled for inbound and outbound, or outbound only.{{% /md %}}</dd>
+    <dd>{{% md %}}The direction for the resource provider connection.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3890,11 +3930,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linuxoperatingsystemprofile_python">
-<a href="#linuxoperatingsystemprofile_python" style="color: inherit; text-decoration: inherit;">linux<wbr>Operating<wbr>System<wbr>Profile</a>
+        <span id="linux_operating_system_profile_python">
+<a href="#linux_operating_system_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>operating_<wbr>system_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Dict[Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
 
@@ -4292,17 +4332,17 @@ The following output properties are available:
 <a href="#autoscale_configuration_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleresponse">Dict[Autoscale<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscaleresponse">Autoscale<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datadisksgroups_python">
-<a href="#datadisksgroups_python" style="color: inherit; text-decoration: inherit;">data<wbr>Disks<wbr>Groups</a>
+        <span id="data_disks_groups_python">
+<a href="#data_disks_groups_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisksgroupsresponse">List[Data<wbr>Disks<wbr>Groups<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadisksgroupsresponse">Sequence[Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
 
@@ -4312,14 +4352,14 @@ The following output properties are available:
 <a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Dict[Hardware<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4342,24 +4382,24 @@ The following output properties are available:
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Dict[Os<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scriptactions_python">
-<a href="#scriptactions_python" style="color: inherit; text-decoration: inherit;">script<wbr>Actions</a>
+        <span id="script_actions_python">
+<a href="#script_actions_python" style="color: inherit; text-decoration: inherit;">script_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptactionresponse">List[Script<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scriptactionresponse">Sequence[Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetinstancecount_python">
-<a href="#targetinstancecount_python" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+        <span id="target_instance_count_python">
+<a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4372,7 +4412,7 @@ The following output properties are available:
 <a href="#virtual_network_profile_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofileresponse">Dict[Virtual<wbr>Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
 
@@ -4856,11 +4896,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cluster_users_group_d_ns_python">
-<a href="#cluster_users_group_d_ns_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>users_<wbr>group_<wbr>d_<wbr>ns</a>
+        <span id="cluster_users_group_dns_python">
+<a href="#cluster_users_group_dns_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>users_<wbr>group_<wbr>dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Distinguished Names for cluster user groups{{% /md %}}</dd>
 
@@ -4910,7 +4950,7 @@ The following output properties are available:
 <a href="#ldaps_urls_python" style="color: inherit; text-decoration: inherit;">ldaps_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The LDAPS protocol URLs to communicate with the Active Directory.{{% /md %}}</dd>
 
@@ -5009,7 +5049,7 @@ The following output properties are available:
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List[Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
 
@@ -5084,8 +5124,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatedata_python">
-<a href="#certificatedata_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
+        <span id="certificate_data_python">
+<a href="#certificate_data_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

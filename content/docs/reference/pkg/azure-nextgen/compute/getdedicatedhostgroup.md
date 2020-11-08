@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcereadonlyresponse">List[Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourcereadonlyresponse">Sequence[Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all dedicated hosts in the dedicated host group.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostgroupinstanceviewresponse">Dict[Dedicated<wbr>Host<wbr>Group<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dedicatedhostgroupinstanceviewresponse">Dedicated<wbr>Host<wbr>Group<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.{{% /md %}}</dd>
 
@@ -789,11 +789,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allocatable_v_ms_python">
-<a href="#allocatable_v_ms_python" style="color: inherit; text-decoration: inherit;">allocatable_<wbr>v_<wbr>ms</a>
+        <span id="allocatable_vms_python">
+<a href="#allocatable_vms_python" style="color: inherit; text-decoration: inherit;">allocatable_<wbr>vms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List[Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse]</a></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Sequence[Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
 
@@ -872,7 +872,7 @@ The following output properties are available:
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">List[Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">Sequence[Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of instance view of the dedicated hosts under the dedicated host group.{{% /md %}}</dd>
 
@@ -1061,7 +1061,7 @@ The following output properties are available:
 <a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dict[Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
 
@@ -1071,7 +1071,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 

@@ -507,7 +507,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileresponse">List[File<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileresponse">Sequence[File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of returned job directories and files.{{% /md %}}</dd>
 
@@ -708,8 +708,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="contentlength_python">
-<a href="#contentlength_python" style="color: inherit; text-decoration: inherit;">content<wbr>Length</a>
+        <span id="content_length_python">
+<a href="#content_length_python" style="color: inherit; text-decoration: inherit;">content_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -718,8 +718,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="downloadurl_python">
-<a href="#downloadurl_python" style="color: inherit; text-decoration: inherit;">download<wbr>Url</a>
+        <span id="download_url_python">
+<a href="#download_url_python" style="color: inherit; text-decoration: inherit;">download_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

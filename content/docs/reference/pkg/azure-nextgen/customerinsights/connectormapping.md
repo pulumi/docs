@@ -166,39 +166,39 @@ connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("conn
     entity_type_name="TestInteractionType2967",
     hub_name="sdkTestHub",
     mapping_name="testMapping12491",
-    mapping_properties={
-        "availability": {
-            "frequency": "Hour",
-            "interval": 5,
-        },
-        "completeOperation": {
-            "completionOperationType": "DeleteFile",
-            "destinationFolder": "fakePath",
-        },
-        "errorManagement": {
-            "errorLimit": 10,
-            "errorManagementType": "StopImport",
-        },
-        "fileFilter": "unknown",
-        "folderPath": "http://sample.dne/file",
-        "format": {
-            "columnDelimiter": "|",
-            "formatType": "TextFormat",
-        },
-        "hasHeader": False,
-        "structure": [
-            {
-                "columnName": "unknown1",
-                "isEncrypted": False,
-                "propertyName": "unknwon1",
-            },
-            {
-                "columnName": "unknown2",
-                "isEncrypted": True,
-                "propertyName": "unknwon2",
-            },
+    mapping_properties=azure_nextgen.customerinsights.latest.ConnectorMappingPropertiesArgs(
+        availability=azure_nextgen.customerinsights.latest.ConnectorMappingAvailabilityArgs(
+            frequency="Hour",
+            interval=5,
+        ),
+        complete_operation=azure_nextgen.customerinsights.latest.ConnectorMappingCompleteOperationArgs(
+            completion_operation_type="DeleteFile",
+            destination_folder="fakePath",
+        ),
+        error_management=azure_nextgen.customerinsights.latest.ConnectorMappingErrorManagementArgs(
+            error_limit=10,
+            error_management_type="StopImport",
+        ),
+        file_filter="unknown",
+        folder_path="http://sample.dne/file",
+        format=azure_nextgen.customerinsights.latest.ConnectorMappingFormatArgs(
+            column_delimiter="|",
+            format_type="TextFormat",
+        ),
+        has_header=False,
+        structure=[
+            azure_nextgen.customerinsights.latest.ConnectorMappingStructureArgs(
+                column_name="unknown1",
+                is_encrypted=False,
+                property_name="unknwon1",
+            ),
+            azure_nextgen.customerinsights.latest.ConnectorMappingStructureArgs(
+                column_name="unknown2",
+                is_encrypted=True,
+                property_name="unknwon2",
+            ),
         ],
-    },
+    ),
     resource_group_name="TestHubRG")
 
 ```
@@ -271,7 +271,7 @@ const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectorMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connector_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectorMappingProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectorMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connector_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_properties</span><span class="p">:</span> <span class="nx">Optional[ConnectorMappingPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -820,7 +820,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#mapping_properties_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingproperties">Dict[Connector<wbr>Mapping<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#connectormappingproperties">Connector<wbr>Mapping<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd>
 
@@ -2909,7 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailability">Dict[Connector<wbr>Mapping<wbr>Availability]</a></span>
+        <span class="property-type"><a href="#connectormappingavailability">Connector<wbr>Mapping<wbr>Availability<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
 
@@ -2919,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complete_operation_python" style="color: inherit; text-decoration: inherit;">complete_<wbr>operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperation">Dict[Connector<wbr>Mapping<wbr>Complete<wbr>Operation]</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
 
@@ -2929,7 +2929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_management_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagement">Dict[Connector<wbr>Mapping<wbr>Error<wbr>Management]</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
 
@@ -2939,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformat">Dict[Connector<wbr>Mapping<wbr>Format]</a></span>
+        <span class="property-type"><a href="#connectormappingformat">Connector<wbr>Mapping<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
 
@@ -2949,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructure">List[Connector<wbr>Mapping<wbr>Structure]</a></span>
+        <span class="property-type"><a href="#connectormappingstructure">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
 
@@ -3268,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Dict[Connector<wbr>Mapping<wbr>Availability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
 
@@ -3278,7 +3278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complete_operation_python" style="color: inherit; text-decoration: inherit;">complete_<wbr>operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Dict[Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
 
@@ -3288,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_management_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Dict[Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
 
@@ -3298,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Dict[Connector<wbr>Mapping<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
 
@@ -3308,7 +3308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">List[Connector<wbr>Mapping<wbr>Structure<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
 
@@ -3523,8 +3523,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customformatspecifier_python">
-<a href="#customformatspecifier_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Format<wbr>Specifier</a>
+        <span id="custom_format_specifier_python">
+<a href="#custom_format_specifier_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>format_<wbr>specifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3722,8 +3722,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customformatspecifier_python">
-<a href="#customformatspecifier_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Format<wbr>Specifier</a>
+        <span id="custom_format_specifier_python">
+<a href="#custom_format_specifier_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>format_<wbr>specifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

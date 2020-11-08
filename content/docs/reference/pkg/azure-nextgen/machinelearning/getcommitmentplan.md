@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplanpropertiesresponse">Dict[Commitment<wbr>Plan<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#commitmentplanpropertiesresponse">Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd>
 
@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceskuresponse">Dict[Resource<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceskuresponse">Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd>
 
@@ -854,7 +854,7 @@ The following output properties are available:
 <a href="#included_quantities_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Plan<wbr>Quantity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Plan<wbr>Quantity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd>
 
@@ -1099,8 +1099,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="includedquantitymeter_python">
-<a href="#includedquantitymeter_python" style="color: inherit; text-decoration: inherit;">included<wbr>Quantity<wbr>Meter</a>
+        <span id="included_quantity_meter_python">
+<a href="#included_quantity_meter_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantity_<wbr>meter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1109,8 +1109,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="overagemeter_python">
-<a href="#overagemeter_python" style="color: inherit; text-decoration: inherit;">overage<wbr>Meter</a>
+        <span id="overage_meter_python">
+<a href="#overage_meter_python" style="color: inherit; text-decoration: inherit;">overage_<wbr>meter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

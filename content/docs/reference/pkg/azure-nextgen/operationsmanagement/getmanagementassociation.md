@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementassociationpropertiesresponse">Dict[Management<wbr>Association<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementassociationpropertiesresponse">Management<wbr>Association<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties for ManagementAssociation object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
 

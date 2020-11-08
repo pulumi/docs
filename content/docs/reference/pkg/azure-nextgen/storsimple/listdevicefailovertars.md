@@ -24,7 +24,7 @@ meta_desc: "Explore the ListDeviceFailoverTars function of the storsimple module
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_device_failover_tars(</span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_containers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListDeviceFailoverTarsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_device_failover_tars(</span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListDeviceFailoverTarsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -226,7 +226,7 @@ The following arguments are supported:
 <a href="#volume_containers_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd>
 
@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovertargetresponse">List[Failover<wbr>Target<wbr>Response]</a></span>
+        <span class="property-type"><a href="#failovertargetresponse">Sequence[Failover<wbr>Target<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd>
 
@@ -688,8 +688,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availablelocalstorageinbytes_python">
-<a href="#availablelocalstorageinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Local<wbr>Storage<wbr>In<wbr>Bytes</a>
+        <span id="available_local_storage_in_bytes_python">
+<a href="#available_local_storage_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>local_<wbr>storage_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -698,8 +698,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availabletieredstorageinbytes_python">
-<a href="#availabletieredstorageinbytes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Tiered<wbr>Storage<wbr>In<wbr>Bytes</a>
+        <span id="available_tiered_storage_in_bytes_python">
+<a href="#available_tiered_storage_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>tiered_<wbr>storage_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -708,8 +708,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datacontainerscount_python">
-<a href="#datacontainerscount_python" style="color: inherit; text-decoration: inherit;">data<wbr>Containers<wbr>Count</a>
+        <span id="data_containers_count_python">
+<a href="#data_containers_count_python" style="color: inherit; text-decoration: inherit;">data_<wbr>containers_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -718,8 +718,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deviceid_python">
-<a href="#deviceid_python" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+        <span id="device_id_python">
+<a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -728,23 +728,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicelocation_python">
-<a href="#devicelocation_python" style="color: inherit; text-decoration: inherit;">device<wbr>Location</a>
+        <span id="device_location_python">
+<a href="#device_location_python" style="color: inherit; text-decoration: inherit;">device_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="devicestatus_python">
-<a href="#devicestatus_python" style="color: inherit; text-decoration: inherit;">device<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The status of the device.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -758,18 +748,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eligibilityresult_python">
-<a href="#eligibilityresult_python" style="color: inherit; text-decoration: inherit;">eligibility<wbr>Result</a>
+        <span id="device_status_python">
+<a href="#device_status_python" style="color: inherit; text-decoration: inherit;">device_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targeteligibilityresultresponse">Dict[Target<wbr>Eligibility<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the device.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eligibility_result_python">
+<a href="#eligibility_result_python" style="color: inherit; text-decoration: inherit;">eligibility_<wbr>result</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targeteligibilityresultresponse">Target<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="friendlydevicesoftwareversion_python">
-<a href="#friendlydevicesoftwareversion_python" style="color: inherit; text-decoration: inherit;">friendly<wbr>Device<wbr>Software<wbr>Version</a>
+        <span id="friendly_device_software_version_python">
+<a href="#friendly_device_software_version_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>device_<wbr>software_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -947,8 +947,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resultcode_python">
-<a href="#resultcode_python" style="color: inherit; text-decoration: inherit;">result<wbr>Code</a>
+        <span id="result_code_python">
+<a href="#result_code_python" style="color: inherit; text-decoration: inherit;">result_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1056,8 +1056,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eligibilitystatus_python">
-<a href="#eligibilitystatus_python" style="color: inherit; text-decoration: inherit;">eligibility<wbr>Status</a>
+        <span id="eligibility_status_python">
+<a href="#eligibility_status_python" style="color: inherit; text-decoration: inherit;">eligibility_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1070,7 +1070,7 @@ The following output properties are available:
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targeteligibilityerrormessageresponse">List[Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targeteligibilityerrormessageresponse">Sequence[Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd>
 

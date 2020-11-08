@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Action<wbr>Group<wbr>Response] | Dict[Diagnostics<wbr>Response] | Dict[Suppression<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -710,8 +710,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -764,7 +764,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Dict[Conditions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Dict[Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd>
 
@@ -1168,21 +1168,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertcontext_python">
-<a href="#alertcontext_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
+        <span id="alert_context_python">
+<a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertruleid_python">
-<a href="#alertruleid_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
+        <span id="alert_rule_id_python">
+<a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
 
@@ -1192,27 +1192,27 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monitorcondition_python">
-<a href="#monitorcondition_python" style="color: inherit; text-decoration: inherit;">monitor<wbr>Condition</a>
+        <span id="monitor_condition_python">
+<a href="#monitor_condition_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monitorservice_python">
-<a href="#monitorservice_python" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
+        <span id="monitor_service_python">
+<a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
 
@@ -1222,7 +1222,7 @@ The following output properties are available:
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
 
@@ -1232,7 +1232,7 @@ The following output properties are available:
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
 
@@ -1561,7 +1561,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Dict[Conditions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -1581,7 +1581,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Dict[Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -1696,8 +1696,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scopetype_python">
-<a href="#scopetype_python" style="color: inherit; text-decoration: inherit;">scope<wbr>Type</a>
+        <span id="scope_type_python">
+<a href="#scope_type_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1710,7 +1710,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd>
 
@@ -1829,7 +1829,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionscheduleresponse">Dict[Suppression<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
 
@@ -2184,11 +2184,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="suppressionconfig_python">
-<a href="#suppressionconfig_python" style="color: inherit; text-decoration: inherit;">suppression<wbr>Config</a>
+        <span id="suppression_config_python">
+<a href="#suppression_config_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfigresponse">Dict[Suppression<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
 
@@ -2198,7 +2198,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Dict[Conditions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -2218,7 +2218,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Dict[Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -2443,11 +2443,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recurrencevalues_python">
-<a href="#recurrencevalues_python" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Values</a>
+        <span id="recurrence_values_python">
+<a href="#recurrence_values_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd>
 

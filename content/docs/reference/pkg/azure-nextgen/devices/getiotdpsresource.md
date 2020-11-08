@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotdpspropertiesdescriptionresponse">Dict[Iot<wbr>Dps<wbr>Properties<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iotdpspropertiesdescriptionresponse">Iot<wbr>Dps<wbr>Properties<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd>
 
@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotdpsskuinforesponse">Dict[Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iotdpsskuinforesponse">Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -894,7 +894,7 @@ The following output properties are available:
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">List[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd>
 
@@ -904,7 +904,7 @@ The following output properties are available:
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">List[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd>
 
@@ -914,7 +914,7 @@ The following output properties are available:
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">List[Ip<wbr>Filter<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipfilterruleresponse">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
 
@@ -924,7 +924,7 @@ The following output properties are available:
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
 
@@ -1338,8 +1338,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allocationweight_python">
-<a href="#allocationweight_python" style="color: inherit; text-decoration: inherit;">allocation<wbr>Weight</a>
+        <span id="allocation_weight_python">
+<a href="#allocation_weight_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1348,8 +1348,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applyallocationpolicy_python">
-<a href="#applyallocationpolicy_python" style="color: inherit; text-decoration: inherit;">apply<wbr>Allocation<wbr>Policy</a>
+        <span id="apply_allocation_policy_python">
+<a href="#apply_allocation_policy_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>allocation_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1620,7 +1620,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
 
@@ -1630,7 +1630,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
 
@@ -1819,7 +1819,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Dict[Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
 

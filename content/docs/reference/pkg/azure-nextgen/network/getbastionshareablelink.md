@@ -24,7 +24,7 @@ meta_desc: "Explore the GetBastionShareableLink function of the network module, 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bastion_shareable_link(</span><span class="nx">bastion_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vms</span><span class="p">:</span> <span class="nx">Optional[List[BastionShareableLink]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBastionShareableLinkResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bastion_shareable_link(</span><span class="nx">bastion_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vms</span><span class="p">:</span> <span class="nx">Optional[Sequence[BastionShareableLinkArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBastionShareableLinkResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -186,7 +186,7 @@ The following arguments are supported:
 <a href="#vms_python" style="color: inherit; text-decoration: inherit;">vms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bastionshareablelink">List[Bastion<wbr>Shareable<wbr>Link]</a></span>
+        <span class="property-type"><a href="#bastionshareablelink">Sequence[Bastion<wbr>Shareable<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of VM references.{{% /md %}}</dd>
 
@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bastionshareablelinkresponse">List[Bastion<wbr>Shareable<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bastionshareablelinkresponse">Sequence[Bastion<wbr>Shareable<wbr>Link<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Bastion Shareable Links for the request.{{% /md %}}</dd>
 
@@ -392,7 +392,7 @@ The following output properties are available:
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vm">Dict[VM]</a></span>
+        <span class="property-type"><a href="#vm">VMArgs</a></span>
     </dt>
     <dd>{{% md %}}Reference of the virtual machine resource.{{% /md %}}</dd>
 
@@ -591,7 +591,7 @@ The following output properties are available:
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmresponse">Dict[VMResponse]</a></span>
+        <span class="property-type"><a href="#vmresponse">VMResponse<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference of the virtual machine resource.{{% /md %}}</dd>
 
@@ -750,7 +750,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

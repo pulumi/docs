@@ -260,7 +260,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="applicationtype_csharp">
+<a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -321,6 +331,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Path to icon.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msixpackageapplicationid_csharp">
+<a href="#msixpackageapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msixpackagefamilyname_csharp">
+<a href="#msixpackagefamilyname_csharp" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Family<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -387,7 +417,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="applicationtype_go">
+<a href="#applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -448,6 +488,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Path to icon.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msixpackageapplicationid_go">
+<a href="#msixpackageapplicationid_go" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msixpackagefamilyname_go">
+<a href="#msixpackagefamilyname_go" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Family<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -514,7 +574,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="applicationtype_nodejs">
+<a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -575,6 +645,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Path to icon.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msixpackageapplicationid_nodejs">
+<a href="#msixpackageapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">msix<wbr>Package<wbr>Application<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msixpackagefamilyname_nodejs">
+<a href="#msixpackagefamilyname_nodejs" style="color: inherit; text-decoration: inherit;">msix<wbr>Package<wbr>Family<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -641,7 +731,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="application_type_python">
+<a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -702,6 +802,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Path to icon.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msix_package_application_id_python">
+<a href="#msix_package_application_id_python" style="color: inherit; text-decoration: inherit;">msix_<wbr>package_<wbr>application_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="msix_package_family_name_python">
+<a href="#msix_package_family_name_python" style="color: inherit; text-decoration: inherit;">msix_<wbr>package_<wbr>family_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

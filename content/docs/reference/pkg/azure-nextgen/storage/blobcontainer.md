@@ -202,7 +202,7 @@ const blobContainer = new azure_nextgen.storage.latest.BlobContainer("blobContai
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deny_encryption_scope_override</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">public_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deny_encryption_scope_override</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">public_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -661,7 +661,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd>
 
@@ -841,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1008,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1175,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1260,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#immutability_policy_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Dict[Immutability<wbr>Policy<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd>
 
@@ -1310,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legal_hold_python" style="color: inherit; text-decoration: inherit;">legal_<wbr>hold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legalholdpropertiesresponse">Dict[Legal<wbr>Hold<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#legalholdpropertiesresponse">Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd>
 
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1578,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_history_python" style="color: inherit; text-decoration: inherit;">update_<wbr>history</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">List[Update<wbr>History<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">Sequence[Update<wbr>History<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
 
@@ -1717,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">List[Tag<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">Sequence[Tag<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
 
@@ -1912,8 +1912,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="objectidentifier_python">
-<a href="#objectidentifier_python" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
+        <span id="object_identifier_python">
+<a href="#object_identifier_python" style="color: inherit; text-decoration: inherit;">object_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2191,8 +2191,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="objectidentifier_python">
-<a href="#objectidentifier_python" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
+        <span id="object_identifier_python">
+<a href="#object_identifier_python" style="color: inherit; text-decoration: inherit;">object_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

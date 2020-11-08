@@ -188,41 +188,41 @@ import pulumi_azure_nextgen as azure_nextgen
 
 vpn_server_configuration = azure_nextgen.network.latest.VpnServerConfiguration("vpnServerConfiguration",
     location="West US",
-    radius_client_root_certificates=[{
-        "name": "vpnServerConfigRadiusClientRootCert1",
-        "thumbprint": "83FFBFC8848B5A5836C94D0112367E16148A286F",
-    }],
-    radius_server_root_certificates=[{
-        "name": "vpnServerConfigRadiusServerRootCer1",
-        "publicCertData": "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
-    }],
-    radius_servers=[{
-        "radiusServerAddress": "10.0.0.0",
-        "radiusServerScore": 25,
-        "radiusServerSecret": "radiusServerSecret",
-    }],
+    radius_client_root_certificates=[azure_nextgen.network.latest.VpnServerConfigRadiusClientRootCertificateArgs(
+        name="vpnServerConfigRadiusClientRootCert1",
+        thumbprint="83FFBFC8848B5A5836C94D0112367E16148A286F",
+    )],
+    radius_server_root_certificates=[azure_nextgen.network.latest.VpnServerConfigRadiusServerRootCertificateArgs(
+        name="vpnServerConfigRadiusServerRootCer1",
+        public_cert_data="MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
+    )],
+    radius_servers=[azure_nextgen.network.latest.RadiusServerArgs(
+        radius_server_address="10.0.0.0",
+        radius_server_score=25,
+        radius_server_secret="radiusServerSecret",
+    )],
     resource_group_name="rg1",
     tags={
         "key1": "value1",
     },
-    vpn_client_ipsec_policies=[{
-        "dhGroup": "DHGroup14",
-        "ikeEncryption": "AES256",
-        "ikeIntegrity": "SHA384",
-        "ipsecEncryption": "AES256",
-        "ipsecIntegrity": "SHA256",
-        "pfsGroup": "PFS14",
-        "saDataSizeKilobytes": 429497,
-        "saLifeTimeSeconds": 86472,
-    }],
-    vpn_client_revoked_certificates=[{
-        "name": "vpnServerConfigVpnClientRevokedCert1",
-        "thumbprint": "83FFBFC8848B5A5836C94D0112367E16148A286F",
-    }],
-    vpn_client_root_certificates=[{
-        "name": "vpnServerConfigVpnClientRootCert1",
-        "publicCertData": "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
-    }],
+    vpn_client_ipsec_policies=[azure_nextgen.network.latest.IpsecPolicyArgs(
+        dh_group="DHGroup14",
+        ike_encryption="AES256",
+        ike_integrity="SHA384",
+        ipsec_encryption="AES256",
+        ipsec_integrity="SHA256",
+        pfs_group="PFS14",
+        sa_data_size_kilobytes=429497,
+        sa_life_time_seconds=86472,
+    )],
+    vpn_client_revoked_certificates=[azure_nextgen.network.latest.VpnServerConfigVpnClientRevokedCertificateArgs(
+        name="vpnServerConfigVpnClientRevokedCert1",
+        thumbprint="83FFBFC8848B5A5836C94D0112367E16148A286F",
+    )],
+    vpn_client_root_certificates=[azure_nextgen.network.latest.VpnServerConfigVpnClientRootCertificateArgs(
+        name="vpnServerConfigVpnClientRootCert1",
+        public_cert_data="MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
+    )],
     vpn_protocols=["IkeV2"],
     vpn_server_configuration_name="vpnServerConfiguration1")
 
@@ -293,7 +293,7 @@ const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfigu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_authentication_parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[AadAuthenticationParameters]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigRadiusClientRootCertificate]]</span> = None<span class="p">, </span><span class="nx">radius_server_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigRadiusServerRootCertificate]]</span> = None<span class="p">, </span><span class="nx">radius_server_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_servers</span><span class="p">:</span> <span class="nx">Optional[List[RadiusServer]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpn_client_ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[List[IpsecPolicy]]</span> = None<span class="p">, </span><span class="nx">vpn_client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigVpnClientRevokedCertificate]]</span> = None<span class="p">, </span><span class="nx">vpn_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigVpnClientRootCertificate]]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_authentication_parameters</span><span class="p">:</span> <span class="nx">Optional[AadAuthenticationParametersArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigRadiusClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">radius_server_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigRadiusServerRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">radius_server_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RadiusServerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpn_client_ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigVpnClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigVpnClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1022,7 +1022,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#aad_authentication_parameters_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>authentication_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadauthenticationparameters">Dict[Aad<wbr>Authentication<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#aadauthenticationparameters">Aad<wbr>Authentication<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of aad vpn authentication parameters.{{% /md %}}</dd>
 
@@ -1062,7 +1062,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radius_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>client_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigradiusclientrootcertificate">List[Vpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigradiusclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Radius client root certificate of VpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1082,7 +1082,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radius_server_root_certificates_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigradiusserverrootcertificate">List[Vpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigradiusserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Radius Server root certificate of VpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1102,7 +1102,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radius_servers_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserver">List[Radius<wbr>Server]</a></span>
+        <span class="property-type"><a href="#radiusserver">Sequence[Radius<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Multiple Radius Server configuration for VpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1112,7 +1112,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1122,7 +1122,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpn_authentication_types_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>authentication_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}VPN authentication types for the VpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1132,7 +1132,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpn_client_ipsec_policies_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>ipsec_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">List[Ipsec<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">Sequence[Ipsec<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for VpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1142,7 +1142,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpn_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>revoked_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigvpnclientrevokedcertificate">List[Vpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigvpnclientrevokedcertificate">Sequence[Vpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VPN client revoked certificate of VpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1152,7 +1152,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpn_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigvpnclientrootcertificate">List[Vpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigvpnclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VPN client root certificate of VpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1162,7 +1162,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}VPN protocols for the VpnServerConfiguration.{{% /md %}}</dd>
 
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#p2_s_vpn_gateways_python" style="color: inherit; text-decoration: inherit;">p2_<wbr>s_<wbr>vpn_<wbr>gateways</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpngatewayresponse">List[P2SVpn<wbr>Gateway<wbr>Response]</a></span>
+        <span class="property-type"><a href="#p2svpngatewayresponse">Sequence[P2SVpn<wbr>Gateway<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of references to P2SVpnGateways.{{% /md %}}</dd>
 
@@ -1807,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 
@@ -2092,8 +2092,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dhgroup_python">
-<a href="#dhgroup_python" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+        <span id="dh_group_python">
+<a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2102,8 +2102,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeencryption_python">
-<a href="#ikeencryption_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+        <span id="ike_encryption_python">
+<a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2112,8 +2112,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeintegrity_python">
-<a href="#ikeintegrity_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+        <span id="ike_integrity_python">
+<a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2122,8 +2122,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecencryption_python">
-<a href="#ipsecencryption_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+        <span id="ipsec_encryption_python">
+<a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2132,8 +2132,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecintegrity_python">
-<a href="#ipsecintegrity_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+        <span id="ipsec_integrity_python">
+<a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2142,8 +2142,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="pfsgroup_python">
-<a href="#pfsgroup_python" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+        <span id="pfs_group_python">
+<a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2152,8 +2152,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sadatasizekilobytes_python">
-<a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+        <span id="sa_data_size_kilobytes_python">
+<a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2162,8 +2162,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="salifetimeseconds_python">
-<a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
+        <span id="sa_life_time_seconds_python">
+<a href="#sa_life_time_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>life_<wbr>time_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2451,8 +2451,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="dhgroup_python">
-<a href="#dhgroup_python" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+        <span id="dh_group_python">
+<a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2461,8 +2461,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeencryption_python">
-<a href="#ikeencryption_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+        <span id="ike_encryption_python">
+<a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2471,8 +2471,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeintegrity_python">
-<a href="#ikeintegrity_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+        <span id="ike_integrity_python">
+<a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2481,8 +2481,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecencryption_python">
-<a href="#ipsecencryption_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+        <span id="ipsec_encryption_python">
+<a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2491,8 +2491,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecintegrity_python">
-<a href="#ipsecintegrity_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+        <span id="ipsec_integrity_python">
+<a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2501,8 +2501,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="pfsgroup_python">
-<a href="#pfsgroup_python" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+        <span id="pfs_group_python">
+<a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2511,8 +2511,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sadatasizekilobytes_python">
-<a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+        <span id="sa_data_size_kilobytes_python">
+<a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2521,8 +2521,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="salifetimeseconds_python">
-<a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
+        <span id="sa_life_time_seconds_python">
+<a href="#sa_life_time_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>life_<wbr>time_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2834,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_configuration_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Dict[Routing<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd>
 
@@ -2844,7 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
 
@@ -2945,6 +2945,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isroutingpreferenceinternet_csharp">
+<a href="#isroutingpreferenceinternet_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Routing<wbr>Preference<wbr>Internet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3085,6 +3095,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="isroutingpreferenceinternet_go">
+<a href="#isroutingpreferenceinternet_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Routing<wbr>Preference<wbr>Internet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="p2sconnectionconfigurations_go">
 <a href="#p2sconnectionconfigurations_go" style="color: inherit; text-decoration: inherit;">P2SConnection<wbr>Configurations</a>
 </span> 
@@ -3222,6 +3242,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="isroutingpreferenceinternet_nodejs">
+<a href="#isroutingpreferenceinternet_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Routing<wbr>Preference<wbr>Internet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="p2sconnectionconfigurations_nodejs">
 <a href="#p2sconnectionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">p2SConnection<wbr>Configurations</a>
 </span> 
@@ -3333,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_connection_health_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>connection_<wbr>health</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconnectionhealthresponse">Dict[Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vpnclientconnectionhealthresponse">Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}All P2S VPN clients' connection health status.{{% /md %}}</dd>
 
@@ -3343,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_dns_servers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all customer specified DNS servers IP addresses.{{% /md %}}</dd>
 
@@ -3359,11 +3389,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="is_routing_preference_internet_python">
+<a href="#is_routing_preference_internet_python" style="color: inherit; text-decoration: inherit;">is_<wbr>routing_<wbr>preference_<wbr>internet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="p2_s_connection_configurations_python">
 <a href="#p2_s_connection_configurations_python" style="color: inherit; text-decoration: inherit;">p2_<wbr>s_<wbr>connection_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2sconnectionconfigurationresponse">List[P2SConnection<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#p2sconnectionconfigurationresponse">Sequence[P2SConnection<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all p2s connection configurations of the gateway.{{% /md %}}</dd>
 
@@ -3373,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -3383,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VirtualHub to which the gateway belongs.{{% /md %}}</dd>
 
@@ -3403,7 +3443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_server_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>server_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VpnServerConfiguration to which the p2sVpnGateway is attached to.{{% /md %}}</dd>
 
@@ -3512,7 +3552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
 
@@ -3522,7 +3562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd>
 
@@ -3667,8 +3707,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="radiusserverscore_python">
-<a href="#radiusserverscore_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Score</a>
+        <span id="radius_server_score_python">
+<a href="#radius_server_score_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>score</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3826,8 +3866,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="radiusserverscore_python">
-<a href="#radiusserverscore_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Score</a>
+        <span id="radius_server_score_python">
+<a href="#radius_server_score_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>score</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3979,7 +4019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
 
@@ -3989,7 +4029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Dict[Propagated<wbr>Route<wbr>Table<wbr>Response]</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
 
@@ -3999,7 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Dict[Vnet<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
 
@@ -4138,7 +4178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd>
 
@@ -4316,7 +4356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">List[Static<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Sequence[Static<wbr>Route<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 
@@ -4505,7 +4545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocated_ip_addresses_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of allocated ip addresses to the connected p2s vpn clients.{{% /md %}}</dd>
 
@@ -4868,8 +4908,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publiccertdata_python">
-<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4987,8 +5027,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publiccertdata_python">
-<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5344,8 +5384,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publiccertdata_python">
-<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5463,8 +5503,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publiccertdata_python">
-<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

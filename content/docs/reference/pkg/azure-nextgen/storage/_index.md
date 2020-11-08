@@ -13,26 +13,36 @@ Explore the resources and functions of the storage module in the Azure NextGen p
 <ul class="api">
     <li><a href="blobcontainer" title="BlobContainer"><span class="symbol resource"></span>BlobContainer</a></li>
     <li><a href="blobcontainerimmutabilitypolicy" title="BlobContainerImmutabilityPolicy"><span class="symbol resource"></span>BlobContainerImmutabilityPolicy</a></li>
+    <li><a href="blobinventorypolicy" title="BlobInventoryPolicy"><span class="symbol resource"></span>BlobInventoryPolicy</a></li>
+    <li><a href="blobserviceproperties" title="BlobServiceProperties"><span class="symbol resource"></span>BlobServiceProperties</a></li>
+    <li><a href="fileserviceproperties" title="FileServiceProperties"><span class="symbol resource"></span>FileServiceProperties</a></li>
     <li><a href="fileshare" title="FileShare"><span class="symbol resource"></span>FileShare</a></li>
     <li><a href="managementpolicy" title="ManagementPolicy"><span class="symbol resource"></span>ManagementPolicy</a></li>
     <li><a href="objectreplicationpolicy" title="ObjectReplicationPolicy"><span class="symbol resource"></span>ObjectReplicationPolicy</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
+    <li><a href="queueserviceproperties" title="QueueServiceProperties"><span class="symbol resource"></span>QueueServiceProperties</a></li>
     <li><a href="storageaccount" title="StorageAccount"><span class="symbol resource"></span>StorageAccount</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
+    <li><a href="tableserviceproperties" title="TableServiceProperties"><span class="symbol resource"></span>TableServiceProperties</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getblobcontainer" title="GetBlobContainer"><span class="symbol function"></span>GetBlobContainer</a></li>
     <li><a href="getblobcontainerimmutabilitypolicy" title="GetBlobContainerImmutabilityPolicy"><span class="symbol function"></span>GetBlobContainerImmutabilityPolicy</a></li>
+    <li><a href="getblobinventorypolicy" title="GetBlobInventoryPolicy"><span class="symbol function"></span>GetBlobInventoryPolicy</a></li>
+    <li><a href="getblobserviceproperties" title="GetBlobServiceProperties"><span class="symbol function"></span>GetBlobServiceProperties</a></li>
+    <li><a href="getfileserviceproperties" title="GetFileServiceProperties"><span class="symbol function"></span>GetFileServiceProperties</a></li>
     <li><a href="getfileshare" title="GetFileShare"><span class="symbol function"></span>GetFileShare</a></li>
     <li><a href="getmanagementpolicy" title="GetManagementPolicy"><span class="symbol function"></span>GetManagementPolicy</a></li>
     <li><a href="getobjectreplicationpolicy" title="GetObjectReplicationPolicy"><span class="symbol function"></span>GetObjectReplicationPolicy</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getqueue" title="GetQueue"><span class="symbol function"></span>GetQueue</a></li>
+    <li><a href="getqueueserviceproperties" title="GetQueueServiceProperties"><span class="symbol function"></span>GetQueueServiceProperties</a></li>
     <li><a href="getstorageaccount" title="GetStorageAccount"><span class="symbol function"></span>GetStorageAccount</a></li>
     <li><a href="gettable" title="GetTable"><span class="symbol function"></span>GetTable</a></li>
+    <li><a href="gettableserviceproperties" title="GetTableServiceProperties"><span class="symbol function"></span>GetTableServiceProperties</a></li>
     <li><a href="liststorageaccountkeys" title="ListStorageAccountKeys"><span class="symbol function"></span>ListStorageAccountKeys</a></li>
 </ul>
 
@@ -43,7 +53,7 @@ Explore the resources and functions of the storage module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

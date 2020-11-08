@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountpropertiesresponse">Dict[Storage<wbr>Account<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountpropertiesresponse">Storage<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the storage account for the machine learning team account.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 

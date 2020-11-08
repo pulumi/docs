@@ -146,38 +146,38 @@ import pulumi_azure_nextgen as azure_nextgen
 
 backend = azure_nextgen.apimanagement.latest.Backend("backend",
     backend_id="proxybackend",
-    credentials={
-        "authorization": {
-            "parameter": "opensesma",
-            "scheme": "Basic",
-        },
-        "header": {
+    credentials=azure_nextgen.apimanagement.latest.BackendCredentialsContractArgs(
+        authorization=azure_nextgen.apimanagement.latest.BackendAuthorizationHeaderCredentialsArgs(
+            parameter="opensesma",
+            scheme="Basic",
+        ),
+        header={
             "x-my-1": [
                 "val1",
                 "val2",
             ],
         },
-        "query": {
+        query={
             "sv": [
                 "xx",
                 "bb",
                 "cc",
             ],
         },
-    },
+    ),
     description="description5308",
     protocol="http",
-    proxy={
-        "password": "opensesame",
-        "url": "http://192.168.1.1:8080",
-        "username": "Contoso\\admin",
-    },
+    proxy=azure_nextgen.apimanagement.latest.BackendProxyContractArgs(
+        password="opensesame",
+        url="http://192.168.1.1:8080",
+        username="Contoso\\admin",
+    ),
     resource_group_name="rg1",
     service_name="apimService1",
-    tls={
-        "validateCertificateChain": True,
-        "validateCertificateName": True,
-    },
+    tls=azure_nextgen.apimanagement.latest.BackendTlsPropertiesArgs(
+        validate_certificate_chain=True,
+        validate_certificate_name=True,
+    ),
     url="https://backendname2644/")
 
 ```
@@ -333,17 +333,17 @@ import pulumi_azure_nextgen as azure_nextgen
 backend = azure_nextgen.apimanagement.latest.Backend("backend",
     backend_id="sfbackend",
     description="Service Fabric Test App 1",
-    properties={
-        "serviceFabricCluster": {
-            "clientCertificatethumbprint": "EBA029198AA3E76EF0D70482626E5BCF148594A6",
-            "managementEndpoints": ["https://somecluster.com"],
-            "maxPartitionResolutionRetries": 5,
-            "serverX509Names": [{
-                "issuerCertificateThumbprint": "IssuerCertificateThumbprint1",
-                "name": "ServerCommonName1",
-            }],
-        },
-    },
+    properties=azure_nextgen.apimanagement.latest.BackendPropertiesArgs(
+        service_fabric_cluster=azure_nextgen.apimanagement.latest.BackendServiceFabricClusterPropertiesArgs(
+            client_certificatethumbprint="EBA029198AA3E76EF0D70482626E5BCF148594A6",
+            management_endpoints=["https://somecluster.com"],
+            max_partition_resolution_retries=5,
+            server_x509_names=[azure_nextgen.apimanagement.latest.X509CertificateNameArgs(
+                issuer_certificate_thumbprint="IssuerCertificateThumbprint1",
+                name="ServerCommonName1",
+            )],
+        ),
+    ),
     protocol="http",
     resource_group_name="rg1",
     service_name="apimService1",
@@ -395,7 +395,7 @@ const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendCredentialsContract]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendProperties]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendProxyContract]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[Dict[BackendTlsProperties]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[BackendCredentialsContractArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BackendPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[BackendProxyContractArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[BackendTlsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1004,7 +1004,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialscontract">Dict[Backend<wbr>Credentials<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#backendcredentialscontract">Backend<wbr>Credentials<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd>
 
@@ -1024,7 +1024,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproperties">Dict[Backend<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#backendproperties">Backend<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd>
 
@@ -1034,7 +1034,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxycontract">Dict[Backend<wbr>Proxy<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#backendproxycontract">Backend<wbr>Proxy<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd>
 
@@ -1064,7 +1064,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtlsproperties">Dict[Backend<wbr>Tls<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#backendtlsproperties">Backend<wbr>Tls<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd>
 
@@ -1639,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentials">Dict[Backend<wbr>Authorization<wbr>Header<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentials">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
 
@@ -1649,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd>
 
@@ -1659,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd>
 
@@ -1669,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd>
 
@@ -1838,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Dict[Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
 
@@ -1848,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd>
 
@@ -1858,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd>
 
@@ -1868,7 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd>
 
@@ -1947,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterproperties">Dict[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterproperties">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
 
@@ -2026,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Dict[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
 
@@ -2553,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd>
 
@@ -2573,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd>
 
@@ -2583,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatename">List[X509Certificate<wbr>Name]</a></span>
+        <span class="property-type"><a href="#x509certificatename">Sequence[X509Certificate<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
 
@@ -2792,7 +2792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd>
 
@@ -2812,7 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd>
 
@@ -2822,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">List[X509Certificate<wbr>Name<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">Sequence[X509Certificate<wbr>Name<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
 
@@ -3165,8 +3165,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issuercertificatethumbprint_python">
-<a href="#issuercertificatethumbprint_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Certificate<wbr>Thumbprint</a>
+        <span id="issuer_certificate_thumbprint_python">
+<a href="#issuer_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>certificate_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3284,8 +3284,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issuercertificatethumbprint_python">
-<a href="#issuercertificatethumbprint_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Certificate<wbr>Thumbprint</a>
+        <span id="issuer_certificate_thumbprint_python">
+<a href="#issuer_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>certificate_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

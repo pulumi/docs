@@ -104,15 +104,15 @@ patch_schedule = azure_nextgen.cache.latest.PatchSchedule("patchSchedule",
     name="cache1",
     resource_group_name="rg1",
     schedule_entries=[
-        {
-            "dayOfWeek": "Monday",
-            "maintenanceWindow": "PT5H",
-            "startHourUtc": 12,
-        },
-        {
-            "dayOfWeek": "Tuesday",
-            "startHourUtc": 12,
-        },
+        azure_nextgen.cache.latest.ScheduleEntryArgs(
+            day_of_week="Monday",
+            maintenance_window="PT5H",
+            start_hour_utc=12,
+        ),
+        azure_nextgen.cache.latest.ScheduleEntryArgs(
+            day_of_week="Tuesday",
+            start_hour_utc=12,
+        ),
     ])
 
 ```
@@ -158,7 +158,7 @@ const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedul
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_entries</span><span class="p">:</span> <span class="nx">Optional[List[ScheduleEntry]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScheduleEntryArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -507,7 +507,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedule_entries_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>entries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleentry">List[Schedule<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#scheduleentry">Sequence[Schedule<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd>
 
@@ -780,8 +780,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="starthourutc_python">
-<a href="#starthourutc_python" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
+        <span id="start_hour_utc_python">
+<a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -790,8 +790,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maintenancewindow_python">
-<a href="#maintenancewindow_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -939,8 +939,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="starthourutc_python">
-<a href="#starthourutc_python" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
+        <span id="start_hour_utc_python">
+<a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -949,8 +949,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maintenancewindow_python">
-<a href="#maintenancewindow_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

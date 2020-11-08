@@ -26,7 +26,7 @@ Explore the resources and functions of the resourcegraph module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

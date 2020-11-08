@@ -94,13 +94,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 machine = azure_nextgen.hybridcompute.latest.Machine("machine",
     client_public_key="string",
-    identity={
-        "type": "SystemAssigned",
-    },
+    identity=azure_nextgen.hybridcompute.latest.MachineIdentityArgs(
+        type="SystemAssigned",
+    ),
     location="eastus2euap",
-    location_data={
-        "name": "Redmond",
-    },
+    location_data=azure_nextgen.hybridcompute.latest.LocationDataArgs(
+        name="Redmond",
+    ),
     name="myMachine",
     resource_group_name="myResourceGroup",
     vm_id="b7a098cc-b0b8-46e8-a205-62f301a62a8f")
@@ -145,7 +145,7 @@ const machine = new azure_nextgen.hybridcompute.latest.Machine("machine", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[MachineIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_data</span><span class="p">:</span> <span class="nx">Optional[Dict[LocationData]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[MachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_data</span><span class="p">:</span> <span class="nx">Optional[LocationDataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -624,7 +624,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineidentity">Dict[Machine<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#machineidentity">Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_data_python" style="color: inherit; text-decoration: inherit;">location_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationdata">Dict[Location<wbr>Data]</a></span>
+        <span class="property-type"><a href="#locationdata">Location<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd>
 
@@ -644,7 +644,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -834,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1021,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1208,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1293,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_details_python" style="color: inherit; text-decoration: inherit;">error_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Details about the error state.{{% /md %}}</dd>
 
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponse">List[Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponse">Sequence[Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd>
 
@@ -1395,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1413,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinepropertiesresponseosprofile">Dict[Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#machinepropertiesresponseosprofile">Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd>
 
@@ -1611,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional error details.{{% /md %}}</dd>
 
@@ -2218,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Dict[Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status]</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
 

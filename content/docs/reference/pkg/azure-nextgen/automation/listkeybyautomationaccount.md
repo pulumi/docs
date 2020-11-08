@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyresponse">List[Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyresponse">Sequence[Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Lists the automation keys.{{% /md %}}</dd>
 

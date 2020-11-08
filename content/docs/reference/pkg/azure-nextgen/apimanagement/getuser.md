@@ -542,7 +542,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontractpropertiesresponse">List[Group<wbr>Contract<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#groupcontractpropertiesresponse">Sequence[Group<wbr>Contract<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of groups user is part of.{{% /md %}}</dd>
 
@@ -592,7 +592,7 @@ The following output properties are available:
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentitycontractresponse">List[User<wbr>Identity<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useridentitycontractresponse">Sequence[User<wbr>Identity<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of user identities.{{% /md %}}</dd>
 

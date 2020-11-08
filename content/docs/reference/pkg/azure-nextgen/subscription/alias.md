@@ -83,11 +83,11 @@ import pulumi_azure_nextgen as azure_nextgen
 
 alias = azure_nextgen.subscription.latest.Alias("alias",
     alias_name="aliasForNewSub",
-    properties={
-        "billingScope": "/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
-        "displayName": "Contoso MCA subscription",
-        "workload": "Production",
-    })
+    properties=azure_nextgen.subscription.latest.PutAliasRequestPropertiesArgs(
+        billing_scope="/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB",
+        display_name="Contoso MCA subscription",
+        workload="Production",
+    ))
 
 ```
 
@@ -124,7 +124,7 @@ const alias = new azure_nextgen.subscription.latest.Alias("alias", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[PutAliasRequestProperties]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[PutAliasRequestPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -393,7 +393,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#putaliasrequestproperties">Dict[Put<wbr>Alias<wbr>Request<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#putaliasrequestproperties">Put<wbr>Alias<wbr>Request<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Put alias request properties.{{% /md %}}</dd>
 

@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">List[Mongo<wbr>Index<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">Sequence[Mongo<wbr>Index<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#shard_key_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key-value pair of shard keys to be applied for the request.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of keys for each MongoDB collection in the Azure Cosmos DB service{{% /md %}}</dd>
 
@@ -699,8 +699,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expireafterseconds_python">
-<a href="#expireafterseconds_python" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
+        <span id="expire_after_seconds_python">
+<a href="#expire_after_seconds_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>after_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -822,7 +822,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Dict[Mongo<wbr>Index<wbr>Keys<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Dict[Mongo<wbr>Index<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
 

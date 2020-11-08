@@ -380,7 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -627,7 +627,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -874,7 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1009,7 +1009,7 @@ The following output properties are available:
 <a href="#error_details_python" style="color: inherit; text-decoration: inherit;">error_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Details about the error state.{{% /md %}}</dd>
 
@@ -1019,7 +1019,7 @@ The following output properties are available:
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponse">List[Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponse">Sequence[Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Machine Extensions information{{% /md %}}</dd>
 
@@ -1121,7 +1121,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1149,7 +1149,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineresponseidentity">Dict[Machine<wbr>Response<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#machineresponseidentity">Machine<wbr>Response<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ The following output properties are available:
 <a href="#location_data_python" style="color: inherit; text-decoration: inherit;">location_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationdataresponse">Dict[Location<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#locationdataresponse">Location<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ The following output properties are available:
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinepropertiesresponseosprofile">Dict[Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#machinepropertiesresponseosprofile">Machine<wbr>Properties<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the hybrid machine.{{% /md %}}</dd>
 
@@ -1179,7 +1179,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1384,7 +1384,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional error details.{{% /md %}}</dd>
 
@@ -1792,7 +1792,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Dict[Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status]</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
 

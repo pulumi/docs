@@ -437,7 +437,7 @@ The following output properties are available:
 <a href="#lab_vms_shutdown_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vms_<wbr>shutdown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Dict[Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-shutdown schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd>
 
@@ -447,7 +447,7 @@ The following output properties are available:
 <a href="#lab_vms_startup_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vms_<wbr>startup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Dict[Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-startup schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd>
 
@@ -467,7 +467,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -1459,7 +1459,7 @@ The following output properties are available:
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Dict[Day<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
 
@@ -1469,7 +1469,7 @@ The following output properties are available:
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Dict[Hour<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
 
@@ -1489,7 +1489,7 @@ The following output properties are available:
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Dict[Notification<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
 
@@ -1509,7 +1509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -1549,7 +1549,7 @@ The following output properties are available:
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Dict[Week<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
 
@@ -1668,7 +1668,7 @@ The following output properties are available:
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
 

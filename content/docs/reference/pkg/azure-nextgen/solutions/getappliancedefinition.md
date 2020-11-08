@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applianceproviderauthorizationresponse">List[Appliance<wbr>Provider<wbr>Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applianceproviderauthorizationresponse">Sequence[Appliance<wbr>Provider<wbr>Authorization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The appliance provider authorizations.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applianceartifactresponse">List[Appliance<wbr>Artifact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applianceartifactresponse">Sequence[Appliance<wbr>Artifact<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of appliance artifacts. The portal will use the files specified as artifacts to construct the user experience of creating an appliance from an appliance definition.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 

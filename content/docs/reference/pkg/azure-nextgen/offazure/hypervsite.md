@@ -96,15 +96,15 @@ import pulumi_azure_nextgen as azure_nextgen
 
 hyper_v_site = azure_nextgen.offazure.latest.HyperVSite("hyperVSite",
     location="eastus",
-    properties={
-        "servicePrincipalIdentityDetails": {
-            "aadAuthority": "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
-            "applicationId": "e9f013df-2a2a-4871-b766-e79867f30348",
-            "audience": "https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
-            "objectId": "2cd492bc-7ef3-4ee0-b301-59a88108b47b",
-            "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-        },
-    },
+    properties=azure_nextgen.offazure.latest.SitePropertiesArgs(
+        service_principal_identity_details=azure_nextgen.offazure.latest.SiteSpnPropertiesArgs(
+            aad_authority="https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+            application_id="e9f013df-2a2a-4871-b766-e79867f30348",
+            audience="https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
+            object_id="2cd492bc-7ef3-4ee0-b301-59a88108b47b",
+            tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
+        ),
+    ),
     resource_group_name="pajindTest",
     site_name="appliance1e39site")
 
@@ -149,7 +149,7 @@ const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HyperVSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[SiteProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HyperVSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SitePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -608,7 +608,7 @@ The HyperVSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteproperties">Dict[Site<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#siteproperties">Site<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested properties of Hyper-V site.{{% /md %}}</dd>
 
@@ -618,7 +618,7 @@ The HyperVSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1273,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentproperties">Dict[Site<wbr>Agent<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#siteagentproperties">Site<wbr>Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd>
 
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_identity_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>identity_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnproperties">Dict[Site<wbr>Spn<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#sitespnproperties">Site<wbr>Spn<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd>
 
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentpropertiesresponse">Dict[Site<wbr>Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd>
 
@@ -1542,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_identity_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>identity_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnpropertiesresponse">Dict[Site<wbr>Spn<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd>
 

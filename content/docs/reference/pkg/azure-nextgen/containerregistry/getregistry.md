@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the container registry.{{% /md %}}</dd>
 
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Dict[Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#statusresponse">Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The status of the container registry at the time the operation was called.{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#network_rule_set_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Dict[Network<wbr>Rule<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network rule set for a container registry.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policiesresponse">Dict[Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#policiesresponse">Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policies for a container registry.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountpropertiesresponse">Dict[Storage<wbr>Account<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageaccountpropertiesresponse">Storage<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the storage account for the container registry. Only applicable to Classic SKU.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -820,8 +820,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ipaddressorrange_python">
-<a href="#ipaddressorrange_python" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress<wbr>Or<wbr>Range</a>
+        <span id="i_p_address_or_range_python">
+<a href="#i_p_address_or_range_python" style="color: inherit; text-decoration: inherit;">i_<wbr>p_<wbr>address_<wbr>or_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -983,7 +983,7 @@ The following output properties are available:
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List[IPRule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP ACL rules.{{% /md %}}</dd>
 
@@ -993,7 +993,7 @@ The following output properties are available:
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The virtual network rules.{{% /md %}}</dd>
 
@@ -1132,7 +1132,7 @@ The following output properties are available:
 <a href="#quarantine_policy_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quarantinepolicyresponse">Dict[Quarantine<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#quarantinepolicyresponse">Quarantine<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quarantine policy for a container registry.{{% /md %}}</dd>
 
@@ -1142,7 +1142,7 @@ The following output properties are available:
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Dict[Retention<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for a container registry.{{% /md %}}</dd>
 
@@ -1152,7 +1152,7 @@ The following output properties are available:
 <a href="#trust_policy_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustpolicyresponse">Dict[Trust<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#trustpolicyresponse">Trust<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content trust policy for a container registry.{{% /md %}}</dd>
 
@@ -1971,8 +1971,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnetworkresourceid_python">
-<a href="#virtualnetworkresourceid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Resource<wbr>Id</a>
+        <span id="virtual_network_resource_id_python">
+<a href="#virtual_network_resource_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

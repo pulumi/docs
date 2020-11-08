@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#latest_operation_result_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>operation_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Dict[Latest<wbr>Operation<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#size_configuration_python" style="color: inherit; text-decoration: inherit;">size_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconfigurationpropertiesresponse">Dict[Size<wbr>Configuration<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sizeconfigurationpropertiesresponse">Size<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the size configuration under the lab account{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -800,8 +800,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="minmemory_python">
-<a href="#minmemory_python" style="color: inherit; text-decoration: inherit;">min<wbr>Memory</a>
+        <span id="min_memory_python">
+<a href="#min_memory_python" style="color: inherit; text-decoration: inherit;">min_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -810,8 +810,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="minnumberofcores_python">
-<a href="#minnumberofcores_python" style="color: inherit; text-decoration: inherit;">min<wbr>Number<wbr>Of<wbr>Cores</a>
+        <span id="min_number_of_cores_python">
+<a href="#min_number_of_cores_python" style="color: inherit; text-decoration: inherit;">min_<wbr>number_<wbr>of_<wbr>cores</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -830,11 +830,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vmsizes_python">
-<a href="#vmsizes_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Sizes</a>
+        <span id="vm_sizes_python">
+<a href="#vm_sizes_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>sizes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeinforesponse">List[Size<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sizeinforesponse">Sequence[Size<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Represents a set of compute sizes that can serve this given size type{{% /md %}}</dd>
 
@@ -1192,7 +1192,7 @@ The following output properties are available:
 <a href="#environment_sizes_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>sizes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsizeresponse">List[Environment<wbr>Size<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentsizeresponse">Sequence[Environment<wbr>Size<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Represents a list of size categories supported by this Lab Account (Small, Medium, Large){{% /md %}}</dd>
 
@@ -1357,8 +1357,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="computesize_python">
-<a href="#computesize_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Size</a>
+        <span id="compute_size_python">
+<a href="#compute_size_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

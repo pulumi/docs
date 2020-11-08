@@ -170,12 +170,12 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 remediation_at_subscription = azure_nextgen.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription",
-    filters={
-        "locations": [
+    filters=azure_nextgen.policyinsights.latest.RemediationFiltersArgs(
+        locations=[
             "eastus",
             "westus",
         ],
-    },
+    ),
     policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     policy_definition_reference_id="8c8fa9e4",
     remediation_name="storageRemediation",
@@ -220,7 +220,7 @@ const remediationAtSubscription = new azure_nextgen.policyinsights.latest.Remedi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RemediationAtSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Dict[RemediationFilters]]</span> = None<span class="p">, </span><span class="nx">policy_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_discovery_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RemediationAtSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[RemediationFiltersArgs]</span> = None<span class="p">, </span><span class="nx">policy_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_discovery_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -579,7 +579,7 @@ The RemediationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationfilters">Dict[Remediation<wbr>Filters]</a></span>
+        <span class="property-type"><a href="#remediationfilters">Remediation<wbr>Filters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd>
 
@@ -878,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Dict[Remediation<wbr>Deployment<wbr>Summary<wbr>Response]</a></span>
+        <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
 
@@ -1175,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd>
 
@@ -1254,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd>
 

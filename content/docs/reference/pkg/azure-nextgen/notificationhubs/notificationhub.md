@@ -115,7 +115,7 @@ const notificationHub = new azure_nextgen.notificationhubs.latest.NotificationHu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adm_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[AdmCredential]]</span> = None<span class="p">, </span><span class="nx">apns_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[ApnsCredential]]</span> = None<span class="p">, </span><span class="nx">authorization_rules</span><span class="p">:</span> <span class="nx">Optional[List[SharedAccessAuthorizationRuleProperties]]</span> = None<span class="p">, </span><span class="nx">baidu_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[BaiduCredential]]</span> = None<span class="p">, </span><span class="nx">gcm_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[GcmCredential]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mpns_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[MpnsCredential]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registration_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">wns_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[WnsCredential]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adm_credential</span><span class="p">:</span> <span class="nx">Optional[AdmCredentialArgs]</span> = None<span class="p">, </span><span class="nx">apns_credential</span><span class="p">:</span> <span class="nx">Optional[ApnsCredentialArgs]</span> = None<span class="p">, </span><span class="nx">authorization_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SharedAccessAuthorizationRulePropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">baidu_credential</span><span class="p">:</span> <span class="nx">Optional[BaiduCredentialArgs]</span> = None<span class="p">, </span><span class="nx">gcm_credential</span><span class="p">:</span> <span class="nx">Optional[GcmCredentialArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mpns_credential</span><span class="p">:</span> <span class="nx">Optional[MpnsCredentialArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registration_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">wns_credential</span><span class="p">:</span> <span class="nx">Optional[WnsCredentialArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -794,7 +794,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#adm_credential_python" style="color: inherit; text-decoration: inherit;">adm_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#admcredential">Dict[Adm<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#admcredential">Adm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AdmCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -804,7 +804,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#apns_credential_python" style="color: inherit; text-decoration: inherit;">apns_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apnscredential">Dict[Apns<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#apnscredential">Apns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ApnsCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -814,7 +814,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#authorization_rules_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">List[Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Sequence[Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AuthorizationRules of the created NotificationHub{{% /md %}}</dd>
 
@@ -824,7 +824,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#baidu_credential_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baiducredential">Dict[Baidu<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#baiducredential">Baidu<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BaiduCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -834,7 +834,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#gcm_credential_python" style="color: inherit; text-decoration: inherit;">gcm_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcmcredential">Dict[Gcm<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#gcmcredential">Gcm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GcmCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -854,7 +854,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#mpns_credential_python" style="color: inherit; text-decoration: inherit;">mpns_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpnscredential">Dict[Mpns<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#mpnscredential">Mpns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MpnsCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -884,7 +884,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd>
 
@@ -894,7 +894,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -904,7 +904,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#wns_credential_python" style="color: inherit; text-decoration: inherit;">wns_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wnscredential">Dict[Wns<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#wnscredential">Wns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WnsCredential of the created NotificationHub{{% /md %}}</dd>
 
@@ -3021,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 
@@ -3420,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
 

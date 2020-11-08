@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouplogsettingsresponse">List[Management<wbr>Group<wbr>Log<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementgrouplogsettingsresponse">Sequence[Management<wbr>Group<wbr>Log<wbr>Settings<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
 

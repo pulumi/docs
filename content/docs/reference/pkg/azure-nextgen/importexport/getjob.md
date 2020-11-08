@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdetailsresponse">Dict[Job<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobdetailsresponse">Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd>
 
@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitydetailsresponse">Dict[Identity<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identitydetailsresponse">Identity<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Specifies the tags that are assigned to the job.{{% /md %}}</dd>
 
@@ -840,8 +840,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bitlockerkey_python">
-<a href="#bitlockerkey_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Locker<wbr>Key</a>
+        <span id="bit_locker_key_python">
+<a href="#bit_locker_key_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>locker_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -850,8 +850,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bytessucceeded_python">
-<a href="#bytessucceeded_python" style="color: inherit; text-decoration: inherit;">bytes<wbr>Succeeded</a>
+        <span id="bytes_succeeded_python">
+<a href="#bytes_succeeded_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>succeeded</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -860,8 +860,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="copystatus_python">
-<a href="#copystatus_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Status</a>
+        <span id="copy_status_python">
+<a href="#copy_status_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -870,8 +870,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveheaderhash_python">
-<a href="#driveheaderhash_python" style="color: inherit; text-decoration: inherit;">drive<wbr>Header<wbr>Hash</a>
+        <span id="drive_header_hash_python">
+<a href="#drive_header_hash_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>header_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -880,8 +880,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveid_python">
-<a href="#driveid_python" style="color: inherit; text-decoration: inherit;">drive<wbr>Id</a>
+        <span id="drive_id_python">
+<a href="#drive_id_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -890,8 +890,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorloguri_python">
-<a href="#errorloguri_python" style="color: inherit; text-decoration: inherit;">error<wbr>Log<wbr>Uri</a>
+        <span id="error_log_uri_python">
+<a href="#error_log_uri_python" style="color: inherit; text-decoration: inherit;">error_<wbr>log_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -900,8 +900,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifestfile_python">
-<a href="#manifestfile_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>File</a>
+        <span id="manifest_file_python">
+<a href="#manifest_file_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -910,8 +910,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifesthash_python">
-<a href="#manifesthash_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>Hash</a>
+        <span id="manifest_hash_python">
+<a href="#manifest_hash_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -920,8 +920,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manifesturi_python">
-<a href="#manifesturi_python" style="color: inherit; text-decoration: inherit;">manifest<wbr>Uri</a>
+        <span id="manifest_uri_python">
+<a href="#manifest_uri_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -950,8 +950,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="verboseloguri_python">
-<a href="#verboseloguri_python" style="color: inherit; text-decoration: inherit;">verbose<wbr>Log<wbr>Uri</a>
+        <span id="verbose_log_uri_python">
+<a href="#verbose_log_uri_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>log_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1262,7 +1262,7 @@ The following output properties are available:
 <a href="#blob_path_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
 
@@ -1272,7 +1272,7 @@ The following output properties are available:
 <a href="#blob_path_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
 
@@ -2040,7 +2040,7 @@ The following output properties are available:
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Dict[Package<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
 
@@ -2060,7 +2060,7 @@ The following output properties are available:
 <a href="#drive_list_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">List[Drive<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">Sequence[Drive<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
 
@@ -2070,7 +2070,7 @@ The following output properties are available:
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Dict[Encryption<wbr>Key<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
 
@@ -2080,7 +2080,7 @@ The following output properties are available:
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Dict[Export<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportresponse">Export<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
 
@@ -2140,7 +2140,7 @@ The following output properties are available:
 <a href="#return_address_python" style="color: inherit; text-decoration: inherit;">return_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Dict[Return<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
 
@@ -2150,7 +2150,7 @@ The following output properties are available:
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Dict[Package<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
 
@@ -2160,7 +2160,7 @@ The following output properties are available:
 <a href="#return_shipping_python" style="color: inherit; text-decoration: inherit;">return_<wbr>shipping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Dict[Return<wbr>Shipping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
 
@@ -2170,7 +2170,7 @@ The following output properties are available:
 <a href="#shipping_information_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Dict[Shipping<wbr>Information<wbr>Response]</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
 

@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Managed<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response] | Dict[Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Status<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
 
@@ -518,8 +518,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datafactorylocation_python">
-<a href="#datafactorylocation_python" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Location</a>
+        <span id="data_factory_location_python">
+<a href="#data_factory_location_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -528,8 +528,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datafactoryname_python">
-<a href="#datafactoryname_python" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+        <span id="data_factory_name_python">
+<a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -741,7 +741,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Managed integration runtime error parameters.{{% /md %}}</dd>
 
@@ -886,8 +886,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -910,7 +910,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List[Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The errors that occurred on this integration runtime node.{{% /md %}}</dd>
 
@@ -1135,8 +1135,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="activityid_python">
-<a href="#activityid_python" style="color: inherit; text-decoration: inherit;">activity<wbr>Id</a>
+        <span id="activity_id_python">
+<a href="#activity_id_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1159,7 +1159,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Managed integration runtime error parameters.{{% /md %}}</dd>
 
@@ -1424,8 +1424,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datafactoryname_python">
-<a href="#datafactoryname_python" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+        <span id="data_factory_name_python">
+<a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1434,11 +1434,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastoperation_python">
-<a href="#lastoperation_python" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
+        <span id="last_operation_python">
+<a href="#last_operation_python" style="color: inherit; text-decoration: inherit;">last_<wbr>operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeoperationresultresponse">Dict[Managed<wbr>Integration<wbr>Runtime<wbr>Operation<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeoperationresultresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Operation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last operation result that occurred on this integration runtime.{{% /md %}}</dd>
 
@@ -1448,17 +1448,17 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimenoderesponse">List[Managed<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimenoderesponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of nodes for managed integration runtime.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="othererrors_python">
-<a href="#othererrors_python" style="color: inherit; text-decoration: inherit;">other<wbr>Errors</a>
+        <span id="other_errors_python">
+<a href="#other_errors_python" style="color: inherit; text-decoration: inherit;">other_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List[Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The errors that occurred on this integration runtime.{{% /md %}}</dd>
 
@@ -2057,14 +2057,14 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The integration runtime capabilities dictionary{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="concurrentjobslimit_python">
-<a href="#concurrentjobslimit_python" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Jobs<wbr>Limit</a>
+        <span id="concurrent_jobs_limit_python">
+<a href="#concurrent_jobs_limit_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>jobs_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2083,8 +2083,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="hostserviceuri_python">
-<a href="#hostserviceuri_python" style="color: inherit; text-decoration: inherit;">host<wbr>Service<wbr>Uri</a>
+        <span id="host_service_uri_python">
+<a href="#host_service_uri_python" style="color: inherit; text-decoration: inherit;">host_<wbr>service_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2093,8 +2093,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isactivedispatcher_python">
-<a href="#isactivedispatcher_python" style="color: inherit; text-decoration: inherit;">is<wbr>Active<wbr>Dispatcher</a>
+        <span id="is_active_dispatcher_python">
+<a href="#is_active_dispatcher_python" style="color: inherit; text-decoration: inherit;">is_<wbr>active_<wbr>dispatcher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2103,8 +2103,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastconnecttime_python">
-<a href="#lastconnecttime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Connect<wbr>Time</a>
+        <span id="last_connect_time_python">
+<a href="#last_connect_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>connect_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2113,8 +2113,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastendupdatetime_python">
-<a href="#lastendupdatetime_python" style="color: inherit; text-decoration: inherit;">last<wbr>End<wbr>Update<wbr>Time</a>
+        <span id="last_end_update_time_python">
+<a href="#last_end_update_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>end_<wbr>update_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2123,8 +2123,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="laststarttime_python">
-<a href="#laststarttime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Start<wbr>Time</a>
+        <span id="last_start_time_python">
+<a href="#last_start_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2133,8 +2133,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="laststartupdatetime_python">
-<a href="#laststartupdatetime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Start<wbr>Update<wbr>Time</a>
+        <span id="last_start_update_time_python">
+<a href="#last_start_update_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>start_<wbr>update_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2143,8 +2143,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="laststoptime_python">
-<a href="#laststoptime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Stop<wbr>Time</a>
+        <span id="last_stop_time_python">
+<a href="#last_stop_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>stop_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2153,8 +2153,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastupdateresult_python">
-<a href="#lastupdateresult_python" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Result</a>
+        <span id="last_update_result_python">
+<a href="#last_update_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2173,8 +2173,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxconcurrentjobs_python">
-<a href="#maxconcurrentjobs_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Jobs</a>
+        <span id="max_concurrent_jobs_python">
+<a href="#max_concurrent_jobs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>jobs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2183,8 +2183,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodename_python">
-<a href="#nodename_python" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
+        <span id="node_name_python">
+<a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2193,8 +2193,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="registertime_python">
-<a href="#registertime_python" style="color: inherit; text-decoration: inherit;">register<wbr>Time</a>
+        <span id="register_time_python">
+<a href="#register_time_python" style="color: inherit; text-decoration: inherit;">register_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2223,8 +2223,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="versionstatus_python">
-<a href="#versionstatus_python" style="color: inherit; text-decoration: inherit;">version<wbr>Status</a>
+        <span id="version_status_python">
+<a href="#version_status_python" style="color: inherit; text-decoration: inherit;">version_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2328,6 +2328,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The local time zone offset in hours.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodecommunicationchannelencryptionmode_csharp">
+<a href="#nodecommunicationchannelencryptionmode_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Communication<wbr>Channel<wbr>Encryption<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The node communication Channel encryption mode{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2518,6 +2528,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="nodecommunicationchannelencryptionmode_go">
+<a href="#nodecommunicationchannelencryptionmode_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Communication<wbr>Channel<wbr>Encryption<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The node communication Channel encryption mode{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="pushedversion_go">
 <a href="#pushedversion_go" style="color: inherit; text-decoration: inherit;">Pushed<wbr>Version</a>
 </span> 
@@ -2705,6 +2725,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="nodecommunicationchannelencryptionmode_nodejs">
+<a href="#nodecommunicationchannelencryptionmode_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Communication<wbr>Channel<wbr>Encryption<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The node communication Channel encryption mode{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="pushedversion_nodejs">
 <a href="#pushedversion_nodejs" style="color: inherit; text-decoration: inherit;">pushed<wbr>Version</a>
 </span> 
@@ -2812,8 +2842,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="autoupdate_python">
-<a href="#autoupdate_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Update</a>
+        <span id="auto_update_python">
+<a href="#auto_update_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>update</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2822,8 +2852,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="autoupdateeta_python">
-<a href="#autoupdateeta_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Update<wbr>ETA</a>
+        <span id="auto_update_eta_python">
+<a href="#auto_update_eta_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>update_<wbr>eta</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2836,7 +2866,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Object with additional information about integration runtime capabilities.{{% /md %}}</dd>
 
@@ -2852,8 +2882,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="datafactoryname_python">
-<a href="#datafactoryname_python" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
+        <span id="data_factory_name_python">
+<a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2862,8 +2892,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="internalchannelencryption_python">
-<a href="#internalchannelencryption_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Channel<wbr>Encryption</a>
+        <span id="internal_channel_encryption_python">
+<a href="#internal_channel_encryption_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>channel_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2872,8 +2902,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="latestversion_python">
-<a href="#latestversion_python" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
+        <span id="latest_version_python">
+<a href="#latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2882,8 +2912,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localtimezoneoffset_python">
-<a href="#localtimezoneoffset_python" style="color: inherit; text-decoration: inherit;">local<wbr>Time<wbr>Zone<wbr>Offset</a>
+        <span id="local_time_zone_offset_python">
+<a href="#local_time_zone_offset_python" style="color: inherit; text-decoration: inherit;">local_<wbr>time_<wbr>zone_<wbr>offset</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2892,8 +2922,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="pushedversion_python">
-<a href="#pushedversion_python" style="color: inherit; text-decoration: inherit;">pushed<wbr>Version</a>
+        <span id="node_communication_channel_encryption_mode_python">
+<a href="#node_communication_channel_encryption_mode_python" style="color: inherit; text-decoration: inherit;">node_<wbr>communication_<wbr>channel_<wbr>encryption_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The node communication Channel encryption mode{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pushed_version_python">
+<a href="#pushed_version_python" style="color: inherit; text-decoration: inherit;">pushed_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2902,8 +2942,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="scheduledupdatedate_python">
-<a href="#scheduledupdatedate_python" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Update<wbr>Date</a>
+        <span id="scheduled_update_date_python">
+<a href="#scheduled_update_date_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>update_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2912,11 +2952,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceurls_python">
-<a href="#serviceurls_python" style="color: inherit; text-decoration: inherit;">service<wbr>Urls</a>
+        <span id="service_urls_python">
+<a href="#service_urls_python" style="color: inherit; text-decoration: inherit;">service_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The URLs for the services used in integration runtime backend service.{{% /md %}}</dd>
 
@@ -2932,8 +2972,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="taskqueueid_python">
-<a href="#taskqueueid_python" style="color: inherit; text-decoration: inherit;">task<wbr>Queue<wbr>Id</a>
+        <span id="task_queue_id_python">
+<a href="#task_queue_id_python" style="color: inherit; text-decoration: inherit;">task_<wbr>queue_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2942,8 +2982,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="updatedelayoffset_python">
-<a href="#updatedelayoffset_python" style="color: inherit; text-decoration: inherit;">update<wbr>Delay<wbr>Offset</a>
+        <span id="update_delay_offset_python">
+<a href="#update_delay_offset_python" style="color: inherit; text-decoration: inherit;">update_<wbr>delay_<wbr>offset</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2962,8 +3002,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="versionstatus_python">
-<a href="#versionstatus_python" style="color: inherit; text-decoration: inherit;">version<wbr>Status</a>
+        <span id="version_status_python">
+<a href="#version_status_python" style="color: inherit; text-decoration: inherit;">version_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2976,7 +3016,7 @@ The following output properties are available:
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimeresponse">List[Linked<wbr>Integration<wbr>Runtime<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimeresponse">Sequence[Linked<wbr>Integration<wbr>Runtime<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of linked integration runtimes that are created to share with this integration runtime.{{% /md %}}</dd>
 
@@ -2986,7 +3026,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selfhostedintegrationruntimenoderesponse">List[Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response]</a></span>
+        <span class="property-type"><a href="#selfhostedintegrationruntimenoderesponse">Sequence[Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of nodes for this integration runtime.{{% /md %}}</dd>
 

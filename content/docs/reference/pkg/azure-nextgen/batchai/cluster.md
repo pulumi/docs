@@ -163,39 +163,39 @@ import pulumi_azure_nextgen as azure_nextgen
 
 cluster = azure_nextgen.batchai.latest.Cluster("cluster",
     cluster_name="demo_cluster",
-    node_setup={
-        "mountVolumes": {
-            "azureFileShares": [{
-                "accountName": "storage_account_name",
-                "azureFileUrl": "https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                "credentials": {
-                    "accountKey": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
-                },
-                "directoryMode": "0777",
-                "fileMode": "0777",
-                "relativeMountPath": "azfiles",
-            }],
-            "fileServers": [{
-                "fileServer": {
-                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
-                },
-                "mountOptions": "rw",
-                "relativeMountPath": "nfs",
-            }],
-        },
-    },
+    node_setup=azure_nextgen.batchai.latest.NodeSetupArgs(
+        mount_volumes=azure_nextgen.batchai.latest.MountVolumesArgs(
+            azure_file_shares=[azure_nextgen.batchai.latest.AzureFileShareReferenceArgs(
+                account_name="storage_account_name",
+                azure_file_url="https://storage_account_name.file.core.windows.net/azure_file_share_name",
+                credentials=azure_nextgen.batchai.latest.AzureStorageCredentialsInfoArgs(
+                    account_key="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+                ),
+                directory_mode="0777",
+                file_mode="0777",
+                relative_mount_path="azfiles",
+            )],
+            file_servers=[azure_nextgen.batchai.latest.FileServerReferenceArgs(
+                file_server=azure_nextgen.batchai.latest.ResourceIdArgs(
+                    id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
+                ),
+                mount_options="rw",
+                relative_mount_path="nfs",
+            )],
+        ),
+    ),
     resource_group_name="demo_resource_group",
-    scale_settings={
-        "manual": {
-            "nodeDeallocationOption": "requeue",
-            "targetNodeCount": 1,
-        },
-    },
-    user_account_settings={
-        "adminUserName": "admin_user_name",
-        "adminUserPassword": "admin_user_password",
-        "adminUserSshPublicKey": "ssh-rsa AAAAB3NzaC1yc...",
-    },
+    scale_settings=azure_nextgen.batchai.latest.ScaleSettingsArgs(
+        manual=azure_nextgen.batchai.latest.ManualScaleSettingsArgs(
+            node_deallocation_option="requeue",
+            target_node_count=1,
+        ),
+    ),
+    user_account_settings=azure_nextgen.batchai.latest.UserAccountSettingsArgs(
+        admin_user_name="admin_user_name",
+        admin_user_password="admin_user_password",
+        admin_user_ssh_public_key="ssh-rsa AAAAB3NzaC1yc...",
+    ),
     vm_priority="dedicated",
     vm_size="STANDARD_NC6",
     workspace_name="demo_workspace")
@@ -266,7 +266,7 @@ const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_setup</span><span class="p">:</span> <span class="nx">Optional[Dict[NodeSetup]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSettings]]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceId]]</span> = None<span class="p">, </span><span class="nx">user_account_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[UserAccountSettings]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineConfiguration]]</span> = None<span class="p">, </span><span class="nx">vm_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_setup</span><span class="p">:</span> <span class="nx">Optional[NodeSetupArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">user_account_settings</span><span class="p">:</span> <span class="nx">Optional[UserAccountSettingsArgs]</span> = None<span class="p">, </span><span class="nx">virtual_machine_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vm_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -785,7 +785,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#user_account_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettings">Dict[User<wbr>Account<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#useraccountsettings">User<wbr>Account<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for an administrator user account that will be created on each compute node in the cluster.{{% /md %}}</dd>
 
@@ -815,7 +815,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#node_setup_python" style="color: inherit; text-decoration: inherit;">node_<wbr>setup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodesetup">Dict[Node<wbr>Setup]</a></span>
+        <span class="property-type"><a href="#nodesetup">Node<wbr>Setup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup to be performed on each compute node in the cluster.{{% /md %}}</dd>
 
@@ -825,7 +825,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Dict[Scale<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for the cluster. Batch AI service supports manual and auto scale clusters.{{% /md %}}</dd>
 
@@ -835,7 +835,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Existing virtual network subnet to put the cluster nodes in. Note, if a File Server mount configured in node setup, the File Server's subnet will be used automatically.{{% /md %}}</dd>
 
@@ -845,7 +845,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_machine_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfiguration">Dict[Virtual<wbr>Machine<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#virtualmachineconfiguration">Virtual<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image configuration for cluster nodes. All nodes in a cluster have the same OS image.{{% /md %}}</dd>
 
@@ -1274,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">List[Batch<wbr>AIError<wbr>Response]</a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">Sequence[Batch<wbr>AIError<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
 
@@ -1304,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_state_counts_python" style="color: inherit; text-decoration: inherit;">node_<wbr>state_<wbr>counts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatecountsresponse">Dict[Node<wbr>State<wbr>Counts<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Counts of various node states on the cluster.{{% /md %}}</dd>
 
@@ -1482,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd>
 
@@ -1502,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instrumentation_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key_<wbr>secret_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd>
 
@@ -1641,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd>
 
@@ -1661,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instrumentation_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key_<wbr>secret_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd>
 
@@ -2198,14 +2198,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Dict[Azure<wbr>Storage<wbr>Credentials<wbr>Info]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2214,8 +2214,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2437,14 +2437,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Dict[Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2453,8 +2453,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2692,8 +2692,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azurefileurl_python">
-<a href="#azurefileurl_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
+        <span id="azure_file_url_python">
+<a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2706,14 +2706,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Dict[Azure<wbr>Storage<wbr>Credentials<wbr>Info]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2722,8 +2722,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="directorymode_python">
-<a href="#directorymode_python" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
+        <span id="directory_mode_python">
+<a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2732,8 +2732,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2971,8 +2971,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="azurefileurl_python">
-<a href="#azurefileurl_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
+        <span id="azure_file_url_python">
+<a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2985,14 +2985,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Dict[Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3001,8 +3001,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="directorymode_python">
-<a href="#directorymode_python" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
+        <span id="directory_mode_python">
+<a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3011,8 +3011,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3120,16 +3120,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accountkeysecretreference_python">
-<a href="#accountkeysecretreference_python" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference]</a></span>
-    </dt>
-    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="account_key_python">
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
@@ -3137,6 +3127,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_key_secret_reference_python">
+<a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3239,16 +3239,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accountkeysecretreference_python">
-<a href="#accountkeysecretreference_python" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="account_key_python">
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span> 
@@ -3256,6 +3246,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_key_secret_reference_python">
+<a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3402,7 +3402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">List[Name<wbr>Value<wbr>Pair<wbr>Response]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
 
@@ -3805,11 +3805,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesecretreference_python">
-<a href="#valuesecretreference_python" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
+        <span id="value_secret_reference_python">
+<a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
 
@@ -3964,11 +3964,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesecretreference_python">
-<a href="#valuesecretreference_python" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
+        <span id="value_secret_reference_python">
+<a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
 
@@ -4133,18 +4133,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fileserver_python">
-<a href="#fileserver_python" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
+        <span id="file_server_python">
+<a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4153,8 +4153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4163,8 +4163,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcedirectory_python">
-<a href="#sourcedirectory_python" style="color: inherit; text-decoration: inherit;">source<wbr>Directory</a>
+        <span id="source_directory_python">
+<a href="#source_directory_python" style="color: inherit; text-decoration: inherit;">source_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4332,18 +4332,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fileserver_python">
-<a href="#fileserver_python" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
+        <span id="file_server_python">
+<a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4352,8 +4352,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountoptions_python">
-<a href="#mountoptions_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4362,8 +4362,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcedirectory_python">
-<a href="#sourcedirectory_python" style="color: inherit; text-decoration: inherit;">source<wbr>Directory</a>
+        <span id="source_directory_python">
+<a href="#source_directory_python" style="color: inherit; text-decoration: inherit;">source_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4963,7 +4963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Dict[Resource<wbr>Id]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
 
@@ -5082,7 +5082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
 
@@ -5489,7 +5489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreference">List[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreference">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -5499,7 +5499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereference">List[Azure<wbr>File<wbr>Share<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#azurefilesharereference">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -5509,7 +5509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreference">List[File<wbr>Server<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#fileserverreference">Sequence[File<wbr>Server<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -5519,7 +5519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreference">List[Unmanaged<wbr>File<wbr>System<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreference">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -5688,7 +5688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -5698,7 +5698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">List[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -5708,7 +5708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">List[File<wbr>Server<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">Sequence[File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -5718,7 +5718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
 
@@ -5976,7 +5976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_volumes_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumes">Dict[Mount<wbr>Volumes]</a></span>
+        <span class="property-type"><a href="#mountvolumes">Mount<wbr>Volumes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd>
 
@@ -5986,7 +5986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_counters_settings_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterssettings">Dict[Performance<wbr>Counters<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#performancecounterssettings">Performance<wbr>Counters<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd>
 
@@ -5996,7 +5996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setup_task_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setuptask">Dict[Setup<wbr>Task]</a></span>
+        <span class="property-type"><a href="#setuptask">Setup<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd>
 
@@ -6135,7 +6135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_volumes_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumesresponse">Dict[Mount<wbr>Volumes<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd>
 
@@ -6145,7 +6145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_counters_settings_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterssettingsresponse">Dict[Performance<wbr>Counters<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#performancecounterssettingsresponse">Performance<wbr>Counters<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd>
 
@@ -6155,7 +6155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setup_task_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setuptaskresponse">Dict[Setup<wbr>Task<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setuptaskresponse">Setup<wbr>Task<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd>
 
@@ -6473,7 +6473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_insights_reference_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsreference">Dict[App<wbr>Insights<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#appinsightsreference">App<wbr>Insights<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd>
 
@@ -6552,7 +6552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_insights_reference_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsreferenceresponse">Dict[App<wbr>Insights<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#appinsightsreferenceresponse">App<wbr>Insights<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd>
 
@@ -6819,7 +6819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Dict[Auto<wbr>Scale<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd>
 
@@ -6829,7 +6829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_python" style="color: inherit; text-decoration: inherit;">manual</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualscalesettings">Dict[Manual<wbr>Scale<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd>
 
@@ -6938,7 +6938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Dict[Auto<wbr>Scale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd>
 
@@ -6948,7 +6948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_python" style="color: inherit; text-decoration: inherit;">manual</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualscalesettingsresponse">Dict[Manual<wbr>Scale<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd>
 
@@ -7137,7 +7137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">List[Environment<wbr>Variable]</a></span>
+        <span class="property-type"><a href="#environmentvariable">Sequence[Environment<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd>
 
@@ -7147,7 +7147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalue">List[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value]</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Sequence[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd>
 
@@ -7376,7 +7376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List[Environment<wbr>Variable<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd>
 
@@ -7386,7 +7386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">List[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">Sequence[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd>
 
@@ -7491,8 +7491,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="mountcommand_python">
-<a href="#mountcommand_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Command</a>
+        <span id="mount_command_python">
+<a href="#mount_command_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>command</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7501,8 +7501,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7610,8 +7610,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="mountcommand_python">
-<a href="#mountcommand_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Command</a>
+        <span id="mount_command_python">
+<a href="#mount_command_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>command</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7620,8 +7620,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="relativemountpath_python">
-<a href="#relativemountpath_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
+        <span id="relative_mount_path_python">
+<a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8021,7 +8021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Dict[Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd>
 
@@ -8100,7 +8100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Dict[Image<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd>
 

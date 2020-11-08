@@ -101,12 +101,12 @@ import pulumi_azure_nextgen as azure_nextgen
 private_endpoint = azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoint("privateEndpoint",
     cluster_name="testcluster",
     private_endpoint_name="testpe",
-    properties={
-        "manualPrivateLinkServiceConnections": [{
-            "groupIds": ["groupIdFromResource"],
-            "privateLinkServiceId": "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
-        }],
-    },
+    properties=azure_nextgen.streamanalytics.v20200301preview.PrivateEndpointPropertiesArgs(
+        manual_private_link_service_connections=[azure_nextgen.streamanalytics.v20200301preview.PrivateLinkServiceConnectionArgs(
+            group_ids=["groupIdFromResource"],
+            private_link_service_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        )],
+    ),
     resource_group_name="sjrg")
 
 ```
@@ -147,7 +147,7 @@ const privateEndpoint = new azure_nextgen.streamanalytics.v20200301preview.Priva
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[PrivateEndpointProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[PrivateEndpointPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -496,7 +496,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointproperties">Dict[Private<wbr>Endpoint<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#privateendpointproperties">Private<wbr>Endpoint<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd>
 
@@ -783,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>private_<wbr>link_<wbr>service_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnection">List[Private<wbr>Link<wbr>Service<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnection">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
 
@@ -902,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>private_<wbr>link_<wbr>service_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
 
@@ -1200,14 +1200,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatelinkserviceid_python">
-<a href="#privatelinkserviceid_python" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Id</a>
+        <span id="private_link_service_id_python">
+<a href="#private_link_service_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1389,19 +1389,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceid_python">
-<a href="#privatelinkserviceid_python" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1409,9 +1399,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Dict[Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_id_python">
+<a href="#private_link_service_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -139,20 +139,20 @@ import pulumi_azure_nextgen as azure_nextgen
 
 dsc_node_configuration = azure_nextgen.automation.latest.DscNodeConfiguration("dscNodeConfiguration",
     automation_account_name="myAutomationAccount20",
-    configuration={
-        "name": "configName",
-    },
+    configuration=azure_nextgen.automation.latest.DscConfigurationAssociationPropertyArgs(
+        name="configName",
+    ),
     increment_node_configuration_build=True,
     name="configName.nodeConfigName",
     node_configuration_name="configName.nodeConfigName",
     resource_group_name="rg",
-    source={
-        "hash": {
-            "algorithm": "sha256",
-            "value": "6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
-        },
-        "type": "embeddedContent",
-        "value": """
+    source=azure_nextgen.automation.latest.ContentSourceArgs(
+        hash=azure_nextgen.automation.latest.ContentHashArgs(
+            algorithm="sha256",
+            value="6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
+        ),
+        type="embeddedContent",
+        value="""
 instance of MSFT_RoleResource as $MSFT_RoleResource1ref
 {
 ResourceID = "[WindowsFeature]IIS";
@@ -183,8 +183,8 @@ instance of OMI_ConfigurationDocument
 
                     };
 """,
-        "version": "1.0",
-    })
+        version="1.0",
+    ))
 
 ```
 
@@ -262,7 +262,7 @@ instance of OMI_ConfigurationDocument
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DscNodeConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[DscConfigurationAssociationProperty]]</span> = None<span class="p">, </span><span class="nx">increment_node_configuration_build</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ContentSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DscNodeConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[DscConfigurationAssociationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">increment_node_configuration_build</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ContentSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -711,7 +711,7 @@ The DscNodeConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dscconfigurationassociationproperty">Dict[Dsc<wbr>Configuration<wbr>Association<wbr>Property]</a></span>
+        <span class="property-type"><a href="#dscconfigurationassociationproperty">Dsc<wbr>Configuration<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the configuration of the node.{{% /md %}}</dd>
 
@@ -741,7 +741,7 @@ The DscNodeConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentsource">Dict[Content<wbr>Source]</a></span>
+        <span class="property-type"><a href="#contentsource">Content<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source.{{% /md %}}</dd>
 
@@ -771,7 +771,7 @@ The DscNodeConfiguration resource accepts the following [input]({{< relref "/doc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags attached to the resource.{{% /md %}}</dd>
 
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Dict[Content<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd>
 

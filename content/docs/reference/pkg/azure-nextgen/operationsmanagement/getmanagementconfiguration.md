@@ -329,7 +329,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementconfigurationpropertiesresponse">Dict[Management<wbr>Configuration<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementconfigurationpropertiesresponse">Management<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
 
@@ -673,7 +673,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterresponse">List[Arm<wbr>Template<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armtemplateparameterresponse">Sequence[Arm<wbr>Template<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd>
 
@@ -703,7 +703,7 @@ The following output properties are available:
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Json object containing the ARM template to deploy{{% /md %}}</dd>
 

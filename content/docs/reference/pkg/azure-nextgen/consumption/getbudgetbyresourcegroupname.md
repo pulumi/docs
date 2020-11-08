@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#current_spend_python" style="color: inherit; text-decoration: inherit;">current_<wbr>spend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentspendresponse">Dict[Current<wbr>Spend<wbr>Response]</a></span>
+        <span class="property-type"><a href="#currentspendresponse">Current<wbr>Spend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgettimeperiodresponse">Dict[Budget<wbr>Time<wbr>Period<wbr>Response]</a></span>
+        <span class="property-type"><a href="#budgettimeperiodresponse">Budget<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Dict[Filters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Notification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Notification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
 
@@ -1002,7 +1002,7 @@ The following output properties are available:
 <a href="#meters_python" style="color: inherit; text-decoration: inherit;">meters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of filters on meters (GUID), mandatory for budgets of usage category. {{% /md %}}</dd>
 
@@ -1012,7 +1012,7 @@ The following output properties are available:
 <a href="#resource_groups_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of filters on resource groups, allowed at subscription level only.{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of filters on resources.{{% /md %}}</dd>
 
@@ -1032,7 +1032,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Array<String>]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}The dictionary of filters on tags.{{% /md %}}</dd>
 
@@ -1257,11 +1257,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="contactemails_python">
-<a href="#contactemails_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Emails</a>
+        <span id="contact_emails_python">
+<a href="#contact_emails_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 
@@ -1297,21 +1297,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contactgroups_python">
-<a href="#contactgroups_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
+        <span id="contact_groups_python">
+<a href="#contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contactroles_python">
-<a href="#contactroles_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
+        <span id="contact_roles_python">
+<a href="#contact_roles_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
 

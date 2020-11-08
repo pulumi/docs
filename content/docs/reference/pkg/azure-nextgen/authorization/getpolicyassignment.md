@@ -639,7 +639,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#not_scopes_python" style="color: inherit; text-decoration: inherit;">not_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Values<wbr>Value<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyskuresponse">Dict[Policy<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#policyskuresponse">Policy<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policy sku. This property is optional, obsolete, and will be ignored.{{% /md %}}</dd>
 
@@ -953,7 +953,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
 

@@ -300,7 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -457,7 +457,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -614,7 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -771,7 +771,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#reported_properties_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreportedpropertiesresponse">Dict[Cluster<wbr>Reported<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterreportedpropertiesresponse">Cluster<wbr>Reported<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties reported by cluster agent.{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1110,8 +1110,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="corecount_python">
-<a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
+        <span id="core_count_python">
+<a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1140,8 +1140,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="memoryingib_python">
-<a href="#memoryingib_python" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>Gi<wbr>B</a>
+        <span id="memory_in_gi_b_python">
+<a href="#memory_in_gi_b_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gi_<wbr>b</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1433,7 +1433,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternoderesponse">List[Cluster<wbr>Node<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusternoderesponse">Sequence[Cluster<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd>
 

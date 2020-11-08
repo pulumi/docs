@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#access_control_record_ids_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control_<wbr>record_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#backup_policy_ids_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
 

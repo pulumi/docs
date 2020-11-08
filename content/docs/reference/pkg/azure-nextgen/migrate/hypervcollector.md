@@ -106,18 +106,18 @@ hyper_v_collector = azure_nextgen.migrate.latest.HyperVCollector("hyperVCollecto
     e_tag="\"00000981-0000-0300-0000-5d74cd5f0000\"",
     hyper_v_collector_name="migrateprojectce73collector",
     project_name="migrateprojectce73project",
-    properties={
-        "agentProperties": {
-            "spnDetails": {
-                "applicationId": "827f1053-44dc-439f-b832-05416dcce12b",
-                "audience": "https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp",
-                "authority": "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
-                "objectId": "be75098e-c0fc-4ac4-98c7-282ebbcf8370",
-                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-            },
-        },
-        "discoverySiteId": "/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site",
-    },
+    properties=azure_nextgen.migrate.latest.CollectorPropertiesArgs(
+        agent_properties=azure_nextgen.migrate.latest.CollectorAgentPropertiesArgs(
+            spn_details=azure_nextgen.migrate.latest.CollectorBodyAgentSpnPropertiesArgs(
+                application_id="827f1053-44dc-439f-b832-05416dcce12b",
+                audience="https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp",
+                authority="https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                object_id="be75098e-c0fc-4ac4-98c7-282ebbcf8370",
+                tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
+            ),
+        ),
+        discovery_site_id="/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site",
+    ),
     resource_group_name="contosoithyperv")
 
 ```
@@ -165,7 +165,7 @@ const hyperVCollector = new azure_nextgen.migrate.latest.HyperVCollector("hyperV
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HyperVCollector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hyper_v_collector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[CollectorProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HyperVCollector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hyper_v_collector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CollectorPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -554,7 +554,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorproperties">Dict[Collector<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#collectorproperties">Collector<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnproperties">Dict[Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1000,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Dict[Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1587,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentproperties">Dict[Collector<wbr>Agent<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1786,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentpropertiesresponse">Dict[Collector<wbr>Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

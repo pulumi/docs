@@ -307,7 +307,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionrootresponse">List[Expression<wbr>Root<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressionrootresponse">Sequence[Expression<wbr>Root<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -472,7 +472,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourceerrorinforesponse">List[Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Sequence[Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
 
@@ -641,7 +641,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourceerrorinforesponse">Dict[Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
 
@@ -651,7 +651,7 @@ The following output properties are available:
 <a href="#subexpressions_python" style="color: inherit; text-decoration: inherit;">subexpressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">List[Expression<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressionresponse">Sequence[Expression<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
 
@@ -671,7 +671,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -870,7 +870,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourceerrorinforesponse">Dict[Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
 
@@ -890,7 +890,7 @@ The following output properties are available:
 <a href="#subexpressions_python" style="color: inherit; text-decoration: inherit;">subexpressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">List[Expression<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressionresponse">Sequence[Expression<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
 
@@ -910,7 +910,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

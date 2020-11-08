@@ -175,28 +175,28 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
         "SomeProperty": "5",
     },
     resource_group_name="resRg",
-    vm_extensions=[{
-        "autoUpgradeMinorVersion": True,
-        "name": "Microsoft.Azure.Geneva.GenevaMonitoring",
-        "publisher": "Microsoft.Azure.Geneva",
-        "settings": {},
-        "type": "GenevaMonitoring",
-        "typeHandlerVersion": "2.0",
-    }],
+    vm_extensions=[azure_nextgen.servicefabric.v20200101preview.VMSSExtensionArgs(
+        auto_upgrade_minor_version=True,
+        name="Microsoft.Azure.Geneva.GenevaMonitoring",
+        publisher="Microsoft.Azure.Geneva",
+        settings={},
+        type="GenevaMonitoring",
+        type_handler_version="2.0",
+    )],
     vm_image_offer="WindowsServer",
     vm_image_publisher="MicrosoftWindowsServer",
     vm_image_sku="2016-Datacenter-Server-Core",
     vm_image_version="latest",
     vm_instance_count=10,
-    vm_secrets=[{
-        "sourceVault": {
-            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
-        },
-        "vaultCertificates": [{
-            "certificateStore": "My",
-            "certificateUrl": "https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
-        }],
-    }],
+    vm_secrets=[azure_nextgen.servicefabric.v20200101preview.VaultSecretGroupArgs(
+        source_vault=azure_nextgen.servicefabric.v20200101preview.SubResourceArgs(
+            id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
+        ),
+        vault_certificates=[azure_nextgen.servicefabric.v20200101preview.VaultCertificateArgs(
+            certificate_store="My",
+            certificate_url="https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
+        )],
+    )],
     vm_size="Standard_D3")
 
 ```
@@ -379,7 +379,7 @@ const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("node
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_ports</span><span class="p">:</span> <span class="nx">Optional[Dict[EndpointRangeDescription]]</span> = None<span class="p">, </span><span class="nx">capacities</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ephemeral_ports</span><span class="p">:</span> <span class="nx">Optional[Dict[EndpointRangeDescription]]</span> = None<span class="p">, </span><span class="nx">is_primary</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_extensions</span><span class="p">:</span> <span class="nx">Optional[List[VMSSExtension]]</span> = None<span class="p">, </span><span class="nx">vm_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_publisher</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_instance_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vm_secrets</span><span class="p">:</span> <span class="nx">Optional[List[VaultSecretGroup]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_ports</span><span class="p">:</span> <span class="nx">Optional[EndpointRangeDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">capacities</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ephemeral_ports</span><span class="p">:</span> <span class="nx">Optional[EndpointRangeDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">is_primary</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[VMSSExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">vm_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_publisher</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_instance_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vm_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[VaultSecretGroupArgs]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1178,7 +1178,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Dict[Endpoint<wbr>Range<wbr>Description]</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd>
 
@@ -1188,7 +1188,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.{{% /md %}}</dd>
 
@@ -1198,7 +1198,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Dict[Endpoint<wbr>Range<wbr>Description]</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd>
 
@@ -1208,7 +1208,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.{{% /md %}}</dd>
 
@@ -1218,7 +1218,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
 
@@ -1228,7 +1228,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_extensions_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmssextension">List[VMSSExtension]</a></span>
+        <span class="property-type"><a href="#vmssextension">Sequence[VMSSExtension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of extensions that should be installed onto the virtual machines.{{% /md %}}</dd>
 
@@ -1278,7 +1278,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_secrets_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroup">List[Vault<wbr>Secret<wbr>Group]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroup">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The secrets to install in the virtual machines.{{% /md %}}</dd>
 
@@ -2271,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -2281,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
 
@@ -2291,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -2710,7 +2710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -2720,7 +2720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
 
@@ -2730,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -2835,8 +2835,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2845,8 +2845,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2954,8 +2954,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2964,8 +2964,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3077,17 +3077,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificate">List[Vault<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#vaultcertificate">Sequence[Vault<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 
@@ -3196,17 +3196,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">List[Vault<wbr>Certificate<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 

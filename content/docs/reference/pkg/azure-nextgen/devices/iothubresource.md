@@ -126,63 +126,63 @@ import pulumi_azure_nextgen as azure_nextgen
 iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
     etag="AAAAAAFD6M4=",
     location="centraluseuap",
-    properties={
-        "cloudToDevice": {
-            "defaultTtlAsIso8601": "PT1H",
-            "feedback": {
-                "lockDurationAsIso8601": "PT1M",
-                "maxDeliveryCount": 10,
-                "ttlAsIso8601": "PT1H",
-            },
-            "maxDeliveryCount": 10,
+    properties=azure_nextgen.devices.latest.IotHubPropertiesArgs(
+        cloud_to_device=azure_nextgen.devices.latest.CloudToDevicePropertiesArgs(
+            default_ttl_as_iso8601="PT1H",
+            feedback=azure_nextgen.devices.latest.FeedbackPropertiesArgs(
+                lock_duration_as_iso8601="PT1M",
+                max_delivery_count=10,
+                ttl_as_iso8601="PT1H",
+            ),
+            max_delivery_count=10,
+        ),
+        enable_file_upload_notifications=False,
+        event_hub_endpoints={
+            "events": azure_nextgen.devices.latest.EventHubPropertiesArgs(
+                partition_count=2,
+                retention_time_in_days=1,
+            ),
         },
-        "enableFileUploadNotifications": False,
-        "eventHubEndpoints": {
-            "events": {
-                "partitionCount": 2,
-                "retentionTimeInDays": 1,
-            },
+        features="None",
+        ip_filter_rules=[],
+        messaging_endpoints={
+            "fileNotifications": azure_nextgen.devices.latest.MessagingEndpointPropertiesArgs(
+                lock_duration_as_iso8601="PT1M",
+                max_delivery_count=10,
+                ttl_as_iso8601="PT1H",
+            ),
         },
-        "features": "None",
-        "ipFilterRules": [],
-        "messagingEndpoints": {
-            "fileNotifications": {
-                "lockDurationAsIso8601": "PT1M",
-                "maxDeliveryCount": 10,
-                "ttlAsIso8601": "PT1H",
-            },
+        min_tls_version="1.2",
+        routing=azure_nextgen.devices.latest.RoutingPropertiesArgs(
+            endpoints=azure_nextgen.devices.latest.RoutingEndpointsArgs(
+                event_hubs=[],
+                service_bus_queues=[],
+                service_bus_topics=[],
+                storage_containers=[],
+            ),
+            fallback_route=azure_nextgen.devices.latest.FallbackRoutePropertiesArgs(
+                condition="true",
+                endpoint_names=["events"],
+                is_enabled=True,
+                name="$fallback",
+                source="DeviceMessages",
+            ),
+            routes=[],
+        ),
+        storage_endpoints={
+            "$default": azure_nextgen.devices.latest.StorageEndpointPropertiesArgs(
+                connection_string="",
+                container_name="",
+                sas_ttl_as_iso8601="PT1H",
+            ),
         },
-        "minTlsVersion": "1.2",
-        "routing": {
-            "endpoints": {
-                "eventHubs": [],
-                "serviceBusQueues": [],
-                "serviceBusTopics": [],
-                "storageContainers": [],
-            },
-            "fallbackRoute": {
-                "condition": "true",
-                "endpointNames": ["events"],
-                "isEnabled": True,
-                "name": "$fallback",
-                "source": "DeviceMessages",
-            },
-            "routes": [],
-        },
-        "storageEndpoints": {
-            "$default": {
-                "connectionString": "",
-                "containerName": "",
-                "sasTtlAsIso8601": "PT1H",
-            },
-        },
-    },
+    ),
     resource_group_name="myResourceGroup",
     resource_name="testHub",
-    sku={
-        "capacity": 1,
-        "name": "S1",
-    },
+    sku=azure_nextgen.devices.latest.IotHubSkuInfoArgs(
+        capacity=1,
+        name="S1",
+    ),
     tags={})
 
 ```
@@ -274,7 +274,7 @@ const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubRe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotHubResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[IotHubProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[IotHubSkuInfo]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotHubResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[IotHubPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IotHubSkuInfoArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -713,7 +713,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubskuinfo">Dict[Iot<wbr>Hub<wbr>Sku<wbr>Info]</a></span>
+        <span class="property-type"><a href="#iothubskuinfo">Iot<wbr>Hub<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd>
 
@@ -733,7 +733,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubproperties">Dict[Iot<wbr>Hub<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#iothubproperties">Iot<wbr>Hub<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IotHub properties{{% /md %}}</dd>
 
@@ -743,7 +743,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1060,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feedback_python" style="color: inherit; text-decoration: inherit;">feedback</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedbackproperties">Dict[Feedback<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#feedbackproperties">Feedback<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
 
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feedback_python" style="color: inherit; text-decoration: inherit;">feedback</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedbackpropertiesresponse">Dict[Feedback<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd>
 
@@ -1368,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
 
@@ -1527,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints for which the enrichment is applied to the message.{{% /md %}}</dd>
 
@@ -1662,8 +1662,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimeindays_python">
-<a href="#retentiontimeindays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Time<wbr>In<wbr>Days</a>
+        <span id="retention_time_in_days_python">
+<a href="#retention_time_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>time_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1875,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_ids_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The partition ids in the Event Hub-compatible endpoint.{{% /md %}}</dd>
 
@@ -1901,8 +1901,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimeindays_python">
-<a href="#retentiontimeindays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Time<wbr>In<wbr>Days</a>
+        <span id="retention_time_in_days_python">
+<a href="#retention_time_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>time_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2104,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
 
@@ -2343,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.{{% /md %}}</dd>
 
@@ -3259,7 +3259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">List[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
 
@@ -3269,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_to_device_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>to_<wbr>device</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtodeviceproperties">Dict[Cloud<wbr>To<wbr>Device<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
 
@@ -3299,7 +3299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hub_endpoints_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Event<wbr>Hub<wbr>Properties]</span>
+        <span class="property-type">Mapping[str, Event<wbr>Hub<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
 
@@ -3319,7 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterrule">List[Ip<wbr>Filter<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#ipfilterrule">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
 
@@ -3329,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messaging_endpoints_python" style="color: inherit; text-decoration: inherit;">messaging_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Messaging<wbr>Endpoint<wbr>Properties]</span>
+        <span class="property-type">Mapping[str, Messaging<wbr>Endpoint<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
 
@@ -3349,7 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List[Private<wbr>Endpoint<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
 
@@ -3369,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingproperties">Dict[Routing<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#routingproperties">Routing<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
 
@@ -3379,7 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_endpoints_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Storage<wbr>Endpoint<wbr>Properties]</span>
+        <span class="property-type">Mapping[str, Storage<wbr>Endpoint<wbr>Properties<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
 
@@ -3948,7 +3948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothublocationdescriptionresponse">List[Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iothublocationdescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd>
 
@@ -3978,7 +3978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">List[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd>
 
@@ -3988,7 +3988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_to_device_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>to_<wbr>device</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Dict[Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd>
 
@@ -4018,7 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hub_endpoints_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Event<wbr>Hub<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd>
 
@@ -4038,7 +4038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">List[Ip<wbr>Filter<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipfilterruleresponse">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
 
@@ -4048,7 +4048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messaging_endpoints_python" style="color: inherit; text-decoration: inherit;">messaging_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Messaging<wbr>Endpoint<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Messaging<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd>
 
@@ -4068,7 +4068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
 
@@ -4088,7 +4088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpropertiesresponse">Dict[Routing<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingpropertiesresponse">Routing<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd>
 
@@ -4098,7 +4098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_endpoints_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Storage<wbr>Endpoint<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Storage<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd>
 
@@ -5091,7 +5091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Dict[Private<wbr>Endpoint<wbr>Connection<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
 
@@ -5170,7 +5170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
 
@@ -5279,7 +5279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
 
@@ -5289,7 +5289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
 
@@ -5478,7 +5478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Dict[Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
 
@@ -6084,7 +6084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
 
@@ -6323,7 +6323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.{{% /md %}}</dd>
 
@@ -6532,7 +6532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hubs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingeventhubproperties">List[Routing<wbr>Event<wbr>Hub<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#routingeventhubproperties">Sequence[Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
 
@@ -6542,7 +6542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queues_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebusqueueendpointproperties">List[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#routingservicebusqueueendpointproperties">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
 
@@ -6552,7 +6552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebustopicendpointproperties">List[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#routingservicebustopicendpointproperties">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
 
@@ -6562,7 +6562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_containers_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingstoragecontainerproperties">List[Routing<wbr>Storage<wbr>Container<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#routingstoragecontainerproperties">Sequence[Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
 
@@ -6731,7 +6731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hubs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingeventhubpropertiesresponse">List[Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingeventhubpropertiesresponse">Sequence[Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd>
 
@@ -6741,7 +6741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queues_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">List[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
 
@@ -6751,7 +6751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">List[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd>
 
@@ -6761,7 +6761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_containers_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">List[Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">Sequence[Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd>
 
@@ -7056,8 +7056,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7076,8 +7076,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7086,8 +7086,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entitypath_python">
-<a href="#entitypath_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
+        <span id="entity_path_python">
+<a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7415,8 +7415,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7435,8 +7435,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7445,8 +7445,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entitypath_python">
-<a href="#entitypath_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
+        <span id="entity_path_python">
+<a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7648,7 +7648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingendpoints">Dict[Routing<wbr>Endpoints]</a></span>
+        <span class="property-type"><a href="#routingendpoints">Routing<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
 
@@ -7658,7 +7658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enrichmentproperties">List[Enrichment<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#enrichmentproperties">Sequence[Enrichment<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
 
@@ -7668,7 +7668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fallback_route_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fallbackrouteproperties">Dict[Fallback<wbr>Route<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
 
@@ -7678,7 +7678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeproperties">List[Route<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#routeproperties">Sequence[Route<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
 
@@ -7847,7 +7847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingendpointsresponse">Dict[Routing<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd>
 
@@ -7857,7 +7857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enrichmentpropertiesresponse">List[Enrichment<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#enrichmentpropertiesresponse">Sequence[Enrichment<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd>
 
@@ -7867,7 +7867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fallback_route_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>route</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fallbackroutepropertiesresponse">Dict[Fallback<wbr>Route<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd>
 
@@ -7877,7 +7877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routepropertiesresponse">List[Route<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routepropertiesresponse">Sequence[Route<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd>
 
@@ -8172,8 +8172,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8192,8 +8192,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8202,8 +8202,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entitypath_python">
-<a href="#entitypath_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
+        <span id="entity_path_python">
+<a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8531,8 +8531,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8551,8 +8551,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8561,8 +8561,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entitypath_python">
-<a href="#entitypath_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
+        <span id="entity_path_python">
+<a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8890,8 +8890,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8910,8 +8910,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8920,8 +8920,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entitypath_python">
-<a href="#entitypath_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
+        <span id="entity_path_python">
+<a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9249,8 +9249,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9269,8 +9269,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9279,8 +9279,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entitypath_python">
-<a href="#entitypath_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Path</a>
+        <span id="entity_path_python">
+<a href="#entity_path_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9738,8 +9738,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9748,8 +9748,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchfrequencyinseconds_python">
-<a href="#batchfrequencyinseconds_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
+        <span id="batch_frequency_in_seconds_python">
+<a href="#batch_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9778,8 +9778,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9788,8 +9788,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filenameformat_python">
-<a href="#filenameformat_python" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Format</a>
+        <span id="file_name_format_python">
+<a href="#file_name_format_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9808,8 +9808,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxchunksizeinbytes_python">
-<a href="#maxchunksizeinbytes_python" style="color: inherit; text-decoration: inherit;">max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
+        <span id="max_chunk_size_in_bytes_python">
+<a href="#max_chunk_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>chunk_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -10257,8 +10257,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10267,8 +10267,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchfrequencyinseconds_python">
-<a href="#batchfrequencyinseconds_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
+        <span id="batch_frequency_in_seconds_python">
+<a href="#batch_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -10297,8 +10297,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointuri_python">
-<a href="#endpointuri_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
+        <span id="endpoint_uri_python">
+<a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10307,8 +10307,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filenameformat_python">
-<a href="#filenameformat_python" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Format</a>
+        <span id="file_name_format_python">
+<a href="#file_name_format_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10327,8 +10327,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxchunksizeinbytes_python">
-<a href="#maxchunksizeinbytes_python" style="color: inherit; text-decoration: inherit;">max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
+        <span id="max_chunk_size_in_bytes_python">
+<a href="#max_chunk_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>chunk_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -10934,8 +10934,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10944,8 +10944,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasttlasiso8601_python">
-<a href="#sasttlasiso8601_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Ttl<wbr>As<wbr>Iso8601</a>
+        <span id="sas_ttl_as_iso8601_python">
+<a href="#sas_ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>ttl_<wbr>as_<wbr>iso8601</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11133,8 +11133,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11143,8 +11143,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sasttlasiso8601_python">
-<a href="#sasttlasiso8601_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Ttl<wbr>As<wbr>Iso8601</a>
+        <span id="sas_ttl_as_iso8601_python">
+<a href="#sas_ttl_as_iso8601_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>ttl_<wbr>as_<wbr>iso8601</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

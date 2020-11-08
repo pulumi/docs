@@ -34,6 +34,7 @@ class MyStack : Stack
                 "2.2.2.2",
             },
             GatewayName = "p2sVpnGateway1",
+            IsRoutingPreferenceInternet = false,
             Location = "West US",
             P2SConnectionConfigurations = 
             {
@@ -41,6 +42,40 @@ class MyStack : Stack
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
                     Name = "P2SConnectionConfig1",
+                    RoutingConfiguration = new AzureNextGen.Network.Latest.Inputs.RoutingConfigurationArgs
+                    {
+                        AssociatedRouteTable = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+                        },
+                        PropagatedRouteTables = new AzureNextGen.Network.Latest.Inputs.PropagatedRouteTableArgs
+                        {
+                            Ids = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                                {
+                                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+                                },
+                                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                                {
+                                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2",
+                                },
+                                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                                {
+                                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3",
+                                },
+                            },
+                            Labels = 
+                            {
+                                "label1",
+                                "label2",
+                            },
+                        },
+                        VnetRoutes = new AzureNextGen.Network.Latest.Inputs.VnetRouteArgs
+                        {
+                            StaticRoutes = {},
+                        },
+                    },
                     VpnClientAddressPool = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
                     {
                         AddressPrefixes = 
@@ -90,12 +125,38 @@ func main() {
 				pulumi.String("1.1.1.1"),
 				pulumi.String("2.2.2.2"),
 			},
-			GatewayName: pulumi.String("p2sVpnGateway1"),
-			Location:    pulumi.String("West US"),
+			GatewayName:                 pulumi.String("p2sVpnGateway1"),
+			IsRoutingPreferenceInternet: pulumi.Bool(false),
+			Location:                    pulumi.String("West US"),
 			P2SConnectionConfigurations: network.P2SConnectionConfigurationArray{
 				&network.P2SConnectionConfigurationArgs{
 					Id:   pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1"),
 					Name: pulumi.String("P2SConnectionConfig1"),
+					RoutingConfiguration: &network.RoutingConfigurationArgs{
+						AssociatedRouteTable: &network.SubResourceArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1"),
+						},
+						PropagatedRouteTables: &network.PropagatedRouteTableArgs{
+							Ids: network.SubResourceArray{
+								&network.SubResourceArgs{
+									Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1"),
+								},
+								&network.SubResourceArgs{
+									Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2"),
+								},
+								&network.SubResourceArgs{
+									Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3"),
+								},
+							},
+							Labels: pulumi.StringArray{
+								pulumi.String("label1"),
+								pulumi.String("label2"),
+							},
+						},
+						VnetRoutes: &network.VnetRouteArgs{
+							StaticRoutes: network.StaticRouteArray{},
+						},
+					},
 					VpnClientAddressPool: &network.AddressSpaceArgs{
 						AddressPrefixes: pulumi.StringArray{
 							pulumi.String("101.3.0.0/16"),
@@ -138,25 +199,51 @@ p2s_vpn_gateway = azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGateway",
         "2.2.2.2",
     ],
     gateway_name="p2sVpnGateway1",
+    is_routing_preference_internet=False,
     location="West US",
-    p2_s_connection_configurations=[{
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
-        "name": "P2SConnectionConfig1",
-        "vpnClientAddressPool": {
-            "addressPrefixes": ["101.3.0.0/16"],
-        },
-    }],
+    p2_s_connection_configurations=[azure_nextgen.network.latest.P2SConnectionConfigurationArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
+        name="P2SConnectionConfig1",
+        routing_configuration=azure_nextgen.network.latest.RoutingConfigurationArgs(
+            associated_route_table=azure_nextgen.network.latest.SubResourceArgs(
+                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+            ),
+            propagated_route_tables=azure_nextgen.network.latest.PropagatedRouteTableArgs(
+                ids=[
+                    azure_nextgen.network.latest.SubResourceArgs(
+                        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+                    ),
+                    azure_nextgen.network.latest.SubResourceArgs(
+                        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2",
+                    ),
+                    azure_nextgen.network.latest.SubResourceArgs(
+                        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3",
+                    ),
+                ],
+                labels=[
+                    "label1",
+                    "label2",
+                ],
+            ),
+            vnet_routes=azure_nextgen.network.latest.VnetRouteArgs(
+                static_routes=[],
+            ),
+        ),
+        vpn_client_address_pool=azure_nextgen.network.latest.AddressSpaceArgs(
+            address_prefixes=["101.3.0.0/16"],
+        ),
+    )],
     resource_group_name="rg1",
     tags={
         "key1": "value1",
     },
-    virtual_hub={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
-    },
+    virtual_hub=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+    ),
     vpn_gateway_scale_unit=1,
-    vpn_server_configuration={
-        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
-    })
+    vpn_server_configuration=azure_nextgen.network.latest.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
+    ))
 
 ```
 
@@ -174,10 +261,36 @@ const p2sVpnGateway = new azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGate
         "2.2.2.2",
     ],
     gatewayName: "p2sVpnGateway1",
+    isRoutingPreferenceInternet: false,
     location: "West US",
     p2SConnectionConfigurations: [{
         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
         name: "P2SConnectionConfig1",
+        routingConfiguration: {
+            associatedRouteTable: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+            },
+            propagatedRouteTables: {
+                ids: [
+                    {
+                        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+                    },
+                    {
+                        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2",
+                    },
+                    {
+                        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3",
+                    },
+                ],
+                labels: [
+                    "label1",
+                    "label2",
+                ],
+            },
+            vnetRoutes: {
+                staticRoutes: [],
+            },
+        },
         vpnClientAddressPool: {
             addressPrefixes: ["101.3.0.0/16"],
         },
@@ -211,7 +324,7 @@ const p2sVpnGateway = new azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGate
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">P2sVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_dns_servers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_connection_configurations</span><span class="p">:</span> <span class="nx">Optional[List[P2SConnectionConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[SubResource]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">P2sVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_routing_preference_internet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_connection_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[P2SConnectionConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -435,6 +548,16 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
+        <span id="isroutingpreferenceinternet_csharp">
+<a href="#isroutingpreferenceinternet_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Routing<wbr>Preference<wbr>Internet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="p2sconnectionconfigurations_csharp">
 <a href="#p2sconnectionconfigurations_csharp" style="color: inherit; text-decoration: inherit;">P2SConnection<wbr>Configurations</a>
 </span> 
@@ -539,6 +662,16 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isroutingpreferenceinternet_go">
+<a href="#isroutingpreferenceinternet_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Routing<wbr>Preference<wbr>Internet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -649,6 +782,16 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
+        <span id="isroutingpreferenceinternet_nodejs">
+<a href="#isroutingpreferenceinternet_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Routing<wbr>Preference<wbr>Internet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="p2sconnectionconfigurations_nodejs">
 <a href="#p2sconnectionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">p2SConnection<wbr>Configurations</a>
 </span> 
@@ -740,7 +883,7 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_dns_servers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>dns_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all customer specified DNS servers IP addresses.{{% /md %}}</dd>
 
@@ -756,11 +899,21 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
+        <span id="is_routing_preference_internet_python">
+<a href="#is_routing_preference_internet_python" style="color: inherit; text-decoration: inherit;">is_<wbr>routing_<wbr>preference_<wbr>internet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="p2_s_connection_configurations_python">
 <a href="#p2_s_connection_configurations_python" style="color: inherit; text-decoration: inherit;">p2_<wbr>s_<wbr>connection_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2sconnectionconfiguration">List[P2SConnection<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#p2sconnectionconfiguration">Sequence[P2SConnection<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all p2s connection configurations of the gateway.{{% /md %}}</dd>
 
@@ -770,7 +923,7 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -780,7 +933,7 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
 <a href="#virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VirtualHub to which the gateway belongs.{{% /md %}}</dd>
 
@@ -800,7 +953,7 @@ The P2sVpnGateway resource accepts the following [input]({{< relref "/docs/intro
 <a href="#vpn_server_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>server_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VpnServerConfiguration to which the p2sVpnGateway is attached to.{{% /md %}}</dd>
 
@@ -1079,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_connection_health_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>connection_<wbr>health</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconnectionhealthresponse">Dict[Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vpnclientconnectionhealthresponse">Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}All P2S VPN clients' connection health status.{{% /md %}}</dd>
 
@@ -1167,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 
@@ -1246,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
 
@@ -1475,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_configuration_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfiguration">Dict[Routing<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#routingconfiguration">Routing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd>
 
@@ -1485,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Dict[Address<wbr>Space]</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
 
@@ -1794,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_configuration_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Dict[Routing<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd>
 
@@ -1804,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
 
@@ -1913,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
 
@@ -1923,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd>
 
@@ -2032,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
 
@@ -2042,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd>
 
@@ -2181,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Dict[Sub<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
 
@@ -2191,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetable">Dict[Propagated<wbr>Route<wbr>Table]</a></span>
+        <span class="property-type"><a href="#propagatedroutetable">Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
 
@@ -2201,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetroute">Dict[Vnet<wbr>Route]</a></span>
+        <span class="property-type"><a href="#vnetroute">Vnet<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
 
@@ -2340,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
 
@@ -2350,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Dict[Propagated<wbr>Route<wbr>Table<wbr>Response]</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
 
@@ -2360,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Dict[Vnet<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
 
@@ -2499,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd>
 
@@ -2658,7 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd>
 
@@ -2915,7 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticroute">List[Static<wbr>Route]</a></span>
+        <span class="property-type"><a href="#staticroute">Sequence[Static<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 
@@ -2994,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">List[Static<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Sequence[Static<wbr>Route<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 
@@ -3183,7 +3336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocated_ip_addresses_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of allocated ip addresses to the connected p2s vpn clients.{{% /md %}}</dd>
 

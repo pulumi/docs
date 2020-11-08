@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#formula_content_python" style="color: inherit; text-decoration: inherit;">formula_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labvirtualmachinecreationparameterresponse">Dict[Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#labvirtualmachinecreationparameterresponse">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content of the formula.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#formulapropertiesfromvmresponse">Dict[Formula<wbr>Properties<wbr>From<wbr>Vm<wbr>Response]</a></span>
+        <span class="property-type"><a href="#formulapropertiesfromvmresponse">Formula<wbr>Properties<wbr>From<wbr>Vm<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about a VM from which a formula is to be created.{{% /md %}}</dd>
 
@@ -1169,8 +1169,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifactid_python">
-<a href="#artifactid_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
+        <span id="artifact_id_python">
+<a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1179,8 +1179,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="artifacttitle_python">
-<a href="#artifacttitle_python" style="color: inherit; text-decoration: inherit;">artifact<wbr>Title</a>
+        <span id="artifact_title_python">
+<a href="#artifact_title_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>title</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1189,8 +1189,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deploymentstatusmessage_python">
-<a href="#deploymentstatusmessage_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status<wbr>Message</a>
+        <span id="deployment_status_message_python">
+<a href="#deployment_status_message_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1199,8 +1199,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="installtime_python">
-<a href="#installtime_python" style="color: inherit; text-decoration: inherit;">install<wbr>Time</a>
+        <span id="install_time_python">
+<a href="#install_time_python" style="color: inherit; text-decoration: inherit;">install_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1213,7 +1213,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterpropertiesresponse">List[Artifact<wbr>Parameter<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
 
@@ -1229,8 +1229,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vmextensionstatusmessage_python">
-<a href="#vmextensionstatusmessage_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Extension<wbr>Status<wbr>Message</a>
+        <span id="vm_extension_status_message_python">
+<a href="#vm_extension_status_message_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extension_<wbr>status_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1725,18 +1725,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attachnewdatadiskoptions_python">
-<a href="#attachnewdatadiskoptions_python" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
+        <span id="attach_new_data_disk_options_python">
+<a href="#attach_new_data_disk_options_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>new_<wbr>data_<wbr>disk_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Dict[Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response]</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="existinglabdiskid_python">
-<a href="#existinglabdiskid_python" style="color: inherit; text-decoration: inherit;">existing<wbr>Lab<wbr>Disk<wbr>Id</a>
+        <span id="existing_lab_disk_id_python">
+<a href="#existing_lab_disk_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>lab_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2380,8 +2380,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transportprotocol_python">
-<a href="#transportprotocol_python" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
+        <span id="transport_protocol_python">
+<a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3493,7 +3493,7 @@ The following output properties are available:
 <a href="#artifact_deployment_status_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>deployment_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Dict[Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
 
@@ -3503,7 +3503,7 @@ The following output properties are available:
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallpropertiesresponse">List[Artifact<wbr>Install<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#artifactinstallpropertiesresponse">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
 
@@ -3513,7 +3513,7 @@ The following output properties are available:
 <a href="#bulk_creation_parameters_python" style="color: inherit; text-decoration: inherit;">bulk_<wbr>creation_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparametersresponse">Dict[Bulk<wbr>Creation<wbr>Parameters<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
 
@@ -3573,7 +3573,7 @@ The following output properties are available:
 <a href="#data_disk_parameters_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskpropertiesresponse">List[Data<wbr>Disk<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskpropertiesresponse">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
 
@@ -3623,7 +3623,7 @@ The following output properties are available:
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereferenceresponse">Dict[Gallery<wbr>Image<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
 
@@ -3693,7 +3693,7 @@ The following output properties are available:
 <a href="#network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Dict[Network<wbr>Interface<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
 
@@ -3763,7 +3763,7 @@ The following output properties are available:
 <a href="#schedule_parameters_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameterresponse">List[Schedule<wbr>Creation<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#schedulecreationparameterresponse">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
 
@@ -3803,7 +3803,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -4192,7 +4192,7 @@ The following output properties are available:
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Dict[Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
 
@@ -4840,7 +4840,7 @@ The following output properties are available:
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Dict[Day<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
 
@@ -4850,7 +4850,7 @@ The following output properties are available:
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Dict[Hour<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
 
@@ -4880,7 +4880,7 @@ The following output properties are available:
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Dict[Notification<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
 
@@ -4900,7 +4900,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -4940,7 +4940,7 @@ The following output properties are available:
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Dict[Week<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
 
@@ -5019,7 +5019,7 @@ The following output properties are available:
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">List[Inbound<wbr>Nat<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
 
@@ -5138,7 +5138,7 @@ The following output properties are available:
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
 

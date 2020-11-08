@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hostPool = new AzureNextGen.DesktopVirtualization.V20191210Preview.HostPool("hostPool", new AzureNextGen.DesktopVirtualization.V20191210Preview.HostPoolArgs
+        var hostPool = new AzureNextGen.DesktopVirtualization.V20201102Preview.HostPool("hostPool", new AzureNextGen.DesktopVirtualization.V20201102Preview.HostPoolArgs
         {
             Description = "des1",
             FriendlyName = "friendly",
@@ -37,18 +37,24 @@ class MyStack : Stack
             MaxSessionLimit = 999999,
             PersonalDesktopAssignmentType = "Automatic",
             PreferredAppGroupType = "Desktop",
-            RegistrationInfo = new AzureNextGen.DesktopVirtualization.V20191210Preview.Inputs.RegistrationInfoArgs
+            RegistrationInfo = new AzureNextGen.DesktopVirtualization.V20201102Preview.Inputs.RegistrationInfoArgs
             {
                 ExpirationTime = "2020-10-01T14:01:54.9571247Z",
                 RegistrationTokenOperation = "Update",
             },
             ResourceGroupName = "resourceGroup1",
+            SsoClientId = "client",
+            SsoClientSecretKeyVaultPath = "https://keyvault/secret",
             SsoContext = "KeyVaultPath",
+            SsoSecretType = "SharedKey",
+            SsoadfsAuthority = "https://adfs",
+            StartVMOnConnect = false,
             Tags = 
             {
                 { "tag1", "value1" },
                 { "tag2", "value2" },
             },
+            VmTemplate = "{json:json}",
         });
     }
 
@@ -64,7 +70,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20191210preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201102preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,12 +90,18 @@ func main() {
 				ExpirationTime:             pulumi.String("2020-10-01T14:01:54.9571247Z"),
 				RegistrationTokenOperation: pulumi.String("Update"),
 			},
-			ResourceGroupName: pulumi.String("resourceGroup1"),
-			SsoContext:        pulumi.String("KeyVaultPath"),
+			ResourceGroupName:           pulumi.String("resourceGroup1"),
+			SsoClientId:                 pulumi.String("client"),
+			SsoClientSecretKeyVaultPath: pulumi.String("https://keyvault/secret"),
+			SsoContext:                  pulumi.String("KeyVaultPath"),
+			SsoSecretType:               pulumi.String("SharedKey"),
+			SsoadfsAuthority:            pulumi.String("https://adfs"),
+			StartVMOnConnect:            pulumi.Bool(false),
 			Tags: pulumi.StringMap{
 				"tag1": pulumi.String("value1"),
 				"tag2": pulumi.String("value2"),
 			},
+			VmTemplate: pulumi.String("{json:json}"),
 		})
 		if err != nil {
 			return err
@@ -108,7 +120,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-host_pool = azure_nextgen.desktopvirtualization.v20191210preview.HostPool("hostPool",
+host_pool = azure_nextgen.desktopvirtualization.v20201102preview.HostPool("hostPool",
     description="des1",
     friendly_name="friendly",
     host_pool_name="hostPool1",
@@ -118,16 +130,22 @@ host_pool = azure_nextgen.desktopvirtualization.v20191210preview.HostPool("hostP
     max_session_limit=999999,
     personal_desktop_assignment_type="Automatic",
     preferred_app_group_type="Desktop",
-    registration_info={
-        "expirationTime": "2020-10-01T14:01:54.9571247Z",
-        "registrationTokenOperation": "Update",
-    },
+    registration_info=azure_nextgen.desktopvirtualization.v20201102preview.RegistrationInfoArgs(
+        expiration_time="2020-10-01T14:01:54.9571247Z",
+        registration_token_operation="Update",
+    ),
     resource_group_name="resourceGroup1",
+    sso_client_id="client",
+    sso_client_secret_key_vault_path="https://keyvault/secret",
     sso_context="KeyVaultPath",
+    sso_secret_type="SharedKey",
+    ssoadfs_authority="https://adfs",
+    start_vm_on_connect=False,
     tags={
         "tag1": "value1",
         "tag2": "value2",
-    })
+    },
+    vm_template="{json:json}")
 
 ```
 
@@ -139,7 +157,7 @@ host_pool = azure_nextgen.desktopvirtualization.v20191210preview.HostPool("hostP
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hostPool = new azure_nextgen.desktopvirtualization.v20191210preview.HostPool("hostPool", {
+const hostPool = new azure_nextgen.desktopvirtualization.v20201102preview.HostPool("hostPool", {
     description: "des1",
     friendlyName: "friendly",
     hostPoolName: "hostPool1",
@@ -154,11 +172,17 @@ const hostPool = new azure_nextgen.desktopvirtualization.v20191210preview.HostPo
         registrationTokenOperation: "Update",
     },
     resourceGroupName: "resourceGroup1",
+    ssoClientId: "client",
+    ssoClientSecretKeyVaultPath: "https://keyvault/secret",
     ssoContext: "KeyVaultPath",
+    ssoSecretType: "SharedKey",
+    ssoadfsAuthority: "https://adfs",
+    startVMOnConnect: false,
     tags: {
         tag1: "value1",
         tag2: "value2",
     },
+    vmTemplate: "{json:json}",
 });
 
 ```
@@ -177,7 +201,7 @@ const hostPool = new azure_nextgen.desktopvirtualization.v20191210preview.HostPo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rdp_property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_session_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">personal_desktop_assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[Dict[RegistrationInfo]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sso_context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">validation_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vm_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rdp_property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_session_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">personal_desktop_assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[RegistrationInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sso_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_client_secret_key_vault_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_secret_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssoadfs_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validation_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vm_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -481,6 +505,26 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ssoclientid_csharp">
+<a href="#ssoclientid_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssoclientsecretkeyvaultpath_csharp">
+<a href="#ssoclientsecretkeyvaultpath_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssocontext_csharp">
 <a href="#ssocontext_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Context</a>
 </span> 
@@ -488,6 +532,36 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssosecrettype_csharp">
+<a href="#ssosecrettype_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssoadfsauthority_csharp">
+<a href="#ssoadfsauthority_csharp" style="color: inherit; text-decoration: inherit;">Ssoadfs<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startvmonconnect_csharp">
+<a href="#startvmonconnect_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>VMOn<wbr>Connect</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -658,6 +732,26 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ssoclientid_go">
+<a href="#ssoclientid_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssoclientsecretkeyvaultpath_go">
+<a href="#ssoclientsecretkeyvaultpath_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssocontext_go">
 <a href="#ssocontext_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Context</a>
 </span> 
@@ -665,6 +759,36 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssosecrettype_go">
+<a href="#ssosecrettype_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssoadfsauthority_go">
+<a href="#ssoadfsauthority_go" style="color: inherit; text-decoration: inherit;">Ssoadfs<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startvmonconnect_go">
+<a href="#startvmonconnect_go" style="color: inherit; text-decoration: inherit;">Start<wbr>VMOn<wbr>Connect</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -835,6 +959,26 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ssoclientid_nodejs">
+<a href="#ssoclientid_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssoclientsecretkeyvaultpath_nodejs">
+<a href="#ssoclientsecretkeyvaultpath_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssocontext_nodejs">
 <a href="#ssocontext_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Context</a>
 </span> 
@@ -842,6 +986,36 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssosecrettype_nodejs">
+<a href="#ssosecrettype_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Secret<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssoadfsauthority_nodejs">
+<a href="#ssoadfsauthority_nodejs" style="color: inherit; text-decoration: inherit;">ssoadfs<wbr>Authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startvmonconnect_nodejs">
+<a href="#startvmonconnect_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>VMOn<wbr>Connect</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -996,7 +1170,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#registration_info_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationinfo">Dict[Registration<wbr>Info]</a></span>
+        <span class="property-type"><a href="#registrationinfo">Registration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd>
 
@@ -1012,6 +1186,26 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sso_client_id_python">
+<a href="#sso_client_id_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sso_client_secret_key_vault_path_python">
+<a href="#sso_client_secret_key_vault_path_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>client_<wbr>secret_<wbr>key_<wbr>vault_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sso_context_python">
 <a href="#sso_context_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>context</a>
 </span> 
@@ -1022,11 +1216,41 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sso_secret_type_python">
+<a href="#sso_secret_type_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>secret_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssoadfs_authority_python">
+<a href="#ssoadfs_authority_python" style="color: inherit; text-decoration: inherit;">ssoadfs_<wbr>authority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_vm_on_connect_python">
+<a href="#start_vm_on_connect_python" style="color: inherit; text-decoration: inherit;">start_<wbr>vm_<wbr>on_<wbr>connect</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1106,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1153,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1200,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1215,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_group_references_python" style="color: inherit; text-decoration: inherit;">application_<wbr>group_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd>
 
@@ -1247,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

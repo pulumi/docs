@@ -240,7 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -271,6 +271,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="customlibraries_csharp">
+<a href="#customlibraries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Library<wbr>Info<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -344,6 +354,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sessionlevelpackagesenabled_csharp">
+<a href="#sessionlevelpackagesenabled_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether session level library/package management is enabled or not.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sparkconfigproperties_csharp">
+<a href="#sparkconfigproperties_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryrequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Outputs.<wbr>Library<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sparkeventsfolder_csharp">
 <a href="#sparkeventsfolder_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Events<wbr>Folder</a>
 </span> 
@@ -407,7 +437,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -438,6 +468,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="customlibraries_go">
+<a href="#customlibraries_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryinforesponse">[]Library<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -511,6 +551,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sessionlevelpackagesenabled_go">
+<a href="#sessionlevelpackagesenabled_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether session level library/package management is enabled or not.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sparkconfigproperties_go">
+<a href="#sparkconfigproperties_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryrequirementsresponse">Library<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sparkeventsfolder_go">
 <a href="#sparkeventsfolder_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Events<wbr>Folder</a>
 </span> 
@@ -574,7 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -605,6 +665,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="customlibraries_nodejs">
+<a href="#customlibraries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Libraries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryinforesponse">Library<wbr>Info<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -678,6 +748,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="sessionlevelpackagesenabled_nodejs">
+<a href="#sessionlevelpackagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Level<wbr>Packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether session level library/package management is enabled or not.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sparkconfigproperties_nodejs">
+<a href="#sparkconfigproperties_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryrequirementsresponse">Library<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sparkeventsfolder_nodejs">
 <a href="#sparkeventsfolder_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Events<wbr>Folder</a>
 </span> 
@@ -741,7 +831,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -749,7 +839,7 @@ The following output properties are available:
 <a href="#auto_pause_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopausepropertiesresponse">Dict[Auto<wbr>Pause<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autopausepropertiesresponse">Auto<wbr>Pause<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd>
 
@@ -759,7 +849,7 @@ The following output properties are available:
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalepropertiesresponse">Dict[Auto<wbr>Scale<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalepropertiesresponse">Auto<wbr>Scale<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
 
@@ -772,6 +862,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="custom_libraries_python">
+<a href="#custom_libraries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>libraries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryinforesponse">Sequence[Library<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -799,7 +899,7 @@ The following output properties are available:
 <a href="#library_requirements_python" style="color: inherit; text-decoration: inherit;">library_<wbr>requirements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryrequirementsresponse">Dict[Library<wbr>Requirements<wbr>Response]</a></span>
+        <span class="property-type"><a href="#libraryrequirementsresponse">Library<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Library version requirements{{% /md %}}</dd>
 
@@ -845,6 +945,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="session_level_packages_enabled_python">
+<a href="#session_level_packages_enabled_python" style="color: inherit; text-decoration: inherit;">session_<wbr>level_<wbr>packages_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether session level library/package management is enabled or not.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="spark_config_properties_python">
+<a href="#spark_config_properties_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryrequirementsresponse">Library<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="spark_events_folder_python">
 <a href="#spark_events_folder_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>events_<wbr>folder</a>
 </span> 
@@ -869,7 +989,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1156,6 +1276,325 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="libraryinforesponse">Library<wbr>Info<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="creatorid_csharp">
+<a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstatus_csharp">
+<a href="#provisioningstatus_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uploadedtimestamp_csharp">
+<a href="#uploadedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Uploaded<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="creatorid_go">
+<a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstatus_go">
+<a href="#provisioningstatus_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uploadedtimestamp_go">
+<a href="#uploadedtimestamp_go" style="color: inherit; text-decoration: inherit;">Uploaded<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="creatorid_nodejs">
+<a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstatus_nodejs">
+<a href="#provisioningstatus_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uploadedtimestamp_nodejs">
+<a href="#uploadedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">uploaded<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="creator_id_python">
+<a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_status_python">
+<a href="#provisioning_status_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uploaded_timestamp_python">
+<a href="#uploaded_timestamp_python" style="color: inherit; text-decoration: inherit;">uploaded_<wbr>timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

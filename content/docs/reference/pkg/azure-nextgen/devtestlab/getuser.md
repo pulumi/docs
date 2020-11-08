@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">Dict[User<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#useridentityresponse">User<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the user.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#secret_store_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersecretstoreresponse">Dict[User<wbr>Secret<wbr>Store<wbr>Response]</a></span>
+        <span class="property-type"><a href="#usersecretstoreresponse">User<wbr>Secret<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret store of the user.{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 

@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#mapping_properties_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingpropertiesresponse">Dict[Connector<wbr>Mapping<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingpropertiesresponse">Connector<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd>
 
@@ -1880,7 +1880,7 @@ The following output properties are available:
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Dict[Connector<wbr>Mapping<wbr>Availability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd>
 
@@ -1890,7 +1890,7 @@ The following output properties are available:
 <a href="#complete_operation_python" style="color: inherit; text-decoration: inherit;">complete_<wbr>operation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Dict[Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd>
 
@@ -1900,7 +1900,7 @@ The following output properties are available:
 <a href="#error_management_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Dict[Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd>
 
@@ -1910,7 +1910,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Dict[Connector<wbr>Mapping<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd>
 
@@ -1920,7 +1920,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">List[Connector<wbr>Mapping<wbr>Structure<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd>
 
@@ -2135,8 +2135,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customformatspecifier_python">
-<a href="#customformatspecifier_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Format<wbr>Specifier</a>
+        <span id="custom_format_specifier_python">
+<a href="#custom_format_specifier_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>format_<wbr>specifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

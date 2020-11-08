@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#auto_storage_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autostoragepropertiesresponse">Dict[Auto<wbr>Storage<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autostoragepropertiesresponse">Auto<wbr>Storage<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#dedicated_core_quota_per_vm_family_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>core_<wbr>quota_<wbr>per_<wbr>vm_<wbr>family</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinefamilycorequotaresponse">List[Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualmachinefamilycorequotaresponse">Sequence[Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The following output properties are available:
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpropertiesresponse">Dict[Encryption<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#key_vault_reference_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Dict[Key<wbr>Vault<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The following output properties are available:
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd>
 
@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaccountidentityresponse">Dict[Batch<wbr>Account<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#batchaccountidentityresponse">Batch<wbr>Account<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd>
 
@@ -1352,7 +1352,7 @@ The following output properties are available:
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd>
 
@@ -1875,7 +1875,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd>
 
@@ -1885,7 +1885,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd>
 
@@ -2228,8 +2228,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="corequota_python">
-<a href="#corequota_python" style="color: inherit; text-decoration: inherit;">core<wbr>Quota</a>
+        <span id="core_quota_python">
+<a href="#core_quota_python" style="color: inherit; text-decoration: inherit;">core_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

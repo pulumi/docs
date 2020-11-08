@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#cis_intrinsic_settings_python" style="color: inherit; text-decoration: inherit;">cis_<wbr>intrinsic_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managerintrinsicsettingsresponse">Dict[Manager<wbr>Intrinsic<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managerintrinsicsettingsresponse">Manager<wbr>Intrinsic<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of StorSimple Manager.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managerskuresponse">Dict[Manager<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managerskuresponse">Manager<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Sku.{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags attached to the resource.{{% /md %}}</dd>
 

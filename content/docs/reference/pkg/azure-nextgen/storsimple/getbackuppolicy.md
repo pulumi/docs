@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#volume_ids_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The path IDs of the volumes which are part of the backup policy.{{% /md %}}</dd>
 

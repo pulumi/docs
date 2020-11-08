@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#additional_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentadditionaldataresponse">Dict[Incident<wbr>Additional<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The following output properties are available:
 <a href="#related_analytic_rule_ids_python" style="color: inherit; text-decoration: inherit;">related_<wbr>analytic_<wbr>rule_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
 
@@ -1009,7 +1009,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">List[Incident<wbr>Label<wbr>Response]</a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">Sequence[Incident<wbr>Label<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
 
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">Dict[Incident<wbr>Owner<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
 
@@ -1234,7 +1234,7 @@ The following output properties are available:
 <a href="#alert_product_names_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>product_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
 
@@ -1274,7 +1274,7 @@ The following output properties are available:
 <a href="#tactics_python" style="color: inherit; text-decoration: inherit;">tactics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
 
@@ -1379,16 +1379,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="labeltype_python">
-<a href="#labeltype_python" style="color: inherit; text-decoration: inherit;">label<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="label_name_python">
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
 </span> 
@@ -1396,6 +1386,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="label_type_python">
+<a href="#label_type_python" style="color: inherit; text-decoration: inherit;">label_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the label{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#storage_account_credential_ids_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>credential_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The storage account credentials.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Dict[Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption key used to encrypt the data. This is a user secret.{{% /md %}}</dd>
 

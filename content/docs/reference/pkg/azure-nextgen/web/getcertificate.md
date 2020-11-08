@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#hosting_environment_profile_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofileresponse">Dict[Hosting<wbr>Environment<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofileresponse">Hosting<wbr>Environment<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specification for the App Service Environment to use for the certificate.{{% /md %}}</dd>
 
@@ -1129,7 +1129,7 @@ The following output properties are available:
 <a href="#host_names_python" style="color: inherit; text-decoration: inherit;">host_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Host names the certificate applies to.{{% /md %}}</dd>
 
@@ -1189,7 +1189,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

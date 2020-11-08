@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Config information.{{% /md %}}</dd>
 
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}File list.{{% /md %}}</dd>
 

@@ -2650,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreresponse">Dict[Datastore<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datastoreresponse">Datastore<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datastore properties{{% /md %}}</dd>
 
@@ -2670,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Dict[Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
 
@@ -2690,7 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
 
@@ -2700,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -6124,7 +6124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_credentials_python" style="color: inherit; text-decoration: inherit;">client_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Dict[Client<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7232,7 +7232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd>
 
@@ -7252,7 +7252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modified_by_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd>
 
@@ -7272,7 +7272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags for this datastore.{{% /md %}}</dd>
 
@@ -7282,7 +7282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_data_lake_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>data_<wbr>lake_<wbr>section</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Dict[Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7292,7 +7292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_my_sql_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>my_<wbr>sql_<wbr>section</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Dict[Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7302,7 +7302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_postgre_sql_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>postgre_<wbr>sql_<wbr>section</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Dict[Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7312,7 +7312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_sql_database_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sql_<wbr>database_<wbr>section</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Dict[Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7322,7 +7322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_storage_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>section</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Dict[Azure<wbr>Storage<wbr>Section<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7352,7 +7352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gluster_fs_section_python" style="color: inherit; text-decoration: inherit;">gluster_<wbr>fs_<wbr>section</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Dict[Gluster<wbr>Fs<wbr>Section<wbr>Response]</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd>
 
@@ -7372,7 +7372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Dict[Linked<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd>
 
@@ -7700,7 +7700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 

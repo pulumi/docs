@@ -109,7 +109,7 @@ const protectionContainer = new azure_nextgen.recoveryservices.latest.Protection
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureSqlContainer] | Dict[AzureStorageContainer] | Dict[AzureWorkloadContainer] | Dict[DpmContainer] | Dict[GenericContainer] | Dict[IaaSVMContainer] | Dict[MabContainer]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureSqlContainerArgs, AzureStorageContainerArgs, AzureWorkloadContainerArgs, DpmContainerArgs, GenericContainerArgs, IaaSVMContainerArgs, MabContainerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -608,7 +608,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Sql<wbr>Container] | Dict[Azure<wbr>Storage<wbr>Container] | Dict[Azure<wbr>Workload<wbr>Container] | Dict[Dpm<wbr>Container] | Dict[Generic<wbr>Container] | Dict[Iaa<wbr>SVMContainer] | Dict[Mab<wbr>Container]</span>
+        <span class="property-type">Union[Azure<wbr>Sql<wbr>Container<wbr>Args, Azure<wbr>Storage<wbr>Container<wbr>Args, Azure<wbr>Workload<wbr>Container<wbr>Args, Dpm<wbr>Container<wbr>Args, Generic<wbr>Container<wbr>Args, Iaa<wbr>SVMContainer<wbr>Args, Mab<wbr>Container<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
 
@@ -618,7 +618,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -951,8 +951,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -971,8 +971,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1150,8 +1150,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1170,8 +1170,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1469,8 +1469,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1489,8 +1489,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1539,8 +1539,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storageaccountversion_python">
-<a href="#storageaccountversion_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Version</a>
+        <span id="storage_account_version_python">
+<a href="#storage_account_version_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1828,8 +1828,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1848,8 +1848,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1898,8 +1898,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storageaccountversion_python">
-<a href="#storageaccountversion_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Version</a>
+        <span id="storage_account_version_python">
+<a href="#storage_account_version_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2217,8 +2217,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2227,11 +2227,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Dict[Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info]</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
 
@@ -2247,8 +2247,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2297,8 +2297,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2436,8 +2436,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostservername_python">
-<a href="#hostservername_python" style="color: inherit; text-decoration: inherit;">host<wbr>Server<wbr>Name</a>
+        <span id="host_server_name_python">
+<a href="#host_server_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>server_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2446,21 +2446,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inquiryinfo_python">
-<a href="#inquiryinfo_python" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Info</a>
+        <span id="inquiry_info_python">
+<a href="#inquiry_info_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinfo">Dict[Inquiry<wbr>Info]</a></span>
+        <span class="property-type"><a href="#inquiryinfo">Inquiry<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodeslist_python">
-<a href="#nodeslist_python" style="color: inherit; text-decoration: inherit;">nodes<wbr>List</a>
+        <span id="nodes_list_python">
+<a href="#nodes_list_python" style="color: inherit; text-decoration: inherit;">nodes_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinfo">List[Distributed<wbr>Nodes<wbr>Info]</a></span>
+        <span class="property-type"><a href="#distributednodesinfo">Sequence[Distributed<wbr>Nodes<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd>
 
@@ -2595,8 +2595,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostservername_python">
-<a href="#hostservername_python" style="color: inherit; text-decoration: inherit;">host<wbr>Server<wbr>Name</a>
+        <span id="host_server_name_python">
+<a href="#host_server_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>server_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2605,21 +2605,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inquiryinfo_python">
-<a href="#inquiryinfo_python" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Info</a>
+        <span id="inquiry_info_python">
+<a href="#inquiry_info_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinforesponse">Dict[Inquiry<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inquiryinforesponse">Inquiry<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodeslist_python">
-<a href="#nodeslist_python" style="color: inherit; text-decoration: inherit;">nodes<wbr>List</a>
+        <span id="nodes_list_python">
+<a href="#nodes_list_python" style="color: inherit; text-decoration: inherit;">nodes_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinforesponse">List[Distributed<wbr>Nodes<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#distributednodesinforesponse">Sequence[Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd>
 
@@ -2934,8 +2934,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2944,11 +2944,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Dict[Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
 
@@ -2964,8 +2964,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3014,8 +3014,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadtype_python">
-<a href="#workloadtype_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3203,8 +3203,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalclientid_python">
-<a href="#serviceprincipalclientid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Client<wbr>Id</a>
+        <span id="service_principal_client_id_python">
+<a href="#service_principal_client_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3402,8 +3402,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceprincipalclientid_python">
-<a href="#serviceprincipalclientid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Client<wbr>Id</a>
+        <span id="service_principal_client_id_python">
+<a href="#service_principal_client_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3491,8 +3491,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrefreshedat_python">
-<a href="#lastrefreshedat_python" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
+        <span id="last_refreshed_at_python">
+<a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3570,8 +3570,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrefreshedat_python">
-<a href="#lastrefreshedat_python" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
+        <span id="last_refreshed_at_python">
+<a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3682,8 +3682,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodename_python">
-<a href="#nodename_python" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
+        <span id="node_name_python">
+<a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3835,18 +3835,18 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errordetail_python">
-<a href="#errordetail_python" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
+        <span id="error_detail_python">
+<a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Dict[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodename_python">
-<a href="#nodename_python" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
+        <span id="node_name_python">
+<a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4265,8 +4265,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4275,8 +4275,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="canreregister_python">
-<a href="#canreregister_python" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
+        <span id="can_re_register_python">
+<a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4295,8 +4295,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dpmagentversion_python">
-<a href="#dpmagentversion_python" style="color: inherit; text-decoration: inherit;">dpm<wbr>Agent<wbr>Version</a>
+        <span id="dpm_agent_version_python">
+<a href="#dpm_agent_version_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>agent_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4305,21 +4305,21 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dpmservers_python">
-<a href="#dpmservers_python" style="color: inherit; text-decoration: inherit;">dpm<wbr>Servers</a>
+        <span id="dpm_servers_python">
+<a href="#dpm_servers_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">Dict[DPMContainer<wbr>Extended<wbr>Info]</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
 
@@ -4335,8 +4335,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4355,8 +4355,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protectionstatus_python">
-<a href="#protectionstatus_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4375,8 +4375,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="upgradeavailable_python">
-<a href="#upgradeavailable_python" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Available</a>
+        <span id="upgrade_available_python">
+<a href="#upgrade_available_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>available</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4784,8 +4784,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4794,8 +4794,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="canreregister_python">
-<a href="#canreregister_python" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
+        <span id="can_re_register_python">
+<a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4814,8 +4814,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dpmagentversion_python">
-<a href="#dpmagentversion_python" style="color: inherit; text-decoration: inherit;">dpm<wbr>Agent<wbr>Version</a>
+        <span id="dpm_agent_version_python">
+<a href="#dpm_agent_version_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>agent_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4824,21 +4824,21 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dpmservers_python">
-<a href="#dpmservers_python" style="color: inherit; text-decoration: inherit;">dpm<wbr>Servers</a>
+        <span id="dpm_servers_python">
+<a href="#dpm_servers_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Dict[DPMContainer<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
 
@@ -4854,8 +4854,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4874,8 +4874,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protectionstatus_python">
-<a href="#protectionstatus_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4894,8 +4894,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="upgradeavailable_python">
-<a href="#upgradeavailable_python" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Available</a>
+        <span id="upgrade_available_python">
+<a href="#upgrade_available_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>available</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5057,7 +5057,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd>
 
@@ -5282,8 +5282,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5292,11 +5292,11 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinformation_python">
-<a href="#extendedinformation_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Information</a>
+        <span id="extended_information_python">
+<a href="#extended_information_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinfo">Dict[Generic<wbr>Container<wbr>Extended<wbr>Info]</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinfo">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd>
 
@@ -5322,8 +5322,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5471,11 +5471,11 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containeridentityinfo_python">
-<a href="#containeridentityinfo_python" style="color: inherit; text-decoration: inherit;">container<wbr>Identity<wbr>Info</a>
+        <span id="container_identity_info_python">
+<a href="#container_identity_info_python" style="color: inherit; text-decoration: inherit;">container_<wbr>identity_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinfo">Dict[Container<wbr>Identity<wbr>Info]</a></span>
+        <span class="property-type"><a href="#containeridentityinfo">Container<wbr>Identity<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd>
 
@@ -5495,7 +5495,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#service_endpoints_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure Backup Service Endpoints for the container{{% /md %}}</dd>
 
@@ -5630,11 +5630,11 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containeridentityinfo_python">
-<a href="#containeridentityinfo_python" style="color: inherit; text-decoration: inherit;">container<wbr>Identity<wbr>Info</a>
+        <span id="container_identity_info_python">
+<a href="#container_identity_info_python" style="color: inherit; text-decoration: inherit;">container_<wbr>identity_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinforesponse">Dict[Container<wbr>Identity<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containeridentityinforesponse">Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd>
 
@@ -5654,7 +5654,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#service_endpoints_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure Backup Service Endpoints for the container{{% /md %}}</dd>
 
@@ -5879,8 +5879,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5889,11 +5889,11 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinformation_python">
-<a href="#extendedinformation_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Information</a>
+        <span id="extended_information_python">
+<a href="#extended_information_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>information</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Dict[Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd>
 
@@ -5919,8 +5919,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6188,8 +6188,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6208,8 +6208,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6238,8 +6238,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachineid_python">
-<a href="#virtualmachineid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6248,8 +6248,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachineversion_python">
-<a href="#virtualmachineversion_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
+        <span id="virtual_machine_version_python">
+<a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6507,8 +6507,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6527,8 +6527,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6557,8 +6557,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachineid_python">
-<a href="#virtualmachineid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6567,8 +6567,8 @@ Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualmachineversion_python">
-<a href="#virtualmachineversion_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
+        <span id="virtual_machine_version_python">
+<a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6682,11 +6682,11 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inquirydetails_python">
-<a href="#inquirydetails_python" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Details</a>
+        <span id="inquiry_details_python">
+<a href="#inquiry_details_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetails">List[Workload<wbr>Inquiry<wbr>Details]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetails">Sequence[Workload<wbr>Inquiry<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd>
@@ -6839,21 +6839,21 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errordetail_python">
-<a href="#errordetail_python" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
+        <span id="error_detail_python">
+<a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Dict[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inquirydetails_python">
-<a href="#inquirydetails_python" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Details</a>
+        <span id="inquiry_details_python">
+<a href="#inquiry_details_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetailsresponse">List[Workload<wbr>Inquiry<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetailsresponse">Sequence[Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd>
@@ -7079,8 +7079,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="additionaldetail_python">
-<a href="#additionaldetail_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Detail</a>
+        <span id="additional_detail_python">
+<a href="#additional_detail_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>detail</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7089,11 +7089,11 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errordetail_python">
-<a href="#errordetail_python" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
+        <span id="error_detail_python">
+<a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Dict[Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Detail in case the status is non-success.{{% /md %}}</dd>
 
@@ -7292,7 +7292,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
 
@@ -7491,7 +7491,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
 
@@ -7886,8 +7886,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7896,8 +7896,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="canreregister_python">
-<a href="#canreregister_python" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
+        <span id="can_re_register_python">
+<a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7906,8 +7906,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerhealthstate_python">
-<a href="#containerhealthstate_python" style="color: inherit; text-decoration: inherit;">container<wbr>Health<wbr>State</a>
+        <span id="container_health_state_python">
+<a href="#container_health_state_python" style="color: inherit; text-decoration: inherit;">container_<wbr>health_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7926,11 +7926,11 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinfo">Dict[Mab<wbr>Container<wbr>Extended<wbr>Info]</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinfo">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd>
 
@@ -7946,8 +7946,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7956,11 +7956,11 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mabcontainerhealthdetails_python">
-<a href="#mabcontainerhealthdetails_python" style="color: inherit; text-decoration: inherit;">mab<wbr>Container<wbr>Health<wbr>Details</a>
+        <span id="mab_container_health_details_python">
+<a href="#mab_container_health_details_python" style="color: inherit; text-decoration: inherit;">mab_<wbr>container_<wbr>health_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetails">List[MABContainer<wbr>Health<wbr>Details]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetails">Sequence[MABContainer<wbr>Health<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd>
 
@@ -8175,8 +8175,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupitemtype_python">
-<a href="#backupitemtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Item<wbr>Type</a>
+        <span id="backup_item_type_python">
+<a href="#backup_item_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>item_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8185,18 +8185,18 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupitems_python">
-<a href="#backupitems_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Items</a>
+        <span id="backup_items_python">
+<a href="#backup_items_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of backup items associated with this container.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastbackupstatus_python">
-<a href="#lastbackupstatus_python" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8205,8 +8205,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrefreshedat_python">
-<a href="#lastrefreshedat_python" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
+        <span id="last_refreshed_at_python">
+<a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8414,8 +8414,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupitemtype_python">
-<a href="#backupitemtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Item<wbr>Type</a>
+        <span id="backup_item_type_python">
+<a href="#backup_item_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>item_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8424,18 +8424,18 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupitems_python">
-<a href="#backupitems_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Items</a>
+        <span id="backup_items_python">
+<a href="#backup_items_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of backup items associated with this container.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastbackupstatus_python">
-<a href="#lastbackupstatus_python" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8444,8 +8444,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lastrefreshedat_python">
-<a href="#lastrefreshedat_python" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
+        <span id="last_refreshed_at_python">
+<a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8843,8 +8843,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupmanagementtype_python">
-<a href="#backupmanagementtype_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8853,8 +8853,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="canreregister_python">
-<a href="#canreregister_python" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
+        <span id="can_re_register_python">
+<a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8863,8 +8863,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerhealthstate_python">
-<a href="#containerhealthstate_python" style="color: inherit; text-decoration: inherit;">container<wbr>Health<wbr>State</a>
+        <span id="container_health_state_python">
+<a href="#container_health_state_python" style="color: inherit; text-decoration: inherit;">container_<wbr>health_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8883,11 +8883,11 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedinfo_python">
-<a href="#extendedinfo_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Dict[Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd>
 
@@ -8903,8 +8903,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstatus_python">
-<a href="#healthstatus_python" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8913,11 +8913,11 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mabcontainerhealthdetails_python">
-<a href="#mabcontainerhealthdetails_python" style="color: inherit; text-decoration: inherit;">mab<wbr>Container<wbr>Health<wbr>Details</a>
+        <span id="mab_container_health_details_python">
+<a href="#mab_container_health_details_python" style="color: inherit; text-decoration: inherit;">mab_<wbr>container_<wbr>health_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">List[MABContainer<wbr>Health<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">Sequence[MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd>
 
@@ -9072,18 +9072,18 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inquiryvalidation_python">
-<a href="#inquiryvalidation_python" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Validation</a>
+        <span id="inquiry_validation_python">
+<a href="#inquiry_validation_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidation">Dict[Inquiry<wbr>Validation]</a></span>
+        <span class="property-type"><a href="#inquiryvalidation">Inquiry<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="itemcount_python">
-<a href="#itemcount_python" style="color: inherit; text-decoration: inherit;">item<wbr>Count</a>
+        <span id="item_count_python">
+<a href="#item_count_python" style="color: inherit; text-decoration: inherit;">item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -9231,18 +9231,18 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inquiryvalidation_python">
-<a href="#inquiryvalidation_python" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Validation</a>
+        <span id="inquiry_validation_python">
+<a href="#inquiry_validation_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidationresponse">Dict[Inquiry<wbr>Validation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inquiryvalidationresponse">Inquiry<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="itemcount_python">
-<a href="#itemcount_python" style="color: inherit; text-decoration: inherit;">item<wbr>Count</a>
+        <span id="item_count_python">
+<a href="#item_count_python" style="color: inherit; text-decoration: inherit;">item_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

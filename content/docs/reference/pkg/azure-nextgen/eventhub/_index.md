@@ -19,6 +19,7 @@ Explore the resources and functions of the eventhub module in the Azure NextGen 
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
     <li><a href="namespaceipfilterrule" title="NamespaceIpFilterRule"><span class="symbol resource"></span>NamespaceIpFilterRule</a></li>
+    <li><a href="namespacenetworkruleset" title="NamespaceNetworkRuleSet"><span class="symbol resource"></span>NamespaceNetworkRuleSet</a></li>
     <li><a href="namespacevirtualnetworkrule" title="NamespaceVirtualNetworkRule"><span class="symbol resource"></span>NamespaceVirtualNetworkRule</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
 </ul>
@@ -33,6 +34,7 @@ Explore the resources and functions of the eventhub module in the Azure NextGen 
     <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
     <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
     <li><a href="getnamespaceipfilterrule" title="GetNamespaceIpFilterRule"><span class="symbol function"></span>GetNamespaceIpFilterRule</a></li>
+    <li><a href="getnamespacenetworkruleset" title="GetNamespaceNetworkRuleSet"><span class="symbol function"></span>GetNamespaceNetworkRuleSet</a></li>
     <li><a href="getnamespacevirtualnetworkrule" title="GetNamespaceVirtualNetworkRule"><span class="symbol function"></span>GetNamespaceVirtualNetworkRule</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="listdisasterrecoveryconfigkeys" title="ListDisasterRecoveryConfigKeys"><span class="symbol function"></span>ListDisasterRecoveryConfigKeys</a></li>
@@ -47,7 +49,7 @@ Explore the resources and functions of the eventhub module in the Azure NextGen 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

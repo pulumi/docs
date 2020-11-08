@@ -73,19 +73,19 @@ import pulumi_azure_nextgen as azure_nextgen
 function = azure_nextgen.streamanalytics.latest.Function("function",
     function_name="function8197",
     job_name="sj8653",
-    properties={
-        "binding": {
+    properties=azure_nextgen.streamanalytics.latest.ScalarFunctionPropertiesArgs(
+        binding={
             "script": "function (x, y) { return x + y; }",
             "type": "Microsoft.StreamAnalytics/JavascriptUdf",
         },
-        "inputs": [{
-            "dataType": "Any",
-        }],
-        "output": {
-            "dataType": "Any",
-        },
-        "type": "Scalar",
-    },
+        inputs=[azure_nextgen.streamanalytics.latest.FunctionInputArgs(
+            data_type="Any",
+        )],
+        output=azure_nextgen.streamanalytics.latest.FunctionOutputArgs(
+            data_type="Any",
+        ),
+        type="Scalar",
+    ),
     resource_group_name="sjrg1637")
 
 ```
@@ -201,33 +201,33 @@ import pulumi_azure_nextgen as azure_nextgen
 function = azure_nextgen.streamanalytics.latest.Function("function",
     function_name="function588",
     job_name="sj9093",
-    properties={
-        "binding": {
+    properties=azure_nextgen.streamanalytics.latest.ScalarFunctionPropertiesArgs(
+        binding={
             "apiKey": "someApiKey==",
             "batchSize": 1000,
             "endpoint": "someAzureMLEndpointURL",
-            "inputs": {
-                "columnNames": [{
-                    "dataType": "string",
-                    "mapTo": 0,
-                    "name": "tweet",
-                }],
-                "name": "input1",
-            },
-            "outputs": [{
-                "dataType": "string",
-                "name": "Sentiment",
-            }],
+            "inputs": azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceInputsArgs(
+                column_names=[azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceInputColumnArgs(
+                    data_type="string",
+                    map_to=0,
+                    name="tweet",
+                )],
+                name="input1",
+            ),
+            "outputs": [azure_nextgen.streamanalytics.latest.AzureMachineLearningWebServiceOutputColumnArgs(
+                data_type="string",
+                name="Sentiment",
+            )],
             "type": "Microsoft.MachineLearning/WebService",
         },
-        "inputs": [{
-            "dataType": "nvarchar(max)",
-        }],
-        "output": {
-            "dataType": "nvarchar(max)",
-        },
-        "type": "Scalar",
-    },
+        inputs=[azure_nextgen.streamanalytics.latest.FunctionInputArgs(
+            data_type="nvarchar(max)",
+        )],
+        output=azure_nextgen.streamanalytics.latest.FunctionOutputArgs(
+            data_type="nvarchar(max)",
+        ),
+        type="Scalar",
+    ),
     resource_group_name="sjrg7")
 
 ```
@@ -289,7 +289,7 @@ const _function = new azure_nextgen.streamanalytics.latest.Function("function", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ScalarFunctionProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ScalarFunctionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -678,7 +678,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Dict[Scalar<wbr>Function<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd>
 
@@ -1001,8 +1001,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apikey_python">
-<a href="#apikey_python" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
+        <span id="api_key_python">
+<a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Dict[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
 
@@ -1045,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">List[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
 
@@ -1240,8 +1240,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apikey_python">
-<a href="#apikey_python" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
+        <span id="api_key_python">
+<a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1274,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Dict[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
 
@@ -1284,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
 
@@ -1429,8 +1429,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mapto_python">
-<a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
+        <span id="map_to_python">
+<a href="#map_to_python" style="color: inherit; text-decoration: inherit;">map_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1588,8 +1588,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mapto_python">
-<a href="#mapto_python" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
+        <span id="map_to_python">
+<a href="#map_to_python" style="color: inherit; text-decoration: inherit;">map_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1707,11 +1707,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columnnames_python">
-<a href="#columnnames_python" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
+        <span id="column_names_python">
+<a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">List[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
 
@@ -1826,11 +1826,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columnnames_python">
-<a href="#columnnames_python" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
+        <span id="column_names_python">
+<a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
 
@@ -2193,8 +2193,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isconfigurationparameter_python">
-<a href="#isconfigurationparameter_python" style="color: inherit; text-decoration: inherit;">is<wbr>Configuration<wbr>Parameter</a>
+        <span id="is_configuration_parameter_python">
+<a href="#is_configuration_parameter_python" style="color: inherit; text-decoration: inherit;">is_<wbr>configuration_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2312,8 +2312,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isconfigurationparameter_python">
-<a href="#isconfigurationparameter_python" style="color: inherit; text-decoration: inherit;">is<wbr>Configuration<wbr>Parameter</a>
+        <span id="is_configuration_parameter_python">
+<a href="#is_configuration_parameter_python" style="color: inherit; text-decoration: inherit;">is_<wbr>configuration_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2771,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding] | Dict[Java<wbr>Script<wbr>Function<wbr>Binding]</span>
+        <span class="property-type">Union[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args, Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2781,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">List[Function<wbr>Input]</a></span>
+        <span class="property-type"><a href="#functioninput">Sequence[Function<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
 
@@ -2791,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Dict[Function<wbr>Output]</a></span>
+        <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 
@@ -2970,7 +2970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response] | Dict[Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response]</span>
+        <span class="property-type">Union[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args, Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
 
@@ -2980,7 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">List[Function<wbr>Input<wbr>Response]</a></span>
+        <span class="property-type"><a href="#functioninputresponse">Sequence[Function<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
 
@@ -2990,7 +2990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Dict[Function<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 

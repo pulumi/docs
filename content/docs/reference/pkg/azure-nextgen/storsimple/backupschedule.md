@@ -117,15 +117,15 @@ backup_schedule = azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule
     manager_name="ManagerForSDKTest1",
     resource_group_name="ResourceGroupForSDKTest",
     retention_count=1,
-    schedule_recurrence={
-        "recurrenceType": "Weekly",
-        "recurrenceValue": 1,
-        "weeklyDaysList": [
+    schedule_recurrence=azure_nextgen.storsimple.latest.ScheduleRecurrenceArgs(
+        recurrence_type="Weekly",
+        recurrence_value=1,
+        weekly_days_list=[
             "Friday",
             "Thursday",
             "Monday",
         ],
-    },
+    ),
     schedule_status="Enabled",
     start_time="2017-06-24T01:00:00Z")
 
@@ -177,7 +177,7 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">schedule_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleRecurrence]]</span> = None<span class="p">, </span><span class="nx">schedule_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">schedule_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">schedule_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -776,7 +776,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedule_recurrence_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerecurrence">Dict[Schedule<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#schedulerecurrence">Schedule<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
 
@@ -1173,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_days_list_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>days_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
 
@@ -1332,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_days_list_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>days_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
 

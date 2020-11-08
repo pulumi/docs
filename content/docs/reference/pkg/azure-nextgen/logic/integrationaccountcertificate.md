@@ -97,13 +97,13 @@ import pulumi_azure_nextgen as azure_nextgen
 integration_account_certificate = azure_nextgen.logic.latest.IntegrationAccountCertificate("integrationAccountCertificate",
     certificate_name="testCertificate",
     integration_account_name="testIntegrationAccount",
-    key={
-        "keyName": "<keyName>",
-        "keyVault": {
-            "id": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
-        },
-        "keyVersion": "87d9764197604449b9b8eb7bd8710868",
-    },
+    key=azure_nextgen.logic.latest.KeyVaultKeyReferenceArgs(
+        key_name="<keyName>",
+        key_vault=azure_nextgen.logic.latest.KeyVaultKeyReferenceKeyVaultArgs(
+            id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
+        ),
+        key_version="87d9764197604449b9b8eb7bd8710868",
+    ),
     location="brazilsouth",
     public_certificate="<publicCertificateValue>",
     resource_group_name="testResourceGroup")
@@ -149,7 +149,7 @@ const integrationAccountCertificate = new azure_nextgen.logic.latest.Integration
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[Dict[KeyVaultKeyReference]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">public_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[KeyVaultKeyReferenceArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">public_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -618,7 +618,7 @@ The IntegrationAccountCertificate resource accepts the following [input]({{< rel
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key details in the key vault.{{% /md %}}</dd>
 
@@ -638,7 +638,7 @@ The IntegrationAccountCertificate resource accepts the following [input]({{< rel
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -658,7 +658,7 @@ The IntegrationAccountCertificate resource accepts the following [input]({{< rel
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1055,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
 
@@ -1293,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
 

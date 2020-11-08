@@ -172,7 +172,7 @@ const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.C
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceIdentity]]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ConfigurationProfileResourceProperties]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConfigurationProfileResourcePropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -471,7 +471,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Dict[Resource<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd>
 
@@ -481,7 +481,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileresourceproperties">Dict[Configuration<wbr>Profile<wbr>Resource<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#configurationprofileresourceproperties">Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a configuration profile.{{% /md %}}</dd>
 
@@ -680,7 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Dict[System<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
 
@@ -1006,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Dict[Notification<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd>
 
@@ -1085,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Dict[Notification<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd>
 
@@ -1204,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_workspace_properties_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>workspace_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Dict[Azure<wbr>Monitor<wbr>Workspace<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd>
 
@@ -1323,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_workspace_properties_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>workspace_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Dict[Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd>
 

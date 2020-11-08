@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfigresponse">Dict[Dns<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dnsconfigresponse">Dns<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointresponse">List[Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointresponse">Sequence[Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#monitor_config_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponse">Dict[Monitor<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponse">Monitor<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1541,7 +1541,7 @@ The following output properties are available:
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -1581,7 +1581,7 @@ The following output properties are available:
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
 
@@ -1631,7 +1631,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
 
@@ -1990,7 +1990,7 @@ The following output properties are available:
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">List[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -2000,7 +2000,7 @@ The following output properties are available:
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">List[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
 

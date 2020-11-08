@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Dict[Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password details.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#share_access_rights_python" style="color: inherit; text-decoration: inherit;">share_<wbr>access_<wbr>rights</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareaccessrightresponse">List[Share<wbr>Access<wbr>Right<wbr>Response]</a></span>
+        <span class="property-type"><a href="#shareaccessrightresponse">Sequence[Share<wbr>Access<wbr>Right<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
 
@@ -699,8 +699,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accesstype_python">
-<a href="#accesstype_python" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -709,8 +709,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="shareid_python">
-<a href="#shareid_python" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
+        <span id="share_id_python">
+<a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

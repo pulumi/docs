@@ -781,7 +781,7 @@ The following output properties are available:
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresponse">List[Container<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerresponse">Sequence[Container<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The containers within the container group.{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupresponseinstanceview">Dict[Container<wbr>Group<wbr>Response<wbr>Instance<wbr>View]</a></span>
+        <span class="property-type"><a href="#containergroupresponseinstanceview">Container<wbr>Group<wbr>Response<wbr>Instance<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the container group. Only valid in response.{{% /md %}}</dd>
 
@@ -841,7 +841,7 @@ The following output properties are available:
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupdiagnosticsresponse">Dict[Container<wbr>Group<wbr>Diagnostics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containergroupdiagnosticsresponse">Container<wbr>Group<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The diagnostic information for a container group.{{% /md %}}</dd>
 
@@ -851,7 +851,7 @@ The following output properties are available:
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfigurationresponse">Dict[Dns<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dnsconfigurationresponse">Dns<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The DNS config information for a container group.{{% /md %}}</dd>
 
@@ -861,7 +861,7 @@ The following output properties are available:
 <a href="#encryption_properties_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpropertiesresponse">Dict[Encryption<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties for a container group.{{% /md %}}</dd>
 
@@ -871,7 +871,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupidentityresponse">Dict[Container<wbr>Group<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containergroupidentityresponse">Container<wbr>Group<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the container group, if configured.{{% /md %}}</dd>
 
@@ -881,7 +881,7 @@ The following output properties are available:
 <a href="#image_registry_credentials_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredentialresponse">List[Image<wbr>Registry<wbr>Credential<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imageregistrycredentialresponse">Sequence[Image<wbr>Registry<wbr>Credential<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The image registry credentials by which the container group is created from.{{% /md %}}</dd>
 
@@ -891,7 +891,7 @@ The following output properties are available:
 <a href="#init_containers_python" style="color: inherit; text-decoration: inherit;">init_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initcontainerdefinitionresponse">List[Init<wbr>Container<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#initcontainerdefinitionresponse">Sequence[Init<wbr>Container<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The init containers for a container group.{{% /md %}}</dd>
 
@@ -901,7 +901,7 @@ The following output properties are available:
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Dict[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP address type of the container group.{{% /md %}}</dd>
 
@@ -921,7 +921,7 @@ The following output properties are available:
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containergroupnetworkprofileresponse">Dict[Container<wbr>Group<wbr>Network<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containergroupnetworkprofileresponse">Container<wbr>Group<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network profile information for a container group.{{% /md %}}</dd>
 
@@ -955,7 +955,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -965,7 +965,7 @@ The following output properties are available:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeresponse">List[Volume<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumeresponse">Sequence[Volume<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes that can be mounted by containers in this container group.{{% /md %}}</dd>
 
@@ -1166,8 +1166,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storageaccountkey_python">
-<a href="#storageaccountkey_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Key</a>
+        <span id="storage_account_key_python">
+<a href="#storage_account_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1249,7 +1249,7 @@ The following output properties are available:
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The commands to execute within the container.{{% /md %}}</dd>
 
@@ -1328,7 +1328,7 @@ The following output properties are available:
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsresponse">Dict[Log<wbr>Analytics<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loganalyticsresponse">Log<wbr>Analytics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container group log analytics information.{{% /md %}}</dd>
 
@@ -1527,7 +1527,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Container<wbr>Group<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Container<wbr>Group<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
@@ -1834,7 +1834,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List[Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of this container group.{{% /md %}}</dd>
 
@@ -2377,18 +2377,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exec_python">
-<a href="#exec_python" style="color: inherit; text-decoration: inherit;">exec</a>
+        <span id="exec__python">
+<a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerexecresponse">Dict[Container<wbr>Exec<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerexecresponse">Container<wbr>Exec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The execution command to probe{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failurethreshold_python">
-<a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2397,18 +2397,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpget_python">
-<a href="#httpget_python" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
+        <span id="http_get_python">
+<a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhttpgetresponse">Dict[Container<wbr>Http<wbr>Get<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerhttpgetresponse">Container<wbr>Http<wbr>Get<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Http Get settings to probe{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialdelayseconds_python">
-<a href="#initialdelayseconds_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
+        <span id="initial_delay_seconds_python">
+<a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2417,8 +2417,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="periodseconds_python">
-<a href="#periodseconds_python" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
+        <span id="period_seconds_python">
+<a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2427,8 +2427,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2606,11 +2606,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="currentstate_python">
-<a href="#currentstate_python" style="color: inherit; text-decoration: inherit;">current<wbr>State</a>
+        <span id="current_state_python">
+<a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Dict[Container<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd>
 
@@ -2620,24 +2620,24 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List[Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of the container instance.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="previousstate_python">
-<a href="#previousstate_python" style="color: inherit; text-decoration: inherit;">previous<wbr>State</a>
+        <span id="previous_state_python">
+<a href="#previous_state_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Dict[Container<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="restartcount_python">
-<a href="#restartcount_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
+        <span id="restart_count_python">
+<a href="#restart_count_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2999,7 +2999,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpropertiesresponseinstanceview">Dict[Container<wbr>Properties<wbr>Response<wbr>Instance<wbr>View]</a></span>
+        <span class="property-type"><a href="#containerpropertiesresponseinstanceview">Container<wbr>Properties<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the container instance. Only valid in response.{{% /md %}}</dd>
 
@@ -3019,7 +3019,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Dict[Resource<wbr>Requirements<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements of the container instance.{{% /md %}}</dd>
 
@@ -3029,7 +3029,7 @@ The following output properties are available:
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The commands to execute within the container instance in exec form.{{% /md %}}</dd>
 
@@ -3039,17 +3039,17 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List[Environment<wbr>Variable<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the container instance.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="livenessprobe_python">
-<a href="#livenessprobe_python" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
+        <span id="liveness_probe_python">
+<a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerproberesponse">Dict[Container<wbr>Probe<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerproberesponse">Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe.{{% /md %}}</dd>
 
@@ -3059,27 +3059,27 @@ The following output properties are available:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerportresponse">List[Container<wbr>Port<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerportresponse">Sequence[Container<wbr>Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports on the container instance.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="readinessprobe_python">
-<a href="#readinessprobe_python" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
+        <span id="readiness_probe_python">
+<a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerproberesponse">Dict[Container<wbr>Probe<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerproberesponse">Container<wbr>Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The readiness probe.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumemounts_python">
-<a href="#volumemounts_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
+        <span id="volume_mounts_python">
+<a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">List[Volume<wbr>Mount<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumemountresponse">Sequence[Volume<wbr>Mount<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the container instance.{{% /md %}}</dd>
 
@@ -3274,8 +3274,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="detailstatus_python">
-<a href="#detailstatus_python" style="color: inherit; text-decoration: inherit;">detail<wbr>Status</a>
+        <span id="detail_status_python">
+<a href="#detail_status_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3457,7 +3457,7 @@ The following output properties are available:
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The DNS servers for the container group.{{% /md %}}</dd>
 
@@ -3781,8 +3781,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securevalue_python">
-<a href="#securevalue_python" style="color: inherit; text-decoration: inherit;">secure<wbr>Value</a>
+        <span id="secure_value_python">
+<a href="#secure_value_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4030,8 +4030,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="firsttimestamp_python">
-<a href="#firsttimestamp_python" style="color: inherit; text-decoration: inherit;">first<wbr>Timestamp</a>
+        <span id="first_timestamp_python">
+<a href="#first_timestamp_python" style="color: inherit; text-decoration: inherit;">first_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4040,8 +4040,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lasttimestamp_python">
-<a href="#lasttimestamp_python" style="color: inherit; text-decoration: inherit;">last<wbr>Timestamp</a>
+        <span id="last_timestamp_python">
+<a href="#last_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4740,7 +4740,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initcontainerpropertiesdefinitionresponseinstanceview">Dict[Init<wbr>Container<wbr>Properties<wbr>Definition<wbr>Response<wbr>Instance<wbr>View]</a></span>
+        <span class="property-type"><a href="#initcontainerpropertiesdefinitionresponseinstanceview">Init<wbr>Container<wbr>Properties<wbr>Definition<wbr>Response<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance view of the init container. Only valid in response.{{% /md %}}</dd>
 
@@ -4760,7 +4760,7 @@ The following output properties are available:
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The command to execute within the init container in exec form.{{% /md %}}</dd>
 
@@ -4770,7 +4770,7 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List[Environment<wbr>Variable<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in the init container.{{% /md %}}</dd>
 
@@ -4786,11 +4786,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumemounts_python">
-<a href="#volumemounts_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
+        <span id="volume_mounts_python">
+<a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">List[Volume<wbr>Mount<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumemountresponse">Sequence[Volume<wbr>Mount<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The volume mounts available to the init container.{{% /md %}}</dd>
 
@@ -4955,11 +4955,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="currentstate_python">
-<a href="#currentstate_python" style="color: inherit; text-decoration: inherit;">current<wbr>State</a>
+        <span id="current_state_python">
+<a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Dict[Container<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current state of the init container.{{% /md %}}</dd>
 
@@ -4969,24 +4969,24 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponse">List[Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#eventresponse">Sequence[Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of the init container.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="previousstate_python">
-<a href="#previousstate_python" style="color: inherit; text-decoration: inherit;">previous<wbr>State</a>
+        <span id="previous_state_python">
+<a href="#previous_state_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Dict[Container<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The previous state of the init container.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="restartcount_python">
-<a href="#restartcount_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
+        <span id="restart_count_python">
+<a href="#restart_count_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5198,7 +5198,7 @@ The following output properties are available:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">List[Port<wbr>Response]</a></span>
+        <span class="property-type"><a href="#portresponse">Sequence[Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ports exposed on the container group.{{% /md %}}</dd>
 
@@ -5427,7 +5427,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
 
@@ -5695,7 +5695,7 @@ The following output properties are available:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresourceresponse">Dict[Gpu<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gpuresourceresponse">Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU limit of this container instance.{{% /md %}}</dd>
 
@@ -5864,7 +5864,7 @@ The following output properties are available:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gpuresourceresponse">Dict[Gpu<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gpuresourceresponse">Gpu<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU request of this container instance.{{% /md %}}</dd>
 
@@ -5973,7 +5973,7 @@ The following output properties are available:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Dict[Resource<wbr>Requests<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource requests of this container instance.{{% /md %}}</dd>
 
@@ -5983,7 +5983,7 @@ The following output properties are available:
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Dict[Resource<wbr>Limits<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource limits of this container instance.{{% /md %}}</dd>
 
@@ -6347,31 +6347,31 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurefile_python">
-<a href="#azurefile_python" style="color: inherit; text-decoration: inherit;">azure<wbr>File</a>
+        <span id="azure_file_python">
+<a href="#azure_file_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolumeresponse">Dict[Azure<wbr>File<wbr>Volume<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefilevolumeresponse">Azure<wbr>File<wbr>Volume<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure File volume.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emptydir_python">
-<a href="#emptydir_python" style="color: inherit; text-decoration: inherit;">empty<wbr>Dir</a>
+        <span id="empty_dir_python">
+<a href="#empty_dir_python" style="color: inherit; text-decoration: inherit;">empty_<wbr>dir</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The empty directory volume.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gitrepo_python">
-<a href="#gitrepo_python" style="color: inherit; text-decoration: inherit;">git<wbr>Repo</a>
+        <span id="git_repo_python">
+<a href="#git_repo_python" style="color: inherit; text-decoration: inherit;">git_<wbr>repo</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolumeresponse">Dict[Git<wbr>Repo<wbr>Volume<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gitrepovolumeresponse">Git<wbr>Repo<wbr>Volume<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The git repo volume.{{% /md %}}</dd>
 
@@ -6381,7 +6381,7 @@ The following output properties are available:
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The secret volume.{{% /md %}}</dd>
 

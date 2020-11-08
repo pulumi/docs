@@ -23,7 +23,7 @@ A Job resource type. The progress and state can be obtained by polling a Job or 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_data</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[Dict[JobInputClip] | Dict[JobInputs]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[List[JobOutputAsset]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[Union[JobInputClipArgs, JobInputsArgs]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobOutputAssetArgs]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -502,7 +502,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Job<wbr>Input<wbr>Clip] | Dict[Job<wbr>Inputs]</span>
+        <span class="property-type">Union[Job<wbr>Input<wbr>Clip<wbr>Args, Job<wbr>Inputs<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
 
@@ -522,7 +522,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputasset">List[Job<wbr>Output<wbr>Asset]</a></span>
+        <span class="property-type"><a href="#joboutputasset">Sequence[Job<wbr>Output<wbr>Asset<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd>
 
@@ -552,7 +552,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#correlation_data_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd>
 
@@ -672,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -759,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -846,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -933,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1436,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrordetailresponse">List[Job<wbr>Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#joberrordetailresponse">Sequence[Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd>
 
@@ -1625,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Absolute<wbr>Clip<wbr>Time] | Dict[Utc<wbr>Clip<wbr>Time]</span>
+        <span class="property-type">Union[Absolute<wbr>Clip<wbr>Time<wbr>Args, Utc<wbr>Clip<wbr>Time<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
 
@@ -1635,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
 
@@ -1655,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Absolute<wbr>Clip<wbr>Time] | Dict[Utc<wbr>Clip<wbr>Time]</span>
+        <span class="property-type">Union[Absolute<wbr>Clip<wbr>Time<wbr>Args, Utc<wbr>Clip<wbr>Time<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 
@@ -1824,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Absolute<wbr>Clip<wbr>Time<wbr>Response] | Dict[Utc<wbr>Clip<wbr>Time<wbr>Response]</span>
+        <span class="property-type">Union[Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args, Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
 
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
 
@@ -1854,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Absolute<wbr>Clip<wbr>Time<wbr>Response] | Dict[Utc<wbr>Clip<wbr>Time<wbr>Response]</span>
+        <span class="property-type">Union[Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args, Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 
@@ -1933,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Job<wbr>Input<wbr>Clip, Azure-Nextgen:Media/Latest:Job<wbr>Inputs, Default=>]</span>
+        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Clip<wbr>Args, Job<wbr>Inputs<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
 
@@ -2012,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Job<wbr>Input<wbr>Clip<wbr>Response, Azure-Nextgen:Media/Latest:Job<wbr>Inputs<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Job<wbr>Inputs<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
 
@@ -2410,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrorresponse">Dict[Job<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#joberrorresponse">Job<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd>
 

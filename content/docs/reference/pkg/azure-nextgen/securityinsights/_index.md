@@ -15,10 +15,9 @@ Explore the resources and functions of the securityinsights module in the Azure 
     <li><a href="alertruleaction" title="AlertRuleAction"><span class="symbol resource"></span>AlertRuleAction</a></li>
     <li><a href="bookmark" title="Bookmark"><span class="symbol resource"></span>Bookmark</a></li>
     <li><a href="bookmarkrelation" title="BookmarkRelation"><span class="symbol resource"></span>BookmarkRelation</a></li>
-    <li><a href="case" title="Case"><span class="symbol resource"></span>Case</a></li>
-    <li><a href="caserelation" title="CaseRelation"><span class="symbol resource"></span>CaseRelation</a></li>
     <li><a href="dataconnector" title="DataConnector"><span class="symbol resource"></span>DataConnector</a></li>
     <li><a href="incident" title="Incident"><span class="symbol resource"></span>Incident</a></li>
+    <li><a href="incidentcomment" title="IncidentComment"><span class="symbol resource"></span>IncidentComment</a></li>
     <li><a href="incidentrelation" title="IncidentRelation"><span class="symbol resource"></span>IncidentRelation</a></li>
     <li><a href="productsetting" title="ProductSetting"><span class="symbol resource"></span>ProductSetting</a></li>
     <li><a href="threatintelligenceindicator" title="ThreatIntelligenceIndicator"><span class="symbol resource"></span>ThreatIntelligenceIndicator</a></li>
@@ -31,10 +30,10 @@ Explore the resources and functions of the securityinsights module in the Azure 
     <li><a href="getalertruleaction" title="GetAlertRuleAction"><span class="symbol function"></span>GetAlertRuleAction</a></li>
     <li><a href="getbookmark" title="GetBookmark"><span class="symbol function"></span>GetBookmark</a></li>
     <li><a href="getbookmarkrelation" title="GetBookmarkRelation"><span class="symbol function"></span>GetBookmarkRelation</a></li>
-    <li><a href="getcase" title="GetCase"><span class="symbol function"></span>GetCase</a></li>
-    <li><a href="getcaserelation" title="GetCaseRelation"><span class="symbol function"></span>GetCaseRelation</a></li>
     <li><a href="getdataconnector" title="GetDataConnector"><span class="symbol function"></span>GetDataConnector</a></li>
+    <li><a href="getentitiesgettimelinelist" title="GetEntitiesGetTimelinelist"><span class="symbol function"></span>GetEntitiesGetTimelinelist</a></li>
     <li><a href="getincident" title="GetIncident"><span class="symbol function"></span>GetIncident</a></li>
+    <li><a href="getincidentcomment" title="GetIncidentComment"><span class="symbol function"></span>GetIncidentComment</a></li>
     <li><a href="getincidentrelation" title="GetIncidentRelation"><span class="symbol function"></span>GetIncidentRelation</a></li>
     <li><a href="getproductsetting" title="GetProductSetting"><span class="symbol function"></span>GetProductSetting</a></li>
     <li><a href="getthreatintelligenceindicator" title="GetThreatIntelligenceIndicator"><span class="symbol function"></span>GetThreatIntelligenceIndicator</a></li>
@@ -48,7 +47,7 @@ Explore the resources and functions of the securityinsights module in the Azure 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

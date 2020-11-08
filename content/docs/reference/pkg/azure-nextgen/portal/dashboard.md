@@ -23,7 +23,7 @@ The shared dashboard resource definition.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lenses</span><span class="p">:</span> <span class="nx">Optional[List[DashboardLens]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardLensArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -432,7 +432,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lenses_python" style="color: inherit; text-decoration: inherit;">lenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlens">List[Dashboard<wbr>Lens]</a></span>
+        <span class="property-type"><a href="#dashboardlens">Sequence[Dashboard<wbr>Lens<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
 
@@ -442,7 +442,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
 
@@ -452,7 +452,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -769,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparts">List[Dashboard<wbr>Parts]</a></span>
+        <span class="property-type"><a href="#dashboardparts">Sequence[Dashboard<wbr>Parts<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
 
@@ -928,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponse">List[Dashboard<wbr>Parts<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">Sequence[Dashboard<wbr>Parts<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
 
@@ -938,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
 
@@ -1047,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsposition">Dict[Dashboard<wbr>Parts<wbr>Position]</a></span>
+        <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
 
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadata">Dict[Markdown<wbr>Part<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
 
@@ -1252,8 +1252,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="colspan_python">
-<a href="#colspan_python" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
+        <span id="col_span_python">
+<a href="#col_span_python" style="color: inherit; text-decoration: inherit;">col_<wbr>span</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1262,8 +1262,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rowspan_python">
-<a href="#rowspan_python" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
+        <span id="row_span_python">
+<a href="#row_span_python" style="color: inherit; text-decoration: inherit;">row_<wbr>span</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1296,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
 
@@ -1405,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponseposition">Dict[Dashboard<wbr>Parts<wbr>Response<wbr>Position]</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
 
@@ -1415,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponse">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
 
@@ -1610,8 +1610,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="colspan_python">
-<a href="#colspan_python" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
+        <span id="col_span_python">
+<a href="#col_span_python" style="color: inherit; text-decoration: inherit;">col_<wbr>span</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1620,8 +1620,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rowspan_python">
-<a href="#rowspan_python" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
+        <span id="row_span_python">
+<a href="#row_span_python" style="color: inherit; text-decoration: inherit;">row_<wbr>span</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1654,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
 
@@ -1763,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
 
@@ -1773,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
 
@@ -1852,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
 
@@ -1961,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
 
@@ -1971,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
 
@@ -2050,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
 
@@ -2129,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
 
@@ -2208,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatacontent">Dict[Markdown<wbr>Part<wbr>Metadata<wbr>Content]</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
 

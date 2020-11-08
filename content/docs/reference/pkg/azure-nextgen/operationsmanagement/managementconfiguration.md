@@ -111,7 +111,7 @@ const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagementConfigurationProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ManagementConfigurationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -460,7 +460,7 @@ The ManagementConfiguration resource accepts the following [input]({{< relref "/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementconfigurationproperties">Dict[Management<wbr>Configuration<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#managementconfigurationproperties">Management<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.{{% /md %}}</dd>
 
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameter">List[Arm<wbr>Template<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#armtemplateparameter">Sequence[Arm<wbr>Template<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd>
 
@@ -1055,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Json object containing the ARM template to deploy{{% /md %}}</dd>
 
@@ -1264,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterresponse">List[Arm<wbr>Template<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armtemplateparameterresponse">Sequence[Arm<wbr>Template<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd>
 
@@ -1294,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The Json object containing the ARM template to deploy{{% /md %}}</dd>
 

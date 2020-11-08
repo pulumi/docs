@@ -191,45 +191,45 @@ import pulumi_azure_nextgen as azure_nextgen
 rollout = azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout",
     artifact_source_id="/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     build_version="1.0.0.1",
-    identity={
-        "identityIds": ["/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userassignedidentities/myuseridentity"],
-        "type": "userAssigned",
-    },
+    identity=azure_nextgen.deploymentmanager.v20191101preview.IdentityArgs(
+        identity_ids=["/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userassignedidentities/myuseridentity"],
+        type="userAssigned",
+    ),
     location="centralus",
     resource_group_name="myResourceGroup",
     rollout_name="myRollout",
     step_groups=[
-        {
-            "deploymentTargetId": "Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'",
-            "name": "FirstRegion",
-            "postDeploymentSteps": [{
-                "stepId": "Microsoft.DeploymentManager/steps/postDeployStep1",
-            }],
-            "preDeploymentSteps": [
-                {
-                    "stepId": "Microsoft.DeploymentManager/steps/preDeployStep1",
-                },
-                {
-                    "stepId": "Microsoft.DeploymentManager/steps/preDeployStep2",
-                },
+        azure_nextgen.deploymentmanager.v20191101preview.StepGroupArgs(
+            deployment_target_id="Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'",
+            name="FirstRegion",
+            post_deployment_steps=[azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                step_id="Microsoft.DeploymentManager/steps/postDeployStep1",
+            )],
+            pre_deployment_steps=[
+                azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                    step_id="Microsoft.DeploymentManager/steps/preDeployStep1",
+                ),
+                azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                    step_id="Microsoft.DeploymentManager/steps/preDeployStep2",
+                ),
             ],
-        },
-        {
-            "dependsOnStepGroups": ["FirstRegion"],
-            "deploymentTargetId": "Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit2'",
-            "name": "SecondRegion",
-            "postDeploymentSteps": [{
-                "stepId": "Microsoft.DeploymentManager/steps/postDeployStep5",
-            }],
-            "preDeploymentSteps": [
-                {
-                    "stepId": "Microsoft.DeploymentManager/steps/preDeployStep3",
-                },
-                {
-                    "stepId": "Microsoft.DeploymentManager/steps/preDeployStep4",
-                },
+        ),
+        azure_nextgen.deploymentmanager.v20191101preview.StepGroupArgs(
+            depends_on_step_groups=["FirstRegion"],
+            deployment_target_id="Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit2'",
+            name="SecondRegion",
+            post_deployment_steps=[azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                step_id="Microsoft.DeploymentManager/steps/postDeployStep5",
+            )],
+            pre_deployment_steps=[
+                azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                    step_id="Microsoft.DeploymentManager/steps/preDeployStep3",
+                ),
+                azure_nextgen.deploymentmanager.v20191101preview.PrePostStepArgs(
+                    step_id="Microsoft.DeploymentManager/steps/preDeployStep4",
+                ),
             ],
-        },
+        ),
     ],
     tags={},
     target_service_topology_id="/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/serviceTopologies/myTopology")
@@ -307,7 +307,7 @@ const rollout = new azure_nextgen.deploymentmanager.v20191101preview.Rollout("ro
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rollout</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[Identity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rollout_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_groups</span><span class="p">:</span> <span class="nx">Optional[List[StepGroup]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_service_topology_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Rollout</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rollout_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[StepGroupArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_service_topology_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -786,7 +786,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Dict[Identity]</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
 
@@ -826,7 +826,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#step_groups_python" style="color: inherit; text-decoration: inherit;">step_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepgroup">List[Step<wbr>Group]</a></span>
+        <span class="property-type"><a href="#stepgroup">Sequence[Step<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
 
@@ -856,7 +856,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -906,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -943,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -980,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1017,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1133,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
 
@@ -1252,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
 
@@ -1615,8 +1615,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymenttargetid_python">
-<a href="#deploymenttargetid_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Target<wbr>Id</a>
+        <span id="deployment_target_id_python">
+<a href="#deployment_target_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>target_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1635,31 +1635,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependsonstepgroups_python">
-<a href="#dependsonstepgroups_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Step<wbr>Groups</a>
+        <span id="depends_on_step_groups_python">
+<a href="#depends_on_step_groups_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>step_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="postdeploymentsteps_python">
-<a href="#postdeploymentsteps_python" style="color: inherit; text-decoration: inherit;">post<wbr>Deployment<wbr>Steps</a>
+        <span id="post_deployment_steps_python">
+<a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">List[Pre<wbr>Post<wbr>Step]</a></span>
+        <span class="property-type"><a href="#prepoststep">Sequence[Pre<wbr>Post<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="predeploymentsteps_python">
-<a href="#predeploymentsteps_python" style="color: inherit; text-decoration: inherit;">pre<wbr>Deployment<wbr>Steps</a>
+        <span id="pre_deployment_steps_python">
+<a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">List[Pre<wbr>Post<wbr>Step]</a></span>
+        <span class="property-type"><a href="#prepoststep">Sequence[Pre<wbr>Post<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
 
@@ -1854,8 +1854,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymenttargetid_python">
-<a href="#deploymenttargetid_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Target<wbr>Id</a>
+        <span id="deployment_target_id_python">
+<a href="#deployment_target_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>target_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1874,31 +1874,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dependsonstepgroups_python">
-<a href="#dependsonstepgroups_python" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Step<wbr>Groups</a>
+        <span id="depends_on_step_groups_python">
+<a href="#depends_on_step_groups_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>step_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="postdeploymentsteps_python">
-<a href="#postdeploymentsteps_python" style="color: inherit; text-decoration: inherit;">post<wbr>Deployment<wbr>Steps</a>
+        <span id="post_deployment_steps_python">
+<a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List[Pre<wbr>Post<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="predeploymentsteps_python">
-<a href="#predeploymentsteps_python" style="color: inherit; text-decoration: inherit;">pre<wbr>Deployment<wbr>Steps</a>
+        <span id="pre_deployment_steps_python">
+<a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List[Pre<wbr>Post<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
 

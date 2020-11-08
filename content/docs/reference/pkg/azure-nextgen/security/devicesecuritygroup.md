@@ -97,7 +97,7 @@ const deviceSecurityGroup = new azure_nextgen.security.latest.DeviceSecurityGrou
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowlist_rules</span><span class="p">:</span> <span class="nx">Optional[List[AllowlistCustomAlertRule]]</span> = None<span class="p">, </span><span class="nx">denylist_rules</span><span class="p">:</span> <span class="nx">Optional[List[DenylistCustomAlertRule]]</span> = None<span class="p">, </span><span class="nx">device_security_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[List[ThresholdCustomAlertRule]]</span> = None<span class="p">, </span><span class="nx">time_window_rules</span><span class="p">:</span> <span class="nx">Optional[List[TimeWindowCustomAlertRule]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowlist_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AllowlistCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">denylist_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DenylistCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">device_security_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThresholdCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">time_window_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeWindowCustomAlertRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -496,7 +496,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allowlist_rules_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowlistcustomalertrule">List[Allowlist<wbr>Custom<wbr>Alert<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#allowlistcustomalertrule">Sequence[Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd>
 
@@ -506,7 +506,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#denylist_rules_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denylistcustomalertrule">List[Denylist<wbr>Custom<wbr>Alert<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#denylistcustomalertrule">Sequence[Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd>
 
@@ -516,7 +516,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdcustomalertrule">List[Threshold<wbr>Custom<wbr>Alert<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#thresholdcustomalertrule">Sequence[Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd>
 
@@ -526,7 +526,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#time_window_rules_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowcustomalertrule">List[Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#timewindowcustomalertrule">Sequence[Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd>
 
@@ -799,11 +799,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="allowlistvalues_python">
-<a href="#allowlistvalues_python" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Values</a>
+        <span id="allowlist_values_python">
+<a href="#allowlist_values_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
 
@@ -1008,11 +1008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="allowlistvalues_python">
-<a href="#allowlistvalues_python" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Values</a>
+        <span id="allowlist_values_python">
+<a href="#allowlist_values_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd>
 
@@ -1048,8 +1048,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="valuetype_python">
-<a href="#valuetype_python" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+        <span id="value_type_python">
+<a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1157,11 +1157,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="denylistvalues_python">
-<a href="#denylistvalues_python" style="color: inherit; text-decoration: inherit;">denylist<wbr>Values</a>
+        <span id="denylist_values_python">
+<a href="#denylist_values_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
 
@@ -1366,11 +1366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="denylistvalues_python">
-<a href="#denylistvalues_python" style="color: inherit; text-decoration: inherit;">denylist<wbr>Values</a>
+        <span id="denylist_values_python">
+<a href="#denylist_values_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd>
 
@@ -1406,8 +1406,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="valuetype_python">
-<a href="#valuetype_python" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+        <span id="value_type_python">
+<a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1555,8 +1555,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="maxthreshold_python">
-<a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
+        <span id="max_threshold_python">
+<a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1565,8 +1565,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="minthreshold_python">
-<a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
+        <span id="min_threshold_python">
+<a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1794,8 +1794,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="maxthreshold_python">
-<a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
+        <span id="max_threshold_python">
+<a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1804,8 +1804,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="minthreshold_python">
-<a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
+        <span id="min_threshold_python">
+<a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1983,8 +1983,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="maxthreshold_python">
-<a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
+        <span id="max_threshold_python">
+<a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1993,8 +1993,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="minthreshold_python">
-<a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
+        <span id="min_threshold_python">
+<a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2003,8 +2003,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timewindowsize_python">
-<a href="#timewindowsize_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Size</a>
+        <span id="time_window_size_python">
+<a href="#time_window_size_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2262,8 +2262,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="maxthreshold_python">
-<a href="#maxthreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
+        <span id="max_threshold_python">
+<a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2272,8 +2272,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="minthreshold_python">
-<a href="#minthreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
+        <span id="min_threshold_python">
+<a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2282,8 +2282,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="timewindowsize_python">
-<a href="#timewindowsize_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Size</a>
+        <span id="time_window_size_python">
+<a href="#time_window_size_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

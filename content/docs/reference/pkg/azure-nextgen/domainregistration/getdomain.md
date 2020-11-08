@@ -952,7 +952,7 @@ The following output properties are available:
 <a href="#consent_python" style="color: inherit; text-decoration: inherit;">consent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpurchaseconsentresponse">Dict[Domain<wbr>Purchase<wbr>Consent<wbr>Response]</a></span>
+        <span class="property-type"><a href="#domainpurchaseconsentresponse">Domain<wbr>Purchase<wbr>Consent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd>
 
@@ -962,7 +962,7 @@ The following output properties are available:
 <a href="#contact_admin_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>admin</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Dict[Contact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Administrative contact.{{% /md %}}</dd>
 
@@ -972,7 +972,7 @@ The following output properties are available:
 <a href="#contact_billing_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>billing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Dict[Contact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Billing contact.{{% /md %}}</dd>
 
@@ -982,7 +982,7 @@ The following output properties are available:
 <a href="#contact_registrant_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>registrant</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Dict[Contact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Registrant contact.{{% /md %}}</dd>
 
@@ -992,7 +992,7 @@ The following output properties are available:
 <a href="#contact_tech_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>tech</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Dict[Contact<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Technical contact.{{% /md %}}</dd>
 
@@ -1012,7 +1012,7 @@ The following output properties are available:
 <a href="#domain_not_renewable_reasons_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>not_<wbr>renewable_<wbr>reasons</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd>
 
@@ -1052,7 +1052,7 @@ The following output properties are available:
 <a href="#managed_host_names_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>host_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnameresponse">List[Host<wbr>Name<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hostnameresponse">Sequence[Host<wbr>Name<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd>
 
@@ -1072,7 +1072,7 @@ The following output properties are available:
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Name servers.{{% /md %}}</dd>
 
@@ -1183,7 +1183,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1837,7 +1837,7 @@ The following output properties are available:
 <a href="#address_mailing_python" style="color: inherit; text-decoration: inherit;">address_<wbr>mailing</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressresponse">Dict[Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#addressresponse">Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd>
 
@@ -2036,7 +2036,7 @@ The following output properties are available:
 <a href="#agreement_keys_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd>
 
@@ -2311,11 +2311,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sitenames_python">
-<a href="#sitenames_python" style="color: inherit; text-decoration: inherit;">site<wbr>Names</a>
+        <span id="site_names_python">
+<a href="#site_names_python" style="color: inherit; text-decoration: inherit;">site_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd>
 

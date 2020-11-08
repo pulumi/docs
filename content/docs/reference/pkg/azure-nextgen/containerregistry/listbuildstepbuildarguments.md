@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildargumentresponse">List[Build<wbr>Argument<wbr>Response]</a></span>
+        <span class="property-type"><a href="#buildargumentresponse">Sequence[Build<wbr>Argument<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection value.{{% /md %}}</dd>
 
@@ -548,8 +548,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issecret_python">
-<a href="#issecret_python" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
+        <span id="is_secret_python">
+<a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

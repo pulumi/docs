@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyscheduleresponse">Dict[Daily<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dailyscheduleresponse">Daily<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourlyscheduleresponse">Dict[Hourly<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#hourlyscheduleresponse">Hourly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyscheduleresponse">Dict[Monthly<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#monthlyscheduleresponse">Monthly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyscheduleresponse">Dict[Weekly<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
 

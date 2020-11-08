@@ -11,6 +11,7 @@ Explore the resources and functions of the dbformariadb module in the Azure Next
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
@@ -20,6 +21,7 @@ Explore the resources and functions of the dbformariadb module in the Azure Next
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getconfiguration" title="GetConfiguration"><span class="symbol function"></span>GetConfiguration</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getfirewallrule" title="GetFirewallRule"><span class="symbol function"></span>GetFirewallRule</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
@@ -34,7 +36,7 @@ Explore the resources and functions of the dbformariadb module in the Azure Next
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

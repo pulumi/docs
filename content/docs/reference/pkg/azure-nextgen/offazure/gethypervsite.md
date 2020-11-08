@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitepropertiesresponse">Dict[Site<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sitepropertiesresponse">Site<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Nested properties of Hyper-V site.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -883,7 +883,7 @@ The following output properties are available:
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentpropertiesresponse">Dict[Site<wbr>Agent<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd>
 
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#service_principal_identity_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>identity_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnpropertiesresponse">Dict[Site<wbr>Spn<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd>
 

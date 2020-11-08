@@ -102,20 +102,20 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 user_settings = azure_nextgen.portal.latest.UserSettings("userSettings",
-    properties={
-        "preferredLocation": "eastus",
-        "preferredOsType": "Linux",
-        "preferredShellType": "bash",
-        "storageProfile": {
-            "diskSizeInGB": 5,
-            "fileShareName": "string",
-            "storageAccountResourceId": "string",
-        },
-        "terminalSettings": {
-            "fontSize": "Medium",
-            "fontStyle": "Monospace",
-        },
-    },
+    properties=azure_nextgen.portal.latest.UserPropertiesArgs(
+        preferred_location="eastus",
+        preferred_os_type="Linux",
+        preferred_shell_type="bash",
+        storage_profile=azure_nextgen.portal.latest.StorageProfileArgs(
+            disk_size_in_gb=5,
+            file_share_name="string",
+            storage_account_resource_id="string",
+        ),
+        terminal_settings=azure_nextgen.portal.latest.TerminalSettingsArgs(
+            font_size="Medium",
+            font_style="Monospace",
+        ),
+    ),
     user_settings_name="cloudconsole")
 
 ```
@@ -162,7 +162,7 @@ const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[UserProperties]]</span> = None<span class="p">, </span><span class="nx">user_settings_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[UserPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">user_settings_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -421,7 +421,7 @@ The UserSettings resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userproperties">Dict[User<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#userproperties">User<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd>
 
@@ -1304,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
 
@@ -1314,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettings">Dict[Terminal<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#terminalsettings">Terminal<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
 
@@ -1543,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Dict[Storage<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
 
@@ -1553,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Dict[Terminal<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
 

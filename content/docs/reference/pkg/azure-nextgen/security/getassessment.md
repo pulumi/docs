@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Dict[Assessment<wbr>Links<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#resource_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Resource<wbr>Details<wbr>Response] | Dict[On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatusresponse">Dict[Assessment<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assessmentstatusresponse">Assessment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The result of the assessment{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#additional_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapropertiesresponse">Dict[Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapropertiesresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#partners_data_python" style="color: inherit; text-decoration: inherit;">partners_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentpartnerdataresponse">Dict[Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securityassessmentpartnerdataresponse">Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd>
 
@@ -1087,8 +1087,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecomputerid_python">
-<a href="#sourcecomputerid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
+        <span id="source_computer_id_python">
+<a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1719,7 +1719,7 @@ The following output properties are available:
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1749,7 +1749,7 @@ The following output properties are available:
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Dict[Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
 
@@ -1779,7 +1779,7 @@ The following output properties are available:
 <a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

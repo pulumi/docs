@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#customer_secrets_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersecretresponse">List[Customer<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#customersecretresponse">Sequence[Customer<wbr>Secret<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#data_service_input_python" style="color: inherit; text-decoration: inherit;">data_<wbr>service_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">List[Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Sequence[Schedule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
 
@@ -860,16 +860,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyvalue_python">
-<a href="#keyvalue_python" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
 </span> 
@@ -877,6 +867,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_value_python">
+<a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -989,11 +989,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policylist_python">
-<a href="#policylist_python" style="color: inherit; text-decoration: inherit;">policy<wbr>List</a>
+        <span id="policy_list_python">
+<a href="#policy_list_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
 

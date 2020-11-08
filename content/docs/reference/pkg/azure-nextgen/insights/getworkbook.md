@@ -184,13 +184,33 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-defined name (display name) of the workbook.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dd>{{% md %}}Azure resource name. This is GUID value. The display name should be assigned within properties field.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -201,16 +221,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Configuration of this particular workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="sharedtypekind_csharp">
-<a href="#sharedtypekind_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Type<wbr>Kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enum indicating if this workbook definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -244,13 +254,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="workbookid_csharp">
-<a href="#workbookid_csharp" style="color: inherit; text-decoration: inherit;">Workbook<wbr>Id</a>
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="#managedidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the workbook definition.{{% /md %}}</dd>
+    <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -264,23 +274,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+        <span id="sourceid_csharp">
+<a href="#sourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="sourceresourceid_csharp">
-<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+        <span id="storageuri_csharp">
+<a href="#storageuri_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional resourceId for a source resource.{{% /md %}}</dd>
+    <dd>{{% md %}}BYOS Storage Account URI{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -300,7 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked workbook.{{% /md %}}</dd>
+    <dd>{{% md %}}Workbook version{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -321,13 +331,33 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-defined name (display name) of the workbook.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dd>{{% md %}}Azure resource name. This is GUID value. The display name should be assigned within properties field.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -338,16 +368,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Configuration of this particular workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="sharedtypekind_go">
-<a href="#sharedtypekind_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Type<wbr>Kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enum indicating if this workbook definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -381,13 +401,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="workbookid_go">
-<a href="#workbookid_go" style="color: inherit; text-decoration: inherit;">Workbook<wbr>Id</a>
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the workbook definition.{{% /md %}}</dd>
+    <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -401,23 +421,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+        <span id="sourceid_go">
+<a href="#sourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="sourceresourceid_go">
-<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+        <span id="storageuri_go">
+<a href="#storageuri_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional resourceId for a source resource.{{% /md %}}</dd>
+    <dd>{{% md %}}BYOS Storage Account URI{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -437,7 +457,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked workbook.{{% /md %}}</dd>
+    <dd>{{% md %}}Workbook version{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -458,13 +478,33 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-defined name (display name) of the workbook.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dd>{{% md %}}Azure resource name. This is GUID value. The display name should be assigned within properties field.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -475,16 +515,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Configuration of this particular workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="sharedtypekind_nodejs">
-<a href="#sharedtypekind_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Type<wbr>Kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enum indicating if this workbook definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -518,13 +548,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="workbookid_nodejs">
-<a href="#workbookid_nodejs" style="color: inherit; text-decoration: inherit;">workbook<wbr>Id</a>
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the workbook definition.{{% /md %}}</dd>
+    <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -538,23 +568,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+        <span id="sourceid_nodejs">
+<a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="sourceresourceid_nodejs">
-<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+        <span id="storageuri_nodejs">
+<a href="#storageuri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional resourceId for a source resource.{{% /md %}}</dd>
+    <dd>{{% md %}}BYOS Storage Account URI{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -574,7 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked workbook.{{% /md %}}</dd>
+    <dd>{{% md %}}Workbook version{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -595,13 +625,33 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user-defined name (display name) of the workbook.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dd>{{% md %}}Azure resource name. This is GUID value. The display name should be assigned within properties field.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -612,16 +662,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Configuration of this particular workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="shared_type_kind_python">
-<a href="#shared_type_kind_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>type_<wbr>kind</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enum indicating if this workbook definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -655,13 +695,13 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="workbook_id_python">
-<a href="#workbook_id_python" style="color: inherit; text-decoration: inherit;">workbook_<wbr>id</a>
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the workbook definition.{{% /md %}}</dd>
+    <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -675,23 +715,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+        <span id="source_id_python">
+<a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="source_resource_id_python">
-<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+        <span id="storage_uri_python">
+<a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Optional resourceId for a source resource.{{% /md %}}</dd>
+    <dd>{{% md %}}BYOS Storage Account URI{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -699,7 +739,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -711,7 +751,251 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked workbook.{{% /md %}}</dd>
+    <dd>{{% md %}}Workbook version{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="managedidentityresponse">Managed<wbr>Identity<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

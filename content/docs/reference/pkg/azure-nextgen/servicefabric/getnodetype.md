@@ -839,7 +839,7 @@ The following output properties are available:
 <a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Dict[Endpoint<wbr>Range<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd>
 
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Dict[Endpoint<wbr>Range<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd>
 
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.{{% /md %}}</dd>
 
@@ -879,7 +879,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#vm_extensions_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmssextensionresponse">List[VMSSExtension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmssextensionresponse">Sequence[VMSSExtension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Set of extensions that should be installed onto the virtual machines.{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#vm_secrets_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">List[Vault<wbr>Secret<wbr>Group<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The secrets to install in the virtual machines.{{% /md %}}</dd>
 
@@ -1572,7 +1572,7 @@ The following output properties are available:
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
 
@@ -1582,7 +1582,7 @@ The following output properties are available:
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
 
@@ -1592,7 +1592,7 @@ The following output properties are available:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
 
@@ -1697,8 +1697,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1707,8 +1707,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1820,17 +1820,17 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">List[Vault<wbr>Certificate<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
 

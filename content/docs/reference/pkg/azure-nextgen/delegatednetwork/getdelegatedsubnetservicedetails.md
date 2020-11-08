@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#controller_details_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerdetailsresponse">Dict[Controller<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#controllerdetailsresponse">Controller<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}controller details{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#subnet_details_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdetailsresponse">Dict[Subnet<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subnetdetailsresponse">Subnet<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}orchestrator details{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 

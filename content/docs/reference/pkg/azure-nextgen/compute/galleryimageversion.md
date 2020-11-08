@@ -160,40 +160,40 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile={
-        "targetRegions": [
-            {
-                "encryption": {
-                    "dataDiskImages": [
-                        {
-                            "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
-                            "lun": 0,
-                        },
-                        {
-                            "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
-                            "lun": 1,
-                        },
+    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+        target_regions=[
+            azure_nextgen.compute.latest.TargetRegionArgs(
+                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
+                    data_disk_images=[
+                        azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                            lun=0,
+                        ),
+                        azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                            lun=1,
+                        ),
                     ],
-                    "osDiskImage": {
-                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
-                    },
-                },
-                "name": "West US",
-                "regionalReplicaCount": 1,
-            },
-            {
-                "name": "East US",
-                "regionalReplicaCount": 2,
-                "storageAccountType": "Standard_ZRS",
-            },
+                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    ),
+                ),
+                name="West US",
+                regional_replica_count=1,
+            ),
+            azure_nextgen.compute.latest.TargetRegionArgs(
+                name="East US",
+                regional_replica_count=2,
+                storage_account_type="Standard_ZRS",
+            ),
         ],
-    },
+    ),
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "source": {
-            "id": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
-        },
-    })
+    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
+        source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+            id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
+        ),
+    ))
 
 ```
 
@@ -413,44 +413,44 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile={
-        "targetRegions": [
-            {
-                "encryption": {
-                    "dataDiskImages": [{
-                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
-                        "lun": 1,
-                    }],
-                    "osDiskImage": {
-                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
-                    },
-                },
-                "name": "West US",
-                "regionalReplicaCount": 1,
-            },
-            {
-                "name": "East US",
-                "regionalReplicaCount": 2,
-                "storageAccountType": "Standard_ZRS",
-            },
+    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+        target_regions=[
+            azure_nextgen.compute.latest.TargetRegionArgs(
+                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
+                    data_disk_images=[azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                        lun=1,
+                    )],
+                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    ),
+                ),
+                name="West US",
+                regional_replica_count=1,
+            ),
+            azure_nextgen.compute.latest.TargetRegionArgs(
+                name="East US",
+                regional_replica_count=2,
+                storage_account_type="Standard_ZRS",
+            ),
         ],
-    },
+    ),
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "dataDiskImages": [{
-            "hostCaching": "None",
-            "lun": 1,
-            "source": {
-                "id": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
-            },
-        }],
-        "osDiskImage": {
-            "hostCaching": "ReadOnly",
-            "source": {
-                "id": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
-            },
-        },
-    })
+    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
+        data_disk_images=[azure_nextgen.compute.latest.GalleryDataDiskImageArgs(
+            host_caching="None",
+            lun=1,
+            source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
+            ),
+        )],
+        os_disk_image=azure_nextgen.compute.latest.GalleryOSDiskImageArgs(
+            host_caching="ReadOnly",
+            source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+            ),
+        ),
+    ))
 
 ```
 
@@ -648,35 +648,35 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
     gallery_image_version_name="1.0.0",
     gallery_name="myGalleryName",
     location="West US",
-    publishing_profile={
-        "targetRegions": [
-            {
-                "encryption": {
-                    "dataDiskImages": [{
-                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
-                        "lun": 1,
-                    }],
-                    "osDiskImage": {
-                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
-                    },
-                },
-                "name": "West US",
-                "regionalReplicaCount": 1,
-            },
-            {
-                "name": "East US",
-                "regionalReplicaCount": 2,
-                "storageAccountType": "Standard_ZRS",
-            },
+    publishing_profile=azure_nextgen.compute.latest.GalleryImageVersionPublishingProfileArgs(
+        target_regions=[
+            azure_nextgen.compute.latest.TargetRegionArgs(
+                encryption=azure_nextgen.compute.latest.EncryptionImagesArgs(
+                    data_disk_images=[azure_nextgen.compute.latest.DataDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                        lun=1,
+                    )],
+                    os_disk_image=azure_nextgen.compute.latest.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    ),
+                ),
+                name="West US",
+                regional_replica_count=1,
+            ),
+            azure_nextgen.compute.latest.TargetRegionArgs(
+                name="East US",
+                regional_replica_count=2,
+                storage_account_type="Standard_ZRS",
+            ),
         ],
-    },
+    ),
     resource_group_name="myResourceGroup",
-    storage_profile={
-        "source": {
-            "id": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-            "uri": "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
-        },
-    })
+    storage_profile=azure_nextgen.compute.latest.GalleryImageVersionStorageProfileArgs(
+        source=azure_nextgen.compute.latest.GalleryArtifactVersionSourceArgs(
+            id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+            uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+        ),
+    ))
 
 ```
 
@@ -740,7 +740,7 @@ const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publishing_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[GalleryImageVersionPublishingProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[GalleryImageVersionStorageProfile]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publishing_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryImageVersionPublishingProfileArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryImageVersionStorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1229,7 +1229,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionstorageprofile">Dict[Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd>
 
@@ -1239,7 +1239,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#publishing_profile_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Dict[Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd>
 
@@ -1249,7 +1249,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1478,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_status_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationstatusresponse">Dict[Replication<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#replicationstatusresponse">Replication<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
 
@@ -1844,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">List[Data<wbr>Disk<wbr>Image<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
 
@@ -1854,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">Dict[OSDisk<wbr>Image<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">List[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
 
@@ -1973,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">Dict[OSDisk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
 
@@ -2370,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -2569,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -2808,7 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">List[Target<wbr>Region]</a></span>
+        <span class="property-type"><a href="#targetregion">Sequence[Target<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 
@@ -3087,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">List[Target<wbr>Region<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targetregionresponse">Sequence[Target<wbr>Region<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
 
@@ -3226,7 +3226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimage">List[Gallery<wbr>Data<wbr>Disk<wbr>Image]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimage">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
 
@@ -3236,7 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimage">Dict[Gallery<wbr>OSDisk<wbr>Image]</a></span>
+        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
 
@@ -3246,7 +3246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -3385,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">List[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
 
@@ -3395,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">Dict[Gallery<wbr>OSDisk<wbr>Image<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
 
@@ -3405,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -3524,7 +3524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -3683,7 +3683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
 
@@ -4159,7 +4159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">List[Regional<wbr>Replication<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Sequence[Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
 
@@ -4338,14 +4338,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Dict[Encryption<wbr>Images]</a></span>
+        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionalreplicacount_python">
-<a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
+        <span id="regional_replica_count_python">
+<a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4537,14 +4537,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Dict[Encryption<wbr>Images<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionalreplicacount_python">
-<a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
+        <span id="regional_replica_count_python">
+<a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>

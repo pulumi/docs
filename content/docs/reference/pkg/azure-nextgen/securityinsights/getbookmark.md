@@ -719,7 +719,7 @@ The following output properties are available:
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#incident_info_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentinforesponse">Dict[Incident<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#incidentinforesponse">Incident<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an incident that relates to bookmark{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd>
 
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Dict[User<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the bookmark{{% /md %}}</dd>
 

@@ -168,49 +168,49 @@ import pulumi_azure_nextgen as azure_nextgen
 data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
-    properties={
-        "description": "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
-        "script": """source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
+    properties=azure_nextgen.datafactory.latest.MappingDataFlowArgs(
+        description="Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+        script="""source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
 source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
 USDCurrency, CADSource union(byName: true)~> Union
 Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn
 NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)
 ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
-        "sinks": [
-            {
-                "dataset": {
-                    "referenceName": "USDOutput",
-                    "type": "DatasetReference",
-                },
-                "name": "USDSink",
-            },
-            {
-                "dataset": {
-                    "referenceName": "CADOutput",
-                    "type": "DatasetReference",
-                },
-                "name": "CADSink",
-            },
+        sinks=[
+            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+                    reference_name="USDOutput",
+                    type="DatasetReference",
+                ),
+                name="USDSink",
+            ),
+            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+                    reference_name="CADOutput",
+                    type="DatasetReference",
+                ),
+                name="CADSink",
+            ),
         ],
-        "sources": [
-            {
-                "dataset": {
-                    "referenceName": "CurrencyDatasetUSD",
-                    "type": "DatasetReference",
-                },
-                "name": "USDCurrency",
-            },
-            {
-                "dataset": {
-                    "referenceName": "CurrencyDatasetCAD",
-                    "type": "DatasetReference",
-                },
-                "name": "CADSource",
-            },
+        sources=[
+            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+                    reference_name="CurrencyDatasetUSD",
+                    type="DatasetReference",
+                ),
+                name="USDCurrency",
+            ),
+            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+                    reference_name="CurrencyDatasetCAD",
+                    type="DatasetReference",
+                ),
+                name="CADSource",
+            ),
         ],
-        "type": "MappingDataFlow",
-    },
+        type="MappingDataFlow",
+    ),
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -428,49 +428,49 @@ import pulumi_azure_nextgen as azure_nextgen
 data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
-    properties={
-        "description": "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
-        "script": """source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
+    properties=azure_nextgen.datafactory.latest.MappingDataFlowArgs(
+        description="Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+        script="""source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency
 source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource
 USDCurrency, CADSource union(byName: true)~> Union
 Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn
 NewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)
 ConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink
 ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink""",
-        "sinks": [
-            {
-                "dataset": {
-                    "referenceName": "USDOutput",
-                    "type": "DatasetReference",
-                },
-                "name": "USDSink",
-            },
-            {
-                "dataset": {
-                    "referenceName": "CADOutput",
-                    "type": "DatasetReference",
-                },
-                "name": "CADSink",
-            },
+        sinks=[
+            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+                    reference_name="USDOutput",
+                    type="DatasetReference",
+                ),
+                name="USDSink",
+            ),
+            azure_nextgen.datafactory.latest.DataFlowSinkArgs(
+                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+                    reference_name="CADOutput",
+                    type="DatasetReference",
+                ),
+                name="CADSink",
+            ),
         ],
-        "sources": [
-            {
-                "dataset": {
-                    "referenceName": "CurrencyDatasetUSD",
-                    "type": "DatasetReference",
-                },
-                "name": "USDCurrency",
-            },
-            {
-                "dataset": {
-                    "referenceName": "CurrencyDatasetCAD",
-                    "type": "DatasetReference",
-                },
-                "name": "CADSource",
-            },
+        sources=[
+            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+                    reference_name="CurrencyDatasetUSD",
+                    type="DatasetReference",
+                ),
+                name="USDCurrency",
+            ),
+            azure_nextgen.datafactory.latest.DataFlowSourceArgs(
+                dataset=azure_nextgen.datafactory.latest.DatasetReferenceArgs(
+                    reference_name="CurrencyDatasetCAD",
+                    type="DatasetReference",
+                ),
+                name="CADSource",
+            ),
         ],
-        "type": "MappingDataFlow",
-    },
+        type="MappingDataFlow",
+    ),
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -548,7 +548,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataFlow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[MappingDataFlow]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataFlow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[MappingDataFlowArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -887,7 +887,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Dict[Mapping<wbr>Data<wbr>Flow]</a></span>
+        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd>
 
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Dict[Dataset<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
 
@@ -1488,21 +1488,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkedservice_python">
-<a href="#linkedservice_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Dict[Linked<wbr>Service<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemalinkedservice_python">
-<a href="#schemalinkedservice_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Dict[Linked<wbr>Service<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 
@@ -1711,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dict[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
 
@@ -1727,21 +1727,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkedservice_python">
-<a href="#linkedservice_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemalinkedservice_python">
-<a href="#schemalinkedservice_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 
@@ -1950,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Dict[Dataset<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
 
@@ -1966,21 +1966,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkedservice_python">
-<a href="#linkedservice_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Dict[Linked<wbr>Service<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemalinkedservice_python">
-<a href="#schemalinkedservice_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Dict[Linked<wbr>Service<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 
@@ -2189,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dict[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
 
@@ -2205,21 +2205,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linkedservice_python">
-<a href="#linkedservice_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemalinkedservice_python">
-<a href="#schemalinkedservice_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
 
@@ -2354,8 +2354,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2378,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -2513,8 +2513,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2537,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
 
@@ -2672,8 +2672,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2696,7 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -2831,8 +2831,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="referencename_python">
-<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2855,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 
@@ -3114,7 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -3134,7 +3134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowfolder">Dict[Data<wbr>Flow<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
 
@@ -3154,7 +3154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsink">List[Data<wbr>Flow<wbr>Sink]</a></span>
+        <span class="property-type"><a href="#dataflowsink">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
 
@@ -3164,7 +3164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsource">List[Data<wbr>Flow<wbr>Source]</a></span>
+        <span class="property-type"><a href="#dataflowsource">Sequence[Data<wbr>Flow<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
 
@@ -3174,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">List[Transformation]</a></span>
+        <span class="property-type"><a href="#transformation">Sequence[Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
 
@@ -3433,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
 
@@ -3453,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponsefolder">Dict[Data<wbr>Flow<wbr>Response<wbr>Folder]</a></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
 
@@ -3473,7 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsinkresponse">List[Data<wbr>Flow<wbr>Sink<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
 
@@ -3483,7 +3483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsourceresponse">List[Data<wbr>Flow<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">Sequence[Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
 
@@ -3493,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformationresponse">List[Transformation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#transformationresponse">Sequence[Transformation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
 

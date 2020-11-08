@@ -779,7 +779,7 @@ The following output properties are available:
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageidentifierresponse">Dict[Gallery<wbr>Image<wbr>Identifier<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryimageidentifierresponse">Gallery<wbr>Image<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the gallery image definition identifier.{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ The following output properties are available:
 <a href="#disallowed_python" style="color: inherit; text-decoration: inherit;">disallowed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disallowedresponse">Dict[Disallowed<wbr>Response]</a></span>
+        <span class="property-type"><a href="#disallowedresponse">Disallowed<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the disallowed disk types.{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagefeatureresponse">List[Gallery<wbr>Image<wbr>Feature<wbr>Response]</a></span>
+        <span class="property-type"><a href="#galleryimagefeatureresponse">Sequence[Gallery<wbr>Image<wbr>Feature<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of gallery image features.{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#purchase_plan_python" style="color: inherit; text-decoration: inherit;">purchase_<wbr>plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepurchaseplanresponse">Dict[Image<wbr>Purchase<wbr>Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagepurchaseplanresponse">Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery image definition purchase plan. This is used by marketplace images.{{% /md %}}</dd>
 
@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#recommended_python" style="color: inherit; text-decoration: inherit;">recommended</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedmachineconfigurationresponse">Dict[Recommended<wbr>Machine<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recommendedmachineconfigurationresponse">Recommended<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1034,7 +1034,7 @@ The following output properties are available:
 <a href="#disk_types_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk types.{{% /md %}}</dd>
 
@@ -1580,17 +1580,17 @@ The following output properties are available:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Dict[Resource<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="v_cp_us_python">
-<a href="#v_cp_us_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cp_<wbr>us</a>
+        <span id="v_cpus_python">
+<a href="#v_cpus_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Dict[Resource<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd>
 

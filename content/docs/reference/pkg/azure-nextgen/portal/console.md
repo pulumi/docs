@@ -79,9 +79,9 @@ import pulumi_azure_nextgen as azure_nextgen
 
 console = azure_nextgen.portal.latest.Console("console",
     console_name="default",
-    properties={
-        "osType": "Linux",
-    })
+    properties=azure_nextgen.portal.latest.ConsoleCreatePropertiesArgs(
+        os_type="Linux",
+    ))
 
 ```
 
@@ -116,7 +116,7 @@ const console = new azure_nextgen.portal.latest.Console("console", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Console</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">console_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ConsoleCreateProperties]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Console</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">console_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConsoleCreatePropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -385,7 +385,7 @@ The Console resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consolecreateproperties">Dict[Console<wbr>Create<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#consolecreateproperties">Console<wbr>Create<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud shell properties for creating a console.{{% /md %}}</dd>
 

@@ -24,7 +24,7 @@ meta_desc: "Explore the GetTemplateSpec function of the resources module, includ
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_template_spec(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_spec_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplateSpecResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_template_spec(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_spec_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplateSpecResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -71,6 +71,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Name of the Template Spec.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expand_csharp">
+<a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for expansion of additional Template Spec details in the response. Optional.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -97,6 +107,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the Template Spec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expand_go">
+<a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for expansion of additional Template Spec details in the response. Optional.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -125,6 +145,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Name of the Template Spec.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expand_nodejs">
+<a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for expansion of additional Template Spec details in the response. Optional.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -151,6 +181,16 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the Template Spec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expand_python">
+<a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for expansion of additional Template Spec details in the response. Optional.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -211,6 +251,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="versions_csharp">
+<a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Template<wbr>Spec<wbr>Version<wbr>Info<wbr>Response&gt;</span>
+    </dt>
+    <dd>{{% md %}}High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -291,6 +341,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="versions_go">
+<a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Template<wbr>Spec<wbr>Version<wbr>Info<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -368,6 +428,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="versions_nodejs">
+<a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Template<wbr>Spec<wbr>Version<wbr>Info<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -429,7 +499,7 @@ The following output properties are available:
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Dict[System<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
 
@@ -442,6 +512,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="versions_python">
+<a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Template<wbr>Spec<wbr>Version<wbr>Info<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -469,7 +549,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -757,6 +837,165 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="templatespecversioninforesponse">Template<wbr>Spec<wbr>Version<wbr>Info<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template Spec version description.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timecreated_csharp">
+<a href="#timecreated_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the version was created.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timemodified_csharp">
+<a href="#timemodified_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the version was last modified.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template Spec version description.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timecreated_go">
+<a href="#timecreated_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the version was created.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timemodified_go">
+<a href="#timemodified_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the version was last modified.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template Spec version description.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timecreated_nodejs">
+<a href="#timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the version was created.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timemodified_nodejs">
+<a href="#timemodified_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Modified</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the version was last modified.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Template Spec version description.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="time_created_python">
+<a href="#time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the version was created.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="time_modified_python">
+<a href="#time_modified_python" style="color: inherit; text-decoration: inherit;">time_<wbr>modified</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of when the version was last modified.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

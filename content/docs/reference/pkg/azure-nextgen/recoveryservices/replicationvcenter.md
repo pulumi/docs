@@ -93,13 +93,13 @@ import pulumi_azure_nextgen as azure_nextgen
 
 replicationv_center = azure_nextgen.recoveryservices.latest.ReplicationvCenter("replicationvCenter",
     fabric_name="MadhaviFabric",
-    properties={
-        "friendlyName": "esx-78",
-        "ipAddress": "inmtest78",
-        "port": "443",
-        "processServerId": "5A720CAB-39CB-F445-BD1662B0B33164B5",
-        "runAsAccountId": "2",
-    },
+    properties=azure_nextgen.recoveryservices.latest.AddVCenterRequestPropertiesArgs(
+        friendly_name="esx-78",
+        ip_address="inmtest78",
+        port="443",
+        process_server_id="5A720CAB-39CB-F445-BD1662B0B33164B5",
+        run_as_account_id="2",
+    ),
     resource_group_name="MadhaviVRG",
     resource_name="MadhaviVault",
     v_center_name="esx-78")
@@ -144,7 +144,7 @@ const replicationvCenter = new azure_nextgen.recoveryservices.latest.Replication
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationvCenter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AddVCenterRequestProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_center_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationvCenter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[AddVCenterRequestPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_center_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -533,7 +533,7 @@ The ReplicationvCenter resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addvcenterrequestproperties">Dict[Add<wbr>VCenter<wbr>Request<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#addvcenterrequestproperties">Add<wbr>VCenter<wbr>Request<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of an add vCenter request.{{% /md %}}</dd>
 
@@ -1475,8 +1475,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1485,8 +1485,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customerresolvability_python">
-<a href="#customerresolvability_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
+        <span id="customer_resolvability_python">
+<a href="#customer_resolvability_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>resolvability</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1495,8 +1495,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1505,53 +1505,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorid_python">
-<a href="#errorid_python" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1565,6 +1525,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_id_python">
+<a href="#error_id_python" style="color: inherit; text-decoration: inherit;">error_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -1575,18 +1555,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innerhealtherrors_python">
-<a href="#innerhealtherrors_python" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inner_health_errors_python">
+<a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1595,8 +1595,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1605,8 +1605,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1615,8 +1615,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2024,8 +2024,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtimeutc_python">
-<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+        <span id="creation_time_utc_python">
+<a href="#creation_time_utc_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2034,8 +2034,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityid_python">
-<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2044,43 +2044,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorcategory_python">
-<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+        <span id="error_category_python">
+<a href="#error_category_python" style="color: inherit; text-decoration: inherit;">error_<wbr>category</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Category of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorlevel_python">
-<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errorsource_python">
-<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="errortype_python">
-<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2094,6 +2064,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="error_level_python">
+<a href="#error_level_python" style="color: inherit; text-decoration: inherit;">error_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
@@ -2104,8 +2084,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="possiblecauses_python">
-<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+        <span id="error_source_python">
+<a href="#error_source_python" style="color: inherit; text-decoration: inherit;">error_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_type_python">
+<a href="#error_type_python" style="color: inherit; text-decoration: inherit;">error_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possible_causes_python">
+<a href="#possible_causes_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>causes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2114,8 +2114,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recommendedaction_python">
-<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+        <span id="recommended_action_python">
+<a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2124,8 +2124,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoveryprovidererrormessage_python">
-<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+        <span id="recovery_provider_error_message_python">
+<a href="#recovery_provider_error_message_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>provider_<wbr>error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2134,8 +2134,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="summarymessage_python">
-<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+        <span id="summary_message_python">
+<a href="#summary_message_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2547,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
 

@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Dict[Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd>
 

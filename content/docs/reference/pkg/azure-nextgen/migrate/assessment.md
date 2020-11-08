@@ -156,14 +156,14 @@ assessment = azure_nextgen.migrate.latest.Assessment("assessment",
     e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     group_name="Group2",
     project_name="abgoyalWEselfhostb72bproject",
-    properties={
-        "azureDiskType": "StandardOrPremium",
-        "azureHybridUseBenefit": "Yes",
-        "azureLocation": "NorthEurope",
-        "azureOfferCode": "MSAZR0003P",
-        "azurePricingTier": "Standard",
-        "azureStorageRedundancy": "LocallyRedundant",
-        "azureVmFamilies": [
+    properties=azure_nextgen.migrate.latest.AssessmentPropertiesArgs(
+        azure_disk_type="StandardOrPremium",
+        azure_hybrid_use_benefit="Yes",
+        azure_location="NorthEurope",
+        azure_offer_code="MSAZR0003P",
+        azure_pricing_tier="Standard",
+        azure_storage_redundancy="LocallyRedundant",
+        azure_vm_families=[
             "Dv2_series",
             "F_series",
             "Dv3_series",
@@ -178,19 +178,19 @@ assessment = azure_nextgen.migrate.latest.Assessment("assessment",
             "Fsv2_series",
             "H_series",
         ],
-        "currency": "USD",
-        "discountPercentage": 100,
-        "percentile": "Percentile95",
-        "reservedInstance": "RI3Year",
-        "scalingFactor": 1,
-        "sizingCriterion": "PerformanceBased",
-        "stage": "InProgress",
-        "timeRange": "Day",
-        "vmUptime": {
-            "daysPerMonth": 31,
-            "hoursPerDay": 24,
-        },
-    },
+        currency="USD",
+        discount_percentage=100,
+        percentile="Percentile95",
+        reserved_instance="RI3Year",
+        scaling_factor=1,
+        sizing_criterion="PerformanceBased",
+        stage="InProgress",
+        time_range="Day",
+        vm_uptime=azure_nextgen.migrate.latest.VmUptimeArgs(
+            days_per_month=31,
+            hours_per_day=24,
+        ),
+    ),
     resource_group_name="abgoyal-westEurope")
 
 ```
@@ -262,7 +262,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AssessmentProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[AssessmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -671,7 +671,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentproperties">Dict[Assessment<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#assessmentproperties">Assessment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd>
 
@@ -1448,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_vm_families_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
 
@@ -1538,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptime">Dict[Vm<wbr>Uptime]</a></span>
+        <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
 
@@ -2547,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_vm_families_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
 
@@ -2777,7 +2777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Dict[Vm<wbr>Uptime<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
 

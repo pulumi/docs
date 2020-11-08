@@ -128,7 +128,7 @@ const virtualNetwork = new azure_nextgen.devtestlab.latest.VirtualNetwork("virtu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNetwork</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_subnets</span><span class="p">:</span> <span class="nx">Optional[List[Subnet]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_provider_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_overrides</span><span class="p">:</span> <span class="nx">Optional[List[SubnetOverride]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNetwork</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_provider_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_overrides</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -627,7 +627,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowed_subnets_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">List[Subnet]</a></span>
+        <span class="property-type"><a href="#subnet">Sequence[Subnet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd>
 
@@ -667,7 +667,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#subnet_overrides_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetoverride">List[Subnet<wbr>Override]</a></span>
+        <span class="property-type"><a href="#subnetoverride">Sequence[Subnet<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd>
 
@@ -677,7 +677,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -916,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_subnets_python" style="color: inherit; text-decoration: inherit;">external_<wbr>subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalsubnetresponse">List[External<wbr>Subnet<wbr>Response]</a></span>
+        <span class="property-type"><a href="#externalsubnetresponse">Sequence[External<wbr>Subnet<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd>
 
@@ -1199,8 +1199,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transportprotocol_python">
-<a href="#transportprotocol_python" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
+        <span id="transport_protocol_python">
+<a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1318,8 +1318,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transportprotocol_python">
-<a href="#transportprotocol_python" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
+        <span id="transport_protocol_python">
+<a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1457,8 +1457,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowpublicip_python">
-<a href="#allowpublicip_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Public<wbr>Ip</a>
+        <span id="allow_public_ip_python">
+<a href="#allow_public_ip_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1730,14 +1730,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Dict[Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useinvmcreationpermission_python">
-<a href="#useinvmcreationpermission_python" style="color: inherit; text-decoration: inherit;">use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
+        <span id="use_in_vm_creation_permission_python">
+<a href="#use_in_vm_creation_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>in_<wbr>vm_<wbr>creation_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1746,8 +1746,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepublicipaddresspermission_python">
-<a href="#usepublicipaddresspermission_python" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
+        <span id="use_public_ip_address_permission_python">
+<a href="#use_public_ip_address_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>ip_<wbr>address_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1756,8 +1756,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnetworkpoolname_python">
-<a href="#virtualnetworkpoolname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Pool<wbr>Name</a>
+        <span id="virtual_network_pool_name_python">
+<a href="#virtual_network_pool_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>pool_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2009,14 +2009,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Dict[Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useinvmcreationpermission_python">
-<a href="#useinvmcreationpermission_python" style="color: inherit; text-decoration: inherit;">use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
+        <span id="use_in_vm_creation_permission_python">
+<a href="#use_in_vm_creation_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>in_<wbr>vm_<wbr>creation_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2025,8 +2025,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usepublicipaddresspermission_python">
-<a href="#usepublicipaddresspermission_python" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
+        <span id="use_public_ip_address_permission_python">
+<a href="#use_public_ip_address_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>ip_<wbr>address_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2035,8 +2035,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnetworkpoolname_python">
-<a href="#virtualnetworkpoolname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Pool<wbr>Name</a>
+        <span id="virtual_network_pool_name_python">
+<a href="#virtual_network_pool_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>pool_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2174,8 +2174,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowpublicip_python">
-<a href="#allowpublicip_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Public<wbr>Ip</a>
+        <span id="allow_public_ip_python">
+<a href="#allow_public_ip_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2273,11 +2273,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedports_python">
-<a href="#allowedports_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ports</a>
+        <span id="allowed_ports_python">
+<a href="#allowed_ports_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#port">List[Port]</a></span>
+        <span class="property-type"><a href="#port">Sequence[Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
 
@@ -2352,11 +2352,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedports_python">
-<a href="#allowedports_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ports</a>
+        <span id="allowed_ports_python">
+<a href="#allowed_ports_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">List[Port<wbr>Response]</a></span>
+        <span class="property-type"><a href="#portresponse">Sequence[Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
 

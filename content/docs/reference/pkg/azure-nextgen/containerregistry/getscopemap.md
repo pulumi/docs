@@ -425,7 +425,7 @@ repositories/repository-name/metadata/write{{% /md %}}</dd>
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of scoped permissions for registry artifacts.
 E.g. repositories/repository-name/content/read,

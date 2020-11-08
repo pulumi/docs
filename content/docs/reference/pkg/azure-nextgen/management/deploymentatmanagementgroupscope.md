@@ -94,13 +94,13 @@ deployment_at_management_group_scope = azure_nextgen.management.latest.Deploymen
     deployment_name="my-deployment",
     group_id="my-management-group-id",
     location="eastus",
-    properties={
-        "mode": "Incremental",
-        "parameters": {},
-        "templateLink": {
-            "uri": "https://example.com/exampleTemplate.json",
-        },
-    })
+    properties=azure_nextgen.management.latest.DeploymentPropertiesArgs(
+        mode="Incremental",
+        parameters={},
+        template_link=azure_nextgen.management.latest.TemplateLinkArgs(
+            uri="https://example.com/exampleTemplate.json",
+        ),
+    ))
 
 ```
 
@@ -141,7 +141,7 @@ const deploymentAtManagementGroupScope = new azure_nextgen.management.latest.Dep
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentAtManagementGroupScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[DeploymentProperties]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentAtManagementGroupScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[DeploymentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -520,7 +520,7 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentproperties">Dict[Deployment<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#deploymentproperties">Deployment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd>
 
@@ -530,7 +530,7 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Deployment tags{{% /md %}}</dd>
 
@@ -986,17 +986,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">Dict[Alias<wbr>Path<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apiversions_python">
-<a href="#apiversions_python" style="color: inherit; text-decoration: inherit;">api<wbr>Versions</a>
+        <span id="api_versions_python">
+<a href="#api_versions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The API versions.{{% /md %}}</dd>
 
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">Dict[Alias<wbr>Pattern<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd>
 
@@ -1400,18 +1400,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultmetadata_python">
-<a href="#defaultmetadata_python" style="color: inherit; text-decoration: inherit;">default<wbr>Metadata</a>
+        <span id="default_metadata_python">
+<a href="#default_metadata_python" style="color: inherit; text-decoration: inherit;">default_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">Dict[Alias<wbr>Path<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultpath_python">
-<a href="#defaultpath_python" style="color: inherit; text-decoration: inherit;">default<wbr>Path</a>
+        <span id="default_path_python">
+<a href="#default_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1420,11 +1420,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultpattern_python">
-<a href="#defaultpattern_python" style="color: inherit; text-decoration: inherit;">default<wbr>Pattern</a>
+        <span id="default_pattern_python">
+<a href="#default_pattern_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">Dict[Alias<wbr>Pattern<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd>
 
@@ -1444,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathresponse">List[Alias<wbr>Path<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aliaspathresponse">Sequence[Alias<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd>
 
@@ -1569,8 +1569,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="profileversion_python">
-<a href="#profileversion_python" style="color: inherit; text-decoration: inherit;">profile<wbr>Version</a>
+        <span id="profile_version_python">
+<a href="#profile_version_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2059,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicdependencyresponse">List[Basic<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#basicdependencyresponse">Sequence[Basic<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd>
 
@@ -2130,6 +2130,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#debugsetting">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Debug<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expressionevaluationoptions_csharp">
+<a href="#expressionevaluationoptions_csharp" style="color: inherit; text-decoration: inherit;">Expression<wbr>Evaluation<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Management.<wbr>Inputs.<wbr>Expression<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2210,6 +2220,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="expressionevaluationoptions_go">
+<a href="#expressionevaluationoptions_go" style="color: inherit; text-decoration: inherit;">Expression<wbr>Evaluation<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="onerrordeployment_go">
 <a href="#onerrordeployment_go" style="color: inherit; text-decoration: inherit;">On<wbr>Error<wbr>Deployment</a>
 </span> 
@@ -2287,6 +2307,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="expressionevaluationoptions_nodejs">
+<a href="#expressionevaluationoptions_nodejs" style="color: inherit; text-decoration: inherit;">expression<wbr>Evaluation<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="onerrordeployment_nodejs">
 <a href="#onerrordeployment_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error<wbr>Deployment</a>
 </span> 
@@ -2358,9 +2388,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debug_setting_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsetting">Dict[Debug<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expression_evaluation_options_python">
+<a href="#expression_evaluation_options_python" style="color: inherit; text-decoration: inherit;">expression_<wbr>evaluation_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2368,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_error_deployment_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error_<wbr>deployment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeployment">Dict[On<wbr>Error<wbr>Deployment]</a></span>
+        <span class="property-type"><a href="#onerrordeployment">On<wbr>Error<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd>
 
@@ -2378,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.{{% /md %}}</dd>
 
@@ -2388,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_link_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslink">Dict[Parameters<wbr>Link]</a></span>
+        <span class="property-type"><a href="#parameterslink">Parameters<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.{{% /md %}}</dd>
 
@@ -2398,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd>
 
@@ -2408,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_link_python" style="color: inherit; text-decoration: inherit;">template_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelink">Dict[Template<wbr>Link]</a></span>
+        <span class="property-type"><a href="#templatelink">Template<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of the template. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd>
 
@@ -2977,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debug_setting_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsettingresponse">Dict[Debug<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#debugsettingresponse">Debug<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
 
@@ -2987,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dependencyresponse">List[Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dependencyresponse">Sequence[Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd>
 
@@ -3007,7 +3047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Dict[Error<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment error.{{% /md %}}</dd>
 
@@ -3027,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_error_deployment_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error_<wbr>deployment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeploymentextendedresponse">Dict[On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response]</a></span>
+        <span class="property-type"><a href="#onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd>
 
@@ -3037,7 +3077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_resources_python" style="color: inherit; text-decoration: inherit;">output_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd>
 
@@ -3047,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
 
@@ -3057,7 +3097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
 
@@ -3067,7 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_link_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslinkresponse">Dict[Parameters<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parameterslinkresponse">Parameters<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd>
 
@@ -3077,7 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresponse">List[Provider<wbr>Response]</a></span>
+        <span class="property-type"><a href="#providerresponse">Sequence[Provider<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd>
 
@@ -3107,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_link_python" style="color: inherit; text-decoration: inherit;">template_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelinkresponse">Dict[Template<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#templatelinkresponse">Template<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd>
 
@@ -3127,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validated_resources_python" style="color: inherit; text-decoration: inherit;">validated_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd>
 
@@ -3236,7 +3276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The additional info.{{% /md %}}</dd>
 
@@ -3445,7 +3485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">List[Error<wbr>Additional<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">Sequence[Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd>
 
@@ -3465,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">List[Error<wbr>Response<wbr>Response]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Sequence[Error<wbr>Response<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd>
 
@@ -3488,6 +3528,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The error target.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The scope to be used for evaluation of parameters, variables and functions in a nested template.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4286,18 +4405,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="apiprofiles_python">
-<a href="#apiprofiles_python" style="color: inherit; text-decoration: inherit;">api<wbr>Profiles</a>
+        <span id="api_profiles_python">
+<a href="#api_profiles_python" style="color: inherit; text-decoration: inherit;">api_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiprofileresponse">List[Api<wbr>Profile<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiprofileresponse">Sequence[Api<wbr>Profile<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultapiversion_python">
-<a href="#defaultapiversion_python" style="color: inherit; text-decoration: inherit;">default<wbr>Api<wbr>Version</a>
+        <span id="default_api_version_python">
+<a href="#default_api_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>api_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4310,17 +4429,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasresponse">List[Alias<wbr>Response]</a></span>
+        <span class="property-type"><a href="#aliasresponse">Sequence[Alias<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apiversions_python">
-<a href="#apiversions_python" style="color: inherit; text-decoration: inherit;">api<wbr>Versions</a>
+        <span id="api_versions_python">
+<a href="#api_versions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The API version.{{% /md %}}</dd>
 
@@ -4340,7 +4459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd>
 
@@ -4350,7 +4469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The properties.{{% /md %}}</dd>
 
@@ -4565,8 +4684,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="registrationpolicy_python">
-<a href="#registrationpolicy_python" style="color: inherit; text-decoration: inherit;">registration<wbr>Policy</a>
+        <span id="registration_policy_python">
+<a href="#registration_policy_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4575,8 +4694,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="registrationstate_python">
-<a href="#registrationstate_python" style="color: inherit; text-decoration: inherit;">registration<wbr>State</a>
+        <span id="registration_state_python">
+<a href="#registration_state_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4589,7 +4708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresourcetyperesponse">List[Provider<wbr>Resource<wbr>Type<wbr>Response]</a></span>
+        <span class="property-type"><a href="#providerresourcetyperesponse">Sequence[Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd>
 

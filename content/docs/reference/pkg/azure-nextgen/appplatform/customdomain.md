@@ -88,10 +88,10 @@ import pulumi_azure_nextgen as azure_nextgen
 custom_domain = azure_nextgen.appplatform.latest.CustomDomain("customDomain",
     app_name="myapp",
     domain_name="mydomain.com",
-    properties={
-        "certName": "mycert",
-        "thumbprint": "934367bf1c97033f877db0f15cb1b586957d3133",
-    },
+    properties=azure_nextgen.appplatform.latest.CustomDomainPropertiesArgs(
+        cert_name="mycert",
+        thumbprint="934367bf1c97033f877db0f15cb1b586957d3133",
+    ),
     resource_group_name="myResourceGroup",
     service_name="myservice")
 
@@ -132,7 +132,7 @@ const customDomain = new azure_nextgen.appplatform.latest.CustomDomain("customDo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomDomain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomDomainProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomDomain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CustomDomainPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -521,7 +521,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainproperties">Dict[Custom<wbr>Domain<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#customdomainproperties">Custom<wbr>Domain<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the custom domain resource.{{% /md %}}</dd>
 

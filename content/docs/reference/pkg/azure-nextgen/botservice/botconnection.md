@@ -118,22 +118,22 @@ bot_connection = azure_nextgen.botservice.latest.BotConnection("botConnection",
     connection_name="sampleConnection",
     etag="etag1",
     location="West US",
-    properties={
-        "clientId": "sampleclientid",
-        "clientSecret": "samplesecret",
-        "parameters": [
-            {
-                "key": "key1",
-                "value": "value1",
-            },
-            {
-                "key": "key2",
-                "value": "value2",
-            },
+    properties=azure_nextgen.botservice.latest.ConnectionSettingPropertiesArgs(
+        client_id="sampleclientid",
+        client_secret="samplesecret",
+        parameters=[
+            azure_nextgen.botservice.latest.ConnectionSettingParameterArgs(
+                key="key1",
+                value="value1",
+            ),
+            azure_nextgen.botservice.latest.ConnectionSettingParameterArgs(
+                key="key2",
+                value="value2",
+            ),
         ],
-        "scopes": "samplescope",
-        "serviceProviderId": "serviceproviderid",
-    },
+        scopes="samplescope",
+        service_provider_id="serviceproviderid",
+    ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname")
 
@@ -187,7 +187,7 @@ const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConn
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BotConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ConnectionSettingProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BotConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConnectionSettingPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -716,7 +716,7 @@ The BotConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingproperties">Dict[Connection<wbr>Setting<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#connectionsettingproperties">Connection<wbr>Setting<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -726,7 +726,7 @@ The BotConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
 
@@ -736,7 +736,7 @@ The BotConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -1391,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameter">List[Connection<wbr>Setting<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#connectionsettingparameter">Sequence[Connection<wbr>Setting<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd>
 
@@ -1710,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameterresponse">List[Connection<wbr>Setting<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionsettingparameterresponse">Sequence[Connection<wbr>Setting<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd>
 

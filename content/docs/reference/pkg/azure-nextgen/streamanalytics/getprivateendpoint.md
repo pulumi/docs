@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertiesresponse">Dict[Private<wbr>Endpoint<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointpropertiesresponse">Private<wbr>Endpoint<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd>
 
@@ -514,7 +514,7 @@ The following output properties are available:
 <a href="#manual_private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>private_<wbr>link_<wbr>service_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd>
 
@@ -842,19 +842,9 @@ The following output properties are available:
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceid_python">
-<a href="#privatelinkserviceid_python" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -862,9 +852,19 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Dict[Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_id_python">
+<a href="#private_link_service_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

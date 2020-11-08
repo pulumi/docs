@@ -23,7 +23,7 @@ Represents settings of an environment, from which environment instances would be
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EnvironmentSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceSettings]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EnvironmentSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_settings</span><span class="p">:</span> <span class="nx">Optional[ResourceSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -622,7 +622,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesettings">Dict[Resource<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#resourcesettings">Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource specific settings{{% /md %}}</dd>
 
@@ -672,7 +672,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
 
@@ -981,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_operation_result_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>operation_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latestoperationresultresponse">Dict[Latest<wbr>Operation<wbr>Result<wbr>Response]</a></span>
+        <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
 
@@ -1607,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_state_details_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>state_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Dict[Vm<wbr>State<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd>
 
@@ -1756,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_vm_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevm">Dict[Reference<wbr>Vm]</a></span>
+        <span class="property-type"><a href="#referencevm">Reference<wbr>Vm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
 
@@ -2035,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_vm_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Dict[Reference<wbr>Vm<wbr>Response]</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
 

@@ -152,20 +152,20 @@ workflow = azure_nextgen.logic.latest.Workflow("workflow",
             },
         },
     },
-    integration_account={
-        "id": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Logic/integrationAccounts/test-integration-account",
-    },
+    integration_account=azure_nextgen.logic.latest.ResourceReferenceArgs(
+        id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Logic/integrationAccounts/test-integration-account",
+    ),
     location="brazilsouth",
     parameters={
-        "$connections": {
-            "value": {
+        "$connections": azure_nextgen.logic.latest.WorkflowParameterArgs(
+            value={
                 "test-custom-connector": {
                     "connectionId": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Web/connections/test-custom-connector",
                     "connectionName": "test-custom-connector",
                     "id": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/brazilsouth/managedApis/test-custom-connector",
                 },
             },
-        },
+        ),
     },
     resource_group_name="test-resource-group",
     tags={},
@@ -253,7 +253,7 @@ const workflow = new azure_nextgen.logic.latest.Workflow("workflow", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[Dict[FlowAccessControlConfiguration]]</span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">endpoints_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[FlowEndpointsConfiguration]]</span> = None<span class="p">, </span><span class="nx">integration_account</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceReference]]</span> = None<span class="p">, </span><span class="nx">integration_service_environment</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceReference]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, WorkflowParameter]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[FlowAccessControlConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">endpoints_configuration</span><span class="p">:</span> <span class="nx">Optional[FlowEndpointsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">integration_account</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">, </span><span class="nx">integration_service_environment</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, WorkflowParameterArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -802,7 +802,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfiguration">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfiguration">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration.{{% /md %}}</dd>
 
@@ -812,7 +812,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The definition.{{% /md %}}</dd>
 
@@ -822,7 +822,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoints_configuration_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfiguration">Dict[Flow<wbr>Endpoints<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#flowendpointsconfiguration">Flow<wbr>Endpoints<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#integration_account_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Dict[Resource<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration account.{{% /md %}}</dd>
 
@@ -842,7 +842,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#integration_service_environment_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Dict[Resource<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment.{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Workflow<wbr>Parameter]</span>
+        <span class="property-type">Mapping[str, Workflow<wbr>Parameter<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The parameters.{{% /md %}}</dd>
 
@@ -882,7 +882,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1261,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd>
 
@@ -1459,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd>
 
@@ -1469,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd>
 
@@ -1479,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd>
 
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_management_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd>
 
@@ -1598,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_caller_ip_addresses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressrange">List[Ip<wbr>Address<wbr>Range]</a></span>
+        <span class="property-type"><a href="#ipaddressrange">Sequence[Ip<wbr>Address<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd>
 
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#open_authentication_policies_python" style="color: inherit; text-decoration: inherit;">open_<wbr>authentication_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationaccesspolicies">Dict[Open<wbr>Authentication<wbr>Access<wbr>Policies]</a></span>
+        <span class="property-type"><a href="#openauthenticationaccesspolicies">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd>
 
@@ -1717,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_caller_ip_addresses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressrangeresponse">List[Ip<wbr>Address<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">Sequence[Ip<wbr>Address<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd>
 
@@ -1727,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#open_authentication_policies_python" style="color: inherit; text-decoration: inherit;">open_<wbr>authentication_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Dict[Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd>
 
@@ -1896,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd>
 
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd>
 
@@ -1916,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd>
 
@@ -1926,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_management_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd>
 
@@ -2035,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List[Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
 
@@ -2045,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List[Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
 
@@ -2154,7 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Dict[Flow<wbr>Endpoints]</a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
 
@@ -2164,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Dict[Flow<wbr>Endpoints]</a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
 
@@ -2273,7 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
 
@@ -2283,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
 
@@ -2392,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
 
@@ -2402,7 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
 
@@ -2556,8 +2556,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="addressrange_python">
-<a href="#addressrange_python" style="color: inherit; text-decoration: inherit;">address<wbr>Range</a>
+        <span id="address_range_python">
+<a href="#address_range_python" style="color: inherit; text-decoration: inherit;">address_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2635,8 +2635,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="addressrange_python">
-<a href="#addressrange_python" style="color: inherit; text-decoration: inherit;">address<wbr>Range</a>
+        <span id="address_range_python">
+<a href="#address_range_python" style="color: inherit; text-decoration: inherit;">address_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2797,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Open<wbr>Authentication<wbr>Access<wbr>Policy]</span>
+        <span class="property-type">Mapping[str, Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd>
 
@@ -2876,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd>
 
@@ -2955,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationpolicyclaim">List[Open<wbr>Authentication<wbr>Policy<wbr>Claim]</a></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaim">Sequence[Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access policy claims.{{% /md %}}</dd>
 
@@ -3074,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">List[Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">Sequence[Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access policy claims.{{% /md %}}</dd>
 
@@ -3669,7 +3669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Dict[Resource<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to plan.{{% /md %}}</dd>
 
@@ -3848,7 +3848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -3868,7 +3868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value.{{% /md %}}</dd>
 
@@ -4047,7 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -4067,7 +4067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value.{{% /md %}}</dd>
 

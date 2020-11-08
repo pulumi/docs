@@ -92,14 +92,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 connection = azure_nextgen.web.latest.Connection("connection",
     connection_name="testManagedApi",
-    properties={
-        "api": {
-            "id": "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
-        },
-        "customParameterValues": {},
-        "displayName": "testManagedApi",
-        "parameterValues": {},
-    },
+    properties=azure_nextgen.web.latest.ApiConnectionDefinitionPropertiesArgs(
+        api=azure_nextgen.web.latest.ApiReferenceArgs(
+            id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
+        ),
+        custom_parameter_values={},
+        display_name="testManagedApi",
+        parameter_values={},
+    ),
     resource_group_name="testResourceGroup")
 
 ```
@@ -141,7 +141,7 @@ const connection = new azure_nextgen.web.latest.Connection("connection", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiConnectionDefinitionProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ApiConnectionDefinitionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -560,7 +560,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiondefinitionproperties">Dict[Api<wbr>Connection<wbr>Definition<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#apiconnectiondefinitionproperties">Api<wbr>Connection<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -570,7 +570,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_python" style="color: inherit; text-decoration: inherit;">api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireference">Dict[Api<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#apireference">Api<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1087,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_parameter_values_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of custom parameter values{{% /md %}}</dd>
 
@@ -1107,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_secret_parameter_values_python" style="color: inherit; text-decoration: inherit;">non_<wbr>secret_<wbr>parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of nonsecret parameter values{{% /md %}}</dd>
 
@@ -1117,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of parameter values{{% /md %}}</dd>
 
@@ -1127,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinition">List[Connection<wbr>Status<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinition">Sequence[Connection<wbr>Status<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd>
 
@@ -1137,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_links_python" style="color: inherit; text-decoration: inherit;">test_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlink">List[Api<wbr>Connection<wbr>Test<wbr>Link]</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlink">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd>
 
@@ -1456,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_python" style="color: inherit; text-decoration: inherit;">api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Dict[Api<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1486,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_parameter_values_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of custom parameter values{{% /md %}}</dd>
 
@@ -1506,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_secret_parameter_values_python" style="color: inherit; text-decoration: inherit;">non_<wbr>secret_<wbr>parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of nonsecret parameter values{{% /md %}}</dd>
 
@@ -1516,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of parameter values{{% /md %}}</dd>
 
@@ -1526,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List[Connection<wbr>Status<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">Sequence[Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd>
 
@@ -1536,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_links_python" style="color: inherit; text-decoration: inherit;">test_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd>
 
@@ -2123,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2482,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#swagger_python" style="color: inherit; text-decoration: inherit;">swagger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The JSON representation of the swagger{{% /md %}}</dd>
 
@@ -2731,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -3090,7 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -3229,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerror">Dict[Connection<wbr>Error]</a></span>
+        <span class="property-type"><a href="#connectionerror">Connection<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd>
 
@@ -3388,7 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Dict[Connection<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd>
 

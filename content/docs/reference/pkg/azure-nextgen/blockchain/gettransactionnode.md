@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallruleresponse">List[Firewall<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#firewallruleresponse">Sequence[Firewall<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd>
 

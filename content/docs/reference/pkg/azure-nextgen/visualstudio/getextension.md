@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
 
@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionresourceplanresponse">Dict[Extension<wbr>Resource<wbr>Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#extensionresourceplanresponse">Extension<wbr>Resource<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extension plan that was purchased.{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

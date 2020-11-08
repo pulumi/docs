@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduleresponse">Dict[Job<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jobscheduleresponse">Job<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule properties of the job.{{% /md %}}</dd>
 

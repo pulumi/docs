@@ -88,11 +88,11 @@ import pulumi_azure_nextgen as azure_nextgen
 web_app_private_endpoint_connection = azure_nextgen.web.latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection",
     name="testSite",
     private_endpoint_connection_name="connection",
-    private_link_service_connection_state={
-        "actionsRequired": "",
-        "description": "Approved by admin.",
-        "status": "Approved",
-    },
+    private_link_service_connection_state=azure_nextgen.web.latest.PrivateLinkConnectionStateArgs(
+        actions_required="",
+        description="Approved by admin.",
+        status="Approved",
+    ),
     resource_group_name="rg")
 
 ```
@@ -132,7 +132,7 @@ const webAppPrivateEndpointConnection = new azure_nextgen.web.latest.WebAppPriva
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppPrivateEndpointConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_service_connection_state</span><span class="p">:</span> <span class="nx">Optional[Dict[PrivateLinkConnectionState]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppPrivateEndpointConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_service_connection_state</span><span class="p">:</span> <span class="nx">Optional[PrivateLinkConnectionStateArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -521,7 +521,7 @@ The WebAppPrivateEndpointConnection resource accepts the following [input]({{< r
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstate">Dict[Private<wbr>Link<wbr>Connection<wbr>State]</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstate">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd>
 
@@ -720,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armidwrapperresponse">Dict[Arm<wbr>Id<wbr>Wrapper<wbr>Response]</a></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd>
 

@@ -210,7 +210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -267,7 +267,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -324,7 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencepropertiesresponse">Dict[Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencepropertiesresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
 
@@ -381,7 +381,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The following output properties are available:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
 
@@ -783,7 +783,7 @@ The following output properties are available:
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Dict[Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response]</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
 
@@ -793,7 +793,7 @@ The following output properties are available:
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Dict[Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response]</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
 

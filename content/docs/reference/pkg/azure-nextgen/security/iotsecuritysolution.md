@@ -139,24 +139,24 @@ iot_security_solution = azure_nextgen.security.latest.IotSecuritySolution("iotSe
     iot_hubs=["/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub"],
     location="East Us",
     recommendations_configuration=[
-        {
-            "recommendationType": "IoT_OpenPorts",
-            "status": "Disabled",
-        },
-        {
-            "recommendationType": "IoT_SharedCredentials",
-            "status": "Disabled",
-        },
+        azure_nextgen.security.latest.RecommendationConfigurationPropertiesArgs(
+            recommendation_type="IoT_OpenPorts",
+            status="Disabled",
+        ),
+        azure_nextgen.security.latest.RecommendationConfigurationPropertiesArgs(
+            recommendation_type="IoT_SharedCredentials",
+            status="Disabled",
+        ),
     ],
     resource_group_name="MyGroup",
     solution_name="default",
     status="Enabled",
     tags={},
     unmasked_ip_logging_status="Enabled",
-    user_defined_resources={
-        "query": "where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
-        "querySubscriptions": ["075423e9-7d33-4166-8bdf-3920b04e3735"],
-    },
+    user_defined_resources=azure_nextgen.security.latest.UserDefinedResourcesPropertiesArgs(
+        query="where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
+        query_subscriptions=["075423e9-7d33-4166-8bdf-3920b04e3735"],
+    ),
     workspace="/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1")
 
 ```
@@ -213,7 +213,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled_data_sources</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">iot_hubs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recommendations_configuration</span><span class="p">:</span> <span class="nx">Optional[List[RecommendationConfigurationProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">unmasked_ip_logging_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_resources</span><span class="p">:</span> <span class="nx">Optional[Dict[UserDefinedResourcesProperties]]</span> = None<span class="p">, </span><span class="nx">workspace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled_data_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">iot_hubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recommendations_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecommendationConfigurationPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">unmasked_ip_logging_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_resources</span><span class="p">:</span> <span class="nx">Optional[UserDefinedResourcesPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">workspace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -812,7 +812,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IoT Hub resource IDs{{% /md %}}</dd>
 
@@ -842,7 +842,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disabled_data_sources_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>data_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
 
@@ -852,7 +852,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
 
@@ -872,7 +872,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#recommendations_configuration_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendationconfigurationproperties">List[Recommendation<wbr>Configuration<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#recommendationconfigurationproperties">Sequence[Recommendation<wbr>Configuration<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd>
 
@@ -892,7 +892,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -912,7 +912,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#user_defined_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedresourcesproperties">Dict[User<wbr>Defined<wbr>Resources<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd>
 
@@ -1091,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_discovered_resources_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>discovered_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of resources that were automatically discovered as relevant to the security solution.{{% /md %}}</dd>
 
@@ -1235,8 +1235,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="recommendationtype_python">
-<a href="#recommendationtype_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
+        <span id="recommendation_type_python">
+<a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1394,8 +1394,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="recommendationtype_python">
-<a href="#recommendationtype_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
+        <span id="recommendation_type_python">
+<a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1527,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_subscriptions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
 
@@ -1646,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_subscriptions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
 

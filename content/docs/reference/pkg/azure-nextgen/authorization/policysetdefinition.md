@@ -108,39 +108,39 @@ policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("
         "category": "Cost Management",
     },
     parameters={
-        "namePrefix": {
-            "defaultValue": "myPrefix",
-            "metadata": {
-                "displayName": "Prefix to enforce on resource names",
-            },
-            "type": "String",
-        },
+        "namePrefix": azure_nextgen.authorization.latest.ParameterDefinitionsValueArgs(
+            default_value="myPrefix",
+            metadata=azure_nextgen.authorization.latest.ParameterDefinitionsValueMetadataArgs(
+                display_name="Prefix to enforce on resource names",
+            ),
+            type="String",
+        ),
     },
     policy_definitions=[
-        {
-            "parameters": {
-                "listOfAllowedSKUs": {
-                    "value": [
+        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+            parameters={
+                "listOfAllowedSKUs": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                    value=[
                         "Standard_GRS",
                         "Standard_LRS",
                     ],
-                },
+                ),
             },
-            "policyDefinitionId": "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
-            "policyDefinitionReferenceId": "Limit_Skus",
-        },
-        {
-            "parameters": {
-                "prefix": {
-                    "value": "[parameters('namePrefix')]",
-                },
-                "suffix": {
-                    "value": "-LC",
-                },
+            policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
+            policy_definition_reference_id="Limit_Skus",
+        ),
+        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+            parameters={
+                "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                    value="[parameters('namePrefix')]",
+                ),
+                "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                    value="-LC",
+                ),
             },
-            "policyDefinitionId": "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-            "policyDefinitionReferenceId": "Resource_Naming",
-        },
+            policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
+            policy_definition_reference_id="Resource_Naming",
+        ),
     ],
     policy_set_definition_name="CostManagement")
 
@@ -305,44 +305,44 @@ policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("
         "category": "Cost Management",
     },
     policy_definition_groups=[
-        {
-            "description": "Policies designed to control spend within a subscription.",
-            "displayName": "Cost Management Policies",
-            "name": "CostSaving",
-        },
-        {
-            "description": "Policies that help enforce resource organization standards within a subscription.",
-            "displayName": "Organizational Policies",
-            "name": "Organizational",
-        },
+        azure_nextgen.authorization.latest.PolicyDefinitionGroupArgs(
+            description="Policies designed to control spend within a subscription.",
+            display_name="Cost Management Policies",
+            name="CostSaving",
+        ),
+        azure_nextgen.authorization.latest.PolicyDefinitionGroupArgs(
+            description="Policies that help enforce resource organization standards within a subscription.",
+            display_name="Organizational Policies",
+            name="Organizational",
+        ),
     ],
     policy_definitions=[
-        {
-            "groupNames": ["CostSaving"],
-            "parameters": {
-                "listOfAllowedSKUs": {
-                    "value": [
+        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+            group_names=["CostSaving"],
+            parameters={
+                "listOfAllowedSKUs": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                    value=[
                         "Standard_GRS",
                         "Standard_LRS",
                     ],
-                },
+                ),
             },
-            "policyDefinitionId": "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
-            "policyDefinitionReferenceId": "Limit_Skus",
-        },
-        {
-            "groupNames": ["Organizational"],
-            "parameters": {
-                "prefix": {
-                    "value": "DeptA",
-                },
-                "suffix": {
-                    "value": "-LC",
-                },
+            policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
+            policy_definition_reference_id="Limit_Skus",
+        ),
+        azure_nextgen.authorization.latest.PolicyDefinitionReferenceArgs(
+            group_names=["Organizational"],
+            parameters={
+                "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                    value="DeptA",
+                ),
+                "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+                    value="-LC",
+                ),
             },
-            "policyDefinitionId": "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-            "policyDefinitionReferenceId": "Resource_Naming",
-        },
+            policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
+            policy_definition_reference_id="Resource_Naming",
+        ),
     ],
     policy_set_definition_name="CostManagement")
 
@@ -421,7 +421,7 @@ const policySetDefinition = new azure_nextgen.authorization.latest.PolicySetDefi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicySetDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ParameterDefinitionsValue]]</span> = None<span class="p">, </span><span class="nx">policy_definition_groups</span><span class="p">:</span> <span class="nx">Optional[List[PolicyDefinitionGroup]]</span> = None<span class="p">, </span><span class="nx">policy_definitions</span><span class="p">:</span> <span class="nx">Optional[List[PolicyDefinitionReference]]</span> = None<span class="p">, </span><span class="nx">policy_set_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicySetDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterDefinitionsValueArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definition_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyDefinitionGroupArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definitions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyDefinitionReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">policy_set_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -860,7 +860,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policy_definitions_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefinitionreference">List[Policy<wbr>Definition<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#policydefinitionreference">Sequence[Policy<wbr>Definition<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of policy definition references.{{% /md %}}</dd>
 
@@ -900,7 +900,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -910,7 +910,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Definitions<wbr>Value]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Definitions<wbr>Value<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The policy set definition parameters that can be used in policy definition references.{{% /md %}}</dd>
 
@@ -920,7 +920,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policy_definition_groups_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefinitiongroup">List[Policy<wbr>Definition<wbr>Group]</a></span>
+        <span class="property-type"><a href="#policydefinitiongroup">Sequence[Policy<wbr>Definition<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The metadata describing groups of policy definition references within the policy set definition.{{% /md %}}</dd>
 
@@ -1263,11 +1263,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedvalues_python">
-<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+        <span id="allowed_values_python">
+<a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
 
@@ -1277,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
 
@@ -1287,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Dict[Parameter<wbr>Definitions<wbr>Value<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
 
@@ -1581,11 +1581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedvalues_python">
-<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+        <span id="allowed_values_python">
+<a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
 
@@ -1595,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
 
@@ -1605,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Dict[Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
 
@@ -1813,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
 
@@ -1892,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
 
@@ -2097,8 +2097,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalmetadataid_python">
-<a href="#additionalmetadataid_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Metadata<wbr>Id</a>
+        <span id="additional_metadata_id_python">
+<a href="#additional_metadata_id_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>metadata_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2336,8 +2336,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalmetadataid_python">
-<a href="#additionalmetadataid_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Metadata<wbr>Id</a>
+        <span id="additional_metadata_id_python">
+<a href="#additional_metadata_id_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>metadata_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2545,11 +2545,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupnames_python">
-<a href="#groupnames_python" style="color: inherit; text-decoration: inherit;">group<wbr>Names</a>
+        <span id="group_names_python">
+<a href="#group_names_python" style="color: inherit; text-decoration: inherit;">group_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The name of the groups that this policy definition reference belongs to.{{% /md %}}</dd>
 
@@ -2559,7 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Values<wbr>Value]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
 
@@ -2744,11 +2744,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupnames_python">
-<a href="#groupnames_python" style="color: inherit; text-decoration: inherit;">group<wbr>Names</a>
+        <span id="group_names_python">
+<a href="#group_names_python" style="color: inherit; text-decoration: inherit;">group_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The name of the groups that this policy definition reference belongs to.{{% /md %}}</dd>
 
@@ -2758,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Values<wbr>Value<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
 

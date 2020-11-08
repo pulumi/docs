@@ -24,7 +24,7 @@ meta_desc: "Explore the ListIntegrationAccountKeyVaultKeys function of the logic
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_integration_account_key_vault_keys(</span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault</span><span class="p">:</span> <span class="nx">Optional[Dict[KeyVaultReference]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListIntegrationAccountKeyVaultKeysResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_integration_account_key_vault_keys(</span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault</span><span class="p">:</span> <span class="nx">Optional[KeyVaultReferenceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListIntegrationAccountKeyVaultKeysResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -206,7 +206,7 @@ The following arguments are supported:
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Dict[Key<wbr>Vault<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
 
@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyresponse">List[Key<wbr>Vault<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyresponse">Sequence[Key<wbr>Vault<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The key vault keys.{{% /md %}}</dd>
 
@@ -462,7 +462,7 @@ The following output properties are available:
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyresponseattributes">Dict[Key<wbr>Vault<wbr>Key<wbr>Response<wbr>Attributes]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyresponseattributes">Key<wbr>Vault<wbr>Key<wbr>Response<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key attributes.{{% /md %}}</dd>
 

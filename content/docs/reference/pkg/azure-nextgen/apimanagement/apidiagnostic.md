@@ -178,41 +178,41 @@ import pulumi_azure_nextgen as azure_nextgen
 api_diagnostic = azure_nextgen.apimanagement.latest.ApiDiagnostic("apiDiagnostic",
     always_log="allErrors",
     api_id="57d1f7558aa04f15146d9d8a",
-    backend={
-        "request": {
-            "body": {
-                "bytes": 512,
-            },
-            "headers": ["Content-type"],
-        },
-        "response": {
-            "body": {
-                "bytes": 512,
-            },
-            "headers": ["Content-type"],
-        },
-    },
+    backend=azure_nextgen.apimanagement.latest.PipelineDiagnosticSettingsArgs(
+        request=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+                bytes=512,
+            ),
+            headers=["Content-type"],
+        ),
+        response=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+                bytes=512,
+            ),
+            headers=["Content-type"],
+        ),
+    ),
     diagnostic_id="applicationinsights",
-    frontend={
-        "request": {
-            "body": {
-                "bytes": 512,
-            },
-            "headers": ["Content-type"],
-        },
-        "response": {
-            "body": {
-                "bytes": 512,
-            },
-            "headers": ["Content-type"],
-        },
-    },
+    frontend=azure_nextgen.apimanagement.latest.PipelineDiagnosticSettingsArgs(
+        request=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+                bytes=512,
+            ),
+            headers=["Content-type"],
+        ),
+        response=azure_nextgen.apimanagement.latest.HttpMessageDiagnosticArgs(
+            body=azure_nextgen.apimanagement.latest.BodyDiagnosticSettingsArgs(
+                bytes=512,
+            ),
+            headers=["Content-type"],
+        ),
+    ),
     logger_id="/loggers/applicationinsights",
     resource_group_name="rg1",
-    sampling={
-        "percentage": 50,
-        "samplingType": "fixed",
-    },
+    sampling=azure_nextgen.apimanagement.latest.SamplingSettingsArgs(
+        percentage=50,
+        sampling_type="fixed",
+    ),
     service_name="apimService1")
 
 ```
@@ -282,7 +282,7 @@ const apiDiagnostic = new azure_nextgen.apimanagement.latest.ApiDiagnostic("apiD
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApiDiagnostic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[Dict[PipelineDiagnosticSettings]]</span> = None<span class="p">, </span><span class="nx">diagnostic_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend</span><span class="p">:</span> <span class="nx">Optional[Dict[PipelineDiagnosticSettings]]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sampling</span><span class="p">:</span> <span class="nx">Optional[Dict[SamplingSettings]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApiDiagnostic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[PipelineDiagnosticSettingsArgs]</span> = None<span class="p">, </span><span class="nx">diagnostic_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend</span><span class="p">:</span> <span class="nx">Optional[PipelineDiagnosticSettingsArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sampling</span><span class="p">:</span> <span class="nx">Optional[SamplingSettingsArgs]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -901,7 +901,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinediagnosticsettings">Dict[Pipeline<wbr>Diagnostic<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
 
@@ -911,7 +911,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 <a href="#frontend_python" style="color: inherit; text-decoration: inherit;">frontend</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinediagnosticsettings">Dict[Pipeline<wbr>Diagnostic<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
 
@@ -941,7 +941,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sampling_python" style="color: inherit; text-decoration: inherit;">sampling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingsettings">Dict[Sampling<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#samplingsettings">Sampling<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
 
@@ -1386,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettings">Dict[Body<wbr>Diagnostic<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
 
@@ -1396,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
 
@@ -1505,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Dict[Body<wbr>Diagnostic<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
 
@@ -1515,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
 
@@ -1624,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Dict[Http<wbr>Message<wbr>Diagnostic]</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
 
@@ -1634,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Dict[Http<wbr>Message<wbr>Diagnostic]</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
 
@@ -1743,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Dict[Http<wbr>Message<wbr>Diagnostic<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
 
@@ -1753,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Dict[Http<wbr>Message<wbr>Diagnostic<wbr>Response]</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
 

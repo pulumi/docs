@@ -98,9 +98,9 @@ dedicated_host = azure_nextgen.compute.latest.DedicatedHost("dedicatedHost",
     location="westus",
     platform_fault_domain=1,
     resource_group_name="myResourceGroup",
-    sku={
-        "name": "DSv3-Type1",
-    },
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        name="DSv3-Type1",
+    ),
     tags={
         "department": "HR",
     })
@@ -145,7 +145,7 @@ const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedH
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DedicatedHost</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_replace_on_failure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DedicatedHost</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_replace_on_failure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -654,7 +654,7 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Dict[Sku]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1003,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostinstanceviewresponse">Dict[Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dedicatedhostinstanceviewresponse">Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dedicated host instance view.{{% /md %}}</dd>
 
@@ -1053,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourcereadonlyresponse">List[Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourcereadonlyresponse">Sequence[Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machines in the Dedicated Host.{{% /md %}}</dd>
 
@@ -1256,11 +1256,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allocatable_v_ms_python">
-<a href="#allocatable_v_ms_python" style="color: inherit; text-decoration: inherit;">allocatable_<wbr>v_<wbr>ms</a>
+        <span id="allocatable_vms_python">
+<a href="#allocatable_vms_python" style="color: inherit; text-decoration: inherit;">allocatable_<wbr>vms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List[Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse]</a></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Sequence[Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
 
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dict[Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
 
@@ -1419,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 

@@ -154,30 +154,30 @@ api_operation = azure_nextgen.apimanagement.latest.ApiOperation("apiOperation",
     display_name="createUser2",
     method="POST",
     operation_id="newoperations",
-    request={
-        "description": "Created user object",
-        "headers": [],
-        "queryParameters": [],
-        "representations": [{
-            "contentType": "application/json",
-            "schemaId": "592f6c1d0af5840ca8897f0c",
-            "typeName": "User",
-        }],
-    },
+    request=azure_nextgen.apimanagement.latest.RequestContractArgs(
+        description="Created user object",
+        headers=[],
+        query_parameters=[],
+        representations=[azure_nextgen.apimanagement.latest.RepresentationContractArgs(
+            content_type="application/json",
+            schema_id="592f6c1d0af5840ca8897f0c",
+            type_name="User",
+        )],
+    ),
     resource_group_name="rg1",
-    responses=[{
-        "description": "successful operation",
-        "headers": [],
-        "representations": [
-            {
-                "contentType": "application/xml",
-            },
-            {
-                "contentType": "application/json",
-            },
+    responses=[azure_nextgen.apimanagement.latest.ResponseContractArgs(
+        description="successful operation",
+        headers=[],
+        representations=[
+            azure_nextgen.apimanagement.latest.RepresentationContractArgs(
+                content_type="application/xml",
+            ),
+            azure_nextgen.apimanagement.latest.RepresentationContractArgs(
+                content_type="application/json",
+            ),
         ],
-        "statusCode": 200,
-    }],
+        status_code=200,
+    )],
     service_name="apimService1",
     template_parameters=[],
     url_template="/user1")
@@ -243,7 +243,7 @@ const apiOperation = new azure_nextgen.apimanagement.latest.ApiOperation("apiOpe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[Dict[RequestContract]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[List[ResponseContract]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ParameterContract]]</span> = None<span class="p">, </span><span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[RequestContractArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResponseContractArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParameterContractArgs]]</span> = None<span class="p">, </span><span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -892,7 +892,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestcontract">Dict[Request<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#requestcontract">Request<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd>
 
@@ -902,7 +902,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#responses_python" style="color: inherit; text-decoration: inherit;">responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsecontract">List[Response<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#responsecontract">Sequence[Response<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd>
 
@@ -912,7 +912,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#template_parameters_python" style="color: inherit; text-decoration: inherit;">template_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List[Parameter<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd>
 
@@ -1359,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
 
@@ -1638,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
 
@@ -1843,11 +1843,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formparameters_python">
-<a href="#formparameters_python" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
+        <span id="form_parameters_python">
+<a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List[Parameter<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
 
@@ -2082,11 +2082,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formparameters_python">
-<a href="#formparameters_python" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
+        <span id="form_parameters_python">
+<a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
 
@@ -2295,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List[Parameter<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
 
@@ -2305,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List[Parameter<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
 
@@ -2315,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">List[Representation<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#representationcontract">Sequence[Representation<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
 
@@ -2494,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
 
@@ -2504,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
 
@@ -2514,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List[Representation<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
 
@@ -2703,7 +2703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List[Parameter<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
 
@@ -2713,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">List[Representation<wbr>Contract]</a></span>
+        <span class="property-type"><a href="#representationcontract">Sequence[Representation<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
 
@@ -2902,7 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
 
@@ -2912,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List[Representation<wbr>Contract<wbr>Response]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
 

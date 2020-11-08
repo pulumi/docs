@@ -120,21 +120,21 @@ connection_type = azure_nextgen.automation.latest.ConnectionType("connectionType
     automation_account_name="myAutomationAccount22",
     connection_type_name="myCT",
     field_definitions={
-        "myBoolField": {
-            "isEncrypted": False,
-            "isOptional": False,
-            "type": "bool",
-        },
-        "myStringField": {
-            "isEncrypted": False,
-            "isOptional": False,
-            "type": "string",
-        },
-        "myStringFieldEncrypted": {
-            "isEncrypted": True,
-            "isOptional": False,
-            "type": "string",
-        },
+        "myBoolField": azure_nextgen.automation.latest.FieldDefinitionArgs(
+            is_encrypted=False,
+            is_optional=False,
+            type="bool",
+        ),
+        "myStringField": azure_nextgen.automation.latest.FieldDefinitionArgs(
+            is_encrypted=False,
+            is_optional=False,
+            type="string",
+        ),
+        "myStringFieldEncrypted": azure_nextgen.automation.latest.FieldDefinitionArgs(
+            is_encrypted=True,
+            is_optional=False,
+            type="string",
+        ),
     },
     is_global=False,
     name="myCT",
@@ -191,7 +191,7 @@ const connectionType = new azure_nextgen.automation.latest.ConnectionType("conne
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectionType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">field_definitions</span><span class="p">:</span> <span class="nx">Optional[Dict[str, FieldDefinition]]</span> = None<span class="p">, </span><span class="nx">is_global</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectionType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">field_definitions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, FieldDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">is_global</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -590,7 +590,7 @@ The ConnectionType resource accepts the following [input]({{< relref "/docs/intr
 <a href="#field_definitions_python" style="color: inherit; text-decoration: inherit;">field_<wbr>definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Field<wbr>Definition]</span>
+        <span class="property-type">Mapping[str, Field<wbr>Definition<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the field definitions of the connection type.{{% /md %}}</dd>
 
@@ -1013,16 +1013,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isoptional_python">
-<a href="#isoptional_python" style="color: inherit; text-decoration: inherit;">is<wbr>Optional</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the isOptional flag of the connection field definition.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_encrypted_python">
 <a href="#is_encrypted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>encrypted</a>
 </span> 
@@ -1030,6 +1020,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the isEncrypted flag of the connection field definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_optional_python">
+<a href="#is_optional_python" style="color: inherit; text-decoration: inherit;">is_<wbr>optional</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the isOptional flag of the connection field definition.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1172,16 +1172,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isoptional_python">
-<a href="#isoptional_python" style="color: inherit; text-decoration: inherit;">is<wbr>Optional</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the isOptional flag of the connection field definition.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_encrypted_python">
 <a href="#is_encrypted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>encrypted</a>
 </span> 
@@ -1189,6 +1179,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the isEncrypted flag of the connection field definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_optional_python">
+<a href="#is_optional_python" style="color: inherit; text-decoration: inherit;">is_<wbr>optional</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the isOptional flag of the connection field definition.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

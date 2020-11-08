@@ -399,7 +399,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacespropertiesresponse">Dict[Io<wbr>TSpaces<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iotspacespropertiesresponse">Io<wbr>TSpaces<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The common properties of a IoTSpaces service.{{% /md %}}</dd>
 
@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesskuinforesponse">Dict[Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#iotspacesskuinforesponse">Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A valid instance SKU.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -634,7 +634,7 @@ The following output properties are available:
 <a href="#storage_container_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Dict[Storage<wbr>Container<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd>
 

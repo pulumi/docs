@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionresponsemappings">Dict[Prediction<wbr>Response<wbr>Mappings]</a></span>
+        <span class="property-type"><a href="#predictionresponsemappings">Prediction<wbr>Response<wbr>Mappings</a></span>
     </dt>
     <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd>
 
@@ -899,7 +899,7 @@ The following output properties are available:
 <a href="#system_generated_entities_python" style="color: inherit; text-decoration: inherit;">system_<wbr>generated_<wbr>entities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Dict[Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities]</a></span>
+        <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
     </dt>
     <dd>{{% md %}}System generated entities.{{% /md %}}</dd>
 
@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#grades_python" style="color: inherit; text-decoration: inherit;">grades</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionresponsegrades">List[Prediction<wbr>Response<wbr>Grades]</a></span>
+        <span class="property-type"><a href="#predictionresponsegrades">Sequence[Prediction<wbr>Response<wbr>Grades]</a></span>
     </dt>
     <dd>{{% md %}}The prediction grades.{{% /md %}}</dd>
 
@@ -959,7 +959,7 @@ The following output properties are available:
 <a href="#involved_interaction_types_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>interaction_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd>
 
@@ -969,7 +969,7 @@ The following output properties are available:
 <a href="#involved_kpi_types_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>kpi_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#involved_relationships_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>relationships</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd>
 
@@ -1130,8 +1130,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gradename_python">
-<a href="#gradename_python" style="color: inherit; text-decoration: inherit;">grade<wbr>Name</a>
+        <span id="grade_name_python">
+<a href="#grade_name_python" style="color: inherit; text-decoration: inherit;">grade_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1140,8 +1140,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxscorethreshold_python">
-<a href="#maxscorethreshold_python" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
+        <span id="max_score_threshold_python">
+<a href="#max_score_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>score_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1150,8 +1150,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minscorethreshold_python">
-<a href="#minscorethreshold_python" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
+        <span id="min_score_threshold_python">
+<a href="#min_score_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>score_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1452,7 +1452,7 @@ The following output properties are available:
 <a href="#generated_interaction_types_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>interaction_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd>
 
@@ -1462,7 +1462,7 @@ The following output properties are available:
 <a href="#generated_kpis_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>kpis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd>
 
@@ -1472,7 +1472,7 @@ The following output properties are available:
 <a href="#generated_links_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Generated links.{{% /md %}}</dd>
 

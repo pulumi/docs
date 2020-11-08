@@ -111,14 +111,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
     custom_headers=[
-        {
-            "name": "header-1",
-            "value": "value-1",
-        },
-        {
-            "name": "header-2",
-            "value": "value-2",
-        },
+        azure_nextgen.network.latest.EndpointPropertiesCustomHeadersArgs(
+            name="header-1",
+            value="value-1",
+        ),
+        azure_nextgen.network.latest.EndpointPropertiesCustomHeadersArgs(
+            name="header-2",
+            value="value-2",
+        ),
     ],
     endpoint_location="North Europe",
     endpoint_name="azsmnet7187",
@@ -496,14 +496,14 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
     profile_name="azuresdkfornetautoresttrafficmanager8224",
     resource_group_name="azuresdkfornetautoresttrafficmanager2191",
     subnets=[
-        {
-            "first": "1.2.3.0",
-            "scope": 24,
-        },
-        {
-            "first": "25.26.27.28",
-            "last": "29.30.31.32",
-        },
+        azure_nextgen.network.latest.EndpointPropertiesSubnetsArgs(
+            first="1.2.3.0",
+            scope=24,
+        ),
+        azure_nextgen.network.latest.EndpointPropertiesSubnetsArgs(
+            first="25.26.27.28",
+            last="29.30.31.32",
+        ),
     ],
     target="foobar.contoso.com",
     type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
@@ -555,7 +555,7 @@ const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[List[EndpointPropertiesCustomHeaders]]</span> = None<span class="p">, </span><span class="nx">endpoint_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_monitor_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_mapping</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_child_endpoints</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[List[EndpointPropertiesSubnets]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPropertiesCustomHeadersArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_monitor_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_mapping</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_child_endpoints</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPropertiesSubnetsArgs]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1334,7 +1334,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">List[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
 
@@ -1374,7 +1374,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
 
@@ -1424,7 +1424,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">List[Endpoint<wbr>Properties<wbr>Subnets]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Sequence[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
 

@@ -258,75 +258,75 @@ import pulumi_azure_nextgen as azure_nextgen
 management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPolicy",
     account_name="sto9699",
     management_policy_name="default",
-    policy={
-        "rules": [
-            {
-                "definition": {
-                    "actions": {
-                        "baseBlob": {
-                            "delete": {
-                                "daysAfterModificationGreaterThan": 1000,
-                            },
-                            "tierToArchive": {
-                                "daysAfterModificationGreaterThan": 90,
-                            },
-                            "tierToCool": {
-                                "daysAfterModificationGreaterThan": 30,
-                            },
-                        },
-                        "snapshot": {
-                            "delete": {
-                                "daysAfterCreationGreaterThan": 30,
-                            },
-                        },
-                    },
-                    "filters": {
-                        "blobTypes": ["blockBlob"],
-                        "prefixMatch": ["olcmtestcontainer1"],
-                    },
-                },
-                "enabled": True,
-                "name": "olcmtest1",
-                "type": "Lifecycle",
-            },
-            {
-                "definition": {
-                    "actions": {
-                        "baseBlob": {
-                            "delete": {
-                                "daysAfterModificationGreaterThan": 1000,
-                            },
-                            "tierToArchive": {
-                                "daysAfterModificationGreaterThan": 90,
-                            },
-                            "tierToCool": {
-                                "daysAfterModificationGreaterThan": 30,
-                            },
-                        },
-                    },
-                    "filters": {
-                        "blobIndexMatch": [
-                            {
-                                "name": "tag1",
-                                "op": "==",
-                                "value": "val1",
-                            },
-                            {
-                                "name": "tag2",
-                                "op": "==",
-                                "value": "val2",
-                            },
+    policy=azure_nextgen.storage.latest.ManagementPolicySchemaArgs(
+        rules=[
+            azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
+                definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
+                    actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
+                        base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
+                            delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                                days_after_modification_greater_than=1000,
+                            ),
+                            tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                                days_after_modification_greater_than=90,
+                            ),
+                            tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                                days_after_modification_greater_than=30,
+                            ),
+                        ),
+                        snapshot=azure_nextgen.storage.latest.ManagementPolicySnapShotArgs(
+                            delete=azure_nextgen.storage.latest.DateAfterCreationArgs(
+                                days_after_creation_greater_than=30,
+                            ),
+                        ),
+                    ),
+                    filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                        blob_types=["blockBlob"],
+                        prefix_match=["olcmtestcontainer1"],
+                    ),
+                ),
+                enabled=True,
+                name="olcmtest1",
+                type="Lifecycle",
+            ),
+            azure_nextgen.storage.latest.ManagementPolicyRuleArgs(
+                definition=azure_nextgen.storage.latest.ManagementPolicyDefinitionArgs(
+                    actions=azure_nextgen.storage.latest.ManagementPolicyActionArgs(
+                        base_blob=azure_nextgen.storage.latest.ManagementPolicyBaseBlobArgs(
+                            delete=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                                days_after_modification_greater_than=1000,
+                            ),
+                            tier_to_archive=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                                days_after_modification_greater_than=90,
+                            ),
+                            tier_to_cool=azure_nextgen.storage.latest.DateAfterModificationArgs(
+                                days_after_modification_greater_than=30,
+                            ),
+                        ),
+                    ),
+                    filters=azure_nextgen.storage.latest.ManagementPolicyFilterArgs(
+                        blob_index_match=[
+                            azure_nextgen.storage.latest.TagFilterArgs(
+                                name="tag1",
+                                op="==",
+                                value="val1",
+                            ),
+                            azure_nextgen.storage.latest.TagFilterArgs(
+                                name="tag2",
+                                op="==",
+                                value="val2",
+                            ),
                         ],
-                        "blobTypes": ["blockBlob"],
-                        "prefixMatch": ["olcmtestcontainer2"],
-                    },
-                },
-                "enabled": True,
-                "name": "olcmtest2",
-                "type": "Lifecycle",
-            },
+                        blob_types=["blockBlob"],
+                        prefix_match=["olcmtestcontainer2"],
+                    ),
+                ),
+                enabled=True,
+                name="olcmtest2",
+                type="Lifecycle",
+            ),
         ],
-    },
+    ),
     resource_group_name="res7687")
 
 ```
@@ -430,7 +430,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagementPolicySchema]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ManagementPolicySchemaArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -769,7 +769,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyschema">Dict[Management<wbr>Policy<wbr>Schema]</a></span>
+        <span class="property-type"><a href="#managementpolicyschema">Management<wbr>Policy<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -933,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -980,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1062,8 +1062,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="daysaftercreationgreaterthan_python">
-<a href="#daysaftercreationgreaterthan_python" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
+        <span id="days_after_creation_greater_than_python">
+<a href="#days_after_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>creation_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1141,8 +1141,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="daysaftercreationgreaterthan_python">
-<a href="#daysaftercreationgreaterthan_python" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
+        <span id="days_after_creation_greater_than_python">
+<a href="#days_after_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>creation_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1220,8 +1220,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="daysaftermodificationgreaterthan_python">
-<a href="#daysaftermodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="days_after_modification_greater_than_python">
+<a href="#days_after_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1299,8 +1299,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="daysaftermodificationgreaterthan_python">
-<a href="#daysaftermodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="days_after_modification_greater_than_python">
+<a href="#days_after_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1408,11 +1408,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseblob_python">
-<a href="#baseblob_python" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
+        <span id="base_blob_python">
+<a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblob">Dict[Management<wbr>Policy<wbr>Base<wbr>Blob]</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
 
@@ -1422,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshot">Dict[Management<wbr>Policy<wbr>Snap<wbr>Shot]</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
 
@@ -1527,11 +1527,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseblob_python">
-<a href="#baseblob_python" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
+        <span id="base_blob_python">
+<a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Dict[Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
 
@@ -1541,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Dict[Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
 
@@ -1680,27 +1680,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Dict[Date<wbr>After<wbr>Modification]</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tiertoarchive_python">
-<a href="#tiertoarchive_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
+        <span id="tier_to_archive_python">
+<a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Dict[Date<wbr>After<wbr>Modification]</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tiertocool_python">
-<a href="#tiertocool_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
+        <span id="tier_to_cool_python">
+<a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Dict[Date<wbr>After<wbr>Modification]</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
 
@@ -1839,27 +1839,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Dict[Date<wbr>After<wbr>Modification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tiertoarchive_python">
-<a href="#tiertoarchive_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
+        <span id="tier_to_archive_python">
+<a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Dict[Date<wbr>After<wbr>Modification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tiertocool_python">
-<a href="#tiertocool_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
+        <span id="tier_to_cool_python">
+<a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Dict[Date<wbr>After<wbr>Modification<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
 
@@ -1968,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyaction">Dict[Management<wbr>Policy<wbr>Action]</a></span>
+        <span class="property-type"><a href="#managementpolicyaction">Management<wbr>Policy<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
 
@@ -1978,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilter">Dict[Management<wbr>Policy<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#managementpolicyfilter">Management<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
 
@@ -2087,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Dict[Management<wbr>Policy<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
 
@@ -2097,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Dict[Management<wbr>Policy<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
 
@@ -2232,31 +2232,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="blobtypes_python">
-<a href="#blobtypes_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
+        <span id="blob_types_python">
+<a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobindexmatch_python">
-<a href="#blobindexmatch_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Index<wbr>Match</a>
+        <span id="blob_index_match_python">
+<a href="#blob_index_match_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>index_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilter">List[Tag<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#tagfilter">Sequence[Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatch_python">
-<a href="#prefixmatch_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
+        <span id="prefix_match_python">
+<a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
 
@@ -2391,31 +2391,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="blobtypes_python">
-<a href="#blobtypes_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
+        <span id="blob_types_python">
+<a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobindexmatch_python">
-<a href="#blobindexmatch_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Index<wbr>Match</a>
+        <span id="blob_index_match_python">
+<a href="#blob_index_match_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>index_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">List[Tag<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">Sequence[Tag<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatch_python">
-<a href="#prefixmatch_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
+        <span id="prefix_match_python">
+<a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
 
@@ -2584,7 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinition">Dict[Management<wbr>Policy<wbr>Definition]</a></span>
+        <span class="property-type"><a href="#managementpolicydefinition">Management<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
 
@@ -2783,7 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Dict[Management<wbr>Policy<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
 
@@ -2892,7 +2892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List[Management<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
 
@@ -2971,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">List[Management<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
 
@@ -3050,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Dict[Date<wbr>After<wbr>Creation]</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
 
@@ -3129,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Dict[Date<wbr>After<wbr>Creation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
 

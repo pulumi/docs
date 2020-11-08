@@ -467,7 +467,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsoutputresponse">Dict[Log<wbr>Analytics<wbr>Output<wbr>Response]</a></span>
+        <span class="property-type"><a href="#loganalyticsoutputresponse">Log<wbr>Analytics<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LogAnalyticsOutput{{% /md %}}</dd>
 

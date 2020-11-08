@@ -487,7 +487,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingpropertiesresponse">Dict[Connection<wbr>Setting<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionsettingpropertiesresponse">Connection<wbr>Setting<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
 
@@ -537,7 +537,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
 
@@ -547,7 +547,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
 
@@ -961,7 +961,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameterresponse">List[Connection<wbr>Setting<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionsettingparameterresponse">Sequence[Connection<wbr>Setting<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd>
 

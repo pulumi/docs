@@ -23,7 +23,7 @@ The base class for backup policy. Workload-specific backup policies are derived 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureIaaSVMProtectionPolicy] | Dict[AzureSqlProtectionPolicy] | Dict[MabProtectionPolicy]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureIaaSVMProtectionPolicyArgs, AzureSqlProtectionPolicyArgs, MabProtectionPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -592,7 +592,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy] | Dict[Azure<wbr>Sql<wbr>Protection<wbr>Policy] | Dict[Mab<wbr>Protection<wbr>Policy]</span>
+        <span class="property-type">Union[Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Args, Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Args, Mab<wbr>Protection<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The base class for a backup policy. Workload-specific backup policies are derived from this class.{{% /md %}}</dd>
 
@@ -602,7 +602,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -835,8 +835,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemscount_python">
-<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+        <span id="protected_items_count_python">
+<a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -849,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy] | Dict[Simple<wbr>Retention<wbr>Policy]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args, Simple<wbr>Retention<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
 
@@ -859,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy] | Dict[Simple<wbr>Schedule<wbr>Policy]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args, Simple<wbr>Schedule<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The backup schedule specified as part of backup policy.{{% /md %}}</dd>
 
@@ -994,8 +994,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemscount_python">
-<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+        <span id="protected_items_count_python">
+<a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1008,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Retention<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args, Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
 
@@ -1018,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Schedule<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args, Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The backup schedule specified as part of backup policy.{{% /md %}}</dd>
 
@@ -1123,8 +1123,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemscount_python">
-<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+        <span id="protected_items_count_python">
+<a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1137,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy] | Dict[Simple<wbr>Retention<wbr>Policy]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args, Simple<wbr>Retention<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The retention policy details.{{% /md %}}</dd>
 
@@ -1242,8 +1242,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemscount_python">
-<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+        <span id="protected_items_count_python">
+<a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1256,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Retention<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args, Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The retention policy details.{{% /md %}}</dd>
 
@@ -1331,11 +1331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="daysofthemonth_python">
-<a href="#daysofthemonth_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
+        <span id="days_of_the_month_python">
+<a href="#days_of_the_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>month</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">List[Day]</a></span>
+        <span class="property-type"><a href="#day">Sequence[Day<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
 
@@ -1410,11 +1410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="daysofthemonth_python">
-<a href="#daysofthemonth_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
+        <span id="days_of_the_month_python">
+<a href="#days_of_the_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>month</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">List[Day<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dayresponse">Sequence[Day<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
 
@@ -1519,21 +1519,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Dict[Retention<wbr>Duration]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention duration of retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimes_python">
-<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+        <span id="retention_times_python">
+<a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The retention times of retention policy.{{% /md %}}</dd>
 
@@ -1638,21 +1638,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention duration of retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimes_python">
-<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+        <span id="retention_times_python">
+<a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The retention times of retention policy.{{% /md %}}</dd>
 
@@ -1767,8 +1767,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="islast_python">
-<a href="#islast_python" style="color: inherit; text-decoration: inherit;">is<wbr>Last</a>
+        <span id="is_last_python">
+<a href="#is_last_python" style="color: inherit; text-decoration: inherit;">is_<wbr>last</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1886,8 +1886,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="islast_python">
-<a href="#islast_python" style="color: inherit; text-decoration: inherit;">is<wbr>Last</a>
+        <span id="is_last_python">
+<a href="#is_last_python" style="color: inherit; text-decoration: inherit;">is_<wbr>last</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2059,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionschedule">Dict[Daily<wbr>Retention<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#dailyretentionschedule">Daily<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the backup policy.{{% /md %}}</dd>
 
@@ -2069,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionschedule">Dict[Monthly<wbr>Retention<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#monthlyretentionschedule">Monthly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the backup policy.{{% /md %}}</dd>
 
@@ -2079,17 +2079,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionschedule">Dict[Weekly<wbr>Retention<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#weeklyretentionschedule">Weekly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the backup policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="yearlyschedule_python">
-<a href="#yearlyschedule_python" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
+        <span id="yearly_schedule_python">
+<a href="#yearly_schedule_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionschedule">Dict[Yearly<wbr>Retention<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#yearlyretentionschedule">Yearly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the backup policy.{{% /md %}}</dd>
 
@@ -2258,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionscheduleresponse">Dict[Daily<wbr>Retention<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the backup policy.{{% /md %}}</dd>
 
@@ -2268,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Dict[Monthly<wbr>Retention<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the backup policy.{{% /md %}}</dd>
 
@@ -2278,17 +2278,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Dict[Weekly<wbr>Retention<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the backup policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="yearlyschedule_python">
-<a href="#yearlyschedule_python" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
+        <span id="yearly_schedule_python">
+<a href="#yearly_schedule_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Dict[Yearly<wbr>Retention<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the backup policy.{{% /md %}}</dd>
 
@@ -2501,8 +2501,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemscount_python">
-<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+        <span id="protected_items_count_python">
+<a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2515,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy] | Dict[Simple<wbr>Retention<wbr>Policy]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args, Simple<wbr>Retention<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The details specified in the Retention policy.{{% /md %}}</dd>
 
@@ -2525,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy] | Dict[Simple<wbr>Schedule<wbr>Policy]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args, Simple<wbr>Schedule<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The schedule specified in the backup policy.{{% /md %}}</dd>
 
@@ -2660,8 +2660,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protecteditemscount_python">
-<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+        <span id="protected_items_count_python">
+<a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2674,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Retention<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args, Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The details specified in the Retention policy.{{% /md %}}</dd>
 
@@ -2684,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Schedule<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Union[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args, Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The schedule specified in the backup policy.{{% /md %}}</dd>
 
@@ -2879,28 +2879,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Dict[Retention<wbr>Duration]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduledaily_python">
-<a href="#retentionscheduledaily_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
+        <span id="retention_schedule_daily_python">
+<a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Dict[Daily<wbr>Retention<wbr>Format]</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for the monthly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduleformattype_python">
-<a href="#retentionscheduleformattype_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+        <span id="retention_schedule_format_type_python">
+<a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2909,21 +2909,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduleweekly_python">
-<a href="#retentionscheduleweekly_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
+        <span id="retention_schedule_weekly_python">
+<a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Dict[Weekly<wbr>Retention<wbr>Format]</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for the monthly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimes_python">
-<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+        <span id="retention_times_python">
+<a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
 
@@ -3118,28 +3118,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduledaily_python">
-<a href="#retentionscheduledaily_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
+        <span id="retention_schedule_daily_python">
+<a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Dict[Daily<wbr>Retention<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for the monthly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduleformattype_python">
-<a href="#retentionscheduleformattype_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+        <span id="retention_schedule_format_type_python">
+<a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3148,21 +3148,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduleweekly_python">
-<a href="#retentionscheduleweekly_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
+        <span id="retention_schedule_weekly_python">
+<a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Dict[Weekly<wbr>Retention<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for the monthly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimes_python">
-<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+        <span id="retention_times_python">
+<a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
 
@@ -3281,8 +3281,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="durationtype_python">
-<a href="#durationtype_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Type</a>
+        <span id="duration_type_python">
+<a href="#duration_type_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3404,8 +3404,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="durationtype_python">
-<a href="#durationtype_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Type</a>
+        <span id="duration_type_python">
+<a href="#duration_type_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3483,11 +3483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Dict[Retention<wbr>Duration]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
 
@@ -3562,11 +3562,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
 
@@ -3731,18 +3731,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedulerundays_python">
-<a href="#schedulerundays_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Days</a>
+        <span id="schedule_run_days_python">
+<a href="#schedule_run_days_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}This list is the days of the week when the schedule runs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedulerunfrequency_python">
-<a href="#schedulerunfrequency_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Frequency</a>
+        <span id="schedule_run_frequency_python">
+<a href="#schedule_run_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3751,18 +3751,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scheduleruntimes_python">
-<a href="#scheduleruntimes_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Times</a>
+        <span id="schedule_run_times_python">
+<a href="#schedule_run_times_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of times, during a day, when the schedule runs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scheduleweeklyfrequency_python">
-<a href="#scheduleweeklyfrequency_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
+        <span id="schedule_weekly_frequency_python">
+<a href="#schedule_weekly_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>weekly_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3930,18 +3930,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedulerundays_python">
-<a href="#schedulerundays_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Days</a>
+        <span id="schedule_run_days_python">
+<a href="#schedule_run_days_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}This list is the days of the week when the schedule runs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schedulerunfrequency_python">
-<a href="#schedulerunfrequency_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Frequency</a>
+        <span id="schedule_run_frequency_python">
+<a href="#schedule_run_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3950,18 +3950,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scheduleruntimes_python">
-<a href="#scheduleruntimes_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Times</a>
+        <span id="schedule_run_times_python">
+<a href="#schedule_run_times_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of times, during a day, when the schedule runs.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scheduleweeklyfrequency_python">
-<a href="#scheduleweeklyfrequency_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
+        <span id="schedule_weekly_frequency_python">
+<a href="#schedule_weekly_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>weekly_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4069,21 +4069,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="daysoftheweek_python">
-<a href="#daysoftheweek_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
+        <span id="days_of_the_week_python">
+<a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weeksofthemonth_python">
-<a href="#weeksofthemonth_python" style="color: inherit; text-decoration: inherit;">weeks<wbr>Of<wbr>The<wbr>Month</a>
+        <span id="weeks_of_the_month_python">
+<a href="#weeks_of_the_month_python" style="color: inherit; text-decoration: inherit;">weeks_<wbr>of_<wbr>the_<wbr>month</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of weeks of the month.{{% /md %}}</dd>
 
@@ -4188,21 +4188,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="daysoftheweek_python">
-<a href="#daysoftheweek_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
+        <span id="days_of_the_week_python">
+<a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weeksofthemonth_python">
-<a href="#weeksofthemonth_python" style="color: inherit; text-decoration: inherit;">weeks<wbr>Of<wbr>The<wbr>Month</a>
+        <span id="weeks_of_the_month_python">
+<a href="#weeks_of_the_month_python" style="color: inherit; text-decoration: inherit;">weeks_<wbr>of_<wbr>the_<wbr>month</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of weeks of the month.{{% /md %}}</dd>
 
@@ -4337,31 +4337,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="daysoftheweek_python">
-<a href="#daysoftheweek_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
+        <span id="days_of_the_week_python">
+<a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the days of the week for the weekly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Dict[Retention<wbr>Duration]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimes_python">
-<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+        <span id="retention_times_python">
+<a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
 
@@ -4496,31 +4496,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="daysoftheweek_python">
-<a href="#daysoftheweek_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
+        <span id="days_of_the_week_python">
+<a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the days of the week for the weekly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimes_python">
-<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+        <span id="retention_times_python">
+<a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
 
@@ -4745,38 +4745,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monthsofyear_python">
-<a href="#monthsofyear_python" style="color: inherit; text-decoration: inherit;">months<wbr>Of<wbr>Year</a>
+        <span id="months_of_year_python">
+<a href="#months_of_year_python" style="color: inherit; text-decoration: inherit;">months_<wbr>of_<wbr>year</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the months of year for the yearly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Dict[Retention<wbr>Duration]</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration for the retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduledaily_python">
-<a href="#retentionscheduledaily_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
+        <span id="retention_schedule_daily_python">
+<a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Dict[Daily<wbr>Retention<wbr>Format]</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for the yearly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduleformattype_python">
-<a href="#retentionscheduleformattype_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+        <span id="retention_schedule_format_type_python">
+<a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4785,21 +4785,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduleweekly_python">
-<a href="#retentionscheduleweekly_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
+        <span id="retention_schedule_weekly_python">
+<a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Dict[Weekly<wbr>Retention<wbr>Format]</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for the yearly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimes_python">
-<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+        <span id="retention_times_python">
+<a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retention times for the retention policy.{{% /md %}}</dd>
 
@@ -5024,38 +5024,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monthsofyear_python">
-<a href="#monthsofyear_python" style="color: inherit; text-decoration: inherit;">months<wbr>Of<wbr>Year</a>
+        <span id="months_of_year_python">
+<a href="#months_of_year_python" style="color: inherit; text-decoration: inherit;">months_<wbr>of_<wbr>year</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the months of year for the yearly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionduration_python">
-<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+        <span id="retention_duration_python">
+<a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration for the retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduledaily_python">
-<a href="#retentionscheduledaily_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
+        <span id="retention_schedule_daily_python">
+<a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Dict[Daily<wbr>Retention<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for the yearly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduleformattype_python">
-<a href="#retentionscheduleformattype_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+        <span id="retention_schedule_format_type_python">
+<a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5064,21 +5064,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionscheduleweekly_python">
-<a href="#retentionscheduleweekly_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
+        <span id="retention_schedule_weekly_python">
+<a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Dict[Weekly<wbr>Retention<wbr>Format<wbr>Response]</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for the yearly retention policy.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentiontimes_python">
-<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+        <span id="retention_times_python">
+<a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retention times for the retention policy.{{% /md %}}</dd>
 

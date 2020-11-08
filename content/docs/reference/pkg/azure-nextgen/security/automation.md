@@ -90,13 +90,13 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
     is_enabled=True,
     location="Central US",
     resource_group_name="exampleResourceGroup",
-    scopes=[{
-        "description": "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
-        "scopePath": "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
-    }],
-    sources=[{
-        "eventSource": "Assessments",
-    }],
+    scopes=[azure_nextgen.security.v20190101preview.AutomationScopeArgs(
+        description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+        scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+    )],
+    sources=[azure_nextgen.security.v20190101preview.AutomationSourceArgs(
+        event_source="Assessments",
+    )],
     tags={})
 
 ```
@@ -225,21 +225,21 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
     is_enabled=True,
     location="Central US",
     resource_group_name="exampleResourceGroup",
-    scopes=[{
-        "description": "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
-        "scopePath": "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
-    }],
-    sources=[{
-        "eventSource": "Assessments",
-        "ruleSets": [{
-            "rules": [{
-                "expectedValue": "High",
-                "operator": "Equals",
-                "propertyJPath": "properties.metadata.severity",
-                "propertyType": "String",
-            }],
-        }],
-    }],
+    scopes=[azure_nextgen.security.v20190101preview.AutomationScopeArgs(
+        description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+        scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+    )],
+    sources=[azure_nextgen.security.v20190101preview.AutomationSourceArgs(
+        event_source="Assessments",
+        rule_sets=[azure_nextgen.security.v20190101preview.AutomationRuleSetArgs(
+            rules=[azure_nextgen.security.v20190101preview.AutomationTriggeringRuleArgs(
+                expected_value="High",
+                operator="Equals",
+                property_j_path="properties.metadata.severity",
+                property_type="String",
+            )],
+        )],
+    )],
     tags={})
 
 ```
@@ -376,21 +376,21 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
     is_enabled=False,
     location="Central US",
     resource_group_name="exampleResourceGroup",
-    scopes=[{
-        "description": "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
-        "scopePath": "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
-    }],
-    sources=[{
-        "eventSource": "Assessments",
-        "ruleSets": [{
-            "rules": [{
-                "expectedValue": "customAssessment",
-                "operator": "Equals",
-                "propertyJPath": "$.Entity.AssessmentType",
-                "propertyType": "String",
-            }],
-        }],
-    }],
+    scopes=[azure_nextgen.security.v20190101preview.AutomationScopeArgs(
+        description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+        scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+    )],
+    sources=[azure_nextgen.security.v20190101preview.AutomationSourceArgs(
+        event_source="Assessments",
+        rule_sets=[azure_nextgen.security.v20190101preview.AutomationRuleSetArgs(
+            rules=[azure_nextgen.security.v20190101preview.AutomationTriggeringRuleArgs(
+                expected_value="customAssessment",
+                operator="Equals",
+                property_j_path="$.Entity.AssessmentType",
+                property_type="String",
+            )],
+        )],
+    )],
     tags={})
 
 ```
@@ -449,7 +449,7 @@ const automation = new azure_nextgen.security.v20190101preview.Automation("autom
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Security/V20190101preview:AutomationActionEventHub, Azure-Nextgen:Security/V20190101preview:AutomationActionLogicApp, Azure-Nextgen:Security/V20190101preview:AutomationActionWorkspace, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">automation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[AutomationScope]]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[List[AutomationSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[AutomationActionEventHubArgs, AutomationActionLogicAppArgs, AutomationActionWorkspaceArgs]]]</span> = None<span class="p">, </span><span class="nx">automation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationScopeArgs]]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -998,7 +998,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Security/V20190101preview:Automation<wbr>Action<wbr>Event<wbr>Hub, Azure-Nextgen:Security/V20190101preview:Automation<wbr>Action<wbr>Logic<wbr>App, Azure-Nextgen:Security/V20190101preview:Automation<wbr>Action<wbr>Workspace, Default=>]</span>
+        <span class="property-type">Sequence[Union[Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Args, Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Args, Automation<wbr>Action<wbr>Workspace<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd>
 
@@ -1058,7 +1058,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationscope">List[Automation<wbr>Scope]</a></span>
+        <span class="property-type"><a href="#automationscope">Sequence[Automation<wbr>Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd>
 
@@ -1068,7 +1068,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsource">List[Automation<wbr>Source]</a></span>
+        <span class="property-type"><a href="#automationsource">Sequence[Automation<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd>
 
@@ -1078,7 +1078,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd>
 
@@ -1500,8 +1500,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="saspolicyname_python">
-<a href="#saspolicyname_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Policy<wbr>Name</a>
+        <span id="sas_policy_name_python">
+<a href="#sas_policy_name_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>policy_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1999,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringrule">List[Automation<wbr>Triggering<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#automationtriggeringrule">Sequence[Automation<wbr>Triggering<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2078,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringruleresponse">List[Automation<wbr>Triggering<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#automationtriggeringruleresponse">Sequence[Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2421,8 +2421,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventsource_python">
-<a href="#eventsource_python" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+        <span id="event_source_python">
+<a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2431,11 +2431,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rulesets_python">
-<a href="#rulesets_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
+        <span id="rule_sets_python">
+<a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruleset">List[Automation<wbr>Rule<wbr>Set]</a></span>
+        <span class="property-type"><a href="#automationruleset">Sequence[Automation<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
 
@@ -2540,8 +2540,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventsource_python">
-<a href="#eventsource_python" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+        <span id="event_source_python">
+<a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2550,11 +2550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rulesets_python">
-<a href="#rulesets_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
+        <span id="rule_sets_python">
+<a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulesetresponse">List[Automation<wbr>Rule<wbr>Set<wbr>Response]</a></span>
+        <span class="property-type"><a href="#automationrulesetresponse">Sequence[Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
 
@@ -2719,8 +2719,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expectedvalue_python">
-<a href="#expectedvalue_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
+        <span id="expected_value_python">
+<a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2739,8 +2739,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertyjpath_python">
-<a href="#propertyjpath_python" style="color: inherit; text-decoration: inherit;">property<wbr>JPath</a>
+        <span id="property_j_path_python">
+<a href="#property_j_path_python" style="color: inherit; text-decoration: inherit;">property_<wbr>j_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2749,8 +2749,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertytype_python">
-<a href="#propertytype_python" style="color: inherit; text-decoration: inherit;">property<wbr>Type</a>
+        <span id="property_type_python">
+<a href="#property_type_python" style="color: inherit; text-decoration: inherit;">property_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2918,8 +2918,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expectedvalue_python">
-<a href="#expectedvalue_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
+        <span id="expected_value_python">
+<a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2938,8 +2938,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertyjpath_python">
-<a href="#propertyjpath_python" style="color: inherit; text-decoration: inherit;">property<wbr>JPath</a>
+        <span id="property_j_path_python">
+<a href="#property_j_path_python" style="color: inherit; text-decoration: inherit;">property_<wbr>j_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2948,8 +2948,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="propertytype_python">
-<a href="#propertytype_python" style="color: inherit; text-decoration: inherit;">property<wbr>Type</a>
+        <span id="property_type_python">
+<a href="#property_type_python" style="color: inherit; text-decoration: inherit;">property_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

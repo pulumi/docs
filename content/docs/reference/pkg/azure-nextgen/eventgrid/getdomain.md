@@ -622,7 +622,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundipruleresponse">List[Inbound<wbr>Ip<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inboundipruleresponse">Sequence[Inbound<wbr>Ip<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd>
 
@@ -642,7 +642,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#input_schema_mapping_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsoninputschemamappingresponse">Dict[Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsoninputschemamappingresponse">Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the InputSchemaMapping which specified the info about mapping event payload.{{% /md %}}</dd>
 
@@ -652,7 +652,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections.{{% /md %}}</dd>
 
@@ -673,7 +673,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
 
@@ -1384,7 +1384,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Dict[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -1394,7 +1394,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Dict[Json<wbr>Field<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -1404,7 +1404,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Dict[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -1414,7 +1414,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Dict[Json<wbr>Field<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -1424,7 +1424,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Dict[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -1434,7 +1434,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Dict[Json<wbr>Field<wbr>Response]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd>
 
@@ -1723,7 +1723,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd>
 
@@ -1733,7 +1733,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd>
 
@@ -1743,7 +1743,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Dict[Connection<wbr>State<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd>
 

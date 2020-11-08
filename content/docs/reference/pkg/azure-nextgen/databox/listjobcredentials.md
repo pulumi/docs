@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unencryptedcredentialsresponse">List[Unencrypted<wbr>Credentials<wbr>Response]</a></span>
+        <span class="property-type"><a href="#unencryptedcredentialsresponse">Sequence[Unencrypted<wbr>Credentials<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of unencrypted credentials.{{% /md %}}</dd>
 
@@ -438,8 +438,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accountconnectionstring_python">
-<a href="#accountconnectionstring_python" style="color: inherit; text-decoration: inherit;">account<wbr>Connection<wbr>String</a>
+        <span id="account_connection_string_python">
+<a href="#account_connection_string_python" style="color: inherit; text-decoration: inherit;">account_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -458,8 +458,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dataaccounttype_python">
-<a href="#dataaccounttype_python" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
+        <span id="data_account_type_python">
+<a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -468,11 +468,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sharecredentialdetails_python">
-<a href="#sharecredentialdetails_python" style="color: inherit; text-decoration: inherit;">share<wbr>Credential<wbr>Details</a>
+        <span id="share_credential_details_python">
+<a href="#share_credential_details_python" style="color: inherit; text-decoration: inherit;">share_<wbr>credential_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharecredentialdetailsresponse">List[Share<wbr>Credential<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharecredentialdetailsresponse">Sequence[Share<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per share level unencrypted access credentials.{{% /md %}}</dd>
 
@@ -581,7 +581,7 @@ The following output properties are available:
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following output properties are available:
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">List[Additional<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">Sequence[Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">List[Cloud<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Sequence[Cloud<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
 
@@ -1144,21 +1144,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dcaccesssecuritycode_python">
-<a href="#dcaccesssecuritycode_python" style="color: inherit; text-decoration: inherit;">dc<wbr>Access<wbr>Security<wbr>Code</a>
+        <span id="dc_access_security_code_python">
+<a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dict[Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="disksecrets_python">
-<a href="#disksecrets_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Secrets</a>
+        <span id="disk_secrets_python">
+<a href="#disk_secrets_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksecretresponse">List[Disk<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#disksecretresponse">Sequence[Disk<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secrets object for that device.{{% /md %}}</dd>
 
@@ -1168,14 +1168,14 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Dict[Cloud<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="ispasskeyuserdefined_python">
-<a href="#ispasskeyuserdefined_python" style="color: inherit; text-decoration: inherit;">is<wbr>Passkey<wbr>User<wbr>Defined</a>
+        <span id="is_passkey_user_defined_python">
+<a href="#is_passkey_user_defined_python" style="color: inherit; text-decoration: inherit;">is_<wbr>passkey_<wbr>user_<wbr>defined</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1184,8 +1184,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="passkey_python">
-<a href="#passkey_python" style="color: inherit; text-decoration: inherit;">pass<wbr>Key</a>
+        <span id="pass_key_python">
+<a href="#pass_key_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1323,21 +1323,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cabinetpodsecrets_python">
-<a href="#cabinetpodsecrets_python" style="color: inherit; text-decoration: inherit;">cabinet<wbr>Pod<wbr>Secrets</a>
+        <span id="cabinet_pod_secrets_python">
+<a href="#cabinet_pod_secrets_python" style="color: inherit; text-decoration: inherit;">cabinet_<wbr>pod_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxheavysecretresponse">List[Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databoxheavysecretresponse">Sequence[Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a databox heavy job.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="dcaccesssecuritycode_python">
-<a href="#dcaccesssecuritycode_python" style="color: inherit; text-decoration: inherit;">dc<wbr>Access<wbr>Security<wbr>Code</a>
+        <span id="dc_access_security_code_python">
+<a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dict[Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
 
@@ -1347,7 +1347,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Dict[Cloud<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
 
@@ -1542,18 +1542,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accountcredentialdetails_python">
-<a href="#accountcredentialdetails_python" style="color: inherit; text-decoration: inherit;">account<wbr>Credential<wbr>Details</a>
+        <span id="account_credential_details_python">
+<a href="#account_credential_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>credential_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcredentialdetailsresponse">List[Account<wbr>Credential<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#accountcredentialdetailsresponse">Sequence[Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="devicepassword_python">
-<a href="#devicepassword_python" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
+        <span id="device_password_python">
+<a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1562,8 +1562,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deviceserialnumber_python">
-<a href="#deviceserialnumber_python" style="color: inherit; text-decoration: inherit;">device<wbr>Serial<wbr>Number</a>
+        <span id="device_serial_number_python">
+<a href="#device_serial_number_python" style="color: inherit; text-decoration: inherit;">device_<wbr>serial_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1572,8 +1572,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="encodedvalidationcertpubkey_python">
-<a href="#encodedvalidationcertpubkey_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Validation<wbr>Cert<wbr>Pub<wbr>Key</a>
+        <span id="encoded_validation_cert_pub_key_python">
+<a href="#encoded_validation_cert_pub_key_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>validation_<wbr>cert_<wbr>pub_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1582,11 +1582,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="networkconfigurations_python">
-<a href="#networkconfigurations_python" style="color: inherit; text-decoration: inherit;">network<wbr>Configurations</a>
+        <span id="network_configurations_python">
+<a href="#network_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List[Appliance<wbr>Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Sequence[Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
 
@@ -1781,18 +1781,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accountcredentialdetails_python">
-<a href="#accountcredentialdetails_python" style="color: inherit; text-decoration: inherit;">account<wbr>Credential<wbr>Details</a>
+        <span id="account_credential_details_python">
+<a href="#account_credential_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>credential_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcredentialdetailsresponse">List[Account<wbr>Credential<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#accountcredentialdetailsresponse">Sequence[Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="devicepassword_python">
-<a href="#devicepassword_python" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
+        <span id="device_password_python">
+<a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1801,8 +1801,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deviceserialnumber_python">
-<a href="#deviceserialnumber_python" style="color: inherit; text-decoration: inherit;">device<wbr>Serial<wbr>Number</a>
+        <span id="device_serial_number_python">
+<a href="#device_serial_number_python" style="color: inherit; text-decoration: inherit;">device_<wbr>serial_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1811,8 +1811,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="encodedvalidationcertpubkey_python">
-<a href="#encodedvalidationcertpubkey_python" style="color: inherit; text-decoration: inherit;">encoded<wbr>Validation<wbr>Cert<wbr>Pub<wbr>Key</a>
+        <span id="encoded_validation_cert_pub_key_python">
+<a href="#encoded_validation_cert_pub_key_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>validation_<wbr>cert_<wbr>pub_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1821,11 +1821,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="networkconfigurations_python">
-<a href="#networkconfigurations_python" style="color: inherit; text-decoration: inherit;">network<wbr>Configurations</a>
+        <span id="network_configurations_python">
+<a href="#network_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List[Appliance<wbr>Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Sequence[Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
 
@@ -1960,11 +1960,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dcaccesssecuritycode_python">
-<a href="#dcaccesssecuritycode_python" style="color: inherit; text-decoration: inherit;">dc<wbr>Access<wbr>Security<wbr>Code</a>
+        <span id="dc_access_security_code_python">
+<a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dict[Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
 
@@ -1974,17 +1974,17 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Dict[Cloud<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="podsecrets_python">
-<a href="#podsecrets_python" style="color: inherit; text-decoration: inherit;">pod<wbr>Secrets</a>
+        <span id="pod_secrets_python">
+<a href="#pod_secrets_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxsecretresponse">List[Data<wbr>Box<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databoxsecretresponse">Sequence[Data<wbr>Box<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a job.{{% /md %}}</dd>
 
@@ -2089,8 +2089,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forwarddcaccesscode_python">
-<a href="#forwarddcaccesscode_python" style="color: inherit; text-decoration: inherit;">forward<wbr>Dc<wbr>Access<wbr>Code</a>
+        <span id="forward_dc_access_code_python">
+<a href="#forward_dc_access_code_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>dc_<wbr>access_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2099,8 +2099,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reversedcaccesscode_python">
-<a href="#reversedcaccesscode_python" style="color: inherit; text-decoration: inherit;">reverse<wbr>Dc<wbr>Access<wbr>Code</a>
+        <span id="reverse_dc_access_code_python">
+<a href="#reverse_dc_access_code_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>dc_<wbr>access_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2208,8 +2208,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bitlockerkey_python">
-<a href="#bitlockerkey_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Locker<wbr>Key</a>
+        <span id="bit_locker_key_python">
+<a href="#bit_locker_key_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>locker_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2218,8 +2218,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="diskserialnumber_python">
-<a href="#diskserialnumber_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Serial<wbr>Number</a>
+        <span id="disk_serial_number_python">
+<a href="#disk_serial_number_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>serial_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2427,16 +2427,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sharetype_python">
-<a href="#sharetype_python" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of the share.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="share_name_python">
 <a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
 </span> 
@@ -2447,11 +2437,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="supportedaccessprotocols_python">
-<a href="#supportedaccessprotocols_python" style="color: inherit; text-decoration: inherit;">supported<wbr>Access<wbr>Protocols</a>
+        <span id="share_type_python">
+<a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the share.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="supported_access_protocols_python">
+<a href="#supported_access_protocols_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>access_<wbr>protocols</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Access protocols supported on the device.{{% /md %}}</dd>
 
@@ -2566,16 +2566,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="jobsecrets_python">
-<a href="#jobsecrets_python" style="color: inherit; text-decoration: inherit;">job<wbr>Secrets</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response] | Dict[Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response] | Dict[Databox<wbr>Job<wbr>Secrets<wbr>Response]</span>
-    </dt>
-    <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span> 
@@ -2583,6 +2573,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the job.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="job_secrets_python">
+<a href="#job_secrets_python" style="color: inherit; text-decoration: inherit;">job_<wbr>secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union[Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args, Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

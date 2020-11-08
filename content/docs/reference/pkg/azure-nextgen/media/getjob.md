@@ -340,7 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -467,7 +467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -594,7 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Job<wbr>Input<wbr>Clip<wbr>Response] | Dict[Job<wbr>Inputs<wbr>Response]</span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputassetresponse">List[Job<wbr>Output<wbr>Asset<wbr>Response]</a></span>
+        <span class="property-type"><a href="#joboutputassetresponse">Sequence[Job<wbr>Output<wbr>Asset<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd>
 
@@ -721,7 +721,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -729,7 +729,7 @@ The following output properties are available:
 <a href="#correlation_data_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd>
 
@@ -1172,7 +1172,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrordetailresponse">List[Job<wbr>Error<wbr>Detail<wbr>Response]</a></span>
+        <span class="property-type"><a href="#joberrordetailresponse">Sequence[Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd>
 
@@ -1361,7 +1361,7 @@ The following output properties are available:
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Absolute<wbr>Clip<wbr>Time<wbr>Response] | Dict[Utc<wbr>Clip<wbr>Time<wbr>Response]</span>
+        <span class="property-type">Union[Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args, Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
 
@@ -1371,7 +1371,7 @@ The following output properties are available:
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
 
@@ -1391,7 +1391,7 @@ The following output properties are available:
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Absolute<wbr>Clip<wbr>Time<wbr>Response] | Dict[Utc<wbr>Clip<wbr>Time<wbr>Response]</span>
+        <span class="property-type">Union[Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args, Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
 
@@ -1470,7 +1470,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Job<wbr>Input<wbr>Clip<wbr>Response, Azure-Nextgen:Media/Latest:Job<wbr>Inputs<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Job<wbr>Inputs<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
 
@@ -1749,7 +1749,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberrorresponse">Dict[Job<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#joberrorresponse">Job<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd>
 

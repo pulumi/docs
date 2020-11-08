@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#invoicesectionwithcreatesubpermissionresponse">List[Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response]</a></span>
+        <span class="property-type"><a href="#invoicesectionwithcreatesubpermissionresponse">Sequence[Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd>
 
@@ -338,8 +338,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="skudescription_python">
-<a href="#skudescription_python" style="color: inherit; text-decoration: inherit;">sku<wbr>Description</a>
+        <span id="sku_description_python">
+<a href="#sku_description_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -348,8 +348,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skuid_python">
-<a href="#skuid_python" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
+        <span id="sku_id_python">
+<a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -697,8 +697,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="billingprofiledisplayname_python">
-<a href="#billingprofiledisplayname_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Display<wbr>Name</a>
+        <span id="billing_profile_display_name_python">
+<a href="#billing_profile_display_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -707,8 +707,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="billingprofileid_python">
-<a href="#billingprofileid_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Id</a>
+        <span id="billing_profile_id_python">
+<a href="#billing_profile_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -717,8 +717,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="billingprofilespendinglimit_python">
-<a href="#billingprofilespendinglimit_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Spending<wbr>Limit</a>
+        <span id="billing_profile_spending_limit_python">
+<a href="#billing_profile_spending_limit_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>spending_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -727,8 +727,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="billingprofilestatus_python">
-<a href="#billingprofilestatus_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Status</a>
+        <span id="billing_profile_status_python">
+<a href="#billing_profile_status_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -737,8 +737,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="billingprofilestatusreasoncode_python">
-<a href="#billingprofilestatusreasoncode_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Status<wbr>Reason<wbr>Code</a>
+        <span id="billing_profile_status_reason_code_python">
+<a href="#billing_profile_status_reason_code_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>status_<wbr>reason_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -747,8 +747,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="billingprofilesystemid_python">
-<a href="#billingprofilesystemid_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>System<wbr>Id</a>
+        <span id="billing_profile_system_id_python">
+<a href="#billing_profile_system_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>system_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -757,8 +757,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="invoicesectiondisplayname_python">
-<a href="#invoicesectiondisplayname_python" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Display<wbr>Name</a>
+        <span id="invoice_section_display_name_python">
+<a href="#invoice_section_display_name_python" style="color: inherit; text-decoration: inherit;">invoice_<wbr>section_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -767,8 +767,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="invoicesectionid_python">
-<a href="#invoicesectionid_python" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Id</a>
+        <span id="invoice_section_id_python">
+<a href="#invoice_section_id_python" style="color: inherit; text-decoration: inherit;">invoice_<wbr>section_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -777,8 +777,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="invoicesectionsystemid_python">
-<a href="#invoicesectionsystemid_python" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>System<wbr>Id</a>
+        <span id="invoice_section_system_id_python">
+<a href="#invoice_section_system_id_python" style="color: inherit; text-decoration: inherit;">invoice_<wbr>section_<wbr>system_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -787,11 +787,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enabledazureplans_python">
-<a href="#enabledazureplans_python" style="color: inherit; text-decoration: inherit;">enabled<wbr>Azure<wbr>Plans</a>
+        <span id="enabled_azure_plans_python">
+<a href="#enabled_azure_plans_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>azure_<wbr>plans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureplanresponse">List[Azure<wbr>Plan<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureplanresponse">Sequence[Azure<wbr>Plan<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
 

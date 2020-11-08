@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#field_definition_values_python" style="color: inherit; text-decoration: inherit;">field_<wbr>definition_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets the field definition values of the connection.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiontypeassociationpropertyresponse">Dict[Connection<wbr>Type<wbr>Association<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectiontypeassociationpropertyresponse">Connection<wbr>Type<wbr>Association<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectionType of the connection.{{% /md %}}</dd>
 

@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Types definitions. Used for Swagger/OpenAPI schemas only, null otherwise.{{% /md %}}</dd>
 

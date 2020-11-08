@@ -30,10 +30,12 @@ Explore the resources and functions of the compute module in the Azure NextGen p
     <li><a href="sshpublickey" title="SshPublicKey"><span class="symbol resource"></span>SshPublicKey</a></li>
     <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
     <li><a href="virtualmachineextension" title="VirtualMachineExtension"><span class="symbol resource"></span>VirtualMachineExtension</a></li>
+    <li><a href="virtualmachineruncommandbyvirtualmachine" title="VirtualMachineRunCommandByVirtualMachine"><span class="symbol resource"></span>VirtualMachineRunCommandByVirtualMachine</a></li>
     <li><a href="virtualmachinescaleset" title="VirtualMachineScaleSet"><span class="symbol resource"></span>VirtualMachineScaleSet</a></li>
     <li><a href="virtualmachinescalesetextension" title="VirtualMachineScaleSetExtension"><span class="symbol resource"></span>VirtualMachineScaleSetExtension</a></li>
     <li><a href="virtualmachinescalesetvm" title="VirtualMachineScaleSetVM"><span class="symbol resource"></span>VirtualMachineScaleSetVM</a></li>
     <li><a href="virtualmachinescalesetvmextension" title="VirtualMachineScaleSetVMExtension"><span class="symbol resource"></span>VirtualMachineScaleSetVMExtension</a></li>
+    <li><a href="virtualmachinescalesetvmruncommand" title="VirtualMachineScaleSetVMRunCommand"><span class="symbol resource"></span>VirtualMachineScaleSetVMRunCommand</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -59,10 +61,12 @@ Explore the resources and functions of the compute module in the Azure NextGen p
     <li><a href="getsshpublickey" title="GetSshPublicKey"><span class="symbol function"></span>GetSshPublicKey</a></li>
     <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
     <li><a href="getvirtualmachineextension" title="GetVirtualMachineExtension"><span class="symbol function"></span>GetVirtualMachineExtension</a></li>
+    <li><a href="getvirtualmachineruncommandbyvirtualmachine" title="GetVirtualMachineRunCommandByVirtualMachine"><span class="symbol function"></span>GetVirtualMachineRunCommandByVirtualMachine</a></li>
     <li><a href="getvirtualmachinescaleset" title="GetVirtualMachineScaleSet"><span class="symbol function"></span>GetVirtualMachineScaleSet</a></li>
     <li><a href="getvirtualmachinescalesetextension" title="GetVirtualMachineScaleSetExtension"><span class="symbol function"></span>GetVirtualMachineScaleSetExtension</a></li>
     <li><a href="getvirtualmachinescalesetvm" title="GetVirtualMachineScaleSetVM"><span class="symbol function"></span>GetVirtualMachineScaleSetVM</a></li>
     <li><a href="getvirtualmachinescalesetvmextension" title="GetVirtualMachineScaleSetVMExtension"><span class="symbol function"></span>GetVirtualMachineScaleSetVMExtension</a></li>
+    <li><a href="getvirtualmachinescalesetvmruncommand" title="GetVirtualMachineScaleSetVMRunCommand"><span class="symbol function"></span>GetVirtualMachineScaleSetVMRunCommand</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -72,7 +76,7 @@ Explore the resources and functions of the compute module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

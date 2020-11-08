@@ -116,9 +116,9 @@ import pulumi_azure_nextgen as azure_nextgen
 bookmark = azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark",
     bookmark_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created="2019-01-01T13:15:30Z",
-    created_by={
-        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
-    },
+    created_by=azure_nextgen.securityinsights.v20190101preview.UserInfoArgs(
+        object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
+    ),
     display_name="My bookmark",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     labels=[
@@ -131,9 +131,9 @@ bookmark = azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark",
     query_result="Security Event query result",
     resource_group_name="myRg",
     updated="2019-01-01T13:15:30Z",
-    updated_by={
-        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
-    },
+    updated_by=azure_nextgen.securityinsights.v20190101preview.UserInfoArgs(
+        object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
+    ),
     workspace_name="myWorkspace")
 
 ```
@@ -186,7 +186,7 @@ const bookmark = new azure_nextgen.securityinsights.v20190101preview.Bookmark("b
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bookmark</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bookmark_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[Dict[UserInfo]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_info</span><span class="p">:</span> <span class="nx">Optional[Dict[IncidentInfo]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[Dict[UserInfo]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bookmark</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bookmark_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_info</span><span class="p">:</span> <span class="nx">Optional[IncidentInfoArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[UserInfoArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -905,7 +905,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Dict[User<wbr>Info]</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd>
 
@@ -925,7 +925,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#incident_info_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentinfo">Dict[Incident<wbr>Info]</a></span>
+        <span class="property-type"><a href="#incidentinfo">Incident<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an incident that relates to bookmark{{% /md %}}</dd>
 
@@ -935,7 +935,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd>
 
@@ -975,7 +975,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Dict[User<wbr>Info]</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the bookmark{{% /md %}}</dd>
 

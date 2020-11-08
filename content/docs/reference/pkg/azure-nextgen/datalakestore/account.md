@@ -151,25 +151,25 @@ import pulumi_azure_nextgen as azure_nextgen
 account = azure_nextgen.datalakestore.latest.Account("account",
     account_name="contosoadla",
     default_group="test_default_group",
-    encryption_config={
-        "keyVaultMetaInfo": {
-            "encryptionKeyName": "test_encryption_key_name",
-            "encryptionKeyVersion": "encryption_key_version",
-            "keyVaultResourceId": "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
-        },
-        "type": "UserManaged",
-    },
+    encryption_config=azure_nextgen.datalakestore.latest.EncryptionConfigArgs(
+        key_vault_meta_info=azure_nextgen.datalakestore.latest.KeyVaultMetaInfoArgs(
+            encryption_key_name="test_encryption_key_name",
+            encryption_key_version="encryption_key_version",
+            key_vault_resource_id="34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+        ),
+        type="UserManaged",
+    ),
     encryption_state="Enabled",
     firewall_allow_azure_ips="Enabled",
-    firewall_rules=[{
-        "endIpAddress": "2.2.2.2",
-        "name": "test_rule",
-        "startIpAddress": "1.1.1.1",
-    }],
+    firewall_rules=[azure_nextgen.datalakestore.latest.CreateFirewallRuleWithAccountParametersArgs(
+        end_ip_address="2.2.2.2",
+        name="test_rule",
+        start_ip_address="1.1.1.1",
+    )],
     firewall_state="Enabled",
-    identity={
-        "type": "SystemAssigned",
-    },
+    identity=azure_nextgen.datalakestore.latest.EncryptionIdentityArgs(
+        type="SystemAssigned",
+    ),
     location="eastus2",
     new_tier="Consumption",
     resource_group_name="contosorg",
@@ -177,10 +177,10 @@ account = azure_nextgen.datalakestore.latest.Account("account",
         "test_key": "test_value",
     },
     trusted_id_provider_state="Enabled",
-    trusted_id_providers=[{
-        "idProvider": "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
-        "name": "test_trusted_id_provider_name",
-    }])
+    trusted_id_providers=[azure_nextgen.datalakestore.latest.CreateTrustedIdProviderWithAccountParametersArgs(
+        id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+        name="test_trusted_id_provider_name",
+    )])
 
 ```
 
@@ -243,7 +243,7 @@ const account = new azure_nextgen.datalakestore.latest.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionConfig]]</span> = None<span class="p">, </span><span class="nx">encryption_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[List[CreateFirewallRuleWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_id_provider_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trusted_id_providers</span><span class="p">:</span> <span class="nx">Optional[List[CreateTrustedIdProviderWithAccountParameters]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[List[CreateVirtualNetworkRuleWithAccountParameters]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[EncryptionConfigArgs]</span> = None<span class="p">, </span><span class="nx">encryption_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateFirewallRuleWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EncryptionIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_id_provider_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trusted_id_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateTrustedIdProviderWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateVirtualNetworkRuleWithAccountParametersArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -932,7 +932,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">Dict[Encryption<wbr>Config]</a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption configuration.{{% /md %}}</dd>
 
@@ -962,7 +962,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">List[Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">Sequence[Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this Data Lake Store account.{{% /md %}}</dd>
 
@@ -982,7 +982,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentity">Dict[Encryption<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption identity, if any.{{% /md %}}</dd>
 
@@ -1002,7 +1002,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trusted_id_providers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>id_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createtrustedidproviderwithaccountparameters">List[Create<wbr>Trusted<wbr>Id<wbr>Provider<wbr>With<wbr>Account<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#createtrustedidproviderwithaccountparameters">Sequence[Create<wbr>Trusted<wbr>Id<wbr>Provider<wbr>With<wbr>Account<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of trusted identity providers associated with this Data Lake Store account.{{% /md %}}</dd>
 
@@ -1032,7 +1032,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createvirtualnetworkrulewithaccountparameters">List[Create<wbr>Virtual<wbr>Network<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#createvirtualnetworkrulewithaccountparameters">Sequence[Create<wbr>Virtual<wbr>Network<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules associated with this Data Lake Store account.{{% /md %}}</dd>
 
@@ -2036,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_meta_info_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>meta_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainfo">Dict[Key<wbr>Vault<wbr>Meta<wbr>Info]</a></span>
+        <span class="property-type"><a href="#keyvaultmetainfo">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd>
 
@@ -2155,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_meta_info_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>meta_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainforesponse">Dict[Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultmetainforesponse">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd>
 

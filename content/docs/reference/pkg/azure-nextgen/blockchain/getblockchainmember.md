@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallruleresponse">List[Firewall<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#firewallruleresponse">Sequence[Firewall<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets firewall rules{{% /md %}}</dd>
 
@@ -929,7 +929,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Dict[Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain member Sku.{{% /md %}}</dd>
 
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describes the resource.{{% /md %}}</dd>
 
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#validator_nodes_sku_python" style="color: inherit; text-decoration: inherit;">validator_<wbr>nodes_<wbr>sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blockchainmembernodesskuresponse">Dict[Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blockchainmembernodesskuresponse">Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain validator nodes Sku.{{% /md %}}</dd>
 

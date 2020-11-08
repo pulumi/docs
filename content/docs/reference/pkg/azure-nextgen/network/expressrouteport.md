@@ -193,10 +193,10 @@ express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoute
     bandwidth_in_gbps=100,
     encapsulation="QinQ",
     express_route_port_name="portName",
-    links=[{
-        "adminState": "Enabled",
-        "name": "link1",
-    }],
+    links=[azure_nextgen.network.latest.ExpressRouteLinkArgs(
+        admin_state="Enabled",
+        name="link1",
+    )],
     location="westus",
     peering_location="peeringLocationName",
     resource_group_name="rg1")
@@ -240,7 +240,7 @@ const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encapsulation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedServiceIdentity]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[List[ExpressRouteLink]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encapsulation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExpressRouteLinkArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -789,7 +789,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Dict[Managed<wbr>Service<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of ExpressRoutePort, if configured.{{% /md %}}</dd>
 
@@ -799,7 +799,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelink">List[Express<wbr>Route<wbr>Link]</a></span>
+        <span class="property-type"><a href="#expressroutelink">Sequence[Express<wbr>Route<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of physical links of the ExpressRoutePort resource.{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
@@ -1218,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuits_python" style="color: inherit; text-decoration: inherit;">circuits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.{{% /md %}}</dd>
 
@@ -1482,8 +1482,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminstate_python">
-<a href="#adminstate_python" style="color: inherit; text-decoration: inherit;">admin<wbr>State</a>
+        <span id="admin_state_python">
+<a href="#admin_state_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1502,11 +1502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="macsecconfig_python">
-<a href="#macsecconfig_python" style="color: inherit; text-decoration: inherit;">mac<wbr>Sec<wbr>Config</a>
+        <span id="mac_sec_config_python">
+<a href="#mac_sec_config_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>sec_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Dict[Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config]</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd>
 
@@ -1681,8 +1681,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="caksecretidentifier_python">
-<a href="#caksecretidentifier_python" style="color: inherit; text-decoration: inherit;">cak<wbr>Secret<wbr>Identifier</a>
+        <span id="cak_secret_identifier_python">
+<a href="#cak_secret_identifier_python" style="color: inherit; text-decoration: inherit;">cak_<wbr>secret_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1701,8 +1701,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cknsecretidentifier_python">
-<a href="#cknsecretidentifier_python" style="color: inherit; text-decoration: inherit;">ckn<wbr>Secret<wbr>Identifier</a>
+        <span id="ckn_secret_identifier_python">
+<a href="#ckn_secret_identifier_python" style="color: inherit; text-decoration: inherit;">ckn_<wbr>secret_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1711,8 +1711,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scistate_python">
-<a href="#scistate_python" style="color: inherit; text-decoration: inherit;">sci<wbr>State</a>
+        <span id="sci_state_python">
+<a href="#sci_state_python" style="color: inherit; text-decoration: inherit;">sci_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1880,8 +1880,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="caksecretidentifier_python">
-<a href="#caksecretidentifier_python" style="color: inherit; text-decoration: inherit;">cak<wbr>Secret<wbr>Identifier</a>
+        <span id="cak_secret_identifier_python">
+<a href="#cak_secret_identifier_python" style="color: inherit; text-decoration: inherit;">cak_<wbr>secret_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1900,8 +1900,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cknsecretidentifier_python">
-<a href="#cknsecretidentifier_python" style="color: inherit; text-decoration: inherit;">ckn<wbr>Secret<wbr>Identifier</a>
+        <span id="ckn_secret_identifier_python">
+<a href="#ckn_secret_identifier_python" style="color: inherit; text-decoration: inherit;">ckn_<wbr>secret_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1910,8 +1910,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scistate_python">
-<a href="#scistate_python" style="color: inherit; text-decoration: inherit;">sci<wbr>State</a>
+        <span id="sci_state_python">
+<a href="#sci_state_python" style="color: inherit; text-decoration: inherit;">sci_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2309,8 +2309,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="interfacename_python">
-<a href="#interfacename_python" style="color: inherit; text-decoration: inherit;">interface<wbr>Name</a>
+        <span id="interface_name_python">
+<a href="#interface_name_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2319,8 +2319,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="patchpanelid_python">
-<a href="#patchpanelid_python" style="color: inherit; text-decoration: inherit;">patch<wbr>Panel<wbr>Id</a>
+        <span id="patch_panel_id_python">
+<a href="#patch_panel_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>panel_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2339,8 +2339,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rackid_python">
-<a href="#rackid_python" style="color: inherit; text-decoration: inherit;">rack<wbr>Id</a>
+        <span id="rack_id_python">
+<a href="#rack_id_python" style="color: inherit; text-decoration: inherit;">rack_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2349,8 +2349,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="routername_python">
-<a href="#routername_python" style="color: inherit; text-decoration: inherit;">router<wbr>Name</a>
+        <span id="router_name_python">
+<a href="#router_name_python" style="color: inherit; text-decoration: inherit;">router_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2359,8 +2359,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminstate_python">
-<a href="#adminstate_python" style="color: inherit; text-decoration: inherit;">admin<wbr>State</a>
+        <span id="admin_state_python">
+<a href="#admin_state_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2379,11 +2379,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="macsecconfig_python">
-<a href="#macsecconfig_python" style="color: inherit; text-decoration: inherit;">mac<wbr>Sec<wbr>Config</a>
+        <span id="mac_sec_config_python">
+<a href="#mac_sec_config_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>sec_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Dict[Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd>
 
@@ -2671,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 

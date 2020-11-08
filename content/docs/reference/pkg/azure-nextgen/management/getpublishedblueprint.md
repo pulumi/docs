@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blueprintstatusresponse">Dict[Blueprint<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#blueprintstatusresponse">Blueprint<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the Blueprint. This field is readonly.{{% /md %}}</dd>
 
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Definition<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Definition<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters required by this Blueprint definition.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#resource_groups_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Resource<wbr>Group<wbr>Definition<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Resource<wbr>Group<wbr>Definition<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Resource group placeholders defined by this Blueprint definition.{{% /md %}}</dd>
 
@@ -989,11 +989,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedvalues_python">
-<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+        <span id="allowed_values_python">
+<a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[Any]</a></span>
     </dt>
     <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
 
@@ -1003,7 +1003,7 @@ The following output properties are available:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
 
@@ -1029,8 +1029,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="strongtype_python">
-<a href="#strongtype_python" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
+        <span id="strong_type_python">
+<a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1262,7 +1262,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
 
@@ -1308,8 +1308,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="strongtype_python">
-<a href="#strongtype_python" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
+        <span id="strong_type_python">
+<a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

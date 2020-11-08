@@ -97,9 +97,9 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
     cache_size_gb=3072,
     location="westus",
     resource_group_name="scgroup",
-    sku={
-        "name": "Standard_2G",
-    },
+    sku=azure_nextgen.storagecache.latest.CacheSkuArgs(
+        name="Standard_2G",
+    ),
     subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
     tags={
         "Dept": "ContosoAds",
@@ -145,7 +145,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CacheEncryptionSettings]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[CacheIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CacheNetworkSettings]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[CacheSecuritySettings]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[CacheSku]]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[CacheEncryptionSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[CacheIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_settings</span><span class="p">:</span> <span class="nx">Optional[CacheNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[CacheSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[CacheSkuArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -734,7 +734,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheencryptionsettings">Dict[Cache<wbr>Encryption<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#cacheencryptionsettings">Cache<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies encryption settings of the cache.{{% /md %}}</dd>
 
@@ -744,7 +744,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentity">Dict[Cache<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#cacheidentity">Cache<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cache, if configured.{{% /md %}}</dd>
 
@@ -764,7 +764,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#network_settings_python" style="color: inherit; text-decoration: inherit;">network_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenetworksettings">Dict[Cache<wbr>Network<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#cachenetworksettings">Cache<wbr>Network<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies network settings of the cache.{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesecuritysettings">Dict[Cache<wbr>Security<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#cachesecuritysettings">Cache<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies security settings of the cache.{{% /md %}}</dd>
 
@@ -794,7 +794,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesku">Dict[Cache<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#cachesku">Cache<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU for the Cache.{{% /md %}}</dd>
 
@@ -814,7 +814,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}ARM tags as name/value pairs.{{% /md %}}</dd>
 
@@ -1043,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_python" style="color: inherit; text-decoration: inherit;">health</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachehealthresponse">Dict[Cache<wbr>Health<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cachehealthresponse">Cache<wbr>Health<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Health of the Cache.{{% /md %}}</dd>
 
@@ -1063,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_addresses_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of IP addresses that can be used by clients mounting this Cache.{{% /md %}}</dd>
 
@@ -1093,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_status_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheupgradestatusresponse">Dict[Cache<wbr>Upgrade<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cacheupgradestatusresponse">Cache<wbr>Upgrade<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upgrade status of the Cache.{{% /md %}}</dd>
 
@@ -1181,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd>
 
@@ -1260,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd>
 
@@ -1805,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#utility_addresses_python" style="color: inherit; text-decoration: inherit;">utility_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of additional IP addresses used by this Cache.{{% /md %}}</dd>
 
@@ -2489,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd>
 
@@ -2608,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd>
 

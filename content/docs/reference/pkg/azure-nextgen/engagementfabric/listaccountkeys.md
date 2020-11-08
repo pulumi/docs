@@ -227,7 +227,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keydescriptionresponse">List[Key<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keydescriptionresponse">Sequence[Key<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Account keys{{% /md %}}</dd>
 

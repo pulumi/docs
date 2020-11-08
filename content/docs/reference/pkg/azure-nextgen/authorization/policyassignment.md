@@ -74,12 +74,12 @@ policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyA
         "assignedBy": "Special Someone",
     },
     parameters={
-        "prefix": {
-            "value": "DeptA",
-        },
-        "suffix": {
-            "value": "-LC",
-        },
+        "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+            value="DeptA",
+        ),
+        "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+            value="-LC",
+        ),
     },
     policy_assignment_name="EnforceNaming",
     policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
@@ -179,20 +179,20 @@ policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyA
     description="Force resource names to begin with given DeptA and end with -LC",
     display_name="Enforce resource naming rules",
     enforcement_mode="Default",
-    identity={
-        "type": "SystemAssigned",
-    },
+    identity=azure_nextgen.authorization.latest.IdentityArgs(
+        type="SystemAssigned",
+    ),
     location="eastus",
     metadata={
         "assignedBy": "Foo Bar",
     },
     parameters={
-        "prefix": {
-            "value": "DeptA",
-        },
-        "suffix": {
-            "value": "-LC",
-        },
+        "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+            value="DeptA",
+        ),
+        "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+            value="-LC",
+        ),
     },
     policy_assignment_name="EnforceNaming",
     policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
@@ -296,12 +296,12 @@ policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyA
         "assignedBy": "Special Someone",
     },
     parameters={
-        "prefix": {
-            "value": "DeptA",
-        },
-        "suffix": {
-            "value": "-LC",
-        },
+        "prefix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+            value="DeptA",
+        ),
+        "suffix": azure_nextgen.authorization.latest.ParameterValuesValueArgs(
+            value="-LC",
+        ),
     },
     policy_assignment_name="EnforceNaming",
     policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
@@ -353,7 +353,7 @@ const policyAssignment = new azure_nextgen.authorization.latest.PolicyAssignment
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforcement_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[Identity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">not_scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, ParameterValuesValue]]</span> = None<span class="p">, </span><span class="nx">policy_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicySku]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforcement_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">not_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterValuesValueArgs]]</span> = None<span class="p">, </span><span class="nx">policy_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PolicySkuArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -962,7 +962,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Dict[Identity]</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd>
 
@@ -982,7 +982,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
 
@@ -992,7 +992,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 <a href="#not_scopes_python" style="color: inherit; text-decoration: inherit;">not_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd>
 
@@ -1002,7 +1002,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Parameter<wbr>Values<wbr>Value]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysku">Dict[Policy<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#policysku">Policy<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy sku. This property is optional, obsolete, and will be ignored.{{% /md %}}</dd>
 
@@ -1507,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
 
@@ -1586,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
 

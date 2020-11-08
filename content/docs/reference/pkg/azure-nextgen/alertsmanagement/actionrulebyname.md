@@ -117,45 +117,45 @@ action_rule_by_name = azure_nextgen.alertsmanagement.v20190505preview.ActionRule
     action_rule_name="DailySuppression",
     location="Global",
     properties={
-        "conditions": {
-            "monitorCondition": {
-                "operator": "Equals",
-                "values": ["Fired"],
-            },
-            "monitorService": {
-                "operator": "Equals",
-                "values": [
+        "conditions": azure_nextgen.alertsmanagement.v20190505preview.ConditionsArgs(
+            monitor_condition=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+                operator="Equals",
+                values=["Fired"],
+            ),
+            monitor_service=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+                operator="Equals",
+                values=[
                     "Platform",
                     "Application Insights",
                 ],
-            },
-            "severity": {
-                "operator": "Equals",
-                "values": [
+            ),
+            severity=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+                operator="Equals",
+                values=[
                     "Sev0",
                     "Sev2",
                 ],
-            },
-            "targetResourceType": {
-                "operator": "NotEquals",
-                "values": ["Microsoft.Compute/VirtualMachines"],
-            },
-        },
+            ),
+            target_resource_type=azure_nextgen.alertsmanagement.v20190505preview.ConditionArgs(
+                operator="NotEquals",
+                values=["Microsoft.Compute/VirtualMachines"],
+            ),
+        ),
         "description": "Action rule on resource group for daily suppression",
-        "scope": {
-            "scopeType": "ResourceGroup",
-            "values": ["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
-        },
+        "scope": azure_nextgen.alertsmanagement.v20190505preview.ScopeArgs(
+            scope_type="ResourceGroup",
+            values=["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
+        ),
         "status": "Enabled",
-        "suppressionConfig": {
-            "recurrenceType": "Daily",
-            "schedule": {
-                "endDate": "12/18/2018",
-                "endTime": "14:00:00",
-                "startDate": "12/09/2018",
-                "startTime": "06:00:00",
-            },
-        },
+        "suppressionConfig": azure_nextgen.alertsmanagement.v20190505preview.SuppressionConfigArgs(
+            recurrence_type="Daily",
+            schedule=azure_nextgen.alertsmanagement.v20190505preview.SuppressionScheduleArgs(
+                end_date="12/18/2018",
+                end_time="14:00:00",
+                start_date="12/09/2018",
+                start_time="06:00:00",
+            ),
+        ),
         "type": "Suppression",
     },
     resource_group_name="alertscorrelationrg",
@@ -236,7 +236,7 @@ const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.Act
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionRuleByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ActionGroup] | Dict[Diagnostics] | Dict[Suppression]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionRuleByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ActionGroupArgs, DiagnosticsArgs, SuppressionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -615,7 +615,7 @@ The ActionRuleByName resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Action<wbr>Group] | Dict[Diagnostics] | Dict[Suppression]</span>
+        <span class="property-type">Union[Action<wbr>Group<wbr>Args, Diagnostics<wbr>Args, Suppression<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd>
 
@@ -625,7 +625,7 @@ The ActionRuleByName resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -988,8 +988,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1002,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Dict[Conditions]</a></span>
+        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Dict[Scope]</a></span>
+        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -1347,8 +1347,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="actiongroupid_python">
-<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+        <span id="action_group_id_python">
+<a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1401,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Dict[Conditions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -1421,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Dict[Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -1550,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd>
 
@@ -1669,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd>
 
@@ -1924,21 +1924,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertcontext_python">
-<a href="#alertcontext_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
+        <span id="alert_context_python">
+<a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Dict[Condition]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertruleid_python">
-<a href="#alertruleid_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
+        <span id="alert_rule_id_python">
+<a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Dict[Condition]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
 
@@ -1948,27 +1948,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Dict[Condition]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monitorcondition_python">
-<a href="#monitorcondition_python" style="color: inherit; text-decoration: inherit;">monitor<wbr>Condition</a>
+        <span id="monitor_condition_python">
+<a href="#monitor_condition_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Dict[Condition]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monitorservice_python">
-<a href="#monitorservice_python" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
+        <span id="monitor_service_python">
+<a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Dict[Condition]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
 
@@ -1978,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Dict[Condition]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
 
@@ -1988,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Dict[Condition]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
 
@@ -2243,21 +2243,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertcontext_python">
-<a href="#alertcontext_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
+        <span id="alert_context_python">
+<a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertruleid_python">
-<a href="#alertruleid_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
+        <span id="alert_rule_id_python">
+<a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
 
@@ -2267,27 +2267,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monitorcondition_python">
-<a href="#monitorcondition_python" style="color: inherit; text-decoration: inherit;">monitor<wbr>Condition</a>
+        <span id="monitor_condition_python">
+<a href="#monitor_condition_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monitorservice_python">
-<a href="#monitorservice_python" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
+        <span id="monitor_service_python">
+<a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
 
@@ -2297,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
 
@@ -2307,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Dict[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
 
@@ -2476,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Dict[Conditions]</a></span>
+        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -2496,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Dict[Scope]</a></span>
+        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -2835,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Dict[Conditions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -2855,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Dict[Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -2970,8 +2970,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scopetype_python">
-<a href="#scopetype_python" style="color: inherit; text-decoration: inherit;">scope<wbr>Type</a>
+        <span id="scope_type_python">
+<a href="#scope_type_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2984,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd>
 
@@ -3089,8 +3089,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scopetype_python">
-<a href="#scopetype_python" style="color: inherit; text-decoration: inherit;">scope<wbr>Type</a>
+        <span id="scope_type_python">
+<a href="#scope_type_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3103,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd>
 
@@ -3298,11 +3298,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="suppressionconfig_python">
-<a href="#suppressionconfig_python" style="color: inherit; text-decoration: inherit;">suppression<wbr>Config</a>
+        <span id="suppression_config_python">
+<a href="#suppression_config_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfig">Dict[Suppression<wbr>Config]</a></span>
+        <span class="property-type"><a href="#suppressionconfig">Suppression<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
 
@@ -3312,7 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Dict[Conditions]</a></span>
+        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -3332,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Dict[Scope]</a></span>
+        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -3461,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionschedule">Dict[Suppression<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#suppressionschedule">Suppression<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
 
@@ -3580,7 +3580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionscheduleresponse">Dict[Suppression<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
 
@@ -3935,11 +3935,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="suppressionconfig_python">
-<a href="#suppressionconfig_python" style="color: inherit; text-decoration: inherit;">suppression<wbr>Config</a>
+        <span id="suppression_config_python">
+<a href="#suppression_config_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfigresponse">Dict[Suppression<wbr>Config<wbr>Response]</a></span>
+        <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
 
@@ -3949,7 +3949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Dict[Conditions<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
 
@@ -3969,7 +3969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Dict[Scope<wbr>Response]</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
 
@@ -4194,11 +4194,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recurrencevalues_python">
-<a href="#recurrencevalues_python" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Values</a>
+        <span id="recurrence_values_python">
+<a href="#recurrence_values_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd>
 
@@ -4433,11 +4433,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recurrencevalues_python">
-<a href="#recurrencevalues_python" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Values</a>
+        <span id="recurrence_values_python">
+<a href="#recurrence_values_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd>
 

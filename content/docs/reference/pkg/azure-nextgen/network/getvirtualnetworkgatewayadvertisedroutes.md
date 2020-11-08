@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayrouteresponse">List[Gateway<wbr>Route<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gatewayrouteresponse">Sequence[Gateway<wbr>Route<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd>
 
@@ -528,8 +528,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="aspath_python">
-<a href="#aspath_python" style="color: inherit; text-decoration: inherit;">as<wbr>Path</a>
+        <span id="as_path_python">
+<a href="#as_path_python" style="color: inherit; text-decoration: inherit;">as_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -538,8 +538,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localaddress_python">
-<a href="#localaddress_python" style="color: inherit; text-decoration: inherit;">local<wbr>Address</a>
+        <span id="local_address_python">
+<a href="#local_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -558,8 +558,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nexthop_python">
-<a href="#nexthop_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
+        <span id="next_hop_python">
+<a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -578,8 +578,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcepeer_python">
-<a href="#sourcepeer_python" style="color: inherit; text-decoration: inherit;">source<wbr>Peer</a>
+        <span id="source_peer_python">
+<a href="#source_peer_python" style="color: inherit; text-decoration: inherit;">source_<wbr>peer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

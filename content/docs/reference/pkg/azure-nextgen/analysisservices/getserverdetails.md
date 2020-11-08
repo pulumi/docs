@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceskuresponse">Dict[Resource<wbr>Sku<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceskuresponse">Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#as_administrators_python" style="color: inherit; text-decoration: inherit;">as_<wbr>administrators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveradministratorsresponse">Dict[Server<wbr>Administrators<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serveradministratorsresponse">Server<wbr>Administrators<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#gateway_details_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydetailsresponse">Dict[Gateway<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#gatewaydetailsresponse">Gateway<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#ip_v4_firewall_settings_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>v4_<wbr>firewall_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallsettingsresponse">Dict[IPv4Firewall<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipv4firewallsettingsresponse">IPv4Firewall<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
 
@@ -709,7 +709,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd>
 
@@ -1019,8 +1019,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangeend_python">
-<a href="#rangeend_python" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
+        <span id="range_end_python">
+<a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1029,8 +1029,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangestart_python">
-<a href="#rangestart_python" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
+        <span id="range_start_python">
+<a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1152,7 +1152,7 @@ The following output properties are available:
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">List[IPv4Firewall<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">Sequence[IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
 
@@ -1390,7 +1390,7 @@ The following output properties are available:
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
 

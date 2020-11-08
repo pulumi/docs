@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#attached_connections_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2response">List[Virtual<wbr>Hub<wbr>Route<wbr>V2Response]</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2response">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2Response]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
 
@@ -614,19 +614,9 @@ The following output properties are available:
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="nexthops_python">
-<a href="#nexthops_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -637,6 +627,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="next_hops_python">
+<a href="#next_hops_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

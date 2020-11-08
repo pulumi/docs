@@ -537,7 +537,7 @@ The following output properties are available:
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Dict[Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
 
@@ -547,7 +547,7 @@ The following output properties are available:
 <a href="#relative_path_parameters_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
 

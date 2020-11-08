@@ -115,18 +115,18 @@ import pulumi_azure_nextgen as azure_nextgen
 managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
     location="westus",
     name="hsm1",
-    properties={
-        "enablePurgeProtection": True,
-        "enableSoftDelete": True,
-        "initialAdminObjectIds": ["00000000-0000-0000-0000-000000000000"],
-        "softDeleteRetentionInDays": 90,
-        "tenantId": "00000000-0000-0000-0000-000000000000",
-    },
+    properties=azure_nextgen.keyvault.v20200401preview.ManagedHsmPropertiesArgs(
+        enable_purge_protection=True,
+        enable_soft_delete=True,
+        initial_admin_object_ids=["00000000-0000-0000-0000-000000000000"],
+        soft_delete_retention_in_days=90,
+        tenant_id="00000000-0000-0000-0000-000000000000",
+    ),
     resource_group_name="hsm-group",
-    sku={
-        "family": "B",
-        "name": "Standard_B1",
-    },
+    sku=azure_nextgen.keyvault.v20200401preview.ManagedHsmSkuArgs(
+        family="B",
+        name="Standard_B1",
+    ),
     tags={
         "Dept": "hsm",
         "Environment": "dogfood",
@@ -179,7 +179,7 @@ const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("manag
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedHsmProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedHsmSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ManagedHsmPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ManagedHsmSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -588,7 +588,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmproperties">Dict[Managed<wbr>Hsm<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#managedhsmproperties">Managed<wbr>Hsm<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd>
 
@@ -598,7 +598,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmsku">Dict[Managed<wbr>Hsm<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
 
@@ -608,7 +608,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_admin_object_ids_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>admin_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
 
@@ -1434,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_admin_object_ids_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>admin_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
 

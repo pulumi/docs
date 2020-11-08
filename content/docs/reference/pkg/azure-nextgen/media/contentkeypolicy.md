@@ -78,12 +78,12 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
     account_name="contosomedia",
     content_key_policy_name="PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description="ArmPolicyDescription",
-    options=[{
-        "configuration": {
+    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+        configuration={
             "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
         },
-        "name": "ClearKeyOption",
-        "restriction": {
+        name="ClearKeyOption",
+        restriction={
             "audience": "urn:audience",
             "issuer": "urn:issuer",
             "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
@@ -93,7 +93,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
             },
             "restrictionTokenType": "Swt",
         },
-    }],
+    )],
     resource_group_name="contoso")
 
 ```
@@ -209,31 +209,31 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
     account_name="contosomedia",
     content_key_policy_name="PolicyWithPlayReadyOptionAndOpenRestriction",
     description="ArmPolicyDescription",
-    options=[{
-        "configuration": {
-            "licenses": [{
-                "allowTestDevices": True,
-                "beginDate": "2017-10-16T18:22:53.46Z",
-                "contentKeyLocation": {
+    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+        configuration={
+            "licenses": [azure_nextgen.media.latest.ContentKeyPolicyPlayReadyLicenseArgs(
+                allow_test_devices=True,
+                begin_date="2017-10-16T18:22:53.46Z",
+                content_key_location={
                     "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader",
                 },
-                "contentType": "UltraVioletDownload",
-                "licenseType": "Persistent",
-                "playRight": {
-                    "allowPassingVideoContentToUnknownOutput": "NotAllowed",
-                    "digitalVideoOnlyContentRestriction": False,
-                    "imageConstraintForAnalogComponentVideoRestriction": True,
-                    "imageConstraintForAnalogComputerMonitorRestriction": False,
-                    "scmsRestriction": 2,
-                },
-            }],
+                content_type="UltraVioletDownload",
+                license_type="Persistent",
+                play_right=azure_nextgen.media.latest.ContentKeyPolicyPlayReadyPlayRightArgs(
+                    allow_passing_video_content_to_unknown_output="NotAllowed",
+                    digital_video_only_content_restriction=False,
+                    image_constraint_for_analog_component_video_restriction=True,
+                    image_constraint_for_analog_computer_monitor_restriction=False,
+                    scms_restriction=2,
+                ),
+            )],
             "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
         },
-        "name": "ArmPolicyOptionName",
-        "restriction": {
+        name="ArmPolicyOptionName",
+        restriction={
             "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
         },
-    }],
+    )],
     resource_group_name="contoso")
 
 ```
@@ -313,8 +313,8 @@ class MyStack : Stack
                         {
                             
                             {
-                                { "@odata.type", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
                                 { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
+                                { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
                             },
                         } },
                         { "audience", "urn:audience" },
@@ -354,16 +354,16 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
     account_name="contosomedia",
     content_key_policy_name="PolicyWithWidevineOptionAndJwtTokenRestriction",
     description="ArmPolicyDescription",
-    options=[{
-        "configuration": {
+    options=[azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+        configuration={
             "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
             "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
         },
-        "name": "widevineoption",
-        "restriction": {
+        name="widevineoption",
+        restriction={
             "alternateVerificationKeys": [{
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
+                "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
             }],
             "audience": "urn:audience",
             "issuer": "urn:issuer",
@@ -375,7 +375,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
             },
             "restrictionTokenType": "Jwt",
         },
-    }],
+    )],
     resource_group_name="contoso")
 
 ```
@@ -400,8 +400,8 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
         name: "widevineoption",
         restriction: {
             alternateVerificationKeys: [{
-                "@odata.type": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 keyValue: "AAAAAAAAAAAAAAAAAAAAAA==",
+                odataType: "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
             }],
             audience: "urn:audience",
             issuer: "urn:issuer",
@@ -497,12 +497,12 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
     content_key_policy_name="PolicyCreatedWithMultipleOptions",
     description="ArmPolicyDescription",
     options=[
-        {
-            "configuration": {
+        azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+            configuration={
                 "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
             },
-            "name": "ClearKeyOption",
-            "restriction": {
+            name="ClearKeyOption",
+            restriction={
                 "audience": "urn:audience",
                 "issuer": "urn:issuer",
                 "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
@@ -512,17 +512,17 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
                 },
                 "restrictionTokenType": "Swt",
             },
-        },
-        {
-            "configuration": {
+        ),
+        azure_nextgen.media.latest.ContentKeyPolicyOptionArgs(
+            configuration={
                 "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
                 "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
             },
-            "name": "widevineoption",
-            "restriction": {
+            name="widevineoption",
+            restriction={
                 "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
             },
-        },
+        ),
     ],
     resource_group_name="contoso")
 
@@ -587,7 +587,7 @@ const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("conten
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[List[ContentKeyPolicyOption]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContentKeyPolicyOptionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -956,7 +956,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyoption">List[Content<wbr>Key<wbr>Policy<wbr>Option]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyoption">Sequence[Content<wbr>Key<wbr>Policy<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Policy options.{{% /md %}}</dd>
 
@@ -1056,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1123,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1190,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1257,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1577,8 +1577,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fairplaypfx_python">
-<a href="#fairplaypfx_python" style="color: inherit; text-decoration: inherit;">fair<wbr>Play<wbr>Pfx</a>
+        <span id="fair_play_pfx_python">
+<a href="#fair_play_pfx_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play_<wbr>pfx</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1587,8 +1587,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fairplaypfxpassword_python">
-<a href="#fairplaypfxpassword_python" style="color: inherit; text-decoration: inherit;">fair<wbr>Play<wbr>Pfx<wbr>Password</a>
+        <span id="fair_play_pfx_password_python">
+<a href="#fair_play_pfx_password_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play_<wbr>pfx_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1597,8 +1597,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rentalandleasekeytype_python">
-<a href="#rentalandleasekeytype_python" style="color: inherit; text-decoration: inherit;">rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
+        <span id="rental_and_lease_key_type_python">
+<a href="#rental_and_lease_key_type_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>and_<wbr>lease_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1607,8 +1607,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rentalduration_python">
-<a href="#rentalduration_python" style="color: inherit; text-decoration: inherit;">rental<wbr>Duration</a>
+        <span id="rental_duration_python">
+<a href="#rental_duration_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1617,11 +1617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinerentalconfiguration_python">
-<a href="#offlinerentalconfiguration_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
+        <span id="offline_rental_configuration_python">
+<a href="#offline_rental_configuration_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>rental_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Dict[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd>
 
@@ -1856,8 +1856,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fairplaypfx_python">
-<a href="#fairplaypfx_python" style="color: inherit; text-decoration: inherit;">fair<wbr>Play<wbr>Pfx</a>
+        <span id="fair_play_pfx_python">
+<a href="#fair_play_pfx_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play_<wbr>pfx</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1866,8 +1866,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="fairplaypfxpassword_python">
-<a href="#fairplaypfxpassword_python" style="color: inherit; text-decoration: inherit;">fair<wbr>Play<wbr>Pfx<wbr>Password</a>
+        <span id="fair_play_pfx_password_python">
+<a href="#fair_play_pfx_password_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play_<wbr>pfx_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1876,8 +1876,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rentalandleasekeytype_python">
-<a href="#rentalandleasekeytype_python" style="color: inherit; text-decoration: inherit;">rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
+        <span id="rental_and_lease_key_type_python">
+<a href="#rental_and_lease_key_type_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>and_<wbr>lease_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1886,8 +1886,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rentalduration_python">
-<a href="#rentalduration_python" style="color: inherit; text-decoration: inherit;">rental<wbr>Duration</a>
+        <span id="rental_duration_python">
+<a href="#rental_duration_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1896,11 +1896,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offlinerentalconfiguration_python">
-<a href="#offlinerentalconfiguration_python" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
+        <span id="offline_rental_configuration_python">
+<a href="#offline_rental_configuration_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>rental_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Dict[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd>
 
@@ -2005,8 +2005,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="playbackdurationseconds_python">
-<a href="#playbackdurationseconds_python" style="color: inherit; text-decoration: inherit;">playback<wbr>Duration<wbr>Seconds</a>
+        <span id="playback_duration_seconds_python">
+<a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2015,8 +2015,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="storagedurationseconds_python">
-<a href="#storagedurationseconds_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Duration<wbr>Seconds</a>
+        <span id="storage_duration_seconds_python">
+<a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2124,8 +2124,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="playbackdurationseconds_python">
-<a href="#playbackdurationseconds_python" style="color: inherit; text-decoration: inherit;">playback<wbr>Duration<wbr>Seconds</a>
+        <span id="playback_duration_seconds_python">
+<a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2134,8 +2134,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="storagedurationseconds_python">
-<a href="#storagedurationseconds_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Duration<wbr>Seconds</a>
+        <span id="storage_duration_seconds_python">
+<a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -2355,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration] | Dict[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration] | Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration] | Dict[Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration] | Dict[Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration]</span>
+        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
@@ -2365,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_python" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction] | Dict[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction] | Dict[Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction]</span>
+        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2544,14 +2544,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response]</span>
+        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="policyoptionid_python">
-<a href="#policyoptionid_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Option<wbr>Id</a>
+        <span id="policy_option_id_python">
+<a href="#policy_option_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>option_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2564,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_python" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response]</span>
+        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd>
 
@@ -2683,14 +2683,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">List[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">Sequence[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecustomdata_python">
-<a href="#responsecustomdata_python" style="color: inherit; text-decoration: inherit;">response<wbr>Custom<wbr>Data</a>
+        <span id="response_custom_data_python">
+<a href="#response_custom_data_python" style="color: inherit; text-decoration: inherit;">response_<wbr>custom_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2802,14 +2802,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">List[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">Sequence[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsecustomdata_python">
-<a href="#responsecustomdata_python" style="color: inherit; text-decoration: inherit;">response<wbr>Custom<wbr>Data</a>
+        <span id="response_custom_data_python">
+<a href="#response_custom_data_python" style="color: inherit; text-decoration: inherit;">response_<wbr>custom_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3153,8 +3153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="besteffort_python">
-<a href="#besteffort_python" style="color: inherit; text-decoration: inherit;">best<wbr>Effort</a>
+        <span id="best_effort_python">
+<a href="#best_effort_python" style="color: inherit; text-decoration: inherit;">best_<wbr>effort</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3163,8 +3163,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="configurationdata_python">
-<a href="#configurationdata_python" style="color: inherit; text-decoration: inherit;">configuration<wbr>Data</a>
+        <span id="configuration_data_python">
+<a href="#configuration_data_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3272,8 +3272,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="besteffort_python">
-<a href="#besteffort_python" style="color: inherit; text-decoration: inherit;">best<wbr>Effort</a>
+        <span id="best_effort_python">
+<a href="#best_effort_python" style="color: inherit; text-decoration: inherit;">best_<wbr>effort</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3282,8 +3282,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="configurationdata_python">
-<a href="#configurationdata_python" style="color: inherit; text-decoration: inherit;">configuration<wbr>Data</a>
+        <span id="configuration_data_python">
+<a href="#configuration_data_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -3631,8 +3631,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="allowtestdevices_python">
-<a href="#allowtestdevices_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Test<wbr>Devices</a>
+        <span id="allow_test_devices_python">
+<a href="#allow_test_devices_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>test_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3641,11 +3641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="contentkeylocation_python">
-<a href="#contentkeylocation_python" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location</a>
+        <span id="content_key_location_python">
+<a href="#content_key_location_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header] | Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier]</span>
+        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -3671,8 +3671,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="begindate_python">
-<a href="#begindate_python" style="color: inherit; text-decoration: inherit;">begin<wbr>Date</a>
+        <span id="begin_date_python">
+<a href="#begin_date_python" style="color: inherit; text-decoration: inherit;">begin_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3701,18 +3701,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="playright_python">
-<a href="#playright_python" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
+        <span id="play_right_python">
+<a href="#play_right_python" style="color: inherit; text-decoration: inherit;">play_<wbr>right</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativebegindate_python">
-<a href="#relativebegindate_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Begin<wbr>Date</a>
+        <span id="relative_begin_date_python">
+<a href="#relative_begin_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>begin_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3721,8 +3721,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativeexpirationdate_python">
-<a href="#relativeexpirationdate_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Expiration<wbr>Date</a>
+        <span id="relative_expiration_date_python">
+<a href="#relative_expiration_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>expiration_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4070,8 +4070,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="allowtestdevices_python">
-<a href="#allowtestdevices_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Test<wbr>Devices</a>
+        <span id="allow_test_devices_python">
+<a href="#allow_test_devices_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>test_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4080,11 +4080,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="contentkeylocation_python">
-<a href="#contentkeylocation_python" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location</a>
+        <span id="content_key_location_python">
+<a href="#content_key_location_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response]</span>
+        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd>
 
@@ -4110,8 +4110,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="begindate_python">
-<a href="#begindate_python" style="color: inherit; text-decoration: inherit;">begin<wbr>Date</a>
+        <span id="begin_date_python">
+<a href="#begin_date_python" style="color: inherit; text-decoration: inherit;">begin_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4140,18 +4140,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="playright_python">
-<a href="#playright_python" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
+        <span id="play_right_python">
+<a href="#play_right_python" style="color: inherit; text-decoration: inherit;">play_<wbr>right</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativebegindate_python">
-<a href="#relativebegindate_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Begin<wbr>Date</a>
+        <span id="relative_begin_date_python">
+<a href="#relative_begin_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>begin_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4160,8 +4160,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="relativeexpirationdate_python">
-<a href="#relativeexpirationdate_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Expiration<wbr>Date</a>
+        <span id="relative_expiration_date_python">
+<a href="#relative_expiration_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>expiration_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4599,8 +4599,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="allowpassingvideocontenttounknownoutput_python">
-<a href="#allowpassingvideocontenttounknownoutput_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
+        <span id="allow_passing_video_content_to_unknown_output_python">
+<a href="#allow_passing_video_content_to_unknown_output_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>passing_<wbr>video_<wbr>content_<wbr>to_<wbr>unknown_<wbr>output</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4609,8 +4609,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="digitalvideoonlycontentrestriction_python">
-<a href="#digitalvideoonlycontentrestriction_python" style="color: inherit; text-decoration: inherit;">digital<wbr>Video<wbr>Only<wbr>Content<wbr>Restriction</a>
+        <span id="digital_video_only_content_restriction_python">
+<a href="#digital_video_only_content_restriction_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>video_<wbr>only_<wbr>content_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4619,8 +4619,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageconstraintforanalogcomponentvideorestriction_python">
-<a href="#imageconstraintforanalogcomponentvideorestriction_python" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Component<wbr>Video<wbr>Restriction</a>
+        <span id="image_constraint_for_analog_component_video_restriction_python">
+<a href="#image_constraint_for_analog_component_video_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>component_<wbr>video_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4629,8 +4629,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageconstraintforanalogcomputermonitorrestriction_python">
-<a href="#imageconstraintforanalogcomputermonitorrestriction_python" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Computer<wbr>Monitor<wbr>Restriction</a>
+        <span id="image_constraint_for_analog_computer_monitor_restriction_python">
+<a href="#image_constraint_for_analog_computer_monitor_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>computer_<wbr>monitor_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4639,8 +4639,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agcandcolorstriperestriction_python">
-<a href="#agcandcolorstriperestriction_python" style="color: inherit; text-decoration: inherit;">agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
+        <span id="agc_and_color_stripe_restriction_python">
+<a href="#agc_and_color_stripe_restriction_python" style="color: inherit; text-decoration: inherit;">agc_<wbr>and_<wbr>color_<wbr>stripe_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4649,8 +4649,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="analogvideoopl_python">
-<a href="#analogvideoopl_python" style="color: inherit; text-decoration: inherit;">analog<wbr>Video<wbr>Opl</a>
+        <span id="analog_video_opl_python">
+<a href="#analog_video_opl_python" style="color: inherit; text-decoration: inherit;">analog_<wbr>video_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4659,8 +4659,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compresseddigitalaudioopl_python">
-<a href="#compresseddigitalaudioopl_python" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
+        <span id="compressed_digital_audio_opl_python">
+<a href="#compressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4669,8 +4669,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compresseddigitalvideoopl_python">
-<a href="#compresseddigitalvideoopl_python" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Video<wbr>Opl</a>
+        <span id="compressed_digital_video_opl_python">
+<a href="#compressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4679,18 +4679,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="explicitanalogtelevisionoutputrestriction_python">
-<a href="#explicitanalogtelevisionoutputrestriction_python" style="color: inherit; text-decoration: inherit;">explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
+        <span id="explicit_analog_television_output_restriction_python">
+<a href="#explicit_analog_television_output_restriction_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>analog_<wbr>television_<wbr>output_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstplayexpiration_python">
-<a href="#firstplayexpiration_python" style="color: inherit; text-decoration: inherit;">first<wbr>Play<wbr>Expiration</a>
+        <span id="first_play_expiration_python">
+<a href="#first_play_expiration_python" style="color: inherit; text-decoration: inherit;">first_<wbr>play_<wbr>expiration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4699,8 +4699,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scmsrestriction_python">
-<a href="#scmsrestriction_python" style="color: inherit; text-decoration: inherit;">scms<wbr>Restriction</a>
+        <span id="scms_restriction_python">
+<a href="#scms_restriction_python" style="color: inherit; text-decoration: inherit;">scms_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4709,8 +4709,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uncompresseddigitalaudioopl_python">
-<a href="#uncompresseddigitalaudioopl_python" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
+        <span id="uncompressed_digital_audio_opl_python">
+<a href="#uncompressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -4719,8 +4719,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uncompresseddigitalvideoopl_python">
-<a href="#uncompresseddigitalvideoopl_python" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
+        <span id="uncompressed_digital_video_opl_python">
+<a href="#uncompressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5158,8 +5158,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="allowpassingvideocontenttounknownoutput_python">
-<a href="#allowpassingvideocontenttounknownoutput_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
+        <span id="allow_passing_video_content_to_unknown_output_python">
+<a href="#allow_passing_video_content_to_unknown_output_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>passing_<wbr>video_<wbr>content_<wbr>to_<wbr>unknown_<wbr>output</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5168,8 +5168,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="digitalvideoonlycontentrestriction_python">
-<a href="#digitalvideoonlycontentrestriction_python" style="color: inherit; text-decoration: inherit;">digital<wbr>Video<wbr>Only<wbr>Content<wbr>Restriction</a>
+        <span id="digital_video_only_content_restriction_python">
+<a href="#digital_video_only_content_restriction_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>video_<wbr>only_<wbr>content_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5178,8 +5178,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageconstraintforanalogcomponentvideorestriction_python">
-<a href="#imageconstraintforanalogcomponentvideorestriction_python" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Component<wbr>Video<wbr>Restriction</a>
+        <span id="image_constraint_for_analog_component_video_restriction_python">
+<a href="#image_constraint_for_analog_component_video_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>component_<wbr>video_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5188,8 +5188,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="imageconstraintforanalogcomputermonitorrestriction_python">
-<a href="#imageconstraintforanalogcomputermonitorrestriction_python" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Computer<wbr>Monitor<wbr>Restriction</a>
+        <span id="image_constraint_for_analog_computer_monitor_restriction_python">
+<a href="#image_constraint_for_analog_computer_monitor_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>computer_<wbr>monitor_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5198,8 +5198,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="agcandcolorstriperestriction_python">
-<a href="#agcandcolorstriperestriction_python" style="color: inherit; text-decoration: inherit;">agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
+        <span id="agc_and_color_stripe_restriction_python">
+<a href="#agc_and_color_stripe_restriction_python" style="color: inherit; text-decoration: inherit;">agc_<wbr>and_<wbr>color_<wbr>stripe_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5208,8 +5208,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="analogvideoopl_python">
-<a href="#analogvideoopl_python" style="color: inherit; text-decoration: inherit;">analog<wbr>Video<wbr>Opl</a>
+        <span id="analog_video_opl_python">
+<a href="#analog_video_opl_python" style="color: inherit; text-decoration: inherit;">analog_<wbr>video_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5218,8 +5218,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compresseddigitalaudioopl_python">
-<a href="#compresseddigitalaudioopl_python" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
+        <span id="compressed_digital_audio_opl_python">
+<a href="#compressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5228,8 +5228,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compresseddigitalvideoopl_python">
-<a href="#compresseddigitalvideoopl_python" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Video<wbr>Opl</a>
+        <span id="compressed_digital_video_opl_python">
+<a href="#compressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5238,18 +5238,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="explicitanalogtelevisionoutputrestriction_python">
-<a href="#explicitanalogtelevisionoutputrestriction_python" style="color: inherit; text-decoration: inherit;">explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
+        <span id="explicit_analog_television_output_restriction_python">
+<a href="#explicit_analog_television_output_restriction_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>analog_<wbr>television_<wbr>output_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Dict[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstplayexpiration_python">
-<a href="#firstplayexpiration_python" style="color: inherit; text-decoration: inherit;">first<wbr>Play<wbr>Expiration</a>
+        <span id="first_play_expiration_python">
+<a href="#first_play_expiration_python" style="color: inherit; text-decoration: inherit;">first_<wbr>play_<wbr>expiration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5258,8 +5258,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scmsrestriction_python">
-<a href="#scmsrestriction_python" style="color: inherit; text-decoration: inherit;">scms<wbr>Restriction</a>
+        <span id="scms_restriction_python">
+<a href="#scms_restriction_python" style="color: inherit; text-decoration: inherit;">scms_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5268,8 +5268,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uncompresseddigitalaudioopl_python">
-<a href="#uncompresseddigitalaudioopl_python" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
+        <span id="uncompressed_digital_audio_opl_python">
+<a href="#uncompressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5278,8 +5278,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uncompresseddigitalvideoopl_python">
-<a href="#uncompresseddigitalvideoopl_python" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
+        <span id="uncompressed_digital_video_opl_python">
+<a href="#uncompressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -5595,8 +5595,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="keyvalue_python">
-<a href="#keyvalue_python" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
+        <span id="key_value_python">
+<a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5674,8 +5674,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="keyvalue_python">
-<a href="#keyvalue_python" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
+        <span id="key_value_python">
+<a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6191,18 +6191,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="primaryverificationkey_python">
-<a href="#primaryverificationkey_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Verification<wbr>Key</a>
+        <span id="primary_verification_key_python">
+<a href="#primary_verification_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>verification_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key] | Dict[Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key] | Dict[Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key]</span>
+        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="restrictiontokentype_python">
-<a href="#restrictiontokentype_python" style="color: inherit; text-decoration: inherit;">restriction<wbr>Token<wbr>Type</a>
+        <span id="restriction_token_type_python">
+<a href="#restriction_token_type_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>token_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6211,18 +6211,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alternateverificationkeys_python">
-<a href="#alternateverificationkeys_python" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
+        <span id="alternate_verification_keys_python">
+<a href="#alternate_verification_keys_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>verification_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key, Azure-Nextgen:Media/Latest:Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key, Azure-Nextgen:Media/Latest:Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key, Default=>]</span>
+        <span class="property-type">Sequence[Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="openidconnectdiscoverydocument_python">
-<a href="#openidconnectdiscoverydocument_python" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Discovery<wbr>Document</a>
+        <span id="open_id_connect_discovery_document_python">
+<a href="#open_id_connect_discovery_document_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>discovery_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6231,11 +6231,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiredclaims_python">
-<a href="#requiredclaims_python" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
+        <span id="required_claims_python">
+<a href="#required_claims_python" style="color: inherit; text-decoration: inherit;">required_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaim">List[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim]</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaim">Sequence[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd>
 
@@ -6510,18 +6510,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="primaryverificationkey_python">
-<a href="#primaryverificationkey_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Verification<wbr>Key</a>
+        <span id="primary_verification_key_python">
+<a href="#primary_verification_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>verification_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response] | Dict[Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response]</span>
+        <span class="property-type">Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="restrictiontokentype_python">
-<a href="#restrictiontokentype_python" style="color: inherit; text-decoration: inherit;">restriction<wbr>Token<wbr>Type</a>
+        <span id="restriction_token_type_python">
+<a href="#restriction_token_type_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>token_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6530,18 +6530,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alternateverificationkeys_python">
-<a href="#alternateverificationkeys_python" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
+        <span id="alternate_verification_keys_python">
+<a href="#alternate_verification_keys_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>verification_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Media/Latest:Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response, Azure-Nextgen:Media/Latest:Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response, Azure-Nextgen:Media/Latest:Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response, Default=>]</span>
+        <span class="property-type">Sequence[Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="openidconnectdiscoverydocument_python">
-<a href="#openidconnectdiscoverydocument_python" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Discovery<wbr>Document</a>
+        <span id="open_id_connect_discovery_document_python">
+<a href="#open_id_connect_discovery_document_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>discovery_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6550,11 +6550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiredclaims_python">
-<a href="#requiredclaims_python" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
+        <span id="required_claims_python">
+<a href="#required_claims_python" style="color: inherit; text-decoration: inherit;">required_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">List[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">Sequence[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd>
 
@@ -6785,8 +6785,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="widevinetemplate_python">
-<a href="#widevinetemplate_python" style="color: inherit; text-decoration: inherit;">widevine<wbr>Template</a>
+        <span id="widevine_template_python">
+<a href="#widevine_template_python" style="color: inherit; text-decoration: inherit;">widevine_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6864,8 +6864,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="widevinetemplate_python">
-<a href="#widevinetemplate_python" style="color: inherit; text-decoration: inherit;">widevine<wbr>Template</a>
+        <span id="widevine_template_python">
+<a href="#widevine_template_python" style="color: inherit; text-decoration: inherit;">widevine_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6943,8 +6943,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rawbody_python">
-<a href="#rawbody_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Body</a>
+        <span id="raw_body_python">
+<a href="#raw_body_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7022,8 +7022,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="rawbody_python">
-<a href="#rawbody_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Body</a>
+        <span id="raw_body_python">
+<a href="#raw_body_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

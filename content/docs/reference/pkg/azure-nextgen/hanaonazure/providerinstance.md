@@ -29,7 +29,7 @@ class MyStack : Stack
         var providerInstance = new AzureNextGen.HanaOnAzure.V20200207Preview.ProviderInstance("providerInstance", new AzureNextGen.HanaOnAzure.V20200207Preview.ProviderInstanceArgs
         {
             Metadata = "{\"key\":\"value\"}",
-            Properties = "{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
+            Properties = "{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
             ProviderInstanceName = "myProviderInstance",
             ResourceGroupName = "myResourceGroup",
             SapMonitorName = "mySapMonitor",
@@ -57,7 +57,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hanaonazure.NewProviderInstance(ctx, "providerInstance", &hanaonazure.ProviderInstanceArgs{
 			Metadata:             pulumi.String("{\"key\":\"value\"}"),
-			Properties:           pulumi.String("{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}"),
+			Properties:           pulumi.String("{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}"),
 			ProviderInstanceName: pulumi.String("myProviderInstance"),
 			ResourceGroupName:    pulumi.String("myResourceGroup"),
 			SapMonitorName:       pulumi.String("mySapMonitor"),
@@ -82,7 +82,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 provider_instance = azure_nextgen.hanaonazure.v20200207preview.ProviderInstance("providerInstance",
     metadata="{\"key\":\"value\"}",
-    properties="{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
+    properties="{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
     provider_instance_name="myProviderInstance",
     resource_group_name="myResourceGroup",
     sap_monitor_name="mySapMonitor",
@@ -100,7 +100,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const providerInstance = new azure_nextgen.hanaonazure.v20200207preview.ProviderInstance("providerInstance", {
     metadata: "{\"key\":\"value\"}",
-    properties: "{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
+    properties: "{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
     providerInstanceName: "myProviderInstance",
     resourceGroupName: "myResourceGroup",
     sapMonitorName: "mySapMonitor",

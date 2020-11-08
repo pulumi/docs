@@ -63,9 +63,9 @@ assessment = azure_nextgen.security.latest.Assessment("assessment",
         "source": "Azure",
     },
     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
-    status={
-        "code": "Healthy",
-    })
+    status=azure_nextgen.security.latest.AssessmentStatusArgs(
+        code="Healthy",
+    ))
 
 ```
 
@@ -104,7 +104,7 @@ const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_data</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[SecurityAssessmentMetadataProperties]]</span> = None<span class="p">, </span><span class="nx">partners_data</span><span class="p">:</span> <span class="nx">Optional[Dict[SecurityAssessmentPartnerData]]</span> = None<span class="p">, </span><span class="nx">resource_details</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureResourceDetails] | Dict[OnPremiseResourceDetails]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Dict[AssessmentStatus]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentMetadataPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">partners_data</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentPartnerDataArgs]</span> = None<span class="p">, </span><span class="nx">resource_details</span><span class="p">:</span> <span class="nx">Optional[Union[AzureResourceDetailsArgs, OnPremiseResourceDetailsArgs]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[AssessmentStatusArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -523,7 +523,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Azure<wbr>Resource<wbr>Details] | Dict[On<wbr>Premise<wbr>Resource<wbr>Details]</span>
+        <span class="property-type">Union[Azure<wbr>Resource<wbr>Details<wbr>Args, On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
 
@@ -543,7 +543,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatus">Dict[Assessment<wbr>Status]</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The result of the assessment{{% /md %}}</dd>
 
@@ -553,7 +553,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#additional_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd>
 
@@ -563,7 +563,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadataproperties">Dict[Security<wbr>Assessment<wbr>Metadata<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd>
 
@@ -573,7 +573,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#partners_data_python" style="color: inherit; text-decoration: inherit;">partners_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentpartnerdata">Dict[Security<wbr>Assessment<wbr>Partner<wbr>Data]</a></span>
+        <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd>
 
@@ -792,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentlinksresponse">Dict[Assessment<wbr>Links<wbr>Response]</a></span>
+        <span class="property-type"><a href="#assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Links relevant to the assessment{{% /md %}}</dd>
 
@@ -1511,8 +1511,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecomputerid_python">
-<a href="#sourcecomputerid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
+        <span id="source_computer_id_python">
+<a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1710,8 +1710,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcecomputerid_python">
-<a href="#sourcecomputerid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
+        <span id="source_computer_id_python">
+<a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2461,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2491,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Dict[Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data]</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
 
@@ -2521,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2980,7 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3010,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Dict[Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response]</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
 
@@ -3040,7 +3040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

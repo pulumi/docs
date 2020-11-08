@@ -140,7 +140,7 @@ const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Insights/Latest:RuleEmailAction, Azure-Nextgen:Insights/Latest:RuleWebhookAction, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[Dict[LocationThresholdRuleCondition] | Dict[ManagementEventRuleCondition] | Dict[ThresholdRuleCondition]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[RuleEmailActionArgs, RuleWebhookActionArgs]]]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[Union[LocationThresholdRuleConditionArgs, ManagementEventRuleConditionArgs, ThresholdRuleConditionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -609,7 +609,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Location<wbr>Threshold<wbr>Rule<wbr>Condition] | Dict[Management<wbr>Event<wbr>Rule<wbr>Condition] | Dict[Threshold<wbr>Rule<wbr>Condition]</span>
+        <span class="property-type">Union[Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args, Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Args, Threshold<wbr>Rule<wbr>Condition<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Union<Azure-Nextgen:Insights/Latest:Rule<wbr>Email<wbr>Action, Azure-Nextgen:Insights/Latest:Rule<wbr>Webhook<wbr>Action, Default=>]</span>
+        <span class="property-type">Sequence[Union[Rule<wbr>Email<wbr>Action<wbr>Args, Rule<wbr>Webhook<wbr>Action<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -992,8 +992,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="failedlocationcount_python">
-<a href="#failedlocationcount_python" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+        <span id="failed_location_count_python">
+<a href="#failed_location_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>location_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1002,11 +1002,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source]</span>
+        <span class="property-type">Union[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args, Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 
@@ -1151,8 +1151,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="failedlocationcount_python">
-<a href="#failedlocationcount_python" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+        <span id="failed_location_count_python">
+<a href="#failed_location_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>location_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1161,11 +1161,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response]</span>
+        <span class="property-type">Union[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 
@@ -1602,17 +1602,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationcondition">Dict[Management<wbr>Event<wbr>Aggregation<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source]</span>
+        <span class="property-type">Union[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args, Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 
@@ -1721,17 +1721,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Dict[Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response]</span>
+        <span class="property-type">Union[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 
@@ -1836,18 +1836,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customemails_python">
-<a href="#customemails_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+        <span id="custom_emails_python">
+<a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtoserviceowners_python">
-<a href="#sendtoserviceowners_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Service<wbr>Owners</a>
+        <span id="send_to_service_owners_python">
+<a href="#send_to_service_owners_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>service_<wbr>owners</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1955,18 +1955,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customemails_python">
-<a href="#customemails_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+        <span id="custom_emails_python">
+<a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtoserviceowners_python">
-<a href="#sendtoserviceowners_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Service<wbr>Owners</a>
+        <span id="send_to_service_owners_python">
+<a href="#send_to_service_owners_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>service_<wbr>owners</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2044,8 +2044,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2123,8 +2123,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2476,14 +2476,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Dict[Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source]</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventname_python">
-<a href="#eventname_python" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
+        <span id="event_name_python">
+<a href="#event_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2492,8 +2492,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventsource_python">
-<a href="#eventsource_python" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+        <span id="event_source_python">
+<a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2512,8 +2512,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="operationname_python">
-<a href="#operationname_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+        <span id="operation_name_python">
+<a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2562,8 +2562,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="substatus_python">
-<a href="#substatus_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
+        <span id="sub_status_python">
+<a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2915,14 +2915,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Dict[Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventname_python">
-<a href="#eventname_python" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
+        <span id="event_name_python">
+<a href="#event_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2931,8 +2931,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventsource_python">
-<a href="#eventsource_python" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+        <span id="event_source_python">
+<a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2951,8 +2951,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="operationname_python">
-<a href="#operationname_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+        <span id="operation_name_python">
+<a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3001,8 +3001,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="substatus_python">
-<a href="#substatus_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
+        <span id="sub_status_python">
+<a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3110,8 +3110,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3229,8 +3229,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3352,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
 
@@ -3471,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
 
@@ -3696,18 +3696,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source]</span>
+        <span class="property-type">Union[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args, Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3935,18 +3935,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datasource_python">
-<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+        <span id="data_source_python">
+<a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response]</span>
+        <span class="property-type">Union[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

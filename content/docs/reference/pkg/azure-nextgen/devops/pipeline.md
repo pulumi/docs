@@ -122,10 +122,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 pipeline = azure_nextgen.devops.v20190701preview.Pipeline("pipeline",
-    bootstrap_configuration={
-        "template": {
-            "id": "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
-            "parameters": {
+    bootstrap_configuration=azure_nextgen.devops.v20190701preview.BootstrapConfigurationArgs(
+        template=azure_nextgen.devops.v20190701preview.PipelineTemplateArgs(
+            id="ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
+            parameters={
                 "appInsightLocation": "South India",
                 "appServicePlan": "S1 Standard",
                 "azureAuth": "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}",
@@ -134,16 +134,16 @@ pipeline = azure_nextgen.devops.v20190701preview.Pipeline("pipeline",
                 "subscriptionId": "{subscriptionId}",
                 "webAppName": "myAspNetWebApp",
             },
-        },
-    },
+        ),
+    ),
     location="South India",
-    organization={
-        "name": "myAspNetWebAppPipeline-org",
-    },
+    organization=azure_nextgen.devops.v20190701preview.OrganizationReferenceArgs(
+        name="myAspNetWebAppPipeline-org",
+    ),
     pipeline_name="myAspNetWebAppPipeline",
-    project={
-        "name": "myAspNetWebAppPipeline-project",
-    },
+    project=azure_nextgen.devops.v20190701preview.ProjectReferenceArgs(
+        name="myAspNetWebAppPipeline-project",
+    ),
     resource_group_name="myAspNetWebAppPipeline-rg",
     tags={})
 
@@ -200,7 +200,7 @@ const pipeline = new azure_nextgen.devops.v20190701preview.Pipeline("pipeline", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[BootstrapConfiguration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[Dict[OrganizationReference]]</span> = None<span class="p">, </span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[Dict[ProjectReference]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_configuration</span><span class="p">:</span> <span class="nx">Optional[BootstrapConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[OrganizationReferenceArgs]</span> = None<span class="p">, </span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[ProjectReferenceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -609,7 +609,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootstrap_configuration_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootstrapconfiguration">Dict[Bootstrap<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bootstrapconfiguration">Bootstrap<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to bootstrap the Pipeline.{{% /md %}}</dd>
 
@@ -619,7 +619,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationreference">Dict[Organization<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#organizationreference">Organization<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the Azure DevOps Organization containing the Pipeline.{{% /md %}}</dd>
 
@@ -639,7 +639,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectreference">Dict[Project<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#projectreference">Project<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the Azure DevOps Project containing the Pipeline.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
 
@@ -996,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Authorization parameters corresponding to the authorization type.{{% /md %}}</dd>
 
@@ -1115,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Authorization parameters corresponding to the authorization type.{{% /md %}}</dd>
 
@@ -1224,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplate">Dict[Pipeline<wbr>Template]</a></span>
+        <span class="property-type"><a href="#pipelinetemplate">Pipeline<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd>
 
@@ -1234,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepository">Dict[Code<wbr>Repository]</a></span>
+        <span class="property-type"><a href="#coderepository">Code<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline.{{% /md %}}</dd>
 
@@ -1343,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Dict[Pipeline<wbr>Template<wbr>Response]</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd>
 
@@ -1353,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Dict[Code<wbr>Repository<wbr>Response]</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline.{{% /md %}}</dd>
 
@@ -1415,6 +1415,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1461,6 +1471,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#authorization">Authorization</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1509,6 +1529,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1552,9 +1582,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Dict[Authorization]</a></span>
+        <span class="property-type"><a href="#authorization">Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1614,6 +1654,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1660,6 +1710,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1708,6 +1768,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1751,9 +1821,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Dict[Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Repository-specific properties.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2068,7 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of input parameters used in the pipeline template.{{% /md %}}</dd>
 
@@ -2187,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary of input parameters used in the pipeline template.{{% /md %}}</dd>
 

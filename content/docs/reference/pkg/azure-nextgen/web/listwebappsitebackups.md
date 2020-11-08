@@ -267,7 +267,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupitemresponse">List[Backup<wbr>Item<wbr>Response]</a></span>
+        <span class="property-type"><a href="#backupitemresponse">Sequence[Backup<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
 
@@ -838,8 +838,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="blobname_python">
-<a href="#blobname_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Name</a>
+        <span id="blob_name_python">
+<a href="#blob_name_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -872,14 +872,14 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsettingresponse">List[Database<wbr>Backup<wbr>Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databasebackupsettingresponse">Sequence[Database<wbr>Backup<wbr>Setting<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of databases included in the backup.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="finishedtimestamp_python">
-<a href="#finishedtimestamp_python" style="color: inherit; text-decoration: inherit;">finished<wbr>Time<wbr>Stamp</a>
+        <span id="finished_time_stamp_python">
+<a href="#finished_time_stamp_python" style="color: inherit; text-decoration: inherit;">finished_<wbr>time_<wbr>stamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -898,8 +898,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastrestoretimestamp_python">
-<a href="#lastrestoretimestamp_python" style="color: inherit; text-decoration: inherit;">last<wbr>Restore<wbr>Time<wbr>Stamp</a>
+        <span id="last_restore_time_stamp_python">
+<a href="#last_restore_time_stamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>restore_<wbr>time_<wbr>stamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -978,8 +978,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="websitesizeinbytes_python">
-<a href="#websitesizeinbytes_python" style="color: inherit; text-decoration: inherit;">website<wbr>Size<wbr>In<wbr>Bytes</a>
+        <span id="website_size_in_bytes_python">
+<a href="#website_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">website_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
@@ -1170,17 +1170,6 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionstringname_python">
-<a href="#connectionstringname_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span> 
@@ -1188,6 +1177,17 @@ This is used during restore with overwrite connection strings options.{{% /md %}
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_string_name_python">
+<a href="#connection_string_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+This is used during restore with overwrite connection strings options.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -1620,7 +1620,7 @@ application used for sign-in.{{% /md %}}</dd>
 <a href="#additional_login_params_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>login_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when
 a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
@@ -1631,7 +1631,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Allowed audience values to consider when validating JWTs issued by 
 Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
@@ -1643,7 +1643,7 @@ allowed audience, regardless of this setting.{{% /md %}}</dd>
 <a href="#allowed_external_redirect_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>external_<wbr>redirect_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
@@ -1769,7 +1769,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
 <a href="#facebook_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>o_<wbr>auth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
 This setting is optional.
@@ -1814,7 +1814,7 @@ app used for GitHub Login.{{% /md %}}</dd>
 <a href="#git_hub_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>o_<wbr>auth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 This setting is optional{{% /md %}}</dd>
@@ -1860,7 +1860,7 @@ the Google web application.{{% /md %}}</dd>
 <a href="#google_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">google_<wbr>o_<wbr>auth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
 This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
@@ -1941,7 +1941,7 @@ app used for authentication.{{% /md %}}</dd>
 <a href="#microsoft_account_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>o_<wbr>auth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
 This setting is optional. If not specified, "wl.basic" is used as the default scope.

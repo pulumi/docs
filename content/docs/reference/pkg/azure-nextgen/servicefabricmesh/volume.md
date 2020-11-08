@@ -92,11 +92,11 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 volume = azure_nextgen.servicefabricmesh.v20180901preview.Volume("volume",
-    azure_file_parameters={
-        "accountKey": "provide-account-key-here",
-        "accountName": "sbzdemoaccount",
-        "shareName": "sharel",
-    },
+    azure_file_parameters=azure_nextgen.servicefabricmesh.v20180901preview.VolumeProviderParametersAzureFileArgs(
+        account_key="provide-account-key-here",
+        account_name="sbzdemoaccount",
+        share_name="sharel",
+    ),
     description="Service Fabric Mesh sample volume.",
     location="EastUS",
     provider="SFAzureFile",
@@ -144,7 +144,7 @@ const volume = new azure_nextgen.servicefabricmesh.v20180901preview.Volume("volu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_file_parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[VolumeProviderParametersAzureFile]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_file_parameters</span><span class="p">:</span> <span class="nx">Optional[VolumeProviderParametersAzureFileArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -593,7 +593,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#azure_file_parameters_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeproviderparametersazurefile">Dict[Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File]</a></span>
+        <span class="property-type"><a href="#volumeproviderparametersazurefile">Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This type describes a volume provided by an Azure Files file share.{{% /md %}}</dd>
 
@@ -613,7 +613,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 

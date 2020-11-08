@@ -24,7 +24,7 @@ meta_desc: "Explore the ListCustomApiWsdlInterfaces function of the web module, 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_custom_api_wsdl_interfaces(</span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[Dict[WsdlService]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListCustomApiWsdlInterfacesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_custom_api_wsdl_interfaces(</span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[WsdlServiceArgs]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListCustomApiWsdlInterfacesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -256,7 +256,7 @@ The following arguments are supported:
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlservice">Dict[Wsdl<wbr>Service]</a></span>
+        <span class="property-type"><a href="#wsdlservice">Wsdl<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd>
 
@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">List[Wsdl<wbr>Service<wbr>Response]</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Sequence[Wsdl<wbr>Service<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of WSDL interfaces{{% /md %}}</dd>
 
@@ -472,7 +472,7 @@ The following output properties are available:
 <a href="#endpoint_qualified_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>qualified_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the endpoints' qualified names{{% /md %}}</dd>
 
@@ -591,7 +591,7 @@ The following output properties are available:
 <a href="#endpoint_qualified_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>qualified_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the endpoints' qualified names{{% /md %}}</dd>
 

@@ -109,19 +109,19 @@ integration_account_batch_configuration = azure_nextgen.logic.latest.Integration
     batch_configuration_name="testBatchConfiguration",
     integration_account_name="testIntegrationAccount",
     location="westus",
-    properties={
-        "batchGroupName": "DEFAULT",
-        "releaseCriteria": {
-            "batchSize": 234567,
-            "messageCount": 10,
-            "recurrence": {
-                "frequency": "Minute",
-                "interval": 1,
-                "startTime": "2017-03-24T11:43:00",
-                "timeZone": "India Standard Time",
-            },
-        },
-    },
+    properties=azure_nextgen.logic.latest.BatchConfigurationPropertiesArgs(
+        batch_group_name="DEFAULT",
+        release_criteria=azure_nextgen.logic.latest.BatchReleaseCriteriaArgs(
+            batch_size=234567,
+            message_count=10,
+            recurrence=azure_nextgen.logic.latest.WorkflowTriggerRecurrenceArgs(
+                frequency="Minute",
+                interval=1,
+                start_time="2017-03-24T11:43:00",
+                time_zone="India Standard Time",
+            ),
+        ),
+    ),
     resource_group_name="testResourceGroup")
 
 ```
@@ -170,7 +170,7 @@ const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.Inte
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">batch_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[BatchConfigurationProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">batch_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BatchConfigurationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -569,7 +569,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchconfigurationproperties">Dict[Batch<wbr>Configuration<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#batchconfigurationproperties">Batch<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch configuration properties.{{% /md %}}</dd>
 
@@ -599,7 +599,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -976,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_criteria_python" style="color: inherit; text-decoration: inherit;">release_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteria">Dict[Batch<wbr>Release<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#batchreleasecriteria">Batch<wbr>Release<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd>
 
@@ -1006,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1215,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_criteria_python" style="color: inherit; text-decoration: inherit;">release_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Dict[Batch<wbr>Release<wbr>Criteria<wbr>Response]</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd>
 
@@ -1245,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1404,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrence">Dict[Workflow<wbr>Trigger<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrence">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd>
 
@@ -1563,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Dict[Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd>
 
@@ -1762,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd>
 
@@ -1772,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd>
 
@@ -1782,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd>
 
@@ -1792,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">List[Recurrence<wbr>Schedule<wbr>Occurrence]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
 
@@ -1802,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 
@@ -2239,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd>
 
@@ -2249,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd>
 
@@ -2259,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd>
 
@@ -2269,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
 
@@ -2279,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 
@@ -2538,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Dict[Recurrence<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
 
@@ -2817,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Dict[Recurrence<wbr>Schedule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
 

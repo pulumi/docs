@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementcontentresponse">Dict[Agreement<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#agreementcontentresponse">Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agreement content.{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
 <a href="#guest_identity_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Dict[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#host_identity_python" style="color: inherit; text-decoration: inherit;">host_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Dict[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd>
 
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
 
@@ -1063,7 +1063,7 @@ The following output properties are available:
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">Dict[AS2One<wbr>Way<wbr>Agreement<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd>
 
@@ -1073,7 +1073,7 @@ The following output properties are available:
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">Dict[AS2One<wbr>Way<wbr>Agreement<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd>
 
@@ -1776,8 +1776,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="send_mdn_asynchronously_python">
-<a href="#send_mdn_asynchronously_python" style="color: inherit; text-decoration: inherit;">send_<wbr>mdn_<wbr>asynchronously</a>
+        <span id="send_mdnasynchronously_python">
+<a href="#send_mdnasynchronously_python" style="color: inherit; text-decoration: inherit;">send_<wbr>mdnasynchronously</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2168,7 +2168,7 @@ The following output properties are available:
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettingsresponse">Dict[AS2Protocol<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd>
 
@@ -2178,7 +2178,7 @@ The following output properties are available:
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Dict[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
 
@@ -2188,7 +2188,7 @@ The following output properties are available:
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Dict[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 
@@ -2447,7 +2447,7 @@ The following output properties are available:
 <a href="#acknowledgement_connection_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>connection_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Dict[AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd>
 
@@ -2457,7 +2457,7 @@ The following output properties are available:
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettingsresponse">Dict[AS2Envelope<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd>
 
@@ -2467,7 +2467,7 @@ The following output properties are available:
 <a href="#error_settings_python" style="color: inherit; text-decoration: inherit;">error_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettingsresponse">Dict[AS2Error<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd>
 
@@ -2477,7 +2477,7 @@ The following output properties are available:
 <a href="#mdn_settings_python" style="color: inherit; text-decoration: inherit;">mdn_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettingsresponse">Dict[AS2Mdn<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd>
 
@@ -2487,7 +2487,7 @@ The following output properties are available:
 <a href="#message_connection_settings_python" style="color: inherit; text-decoration: inherit;">message_<wbr>connection_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Dict[AS2Message<wbr>Connection<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd>
 
@@ -2497,7 +2497,7 @@ The following output properties are available:
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettingsresponse">Dict[AS2Security<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd>
 
@@ -2507,7 +2507,7 @@ The following output properties are available:
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettingsresponse">Dict[AS2Validation<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd>
 
@@ -3524,7 +3524,7 @@ The following output properties are available:
 <a href="#a_s2_python" style="color: inherit; text-decoration: inherit;">a_<wbr>s2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontentresponse">Dict[AS2Agreement<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd>
 
@@ -3534,7 +3534,7 @@ The following output properties are available:
 <a href="#edifact_python" style="color: inherit; text-decoration: inherit;">edifact</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontentresponse">Dict[Edifact<wbr>Agreement<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd>
 
@@ -3544,7 +3544,7 @@ The following output properties are available:
 <a href="#x12_python" style="color: inherit; text-decoration: inherit;">x12</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontentresponse">Dict[X12Agreement<wbr>Content<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd>
 
@@ -4251,7 +4251,7 @@ The following output properties are available:
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Dict[Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd>
 
@@ -4261,7 +4261,7 @@ The following output properties are available:
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Dict[Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd>
 
@@ -4736,33 +4736,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageassociationassignedcode_python">
-<a href="#messageassociationassignedcode_python" style="color: inherit; text-decoration: inherit;">message<wbr>Association<wbr>Assigned<wbr>Code</a>
+        <span id="message_association_assigned_code_python">
+<a href="#message_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">message_<wbr>association_<wbr>assigned_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="messagerelease_python">
-<a href="#messagerelease_python" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The message release.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="messageversion_python">
-<a href="#messageversion_python" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4773,6 +4753,26 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_release_python">
+<a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The message release.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_version_python">
+<a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The message version.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5275,8 +5275,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationpassword_python">
-<a href="#applicationpassword_python" style="color: inherit; text-decoration: inherit;">application<wbr>Password</a>
+        <span id="application_password_python">
+<a href="#application_password_python" style="color: inherit; text-decoration: inherit;">application_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5285,8 +5285,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="associationassignedcode_python">
-<a href="#associationassignedcode_python" style="color: inherit; text-decoration: inherit;">association<wbr>Assigned<wbr>Code</a>
+        <span id="association_assigned_code_python">
+<a href="#association_assigned_code_python" style="color: inherit; text-decoration: inherit;">association_<wbr>assigned_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5295,8 +5295,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="controllingagencycode_python">
-<a href="#controllingagencycode_python" style="color: inherit; text-decoration: inherit;">controlling<wbr>Agency<wbr>Code</a>
+        <span id="controlling_agency_code_python">
+<a href="#controlling_agency_code_python" style="color: inherit; text-decoration: inherit;">controlling_<wbr>agency_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5315,8 +5315,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupheadermessagerelease_python">
-<a href="#groupheadermessagerelease_python" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Message<wbr>Release</a>
+        <span id="group_header_message_release_python">
+<a href="#group_header_message_release_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>message_<wbr>release</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5325,8 +5325,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupheadermessageversion_python">
-<a href="#groupheadermessageversion_python" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Message<wbr>Version</a>
+        <span id="group_header_message_version_python">
+<a href="#group_header_message_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>message_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5335,33 +5335,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageassociationassignedcode_python">
-<a href="#messageassociationassignedcode_python" style="color: inherit; text-decoration: inherit;">message<wbr>Association<wbr>Assigned<wbr>Code</a>
+        <span id="message_association_assigned_code_python">
+<a href="#message_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">message_<wbr>association_<wbr>assigned_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="messagerelease_python">
-<a href="#messagerelease_python" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="messageversion_python">
-<a href="#messageversion_python" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5375,13 +5355,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="receiverapplicationqualifier_python">
-<a href="#receiverapplicationqualifier_python" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Qualifier</a>
+        <span id="message_release_python">
+<a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd>
+    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_version_python">
+<a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5395,13 +5385,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="senderapplicationqualifier_python">
-<a href="#senderapplicationqualifier_python" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Qualifier</a>
+        <span id="receiver_application_qualifier_python">
+<a href="#receiver_application_qualifier_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>qualifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
+    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5412,6 +5402,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sender_application_qualifier_python">
+<a href="#sender_application_qualifier_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>qualifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7874,7 +7874,7 @@ The following output properties are available:
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Dict[Edifact<wbr>Protocol<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd>
 
@@ -7884,7 +7884,7 @@ The following output properties are available:
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Dict[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
 
@@ -7894,7 +7894,7 @@ The following output properties are available:
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Dict[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 
@@ -8512,7 +8512,7 @@ The following output properties are available:
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Dict[Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd>
 
@@ -8522,7 +8522,7 @@ The following output properties are available:
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Dict[Edifact<wbr>Envelope<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd>
 
@@ -8532,7 +8532,7 @@ The following output properties are available:
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettingsresponse">Dict[Edifact<wbr>Framing<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd>
 
@@ -8542,7 +8542,7 @@ The following output properties are available:
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilterresponse">Dict[Edifact<wbr>Message<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd>
 
@@ -8552,7 +8552,7 @@ The following output properties are available:
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Dict[Edifact<wbr>Processing<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd>
 
@@ -8562,7 +8562,7 @@ The following output properties are available:
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareferenceresponse">List[Edifact<wbr>Schema<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactschemareferenceresponse">Sequence[Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd>
 
@@ -8572,7 +8572,7 @@ The following output properties are available:
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Dict[Edifact<wbr>Validation<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd>
 
@@ -8582,7 +8582,7 @@ The following output properties are available:
 <a href="#edifact_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">edifact_<wbr>delimiter_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">List[Edifact<wbr>Delimiter<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Sequence[Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd>
 
@@ -8592,7 +8592,7 @@ The following output properties are available:
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">List[Edifact<wbr>Envelope<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Sequence[Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd>
 
@@ -8602,7 +8602,7 @@ The following output properties are available:
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifierresponse">List[Edifact<wbr>Message<wbr>Identifier<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifierresponse">Sequence[Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd>
 
@@ -8612,7 +8612,7 @@ The following output properties are available:
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverrideresponse">List[Edifact<wbr>Validation<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverrideresponse">Sequence[Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd>
 
@@ -8867,8 +8867,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="messagerelease_python">
-<a href="#messagerelease_python" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
+        <span id="message_id_python">
+<a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The message id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_release_python">
+<a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8877,23 +8887,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="messageversion_python">
-<a href="#messageversion_python" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
+        <span id="message_version_python">
+<a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="message_id_python">
-<a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8907,23 +8907,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="associationassignedcode_python">
-<a href="#associationassignedcode_python" style="color: inherit; text-decoration: inherit;">association<wbr>Assigned<wbr>Code</a>
+        <span id="association_assigned_code_python">
+<a href="#association_assigned_code_python" style="color: inherit; text-decoration: inherit;">association_<wbr>assigned_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="senderapplicationqualifier_python">
-<a href="#senderapplicationqualifier_python" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Qualifier</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8934,6 +8924,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sender_application_qualifier_python">
+<a href="#sender_application_qualifier_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>qualifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9196,8 +9196,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enforcecharacterset_python">
-<a href="#enforcecharacterset_python" style="color: inherit; text-decoration: inherit;">enforce<wbr>Character<wbr>Set</a>
+        <span id="enforce_character_set_python">
+<a href="#enforce_character_set_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>character_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10437,7 +10437,7 @@ The following output properties are available:
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">Dict[X12One<wbr>Way<wbr>Agreement<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd>
 
@@ -10447,7 +10447,7 @@ The following output properties are available:
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">Dict[X12One<wbr>Way<wbr>Agreement<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd>
 
@@ -11191,8 +11191,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11201,8 +11201,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="headerversion_python">
-<a href="#headerversion_python" style="color: inherit; text-decoration: inherit;">header<wbr>Version</a>
+        <span id="header_version_python">
+<a href="#header_version_python" style="color: inherit; text-decoration: inherit;">header_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11241,8 +11241,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="responsibleagencycode_python">
-<a href="#responsibleagencycode_python" style="color: inherit; text-decoration: inherit;">responsible<wbr>Agency<wbr>Code</a>
+        <span id="responsible_agency_code_python">
+<a href="#responsible_agency_code_python" style="color: inherit; text-decoration: inherit;">responsible_<wbr>agency_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11271,8 +11271,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="timeformat_python">
-<a href="#timeformat_python" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
+        <span id="time_format_python">
+<a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11281,8 +11281,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="functionalidentifiercode_python">
-<a href="#functionalidentifiercode_python" style="color: inherit; text-decoration: inherit;">functional<wbr>Identifier<wbr>Code</a>
+        <span id="functional_identifier_code_python">
+<a href="#functional_identifier_code_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>identifier_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12900,7 +12900,7 @@ The following output properties are available:
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettingsresponse">Dict[X12Protocol<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd>
 
@@ -12910,7 +12910,7 @@ The following output properties are available:
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Dict[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
 
@@ -12920,7 +12920,7 @@ The following output properties are available:
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Dict[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
 
@@ -13608,7 +13608,7 @@ The following output properties are available:
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Dict[X12Acknowledgement<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd>
 
@@ -13618,7 +13618,7 @@ The following output properties are available:
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettingsresponse">Dict[X12Envelope<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd>
 
@@ -13628,7 +13628,7 @@ The following output properties are available:
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettingsresponse">Dict[X12Framing<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd>
 
@@ -13638,7 +13638,7 @@ The following output properties are available:
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilterresponse">Dict[X12Message<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd>
 
@@ -13648,7 +13648,7 @@ The following output properties are available:
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettingsresponse">Dict[X12Processing<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd>
 
@@ -13658,7 +13658,7 @@ The following output properties are available:
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareferenceresponse">List[X12Schema<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12schemareferenceresponse">Sequence[X12Schema<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd>
 
@@ -13668,7 +13668,7 @@ The following output properties are available:
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettingsresponse">Dict[X12Security<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd>
 
@@ -13678,7 +13678,7 @@ The following output properties are available:
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettingsresponse">Dict[X12Validation<wbr>Settings<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd>
 
@@ -13688,7 +13688,7 @@ The following output properties are available:
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverrideresponse">List[X12Envelope<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12envelopeoverrideresponse">Sequence[X12Envelope<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd>
 
@@ -13698,7 +13698,7 @@ The following output properties are available:
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifierresponse">List[X12Message<wbr>Identifier<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12messageidentifierresponse">Sequence[X12Message<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd>
 
@@ -13708,7 +13708,7 @@ The following output properties are available:
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverrideresponse">List[X12Validation<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12validationoverrideresponse">Sequence[X12Validation<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd>
 
@@ -13718,7 +13718,7 @@ The following output properties are available:
 <a href="#x12_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">x12_<wbr>delimiter_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverridesresponse">List[X12Delimiter<wbr>Overrides<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12delimiteroverridesresponse">Sequence[X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd>
 
@@ -13893,16 +13893,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="schemaversion_python">
-<a href="#schemaversion_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The schema version.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="schema_name_python">
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
 </span> 
@@ -13910,6 +13900,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schema_version_python">
+<a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The schema version.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

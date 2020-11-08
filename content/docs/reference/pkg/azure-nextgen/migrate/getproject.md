@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectpropertiesresponse">Dict[Project<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#projectpropertiesresponse">Project<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the project.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
     </dt>
     <dd>{{% md %}}Tags provided by Azure Tagging service.{{% /md %}}</dd>
 

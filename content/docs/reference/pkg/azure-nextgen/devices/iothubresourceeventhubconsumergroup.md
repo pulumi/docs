@@ -86,9 +86,9 @@ import pulumi_azure_nextgen as azure_nextgen
 iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
     event_hub_endpoint_name="events",
     name="test",
-    properties={
-        "name": "test",
-    },
+    properties=azure_nextgen.devices.latest.EventHubConsumerGroupNameArgs(
+        name="test",
+    ),
     resource_group_name="myResourceGroup",
     resource_name="testHub")
 
@@ -128,7 +128,7 @@ const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.Iot
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotHubResourceEventHubConsumerGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_hub_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[EventHubConsumerGroupName]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotHubResourceEventHubConsumerGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_hub_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[EventHubConsumerGroupNameArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -517,7 +517,7 @@ The IotHubResourceEventHubConsumerGroup resource accepts the following [input]({
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubconsumergroupname">Dict[Event<wbr>Hub<wbr>Consumer<wbr>Group<wbr>Name]</a></span>
+        <span class="property-type"><a href="#eventhubconsumergroupname">Event<wbr>Hub<wbr>Consumer<wbr>Group<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EventHub consumer group name.{{% /md %}}</dd>
 

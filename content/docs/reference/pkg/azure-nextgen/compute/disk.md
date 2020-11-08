@@ -88,9 +88,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Empty",
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Empty",
+    ),
     disk_access_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
     disk_name="myDisk",
     disk_size_gb=200,
@@ -199,14 +199,14 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Empty",
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Empty",
+    ),
     disk_name="myDisk",
     disk_size_gb=200,
-    encryption={
-        "diskEncryptionSetId": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
-    },
+    encryption=azure_nextgen.compute.latest.EncryptionArgs(
+        disk_encryption_set_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+    ),
     location="West US",
     resource_group_name="myResourceGroup")
 
@@ -305,10 +305,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Copy",
-        "sourceResourceId": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Copy",
+        source_resource_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+    ),
     disk_name="myDisk",
     location="West US",
     resource_group_name="myResourceGroup")
@@ -407,11 +407,11 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Import",
-        "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-        "storageAccountId": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Import",
+        source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+        storage_account_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+    ),
     disk_name="myDisk",
     location="West US",
     resource_group_name="myResourceGroup")
@@ -509,10 +509,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Import",
-        "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Import",
+        source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+    ),
     disk_name="myDisk",
     location="West US",
     resource_group_name="myResourceGroup")
@@ -616,12 +616,12 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "FromImage",
-        "imageReference": {
-            "id": "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
-        },
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="FromImage",
+        image_reference=azure_nextgen.compute.latest.ImageDiskReferenceArgs(
+            id="/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+        ),
+    ),
     disk_name="myDisk",
     location="West US",
     os_type="Windows",
@@ -722,10 +722,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Copy",
-        "sourceResourceId": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Copy",
+        source_resource_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
+    ),
     disk_name="myDisk2",
     location="West US",
     resource_group_name="myResourceGroup")
@@ -822,10 +822,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Upload",
-        "uploadSizeBytes": 10737418752,
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Upload",
+        upload_size_bytes=10737418752,
+    ),
     disk_name="myDisk",
     location="West US",
     resource_group_name="myResourceGroup")
@@ -922,9 +922,9 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Empty",
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Empty",
+    ),
     disk_name="myDisk",
     disk_size_gb=200,
     location="West US",
@@ -1031,17 +1031,17 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk = azure_nextgen.compute.latest.Disk("disk",
-    creation_data={
-        "createOption": "Empty",
-        "logicalSectorSize": 512,
-    },
+    creation_data=azure_nextgen.compute.latest.CreationDataArgs(
+        create_option="Empty",
+        logical_sector_size=512,
+    ),
     disk_name="myDisk",
     disk_size_gb=200,
     location="West US",
     resource_group_name="myResourceGroup",
-    sku={
-        "name": "UltraSSD_LRS",
-    })
+    sku=azure_nextgen.compute.latest.DiskSkuArgs(
+        name="UltraSSD_LRS",
+    ))
 
 ```
 
@@ -1083,7 +1083,7 @@ const disk = new azure_nextgen.compute.latest.Disk("disk", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[Dict[CreationData]]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_only</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_only</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[Dict[Encryption]]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[Dict[EncryptionSettingsCollection]]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[DiskSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_only</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_only</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[DiskSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1882,7 +1882,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#creation_data_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creationdata">Dict[Creation<wbr>Data]</a></span>
+        <span class="property-type"><a href="#creationdata">Creation<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
 
@@ -1982,7 +1982,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Dict[Encryption]</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd>
 
@@ -1992,7 +1992,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryption_settings_collection_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingscollection">Dict[Encryption<wbr>Settings<wbr>Collection]</a></span>
+        <span class="property-type"><a href="#encryptionsettingscollection">Encryption<wbr>Settings<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
 
@@ -2042,7 +2042,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksku">Dict[Disk<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#disksku">Disk<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.{{% /md %}}</dd>
 
@@ -2052,7 +2052,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 
@@ -2072,7 +2072,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Logical zone list for Disk.{{% /md %}}</dd>
 
@@ -2491,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_by_extended_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by_<wbr>extended</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.{{% /md %}}</dd>
 
@@ -2521,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_info_python" style="color: inherit; text-decoration: inherit;">share_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareinfoelementresponse">List[Share<wbr>Info<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#shareinfoelementresponse">Sequence[Share<wbr>Info<wbr>Element<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.{{% /md %}}</dd>
 
@@ -2859,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Dict[Image<wbr>Disk<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
 
@@ -2869,7 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Dict[Image<wbr>Disk<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
 
@@ -3258,7 +3258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Dict[Image<wbr>Disk<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
 
@@ -3268,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Dict[Image<wbr>Disk<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
 
@@ -3903,7 +3903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">List[Encryption<wbr>Settings<wbr>Element]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
 
@@ -4062,7 +4062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">List[Encryption<wbr>Settings<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
 
@@ -4181,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Dict[Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
 
@@ -4191,7 +4191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Dict[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
 
@@ -4300,7 +4300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Dict[Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
 
@@ -4310,7 +4310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Dict[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
 
@@ -4667,7 +4667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Dict[Source<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 
@@ -4786,7 +4786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Dict[Source<wbr>Vault<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 
@@ -4905,7 +4905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Dict[Source<wbr>Vault]</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 
@@ -5024,7 +5024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Dict[Source<wbr>Vault<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
 
@@ -5099,8 +5099,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="vmuri_python">
-<a href="#vmuri_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Uri</a>
+        <span id="vm_uri_python">
+<a href="#vm_uri_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

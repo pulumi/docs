@@ -27,6 +27,7 @@ Explore the resources and functions of the portal module in the Azure NextGen pa
     <li><a href="gettenantconfiguration" title="GetTenantConfiguration"><span class="symbol function"></span>GetTenantConfiguration</a></li>
     <li><a href="getusersettings" title="GetUserSettings"><span class="symbol function"></span>GetUserSettings</a></li>
     <li><a href="getusersettingswithlocation" title="GetUserSettingsWithLocation"><span class="symbol function"></span>GetUserSettingsWithLocation</a></li>
+    <li><a href="listlisttenantconfigurationviolation" title="ListListTenantConfigurationViolation"><span class="symbol function"></span>ListListTenantConfigurationViolation</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -36,7 +37,7 @@ Explore the resources and functions of the portal module in the Azure NextGen pa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.2.5</dd>
 </dl>
 
 

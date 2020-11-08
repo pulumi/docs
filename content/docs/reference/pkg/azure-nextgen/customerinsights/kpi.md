@@ -133,10 +133,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 kpi = azure_nextgen.customerinsights.latest.Kpi("kpi",
-    aliases=[{
-        "aliasName": "alias",
-        "expression": "Id+4",
-    }],
+    aliases=[azure_nextgen.customerinsights.latest.KpiAliasArgs(
+        alias_name="alias",
+        expression="Id+4",
+    )],
     calculation_window="Day",
     description={
         "en-us": "Kpi Description",
@@ -152,11 +152,11 @@ kpi = azure_nextgen.customerinsights.latest.Kpi("kpi",
     hub_name="sdkTestHub",
     kpi_name="kpiTest45453647",
     resource_group_name="TestHubRG",
-    thres_holds={
-        "increasingKpi": True,
-        "lowerLimit": 5,
-        "upperLimit": 50,
-    },
+    thres_holds=azure_nextgen.customerinsights.latest.KpiThresholdsArgs(
+        increasing_kpi=True,
+        lower_limit=5,
+        upper_limit=50,
+    ),
     unit="unit")
 
 ```
@@ -213,7 +213,7 @@ const kpi = new azure_nextgen.customerinsights.latest.Kpi("kpi", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[List[KpiAlias]]</span> = None<span class="p">, </span><span class="nx">calculation_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">calculation_window_field_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extracts</span><span class="p">:</span> <span class="nx">Optional[List[KpiExtract]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_by</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kpi_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thres_holds</span><span class="p">:</span> <span class="nx">Optional[Dict[KpiThresholds]]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[KpiAliasArgs]]</span> = None<span class="p">, </span><span class="nx">calculation_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">calculation_window_field_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extracts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KpiExtractArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_by</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kpi_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thres_holds</span><span class="p">:</span> <span class="nx">Optional[KpiThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1002,7 +1002,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpialias">List[Kpi<wbr>Alias]</a></span>
+        <span class="property-type"><a href="#kpialias">Sequence[Kpi<wbr>Alias<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The aliases.{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd>
 
@@ -1032,7 +1032,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd>
 
@@ -1042,7 +1042,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#extracts_python" style="color: inherit; text-decoration: inherit;">extracts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiextract">List[Kpi<wbr>Extract]</a></span>
+        <span class="property-type"><a href="#kpiextract">Sequence[Kpi<wbr>Extract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd>
 
@@ -1062,7 +1062,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#group_by_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd>
 
@@ -1072,7 +1072,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#thres_holds_python" style="color: inherit; text-decoration: inherit;">thres_<wbr>holds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpithresholds">Dict[Kpi<wbr>Thresholds]</a></span>
+        <span class="property-type"><a href="#kpithresholds">Kpi<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd>
 
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_by_metadata_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpigroupbymetadataresponse">List[Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kpigroupbymetadataresponse">Sequence[Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd>
 
@@ -1371,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#participant_profiles_metadata_python" style="color: inherit; text-decoration: inherit;">participant_<wbr>profiles_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">List[Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response]</a></span>
+        <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">Sequence[Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The participant profiles.{{% /md %}}</dd>
 
@@ -1763,8 +1763,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="extractname_python">
-<a href="#extractname_python" style="color: inherit; text-decoration: inherit;">extract<wbr>Name</a>
+        <span id="extract_name_python">
+<a href="#extract_name_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1882,8 +1882,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="extractname_python">
-<a href="#extractname_python" style="color: inherit; text-decoration: inherit;">extract<wbr>Name</a>
+        <span id="extract_name_python">
+<a href="#extract_name_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2025,14 +2025,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The display name.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fieldname_python">
-<a href="#fieldname_python" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
+        <span id="field_name_python">
+<a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2041,8 +2041,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fieldtype_python">
-<a href="#fieldtype_python" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
+        <span id="field_type_python">
+<a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
