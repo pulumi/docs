@@ -17,7 +17,11 @@ ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 PROVIDERS=(
+    "aws"
+    "azure"
     "azure-nextgen"
+    "azuread"
+    "gcp"
 )
 
 echo "Generating docs templates bundle in pulumi/pulumi"
