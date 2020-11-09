@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/azuread | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/azuread package."
-git_sha: "5698d5ce38ee2a6cfe6045f173be59ba0b8d0496"
+git_sha: "afe4f33e6457fc9fe320ab9114fb4ade65a8f7ec"
 block_external_search_index: true
 ---
 

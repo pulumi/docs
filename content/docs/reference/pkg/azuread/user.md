@@ -13,7 +13,6 @@ meta_desc: "Explore the User resource of the Azure AD package, including example
 Manages a User within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Directory.ReadWrite.All` within the `Windows Azure Active Directory` API.
-
 {{% examples %}}
 ## Example Usage
 
@@ -1603,6 +1602,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+Azure Active Directory Users can be imported using the `object id`, e.g.
+
+```sh
+ $ pulumi import azuread:index/user:User my_user 00000000-0000-0000-0000-000000000000
+```
 
 
 

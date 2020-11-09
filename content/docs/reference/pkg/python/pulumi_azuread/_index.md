@@ -106,6 +106,10 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;webapp/api&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Azure Active Directory Applications can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/application:Application <span class="nb">test</span> <span class="m">00000000</span>-0000-0000-0000-000000000000
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -328,6 +332,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2021-05-01T01:02:03Z&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Certificates can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code> of an Application and the <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">id</span></code> of the certificate, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/applicationCertificate:ApplicationCertificate <span class="nb">test</span> <span class="m">00000000</span>-0000-0000-0000-000000000000/certificate/11111111-1111-1111-1111-111111111111
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -462,6 +470,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My managed password&quot;</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#&quot;</span><span class="p">,</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2099-01-01T01:02:03Z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Passwords can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code> of an Application and the <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">id</span></code> of the password, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/applicationPassword:ApplicationPassword <span class="nb">test</span> <span class="m">00000000</span>-0000-0000-0000-000000000000/password/11111111-1111-1111-1111-111111111111
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -959,6 +971,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example_group</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;exampleGroup&quot;</span><span class="p">,</span> <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="n">example_user</span><span class="o">.</span><span class="n">object_id</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>Azure Active Directory Groups can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/group:Group my_group <span class="m">00000000</span>-0000-0000-0000-000000000000
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1076,6 +1092,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example_group_member</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">GroupMember</span><span class="p">(</span><span class="s2">&quot;exampleGroupMember&quot;</span><span class="p">,</span>
     <span class="n">group_object_id</span><span class="o">=</span><span class="n">example_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">member_object_id</span><span class="o">=</span><span class="n">example_user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Azure Active Directory Group Members can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/groupMember:GroupMember <span class="nb">test</span> <span class="m">00000000</span>-0000-0000-0000-000000000000/member/11111111-1111-1111-1111-111111111111
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1235,6 +1255,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Azure Active Directory Service Principals can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/servicePrincipal:ServicePrincipal <span class="nb">test</span> <span class="m">00000000</span>-0000-0000-0000-000000000000
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1360,6 +1384,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;AsymmetricX509Cert&quot;</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;cert.pem&quot;</span><span class="p">),</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2021-05-01T01:02:03Z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Certificates can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code> of the Service Principal and the <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">id</span></code> of the certificate, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/servicePrincipalCertificate:ServicePrincipalCertificate <span class="nb">test</span> <span class="m">00000000</span>-0000-0000-0000-000000000000/certificate/11111111-1111-1111-1111-111111111111
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1499,6 +1527,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2099-01-01T01:02:03Z&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>PPasswords can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code> of a Service Principal and the <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">id</span></code> of the password, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/servicePrincipalPassword:ServicePrincipalPassword <span class="nb">test</span> <span class="m">00000000</span>-0000-0000-0000-000000000000/11111111-1111-1111-1111-111111111111
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1632,6 +1664,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">mail_nickname</span><span class="o">=</span><span class="s2">&quot;jdoe&quot;</span><span class="p">,</span>
     <span class="n">password</span><span class="o">=</span><span class="s2">&quot;SecretP@sswd99!&quot;</span><span class="p">,</span>
     <span class="n">user_principal_name</span><span class="o">=</span><span class="s2">&quot;jdoe@hashicorp.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Azure Active Directory Users can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/user:User my_user <span class="m">00000000</span>-0000-0000-0000-000000000000
 </pre></div>
 </div>
 <dl class="field-list simple">

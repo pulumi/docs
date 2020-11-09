@@ -13,7 +13,6 @@ meta_desc: "Explore the ServicePrincipalCertificate resource of the Azure AD pac
 Manages a Certificate associated with a Service Principal within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
-
 {{% examples %}}
 ## Example Usage
 
@@ -1153,6 +1152,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+Certificates can be imported using the `object id` of the Service Principal and the `key id` of the certificate, e.g.
+
+```sh
+ $ pulumi import azuread:index/servicePrincipalCertificate:ServicePrincipalCertificate test 00000000-0000-0000-0000-000000000000/certificate/11111111-1111-1111-1111-111111111111
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Explore the ServicePrincipal resource of the Azure AD package, inclu
 Manages a Service Principal associated with an Application within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API. Please see The Granting a Service Principal permission to manage AAD for the required steps.
-
 {{% examples %}}
 ## Example Usage
 
@@ -1533,6 +1532,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+Azure Active Directory Service Principals can be imported using the `object id`, e.g.
+
+```sh
+ $ pulumi import azuread:index/servicePrincipal:ServicePrincipal test 00000000-0000-0000-0000-000000000000
+```
 
 
 
